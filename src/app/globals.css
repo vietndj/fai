@@ -1,4 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@font-face {
+  font-family: 'SVN-NoeDisplay';
+  src: url('/fonts/SVN-NoeDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-NoeDisplay';
+  src: url('/fonts/SVN-NoeDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-NoeDisplay';
+  src: url('/fonts/SVN-NoeDisplay-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SVN-Aeonik';
+  src: url('/fonts/SVN-AEONIK-REGULAR.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Aeonik';
+  src: url('/fonts/SVN-AEONIK-MEDIUM.TTF') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Aeonik';
+  src: url('/fonts/SVN-AEONIK-BOLD.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
 
 :root {
   --primary: #F26F21;       /* FPT Orange */
@@ -12,7 +48,8 @@
   --bg-gray: #f8fafc;
   --bg-dark: #0f172a;
   
-  --font-sans: 'Outfit', sans-serif;
+  --font-sans: 'SVN-Aeonik', sans-serif;
+  --font-title: 'SVN-NoeDisplay', serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --header-height: 100px;
 }
@@ -29,6 +66,14 @@ html, body {
   background-color: var(--bg-light);
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.section-title, 
+.logo-fpt, .logo-fai, 
+.slide-title, .featured-news-title {
+  font-family: var(--font-title), serif;
+  font-weight: 700;
 }
 
 a {
