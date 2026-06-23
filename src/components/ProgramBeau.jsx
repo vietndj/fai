@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import ParticleCanvas from './ParticleCanvas';
 
@@ -11,7 +12,7 @@ const programs = [
     titleLine1: 'Software Engineering',
     titleLine2: '& Technology',
     subtitle: 'Lập Trình & Phát Triển Phần Mềm Quốc Tế',
-    desc: 'Chương trình ADSE — chuẩn bằng cấp Ấn Độ được công nhận tại 40+ quốc gia. Đào tạo chuyên sâu từ lập trình đến AI, Cloud và Khoa học Dữ liệu trong môi trường Lab hiện đại.',
+    desc: 'Chương trình ADSE — chuẩn bằng cấp Ấn Độ được công nhận tại 40+ quốc gia. Đào tạo chuyên sâu từ nền tảng lập trình đến AI, Cloud và Khoa học Dữ liệu trong môi trường Lab hiện đại chuẩn doanh nghiệp.',
     tags: [
       'Lập trình viên Quốc tế (ADSE)',
       'Trí tuệ Nhân tạo & Machine Learning',
@@ -19,6 +20,7 @@ const programs = [
       'Java / .NET / Python / Cloud',
       'Mobile App Development',
     ],
+    image: '/fai_banner_aptech.png',
     stat: '28+',
     statLabel: 'năm đào tạo toàn cầu',
     color: '#1a6ed8',
@@ -30,14 +32,15 @@ const programs = [
     titleLine1: 'Multimedia Design',
     titleLine2: '& Creative Arts',
     subtitle: 'Thiết Kế & Nghệ Thuật Kỹ Thuật Số',
-    desc: 'Chương trình Arena Animation — sáng tạo kỹ thuật số đỉnh cao. Đào tạo thiết kế đồ hoạ thương hiệu, kỹ xảo điện ảnh 3D và phát triển game chuẩn quốc tế.',
+    desc: 'Chương trình Arena Animation — nơi tư duy sáng tạo gặp công nghệ số. Từ đồ hoạ thương hiệu, thiết kế web đến kỹ xảo điện ảnh 3D và thiết kế game — đào tạo chuyên gia sáng tạo đẳng cấp quốc tế.',
     tags: [
       'Mỹ thuật Đa phương tiện (AAM)',
       'Kỹ xảo 3D & Điện ảnh',
       'UI/UX & Motion Graphics',
       'Thiết kế Game & Hoạt hình',
-      'Đồ hoạ & Thương hiệu',
+      'Thiết kế Đồ hoạ & Nhận diện Thương hiệu',
     ],
+    image: '/fai_banner_arena.png',
     stat: '20+',
     statLabel: 'năm tại Việt Nam',
     color: '#e8741e',
@@ -49,7 +52,7 @@ const programs = [
     titleLine1: 'Digital Marketing',
     titleLine2: '& Business Growth',
     subtitle: 'Chiến Lược Tiếp Thị Số & Tăng Trưởng',
-    desc: 'Đào tạo thực chiến 100% theo chuẩn Google & Meta. Trang bị tư duy chiến lược dữ liệu số, kỹ năng quản trị ngân sách và xây dựng phễu tăng trưởng doanh nghiệp.',
+    desc: 'Đào tạo 100% thực chiến theo chuẩn Google & Meta. Trang bị tư duy chiến lược dữ liệu, kỹ năng quản trị ngân sách và xây dựng phễu tăng trưởng toàn diện trong kỷ nguyên số.',
     tags: [
       'Digital Marketing Toàn Diện',
       'Quản trị Quảng cáo Google & Meta',
@@ -57,6 +60,7 @@ const programs = [
       'Data Analytics & Performance',
       'E-Commerce & Growth Hacking',
     ],
+    image: '/fai_banner_skillking.png',
     stat: 'Google & Meta',
     statLabel: 'chuẩn chứng chỉ quốc tế',
     color: '#16a34a',
@@ -65,89 +69,82 @@ const programs = [
 ];
 
 export default function ProgramBeau() {
-  const [hovered, setHovered] = useState(null);
+  const [active, setActive]       = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   return (
     <section className="prog-beau-section">
-      {/* Nền hạt chuyển động kiểu antigravity.google */}
+      {/* antigravity.google style particles — nền */}
       <ParticleCanvas className="prog-beau-particles" />
 
-      {/* Header tiêu đề */}
+      {/* ── HEADER — full width, OUTSIDE grid ── */}
       <div className="prog-beau-header-wrap" data-reveal>
         <span className="section-eyebrow">Chương trình đào tạo quốc tế</span>
         <h2 className="prog-beau-title-main">
-          Ba Hệ Thống Đào Tạo Hàng Đầu
+          Ba Hệ Thống<br />Đào Tạo Hàng Đầu
         </h2>
       </div>
 
-      {/* Bố cục mới: 1 hàng cho mỗi hệ thống, không chia cột dọc ảnh */}
-      <div className="prog-beau-rows-container">
-        {programs.map((prog, idx) => (
-          <div
-            key={idx}
-            className={`prog-beau-row-item ${hovered !== null && hovered !== idx ? 'is-dimmed' : ''}`}
-            onMouseEnter={() => setHovered(idx)}
-            onMouseLeave={() => setHovered(null)}
-          >
-            {/* Lớp nền trượt đổi màu nhẹ khi hover */}
-            <div className="prog-beau-row-bg" style={{ '--row-color': prog.color + '0a' }} />
-            
-            {/* Thanh viền trái theo màu hệ thống */}
-            <div className="prog-beau-row-accent-bar" style={{ backgroundColor: prog.color }} />
-
-            <div className="prog-beau-row-inner">
-              {/* Cột trái: Số + Tên hệ thống (30%) */}
-              <div className="prog-beau-row-left">
-                <span className="prog-beau-row-num" style={{ color: prog.color }}>
-                  {prog.num}
-                </span>
-                <div className="prog-beau-row-title-box">
-                  <span className="prog-beau-row-brand" style={{ color: prog.color }}>
-                    {prog.brand}
+      {/* ── TWO-COLUMN GRID: list (left) + sticky image (right) ── */}
+          {/* ── ONLY THE LIST (NO RIGHT COLUMN IMAGE) ── */}
+      <div className="prog-beau-container-full">
+        <div className="prog-beau-list">
+          {programs.map((prog, idx) => (
+            <div
+              key={idx}
+              className={`prog-beau-item ${
+                active === idx ? 'is-active' : ''
+              } ${
+                isHovering && active !== idx ? 'is-dimmed' : ''
+              }`}
+              onMouseEnter={() => { setActive(idx); setIsHovering(true); }}
+              onMouseLeave={() => setIsHovering(false)}
+            >
+              <div className="prog-beau-item-inner">
+                {/* Number + Title */}
+                <div className="prog-beau-title-col">
+                  <span className="prog-beau-num" style={{ color: prog.color }}>
+                    {prog.num}
                   </span>
-                  <h3 className="prog-beau-row-title">
-                    {prog.titleLine1} {prog.titleLine2}
-                  </h3>
-                </div>
-              </div>
-
-              {/* Cột phải: Mô tả + Tags + Chỉ số & CTA (70%) */}
-              <div className="prog-beau-row-right">
-                <div className="prog-beau-row-desc-box">
-                  <h4 className="prog-beau-row-subtitle">{prog.subtitle}</h4>
-                  <p className="prog-beau-row-desc">{prog.desc}</p>
+                  <div>
+                    <span className="prog-beau-brand-tag" style={{ color: prog.color }}>
+                      {prog.brand}
+                    </span>
+                    <h2 className="prog-beau-item-title">
+                      {prog.titleLine1}<br />{prog.titleLine2}
+                    </h2>
+                  </div>
+                  <div className="prog-beau-line" style={{ backgroundColor: prog.color }} />
                 </div>
 
-                {/* Các tags môn học ngang */}
-                <div className="prog-beau-row-tags-wrap">
-                  <ul className="prog-beau-row-tags">
+                {/* Content — revealed on hover */}
+                <div className="prog-beau-content-col">
+                  <p className="prog-beau-subtitle">{prog.subtitle}</p>
+                  <p className="prog-beau-desc">{prog.desc}</p>
+                  <ul className="prog-beau-tags">
                     {prog.tags.map((t, i) => (
                       <li key={i}>{t}</li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Phần chân hàng: Thống kê & CTA */}
-                <div className="prog-beau-row-footer">
-                  <div className="prog-beau-row-stat">
-                    <strong style={{ color: prog.color }}>{prog.stat}</strong>
-                    <span>{prog.statLabel}</span>
+                  <div className="prog-beau-meta">
+                    <div className="prog-beau-stat">
+                      <strong style={{ color: prog.color }}>{prog.stat}</strong>
+                      <span>{prog.statLabel}</span>
+                    </div>
+                    <Link href={prog.href} className="prog-beau-cta" style={{ color: prog.color }}>
+                      Khám phá chương trình
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                      </svg>
+                    </Link>
                   </div>
-                  
-                  <Link href={prog.href} className="prog-beau-row-cta" style={{ color: prog.color }}>
-                    Khám phá chương trình
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <line x1="5" y1="12" x2="19" y2="12"/>
-                      <polyline points="12 5 19 12 12 19"/>
-                    </svg>
-                  </Link>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
