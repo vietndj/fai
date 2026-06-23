@@ -1,15 +1,17 @@
 import Header from '@/components/Header';
 import HeroSlider from '@/components/HeroSlider';
-import ProgramSelector from '@/components/ProgramSelector';
+import TrustBar from '@/components/TrustBar';
 import Counters from '@/components/Counters';
+import ProgramSelector from '@/components/ProgramSelector';
+import PartnerMarquee from '@/components/PartnerMarquee';
 import StudentLife from '@/components/StudentLife';
 import Testimonials from '@/components/Testimonials';
 import NewsSection from '@/components/NewsSection';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'FAI - FPT Academy International | Trang chủ tổng hợp',
-  description: 'Cổng thông tin tổng hợp của các phân hệ đào tạo quốc tế thuộc tập đoàn FPT bao gồm Arena Multimedia, Aptech, và FPT Skillking.',
+  title: 'FAI — FPT Academy International | 18 Năm Đào Tạo Quốc Tế',
+  description: 'Cổng thông tin tổng hợp của hệ thống đào tạo quốc tế FPT — Aptech, Arena Multimedia và FPT Skillking. 18 năm dẫn đầu ngành công nghệ & sáng tạo Việt Nam.',
 };
 
 export default function Home() {
@@ -17,22 +19,28 @@ export default function Home() {
     <>
       <Header />
       <main>
-        {/* Banner Carousel Slider */}
+        {/* Full-screen hero with brand statement */}
         <HeroSlider />
 
-        {/* Dropdown Program filtering list */}
-        <ProgramSelector />
+        {/* Trust ribbon: FPT + NIIT + 18 years */}
+        <TrustBar />
 
-        {/* Statistics highlights */}
+        {/* 6 stats with counting animation */}
         <Counters />
 
-        {/* Art Collage for Student Life */}
+        {/* 3 pillar cards: Aptech | Arena | Skillking */}
+        <ProgramSelector />
+
+        {/* Partner logos marquee carousel */}
+        <PartnerMarquee />
+
+        {/* Bento grid student life */}
         <StudentLife />
 
-        {/* Inspiring Alumni Testimonials */}
+        {/* Editorial testimonials */}
         <Testimonials />
 
-        {/* News, Events, and Notices */}
+        {/* News & Events */}
         <NewsSection />
       </main>
       <Footer />

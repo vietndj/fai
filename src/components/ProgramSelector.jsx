@@ -2,111 +2,117 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const programs = {
-  ALL: [
-    { name: 'Mỹ thuật đa phương tiện', school: 'Arena Multimedia', url: '/dao-tao#arena' },
-    { name: 'Thiết kế đồ họa chuyên nghiệp', school: 'Arena Multimedia', url: '/dao-tao#arena' },
-    { name: 'Kỹ xảo điện ảnh kỹ thuật số', school: 'Arena Multimedia', url: '/dao-tao#arena' },
-    { name: 'Thiết kế Game & Hoạt hình 3D', school: 'Arena Multimedia', url: '/dao-tao#arena' },
-    { name: 'Lập trình viên Quốc tế (ADSE)', school: 'Aptech', url: '/dao-tao#aptech' },
-    { name: 'Lập trình chuyên sâu Java / .NET', school: 'Aptech', url: '/dao-tao#aptech' },
-    { name: 'Chuyên gia Trí tuệ Nhân tạo (AI)', school: 'Aptech', url: '/dao-tao#aptech' },
-    { name: 'Khoa học dữ liệu (Data Science)', school: 'Aptech', url: '/dao-tao#aptech' },
-    { name: 'Chuyên viên Digital Marketing', school: 'Skillking', url: '/dao-tao#skillking' },
-    { name: 'Quản trị Quảng cáo số (Ads Management)', school: 'Skillking', url: '/dao-tao#skillking' },
-    { name: 'Chiến lược Nội dung (Content Marketing)', school: 'Skillking', url: '/dao-tao#skillking' },
-    { name: 'Tối ưu hóa tìm kiếm (SEO & Website)', school: 'Skillking', url: '/dao-tao#skillking' },
-  ],
-  ARENA: [
-    { name: 'Mỹ thuật đa phương tiện', school: 'Arena Multimedia', url: '/dao-tao#arena' },
-    { name: 'Thiết kế đồ họa chuyên nghiệp', school: 'Arena Multimedia', url: '/dao-tao#arena' },
-    { name: 'Kỹ xảo điện ảnh kỹ thuật số', school: 'Arena Multimedia', url: '/dao-tao#arena' },
-    { name: 'Thiết kế Game & Hoạt hình 3D', school: 'Arena Multimedia', url: '/dao-tao#arena' },
-  ],
-  APTECH: [
-    { name: 'Lập trình viên Quốc tế (ADSE)', school: 'Aptech', url: '/dao-tao#aptech' },
-    { name: 'Lập trình chuyên sâu Java / .NET', school: 'Aptech', url: '/dao-tao#aptech' },
-    { name: 'Chuyên gia Trí tuệ Nhân tạo (AI)', school: 'Aptech', url: '/dao-tao#aptech' },
-    { name: 'Khoa học dữ liệu (Data Science)', school: 'Aptech', url: '/dao-tao#aptech' },
-  ],
-  SKILLKING: [
-    { name: 'Chuyên viên Digital Marketing', school: 'Skillking', url: '/dao-tao#skillking' },
-    { name: 'Quản trị Quảng cáo số (Ads Management)', school: 'Skillking', url: '/dao-tao#skillking' },
-    { name: 'Chiến lược Nội dung (Content Marketing)', school: 'Skillking', url: '/dao-tao#skillking' },
-    { name: 'Tối ưu hóa tìm kiếm (SEO & Website)', school: 'Skillking', url: '/dao-tao#skillking' },
-  ]
-};
+const pillars = [
+  {
+    id: 'aptech',
+    brand: 'APTECH',
+    logo: '{ }',
+    color: '#1a6ed8',
+    colorLight: 'rgba(26,110,216,0.08)',
+    tagline: 'Lập Trình & Công Nghệ',
+    headline: 'Trở Thành Lập Trình Viên Quốc Tế',
+    desc: 'Chương trình ADSE — chuẩn bằng cấp Ấn Độ. Đào tạo chuyên sâu về phát triển phần mềm, AI và Khoa học dữ liệu trong môi trường Lab hiện đại.',
+    image: '/fai_banner_aptech.png',
+    courses: ['Lập trình viên Quốc tế (ADSE)', 'Trí tuệ Nhân tạo (AI)', 'Khoa học Dữ liệu', 'Lập trình Java / .NET'],
+    stat: '28+ năm toàn cầu',
+    href: '/dao-tao#aptech',
+  },
+  {
+    id: 'arena',
+    brand: 'ARENA',
+    logo: '✦',
+    color: '#e8741e',
+    colorLight: 'rgba(232,116,30,0.08)',
+    tagline: 'Thiết Kế & Mỹ Thuật',
+    headline: 'Kiến Tạo Nghệ Thuật Kỹ Thuật Số',
+    desc: 'Chương trình chuẩn Arena Animation Ấn Độ. Từ Đồ họa, Web, đến Kỹ xảo 3D và Thiết kế Game — nơi sáng tạo không có giới hạn.',
+    image: '/fai_banner_arena.png',
+    courses: ['Mỹ thuật Đa phương tiện', 'Thiết kế Đồ họa & Web', 'Kỹ xảo Điện ảnh 3D', 'Thiết kế Game & Hoạt hình'],
+    stat: '15+ năm tại Việt Nam',
+    href: '/dao-tao#arena',
+  },
+  {
+    id: 'skillking',
+    brand: 'SKILLKING',
+    logo: '◈',
+    color: '#16a34a',
+    colorLight: 'rgba(22,163,74,0.08)',
+    tagline: 'Digital Marketing',
+    headline: 'Thực Chiến Marketing Số Toàn Diện',
+    desc: 'Chương trình thực chiến 100% theo chuẩn doanh nghiệp. Từ SEO, Content, đến quản trị quảng cáo số và phân tích dữ liệu thị trường.',
+    image: '/fai_banner_skillking.png',
+    courses: ['Chuyên viên Digital Marketing', 'Quản trị Quảng cáo số', 'Chiến lược Nội dung (Content)', 'SEO & Website Optimization'],
+    stat: 'Chuẩn Google & Meta',
+    href: '/dao-tao#skillking',
+  },
+];
 
 export default function ProgramSelector() {
-  const [activeTab, setActiveTab] = useState('ALL');
-  const [isOpen, setIsOpen] = useState(false);
-
-  const getDropdownLabel = () => {
-    switch (activeTab) {
-      case 'ALL': return 'Tất cả chương trình đào tạo';
-      case 'ARENA': return 'Phân hệ Arena Multimedia';
-      case 'APTECH': return 'Phân hệ Aptech';
-      case 'SKILLKING': return 'Phân hệ FPT Skillking';
-      default: return 'Tất cả chương trình';
-    }
-  };
-
-  const getSchoolImage = (school) => {
-    if (school === 'Arena Multimedia') return '/fai_card_arena.png';
-    if (school === 'Aptech') return '/fai_card_aptech.png';
-    return '/fai_card_skillking.png';
-  };
+  const [active, setActive] = useState(null);
 
   return (
-    <section className="section bg-light-gray">
+    <section className="pillars-section">
       <div className="container">
-        <div className="program-selector-header">
-          <div>
-            <span className="subtitle">Chương trình học chuẩn quốc tế</span>
-            <h2 className="section-title" style={{ margin: 0 }}>Hãy bắt đầu tương lai ngay bây giờ</h2>
-          </div>
-
-          {/* Selector Dropdown like Thang Long */}
-          <div className="custom-dropdown">
-            <button className="dropdown-toggle" onClick={() => setIsOpen(!isOpen)}>
-              <span>{getDropdownLabel()}</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={isOpen ? 'rotate' : ''}><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-
-            {isOpen && (
-              <div className="dropdown-menu-list">
-                <button onClick={() => { setActiveTab('ALL'); setIsOpen(false); }}>Tất cả chương trình đào tạo</button>
-                <button onClick={() => { setActiveTab('ARENA'); setIsOpen(false); }}>Phân hệ Arena Multimedia</button>
-                <button onClick={() => { setActiveTab('APTECH'); setIsOpen(false); }}>Phân hệ Aptech (Lập trình viên)</button>
-                <button onClick={() => { setActiveTab('SKILLKING'); setIsOpen(false); }}>Phân hệ FPT Skillking (Marketing)</button>
-              </div>
-            )}
-          </div>
+        <div className="pillars-header">
+          <span className="section-eyebrow">Chương trình đào tạo quốc tế</span>
+          <h2 className="section-headline">Ba Trụ Cột Đào Tạo</h2>
+          <p className="section-subhead">
+            FAI quy tụ 3 hệ thống đào tạo hàng đầu — mỗi trụ cột là một thế giới chuyên biệt, cùng chung một chuẩn mực quốc tế.
+          </p>
         </div>
 
-        {/* Tab content list in grid layout */}
-        <div className="programs-grid">
-          {programs[activeTab].map((prog, idx) => (
-            <a key={idx} href={prog.url} className="program-card-item">
-              <div className="card-image-header">
-                <Image 
-                  src={getSchoolImage(prog.school)} 
-                  alt={prog.school} 
-                  fill 
-                  style={{ objectFit: 'cover' }} 
-                />
+        <div className="pillars-grid">
+          {pillars.map((pillar) => {
+            const isActive = active === pillar.id;
+            return (
+              <div
+                key={pillar.id}
+                className={`pillar-card ${isActive ? 'is-active' : ''}`}
+                style={{ '--pillar-color': pillar.color, '--pillar-light': pillar.colorLight }}
+                onMouseEnter={() => setActive(pillar.id)}
+                onMouseLeave={() => setActive(null)}
+              >
+                {/* Background image with overlay */}
+                <div className="pillar-bg">
+                  <Image src={pillar.image} alt={pillar.brand} fill style={{ objectFit: 'cover' }} />
+                  <div className="pillar-overlay" />
+                </div>
+
+                {/* Default state — visible always */}
+                <div className="pillar-default">
+                  <span className="pillar-logo-icon">{pillar.logo}</span>
+                  <div>
+                    <span className="pillar-brand-tag">{pillar.brand}</span>
+                    <h3 className="pillar-tagline">{pillar.tagline}</h3>
+                  </div>
+                </div>
+
+                {/* Hover/Active state */}
+                <div className="pillar-hover-content">
+                  <span className="pillar-brand-tag-sm">{pillar.brand}</span>
+                  <h3 className="pillar-headline">{pillar.headline}</h3>
+                  <p className="pillar-desc">{pillar.desc}</p>
+                  <ul className="pillar-courses">
+                    {pillar.courses.map((c, i) => (
+                      <li key={i}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="pillar-footer">
+                    <span className="pillar-stat">{pillar.stat}</span>
+                    <Link href={pillar.href} className="pillar-cta-btn">
+                      Tìm hiểu ngay
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="card-info-box">
-                <span className="card-school-tag">{prog.school}</span>
-                <h3 className="card-program-title">{prog.name}</h3>
-                <span className="card-action-link">
-                  Xem chi tiết
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </span>
-              </div>
-            </a>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
