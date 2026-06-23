@@ -1301,7 +1301,7 @@ img {
 }
 
 .prog-beau-container-full {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -1310,38 +1310,38 @@ img {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 40px;
-  margin-bottom: 48px;
+  margin-bottom: 80px; /* More white space below section header */
 }
 
 .prog-beau-title-main {
   font-family: var(--font-sans);
-  font-size: clamp(2.6rem, 4.5vw, 4rem);
-  font-weight: 800;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 850;
   color: var(--secondary);
-  line-height: 1.06;
-  letter-spacing: -0.03em;
-  margin-top: 14px;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin-top: 18px;
 }
 
 /* List border */
 .prog-beau-list {
-  border-top: 1px solid rgba(13,33,55,0.15);
+  border-top: 1px solid rgba(13,33,55,0.12);
 }
 
 .prog-beau-item {
-  border-bottom: 1px solid rgba(13,33,55,0.15);
+  border-bottom: 1px solid rgba(13,33,55,0.12);
   cursor: pointer;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.4s ease;
 }
 
-.prog-beau-item.is-dimmed { opacity: 0.3; }
+.prog-beau-item.is-dimmed { opacity: 0.25; } /* Higher contrast dimming */
 .prog-beau-item.is-hovered { opacity: 1; }
 
 .prog-beau-item-inner {
   display: grid;
-  grid-template-columns: 4.5fr 5.5fr; /* 45% title, 55% details side-by-side */
-  gap: 48px;
-  padding: 48px 0;
+  grid-template-columns: 4.8fr 7.2fr; /* 40% vs 60% ratio, more width for details */
+  gap: 80px; /* Enormous gap for whitespace */
+  padding: 120px 0; /* Massive top/bottom padding for bự, to, cao hơn */
   align-items: start;
   position: relative;
 }
@@ -1350,46 +1350,46 @@ img {
 .prog-beau-title-col {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 28px;
   position: relative;
 }
 
 .prog-beau-num {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   line-height: 1;
-  margin-top: 10px;
+  margin-top: 12px;
   flex-shrink: 0;
   font-family: var(--font-sans);
   transition: transform 0.3s ease;
 }
 
 .prog-beau-item:hover .prog-beau-num {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .prog-beau-brand-tag {
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
+  font-size: 0.85rem; /* Larger, more premium tags */
+  font-weight: 850;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   transition: letter-spacing 0.35s ease;
 }
 
 .prog-beau-item:hover .prog-beau-brand-tag {
-  letter-spacing: 0.28em;
+  letter-spacing: 0.3em;
 }
 
 .prog-beau-item-title {
   font-family: var(--font-sans);
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 800;
+  font-size: clamp(2.4rem, 4vw, 3.8rem); /* Massive, bold headings */
+  font-weight: 850;
   color: var(--secondary);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
 }
 
