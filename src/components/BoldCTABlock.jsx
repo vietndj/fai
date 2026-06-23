@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import ParticleCanvas from './ParticleCanvas';
 
 const highlights = [
   { icon: '🏆', text: 'Top 1 đào tạo CNTT\ntư nhân Việt Nam' },
@@ -25,6 +26,9 @@ export default function BoldCTABlock() {
 
   return (
     <section className="bold-cta-block" ref={ref}>
+      {/* Nền hạt chuyển động kiểu antigravity.google giống ở trên */}
+      <ParticleCanvas className="bold-cta-particles" />
+
       {/* Giant background text */}
       <div className="bold-cta-bg-text" aria-hidden="true">FAI</div>
 
