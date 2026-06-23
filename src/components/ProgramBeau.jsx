@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -68,115 +68,133 @@ const programs = [
 ];
 
 export default function ProgramBeau() {
-  const [hovered, setHovered] = useState(null);
-  // Track cursor for floating image
-  const [cursor, setCursor] = useState({ x: 0, y: 0 });
-  const sectionRef = useRef(null);
+  // -1 = no hover, show default first item image
+  const [active, setActive] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
-  const active = hovered !== null ? programs[hovered] : null;
-
-  const handleMouseMove = (e) => {
-    if (!sectionRef.current) return;
-    const rect = sectionRef.current.getBoundingClientRect();
-    setCursor({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
+  const currentImg = programs[active].image;
+  const currentColor = programs[active].color;
 
   return (
-    <section
-      className="prog-beau-section"
-      ref={sectionRef}
-      onMouseMove={handleMouseMove}
-    >
-      {/* Floating image that follows cursor */}
-      <div
-        className="prog-beau-cursor-img"
-        style={{
-          left: cursor.x,
-          top: cursor.y,
-          opacity: hovered !== null ? 1 : 0,
-          transform: hovered !== null
-            ? 'translate(-50%, -50%) scale(1) rotate(-4deg)'
-            : 'translate(-50%, -50%) scale(0.6) rotate(-4deg)',
-        }}
-      >
-        {programs.map((p, i) => (
-          <div
-            key={i}
-            className="cursor-img-frame"
-            style={{ opacity: hovered === i ? 1 : 0, transition: 'opacity 0.35s ease' }}
-          >
-            <Image src={p.image} alt={p.brand} fill style={{ objectFit: 'cover' }} />
+    <section className="prog-beau-section">
+      <div className="prog-beau-container">
+
+        {/* ── LEFT: Scrollable list ─────────────────── */}
+        <div className="prog-beau-left-col">
+          {/* Header */}
+          <div className="prog-beau-header" data-reveal>
+            <span className="section-eyebrow">Chương trình đào tạo quốc tế</span>
+            <h2 className="prog-beau-title-main">
+              Ba Hệ Thống<br />Đào Tạo Hàng Đầu
+            </h2>
           </div>
-        ))}
-      </div>
 
-      <div className="container">
-        {/* Section header */}
-        <div className="prog-beau-header" data-reveal>
-          <span className="section-eyebrow">Chương trình đào tạo quốc tế</span>
-          <h2 className="prog-beau-title-main">
-            Ba Hệ Thống<br />Đào Tạo Hàng Đầu
-          </h2>
-        </div>
-
-        {/* Item list — beau.vn style */}
-        <div className="prog-beau-list">
-          {programs.map((prog, idx) => (
-            <div
-              key={idx}
-              className={`prog-beau-item ${hovered !== null && hovered !== idx ? 'is-dimmed' : ''} ${hovered === idx ? 'is-hovered' : ''}`}
-              onMouseEnter={() => setHovered(idx)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              <div className="prog-beau-item-inner">
-                {/* LEFT: Big title (col-8 equivalent) */}
-                <div className="prog-beau-left">
-                  <div className="prog-beau-num" style={{ color: prog.color }}>
-                    {prog.num}
-                  </div>
-                  <div className="prog-beau-brand-wrap">
-                    <span className="prog-beau-brand-tag" style={{ color: prog.color }}>
-                      {prog.brand}
+          {/* Program list */}
+          <div className="prog-beau-list">
+            {programs.map((prog, idx) => (
+              <div
+                key={idx}
+                className={`prog-beau-item ${
+                  isHovering && active !== idx ? 'is-dimmed' : ''
+                } ${active === idx && isHovering ? 'is-hovered' : ''}`}
+                onMouseEnter={() => { setActive(idx); setIsHovering(true); }}
+                onMouseLeave={() => setIsHovering(false)}
+              >
+                <div className="prog-beau-item-inner">
+                  {/* Number + Title */}
+                  <div className="prog-beau-title-col">
+                    <span className="prog-beau-num" style={{ color: prog.color }}>
+                      {prog.num}
                     </span>
-                    <h2 className="prog-beau-item-title">
-                      {prog.titleLine1}<br />
-                      {prog.titleLine2}
-                    </h2>
-                  </div>
-                  {/* Hover: progress line */}
-                  <div
-                    className="prog-beau-line"
-                    style={{ backgroundColor: prog.color }}
-                  />
-                </div>
-
-                {/* RIGHT: Content (col-4 equivalent) */}
-                <div className="prog-beau-right">
-                  <p className="prog-beau-subtitle">{prog.subtitle}</p>
-                  <p className="prog-beau-desc">{prog.desc}</p>
-                  <ul className="prog-beau-tags">
-                    {prog.tags.map((t, i) => (
-                      <li key={i}>{t}</li>
-                    ))}
-                  </ul>
-                  <div className="prog-beau-meta">
-                    <div className="prog-beau-stat">
-                      <strong style={{ color: prog.color }}>{prog.stat}</strong>
-                      <span>{prog.statLabel}</span>
+                    <div>
+                      <span className="prog-beau-brand-tag" style={{ color: prog.color }}>
+                        {prog.brand}
+                      </span>
+                      <h2 className="prog-beau-item-title">
+                        {prog.titleLine1}<br />{prog.titleLine2}
+                      </h2>
                     </div>
-                    <Link href={prog.href} className="prog-beau-cta" style={{ color: prog.color }}>
-                      Khám phá chương trình
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <line x1="5" y1="12" x2="19" y2="12"/>
-                        <polyline points="12 5 19 12 12 19"/>
-                      </svg>
-                    </Link>
+                    <div
+                      className="prog-beau-line"
+                      style={{ backgroundColor: prog.color }}
+                    />
+                  </div>
+
+                  {/* Content — revealed on hover */}
+                  <div className="prog-beau-content-col">
+                    <p className="prog-beau-subtitle">{prog.subtitle}</p>
+                    <p className="prog-beau-desc">{prog.desc}</p>
+                    <ul className="prog-beau-tags">
+                      {prog.tags.map((t, i) => (
+                        <li key={i}>{t}</li>
+                      ))}
+                    </ul>
+                    <div className="prog-beau-meta">
+                      <div className="prog-beau-stat">
+                        <strong style={{ color: prog.color }}>{prog.stat}</strong>
+                        <span>{prog.statLabel}</span>
+                      </div>
+                      <Link
+                        href={prog.href}
+                        className="prog-beau-cta"
+                        style={{ color: prog.color }}
+                      >
+                        Khám phá chương trình
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <line x1="5" y1="12" x2="19" y2="12"/>
+                          <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        {/* ── RIGHT: Sticky image panel ─────────────── */}
+        <div className="prog-beau-right-col">
+          <div className="prog-beau-img-panel">
+            {programs.map((prog, idx) => (
+              <div
+                key={idx}
+                className="prog-beau-img-layer"
+                style={{
+                  opacity: active === idx ? 1 : 0,
+                  transform: active === idx
+                    ? 'scale(1) translateY(0)'
+                    : 'scale(1.04) translateY(10px)',
+                }}
+              >
+                <Image
+                  src={prog.image}
+                  alt={prog.brand}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  priority={idx === 0}
+                />
+              </div>
+            ))}
+
+            {/* Color accent bar at bottom */}
+            <div
+              className="prog-beau-img-accent"
+              style={{ backgroundColor: currentColor }}
+            />
+
+            {/* Program label overlay */}
+            <div className="prog-beau-img-label">
+              <span className="prog-beau-img-brand" style={{ color: currentColor }}>
+                {programs[active].brand}
+              </span>
+              <span className="prog-beau-img-tagline">
+                {programs[active].subtitle}
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
