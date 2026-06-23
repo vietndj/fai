@@ -1517,12 +1517,14 @@ img {
 
 .prog-beau-cta:hover { gap: 13px; }
 
-/* ── RIGHT column: sticky image panel — aligns with list top ── */
+/* ── RIGHT column: sticky image — centered in viewport ── */
 .prog-beau-right-col {
   position: sticky;
-  /* top = navbar height (~80px). Image aligns with first list item. */
-  top: 80px;
+  /* Center the 480px panel vertically in the viewport */
+  top: calc(50vh - 240px);
   height: 480px;
+  /* Ensure it doesn't go above the section */
+  align-self: start;
 }
 
 .prog-beau-img-panel {
@@ -2568,28 +2570,28 @@ img {
    PARTNER MARQUEE
 ═══════════════════════════════════════════ */
 .partner-section {
-  /* Animated navy gradient — slightly different from counters for variation */
-  background: linear-gradient(160deg, #040d18, #0D2137, #081828, #0f2340, #0D2137);
-  background-size: 250% 250%;
-  animation: gradientShiftNavy 18s ease infinite;
-  padding: 80px 0;
+  background: #ffffff;
+  padding: 90px 0 72px;
   overflow: hidden;
   position: relative;
 }
 
+/* Subtle texture */
 .partner-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 36px 36px;
+  background-image: radial-gradient(rgba(13,33,55,0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
   pointer-events: none;
 }
 
 .partner-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
   padding: 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .partner-eyebrow {
@@ -2603,69 +2605,148 @@ img {
 }
 
 .partner-headline {
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
   font-weight: 800;
-  color: #ffffff;
+  color: var(--secondary);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
+.partner-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 14px auto 0;
+  line-height: 1.65;
+}
+
+/* ── Marquee rows ─────────────────────────── */
 .marquee-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   overflow: hidden;
+  margin: 32px 0 16px;
+  padding: 8px 0;
+  /* Fade edges */
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  gap: 16px;
+  gap: 20px;
+  align-items: center;
 }
 
-.marquee-forward {
-  animation: marqueeForward 30s linear infinite;
+/* SLOW animations — 60s forward, 80s backward */
+.marquee-slow-forward {
+  animation: marqueeForward 60s linear infinite;
 }
 
-.marquee-backward {
-  animation: marqueeBackward 25s linear infinite;
+.marquee-slow-backward {
+  animation: marqueeBackward 80s linear infinite;
+  margin-bottom: 4px;
 }
 
+/* ── Logo card ────────────────────────────── */
 .marquee-logo-card {
   flex-shrink: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
-  background-color: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
-  min-width: 180px;
+  gap: 8px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(13,33,55,0.08);
+  border-radius: 12px;
+  min-width: 150px;
+  height: 88px;
+  box-shadow: 0 2px 8px rgba(13,33,55,0.06);
   transition: all 0.3s ease;
 }
 
 .marquee-logo-card:hover {
-  background-color: rgba(255,255,255,0.1);
   border-color: var(--primary);
-  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(13,33,55,0.12);
+  transform: translateY(-4px);
 }
 
-.marquee-logo-text {
-  font-size: 0.85rem;
+.marquee-logo-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+}
+
+.marquee-logo-img {
+  max-height: 36px;
+  max-width: 100px;
+  width: auto;
+  object-fit: contain;
+  /* Grayscale by default, color on hover */
+  filter: grayscale(100%) opacity(0.65);
+  transition: filter 0.3s ease;
+}
+
+.marquee-logo-card:hover .marquee-logo-img {
+  filter: grayscale(0%) opacity(1);
+}
+
+.marquee-logo-fallback {
+  font-size: 0.75rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.5);
+  color: rgba(13,33,55,0.5);
   white-space: nowrap;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
+  display: none;
+}
+
+.marquee-logo-card:hover .marquee-logo-fallback {
+  color: var(--secondary);
+}
+
+.marquee-logo-name {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(13,33,55,0.45);
+  white-space: nowrap;
   transition: color 0.3s ease;
 }
 
-.marquee-logo-card:hover .marquee-logo-text {
-  color: #ffffff;
+.marquee-logo-card:hover .marquee-logo-name {
+  color: var(--secondary);
 }
 
 .partner-cta {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 44px;
+  position: relative;
+  z-index: 1;
 }
 
+/* Navy outline button (for light background) */
+.btn-outline-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  border: 2px solid rgba(13,33,55,0.2);
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.btn-outline-navy:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232,116,30,0.15);
+}
+
+/* Keep old btn-outline-light for other uses */
 .btn-outline-light {
   display: inline-flex;
   align-items: center;
@@ -2686,8 +2767,9 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee-forward, .marquee-backward { animation: none; }
+  .marquee-slow-forward, .marquee-slow-backward { animation: none; }
 }
+
 
 /* ═══════════════════════════════════════════
    STUDENT LIFE — BENTO GRID
