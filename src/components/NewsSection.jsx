@@ -1,19 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import { allNews } from '../data/news';
 
-const regularNews = [
-  {
-    title: 'Aptech tổ chức cuộc thi Hackathon TechWiz năm thứ 6',
-    date: '20-06-2026',
-    image: '/fai_banner_aptech.png',
-    tag: 'Sự kiện',
-  },
-  {
-    title: 'Showcase Đồ án tốt nghiệp Arena Multimedia thu hút nhiều nhà tuyển dụng',
-    date: '18-06-2026',
-    image: '/fai_banner_arena.png',
-    tag: 'Sự kiện',
-  }
-];
+const regularNews = allNews.slice(1, 3); // Aptech & Arena articles
 
 const notices = [
   {
@@ -47,22 +37,29 @@ export default function NewsSection() {
           </div>
 
           {/* Featured News Card */}
-          <div className="featured-news-card" data-reveal>
-            <div className="featured-news-image">
-              <Image src="/fai_student_life_2.png" alt="Featured News" fill style={{ objectFit: 'cover' }} />
-              <span className="featured-news-tag">Sự kiện nổi bật</span>
-            </div>
-            <div className="featured-news-body">
-              <span className="news-date">23-06-2026 | Sự kiện</span>
-              <h3 className="featured-news-title">
-                Đại nhạc hội FAI SoundWave 2026 — Kỷ niệm hành trình 18 năm kiến tạo công nghệ sáng tạo
-              </h3>
-              <p className="featured-news-desc">
-                Chào mừng tân sinh viên nhập học đợt hè 2026, FAI tổ chức đêm nhạc cực bùng nổ quy tụ các nghệ sĩ hàng đầu và màn trình diễn đậm chất nghệ thuật công nghệ.
-              </p>
-              <a href="#" className="btn btn-primary">Đọc tiếp</a>
-            </div>
-          </div>
+          {(() => {
+            const featured = allNews[0];
+            return (
+              <div className="featured-news-card" data-reveal>
+                <div className="featured-news-image">
+                  <Image src={featured.image} alt={featured.title} fill style={{ objectFit: 'cover' }} />
+                  <span className="featured-news-tag">Sự kiện nổi bật</span>
+                </div>
+                <div className="featured-news-body">
+                  <span className="news-date">{featured.date} | {featured.category}</span>
+                  <h3 className="featured-news-title">
+                    {featured.title}
+                  </h3>
+                  <p className="featured-news-desc">
+                    {featured.desc}
+                  </p>
+                  <Link href={`/tin-tuc/${featured.slug}`} className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                    Đọc tiếp <ArrowRight size={18} strokeWidth={2.5} />
+                  </Link>
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Regular News Row */}
           <div className="regular-news-row">
@@ -70,12 +67,14 @@ export default function NewsSection() {
               <div key={idx} className="news-card" data-reveal data-reveal-delay={`${0.15 + idx * 0.1}`}>
                 <div className="news-card-image">
                   <Image src={news.image} alt={news.title} fill style={{ objectFit: 'cover' }} />
-                  <span className="news-card-tag">{news.tag}</span>
+                  <span className="news-card-tag">{news.category}</span>
                 </div>
                 <div className="news-card-body">
                   <span className="news-date">{news.date}</span>
                   <h4 className="news-card-title">{news.title}</h4>
-                  <a href="#" className="read-more-link">Xem thêm →</a>
+                  <Link href={`/tin-tuc/${news.slug}`} className="read-more-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                    Xem thêm <ArrowRight size={16} />
+                  </Link>
                 </div>
               </div>
             ))}

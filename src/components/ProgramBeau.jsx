@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import ParticleCanvas from './ParticleCanvas';
 
 const programs = [
@@ -24,7 +25,7 @@ const programs = [
     stat: '28+',
     statLabel: 'năm đào tạo toàn cầu',
     color: '#1a6ed8',
-    href: '/dao-tao#aptech',
+    href: '/dao-tao/aptech',
   },
   {
     num: '02',
@@ -44,7 +45,7 @@ const programs = [
     stat: '20+',
     statLabel: 'năm tại Việt Nam',
     color: '#e8741e',
-    href: '/dao-tao#arena',
+    href: '/dao-tao/arena',
   },
   {
     num: '03',
@@ -64,7 +65,7 @@ const programs = [
     stat: 'Google & Meta',
     statLabel: 'chuẩn chứng chỉ quốc tế',
     color: '#16a34a',
-    href: '/dao-tao#skillking',
+    href: '/dao-tao/skillking',
   },
 ];
 
@@ -131,12 +132,9 @@ export default function ProgramBeau() {
                       <strong style={{ color: prog.color }}>{prog.stat}</strong>
                       <span>{prog.statLabel}</span>
                     </div>
-                    <Link href={prog.href} className="prog-beau-cta" style={{ color: prog.color }}>
+                    <Link href={prog.href} className="prog-beau-cta" style={{ color: prog.color, display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                       Khám phá chương trình
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <line x1="5" y1="12" x2="19" y2="12"/>
-                        <polyline points="12 5 19 12 12 19"/>
-                      </svg>
+                      <ArrowRight size={18} />
                     </Link>
                   </div>
                 </div>

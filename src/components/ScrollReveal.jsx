@@ -2,27 +2,9 @@
 
 import { useEffect } from 'react';
 
-/**
- * Global scroll reveal — watches all [data-reveal] elements.
- * Uses rootMargin để trigger SỚM hơn (trước khi element vào viewport)
- * và threshold thấp hơn để không bị bỏ qua.
- */
 export default function ScrollReveal() {
   useEffect(() => {
-    // Một số elements cần được reveal ngay khi page load (above fold)
-    const revealAll = (elements) => {
-      elements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight) {
-          el.classList.add('revealed');
-        }
-      });
-    };
-
-    const elements = document.querySelectorAll('[data-reveal]');
-
-    // Reveal any elements already in view immediately
-    revealAll(Array.from(elements));
+    const observedElements = new Set();
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -30,24 +12,62 @@ export default function ScrollReveal() {
           if (entry.isIntersecting) {
             const el = entry.target;
             const delay = parseFloat(el.dataset.revealDelay || '0');
-            setTimeout(() => el.classList.add('revealed'), delay * 1000);
+            setTimeout(() => {
+              el.classList.add('revealed');
+            }, delay * 1000);
             observer.unobserve(el);
+            observedElements.delete(el);
           }
         });
       },
       {
-        threshold: 0.05,                   // trigger khi 5% visible
-        rootMargin: '0px 0px -40px 0px',   // trigger trước khi chạm đáy 40px
+        threshold: 0.05,
+        rootMargin: '0px 0px -40px 0px',
       }
     );
 
-    elements.forEach((el) => {
-      if (!el.classList.contains('revealed')) {
-        observer.observe(el);
-      }
+    const scanAndObserve = () => {
+      const elements = document.querySelectorAll('[data-reveal]');
+      elements.forEach((el) => {
+        if (!observedElements.has(el) && !el.classList.contains('revealed')) {
+          // Check if already in viewport on discovery
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            const delay = parseFloat(el.dataset.revealDelay || '0');
+            setTimeout(() => {
+              el.classList.add('revealed');
+            }, delay * 1000);
+          } else {
+            observer.observe(el);
+            observedElements.add(el);
+          }
+        }
+      });
+    };
+
+    // Initial scan
+    scanAndObserve();
+
+    // Use MutationObserver to watch for dynamic DOM changes (page transitions)
+    const mutationObserver = new MutationObserver(() => {
+      scanAndObserve();
     });
 
-    return () => observer.disconnect();
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    // Also scan on window scroll/resize events just in case
+    window.addEventListener('scroll', scanAndObserve, { passive: true });
+    window.addEventListener('resize', scanAndObserve, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+      window.removeEventListener('scroll', scanAndObserve);
+      window.removeEventListener('resize', scanAndObserve);
+    };
   }, []);
 
   return null;

@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const quotes = [
   {
@@ -103,13 +105,14 @@ export default function Testimonials() {
             <span className="quote-cta-label">Tuyển sinh 2026</span>
             <h3 className="quote-cta-title">Bắt Đầu Hành Trình Của Bạn</h3>
             <p className="quote-cta-desc">Học bổng lên đến 50% — Nhập học linh hoạt — Đào tạo chuẩn quốc tế</p>
-            <a href="/tuyen-sinh" className="quote-cta-btn">
+            <Link href="/tuyen-sinh" className="quote-cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               Đăng ký tư vấn miễn phí
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-            <a href="/dao-tao" className="quote-cta-link">Xem tất cả chương trình →</a>
+              <ArrowRight size={18} strokeWidth={2.5} />
+            </Link>
+            <Link href="/dao-tao" className="quote-cta-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              Xem tất cả chương trình
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </div>

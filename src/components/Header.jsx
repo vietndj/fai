@@ -1,25 +1,9 @@
 import Link from 'next/link';
+import { Search, Zap, Palette, Megaphone } from 'lucide-react';
 
 export default function Header() {
   return (
     <header className="header-container">
-      {/* Top Utilities Bar */}
-      <div className="top-bar">
-        <div className="container top-bar-content">
-          <div className="top-bar-left">
-            <span>🎓 Tuyển sinh 2026 — Học bổng lên đến 50% dành cho học sinh xuất sắc</span>
-          </div>
-          <div className="top-bar-right">
-            <a href="#" className="top-link">Tra cứu tuyển sinh</a>
-            <span className="divider">|</span>
-            <a href="#" className="top-link">E-Learning</a>
-            <span className="divider">|</span>
-            <a href="#" className="top-link">Thông tin - Tài liệu</a>
-            <span className="divider">|</span>
-            <span className="lang-switch">EN</span>
-          </div>
-        </div>
-      </div>
 
       {/* Main Header navigation */}
       <div className="main-nav-container">
@@ -66,23 +50,32 @@ export default function Header() {
                     </div>
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid">
-                        <div className="program-cat">
-                          <h4>⚡ APTECH — Công Nghệ</h4>
-                          <Link href="/dao-tao#aptech" className="megamenu-link">Lập trình viên Quốc tế (ADSE)</Link>
-                          <Link href="/dao-tao#aptech" className="megamenu-link">Trí tuệ Nhân tạo (AI)</Link>
-                          <Link href="/dao-tao#aptech" className="megamenu-link">Khoa học Dữ liệu</Link>
+                        <div className="program-cat brand-aptech">
+                          <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <Zap size={18} style={{ color: '#1a6ed8' }} />
+                            APTECH — Công Nghệ
+                          </h4>
+                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình viên Quốc tế (ADSE)</Link>
+                          <Link href="/dao-tao/aptech" className="megamenu-link">Trí tuệ Nhân tạo (AI)</Link>
+                          <Link href="/dao-tao/aptech" className="megamenu-link">Khoa học Dữ liệu</Link>
                         </div>
-                        <div className="program-cat">
-                          <h4>✦ ARENA — Sáng Tạo</h4>
-                          <Link href="/dao-tao#arena" className="megamenu-link">Mỹ thuật Đa phương tiện</Link>
-                          <Link href="/dao-tao#arena" className="megamenu-link">Thiết kế Đồ họa & Web</Link>
-                          <Link href="/dao-tao#arena" className="megamenu-link">Kỹ xảo & Hoạt hình 3D</Link>
+                        <div className="program-cat brand-arena">
+                          <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <Palette size={18} style={{ color: '#e8741e' }} />
+                            ARENA — Sáng Tạo
+                          </h4>
+                          <Link href="/dao-tao/arena" className="megamenu-link">Mỹ thuật Đa phương tiện</Link>
+                          <Link href="/dao-tao/arena" className="megamenu-link">Thiết kế Đồ họa & Web</Link>
+                          <Link href="/dao-tao/arena" className="megamenu-link">Kỹ xảo & Hoạt hình 3D</Link>
                         </div>
-                        <div className="program-cat">
-                          <h4>◈ SKILLKING — Marketing</h4>
-                          <Link href="/dao-tao#skillking" className="megamenu-link">Digital Marketing chuyên sâu</Link>
-                          <Link href="/dao-tao#skillking" className="megamenu-link">Social Media & SEO</Link>
-                          <Link href="/dao-tao#skillking" className="megamenu-link">Quản trị chiến dịch số</Link>
+                        <div className="program-cat brand-skillking">
+                          <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <Megaphone size={18} style={{ color: '#16a34a' }} />
+                            SKILLKING — Marketing
+                          </h4>
+                          <Link href="/dao-tao/skillking" className="megamenu-link">Digital Marketing chuyên sâu</Link>
+                          <Link href="/dao-tao/skillking" className="megamenu-link">Social Media & SEO</Link>
+                          <Link href="/dao-tao/skillking" className="megamenu-link">Quản trị chiến dịch số</Link>
                         </div>
                       </div>
                     </div>
@@ -143,11 +136,8 @@ export default function Header() {
 
           {/* Right actions */}
           <div className="nav-actions">
-            <button className="search-btn" aria-label="Search">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
+            <button className="search-btn" aria-label="Search" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Search size={20} />
             </button>
             <Link href="/tuyen-sinh" className="nav-cta-btn">
               <span className="nav-cta-pulse"></span>

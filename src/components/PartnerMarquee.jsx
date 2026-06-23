@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 /**
  * Logos load từ Clearbit Logo API (logo.clearbit.com/{domain})
@@ -9,27 +10,36 @@ import Link from 'next/link';
  * Fallback: hiện text nếu ảnh lỗi
  */
 const partners = [
-  { name: 'FPT Software',    logo: 'https://logo.clearbit.com/fpt.com.vn',           fallback: 'FPT Software'    },
-  { name: 'Ubisoft',         logo: 'https://logo.clearbit.com/ubisoft.com',           fallback: 'Ubisoft'         },
-  { name: 'Adobe',           logo: 'https://logo.clearbit.com/adobe.com',             fallback: 'Adobe'           },
-  { name: 'Google',          logo: 'https://logo.clearbit.com/google.com',            fallback: 'Google'          },
-  { name: 'Meta',            logo: 'https://logo.clearbit.com/meta.com',              fallback: 'Meta'            },
-  { name: 'MoMo',            logo: 'https://logo.clearbit.com/momo.vn',              fallback: 'MoMo'            },
-  { name: 'KPMG',            logo: 'https://logo.clearbit.com/kpmg.com',             fallback: 'KPMG'            },
-  { name: 'PwC',             logo: 'https://logo.clearbit.com/pwc.com',              fallback: 'PwC'             },
-  { name: 'Shopee',          logo: 'https://logo.clearbit.com/shopee.vn',            fallback: 'Shopee'          },
-  { name: 'Grab',            logo: 'https://logo.clearbit.com/grab.com',             fallback: 'Grab'            },
-  { name: 'VNG',             logo: 'https://logo.clearbit.com/vng.com.vn',           fallback: 'VNG'             },
-  { name: 'Techcombank',     logo: 'https://logo.clearbit.com/techcombank.com.vn',   fallback: 'Techcombank'     },
-  { name: 'Viettel',         logo: 'https://logo.clearbit.com/viettel.com.vn',       fallback: 'Viettel'         },
-  { name: 'VNPT',            logo: 'https://logo.clearbit.com/vnpt.vn',              fallback: 'VNPT'            },
-  { name: 'Gameloft',        logo: 'https://logo.clearbit.com/gameloft.com',         fallback: 'Gameloft'        },
-  { name: 'Dentsu',          logo: 'https://logo.clearbit.com/dentsu.com',           fallback: 'Dentsu'          },
-  { name: 'GroupM',          logo: 'https://logo.clearbit.com/groupm.com',           fallback: 'GroupM'          },
-  { name: 'Ogilvy',          logo: 'https://logo.clearbit.com/ogilvy.com',           fallback: 'Ogilvy'          },
-  { name: 'Vingroup',        logo: 'https://logo.clearbit.com/vingroup.net',         fallback: 'Vingroup'        },
-  { name: 'Deloitte',        logo: 'https://logo.clearbit.com/deloitte.com',         fallback: 'Deloitte'        },
+  { name: 'Sendo',           logo: '/partners/sendo.png',           fallback: 'Sendo'           },
+  { name: 'MoMo',            logo: '/partners/momo.png',            fallback: 'MoMo'            },
+  { name: 'Haravan',         logo: '/partners/haravan.png',         fallback: 'Haravan'         },
+  { name: 'Accesstrade',     logo: '/partners/accesstrade.png',     fallback: 'Accesstrade'     },
+  { name: 'Repu Digital',    logo: '/partners/repu_digital.png',    fallback: 'Repu Digital'    },
+  { name: 'Pati Group',      logo: '/partners/pati_group.png',      fallback: 'Pati Group'      },
+  { name: 'LadiPage',        logo: '/partners/ladipage_1.png',      fallback: 'LadiPage'        },
+  { name: 'Nutifood',        logo: '/partners/nutifood.png',        fallback: 'Nutifood'        },
+  { name: 'Điền Quân Group', logo: '/partners/dien_quan.png',       fallback: 'Điền Quân'       },
+  { name: 'FPT Online',      logo: '/partners/fpt_online.png',      fallback: 'FPT Online'      },
+  { name: 'Yo',              logo: '/partners/yo.png',              fallback: 'Yo'              },
+  { name: 'The Ad Agency',   logo: '/partners/the_ad_agency.png',   fallback: 'The Ad Agency'   },
+  { name: 'Thunder Cloud',   logo: '/partners/thunder_cloud.png',   fallback: 'Thunder Cloud'   },
+  { name: 'AMD',             logo: '/partners/amd.png',             fallback: 'AMD'             },
+  { name: 'Agilearn',        logo: '/partners/agilearn.png',        fallback: 'Agilearn'        },
+  { name: 'Myad Academy',    logo: '/partners/myad_academy.png',    fallback: 'Myad Academy'    },
+  { name: 'Hub-js',          logo: '/partners/hub_js.png',          fallback: 'Hub-js'          },
+  { name: 'OneUniverse VN',  logo: '/partners/oneuniverse_vn.png',  fallback: 'OneUniverse VN'  },
+  { name: 'Marcoate',        logo: '/partners/marcoate.png',        fallback: 'Marcoate'        },
+  { name: 'VNG',             logo: '/partners/vng.png',             fallback: 'VNG'             },
+  { name: 'Comic Smart',     logo: '/partners/comic_smart.png',     fallback: 'Comic Smart'     },
+  { name: 'TopCV',           logo: '/partners/topcv.png',           fallback: 'TopCV'           },
+  { name: 'Sparx*',          logo: '/partners/sparx.png',           fallback: 'Sparx*'          },
+  { name: 'AltaMedia',       logo: '/partners/altamedia.png',       fallback: 'AltaMedia'       },
+  { name: 'Lovepop',         logo: '/partners/lovepop.png',         fallback: 'Lovepop'         },
+  { name: 'LadiPage Alt',    logo: '/partners/ladipage_2.png',      fallback: 'LadiPage'        },
+  { name: 'MePuzz',          logo: '/partners/mepuzz.png',          fallback: 'MePuzz'          },
+  { name: 'FPT Telecom',     logo: '/partners/fpt_telecom.png',     fallback: 'FPT Telecom'     },
 ];
+
 
 function LogoCard({ partner }) {
   return (
@@ -88,8 +98,8 @@ export default function PartnerMarquee() {
       </div>
 
       <div className="partner-cta" data-reveal>
-        <Link href="/doi-song#viec-lam" className="btn btn-outline-navy">
-          Xem tất cả đối tác tuyển dụng →
+        <Link href="/doi-song#viec-lam" className="btn btn-outline-navy" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+          Xem tất cả đối tác tuyển dụng <ArrowRight size={16} />
         </Link>
       </div>
     </section>

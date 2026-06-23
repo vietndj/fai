@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { Building2, Globe } from 'lucide-react';
 
 /* ── 4 primary stats (hero display) ──────────────────── */
 const primaryStats = [
@@ -12,8 +13,8 @@ const primaryStats = [
 
 /* ── 2 supporting facts (compact bar below) ─────────── */
 const supportingFacts = [
-  { icon: '🏢', value: '30+', label: 'Trung tâm đào tạo toàn quốc' },
-  { icon: '🌏', value: '3',   label: 'Hệ thống quốc tế liên kết' },
+  { icon: Building2, value: '30+', label: 'Trung tâm đào tạo toàn quốc' },
+  { icon: Globe, value: '3',   label: 'Hệ thống quốc tế liên kết' },
 ];
 
 function useCountUp(target, duration = 1800, started) {
@@ -98,13 +99,18 @@ export default function Counters() {
             transition: 'opacity 0.7s ease 0.6s, transform 0.7s ease 0.6s',
           }}
         >
-          {supportingFacts.map((f, i) => (
-            <div key={i} className="supporting-fact-item">
-              <span className="supporting-fact-icon">{f.icon}</span>
-              <strong className="supporting-fact-value">{f.value}</strong>
-              <span className="supporting-fact-label">{f.label}</span>
-            </div>
-          ))}
+          {supportingFacts.map((f, i) => {
+            const Icon = f.icon;
+            return (
+              <div key={i} className="supporting-fact-item">
+                <span className="supporting-fact-icon">
+                  <Icon size={20} strokeWidth={1.5} style={{ color: 'var(--accent)' }} />
+                </span>
+                <strong className="supporting-fact-value">{f.value}</strong>
+                <span className="supporting-fact-label">{f.label}</span>
+              </div>
+            );
+          })}
         </div>
 
       </div>

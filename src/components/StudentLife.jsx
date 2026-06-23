@@ -1,40 +1,41 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const bentoItems = [
   {
     id: 'lab',
-    label: 'Lab Lập Trình Hiện Đại',
-    tag: 'Aptech',
-    src: '/fai_banner_aptech.png',
+    label: 'Tân Khoa Rạng Rỡ Trong Ngày Lễ',
+    tag: 'Tốt Nghiệp',
+    src: '/fai_graduation_handshake.png',
     size: 'bento-large-v',
   },
   {
     id: 'design',
-    label: 'Không Gian Sáng Tạo Arena',
-    tag: 'Arena',
-    src: '/fai_banner_arena.png',
+    label: 'Bài Phát Biểu Đầy Cảm Hứng',
+    tag: 'FPT Arena',
+    src: '/fai_graduation_speech.jpg',
     size: 'bento-small',
   },
   {
     id: 'marketing',
-    label: 'Thực Chiến Digital Marketing',
-    tag: 'Skillking',
-    src: '/fai_banner_skillking.png',
+    label: 'Lời Cảm Ơn Từ Phụ Huynh',
+    tag: 'FPT Skillking',
+    src: '/fai_graduation_testimonial.png',
     size: 'bento-small',
   },
   {
     id: 'graduation',
-    label: 'Lễ Tốt Nghiệp Vinh Danh',
-    tag: 'FAI Event',
-    src: '/fai_student_life_2.png',
+    label: 'Nghi thức Tuyên Hứa Tân khoa',
+    tag: 'Nghi Lễ',
+    src: '/fai_graduation_hall.jpg',
     size: 'bento-large-h',
   },
   {
     id: 'study',
-    label: 'Học Nhóm & Sáng Tạo',
-    tag: 'Campus Life',
-    src: '/fai_student_life_1.png',
+    label: 'Hàng Trăm Tân Khoa Tung Mũ Vinh Danh',
+    tag: 'Khoảnh Khắc',
+    src: '/fai_graduation_crowd.png',
     size: 'bento-medium',
   },
 ];
@@ -61,7 +62,9 @@ export default function StudentLife() {
               <li>Câu lạc bộ lập trình, nghệ thuật, thể thao</li>
               <li>Kiến tập doanh nghiệp từ năm nhất</li>
             </ul>
-            <Link href="/doi-song" className="btn btn-secondary">Xem thêm hoạt động →</Link>
+            <Link href="/doi-song" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+            Xem thêm hoạt động <ArrowRight size={16} />
+          </Link>
           </div>
         </div>
 

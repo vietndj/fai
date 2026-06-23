@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
@@ -103,11 +104,11 @@ export default function HeroSlider() {
         ))}
       </div>
 
-      <button className="slider-nav-btn prev-btn" onClick={handlePrev} aria-label="Previous Slide">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      <button className="slider-nav-btn prev-btn" onClick={handlePrev} aria-label="Previous Slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <ChevronLeft size={22} strokeWidth={2.5} />
       </button>
-      <button className="slider-nav-btn next-btn" onClick={handleNext} aria-label="Next Slide">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      <button className="slider-nav-btn next-btn" onClick={handleNext} aria-label="Next Slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <ChevronRight size={22} strokeWidth={2.5} />
       </button>
 
       <div className="slider-dots">

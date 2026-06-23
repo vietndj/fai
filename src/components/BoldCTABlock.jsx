@@ -3,12 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import ParticleCanvas from './ParticleCanvas';
+import { Trophy, Globe, Briefcase, Handshake, ArrowRight } from 'lucide-react';
 
 const highlights = [
-  { icon: '🏆', text: 'Top 1 đào tạo CNTT\ntư nhân Việt Nam' },
-  { icon: '🌏', text: 'Chứng chỉ được công nhận\ntại 40+ quốc gia' },
-  { icon: '💼', text: '95% sinh viên có việc\ntrong 6 tháng đầu' },
-  { icon: '🤝', text: '200+ doanh nghiệp\nký kết tuyển dụng' },
+  { icon: Trophy, text: 'Top 1 đào tạo CNTT\ntư nhân Việt Nam' },
+  { icon: Globe, text: 'Chứng chỉ được công nhận\ntại 40+ quốc gia' },
+  { icon: Briefcase, text: '95% sinh viên có việc\ntrong 6 tháng đầu' },
+  { icon: Handshake, text: '200+ doanh nghiệp\nký kết tuyển dụng' },
 ];
 
 export default function BoldCTABlock() {
@@ -53,11 +54,9 @@ export default function BoldCTABlock() {
             mentor là chuyên gia ngành và mạng lưới 200+ doanh nghiệp tuyển dụng.
           </p>
           <div className="bold-cta-actions">
-            <Link href="/tuyen-sinh" className="bold-cta-btn bold-cta-btn--primary">
+            <Link href="/tuyen-sinh" className="bold-cta-btn bold-cta-btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               Đăng Ký Nhập Học 2026
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
+              <ArrowRight size={20} strokeWidth={2.5} />
             </Link>
             <Link href="/ve-fai" className="bold-cta-btn bold-cta-btn--outline">
               Tìm hiểu về FAI
@@ -77,7 +76,12 @@ export default function BoldCTABlock() {
                 transition: `opacity 0.7s ease ${0.2 + i * 0.1}s, transform 0.7s cubic-bezier(0.16,1,0.3,1) ${0.2 + i * 0.1}s`,
               }}
             >
-              <span className="bold-highlight-icon">{item.icon}</span>
+              <span className="bold-highlight-icon">
+                {(() => {
+                  const Icon = item.icon;
+                  return <Icon size={32} strokeWidth={1.5} />;
+                })()}
+              </span>
               <span className="bold-highlight-text">
                 {item.text.split('\n').map((l, j) => <span key={j}>{l}</span>)}
               </span>

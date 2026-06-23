@@ -3,12 +3,13 @@
 import { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Zap, Palette, Megaphone, Check, ArrowRight } from 'lucide-react';
 
 const pillars = [
   {
     id: 'aptech',
     brand: 'APTECH',
-    logo: '{ }',
+    logo: Zap,
     color: '#1a6ed8',
     colorLight: 'rgba(26,110,216,0.08)',
     tagline: 'Lập Trình & Công Nghệ',
@@ -22,7 +23,7 @@ const pillars = [
   {
     id: 'arena',
     brand: 'ARENA',
-    logo: '✦',
+    logo: Palette,
     color: '#e8741e',
     colorLight: 'rgba(232,116,30,0.08)',
     tagline: 'Thiết Kế & Mỹ Thuật',
@@ -36,7 +37,7 @@ const pillars = [
   {
     id: 'skillking',
     brand: 'SKILLKING',
-    logo: '◈',
+    logo: Megaphone,
     color: '#16a34a',
     colorLight: 'rgba(22,163,74,0.08)',
     tagline: 'Digital Marketing',
@@ -101,7 +102,12 @@ function TiltCard({ pillar, active, onEnter, onLeave }) {
 
       {/* Default state */}
       <div className="pillar-default">
-        <span className="pillar-logo-icon">{pillar.logo}</span>
+        <span className="pillar-logo-icon">
+          {(() => {
+            const LogoComponent = pillar.logo;
+            return <LogoComponent size={28} strokeWidth={1.5} />;
+          })()}
+        </span>
         <div>
           <span className="pillar-brand-tag">{pillar.brand}</span>
           <h3 className="pillar-tagline">{pillar.tagline}</h3>
@@ -115,17 +121,17 @@ function TiltCard({ pillar, active, onEnter, onLeave }) {
         <p className="pillar-desc">{pillar.desc}</p>
         <ul className="pillar-courses">
           {pillar.courses.map((c, i) => (
-            <li key={i}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Check size={14} strokeWidth={2.5} />
               {c}
             </li>
           ))}
         </ul>
         <div className="pillar-footer">
           <span className="pillar-stat">{pillar.stat}</span>
-          <Link href={pillar.href} className="pillar-cta-btn">
+          <Link href={pillar.href} className="pillar-cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
             Tìm hiểu ngay
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <ArrowRight size={16} strokeWidth={2.5} />
           </Link>
         </div>
       </div>
