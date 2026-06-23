@@ -95,8 +95,10 @@ export default function ProgramBeau() {
               <div
                 key={idx}
                 className={`prog-beau-item ${
+                  active === idx ? 'is-active' : ''
+                } ${
                   isHovering && active !== idx ? 'is-dimmed' : ''
-                } ${active === idx && isHovering ? 'is-hovered' : ''}`}
+                }`}
                 onMouseEnter={() => { setActive(idx); setIsHovering(true); }}
                 onMouseLeave={() => setIsHovering(false)}
               >

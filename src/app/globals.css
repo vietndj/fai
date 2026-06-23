@@ -1288,6 +1288,7 @@ img {
   background: #f2f0ec;
   padding: 100px 0 80px;
   position: relative;
+  overflow: clip; /* clip is better as it allows position: sticky to work! Or overflow: visible */
 }
 
 /* Two-column wrapper — starts AFTER header */
@@ -1421,14 +1422,19 @@ img {
   flex-direction: column;
   gap: 14px;
   opacity: 0;
+  height: 0;
+  overflow: hidden;
   transform: translateY(14px);
   transition:
     opacity 0.4s ease 0.06s,
+    height 0.45s cubic-bezier(0.16,1,0.3,1),
     transform 0.4s cubic-bezier(0.16,1,0.3,1) 0.06s;
 }
 
-.prog-beau-item:hover .prog-beau-content-col {
+.prog-beau-item.is-active .prog-beau-content-col {
   opacity: 1;
+  height: auto;
+  min-height: 220px; /* Ensure height doesn't collapse */
   transform: translateY(0);
 }
 
