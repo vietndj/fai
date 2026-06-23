@@ -193,6 +193,47 @@ img {
   50%       { transform: scale(1.6); opacity: 0.4; }
 }
 
+/* ═══════════════════════════════════════════
+   ANIMATED GRADIENT KEYFRAMES
+   nhẹ, chuyển động rất chậm — premium feel
+═══════════════════════════════════════════ */
+@keyframes gradientShiftNavy {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientShiftAmber {
+  0%   { background-position: 0% 0%; }
+  33%  { background-position: 100% 50%; }
+  66%  { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes meshFloat {
+  0%   { transform: translate(0%, 0%)   scale(1); }
+  33%  { transform: translate(2%, -3%)  scale(1.04); }
+  66%  { transform: translate(-2%, 2%)  scale(0.97); }
+  100% { transform: translate(0%, 0%)   scale(1); }
+}
+
+@keyframes floatCode {
+  0%   { transform: translateY(0px) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(-80px) rotate(4deg); opacity: 0; }
+}
+
+@keyframes typingCursor {
+  0%, 100% { border-right-color: transparent; }
+  50%       { border-right-color: #E8741E; }
+}
+
+@keyframes typeIn {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
 /* Fix: section-label-group ensures eyebrow + title stack vertically */
 .section-label-group {
   display: flex;
@@ -645,22 +686,24 @@ img {
    BIG COUNTERS BLOCK — Full-width navy, huge numbers
 ═══════════════════════════════════════════ */
 .big-counters-block {
-  background: linear-gradient(160deg, #09192e 0%, #0D2137 55%, #0f2845 100%);
+  /* Animated navy gradient — shifts slowly between deep navy tones */
+  background: linear-gradient(135deg, #060f1c, #0D2137, #0a1e35, #111f38, #0D2137);
+  background-size: 300% 300%;
+  animation: gradientShiftNavy 14s ease infinite;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
 
-.big-counters-block::before {
+/* Dot grid texture overlay */
+.big-counters-block::after {
   content: '';
   position: absolute;
-  bottom: -120px;
-  left: -120px;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(232,116,30,0.07) 0%, transparent 70%);
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
+  z-index: 0;
 }
 
 .big-counters-grid {
@@ -742,10 +785,24 @@ img {
    (Breaks the all-navy monotony with warm FAI amber)
 ═══════════════════════════════════════════ */
 .bold-cta-block {
-  background: linear-gradient(130deg, #D4540A 0%, #E8741E 40%, #F28C2E 100%);
+  /* Animated amber gradient — warm, energetic, nhẹ nhàng */
+  background: linear-gradient(135deg, #B84308, #D4540A, #E8741E, #F0932B, #E8741E, #D4540A);
+  background-size: 300% 300%;
+  animation: gradientShiftAmber 12s ease infinite;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
+}
+
+/* Subtle dot texture on amber block */
+.bold-cta-block::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Giant "FAI" background text decoration */
@@ -930,6 +987,197 @@ img {
   font-size: 0.75rem;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════
+   TECH TERMINAL SECTION — VS Code IDE style
+═══════════════════════════════════════════ */
+.tech-terminal-section {
+  background: linear-gradient(160deg, #050d1a, #09192e, #060e1c, #0a1528, #09192e);
+  background-size: 250% 250%;
+  animation: gradientShiftNavy 20s ease infinite;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-bg-mesh {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(26,110,216,0.04) 1px, transparent 1px),
+    radial-gradient(rgba(232,116,30,0.03) 1px, transparent 1px);
+  background-size: 40px 40px, 24px 24px;
+  background-position: 0 0, 12px 12px;
+  pointer-events: none;
+}
+
+.terminal-layout {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.terminal-intro { display: flex; flex-direction: column; gap: 0; }
+
+.terminal-headline {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 16px 0;
+}
+
+.terminal-highlight {
+  background: linear-gradient(90deg, #E8741E, #F0932B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.terminal-desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.terminal-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.terminal-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  transition: background 0.3s ease;
+}
+
+.terminal-badge:hover { background: rgba(255,255,255,0.08); }
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.badge-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.badge-tag {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* VS Code window */
+.terminal-window {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5),
+              0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.terminal-chrome {
+  background: #2d2d2d;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.tdot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.tdot-red    { background: #ff5f56; }
+.tdot-yellow { background: #ffbd2e; }
+.tdot-green  { background: #27c93f; }
+
+.terminal-filename {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-body {
+  background: #1e1e1e;
+  padding: 24px 0;
+  display: flex;
+  min-height: 320px;
+}
+
+.terminal-line-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 16px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  min-width: 48px;
+  text-align: right;
+  user-select: none;
+}
+
+.lnum {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.2);
+}
+
+.terminal-code {
+  padding: 0 24px;
+  flex: 1;
+  position: relative;
+}
+
+.terminal-line {
+  font-family: 'Courier New', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background-color: #E8741E;
+  vertical-align: text-bottom;
+  animation: typingCursor 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@media (max-width: 900px) {
+  .terminal-layout { grid-template-columns: 1fr; gap: 40px; }
+  .terminal-headline { font-size: 2rem; }
+  .terminal-line { font-size: 0.72rem; }
 }
 
 /* FOOTER STYLING */
@@ -1424,15 +1672,25 @@ img {
   border-radius: var(--radius-md);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  /* JS controls transform for 3D tilt — CSS only handles box-shadow */
+  transition: transform 0.18s ease, box-shadow 0.3s ease;
   background-color: var(--secondary);
+  transform-style: preserve-3d;
 }
 
 .pillar-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(13,33,55,0.25);
+  box-shadow: 0 30px 60px rgba(13,33,55,0.3);
   z-index: 2;
+}
+
+/* Light shine overlay — follows cursor via JS */
+.pillar-shine {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  transition: background 0.1s linear;
+  pointer-events: none;
 }
 
 .pillar-bg {
@@ -1887,9 +2145,22 @@ img {
    PARTNER MARQUEE
 ═══════════════════════════════════════════ */
 .partner-section {
-  background-color: var(--secondary);
+  /* Animated navy gradient — slightly different from counters for variation */
+  background: linear-gradient(160deg, #040d18, #0D2137, #081828, #0f2340, #0D2137);
+  background-size: 250% 250%;
+  animation: gradientShiftNavy 18s ease infinite;
   padding: 80px 0;
   overflow: hidden;
+  position: relative;
+}
+
+.partner-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
 }
 
 .partner-header {
@@ -2153,10 +2424,22 @@ img {
    (replaces old red testimonials block)
 ═══════════════════════════════════════════ */
 .quote-block {
-  background: linear-gradient(135deg, #0D2137 0%, #162B4A 60%, #1a3560 100%);
+  /* Animated deep navy — richer, warmer than counters */
+  background: linear-gradient(135deg, #08192e, #0D2137, #0c2040, #162B4A, #111c30, #0D2137);
+  background-size: 300% 300%;
+  animation: gradientShiftNavy 16s ease infinite;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
+}
+
+.quote-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
 }
 
 .quote-block-deco {

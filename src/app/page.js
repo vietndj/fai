@@ -4,6 +4,7 @@ import TrustBar from '@/components/TrustBar';
 import Counters from '@/components/Counters';
 import ProgramSelector from '@/components/ProgramSelector';
 import BoldCTABlock from '@/components/BoldCTABlock';
+import TechTerminal from '@/components/TechTerminal';
 import PartnerMarquee from '@/components/PartnerMarquee';
 import StudentLife from '@/components/StudentLife';
 import Testimonials from '@/components/Testimonials';
@@ -29,11 +30,14 @@ export default function Home() {
         {/* 6 stats with counting animation */}
         <Counters />
 
-        {/* 3 pillar cards: Aptech | Arena | Skillking */}
+        {/* 3 pillar cards with 3D tilt: Aptech | Arena | Skillking */}
         <ProgramSelector />
 
-        {/* Big orange/red CTA block — breaks all-navy monotony */}
+        {/* Big orange CTA block — animated gradient */}
         <BoldCTABlock />
+
+        {/* VS Code terminal — what you'll learn */}
+        <TechTerminal />
 
         {/* Partner logos marquee carousel */}
         <PartnerMarquee />
@@ -41,7 +45,7 @@ export default function Home() {
         {/* Bento grid student life */}
         <StudentLife />
 
-        {/* Editorial testimonials */}
+        {/* Quote + CTA — animated navy gradient */}
         <Testimonials />
 
         {/* News & Events */}
