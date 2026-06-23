@@ -1924,6 +1924,41 @@ img {
   to { width: 100%; }
 }
 
+/* Slider Controls */
+.slider-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  background-color: rgba(13, 33, 55, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.slider-nav-btn:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn {
+  left: 40px;
+}
+
+.next-btn {
+  right: 40px;
+}
+
 @media (max-width: 768px) {
   .hero-section {
     min-height: 580px;
@@ -2533,10 +2568,11 @@ img {
    PARTNER MARQUEE
 ═══════════════════════════════════════════ */
 .partner-section {
-  background: #ffffff;
-  padding: 90px 0 72px;
+  background-color: #f8f9fa; /* Light grey background to make white cards stand out! */
+  padding: 100px 0 80px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 /* Subtle texture */
@@ -2547,14 +2583,15 @@ img {
   background-image: radial-gradient(rgba(13,33,55,0.035) 1px, transparent 1px);
   background-size: 32px 32px;
   pointer-events: none;
+  z-index: -1;
 }
 
 .partner-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   padding: 0 20px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .partner-eyebrow {
