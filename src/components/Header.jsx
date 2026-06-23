@@ -37,7 +37,7 @@ export default function Header() {
             <ul className="menu-list">
               {/* Menu Item: Về FAI */}
               <li className="menu-item has-megamenu">
-                <Link href="#" className="menu-link">Về FAI</Link>
+                <Link href="/ve-fai" className="menu-link">Về FAI</Link>
                 <div className="megamenu">
                   <div className="container megamenu-grid">
                     <div className="megamenu-title-col">
@@ -46,11 +46,11 @@ export default function Header() {
                     </div>
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid">
-                        <Link href="#" className="megamenu-link">Giới thiệu chung</Link>
-                        <Link href="#" className="megamenu-link">Đội ngũ giảng viên</Link>
-                        <Link href="#" className="megamenu-link">Thành tựu và con số</Link>
-                        <Link href="#" className="megamenu-link">Hệ thống Campus toàn quốc</Link>
-                        <Link href="#" className="megamenu-link">Đối tác doanh nghiệp</Link>
+                        <Link href="/ve-fai#gioi-thieu" className="megamenu-link">Giới thiệu chung</Link>
+                        <Link href="/ve-fai#giang-vien" className="megamenu-link">Đội ngũ giảng viên</Link>
+                        <Link href="/ve-fai#thanh-tuu" className="megamenu-link">Thành tựu và con số</Link>
+                        <Link href="/ve-fai#campus" className="megamenu-link">Hệ thống Campus toàn quốc</Link>
+                        <Link href="/ve-fai#doanh-nghiep" className="megamenu-link">Đối tác doanh nghiệp</Link>
                       </div>
                     </div>
                   </div>
@@ -59,7 +59,7 @@ export default function Header() {
 
               {/* Menu Item: Đào tạo */}
               <li className="menu-item has-megamenu">
-                <Link href="#" className="menu-link">Chương trình Đào tạo</Link>
+                <Link href="/dao-tao" className="menu-link">Chương trình Đào tạo</Link>
                 <div className="megamenu">
                   <div className="container megamenu-grid">
                     <div className="megamenu-title-col">
@@ -70,21 +70,21 @@ export default function Header() {
                       <div className="megamenu-links-grid">
                         <div className="program-cat">
                           <h4>ARENA MULTIMEDIA</h4>
-                          <Link href="#" className="megamenu-link">Mỹ thuật đa phương tiện</Link>
-                          <Link href="#" className="megamenu-link">Thiết kế đồ họa & Web</Link>
-                          <Link href="#" className="megamenu-link">Kỹ xảo & Hoạt hình 3D</Link>
+                          <Link href="/dao-tao#arena" className="megamenu-link">Mỹ thuật đa phương tiện</Link>
+                          <Link href="/dao-tao#arena" className="megamenu-link">Thiết kế đồ họa & Web</Link>
+                          <Link href="/dao-tao#arena" className="megamenu-link">Kỹ xảo & Hoạt hình 3D</Link>
                         </div>
                         <div className="program-cat">
                           <h4>APTECH COMPUTER EDUCATION</h4>
-                          <Link href="#" className="megamenu-link">Lập trình viên quốc tế (ADSE)</Link>
-                          <Link href="#" className="megamenu-link">Trí tuệ nhân tạo (AI)</Link>
-                          <Link href="#" className="megamenu-link">Khoa học dữ liệu</Link>
+                          <Link href="/dao-tao#aptech" className="megamenu-link">Lập trình viên quốc tế (ADSE)</Link>
+                          <Link href="/dao-tao#aptech" className="megamenu-link">Trí tuệ nhân tạo (AI)</Link>
+                          <Link href="/dao-tao#aptech" className="megamenu-link">Khoa học dữ liệu</Link>
                         </div>
                         <div className="program-cat">
                           <h4>FPT SKILLKING</h4>
-                          <Link href="#" className="megamenu-link">Digital Marketing chuyên sâu</Link>
-                          <Link href="#" className="megamenu-link">Social Media & SEO</Link>
-                          <Link href="#" className="megamenu-link">Quản trị chiến dịch số</Link>
+                          <Link href="/dao-tao#skillking" className="megamenu-link">Digital Marketing chuyên sâu</Link>
+                          <Link href="/dao-tao#skillking" className="megamenu-link">Social Media & SEO</Link>
+                          <Link href="/dao-tao#skillking" className="megamenu-link">Quản trị chiến dịch số</Link>
                         </div>
                       </div>
                     </div>
@@ -94,7 +94,7 @@ export default function Header() {
 
               {/* Menu Item: Tuyển sinh */}
               <li className="menu-item has-megamenu">
-                <Link href="#" className="menu-link">Tuyển sinh</Link>
+                <Link href="/tuyen-sinh" className="menu-link">Tuyển sinh</Link>
                 <div className="megamenu">
                   <div className="container megamenu-grid">
                     <div className="megamenu-title-col">
@@ -103,12 +103,12 @@ export default function Header() {
                     </div>
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid">
-                        <Link href="#" className="megamenu-link">Thông tin tuyển sinh 2026</Link>
-                        <Link href="#" className="megamenu-link">Học bổng & Ưu đãi nhập học</Link>
-                        <Link href="#" className="megamenu-link">Chính sách học phí</Link>
-                        <Link href="#" className="megamenu-link">Đăng ký tuyển sinh trực tuyến</Link>
-                        <Link href="#" className="megamenu-link">Tư vấn 1:1 cùng chuyên gia</Link>
-                        <Link href="#" className="megamenu-link">Câu hỏi thường gặp (FAQ)</Link>
+                        <Link href="/tuyen-sinh#thong-tin" className="megamenu-link">Thông tin tuyển sinh 2026</Link>
+                        <Link href="/tuyen-sinh#hoc-bong" className="megamenu-link">Học bổng & Ưu đãi nhập học</Link>
+                        <Link href="/tuyen-sinh#hoc-phi" className="megamenu-link">Chính sách học phí</Link>
+                        <Link href="/tuyen-sinh#dang-ky" className="megamenu-link">Đăng ký tuyển sinh trực tuyến</Link>
+                        <Link href="/tuyen-sinh#dang-ky" className="megamenu-link">Tư vấn 1:1 cùng chuyên gia</Link>
+                        <Link href="/tuyen-sinh#faq" className="megamenu-link">Câu hỏi thường gặp (FAQ)</Link>
                       </div>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ export default function Header() {
 
               {/* Menu Item: Sinh viên */}
               <li className="menu-item has-megamenu">
-                <Link href="#" className="menu-link">Đời sống Sinh viên</Link>
+                <Link href="/doi-song" className="menu-link">Đời sống Sinh viên</Link>
                 <div className="megamenu">
                   <div className="container megamenu-grid">
                     <div className="megamenu-title-col">
@@ -126,11 +126,11 @@ export default function Header() {
                     </div>
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid">
-                        <Link href="#" className="megamenu-link">Câu lạc bộ & Sân chơi học thuật</Link>
-                        <Link href="#" className="megamenu-link">Liên kết & Trải nghiệm Doanh nghiệp</Link>
-                        <Link href="#" className="megamenu-link">Hoạt động Sự kiện & Teambuilding</Link>
-                        <Link href="#" className="megamenu-link">Dịch vụ Hỗ trợ việc làm (Job Hub)</Link>
-                        <Link href="#" className="megamenu-link">Cựu sinh viên tiêu biểu</Link>
+                        <Link href="/doi-song#sân-chơi" className="megamenu-link">Câu lạc bộ & Sân chơi học thuật</Link>
+                        <Link href="/doi-song#doanh-nghiep" className="megamenu-link">Liên kết & Trải nghiệm Doanh nghiệp</Link>
+                        <Link href="/doi-song#su-kien" className="megamenu-link">Hoạt động Sự kiện & Teambuilding</Link>
+                        <Link href="/doi-song#viec-lam" className="megamenu-link">Dịch vụ Hỗ trợ việc làm (Job Hub)</Link>
+                        <Link href="/doi-song#alumni" className="megamenu-link">Cựu sinh viên tiêu biểu</Link>
                       </div>
                     </div>
                   </div>
@@ -139,12 +139,12 @@ export default function Header() {
 
               {/* Menu Item: Tin tức */}
               <li className="menu-item">
-                <Link href="#" className="menu-link">Tin tức - Sự kiện</Link>
+                <Link href="/tin-tuc" className="menu-link">Tin tức - Sự kiện</Link>
               </li>
 
               {/* Menu Item: Liên hệ */}
               <li className="menu-item">
-                <Link href="#" className="menu-link">Liên hệ</Link>
+                <Link href="/lien-he" className="menu-link">Liên hệ</Link>
               </li>
             </ul>
           </nav>
