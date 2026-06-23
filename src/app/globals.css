@@ -1427,19 +1427,18 @@ img {
   flex-direction: column;
   gap: 14px;
   opacity: 0;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   transform: translateY(14px);
   transition:
-    opacity 0.4s ease 0.06s,
-    height 0.45s cubic-bezier(0.16,1,0.3,1),
-    transform 0.4s cubic-bezier(0.16,1,0.3,1) 0.06s;
+    opacity 0.4s ease,
+    max-height 0.5s cubic-bezier(0.16,1,0.3,1),
+    transform 0.4s cubic-bezier(0.16,1,0.3,1);
 }
 
 .prog-beau-item.is-active .prog-beau-content-col {
   opacity: 1;
-  height: auto;
-  min-height: 220px; /* Ensure height doesn't collapse */
+  max-height: 800px; /* Big enough to fit list items without clipping */
   transform: translateY(0);
 }
 
