@@ -1,39 +1,40 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const programs = {
   ALL: [
-    { name: 'Mỹ thuật đa phương tiện', school: 'Arena Multimedia', url: '#' },
-    { name: 'Thiết kế đồ họa chuyên nghiệp', school: 'Arena Multimedia', url: '#' },
-    { name: 'Kỹ xảo điện ảnh kỹ thuật số', school: 'Arena Multimedia', url: '#' },
-    { name: 'Thiết kế Game & Hoạt hình 3D', school: 'Arena Multimedia', url: '#' },
-    { name: 'Lập trình viên Quốc tế (ADSE)', school: 'Aptech', url: '#' },
-    { name: 'Lập trình chuyên sâu Java / .NET', school: 'Aptech', url: '#' },
-    { name: 'Chuyên gia Trí tuệ Nhân tạo (AI)', school: 'Aptech', url: '#' },
-    { name: 'Khoa học dữ liệu (Data Science)', school: 'Aptech', url: '#' },
-    { name: 'Chuyên viên Digital Marketing', school: 'Skillking', url: '#' },
-    { name: 'Quản trị Quảng cáo số (Ads Management)', school: 'Skillking', url: '#' },
-    { name: 'Chiến lược Nội dung (Content Marketing)', school: 'Skillking', url: '#' },
-    { name: 'Tối ưu hóa tìm kiếm (SEO & Website)', school: 'Skillking', url: '#' },
+    { name: 'Mỹ thuật đa phương tiện', school: 'Arena Multimedia', url: '/dao-tao#arena' },
+    { name: 'Thiết kế đồ họa chuyên nghiệp', school: 'Arena Multimedia', url: '/dao-tao#arena' },
+    { name: 'Kỹ xảo điện ảnh kỹ thuật số', school: 'Arena Multimedia', url: '/dao-tao#arena' },
+    { name: 'Thiết kế Game & Hoạt hình 3D', school: 'Arena Multimedia', url: '/dao-tao#arena' },
+    { name: 'Lập trình viên Quốc tế (ADSE)', school: 'Aptech', url: '/dao-tao#aptech' },
+    { name: 'Lập trình chuyên sâu Java / .NET', school: 'Aptech', url: '/dao-tao#aptech' },
+    { name: 'Chuyên gia Trí tuệ Nhân tạo (AI)', school: 'Aptech', url: '/dao-tao#aptech' },
+    { name: 'Khoa học dữ liệu (Data Science)', school: 'Aptech', url: '/dao-tao#aptech' },
+    { name: 'Chuyên viên Digital Marketing', school: 'Skillking', url: '/dao-tao#skillking' },
+    { name: 'Quản trị Quảng cáo số (Ads Management)', school: 'Skillking', url: '/dao-tao#skillking' },
+    { name: 'Chiến lược Nội dung (Content Marketing)', school: 'Skillking', url: '/dao-tao#skillking' },
+    { name: 'Tối ưu hóa tìm kiếm (SEO & Website)', school: 'Skillking', url: '/dao-tao#skillking' },
   ],
   ARENA: [
-    { name: 'Mỹ thuật đa phương tiện', school: 'Arena Multimedia', url: '#' },
-    { name: 'Thiết kế đồ họa chuyên nghiệp', school: 'Arena Multimedia', url: '#' },
-    { name: 'Kỹ xảo điện ảnh kỹ thuật số', school: 'Arena Multimedia', url: '#' },
-    { name: 'Thiết kế Game & Hoạt hình 3D', school: 'Arena Multimedia', url: '#' },
+    { name: 'Mỹ thuật đa phương tiện', school: 'Arena Multimedia', url: '/dao-tao#arena' },
+    { name: 'Thiết kế đồ họa chuyên nghiệp', school: 'Arena Multimedia', url: '/dao-tao#arena' },
+    { name: 'Kỹ xảo điện ảnh kỹ thuật số', school: 'Arena Multimedia', url: '/dao-tao#arena' },
+    { name: 'Thiết kế Game & Hoạt hình 3D', school: 'Arena Multimedia', url: '/dao-tao#arena' },
   ],
   APTECH: [
-    { name: 'Lập trình viên Quốc tế (ADSE)', school: 'Aptech', url: '#' },
-    { name: 'Lập trình chuyên sâu Java / .NET', school: 'Aptech', url: '#' },
-    { name: 'Chuyên gia Trí tuệ Nhân tạo (AI)', school: 'Aptech', url: '#' },
-    { name: 'Khoa học dữ liệu (Data Science)', school: 'Aptech', url: '#' },
+    { name: 'Lập trình viên Quốc tế (ADSE)', school: 'Aptech', url: '/dao-tao#aptech' },
+    { name: 'Lập trình chuyên sâu Java / .NET', school: 'Aptech', url: '/dao-tao#aptech' },
+    { name: 'Chuyên gia Trí tuệ Nhân tạo (AI)', school: 'Aptech', url: '/dao-tao#aptech' },
+    { name: 'Khoa học dữ liệu (Data Science)', school: 'Aptech', url: '/dao-tao#aptech' },
   ],
   SKILLKING: [
-    { name: 'Chuyên viên Digital Marketing', school: 'Skillking', url: '#' },
-    { name: 'Quản trị Quảng cáo số (Ads Management)', school: 'Skillking', url: '#' },
-    { name: 'Chiến lược Nội dung (Content Marketing)', school: 'Skillking', url: '#' },
-    { name: 'Tối ưu hóa tìm kiếm (SEO & Website)', school: 'Skillking', url: '#' },
+    { name: 'Chuyên viên Digital Marketing', school: 'Skillking', url: '/dao-tao#skillking' },
+    { name: 'Quản trị Quảng cáo số (Ads Management)', school: 'Skillking', url: '/dao-tao#skillking' },
+    { name: 'Chiến lược Nội dung (Content Marketing)', school: 'Skillking', url: '/dao-tao#skillking' },
+    { name: 'Tối ưu hóa tìm kiếm (SEO & Website)', school: 'Skillking', url: '/dao-tao#skillking' },
   ]
 };
 
@@ -49,6 +50,12 @@ export default function ProgramSelector() {
       case 'SKILLKING': return 'Phân hệ FPT Skillking';
       default: return 'Tất cả chương trình';
     }
+  };
+
+  const getSchoolImage = (school) => {
+    if (school === 'Arena Multimedia') return '/fai_card_arena.png';
+    if (school === 'Aptech') return '/fai_card_aptech.png';
+    return '/fai_card_skillking.png';
   };
 
   return (
@@ -82,12 +89,22 @@ export default function ProgramSelector() {
         <div className="programs-grid">
           {programs[activeTab].map((prog, idx) => (
             <a key={idx} href={prog.url} className="program-card-item">
-              <span className="card-school-tag">{prog.school}</span>
-              <h3 className="card-program-title">{prog.name}</h3>
-              <span className="card-action-link">
-                Xem chi tiết
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </span>
+              <div className="card-image-header">
+                <Image 
+                  src={getSchoolImage(prog.school)} 
+                  alt={prog.school} 
+                  fill 
+                  style={{ objectFit: 'cover' }} 
+                />
+              </div>
+              <div className="card-info-box">
+                <span className="card-school-tag">{prog.school}</span>
+                <h3 className="card-program-title">{prog.name}</h3>
+                <span className="card-action-link">
+                  Xem chi tiết
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
             </a>
           ))}
         </div>
