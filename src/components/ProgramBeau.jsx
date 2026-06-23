@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ParticleCanvas from './ParticleCanvas';
-
 
 const programs = [
   {
@@ -70,31 +69,27 @@ const programs = [
 ];
 
 export default function ProgramBeau() {
-  // -1 = no hover, show default first item image
-  const [active, setActive] = useState(0);
+  const [active, setActive]       = useState(0);
   const [isHovering, setIsHovering] = useState(false);
-
-  const currentImg = programs[active].image;
-  const currentColor = programs[active].color;
 
   return (
     <section className="prog-beau-section">
-      {/* antigravity.google style particles */}
+      {/* antigravity.google style particles — nền */}
       <ParticleCanvas className="prog-beau-particles" />
 
+      {/* ── HEADER — full width, OUTSIDE grid ── */}
+      <div className="prog-beau-header-wrap" data-reveal>
+        <span className="section-eyebrow">Chương trình đào tạo quốc tế</span>
+        <h2 className="prog-beau-title-main">
+          Ba Hệ Thống<br />Đào Tạo Hàng Đầu
+        </h2>
+      </div>
+
+      {/* ── TWO-COLUMN GRID: list (left) + sticky image (right) ── */}
       <div className="prog-beau-container">
 
-        {/* ── LEFT: Scrollable list ─────────────────── */}
+        {/* LEFT: program list */}
         <div className="prog-beau-left-col">
-          {/* Header */}
-          <div className="prog-beau-header" data-reveal>
-            <span className="section-eyebrow">Chương trình đào tạo quốc tế</span>
-            <h2 className="prog-beau-title-main">
-              Ba Hệ Thống<br />Đào Tạo Hàng Đầu
-            </h2>
-          </div>
-
-          {/* Program list */}
           <div className="prog-beau-list">
             {programs.map((prog, idx) => (
               <div
@@ -119,10 +114,7 @@ export default function ProgramBeau() {
                         {prog.titleLine1}<br />{prog.titleLine2}
                       </h2>
                     </div>
-                    <div
-                      className="prog-beau-line"
-                      style={{ backgroundColor: prog.color }}
-                    />
+                    <div className="prog-beau-line" style={{ backgroundColor: prog.color }} />
                   </div>
 
                   {/* Content — revealed on hover */}
@@ -139,11 +131,7 @@ export default function ProgramBeau() {
                         <strong style={{ color: prog.color }}>{prog.stat}</strong>
                         <span>{prog.statLabel}</span>
                       </div>
-                      <Link
-                        href={prog.href}
-                        className="prog-beau-cta"
-                        style={{ color: prog.color }}
-                      >
+                      <Link href={prog.href} className="prog-beau-cta" style={{ color: prog.color }}>
                         Khám phá chương trình
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <line x1="5" y1="12" x2="19" y2="12"/>
@@ -158,7 +146,7 @@ export default function ProgramBeau() {
           </div>
         </div>
 
-        {/* ── RIGHT: Sticky image panel ─────────────── */}
+        {/* RIGHT: sticky image panel — aligned with list start */}
         <div className="prog-beau-right-col">
           <div className="prog-beau-img-panel">
             {programs.map((prog, idx) => (
@@ -166,10 +154,8 @@ export default function ProgramBeau() {
                 key={idx}
                 className="prog-beau-img-layer"
                 style={{
-                  opacity: active === idx ? 1 : 0,
-                  transform: active === idx
-                    ? 'scale(1) translateY(0)'
-                    : 'scale(1.04) translateY(10px)',
+                  opacity:   active === idx ? 1 : 0,
+                  transform: active === idx ? 'scale(1) translateY(0)' : 'scale(1.04) translateY(10px)',
                 }}
               >
                 <Image
@@ -181,16 +167,12 @@ export default function ProgramBeau() {
                 />
               </div>
             ))}
-
-            {/* Color accent bar at bottom */}
             <div
               className="prog-beau-img-accent"
-              style={{ backgroundColor: currentColor }}
+              style={{ backgroundColor: programs[active].color }}
             />
-
-            {/* Program label overlay */}
             <div className="prog-beau-img-label">
-              <span className="prog-beau-img-brand" style={{ color: currentColor }}>
+              <span className="prog-beau-img-brand" style={{ color: programs[active].color }}>
                 {programs[active].brand}
               </span>
               <span className="prog-beau-img-tagline">
