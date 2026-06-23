@@ -1,0 +1,86 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+
+const highlights = [
+  { icon: '🏆', text: 'Top 1 đào tạo CNTT\ntư nhân Việt Nam' },
+  { icon: '🌏', text: 'Chứng chỉ được công nhận\ntại 40+ quốc gia' },
+  { icon: '💼', text: '95% sinh viên có việc\ntrong 6 tháng đầu' },
+  { icon: '🤝', text: '200+ doanh nghiệp\nký kết tuyển dụng' },
+];
+
+export default function BoldCTABlock() {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      { threshold: 0.08 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section className="bold-cta-block" ref={ref}>
+      {/* Giant background text */}
+      <div className="bold-cta-bg-text" aria-hidden="true">FAI</div>
+
+      <div className="container bold-cta-inner">
+        {/* Left content */}
+        <div
+          className="bold-cta-left"
+          style={{
+            opacity:    visible ? 1 : 0,
+            transform:  visible ? 'translateX(0)' : 'translateX(-60px)',
+            transition: 'opacity 0.85s ease 0.1s, transform 0.85s cubic-bezier(0.16,1,0.3,1) 0.1s',
+          }}
+        >
+          <span className="bold-cta-eyebrow">Tại sao chọn FAI?</span>
+          <h2 className="bold-cta-headline">
+            18 Năm Kiến Tạo<br />
+            Chuyên Gia Tương Lai
+          </h2>
+          <p className="bold-cta-desc">
+            Không chỉ là trường học — FAI là bệ phóng cho sự nghiệp quốc tế.
+            Từ sinh viên năm nhất, bạn đã được thực chiến với dự án thật,
+            mentor là chuyên gia ngành và mạng lưới 200+ doanh nghiệp tuyển dụng.
+          </p>
+          <div className="bold-cta-actions">
+            <Link href="/tuyen-sinh" className="bold-cta-btn bold-cta-btn--primary">
+              Đăng Ký Nhập Học 2026
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </Link>
+            <Link href="/ve-fai" className="bold-cta-btn bold-cta-btn--outline">
+              Tìm hiểu về FAI
+            </Link>
+          </div>
+        </div>
+
+        {/* Right: highlight cards */}
+        <div className="bold-cta-right">
+          {highlights.map((item, i) => (
+            <div
+              key={i}
+              className="bold-highlight-card"
+              style={{
+                opacity:    visible ? 1 : 0,
+                transform:  visible ? 'translateY(0)' : 'translateY(40px)',
+                transition: `opacity 0.7s ease ${0.2 + i * 0.1}s, transform 0.7s cubic-bezier(0.16,1,0.3,1) ${0.2 + i * 0.1}s`,
+              }}
+            >
+              <span className="bold-highlight-icon">{item.icon}</span>
+              <span className="bold-highlight-text">
+                {item.text.split('\n').map((l, j) => <span key={j}>{l}</span>)}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

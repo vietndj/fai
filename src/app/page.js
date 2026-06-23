@@ -3,6 +3,7 @@ import HeroSlider from '@/components/HeroSlider';
 import TrustBar from '@/components/TrustBar';
 import Counters from '@/components/Counters';
 import ProgramSelector from '@/components/ProgramSelector';
+import BoldCTABlock from '@/components/BoldCTABlock';
 import PartnerMarquee from '@/components/PartnerMarquee';
 import StudentLife from '@/components/StudentLife';
 import Testimonials from '@/components/Testimonials';
@@ -30,6 +31,9 @@ export default function Home() {
 
         {/* 3 pillar cards: Aptech | Arena | Skillking */}
         <ProgramSelector />
+
+        {/* Big orange/red CTA block — breaks all-navy monotony */}
+        <BoldCTABlock />
 
         {/* Partner logos marquee carousel */}
         <PartnerMarquee />

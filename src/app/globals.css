@@ -690,6 +690,28 @@ img {
   color: #ffffff;
   line-height: 1;
   letter-spacing: -0.04em;
+  /* Fix: stable container so digit changes don't shift layout */
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0;
+}
+
+.big-stat-digits {
+  /* monospaced numbers prevent width jitter */
+  font-variant-numeric: tabular-nums;
+  min-width: 2ch;
+  text-align: right;
+  display: inline-block;
+}
+
+.big-stat-suffix {
+  font-size: 0.55em;
+  font-weight: 800;
+  color: var(--primary);
+  align-self: flex-start;
+  margin-top: 0.15em;
+  flex-shrink: 0;
 }
 
 .big-stat-label {
@@ -713,6 +735,166 @@ img {
   .big-stat-item { border-right: 1px solid rgba(255,255,255,0.07); }
   .big-stat-item:nth-child(even) { border-right: none; }
   .big-stat-number { font-size: 3rem; }
+}
+
+/* ═══════════════════════════════════════════
+   BOLD ORANGE CTA BLOCK
+   (Breaks the all-navy monotony with warm FAI amber)
+═══════════════════════════════════════════ */
+.bold-cta-block {
+  background: linear-gradient(130deg, #D4540A 0%, #E8741E 40%, #F28C2E 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Giant "FAI" background text decoration */
+.bold-cta-bg-text {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  font-family: var(--font-sans);
+  font-size: 28rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.07);
+  line-height: 1;
+  letter-spacing: -0.08em;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bold-cta-inner {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.bold-cta-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  display: block;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 3px;
+  margin-bottom: 28px;
+}
+
+.bold-cta-headline {
+  font-family: var(--font-sans);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.bold-cta-desc {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+
+.bold-cta-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.bold-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.bold-cta-btn--primary {
+  background-color: #ffffff;
+  color: #D4540A;
+}
+
+.bold-cta-btn--primary:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.bold-cta-btn--outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.5);
+}
+
+.bold-cta-btn--outline:hover {
+  background-color: rgba(255,255,255,0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Right highlight cards */
+.bold-cta-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.bold-highlight-card {
+  background-color: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.bold-highlight-card:hover {
+  background-color: rgba(255,255,255,0.18);
+  transform: translateY(-4px);
+}
+
+.bold-highlight-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.bold-highlight-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .bold-cta-inner { grid-template-columns: 1fr; gap: 40px; }
+  .bold-cta-bg-text { font-size: 12rem; right: -20px; }
+  .bold-cta-headline { font-size: 2.2rem; }
+}
+@media (max-width: 640px) {
+  .bold-cta-right { grid-template-columns: 1fr 1fr; }
+  .bold-cta-actions { flex-direction: column; }
 }
 
 /* SECTION TITLES */
