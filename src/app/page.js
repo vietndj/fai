@@ -2,9 +2,8 @@ import Header from '@/components/Header';
 import HeroSlider from '@/components/HeroSlider';
 import TrustBar from '@/components/TrustBar';
 import Counters from '@/components/Counters';
-import ProgramSelector from '@/components/ProgramSelector';
+import ProgramBeau from '@/components/ProgramBeau';
 import BoldCTABlock from '@/components/BoldCTABlock';
-import TechTerminal from '@/components/TechTerminal';
 import PartnerMarquee from '@/components/PartnerMarquee';
 import StudentLife from '@/components/StudentLife';
 import Testimonials from '@/components/Testimonials';
@@ -30,14 +29,11 @@ export default function Home() {
         {/* 6 stats with counting animation */}
         <Counters />
 
-        {/* 3 pillar cards with 3D tilt: Aptech | Arena | Skillking */}
-        <ProgramSelector />
+        {/* beau.vn style: 3 programs — large title + content list */}
+        <ProgramBeau />
 
         {/* Big orange CTA block — animated gradient */}
         <BoldCTABlock />
-
-        {/* VS Code terminal — what you'll learn */}
-        <TechTerminal />
 
         {/* Partner logos marquee carousel */}
         <PartnerMarquee />
