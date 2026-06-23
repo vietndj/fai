@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import ParticleCanvas from './ParticleCanvas';
+
 
 const programs = [
   {
@@ -77,6 +79,9 @@ export default function ProgramBeau() {
 
   return (
     <section className="prog-beau-section">
+      {/* antigravity.google style particles */}
+      <ParticleCanvas className="prog-beau-particles" />
+
       <div className="prog-beau-container">
 
         {/* ── LEFT: Scrollable list ─────────────────── */}
