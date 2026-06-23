@@ -143,7 +143,7 @@ img {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 160px 0; /* Massive vertical margins for premium magazine flow */
 }
 
 /* Global eyebrow & headline utilities */
@@ -697,7 +697,7 @@ img {
   );
   background-size: 300% 300%;
   animation: gradientShiftNavy 16s ease infinite;
-  padding: 100px 0;
+  padding: 180px 0;
   position: relative;
   overflow: hidden;
 }
@@ -887,7 +887,7 @@ img {
   background: linear-gradient(135deg, #B84308, #D4540A, #E8741E, #F0932B, #E8741E, #D4540A);
   background-size: 300% 300%;
   animation: gradientShiftAmber 12s ease infinite;
-  padding: 100px 0;
+  padding: 180px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1103,7 +1103,7 @@ img {
   background: linear-gradient(160deg, #050d1a, #09192e, #060e1c, #0a1528, #09192e);
   background-size: 250% 250%;
   animation: gradientShiftNavy 20s ease infinite;
-  padding: 100px 0;
+  padding: 180px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1295,7 +1295,7 @@ img {
 ═══════════════════════════════════════════ */
 .prog-beau-section {
   background: #f2f0ec;
-  padding: 100px 0 80px;
+  padding: 180px 0 160px;
   position: relative;
   overflow: clip; /* clip is better as it allows position: sticky to work! Or overflow: visible */
 }
