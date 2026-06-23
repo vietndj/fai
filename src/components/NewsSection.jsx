@@ -33,19 +33,21 @@ const notices = [
   }
 ];
 
+// NOTE: Không dùng data-reveal ở section gốc để tránh bị ẩn trắng.
+// Chỉ dùng data-reveal ở các card con để stagger animation.
 export default function NewsSection() {
   return (
-    <section className="section news-section" data-reveal data-reveal-delay="0">
+    <section className="section news-section">
       <div className="container news-grid-layout">
         {/* News Column */}
-        <div className="main-news-col" data-reveal data-reveal-delay="0.1">
+        <div className="main-news-col">
           <div className="section-label-group">
             <span className="section-eyebrow">Tin tức &amp; Sự kiện</span>
             <h2 className="section-title">Tin tức mới nhất</h2>
           </div>
 
           {/* Featured News Card */}
-          <div className="featured-news-card">
+          <div className="featured-news-card" data-reveal>
             <div className="featured-news-image">
               <Image src="/fai_student_life_2.png" alt="Featured News" fill style={{ objectFit: 'cover' }} />
               <span className="featured-news-tag">Sự kiện nổi bật</span>
@@ -62,10 +64,10 @@ export default function NewsSection() {
             </div>
           </div>
 
-          {/* Regular News List */}
+          {/* Regular News Row */}
           <div className="regular-news-row">
             {regularNews.map((news, idx) => (
-              <div key={idx} className="news-card" data-reveal data-reveal-delay={`${0.2 + idx * 0.1}`}>
+              <div key={idx} className="news-card" data-reveal data-reveal-delay={`${0.15 + idx * 0.1}`}>
                 <div className="news-card-image">
                   <Image src={news.image} alt={news.title} fill style={{ objectFit: 'cover' }} />
                   <span className="news-card-tag">{news.tag}</span>
@@ -81,7 +83,7 @@ export default function NewsSection() {
         </div>
 
         {/* Notices Column */}
-        <div className="notices-col" data-reveal data-reveal-delay="0.2">
+        <div className="notices-col">
           <div className="section-label-group">
             <span className="section-eyebrow">Thông báo FAI</span>
             <h2 className="section-title">Thông báo chung</h2>
@@ -89,7 +91,7 @@ export default function NewsSection() {
 
           <div className="notices-list">
             {notices.map((notice, idx) => (
-              <div key={idx} className="notice-item" data-reveal data-reveal-delay={`${0.3 + idx * 0.1}`}>
+              <div key={idx} className="notice-item" data-reveal data-reveal-delay={`${0.2 + idx * 0.1}`}>
                 <span className="notice-dept">{notice.dept}</span>
                 <h4 className="notice-title"><a href="#">{notice.title}</a></h4>
                 <span className="notice-date">{notice.date}</span>
