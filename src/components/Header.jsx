@@ -1,22 +1,39 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
-import { Search, Zap, Palette, Megaphone } from 'lucide-react';
+import { Search, Zap, Palette, Megaphone, ChevronDown } from 'lucide-react';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [expandedCats, setExpandedCats] = useState({});
+
+  const toggleCategory = (cat) => {
+    setExpandedCats(prev => ({
+      ...prev,
+      [cat]: !prev[cat]
+    }));
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setExpandedCats({});
+  };
+
   return (
     <header className="header-container">
-
       {/* Main Header navigation */}
       <div className="main-nav-container">
         <div className="container main-nav-content">
           {/* Logo */}
-          <Link href="/" className="logo">
+          <Link href="/" className="logo" onClick={closeMenu}>
             <span className="logo-fpt">FPT</span>
             <span className="logo-fai">FAI</span>
             <div className="logo-divider"></div>
             <span className="logo-sub">ACADEMY<br/>INTERNATIONAL</span>
           </Link>
 
-          {/* Navigation Menu */}
+          {/* Desktop Navigation Menu */}
           <nav className="desktop-menu">
             <ul className="menu-list">
               <li className="menu-item has-megamenu">
@@ -139,13 +156,102 @@ export default function Header() {
             <button className="search-btn" aria-label="Search" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Search size={20} />
             </button>
-            <Link href="/tuyen-sinh" className="nav-cta-btn">
+            <Link href="/tuyen-sinh" className="nav-cta-btn" onClick={closeMenu}>
               <span className="nav-cta-pulse"></span>
               Đăng Ký Tư Vấn
             </Link>
-            <button className="mobile-menu-toggle" aria-label="Toggle menu">
+            <button 
+              className={`mobile-menu-toggle ${isMenuOpen ? 'active' : ''}`} 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
               <span></span><span></span><span></span>
             </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Drawer */}
+      <div className={`mobile-menu-drawer ${isMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-inner">
+          <ul className="mobile-menu-list">
+            <li className="mobile-menu-item">
+              <div className="mobile-category-header" onClick={() => toggleCategory('ve-fai')}>
+                <span>Về FAI</span>
+                <ChevronDown size={18} className={expandedCats['ve-fai'] ? 'rotate' : ''} />
+              </div>
+              <ul className={`mobile-submenu ${expandedCats['ve-fai'] ? 'open' : ''}`}>
+                <li><Link href="/ve-fai#gioi-thieu" onClick={closeMenu}>Giới thiệu chung</Link></li>
+                <li><Link href="/ve-fai#giang-vien" onClick={closeMenu}>Đội ngũ giảng viên</Link></li>
+                <li><Link href="/ve-fai#thanh-tuu" onClick={closeMenu}>Thành tựu & Con số</Link></li>
+                <li><Link href="/ve-fai#campus" onClick={closeMenu}>Hệ thống Campus toàn quốc</Link></li>
+                <li><Link href="/ve-fai#doanh-nghiep" onClick={closeMenu}>Đối tác doanh nghiệp</Link></li>
+              </ul>
+            </li>
+
+            <li className="mobile-menu-item">
+              <div className="mobile-category-header" onClick={() => toggleCategory('dao-tao')}>
+                <span>Chương trình Đào tạo</span>
+                <ChevronDown size={18} className={expandedCats['dao-tao'] ? 'rotate' : ''} />
+              </div>
+              <ul className={`mobile-submenu ${expandedCats['dao-tao'] ? 'open' : ''}`}>
+                <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '4px' }}>APTECH — Công Nghệ</li>
+                <li><Link href="/dao-tao/aptech" onClick={closeMenu}>Lập trình viên Quốc tế (ADSE)</Link></li>
+                <li><Link href="/dao-tao/aptech" onClick={closeMenu}>Trí tuệ Nhân tạo (AI)</Link></li>
+                <li><Link href="/dao-tao/aptech" onClick={closeMenu}>Khoa học Dữ liệu</Link></li>
+                
+                <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--accent-orange, #e8741e)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '12px' }}>ARENA — Sáng Tạo</li>
+                <li><Link href="/dao-tao/arena" onClick={closeMenu}>Mỹ thuật Đa phương tiện</Link></li>
+                <li><Link href="/dao-tao/arena" onClick={closeMenu}>Thiết kế Đồ họa & Web</Link></li>
+                <li><Link href="/dao-tao/arena" onClick={closeMenu}>Kỹ xảo & Hoạt hình 3D</Link></li>
+                
+                <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--success, #16a34a)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '12px' }}>SKILLKING — Marketing</li>
+                <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Digital Marketing chuyên sâu</Link></li>
+                <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Social Media & SEO</Link></li>
+                <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Quản trị chiến dịch số</Link></li>
+              </ul>
+            </li>
+
+            <li className="mobile-menu-item">
+              <div className="mobile-category-header" onClick={() => toggleCategory('tuyen-sinh')}>
+                <span>Tuyển sinh</span>
+                <ChevronDown size={18} className={expandedCats['tuyen-sinh'] ? 'rotate' : ''} />
+              </div>
+              <ul className={`mobile-submenu ${expandedCats['tuyen-sinh'] ? 'open' : ''}`}>
+                <li><Link href="/tuyen-sinh#thong-tin" onClick={closeMenu}>Thông tin tuyển sinh 2026</Link></li>
+                <li><Link href="/tuyen-sinh#hoc-bong" onClick={closeMenu}>Học bổng & Ưu đãi nhập học</Link></li>
+                <li><Link href="/tuyen-sinh#hoc-phi" onClick={closeMenu}>Chính sách học phí</Link></li>
+                <li><Link href="/tuyen-sinh#dang-ky" onClick={closeMenu}>Đăng ký tuyển sinh trực tuyến</Link></li>
+                <li><Link href="/tuyen-sinh#faq" onClick={closeMenu}>Câu hỏi thường gặp (FAQ)</Link></li>
+              </ul>
+            </li>
+
+            <li className="mobile-menu-item">
+              <div className="mobile-category-header" onClick={() => toggleCategory('doi-song')}>
+                <span>Đời sống Sinh viên</span>
+                <ChevronDown size={18} className={expandedCats['doi-song'] ? 'rotate' : ''} />
+              </div>
+              <ul className={`mobile-submenu ${expandedCats['doi-song'] ? 'open' : ''}`}>
+                <li><Link href="/doi-song#san-choi" onClick={closeMenu}>Câu lạc bộ & Sân chơi học thuật</Link></li>
+                <li><Link href="/doi-song#doanh-nghiep" onClick={closeMenu}>Liên kết & Trải nghiệm Doanh nghiệp</Link></li>
+                <li><Link href="/doi-song#su-kien" onClick={closeMenu}>Hoạt động Sự kiện & Teambuilding</Link></li>
+                <li><Link href="/doi-song#viec-lam" onClick={closeMenu}>Dịch vụ Hỗ trợ việc làm (Job Hub)</Link></li>
+                <li><Link href="/doi-song#alumni" onClick={closeMenu}>Cựu sinh viên tiêu biểu</Link></li>
+              </ul>
+            </li>
+
+            <li className="mobile-menu-item-single" style={{ padding: '8px 0', borderBottom: '1px solid rgba(13,33,55,0.05)' }}>
+              <Link href="/tin-tuc" className="mobile-single-link" style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--secondary)' }} onClick={closeMenu}>Tin tức - Sự kiện</Link>
+            </li>
+            <li className="mobile-menu-item-single" style={{ padding: '8px 0', borderBottom: '1px solid rgba(13,33,55,0.05)' }}>
+              <Link href="/lien-he" className="mobile-single-link" style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--secondary)' }} onClick={closeMenu}>Liên hệ</Link>
+            </li>
+          </ul>
+
+          <div className="mobile-menu-actions">
+            <Link href="/tuyen-sinh" className="nav-cta-btn" onClick={closeMenu}>
+              Đăng Ký Tư Vấn
+            </Link>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ export default function ScrollReveal() {
   useEffect(() => {
     const observedElements = new Set();
 
+    // Optimize settings for mobile: threshold 0.02, smaller bottom rootMargin
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -21,23 +22,31 @@ export default function ScrollReveal() {
         });
       },
       {
-        threshold: 0.05,
-        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.02,
+        rootMargin: '0px 0px -10px 0px',
       }
     );
 
     const scanAndObserve = () => {
       const elements = document.querySelectorAll('[data-reveal]');
       elements.forEach((el) => {
-        if (!observedElements.has(el) && !el.classList.contains('revealed')) {
-          // Check if already in viewport on discovery
+        if (!el.classList.contains('revealed')) {
           const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
+          
+          // Fallback: If element top is inside the viewport, reveal it immediately.
+          // This ensures that even if IntersectionObserver fails on mobile browsers, 
+          // scrolling triggers the fade-in seamlessly.
+          if (rect.top < (window.innerHeight - 10) && rect.bottom > 0) {
             const delay = parseFloat(el.dataset.revealDelay || '0');
             setTimeout(() => {
               el.classList.add('revealed');
             }, delay * 1000);
-          } else {
+            
+            if (observedElements.has(el)) {
+              observer.unobserve(el);
+              observedElements.delete(el);
+            }
+          } else if (!observedElements.has(el)) {
             observer.observe(el);
             observedElements.add(el);
           }
@@ -58,7 +67,7 @@ export default function ScrollReveal() {
       subtree: true,
     });
 
-    // Also scan on window scroll/resize events just in case
+    // Scan on window scroll/resize events as an active backup
     window.addEventListener('scroll', scanAndObserve, { passive: true });
     window.addEventListener('resize', scanAndObserve, { passive: true });
 

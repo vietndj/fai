@@ -172,30 +172,35 @@ export default function DoiSong() {
   const startX = useRef(0);
   const scrollLeftVal = useRef(0);
 
-  const handleMouseDown = (e) => {
+  const handlePointerDown = (e) => {
+    if (e.pointerType !== 'mouse') return;
     isDown.current = true;
     setIsGrabbing(true);
     startX.current = e.pageX - timelineRef.current.offsetLeft;
     scrollLeftVal.current = timelineRef.current.scrollLeft;
   };
 
-  const handleMouseLeave = () => {
+  const handlePointerLeave = (e) => {
+    if (e.pointerType !== 'mouse') return;
     isDown.current = false;
     setIsGrabbing(false);
   };
 
-  const handleMouseUp = () => {
+  const handlePointerUp = (e) => {
+    if (e.pointerType !== 'mouse') return;
     isDown.current = false;
     setIsGrabbing(false);
   };
 
-  const handleMouseMove = (e) => {
+  const handlePointerMove = (e) => {
+    if (e.pointerType !== 'mouse') return;
     if (!isDown.current) return;
     e.preventDefault();
     const x = e.pageX - timelineRef.current.offsetLeft;
     const walk = (x - startX.current) * 1.5;
     timelineRef.current.scrollLeft = scrollLeftVal.current - walk;
   };
+
 
   const scrollTimeline = (direction) => {
     if (timelineRef.current) {
@@ -355,10 +360,11 @@ export default function DoiSong() {
                   userSelect: 'none',
                   WebkitUserSelect: 'none'
                 }}
-                onMouseDown={handleMouseDown}
-                onMouseLeave={handleMouseLeave}
-                onMouseUp={handleMouseUp}
-                onMouseMove={handleMouseMove}
+                onPointerDown={handlePointerDown}
+                onPointerLeave={handlePointerLeave}
+                onPointerUp={handlePointerUp}
+                onPointerMove={handlePointerMove}
+
               >
                 {dailyTimeline.map((item, idx) => (
                   <div 
