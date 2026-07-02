@@ -102,25 +102,6 @@ const programs = [
     statLabel: '97 triệu việc làm mới',
     color: '#0066b3',
     href: '/dao-tao/ai-agent',
-  },
-  {
-    num: '06',
-    brand: 'CRANES FPT',
-    logo: '/logo_fpt_fai.png',
-    titleLine1: 'Phát triển phần mềm',
-    titleLine2: 'Ô tô thông minh',
-    subtitle: 'PHÁT TRIỂN PHẦN MỀM Ô TÔ THÔNG MINH',
-    desc: 'Đón đầu làn sóng Automotive 2026 với lộ trình tích hợp AI và tiêu chuẩn AUTOSAR chuyên sâu từ Cranes Varsity Ấn Độ. Cam kết hỗ trợ việc làm tại hệ sinh thái FPT và đối tác toàn cầu.',
-    tags: [
-      'Phần mềm ô tô thông minh',
-      'Tiêu chuẩn AUTOSAR chuyên sâu',
-      'Hỗ trợ việc làm FPT Global',
-    ],
-    image: '/fai_banner_skillking_v2.png',
-    stat: 'Automotive',
-    statLabel: 'Đón đầu xu thế 2026',
-    color: '#0d9488',
-    href: '/dao-tao/automotive',
   }
 ];
 
