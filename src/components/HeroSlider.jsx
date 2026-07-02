@@ -7,13 +7,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
+    image: '/fai_graduation_crowd.png',
+    video: '/videos/intro.mp4',
+    logo: '/logo_fpt_fai.png',
+    eyebrow: 'Khoảnh khắc Vinh quang & Đáng nhớ',
+    title: 'LỄ TỐT NGHIỆP CỦA SINH VIÊN FAI',
+    desc: 'Chúc mừng các tân khoa đã hoàn thành xuất sắc chặng đường chinh phục tri thức tại FPT Academy International.',
+    cta1: { text: 'Xem ảnh lễ tốt nghiệp', href: '/tin-tuc#le-tot-nghiep' },
+    slideNum: '01',
+    color: '#f37021',
+  },
+  {
     image: '/fai_banner_aptech_v2.png',
     logo: '/logo_aptech.png',
     eyebrow: 'Hệ thống Đào tạo Lập trình viên Quốc tế',
     title: 'FPT APTECH EDUCATION',
     desc: 'Chương trình chuẩn quốc tế, đào tạo lập trình viên thực chiến đáp ứng nhu cầu tuyển dụng toàn cầu.',
     cta1: { text: 'Tìm hiểu chương trình FPT APTECH', href: '/dao-tao#aptech' },
-    slideNum: '01',
+    slideNum: '02',
     color: '#e31a22',
   },
   {
@@ -23,7 +34,7 @@ const slides = [
     title: 'FPT ARENA MULTIMEDIA',
     desc: 'Chạm ngõ sáng tạo cùng cộng đồng mỹ thuật đa phương tiện lớn nhất Việt Nam.',
     cta1: { text: 'Tìm hiểu chương trình FPT ARENA', href: '/dao-tao#arena' },
-    slideNum: '02',
+    slideNum: '03',
     color: '#ffb600',
   },
   {
@@ -33,7 +44,7 @@ const slides = [
     title: 'FPT SKILLKING',
     desc: 'Chương trình đào tạo Full-Stack Digital Marketing thực chiến hàng đầu kết hợp công nghệ hiện đại.',
     cta1: { text: 'Tìm hiểu chương trình FPT SKILLKING', href: '/dao-tao#skillking' },
-    slideNum: '03',
+    slideNum: '04',
     color: '#09529c',
   },
   {
@@ -43,7 +54,7 @@ const slides = [
     title: 'FPT JETKING CHIP DESIGN',
     desc: 'Tiên phong đào tạo thiết kế vi mạch bán dẫn chuẩn quốc tế tại Việt Nam, trang bị năng lực thực chiến cho kỹ sư tương lai trong ngành bán dẫn toàn cầu',
     cta1: { text: 'Tìm hiểu chương trình FPT JETKING CHIP DESIGN', href: '/dao-tao/chip-design' },
-    slideNum: '04',
+    slideNum: '05',
     color: '#f37021',
   },
   {
@@ -53,7 +64,7 @@ const slides = [
     title: 'FPT JETKING AI AGENT',
     desc: 'Kiến tạo thế hệ lập trình viên AI Agent làm chủ công nghệ AI, sẵn sàng tạo ra giá trị cho doanh nghiệp trong kỷ nguyên số.',
     cta1: { text: 'Tìm hiểu chương trình FPT JETKING AI AGENT', href: '/dao-tao/ai-agent' },
-    slideNum: '05',
+    slideNum: '06',
     color: '#0066b3',
   },
 ];
@@ -89,13 +100,32 @@ export default function HeroSlider() {
         {slides.map((slide, index) => (
           <div key={index} className={`slide-item ${index === current ? 'active' : ''}`}>
             <div className="slide-image-wrapper">
-              <Image 
-                src={slide.image} 
-                alt={slide.title} 
-                fill 
-                priority={index === 0}
-                style={{ objectFit: 'cover', objectPosition: 'center' }} 
-              />
+              {slide.video ? (
+                <video
+                  src={slide.video}
+                  poster={slide.image}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover', 
+                    position: 'absolute', 
+                    inset: 0,
+                    zIndex: 0
+                  }}
+                />
+              ) : (
+                <Image 
+                  src={slide.image} 
+                  alt={slide.title} 
+                  fill 
+                  priority={index === 0}
+                  style={{ objectFit: 'cover', objectPosition: 'center' }} 
+                />
+              )}
               <div className="slide-overlay-subtle" />
             </div>
 
