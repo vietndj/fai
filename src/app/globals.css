@@ -2086,16 +2086,16 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: rgba(255,255,255,0.8);
   font-size: 0.85rem;
-  padding: 6px 24px;
+  padding: 6px 14px;
 }
 
 .trust-item svg {
