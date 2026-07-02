@@ -34,7 +34,7 @@ const programs = [
     title: 'FPT Arena Multimedia',
     subTitle: 'Mỹ thuật Đa phương tiện',
     desc: 'Chương trình đào tạo Chuyên gia Mỹ thuật Đa phương tiện kéo dài 2 năm. Sinh viên được rèn luyện tư duy thẩm mỹ, thiết kế đồ họa thương hiệu, làm phim kỹ thuật số, hậu kỳ video và hoạt hình 3D chuyên nghiệp.',
-    image: '/fai_banner_arena_v2.png',
+    image: '/fai_banner_arena_v2.jpg',
     link: '/dao-tao/arena',
     color: '#ffb600',
     isDark: false,

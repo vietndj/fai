@@ -28,7 +28,7 @@ const slides = [
     color: '#e31a22',
   },
   {
-    image: '/fai_banner_arena_v2.png',
+    image: '/fai_banner_arena_v2.jpg',
     logo: '/logo_arena.png',
     eyebrow: 'Hệ thống Đào tạo Mỹ thuật Đa phương tiện',
     title: 'FPT ARENA MULTIMEDIA',
