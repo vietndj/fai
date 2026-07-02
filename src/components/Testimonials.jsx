@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import ScrollTypewriter from './ScrollTypewriter';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -103,7 +104,7 @@ export default function Testimonials() {
         >
           <div className="quote-cta-card">
             <span className="quote-cta-label">Tuyển sinh 2026</span>
-            <h3 className="quote-cta-title">Bắt Đầu Hành Trình Của Bạn</h3>
+            <h3 className="quote-cta-title"><ScrollTypewriter text="Bắt Đầu Hành Trình Của Bạn" /></h3>
             <p className="quote-cta-desc">Học bổng lên đến 50% — Nhập học linh hoạt — Đào tạo chuẩn quốc tế</p>
             <Link href="/tuyen-sinh" className="quote-cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               Đăng ký tư vấn miễn phí

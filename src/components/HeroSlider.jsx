@@ -8,6 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const slides = [
   {
     image: '/fai_banner_aptech_v2.png',
+    logo: '/logo_aptech.png',
     eyebrow: 'Hệ thống Đào tạo Lập trình viên Quốc tế',
     title: 'FPT APTECH EDUCATION',
     desc: 'Chương trình chuẩn quốc tế, đào tạo lập trình viên thực chiến đáp ứng nhu cầu tuyển dụng toàn cầu.',
@@ -17,6 +18,7 @@ const slides = [
   },
   {
     image: '/fai_banner_arena_v2.png',
+    logo: '/logo_arena.png',
     eyebrow: 'Hệ thống Đào tạo Mỹ thuật Đa phương tiện',
     title: 'FPT ARENA MULTIMEDIA',
     desc: 'Chạm ngõ sáng tạo cùng cộng đồng mỹ thuật đa phương tiện lớn nhất Việt Nam.',
@@ -26,6 +28,7 @@ const slides = [
   },
   {
     image: '/fai_banner_skillking_v2.png',
+    logo: '/logo_skillking.png',
     eyebrow: 'Hệ thống Đào tạo Digital Marketing',
     title: 'FPT SKILLKING',
     desc: 'Chương trình đào tạo Full-Stack Digital Marketing thực chiến hàng đầu kết hợp công nghệ hiện đại.',
@@ -35,6 +38,7 @@ const slides = [
   },
   {
     image: '/fai_banner_chip_design_v2.png',
+    logo: '/logo_jetking.png',
     eyebrow: 'Hệ thống Đào tạo Thiết kế Vi mạch Bán dẫn',
     title: 'FPT JETKING CHIP DESIGN',
     desc: 'Tiên phong đào tạo thiết kế vi mạch bán dẫn chuẩn quốc tế tại Việt Nam, trang bị năng lực thực chiến cho kỹ sư tương lai trong ngành bán dẫn toàn cầu',
@@ -44,6 +48,7 @@ const slides = [
   },
   {
     image: '/fai_banner_ai_agent_v2.png',
+    logo: '/logo_jetking.png',
     eyebrow: 'Hệ thống Đào tạo AI Agent tiên phong',
     title: 'FPT JETKING AI AGENT',
     desc: 'Kiến tạo thế hệ lập trình viên AI Agent làm chủ công nghệ AI, sẵn sàng tạo ra giá trị cho doanh nghiệp trong kỷ nguyên số.',
@@ -60,8 +65,8 @@ export default function HeroSlider() {
   const [isPlaying, setIsPlaying] = useState(true);
   const timerRef = useRef(null);
 
-  const handlePrev = () => setCurrent((p) => (p - 1 + slides.length) % slides.length);
   const handleNext = () => setCurrent((p) => (p + 1) % slides.length);
+  const handlePrev = () => setCurrent((p) => (p - 1 + slides.length) % slides.length);
 
   useEffect(() => {
     if (isPlaying) {
@@ -96,6 +101,15 @@ export default function HeroSlider() {
 
             <div className="slide-content container">
               <div className="slide-text-box-premium">
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px', height: '36px' }}>
+                  <Image 
+                    src={slide.logo} 
+                    alt={`${slide.title} Logo`} 
+                    width={150} 
+                    height={36} 
+                    style={{ objectFit: 'contain', height: '100%', width: 'auto' }} 
+                  />
+                </div>
                 <span className="slide-eyebrow-premium" style={{ borderLeftColor: slide.color }}>
                   {slide.eyebrow}
                 </span>

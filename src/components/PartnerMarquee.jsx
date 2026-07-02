@@ -3,12 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import ScrollTypewriter from './ScrollTypewriter';
 
-/**
- * Logos load từ Clearbit Logo API (logo.clearbit.com/{domain})
- * — CDN công cộng, miễn phí, không cần API key
- * Fallback: hiện text nếu ảnh lỗi
- */
 const partners = [
   { name: 'Sendo',           logo: '/partners/sendo.png',           fallback: 'Sendo'           },
   { name: 'MoMo',            logo: '/partners/momo.png',            fallback: 'MoMo'            },
@@ -40,7 +36,6 @@ const partners = [
   { name: 'FPT Telecom',     logo: '/partners/fpt_telecom.png',     fallback: 'FPT Telecom'     },
 ];
 
-
 function LogoCard({ partner }) {
   return (
     <div className="marquee-logo-card">
@@ -51,7 +46,6 @@ function LogoCard({ partner }) {
           className="marquee-logo-img"
           loading="lazy"
           onError={(e) => {
-            // Fallback: ẩn ảnh, hiện text
             e.target.style.display = 'none';
             e.target.nextSibling.style.display = 'block';
           }}
@@ -66,7 +60,6 @@ function LogoCard({ partner }) {
 }
 
 export default function PartnerMarquee() {
-  // Double list for seamless infinite scroll
   const doubled = [...partners, ...partners];
 
   return (
@@ -75,7 +68,7 @@ export default function PartnerMarquee() {
         <div className="partner-header" data-reveal>
           <span className="section-eyebrow">Cam kết đầu ra</span>
           <h2 className="partner-headline">
-            200+ Doanh Nghiệp<br />Đang Tuyển Dụng Sinh Viên FAI
+            <ScrollTypewriter text="1000+ Đối tác tuyển dụng" />
           </h2>
           <p className="partner-desc">
             Từ các tập đoàn công nghệ toàn cầu đến doanh nghiệp Việt Nam hàng đầu — mạng lưới tuyển dụng rộng khắp của FAI đảm bảo cơ hội việc làm ngay sau tốt nghiệp.

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import ScrollTypewriter from './ScrollTypewriter';
 
 const bentoItems = [
   {
@@ -47,24 +48,21 @@ export default function StudentLife() {
         {/* Section Header */}
         <div className="student-life-header">
           <div>
-            <span className="section-eyebrow">Trải nghiệm & Sáng tạo</span>
-            <h2 className="section-headline">Đời Sống Sinh Viên FAI</h2>
+            <span className="section-eyebrow">Trải nghiệm sinh viên</span>
+            <h2 className="section-headline"><ScrollTypewriter text="Đời Sống Sinh Viên FAI" /></h2>
             <p className="section-subhead" style={{ maxWidth: 540 }}>
-              Tại FAI, việc học vượt ra ngoài phòng Lab — bạn được nhúng mình vào
-              môi trường năng động với Hackathon, ngày hội công nghệ, sự kiện sáng tạo
-              và chương trình kiến tập doanh nghiệp từ năm nhất.
+              Tại FAI, việc học vượt ra ngoài phòng Lab — bạn được nhúng mình vào môi trường năng động với Hackathon, ngày hội công nghệ, sự kiện sáng tạo và chương trình kiến tập doanh nghiệp từ năm nhất.
             </p>
           </div>
           <div className="student-life-meta">
             <ul className="info-checklist">
-              <li>Hackathon & Sân chơi học thuật đỉnh cao</li>
-              <li>Workshop & Show diễn đồ án mỗi kỳ</li>
-              <li>Câu lạc bộ lập trình, nghệ thuật, thể thao</li>
-              <li>Kiến tập doanh nghiệp từ năm nhất</li>
+              <li>Sân chơi chuyên ngành</li>
+              <li>Hoạt động doanh nghiệp</li>
+              <li>Đời sống sinh viên</li>
             </ul>
             <Link href="/doi-song" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-            Xem thêm hoạt động <ArrowRight size={16} />
-          </Link>
+              Xem thêm hoạt động <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
 

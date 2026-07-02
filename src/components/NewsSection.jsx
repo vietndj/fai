@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ScrollTypewriter from './ScrollTypewriter';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { allNews } from '../data/news';
@@ -33,7 +34,7 @@ export default function NewsSection() {
         <div className="main-news-col">
           <div className="section-label-group">
             <span className="section-eyebrow">Tin tức &amp; Sự kiện</span>
-            <h2 className="section-title">Tin tức mới nhất</h2>
+            <h2 className="section-title"><ScrollTypewriter text="Tin tức mới nhất" /></h2>
           </div>
 
           {/* Featured News Card */}

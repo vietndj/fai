@@ -24,7 +24,7 @@ export default function Footer() {
             
             <div className="footer-intro-block" style={{ padding: '15px 20px', background: 'rgba(255,255,255,0.04)', borderRadius: '12px', borderLeft: '3px solid rgba(255,255,255,0.2)' }}>
               <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: '0.85rem', lineHeight: '1.65', margin: 0 }}>
-                Hệ sinh thái FAI gồm 3 phân hệ đào tạo chuẩn quốc tế chuyển giao trực tiếp từ đối tác nước ngoài: Lập trình (Aptech), Thiết kế (Arena) và Tiếp thị số (Skillking).
+                Hệ sinh thái FAI gồm 5 phân hệ đào tạo chuẩn quốc tế chuyển giao trực tiếp từ đối tác nước ngoài: Lập trình (Aptech), Thiết kế (Arena), Tiếp thị số (Skillking), Thiết kế vi mạch bán dẫn (Jetking Chip Design) và Trí tuệ nhân tạo (Jetking AI Agent).
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Grouped contact using whitespace padding instead of border lines */}
+              {/* Contact Info */}
               <div className="contact-branch" style={{ display: 'flex', flexDirection: 'column', gap: '8px', paddingTop: '15px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
                 <p style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: 0, color: 'rgba(255, 255, 255, 0.75)' }}>
                   <Phone size={16} style={{ color: 'rgba(255, 255, 255, 0.6)' }} />
@@ -144,6 +144,18 @@ export default function Footer() {
                 <a href="https://skillking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
                   <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Skillking</strong>
                   <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Digital Marketing chuyên sâu</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://jetking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
+                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Jetking Chip Design</strong>
+                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Thiết kế Vi mạch Bán dẫn</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://jetking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
+                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Jetking AI Agent</strong>
+                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Chuyên gia phát triển AI Agent</span>
                 </a>
               </li>
             </ul>

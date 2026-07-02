@@ -7,22 +7,22 @@ export default function TrustBar() {
       <div className="trust-bar-inner container">
         <div className="trust-item">
           <Check size={22} strokeWidth={2.5} style={{ color: 'var(--accent)', flexShrink: 0 }} />
-          <span>Thành viên <strong>Tập đoàn FPT</strong></span>
+          <span>Thành viên <strong>Tổ chức giáo dục FPT</strong></span>
         </div>
         <div className="trust-divider" />
         <div className="trust-item">
           <Check size={22} strokeWidth={2.5} style={{ color: 'var(--accent)', flexShrink: 0 }} />
-          <span>Chuyển giao từ <strong>NIIT Ấn Độ</strong></span>
+          <span>Chương trình học <strong>tích hợp AI</strong></span>
         </div>
         <div className="trust-divider" />
         <div className="trust-item">
           <Check size={22} strokeWidth={2.5} style={{ color: 'var(--accent)', flexShrink: 0 }} />
-          <span>Chứng chỉ <strong>Quốc tế được công nhận</strong></span>
+          <span>Chứng chỉ <strong>Quốc Tế từ Ấn Độ</strong></span>
         </div>
         <div className="trust-divider" />
         <div className="trust-item trust-item--highlight">
-          <span className="trust-years">18</span>
-          <span>Năm Dẫn Đầu Ngành<br/><small>Công Nghệ Việt Nam</small></span>
+          <span className="trust-years">27</span>
+          <span>Năm Dẫn Đầu Phát Triển<br/><small>Nhân Lực Công Nghệ & Sáng Tạo</small></span>
         </div>
         <div className="trust-divider" />
         <div className="trust-item">

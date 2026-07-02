@@ -1,6 +1,9 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
+import ScrollTypewriter from '@/components/ScrollTypewriter';
 import Header from '@/components/Header';
+import ParticleCanvas from '@/components/ParticleCanvas';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -69,43 +72,133 @@ const programsList = [
   }
 ];
 
+
+
+
+
 export default function VeFai() {
+  const [text1, setText1] = useState('');
+  const [text2, setText2] = useState('');
+  const [isDone, setIsDone] = useState(false);
+  const [showParticles, setShowParticles] = useState(false);
+
+  const fullText1 = "Viện Đào tạo Quốc tế FPT";
+  const fullText2 = "FPT ACADEMY INTERNATIONAL";
+
+  useEffect(() => {
+    let active = true;
+    let timer1 = null;
+    let timer2 = null;
+    const chars1 = Array.from(fullText1);
+    const chars2 = Array.from(fullText2);
+    let index1 = 0;
+    let index2 = 0;
+    
+    // Reset strings on mount
+    setText1('');
+    setText2('');
+    setIsDone(false);
+    
+    const startTimeout = setTimeout(() => {
+      if (!active) return;
+      setShowParticles(true);
+      
+      timer1 = setInterval(() => {
+        if (!active) return;
+        if (index1 < chars1.length) {
+          const charToType = chars1[index1];
+          setText1(prev => prev + charToType);
+          index1++;
+        } else {
+          clearInterval(timer1);
+          setTimeout(() => {
+            if (!active) return;
+            timer2 = setInterval(() => {
+              if (!active) return;
+              if (index2 < chars2.length) {
+                const charToType = chars2[index2];
+                setText2(prev => prev + charToType);
+                index2++;
+              } else {
+                clearInterval(timer2);
+                setIsDone(true);
+              }
+            }, 35);
+          }, 250);
+        }
+      }, 55);
+    }, 400);
+
+    return () => {
+      active = false;
+      clearTimeout(startTimeout);
+      if (timer1) clearInterval(timer1);
+      if (timer2) clearInterval(timer2);
+    };
+  }, []);
+
   return (
     <div className="about-page-container" style={{ backgroundColor: '#ffffff', color: '#1a2332' }}>
       <Header />
 
       <main className="sub-page-main" style={{ padding: 0 }}>
         
-        {/* SECTION 1: Page Title (sec-pageTitle) - White Background - Proportional Height (45vh) */}
+        {/* SECTION 1: Page Title (sec-pageTitle) - Clean dynamic typewriter with floating particles */}
         <section 
           className="about-hero-section" 
           style={{ 
-            padding: '160px 0 80px 0', 
+            padding: '160px 0 100px 0', 
             position: 'relative', 
             overflow: 'hidden',
-            minHeight: '45vh',
+            minHeight: '42vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            backgroundColor: '#ffffff'
+            backgroundColor: '#F9FAFB'
           }}
         >
-          <div className="container">
-            <div style={{ maxWidth: '950px' }}>
-              <span className="section-eyebrow" style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
-                GIỚI THIỆU
-              </span>
-              <h1 style={{ fontSize: 'clamp(2.3rem, 5.5vw, 4.2rem)', color: 'var(--secondary)', lineHeight: '1.25', fontWeight: 800, marginTop: '20px', fontFamily: 'var(--font-sans)', fontStyle: 'normal' }}>
-                Thấu cảm và sự đổi mới tạo ra những trải nghiệm giáo dục lôi cuốn
-              </h1>
+          {/* Antigravity particles background */}
+          {showParticles && (
+            <div style={{ position: 'absolute', inset: 0, opacity: isDone ? 1 : 0.6, transition: 'opacity 2s ease' }}>
+              <ParticleCanvas className="about-hero-particles" />
             </div>
-            
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '60px', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '20px' }}>
-              <div style={{ display: 'flex', gap: '10px', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                <Link href="/">Trang chủ</Link>
-                <span>/</span>
-                <span style={{ color: 'var(--secondary)', fontWeight: 600 }}>Giới thiệu</span>
-              </div>
+          )}
+
+          <div className="container" style={{ position: 'relative', zIndex: 1, minHeight: '140px' }}>
+            <div style={{ maxWidth: '980px' }}>
+              <h1 style={{ 
+                fontSize: 'clamp(2.5rem, 6vw, 4.6rem)', 
+                color: '#0D2137', 
+                lineHeight: '1.15', 
+                fontWeight: 900, 
+                fontFamily: 'var(--font-sans)', 
+                letterSpacing: '-0.02em',
+                margin: 0,
+                minHeight: '1.2em'
+              }}>
+                {text1}
+                {text1.length > 0 && !text2 && (
+                  <span className="typewriter-cursor">|</span>
+                )}
+              </h1>
+              {text1.length === fullText1.length && (
+                <p style={{ 
+                  fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)', 
+                  color: '#e31a22', 
+                  fontWeight: 800, 
+                  marginTop: '12px', 
+                  textTransform: 'uppercase', 
+                  letterSpacing: '0.08em', 
+                  fontFamily: 'var(--font-sans)', 
+                  margin: 0,
+                  minHeight: '1.2em'
+                }}>
+                  {text2}
+                  {text2.length > 0 && !isDone && (
+                    <span className="typewriter-cursor">|</span>
+                  )}
+                </p>
+              )}
             </div>
           </div>
         </section>
@@ -139,7 +232,7 @@ export default function VeFai() {
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ maxWidth: '950px', marginBottom: '60px' }}>
               <h2 style={{ fontSize: 'clamp(1.4rem, 3.2vw, 2rem)', fontWeight: 400, lineHeight: '1.6', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-sans)' }}>
-                <strong style={{ color: 'var(--primary)', fontWeight: 800 }}>Là Viện Đào tạo Quốc tế thuộc Tập đoàn FPT</strong>, FAI tự hào đồng hành cùng thế hệ trẻ trên hành trình làm chủ công nghệ, mỹ thuật số và truyền thông thực chiến thông qua các chương trình đào tạo chuyển giao quốc tế chuẩn mực nhất.
+                Là đơn vị trực thuộc Tập đoàn FPT, FAI tự hào đồng hành cùng đất nước trong kỷ nguyên vươn mình, đưa thế hệ trẻ trên làm chủ các công nghệ cốt lõi, mỹ thuật số và truyền thông thực chiến thông qua các chương trình đào tạo chuyển giao quốc tế chuẩn mực nhất.
               </h2>
             </div>
 
@@ -147,7 +240,7 @@ export default function VeFai() {
               {/* Left Title */}
               <div style={{ gridColumn: 'span 4' }} className="prosper-title-col">
                 <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#ffffff', lineHeight: '1.3', fontFamily: 'var(--font-sans)' }}>
-                  Những điều <br />chúng tôi đã đạt được
+                  <ScrollTypewriter text="Những con số biết nói" />
                 </h3>
               </div>
 
@@ -158,20 +251,19 @@ export default function VeFai() {
                   <div>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
                       <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>27</span>
-                      <span style={{ fontSize: '0.42em', fontWeight: 800, color: 'var(--primary)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}>+ năm</span>
+                      <span style={{ fontSize: '0.42em', fontWeight: 800, color: 'var(--primary)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}> NĂM</span>
                     </div>
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
-                      Aptech đồng hành đào tạo nhân lực ngành công nghệ thông tin xuất sắc tại Việt Nam từ năm 1999.
+                      đơn vị tiên phong liên kết đào tạo quốc tế của Tập đoàn FPT từ năm 1999, kiến tạo nguồn nhân lực chất lượng cao sẵn sàng làm việc toàn cầu.
                     </p>
                   </div>
 
                   <div>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
-                      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>22</span>
-                      <span style={{ fontSize: '0.42em', fontWeight: 800, color: 'var(--accent)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}>+ năm</span>
+                      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>60.000</span>
                     </div>
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
-                      Arena Multimedia khai mở và dẫn dắt xu hướng đào tạo Mỹ thuật đa phương tiện chuẩn quốc tế.
+                      Sinh viên đã lựa chọn
                     </p>
                   </div>
 
@@ -181,13 +273,13 @@ export default function VeFai() {
                       <span style={{ fontSize: '0.42em', fontWeight: 800, color: 'var(--accent)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}>%</span>
                     </div>
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
-                      Tỷ lệ sinh viên FAI có việc làm ngay trong năm đầu tiên sau khi tốt nghiệp tại các doanh nghiệp đối tác lớn.
+                      Sinh viên có việc làm ngay sau khi tốt nghiệp
                     </p>
                   </div>
 
                   <div>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
-                      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>50</span>
+                      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>1000</span>
                       <span style={{ fontSize: '0.42em', fontWeight: 800, color: 'var(--primary)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}>+</span>
                     </div>
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
@@ -219,7 +311,7 @@ export default function VeFai() {
               <div style={{ gridColumn: 'span 4' }}>
                 <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800 }}>GIÁ TRỊ CỐT LÕI</span>
                 <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
-                  Những giá trị đại diện cho chúng tôi
+                  <ScrollTypewriter text="Những giá trị đại diện cho chúng tôi" speed={12} />
                 </h2>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.7', marginTop: '20px', maxWidth: '340px' }}>
                   Kim chỉ nam giúp FAI xây dựng hệ thống đào tạo chất lượng cao chuẩn quốc tế, gắn liền giữa lý thuyết và thực tiễn doanh nghiệp.
@@ -234,7 +326,7 @@ export default function VeFai() {
                     <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(232, 116, 30, 0.08)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
                       <Zap size={22} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}>Practical — Thực chiến</h3>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Practical — Thực chiến" /></h3>
                     <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
                       Nói không với lý thuyết suông. Thời lượng học thực hành tại Lab đạt 70%. Sinh viên làm đồ án e-Project thực tế mỗi học kỳ giúp tích lũy portfolio đắt giá trước khi ra trường.
                     </p>
@@ -245,7 +337,7 @@ export default function VeFai() {
                     <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(201, 151, 44, 0.08)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
                       <Globe size={22} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}>Global — Toàn cầu</h3>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Global — Toàn cầu" /></h3>
                     <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
                       Giáo trình được chuyển giao trực tiếp từ các tổ chức giáo dục hàng đầu thế giới, cập nhật liên tục các xu hướng công nghiệp mới nhất như Cloud, AI/ML, UI/UX hay Data.
                     </p>
@@ -256,7 +348,7 @@ export default function VeFai() {
                     <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(22, 163, 74, 0.08)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
                       <Users size={22} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}>Connect — Đồng hành</h3>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Connect — Đồng hành" /></h3>
                     <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
                       Hỗ trợ sinh viên toàn diện thông qua mạng lưới Job Hub. Tổ chức Company Visit thường xuyên, rèn luyện phỏng vấn giả định và kết nối việc làm trọn đời sau tốt nghiệp.
                     </p>
@@ -285,14 +377,14 @@ export default function VeFai() {
           <div className="container">
             <div className="sec-history__header" style={{ marginBottom: '50px' }}>
               <span className="section-eyebrow" style={{ color: 'rgba(255,255,255,0.4)', fontWeight: 800 }}>HÀNH TRÌNH PHÁT TRIỂN</span>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, marginTop: '10px', fontFamily: 'var(--font-sans)' }}>Chặng đường vững bước</h2>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, marginTop: '10px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Chặng đường vững bước" /></h2>
             </div>
 
             <div 
               className="horizontal-timeline-wrapper" 
               style={{ 
                 display: 'flex', 
-                gap: '30px', 
+                gap: '16px', 
                 overflowX: 'auto', 
                 paddingBottom: '30px', 
                 scrollSnapType: 'x mandatory'
@@ -317,7 +409,7 @@ export default function VeFai() {
                     {item.year}
                   </div>
                   <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#ffffff', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                    {item.title}
+                    <ScrollTypewriter text={item.title} />
                   </h4>
                   <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.75', margin: 0 }}>
                     {item.desc}
@@ -344,22 +436,24 @@ export default function VeFai() {
           <div className="container">
             <div style={{ marginBottom: '50px' }}>
               <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800 }}>MẠNG LƯỚI ĐÀO TẠO</span>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>Các Phân Hệ Đào Tạo</h2>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Các Phân Hệ Đào Tạo" /></h2>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px' }} className="programs-grid">
-              {programsList.map((prog, idx) => {
-                return (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+              {/* Row 1: 2 Programs Centered */}
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap' }}>
+                {programsList.slice(0, 2).map((prog, idx) => (
                   <div 
                     key={idx} 
                     className="program-list-card"
                     style={{ 
+                      flex: '0 1 320px',
+                      minWidth: '280px',
                       background: '#F8F5F0', 
                       border: '1px solid rgba(0,0,0,0.02)', 
                       borderRadius: '16px', 
                       padding: '40px 30px',
-                      boxShadow: '0 10px 30px rgba(0,0,0,0.01)',
-                      transition: 'all 0.3s ease'
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.01)'
                     }}
                   >
                     <div 
@@ -389,8 +483,54 @@ export default function VeFai() {
                       ))}
                     </ul>
                   </div>
-                );
-              })}
+                ))}
+              </div>
+
+              {/* Row 2: 3 Programs Centered */}
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap' }}>
+                {programsList.slice(2).map((prog, idx) => (
+                  <div 
+                    key={idx} 
+                    className="program-list-card"
+                    style={{ 
+                      flex: '0 1 320px',
+                      minWidth: '280px',
+                      background: '#F8F5F0', 
+                      border: '1px solid rgba(0,0,0,0.02)', 
+                      borderRadius: '16px', 
+                      padding: '40px 30px',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.01)'
+                    }}
+                  >
+                    <div 
+                      style={{ 
+                        height: '42px', 
+                        display: 'flex',
+                        alignItems: 'center',
+                        marginBottom: '25px',
+                        position: 'relative'
+                      }}
+                    >
+                      <Image src={prog.logo} alt={prog.title} width={150} height={42} style={{ objectFit: 'contain', width: 'auto', height: '100%' }} />
+                    </div>
+                    <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '6px', fontFamily: 'var(--font-sans)' }}>
+                      {prog.title}
+                    </h3>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em' }}>
+                      {prog.subTitle}
+                    </span>
+                    
+                    <ul style={{ marginTop: '35px', borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '25px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                      {prog.items.map((item, i) => (
+                        <li key={i} style={{ fontSize: '0.9rem', color: 'var(--text-dark)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                          <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: prog.color }}></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

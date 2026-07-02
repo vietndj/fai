@@ -5,16 +5,16 @@ import { Building2, Globe } from 'lucide-react';
 
 /* ── 4 primary stats (hero display) ──────────────────── */
 const primaryStats = [
-  { number: 18,  suffix: '+',  label: 'Năm Đào Tạo Quốc Tế',       sub: 'Kinh nghiệm lâu đời nhất' },
-  { number: 50,  suffix: 'K+', label: 'Sinh Viên Tốt Nghiệp',       sub: 'Từ 3 hệ thống chương trình' },
-  { number: 95,  suffix: '%',  label: 'Có Việc Làm Sau 6 Tháng',    sub: 'Tỉ lệ đầu ra hàng đầu' },
-  { number: 200, suffix: '+',  label: 'Doanh Nghiệp Tuyển Dụng',    sub: 'Mạng lưới đối tác toàn quốc' },
+  { number: 27,  suffix: '+',  label: 'Năm kinh nghiệm đào tạo',       sub: 'Phát triển nguồn nhân lực chất lượng cao' },
+  { number: 60000,  suffix: '+', label: 'Sinh viên lựa chọn',       sub: 'Học sinh, sinh viên và người đi làm tin dùng' },
+  { number: 1000,  suffix: '+',  label: 'Đối tác tuyển dụng',    sub: 'Mạng lưới kết nối việc làm rộng khắp' },
+  { number: 97, suffix: '% +',  label: 'Sinh viên có việc làm',    sub: 'trước khi tốt nghiệp' },
 ];
 
 /* ── 2 supporting facts (compact bar below) ─────────── */
 const supportingFacts = [
   { icon: Building2, value: '30+', label: 'Trung tâm đào tạo toàn quốc' },
-  { icon: Globe, value: '3',   label: 'Hệ thống quốc tế liên kết' },
+  { icon: Globe, value: '5',   label: 'Hệ thống quốc tế liên kết' },
 ];
 
 function useCountUp(target, duration = 1800, started) {
@@ -49,10 +49,9 @@ function PrimaryStat({ stat, started, index }) {
         transition: `opacity 0.7s ease ${index * 0.12}s, transform 0.7s cubic-bezier(0.16,1,0.3,1) ${index * 0.12}s`,
       }}
     >
-      {/* GT Sectra Medium number — editorial, prestigious */}
       <div className="primary-stat-number">
         <span style={{ fontFamily: 'var(--font-serif)', fontWeight: 500 }}>
-          {count}
+          {stat.number >= 1000 ? (count >= 1000 ? count.toLocaleString() : count) : count}
         </span>
         <span className="primary-stat-suffix">{stat.suffix}</span>
       </div>
@@ -68,46 +67,48 @@ export default function Counters() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setStarted(true); observer.disconnect(); } },
-      { threshold: 0.1 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStarted(true);
+        }
+      },
+      { threshold: 0.15 }
     );
-    if (ref.current) observer.observe(ref.current);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="big-counters-block" ref={ref}>
-      {/* AI aurora blobs */}
-      <div className="counters-blob counters-blob-1" aria-hidden="true" />
-      <div className="counters-blob counters-blob-2" aria-hidden="true" />
-
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-
-        {/* ── 4 Primary Stats ──────────────────────── */}
+    <section className="counters-section" ref={ref}>
+      <div className="container">
+        
+        {/* Main Grid */}
         <div className="primary-stats-grid">
           {primaryStats.map((stat, i) => (
             <PrimaryStat key={i} stat={stat} started={started} index={i} />
           ))}
         </div>
 
-        {/* ── 2 Supporting Facts — compact bar ──── */}
-        <div
-          className="supporting-facts-bar"
+        {/* Fact Ribbon */}
+        <div 
+          className="fact-ribbon"
           style={{
             opacity:    started ? 1 : 0,
             transform:  started ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'opacity 0.7s ease 0.6s, transform 0.7s ease 0.6s',
+            transition: 'opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s',
           }}
         >
-          {supportingFacts.map((f, i) => {
-            const Icon = f.icon;
+          {supportingFacts.map((fact, i) => {
+            const Icon = fact.icon;
             return (
-              <div key={i} className="supporting-fact-item">
-                <span className="supporting-fact-icon">
-                  <Icon size={20} strokeWidth={1.5} style={{ color: 'var(--accent)' }} />
-                </span>
-                <strong className="supporting-fact-value">{f.value}</strong>
-                <span className="supporting-fact-label">{f.label}</span>
+              <div key={i} className="fact-item">
+                <Icon size={20} className="fact-icon" />
+                <span className="fact-val">{fact.value}</span>
+                <span className="fact-lbl">{fact.label}</span>
               </div>
             );
           })}
