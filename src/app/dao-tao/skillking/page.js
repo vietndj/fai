@@ -40,27 +40,34 @@ export default function SkillkingSubpage() {
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">SKILLKING</div>
         <div className="container beau-hero-inner" data-reveal>
-          <span className="beau-hero-brand" style={{ backgroundColor: '#16a34a', color: '#ffffff' }}>
+          <span className="beau-hero-brand" style={{ backgroundColor: '#09529c', color: '#ffffff' }}>
             FPT SKILLKING
           </span>
           <h1 className="beau-hero-title">
             Tiếp Thị<br />Kỹ Thuật Số
           </h1>
+          <div className="beau-hero-logo" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
+            <svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 10 L22 17 L29 10 L26 25 L18 25 Z" fill="#f37021"/>
+              <path d="M18 25 H26 V28 H18 Z" fill="#09529c"/>
+              <text x="36" y="26" fill="#09529c" fontSize="16" fontWeight="bold" fontFamily="sans-serif">skillking</text>
+            </svg>
+          </div>
           <p className="beau-hero-desc">
             Chương trình đào tạo Chuyên gia Digital Marketing chuẩn quốc tế thực chiến 100%. Được phát triển trên nền tảng liên kết giữa Viện Giáo dục Quốc tế FPT và tập đoàn đào tạo công nghệ Jetking Ấn Độ. Trang bị kiến thức toàn diện từ Social Media, SEO, Performance Marketing đến quản trị dữ liệu số và hoạch định chiến dịch số.
           </p>
 
           <div className="beau-stats-bar">
             <div className="beau-stat-item">
-              <h3 style={{ color: '#16a34a' }}>Google &amp; Meta</h3>
+              <h3 style={{ color: '#09529c' }}>Google &amp; Meta</h3>
               <p>Hệ thống kiến thức chuẩn chứng chỉ quảng cáo toàn cầu trực quan nhất.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#16a34a' }}>25+ Năm</h3>
+              <h3 style={{ color: '#09529c' }}>25+ Năm</h3>
               <p>Kinh nghiệm đào tạo quốc tế uy tín chuyển giao trực tiếp từ Ấn Độ.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#16a34a' }}>100%</h3>
+              <h3 style={{ color: '#09529c' }}>100%</h3>
               <p>Thời lượng thực chiến học đi đôi với hành thông qua dự án doanh nghiệp thực tế.</p>
             </div>
           </div>
@@ -68,7 +75,7 @@ export default function SkillkingSubpage() {
           {/* Banner Image */}
           <div className="beau-hero-banner">
             <Image
-              src="/banner_skillking_sub.png"
+              src="/banner_skillking_sub_v2.png"
               alt="Tuyển sinh FPT Skillking"
               width={1200}
               height={400}
@@ -87,7 +94,7 @@ export default function SkillkingSubpage() {
           <div className="beau-split-grid">
             {/* Left label */}
             <div className="beau-split-left">
-              <div className="beau-sticky-label" style={{ color: '#16a34a', opacity: 0.15 }}>DIGITAL</div>
+              <div className="beau-sticky-label" style={{ color: '#09529c', opacity: 0.15 }}>DIGITAL</div>
               <p className="beau-sticky-desc">
                 Giáo trình cập nhật liên tục theo các thuật toán phân tích hành vi và quảng cáo đa nền tảng: SEO Google, Meta Ads, TikTok Ads, dữ liệu marketing CRM HubSpot.
               </p>
@@ -97,7 +104,7 @@ export default function SkillkingSubpage() {
             <div className="beau-split-right">
               {/* Semester 1 */}
               <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#16a34a' }}>Học Kỳ 01</span>
+                <span className="sem-num" style={{ color: '#09529c' }}>Học Kỳ 01</span>
                 <h3 className="sem-title">Social Media &amp; Content Strategy — Tiếp thị mạng xã hội</h3>
                 <p className="sem-desc">
                   Thấu hiểu hành vi khách hàng trực tuyến. Học viên làm quen với nghiên cứu thị trường, viết nội dung sáng tạo chuẩn SEO, thiết kế ấn phẩm đồ họa tiếp thị bằng Canva, xây dựng thương hiệu cá nhân và quản trị các nền tảng mạng xã hội Facebook, TikTok, Instagram, Youtube.
@@ -115,7 +122,7 @@ export default function SkillkingSubpage() {
 
               {/* Semester 2 */}
               <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#16a34a' }}>Học Kỳ 02</span>
+                <span className="sem-num" style={{ color: '#09529c' }}>Học Kỳ 02</span>
                 <h3 className="sem-title">Search Engine Optimization — Tối ưu hóa công cụ tìm kiếm</h3>
                 <p className="sem-desc">
                   Chinh phục thứ hạng tìm kiếm tự nhiên của Google. Học viên học cách nghiên cứu từ khóa (Keywords Research), tối ưu Onpage/Offpage website, viết bài chuẩn SEO, phân tích kỹ thuật website (Technical SEO) và đo lường lượng truy cập qua Google Search Console, Google Analytics.
@@ -133,7 +140,7 @@ export default function SkillkingSubpage() {
 
               {/* Semester 3 */}
               <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#16a34a' }}>Học Kỳ 03</span>
+                <span className="sem-num" style={{ color: '#09529c' }}>Học Kỳ 03</span>
                 <h3 className="sem-title">Performance Marketing &amp; Google/Meta Ads — Tối ưu quảng cáo</h3>
                 <p className="sem-desc">
                   Tận dụng tối đa ngân sách truyền thông số. Học viên học kỹ năng thiết lập tài khoản quảng cáo doanh nghiệp, đấu thầu từ khóa Google Search Ads, chạy quảng cáo hiển thị, tối ưu hóa chiến dịch quảng cáo Facebook/Instagram và tiếp thị lại (Remarketing).
@@ -151,7 +158,7 @@ export default function SkillkingSubpage() {
 
               {/* Semester 4 */}
               <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#16a34a' }}>Học Kỳ 04</span>
+                <span className="sem-num" style={{ color: '#09529c' }}>Học Kỳ 04</span>
                 <h3 className="sem-title">Digital Marketing Strategy &amp; Data Analytics — Hoạch định chiến lược</h3>
                 <p className="sem-desc">
                   Trở thành nhà quản trị tiếp thị số toàn diện. Học viên học cách tích hợp dữ liệu khách hàng (CRM HubSpot), xây dựng phễu Marketing automation, phân bổ ngân sách tổng thể và viết kế hoạch Digital Marketing chi tiết cho doanh nghiệp lớn.
@@ -221,27 +228,27 @@ export default function SkillkingSubpage() {
           <h2 className="beau-section-title">Vị Trí Việc Làm Hậu Tốt Nghiệp</h2>
 
           <div className="beau-careers-grid">
-            <div className="beau-career-card" style={{ borderLeftColor: '#16a34a' }} data-reveal data-reveal-delay="0.05">
+            <div className="beau-career-card" style={{ borderLeftColor: '#09529c' }} data-reveal data-reveal-delay="0.05">
               <h3 className="career-title">Digital Marketing Executive</h3>
               <p className="career-desc">Setup và vận hành các chiến dịch quảng cáo, quản lý và chăm sóc nội dung đa kênh cho sản phẩm của doanh nghiệp.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#16a34a' }} data-reveal data-reveal-delay="0.1">
+            <div className="beau-career-card" style={{ borderLeftColor: '#09529c' }} data-reveal data-reveal-delay="0.1">
               <h3 className="career-title">SEO Specialist</h3>
               <p className="career-desc">Tối ưu hóa công cụ tìm kiếm, viết bài chuẩn SEO, đẩy từ khóa website thương hiệu lên vị trí top đầu Google.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#16a34a' }} data-reveal data-reveal-delay="0.15">
+            <div className="beau-career-card" style={{ borderLeftColor: '#09529c' }} data-reveal data-reveal-delay="0.15">
               <h3 className="career-title">Content Creator & Strategy</h3>
               <p className="career-desc">Sáng tạo kịch bản, sản xuất nội dung bài viết hình ảnh, video xu hướng trên mạng xã hội TikTok, Facebook.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#16a34a' }} data-reveal data-reveal-delay="0.2">
+            <div className="beau-career-card" style={{ borderLeftColor: '#09529c' }} data-reveal data-reveal-delay="0.2">
               <h3 className="career-title">Performance Marketing Specialist</h3>
               <p className="career-desc">Thiết lập tài khoản, tối ưu ngân sách chạy quảng cáo Google Ads, Meta Ads chuyên sâu mang lại chuyển đổi mua hàng cao.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#16a34a' }} data-reveal data-reveal-delay="0.25">
+            <div className="beau-career-card" style={{ borderLeftColor: '#09529c' }} data-reveal data-reveal-delay="0.25">
               <h3 className="career-title">Social Media Manager</h3>
               <p className="career-desc">Quản lý định hướng thương hiệu trực tuyến trên các kênh mạng xã hội lớn, phân tích báo cáo tương tác người dùng.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#16a34a' }} data-reveal data-reveal-delay="0.3">
+            <div className="beau-career-card" style={{ borderLeftColor: '#09529c' }} data-reveal data-reveal-delay="0.3">
               <h3 className="career-title">Growth Hacker / Marketing Planner</h3>
               <p className="career-desc">Lên kế hoạch và thử nghiệm các kênh tăng trưởng traffic, tối ưu phễu chuyển đổi số tổng thể cho startup và doanh nghiệp.</p>
             </div>
@@ -256,17 +263,17 @@ export default function SkillkingSubpage() {
           <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Ưu Đãi Tuyển Sinh Đặc Quyền</h2>
           
           <div className="beau-incentives-grid">
-            <div className="beau-incentive-card" style={{ '--accent': '#16a34a' }} data-reveal data-reveal-delay="0.05">
+            <div className="beau-incentive-card" style={{ '--accent': '#09529c' }} data-reveal data-reveal-delay="0.05">
               <span className="incentive-badge">HỌC BỔNG</span>
               <h3 className="incentive-value">Lên tới 50%</h3>
               <p className="incentive-desc">Học bổng Tài năng Marketing hỗ trợ thế hệ planners nhạy bén, khai phóng tư duy tiếp thị số đỉnh cao.</p>
             </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#16a34a' }} data-reveal data-reveal-delay="0.1">
+            <div className="beau-incentive-card" style={{ '--accent': '#09529c' }} data-reveal data-reveal-delay="0.1">
               <span className="incentive-badge">NHẬP HỌC SỚM</span>
               <h3 className="incentive-value">Tặng Khoá Học</h3>
               <p className="incentive-desc">Ưu đãi tặng ngay khoá học AI Marketing / ChatGPT Automation bổ trợ cho học viên hoàn thành thủ tục sớm.</p>
             </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#16a34a' }} data-reveal data-reveal-delay="0.15">
+            <div className="beau-incentive-card" style={{ '--accent': '#09529c' }} data-reveal data-reveal-delay="0.15">
               <span className="incentive-badge">TRẢ GÓP</span>
               <h3 className="incentive-value">0% Lãi Suất</h3>
               <p className="incentive-desc">Hỗ trợ chia nhỏ học phí đóng theo từng tháng qua thẻ tín dụng ngân hàng đối tác.</p>

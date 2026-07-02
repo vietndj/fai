@@ -9,7 +9,8 @@ import ParticleCanvas from './ParticleCanvas';
 const programs = [
   {
     num: '01',
-    brand: 'APTECH',
+    brand: 'FPT APTECH',
+    logo: '/logo_aptech.png',
     titleLine1: 'Software Engineering',
     titleLine2: '& Technology',
     subtitle: 'Lập Trình & Phát Triển Phần Mềm Quốc Tế',
@@ -21,15 +22,16 @@ const programs = [
       'Java / .NET / Python / Cloud',
       'Mobile App Development',
     ],
-    image: '/fai_banner_aptech.png',
+    image: '/fai_banner_aptech_v2.png',
     stat: '28+',
     statLabel: 'năm đào tạo toàn cầu',
-    color: '#1a6ed8',
+    color: '#e31a22',
     href: '/dao-tao/aptech',
   },
   {
     num: '02',
-    brand: 'ARENA',
+    brand: 'FPT ARENA',
+    logo: '/logo_arena.png',
     titleLine1: 'Multimedia Design',
     titleLine2: '& Creative Arts',
     subtitle: 'Thiết Kế & Nghệ Thuật Kỹ Thuật Số',
@@ -41,15 +43,16 @@ const programs = [
       'Thiết kế Game & Hoạt hình',
       'Thiết kế Đồ hoạ & Nhận diện Thương hiệu',
     ],
-    image: '/fai_banner_arena.png',
+    image: '/fai_banner_arena_v2.png',
     stat: '20+',
     statLabel: 'năm tại Việt Nam',
-    color: '#e8741e',
+    color: '#ffb600',
     href: '/dao-tao/arena',
   },
   {
     num: '03',
-    brand: 'SKILLKING',
+    brand: 'FPT SKILLKING',
+    logo: '/logo_skillking.png',
     titleLine1: 'Digital Marketing',
     titleLine2: '& Business Growth',
     subtitle: 'Chiến Lược Tiếp Thị Số & Tăng Trưởng',
@@ -61,10 +64,10 @@ const programs = [
       'Data Analytics & Performance',
       'E-Commerce & Growth Hacking',
     ],
-    image: '/fai_banner_skillking.png',
+    image: '/fai_banner_skillking_v2.png',
     stat: 'Google & Meta',
     statLabel: 'chuẩn chứng chỉ quốc tế',
-    color: '#16a34a',
+    color: '#09529c',
     href: '/dao-tao/skillking',
   },
 ];
@@ -86,8 +89,7 @@ export default function ProgramBeau() {
         </h2>
       </div>
 
-      {/* ── TWO-COLUMN GRID: list (left) + sticky image (right) ── */}
-          {/* ── ONLY THE LIST (NO RIGHT COLUMN IMAGE) ── */}
+      {/* ── TWO-COLUMN GRID ── */}
       <div className="prog-beau-container-full">
         <div className="prog-beau-list">
           {programs.map((prog, idx) => (
@@ -98,46 +100,45 @@ export default function ProgramBeau() {
               } ${
                 isHovering && active !== idx ? 'is-dimmed' : ''
               }`}
-              onMouseEnter={() => { setActive(idx); setIsHovering(true); }}
-              onMouseLeave={() => setIsHovering(false)}
+              onMouseEnter={() => {
+                setActive(idx);
+                setIsHovering(true);
+              }}
+              onMouseLeave={() => {
+                setIsHovering(false);
+              }}
             >
-              <div className="prog-beau-item-inner">
-                {/* Number + Title */}
-                <div className="prog-beau-title-col">
-                  <span className="prog-beau-num" style={{ color: prog.color }}>
-                    {prog.num}
-                  </span>
-                  <div>
-                    <span className="prog-beau-brand-tag" style={{ color: prog.color }}>
-                      {prog.brand}
-                    </span>
-                    <h2 className="prog-beau-item-title">
-                      {prog.titleLine1}<br />{prog.titleLine2}
-                    </h2>
+              <div className="prog-beau-item-left">
+                <span className="prog-num" style={{ color: prog.color }}>{prog.num}</span>
+                <div className="prog-meta">
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                    <Image src={prog.logo} alt={prog.brand} width={24} height={24} style={{ objectFit: 'contain' }} />
+                    <span className="prog-brand" style={{ color: prog.color }}>{prog.brand}</span>
                   </div>
-                  <div className="prog-beau-line" style={{ backgroundColor: prog.color }} />
+                  <h3 className="prog-title">
+                    {prog.titleLine1} <br />
+                    <span>{prog.titleLine2}</span>
+                  </h3>
                 </div>
+              </div>
 
-                {/* Content — revealed on hover */}
-                <div className="prog-beau-content-col">
-                  <p className="prog-beau-subtitle">{prog.subtitle}</p>
-                  <p className="prog-beau-desc">{prog.desc}</p>
-                  <ul className="prog-beau-tags">
-                    {prog.tags.map((t, i) => (
-                      <li key={i}>{t}</li>
-                    ))}
-                  </ul>
-                  <div className="prog-beau-meta">
-                    <div className="prog-beau-stat">
-                      <strong style={{ color: prog.color }}>{prog.stat}</strong>
-                      <span>{prog.statLabel}</span>
-                    </div>
-                    <Link href={prog.href} className="prog-beau-cta" style={{ color: prog.color, display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                      Khám phá chương trình
-                      <ArrowRight size={18} />
-                    </Link>
-                  </div>
+              <div className="prog-beau-item-content">
+                <p className="prog-desc">{prog.desc}</p>
+                <div className="prog-tags-row">
+                  {prog.tags.map((t, tIdx) => (
+                    <span key={tIdx} className="prog-tag">{t}</span>
+                  ))}
                 </div>
+              </div>
+
+              <div className="prog-beau-item-right">
+                <div className="prog-stat-box">
+                  <span className="prog-stat" style={{ color: prog.color }}>{prog.stat}</span>
+                  <span className="prog-stat-lbl">{prog.statLabel}</span>
+                </div>
+                <Link href={prog.href} className="prog-arrow-btn" style={{ '--btn-color': prog.color }} aria-label={`Detail for ${prog.brand}`}>
+                  <ArrowRight size={20} />
+                </Link>
               </div>
             </div>
           ))}

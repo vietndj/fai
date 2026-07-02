@@ -33,25 +33,39 @@ const historyTimeline = [
 
 const programsList = [
   {
-    title: 'APTECH — Công Nghệ',
+    title: 'FPT APTECH',
     subTitle: 'Lập trình viên Quốc tế',
-    icon: Zap,
-    color: '#1a6ed8',
+    color: '#e31a22',
+    logo: '/logo_aptech.png',
     items: ['Software Engineering', 'Java / .NET / Web Dev', 'Cloud Computing (AWS)', 'AI & Machine Learning', 'Data Science', 'e-Project Practical']
   },
   {
-    title: 'ARENA — Sáng Tạo',
+    title: 'FPT ARENA',
     subTitle: 'Mỹ thuật Đa phương tiện',
-    icon: Palette,
-    color: '#e8741e',
+    color: '#ffb600',
+    logo: '/logo_arena.png',
     items: ['Graphic Design', 'Web & UI/UX Design', 'Filmmaking & Video', '3D Modeling & Animation', 'Game Art & Design', 'Graduation Project']
   },
   {
-    title: 'SKILLKING — Marketing',
+    title: 'FPT SKILLKING',
     subTitle: 'Digital Marketing chuyên sâu',
-    icon: Megaphone,
-    color: '#16a34a',
+    color: '#09529c',
+    logo: '/logo_skillking.png',
     items: ['Social Media Strategy', 'SEO & SEM Marketing', 'Paid Media (Ads)', 'HubSpot CRM Audit', 'Marketing Analytics', 'Capstone Project']
+  },
+  {
+    title: 'FPT JETKING CHIP DESIGN',
+    subTitle: 'Thiết kế Vi mạch Bán dẫn',
+    color: '#f37021',
+    logo: '/logo_jetking.png',
+    items: ['Programming & Circuits', 'Chip Architecture', 'HDL & EDA Tools', 'SoC/ASIC/FPGA Design', 'AI Driven IC Design', 'IC Verification']
+  },
+  {
+    title: 'FPT JETKING AI AGENT',
+    subTitle: 'Chuyên gia phát triển AI Agent',
+    color: '#0066b3',
+    logo: '/logo_jetking.png',
+    items: ['Python & Data Science', 'Machine & Deep Learning', 'NLP & Computer Vision', 'Generative AI & LLMs', 'Multi-Agent Systems', 'MLOps & Deployment']
   }
 ];
 
@@ -333,9 +347,8 @@ export default function VeFai() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>Các Phân Hệ Đào Tạo</h2>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }} className="programs-grid">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px' }} className="programs-grid">
               {programsList.map((prog, idx) => {
-                const Icon = prog.icon;
                 return (
                   <div 
                     key={idx} 
@@ -344,25 +357,21 @@ export default function VeFai() {
                       background: '#F8F5F0', 
                       border: '1px solid rgba(0,0,0,0.02)', 
                       borderRadius: '16px', 
-                      padding: '45px 40px',
+                      padding: '40px 30px',
                       boxShadow: '0 10px 30px rgba(0,0,0,0.01)',
                       transition: 'all 0.3s ease'
                     }}
                   >
                     <div 
                       style={{ 
-                        width: '52px', 
-                        height: '52px', 
-                        borderRadius: '12px', 
-                        backgroundColor: `${prog.color}12`, 
-                        color: prog.color,
+                        height: '42px', 
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center',
-                        marginBottom: '30px'
+                        marginBottom: '25px',
+                        position: 'relative'
                       }}
                     >
-                      <Icon size={24} />
+                      <Image src={prog.logo} alt={prog.title} width={150} height={42} style={{ objectFit: 'contain', width: 'auto', height: '100%' }} />
                     </div>
                     <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '6px', fontFamily: 'var(--font-sans)' }}>
                       {prog.title}

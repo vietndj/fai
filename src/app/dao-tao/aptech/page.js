@@ -40,27 +40,33 @@ export default function AptechSubpage() {
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">APTECH</div>
         <div className="container beau-hero-inner" data-reveal>
-          <span className="beau-hero-brand" style={{ backgroundColor: '#1a6ed8', color: '#ffffff' }}>
+          <span className="beau-hero-brand" style={{ backgroundColor: '#e31a22', color: '#ffffff' }}>
             APTECH COMPUTER EDUCATION
           </span>
           <h1 className="beau-hero-title">
             Công Nghệ<br />Phần Mềm
           </h1>
+          <div className="beau-hero-logo" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
+            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="40" rx="6" fill="#e31a22"/>
+              <text x="14" y="26" fill="white" fontSize="18" fontWeight="bold" fontFamily="sans-serif" letterSpacing="1">Aptech</text>
+            </svg>
+          </div>
           <p className="beau-hero-desc">
             Chương trình Lập trình viên Quốc tế (ADSE) hàng đầu thế giới. Trang bị tư duy thuật toán vững chắc, kỹ năng lập trình thực chiến toàn diện từ thiết kế cơ sở dữ liệu, phát triển ứng dụng di động, web doanh nghiệp đến tích hợp trí tuệ nhân tạo (AI) và công nghệ điện toán đám mây.
           </p>
 
           <div className="beau-stats-bar">
             <div className="beau-stat-item">
-              <h3 style={{ color: '#1a6ed8' }}>28+ Năm</h3>
+              <h3 style={{ color: '#e31a22' }}>28+ Năm</h3>
               <p>Phát triển giáo trình lập trình viên quốc tế uy tín toàn cầu.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#1a6ed8' }}>ADSE</h3>
+              <h3 style={{ color: '#e31a22' }}>ADSE</h3>
               <p>Bằng cấp Advanced Diploma do tập đoàn Aptech Ấn Độ cấp, giá trị toàn cầu.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#1a6ed8' }}>40+</h3>
+              <h3 style={{ color: '#e31a22' }}>40+</h3>
               <p>Quốc gia công nhận chứng chỉ Aptech và cho phép liên thông đại học quốc tế.</p>
             </div>
           </div>
@@ -68,7 +74,7 @@ export default function AptechSubpage() {
           {/* Banner Image */}
           <div className="beau-hero-banner">
             <Image
-              src="/banner_aptech_sub.png"
+              src="/banner_aptech_sub_v2.png"
               alt="Tuyển sinh Aptech Computer Education"
               width={1200}
               height={400}
@@ -87,7 +93,7 @@ export default function AptechSubpage() {
           <div className="beau-split-grid">
             {/* Left label */}
             <div className="beau-split-left">
-              <div className="beau-sticky-label" style={{ color: '#1a6ed8', opacity: 0.15 }}>ADSE</div>
+              <div className="beau-sticky-label" style={{ color: '#e31a22', opacity: 0.15 }}>ADSE</div>
               <p className="beau-sticky-desc">
                 Giáo trình cập nhật liên tục các công nghệ mới nhất: Cloud Computing, Big Data, Machine Learning, Python và lập trình hướng đối tượng chuyên sâu.
               </p>
@@ -97,7 +103,7 @@ export default function AptechSubpage() {
             <div className="beau-split-right">
               {/* Semester 1 */}
               <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#1a6ed8' }}>Học Kỳ 01</span>
+                <span className="sem-num" style={{ color: '#e31a22' }}>Học Kỳ 01</span>
                 <h3 className="sem-title">Programming Basics & Database — Nền tảng lập trình</h3>
                 <p className="sem-desc">
                   Xây dựng tư duy thuật toán vững chắc, làm quen với ngôn ngữ C/C++ và kiến trúc cơ sở dữ liệu quan hệ SQL Server. Sinh viên học cách thiết kế cấu trúc dữ liệu và phát triển website cơ bản.
@@ -115,7 +121,7 @@ export default function AptechSubpage() {
 
               {/* Semester 2 */}
               <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#1a6ed8' }}>Học Kỳ 02</span>
+                <span className="sem-num" style={{ color: '#e31a22' }}>Học Kỳ 02</span>
                 <h3 className="sem-title">Enterprise App Development with Java — Lập trình Java chuyên sâu</h3>
                 <p className="sem-desc">
                   Chuyên sâu về lập trình hướng đối tượng (OOP) thông qua công nghệ Java. Sinh viên học phát triển các ứng dụng phần mềm quản lý doanh nghiệp quy mô lớn, an toàn bảo mật dữ liệu cao.
@@ -133,7 +139,7 @@ export default function AptechSubpage() {
 
               {/* Semester 3 */}
               <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#1a6ed8' }}>Học Kỳ 03</span>
+                <span className="sem-num" style={{ color: '#e31a22' }}>Học Kỳ 03</span>
                 <h3 className="sem-title">Fullstack Web & Mobile Development — Lập trình Web & Di động</h3>
                 <p className="sem-desc">
                   Làm chủ các Framework hiện đại nhất đang được doanh nghiệp săn đón. Lập trình Fullstack Web (MERN Stack) và thiết kế ứng dụng di động đa nền tảng cho Android và iOS.
@@ -151,7 +157,7 @@ export default function AptechSubpage() {
 
               {/* Semester 4 */}
               <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#1a6ed8' }}>Học Kỳ 04</span>
+                <span className="sem-num" style={{ color: '#e31a22' }}>Học Kỳ 04</span>
                 <h3 className="sem-title">Cloud Computing & AI/ML — Điện toán đám mây & Trí tuệ nhân tạo</h3>
                 <p className="sem-desc">
                   Tiến vào biên giới của cách mạng công nghiệp 4.0. Học viên học cách triển khai ứng dụng lên các nền tảng đám mây (AWS/Azure) và lập trình tích hợp các mô hình máy học, Trí tuệ nhân tạo (AI/ML).
@@ -221,27 +227,27 @@ export default function AptechSubpage() {
           <h2 className="beau-section-title">Vị Trí Việc Làm Hậu Tốt Nghiệp</h2>
 
           <div className="beau-careers-grid">
-            <div className="beau-career-card" style={{ borderLeftColor: '#1a6ed8' }} data-reveal data-reveal-delay="0.05">
+            <div className="beau-career-card" style={{ borderLeftColor: '#e31a22' }} data-reveal data-reveal-delay="0.05">
               <h3 className="career-title">Frontend Developer</h3>
               <p className="career-desc">Thiết kế và phát triển giao diện người dùng tương tác phức tạp cho các sản phẩm web sử dụng React/Next.js.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#1a6ed8' }} data-reveal data-reveal-delay="0.1">
+            <div className="beau-career-card" style={{ borderLeftColor: '#e31a22' }} data-reveal data-reveal-delay="0.1">
               <h3 className="career-title">Backend Developer</h3>
               <p className="career-desc">Xây dựng kiến trúc máy chủ, lập trình RESTful API, thiết kế cơ sở dữ liệu và quản trị logic nghiệp vụ phần mềm.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#1a6ed8' }} data-reveal data-reveal-delay="0.15">
+            <div className="beau-career-card" style={{ borderLeftColor: '#e31a22' }} data-reveal data-reveal-delay="0.15">
               <h3 className="career-title">Fullstack Developer</h3>
               <p className="career-desc">Quản lý toàn vẹn từ Frontend đến Backend, tạo ra các ứng dụng Web/App hoàn chỉnh một cách độc lập.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#1a6ed8' }} data-reveal data-reveal-delay="0.2">
+            <div className="beau-career-card" style={{ borderLeftColor: '#e31a22' }} data-reveal data-reveal-delay="0.2">
               <h3 className="career-title">Mobile App Developer</h3>
               <p className="career-desc">Lập trình phát triển ứng dụng chạy trên hệ điều hành Android và iOS sử dụng các công nghệ Native hoặc Hybrid.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#1a6ed8' }} data-reveal data-reveal-delay="0.25">
+            <div className="beau-career-card" style={{ borderLeftColor: '#e31a22' }} data-reveal data-reveal-delay="0.25">
               <h3 className="career-title">Cloud Engineer</h3>
               <p className="career-desc">Thiết kế và vận hành hạ tầng đám mây cho doanh nghiệp, đảm bảo tính sẵn sàng cao và an toàn bảo mật phần mềm.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#1a6ed8' }} data-reveal data-reveal-delay="0.3">
+            <div className="beau-career-card" style={{ borderLeftColor: '#e31a22' }} data-reveal data-reveal-delay="0.3">
               <h3 className="career-title">AI Integration Specialist</h3>
               <p className="career-desc">Lập trình tích hợp các mô hình trí tuệ nhân tạo, máy học vào sản phẩm phần mềm hiện có để tối ưu hóa quy trình.</p>
             </div>
@@ -256,17 +262,17 @@ export default function AptechSubpage() {
           <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Ưu Đãi Tuyển Sinh Đặc Quyền</h2>
           
           <div className="beau-incentives-grid">
-            <div className="beau-incentive-card" style={{ '--accent': '#1a6ed8' }} data-reveal data-reveal-delay="0.05">
+            <div className="beau-incentive-card" style={{ '--accent': '#e31a22' }} data-reveal data-reveal-delay="0.05">
               <span className="incentive-badge">HỌC BỔNG</span>
               <h3 className="incentive-value">Lên tới 50%</h3>
               <p className="incentive-desc">Học bổng Tài năng công nghệ hỗ trợ thế hệ lập trình viên xuất sắc phát triển bản thân.</p>
             </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#1a6ed8' }} data-reveal data-reveal-delay="0.1">
+            <div className="beau-incentive-card" style={{ '--accent': '#e31a22' }} data-reveal data-reveal-delay="0.1">
               <span className="incentive-badge">NHẬP HỌC SỚM</span>
               <h3 className="incentive-value">Tặng Laptop</h3>
               <p className="incentive-desc">Ưu đãi tặng ngay Laptop học tập trị giá 15.000.000đ cho học viên hoàn thành thủ tục nhập học sớm.</p>
             </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#1a6ed8' }} data-reveal data-reveal-delay="0.15">
+            <div className="beau-incentive-card" style={{ '--accent': '#e31a22' }} data-reveal data-reveal-delay="0.15">
               <span className="incentive-badge">TRẢ GÓP</span>
               <h3 className="incentive-value">0% Lãi Suất</h3>
               <p className="incentive-desc">Hỗ trợ chia nhỏ học phí đóng theo từng tháng qua thẻ tín dụng ngân hàng đối tác.</p>

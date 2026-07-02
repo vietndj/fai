@@ -13,9 +13,9 @@ const programs = [
     title: 'FPT Aptech',
     subTitle: 'Lập trình viên Quốc tế',
     desc: 'Chương trình đào tạo Công nghệ thông tin chất lượng cao chuyển giao trực tiếp từ Aptech Ấn Độ. Sinh viên được trang bị kiến thức phát triển phần mềm toàn diện, điện toán đám mây và trí tuệ nhân tạo thực chiến.',
-    image: '/fai_banner_aptech.png',
+    image: '/fai_banner_aptech_v2.png',
     link: '/dao-tao/aptech',
-    color: '#1a6ed8',
+    color: '#e31a22',
     isDark: true,
     bgStyle: {
       background: 'linear-gradient(135deg, #050c1a 0%, #0D2137 100%)',
@@ -34,9 +34,9 @@ const programs = [
     title: 'FPT Arena Multimedia',
     subTitle: 'Mỹ thuật Đa phương tiện',
     desc: 'Chương trình đào tạo Chuyên gia Mỹ thuật Đa phương tiện kéo dài 2 năm. Sinh viên được rèn luyện tư duy thẩm mỹ, thiết kế đồ họa thương hiệu, làm phim kỹ thuật số, hậu kỳ video và hoạt hình 3D chuyên nghiệp.',
-    image: '/fai_banner_arena.png',
+    image: '/fai_banner_arena_v2.png',
     link: '/dao-tao/arena',
-    color: '#e8741e',
+    color: '#ffb600',
     isDark: false,
     bgStyle: {
       backgroundColor: '#F8F5F0',
@@ -55,9 +55,9 @@ const programs = [
     title: 'FPT Skillking',
     subTitle: 'Digital Marketing chuyên sâu',
     desc: 'Chương trình đào tạo Chuyên gia Tiếp thị số chuẩn quốc tế đầu tiên tại Việt Nam. Sinh viên trực tiếp thực hành sáng tạo nội dung, chạy quảng cáo Meta/Google Ads ngân sách thật và tối ưu phễu chuyển đổi CRM.',
-    image: '/fai_banner_skillking.png',
+    image: '/fai_banner_skillking_v2.png',
     link: '/dao-tao/skillking',
-    color: '#16a34a',
+    color: '#09529c',
     isDark: true,
     bgStyle: {
       backgroundColor: '#070a10',
@@ -68,6 +68,48 @@ const programs = [
       'Học kỳ 2: Search Engine Optimization (SEO) & Web Audit chuyên sâu',
       'Học kỳ 3: Paid Advertising - Setup chiến dịch Google/Meta/Tiktok Ads',
       'Học kỳ 4: Digital Marketing Management - Quản trị & lập kế hoạch tổng thể'
+    ]
+  },
+  {
+    id: 'chip-design',
+    number: '04/',
+    title: 'FPT Jetking Chip Design',
+    subTitle: 'Thiết kế Vi mạch Bán dẫn',
+    desc: 'Chương trình đào tạo Thiết kế Vi mạch Bán dẫn tích hợp AI chuẩn quốc tế. Sinh viên được trang bị kiến thức chuyên sâu về SoC/ASIC/FPGA, làm chủ công cụ thiết kế EDA tiên tiến dưới sự hỗ trợ của các mô hình AI chuyên dụng.',
+    image: '/fai_banner_chip_design_v2.png',
+    link: '/dao-tao/chip-design',
+    color: '#f37021',
+    isDark: true,
+    bgStyle: {
+      backgroundColor: '#0c051a',
+      color: '#ffffff'
+    },
+    curriculums: [
+      'Học kỳ 1: Mạch điện tử và lập trình vi điều khiển (Programming Elements & Electronic Circuits)',
+      'Học kỳ 2: Kiến trúc và quy trình thiết kế vi mạch (Chip Architecture Framework)',
+      'Học kỳ 3: Ngôn ngữ mô tả phần cứng và công cụ thiết kế (HDL & EDA Tools)',
+      'Học kỳ 4: Thiết kế vi mạch chuyên sâu SoC/ASIC/FPGA'
+    ]
+  },
+  {
+    id: 'ai-agent',
+    number: '05/',
+    title: 'FPT Jetking AI Agent',
+    subTitle: 'Chuyên gia phát triển AI Agent',
+    desc: 'Chương trình đào tạo tiên phong về AI Agent và Kỹ nghệ AI tại Việt Nam. Sinh viên trực tiếp thực hành xây dựng các nhân sự AI tự hành, phát triển mô hình Machine Learning/Deep Learning và hệ thống Multi-Agent thực chiến.',
+    image: '/fai_banner_ai_agent_v2.png',
+    link: '/dao-tao/ai-agent',
+    color: '#0066b3',
+    isDark: true,
+    bgStyle: {
+      backgroundColor: '#050716',
+      color: '#ffffff'
+    },
+    curriculums: [
+      'Học kỳ 1: Nền tảng lập trình Python & Phân tích dữ liệu AI (Foundations & Python Elements)',
+      'Học kỳ 2: Trí tuệ nhân tạo chuyên sâu (Machine Learning & Deep Learning Core)',
+      'Học kỳ 3: AI tạo sinh & Xử lý ngôn ngữ tự nhiên (NLP, Computer Vision & Generative AI)',
+      'Học kỳ 4: Hệ thống Multi-Agent & Vận hành thực tế (Multi-Agent Systems & Deployment)'
     ]
   }
 ];

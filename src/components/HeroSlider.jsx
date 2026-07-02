@@ -7,31 +7,49 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    image: '/fai_banner_aptech.png',
+    image: '/fai_banner_aptech_v2.png',
     eyebrow: 'Hệ thống Đào tạo Lập trình viên Quốc tế',
-    title: 'APTECH COMPUTER EDUCATION',
+    title: 'FPT APTECH EDUCATION',
     desc: 'Chương trình chuẩn quốc tế, đào tạo lập trình viên thực chiến đáp ứng nhu cầu tuyển dụng toàn cầu.',
-    cta1: { text: 'Tìm hiểu chương trình APTECH', href: '/dao-tao#aptech' },
+    cta1: { text: 'Tìm hiểu chương trình FPT APTECH', href: '/dao-tao#aptech' },
     slideNum: '01',
-    color: '#1a6ed8',
+    color: '#e31a22',
   },
   {
-    image: '/fai_banner_arena.png',
+    image: '/fai_banner_arena_v2.png',
     eyebrow: 'Hệ thống Đào tạo Mỹ thuật Đa phương tiện',
     title: 'FPT ARENA MULTIMEDIA',
     desc: 'Chạm ngõ sáng tạo cùng cộng đồng mỹ thuật đa phương tiện lớn nhất Việt Nam.',
-    cta1: { text: 'Tìm hiểu chương trình ARENA', href: '/dao-tao#arena' },
+    cta1: { text: 'Tìm hiểu chương trình FPT ARENA', href: '/dao-tao#arena' },
     slideNum: '02',
-    color: '#e8741e',
+    color: '#ffb600',
   },
   {
-    image: '/fai_banner_skillking.png',
+    image: '/fai_banner_skillking_v2.png',
     eyebrow: 'Hệ thống Đào tạo Digital Marketing',
     title: 'FPT SKILLKING',
     desc: 'Chương trình đào tạo Full-Stack Digital Marketing thực chiến hàng đầu kết hợp công nghệ hiện đại.',
-    cta1: { text: 'Tìm hiểu chương trình SKILLKING', href: '/dao-tao#skillking' },
+    cta1: { text: 'Tìm hiểu chương trình FPT SKILLKING', href: '/dao-tao#skillking' },
     slideNum: '03',
-    color: '#16a34a',
+    color: '#09529c',
+  },
+  {
+    image: '/fai_banner_chip_design_v2.png',
+    eyebrow: 'Hệ thống Đào tạo Thiết kế Vi mạch Bán dẫn',
+    title: 'FPT JETKING CHIP DESIGN',
+    desc: 'Tiên phong đào tạo thiết kế vi mạch bán dẫn chuẩn quốc tế tại Việt Nam, trang bị năng lực thực chiến cho kỹ sư tương lai trong ngành bán dẫn toàn cầu',
+    cta1: { text: 'Tìm hiểu chương trình FPT JETKING CHIP DESIGN', href: '/dao-tao/chip-design' },
+    slideNum: '04',
+    color: '#f37021',
+  },
+  {
+    image: '/fai_banner_ai_agent_v2.png',
+    eyebrow: 'Hệ thống Đào tạo AI Agent tiên phong',
+    title: 'FPT JETKING AI AGENT',
+    desc: 'Kiến tạo thế hệ lập trình viên AI Agent làm chủ công nghệ AI, sẵn sàng tạo ra giá trị cho doanh nghiệp trong kỷ nguyên số.',
+    cta1: { text: 'Tìm hiểu chương trình FPT JETKING AI AGENT', href: '/dao-tao/ai-agent' },
+    slideNum: '05',
+    color: '#0066b3',
   },
 ];
 
@@ -76,7 +94,6 @@ export default function HeroSlider() {
               <div className="slide-overlay-subtle" />
             </div>
 
-            {/* Subtle, premium layout: text content overlay shifted slightly or transparent to highlight the visual banner */}
             <div className="slide-content container">
               <div className="slide-text-box-premium">
                 <span className="slide-eyebrow-premium" style={{ borderLeftColor: slide.color }}>
@@ -94,7 +111,6 @@ export default function HeroSlider() {
               </div>
             </div>
 
-            {/* Slide counter editorial */}
             <div className="slide-counter-badge">
               <span className="slide-current-num" style={{ color: slide.color }}>{slide.slideNum}</span>
               <span className="slide-sep">/</span>

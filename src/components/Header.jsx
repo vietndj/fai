@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Search, Zap, Palette, Megaphone, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
+import { Search, Zap, Palette, Megaphone, ChevronDown, Cpu } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,11 +27,8 @@ export default function Header() {
       <div className="main-nav-container">
         <div className="container main-nav-content">
           {/* Logo */}
-          <Link href="/" className="logo" onClick={closeMenu}>
-            <span className="logo-fpt">FPT</span>
-            <span className="logo-fai">FAI</span>
-            <div className="logo-divider"></div>
-            <span className="logo-sub">ACADEMY<br/>INTERNATIONAL</span>
+          <Link href="/" className="logo" onClick={closeMenu} style={{ display: 'flex', alignItems: 'center', height: '48px', padding: '4px 0' }}>
+            <Image src="/logo_fpt_fai.png" alt="FPT FAI Logo" width={200} height={40} style={{ objectFit: 'contain', height: '100%', width: 'auto' }} />
           </Link>
 
           {/* Desktop Navigation Menu */}
@@ -66,7 +64,7 @@ export default function Header() {
                       <p>Hệ thống chương trình chuẩn quốc tế chuyển giao trực tiếp từ đối tác nước ngoài hàng đầu.</p>
                     </div>
                     <div className="megamenu-links-col">
-                      <div className="megamenu-links-grid">
+                      <div className="megamenu-links-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
                         <div className="program-cat brand-aptech">
                           <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Zap size={18} style={{ color: '#1a6ed8' }} />
@@ -93,6 +91,14 @@ export default function Header() {
                           <Link href="/dao-tao/skillking" className="megamenu-link">Digital Marketing chuyên sâu</Link>
                           <Link href="/dao-tao/skillking" className="megamenu-link">Social Media & SEO</Link>
                           <Link href="/dao-tao/skillking" className="megamenu-link">Quản trị chiến dịch số</Link>
+                        </div>
+                        <div className="program-cat brand-jetking">
+                          <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <Cpu size={18} style={{ color: '#8b5cf6' }} />
+                            JETKING — Công Nghệ Mới
+                          </h4>
+                          <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế Vi mạch Bán dẫn</Link>
+                          <Link href="/dao-tao/ai-agent" className="megamenu-link">Chuyên gia AI Agent</Link>
                         </div>
                       </div>
                     </div>
@@ -209,6 +215,10 @@ export default function Header() {
                 <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Digital Marketing chuyên sâu</Link></li>
                 <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Social Media & SEO</Link></li>
                 <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Quản trị chiến dịch số</Link></li>
+
+                <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: '#8b5cf6', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '12px' }}>JETKING — Công Nghệ Mới</li>
+                <li><Link href="/dao-tao/chip-design" onClick={closeMenu}>Thiết kế Vi mạch Bán dẫn</Link></li>
+                <li><Link href="/dao-tao/ai-agent" onClick={closeMenu}>Chuyên gia AI Agent</Link></li>
               </ul>
             </li>
 
