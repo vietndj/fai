@@ -13,22 +13,49 @@ const historyTimeline = [
   {
     year: '1999',
     title: 'Thành lập FPT Aptech',
-    desc: 'Hợp tác chuyển giao chương trình đào tạo Lập trình viên Quốc tế tiên tiến từ Tập đoàn Aptech Ấn Độ, tiên phong đào tạo lập trình thực chiến.'
+    desc: 'Là đơn vị sáng lập Aptech Việt Nam từ năm 1999, chương trình đào tạo Lập trình viên quốc tế FPT Aptech sở hữu hơn 20 năm kinh nghiệm đào tạo theo chuẩn quốc tế, trở thành lựa chọn uy tín của người học và doanh nghiệp. Chương trình đào tạo tại FPT Aptech kết hợp giáo trình lập trình viên quốc tế ACCP Aptech với đào tạo thực tiễn tại doanh nghiệp FPT, giúp sinh viên vững chuyên môn, làm đúng nghề và hướng tới bằng đại học CNTT. FPT Aptech hiện là thành viên của mạng lưới hơn 3.200 trung tâm APTECH Worldwide tại 52 quốc gia.'
   },
   {
     year: '2004',
-    title: 'Ra đời FPT Arena Multimedia',
-    desc: 'Khai mở phân hệ đào tạo Mỹ thuật đa phương tiện đầu tiên tại Việt Nam, định hình tương lai thiết kế đồ họa & hoạt hình số.'
+    title: 'TIÊN PHONG KHÁI NIỆM VỀ MULTIMEDIA TẠI VIỆT NAM',
+    desc: 'FPT Arena Multimedia là đơn vị tiên phong đưa và định hình khái niệm Multimedia – Mỹ thuật đa phương tiện tại Việt Nam. Trải qua hơn 20 năm phát triển, FPT Arena kế thừa văn hóa giáo dục của Tổ chức Giáo dục FPT và chuẩn đào tạo quốc tế của Tập đoàn Aptech (Ấn Độ), kiên định đào tạo gắn với thực tiễn, xây dựng đội ngũ giảng viên giàu kinh nghiệm và mạng lưới hợp tác quốc tế, góp phần hình thành thế hệ nhân lực sáng tạo cho ngành công nghiệp nội dung số Việt Nam.'
+  },
+  {
+    year: '2011',
+    title: 'CHUẨN HÓA ĐÀO TẠO QUẢN TRỊ VÀ AN NINH MẠNG',
+    desc: 'Chương trình đào tạo Quản trị và An ninh mạng FPT Jetking được thành lập từ sự hợp tác giữa FAI và tập đoàn Jetking (Ấn Độ) – một trong những học viện đào tạo An ninh mạng và Cloud hàng đầu với hơn 75 năm kinh nghiệm và 1 triệu học viên toàn cầu, mang các chương trình đào tạo công nghệ thông tin theo chuẩn quốc tế về Việt Nam.'
   },
   {
     year: '2018',
-    title: 'Hợp tác đào tạo FPT Skillking',
-    desc: 'Bắt tay đối tác Skillking Ấn Độ xây dựng giáo trình đào tạo chuyên sâu về Tiếp thị số (Digital Marketing) thực chiến đầu tiên.'
+    title: 'BỆ PHÓNG DIGITAL MARKETING SỐ TOÀN DIỆN',
+    desc: 'Chương trình đào tạo Digital Marketing FPT Skillking chính thức ra mắt vào năm 2018, là hệ thống đào tạo chuyên sâu về Digital Marketing đầu tiên tại Việt Nam, cung cấp chương trình Full-Stack Digital Marketing theo chuẩn quốc tế, góp phần đào tạo nguồn nhân lực chất lượng cao cho doanh nghiệp trong và ngoài nước.'
+  },
+  {
+    year: '2019',
+    title: 'KHAI PHÁ KỶ NGUYÊN INTERNET OF THINGS',
+    desc: 'FPT Coking chính thức ra mắt, là kết quả hợp tác giữa FAI và Tập đoàn Jetking (Ấn Độ), triển khai đào tạo chuyên sâu Internet of Things (IoT) theo chuẩn quốc tế. FPT Coking trở thành học viện IoT đầu tiên tại Việt Nam cấp bằng quốc tế, góp phần phát triển nguồn nhân lực chất lượng cao cho kỷ nguyên công nghiệp 4.0.'
+  },
+  {
+    year: '2022',
+    title: 'ƯƠM MẦM NĂNG LỰC TƯƠNG LAI',
+    desc: 'Thành lập FPT AfterSchool – hệ thống đào tạo kỹ năng học đường dành cho học sinh từ 10 đến 18 tuổi, tập trung khai phá tư duy và phát triển kỹ năng trên nền tảng công nghệ, hướng tới thế hệ công dân tương lai. Ngay từ những ngày đầu, FAS nhất quán theo đuổi triết lý giáo dục của FPT Education: “Giáo dục đào tạo là tổ chức và quản trị việc tự học của người học” , lấy người học làm trung tâm của quá trình phát triển.'
+  },
+  {
+    year: '2025',
+    tag: 'Đào tạo Vi mạch',
+    title: 'BƯỚC CHÂN VÀO KỶ NGUYÊN BÁN DẪN',
+    desc: 'FAI tiếp tục khẳng định vai trò tiên phong khi mở rộng đào tạo Thiết kế vi mạch bán dẫn FPT Jetking, một trong những ngành công nghiệp lõi của kỷ nguyên công nghệ. Sự ra mắt chương trình đào tạo này không chỉ mở ra hướng đi mới mà còn đánh dấu bước tiến quan trọng trong chiến lược phát triển nhân lực bán dẫn tại Việt Nam.'
+  },
+  {
+    year: '2025',
+    tag: 'Tháng 02/2025',
+    title: 'DẪN LỐI CÔNG NGHỆ MŨI NHỌN & TỰ ĐỘNG HÓA',
+    desc: 'Tháng 02/2025, Tập đoàn FPT hợp tác cùng Cranes Varsity ra mắt hai chương trình đào tạo theo chuẩn quốc tế đầu tiên tại Việt Nam: Phát triển phần mềm ô tô thông minh FPT Cranes và Khoa học Dữ liệu FPT Cranes, góp phần đào tạo nguồn nhân lực chất lượng cao cho ngành ô tô thông minh và dữ liệu.\n\nSong song đó, chương trình AI Agent – FPT Jetking chính thức triển khai, kết hợp năng lực công nghệ của Tập đoàn FPT và kinh nghiệm đào tạo quốc tế của Tập đoàn Jetking (Ấn Độ), hướng tới đào tạo nhân lực làm chủ Trí tuệ Nhân tạo và tự động hóa trong kỷ nguyên số.'
   },
   {
     year: '2026',
-    title: '27 năm vững bước kiến tạo',
-    desc: 'Khẳng định vị thế Viện Đào tạo Quốc tế FAI toàn quốc, trở thành cầu nối vững chắc cung cấp nhân sự cho các tập đoàn toàn cầu.'
+    title: 'BÁM SÁT CHIẾN LƯỢC TẬP ĐOÀN, DẪN LỐI ĐÀO TẠO THỰC CHIẾN',
+    desc: 'Bám sát chiến lược công nghệ của Tập đoàn FPT với AI là trung tâm, và 5 trụ cột Trí tuệ nhân tạo – Bán dẫn – Xe thông minh – Chuyển đổi số – Chuyển đổi xanh, FAI cho ra mắt 3 chương trình đào tạo trọng điểm: Phát triển phần mềm ứng dụng FPT Cranes, Công nghệ tài chính FPT cranes & Thiết kế và vận hành hệ thống Drone FPT Cranes góp phần đào tạo nguồn nhân lực công nghệ chất lượng cao cho các lĩnh vực mũi nhọn của tập đoàn.'
   }
 ];
 
@@ -122,6 +149,7 @@ export default function VeFai() {
   const [showParticles, setShowParticles] = useState(false);
 
   const [statsStarted, setStatsStarted] = useState(false);
+  const [activeTimelineIdx, setActiveTimelineIdx] = useState(0);
   const statsRef = useRef(null);
 
   const fullText1 = "Viện Đào tạo Quốc tế FPT";
@@ -409,62 +437,259 @@ export default function VeFai() {
           </div>
         </section>
 
-        {/* SECTION 4: History Timeline - Dark Gray/Black Background - Proportional Height (75vh) */}
+        {/* SECTION 4: VinUni-Style Interactive Timeline */}
         <section 
           className="about-history-section" 
           style={{ 
-            padding: '120px 0', 
+            padding: '100px 0 120px 0', 
             backgroundColor: '#070a10', 
             color: '#ffffff',
-            minHeight: '75vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
+            position: 'relative',
             overflow: 'hidden'
           }}
         >
-          <div className="container">
-            <div className="sec-history__header" style={{ marginBottom: '50px' }}>
-              <span className="section-eyebrow" style={{ color: 'rgba(255,255,255,0.4)', fontWeight: 800 }}>HÀNH TRÌNH PHÁT TRIỂN</span>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, marginTop: '10px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Chặng đường vững bước" /></h2>
+          {/* Subtle dot overlay */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: 'radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundSize: '24px 24px',
+            pointerEvents: 'none',
+            zIndex: 0
+          }} />
+
+          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+            {/* Header */}
+            <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 60px auto' }}>
+              <span className="section-eyebrow" style={{ color: '#f37021', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+                HÀNH TRÌNH PHÁT TRIỂN
+              </span>
+              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+                <ScrollTypewriter text="NHỮNG CỘT MỐC LỊCH SỬ FAI" />
+              </h2>
+              <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.02rem', lineHeight: '1.75', marginTop: '15px' }}>
+                Hơn 27 năm kiên định tiên phong đặt nền móng và định hình đào tạo công nghệ, mỹ thuật đa phương tiện &amp; kỹ năng thế hệ mới tại Việt Nam.
+              </p>
             </div>
 
+            {/* VinUni Horizontal Timeline Bar */}
+            <div className="vinuni-timeline-axis-wrap" style={{ position: 'relative', margin: '50px 0 70px 0', padding: '20px 0' }}>
+              {/* Horizontal Axis Line */}
+              <div 
+                style={{
+                  position: 'absolute',
+                  top: '40%',
+                  left: '40px',
+                  right: '40px',
+                  height: '2px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.12)',
+                  transform: 'translateY(-50%)',
+                  zIndex: 0
+                }} 
+              />
+
+              {/* Timeline Nodes Container */}
+              <div 
+                className="vinuni-timeline-nodes-scroll"
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'flex-start',
+                  position: 'relative',
+                  zIndex: 1,
+                  overflowX: 'auto',
+                  padding: '10px 20px',
+                  gap: '24px',
+                  scrollbarWidth: 'none'
+                }}
+              >
+                {historyTimeline.map((item, idx) => {
+                  const isActive = idx === activeTimelineIdx;
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveTimelineIdx(idx)}
+                      className={`vinuni-node-btn ${isActive ? 'active' : ''}`}
+                      style={{
+                        background: 'none',
+                        border: 'none',
+                        padding: 0,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        gap: '14px',
+                        flexShrink: 0,
+                        outline: 'none',
+                        transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                      }}
+                    >
+                      {/* Diamond Node Box */}
+                      <div 
+                        style={{
+                          width: isActive ? '58px' : '44px',
+                          height: isActive ? '58px' : '44px',
+                          transform: 'rotate(45deg)',
+                          backgroundColor: isActive ? '#f37021' : '#0d1d30',
+                          border: isActive ? '3px solid #ffffff' : '2px solid rgba(255, 255, 255, 0.25)',
+                          boxShadow: isActive ? '0 0 24px rgba(243, 112, 33, 0.65)' : '0 2px 8px rgba(0,0,0,0.2)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                        }}
+                      >
+                        {/* Text inside Diamond (counter rotated) */}
+                        <span 
+                          style={{
+                            transform: 'rotate(-45deg)',
+                            fontSize: isActive ? '0.92rem' : '0.82rem',
+                            fontWeight: isActive ? 900 : 700,
+                            color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.7)',
+                            whiteSpace: 'nowrap'
+                          }}
+                        >
+                          {item.year}
+                        </span>
+                      </div>
+
+                      {/* Tag below if exists */}
+                      {item.tag && (
+                        <span style={{
+                          fontSize: '0.7rem',
+                          fontWeight: 700,
+                          color: isActive ? '#f37021' : 'rgba(255, 255, 255, 0.45)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.04em',
+                          whiteSpace: 'nowrap'
+                        }}>
+                          {item.tag}
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Content Card Box Below */}
             <div 
-              className="horizontal-timeline-wrapper" 
-              style={{ 
-                display: 'flex', 
-                gap: '16px', 
-                overflowX: 'auto', 
-                paddingBottom: '30px', 
-                scrollSnapType: 'x mandatory'
+              className="vinuni-content-card"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                borderRadius: '24px',
+                padding: '50px 45px',
+                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.3)',
+                position: 'relative',
+                transition: 'all 0.35s ease',
+                minHeight: '280px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                backdropFilter: 'blur(10px)'
               }}
             >
-              {historyTimeline.map((item, idx) => (
-                <div 
-                  key={idx} 
-                  className="history-timeline-card" 
-                  style={{ 
-                    flex: '0 0 340px', 
-                    scrollSnapAlign: 'start',
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(255, 255, 255, 0.06)',
-                    borderRadius: '16px',
-                    padding: '40px 35px',
-                    position: 'relative',
-                    transition: 'all 0.3s ease'
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px', flexWrap: 'wrap', gap: '12px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                    <span style={{ 
+                      fontSize: '2rem', 
+                      fontWeight: 900, 
+                      color: '#f37021', 
+                      fontFamily: 'var(--font-sans)',
+                      letterSpacing: '-0.02em'
+                    }}>
+                      Cột Mốc {historyTimeline[activeTimelineIdx].year}
+                    </span>
+                    {historyTimeline[activeTimelineIdx].tag && (
+                      <span style={{
+                        backgroundColor: 'rgba(243, 112, 33, 0.15)',
+                        color: '#f37021',
+                        border: '1px solid rgba(243, 112, 33, 0.3)',
+                        fontSize: '0.8rem',
+                        fontWeight: 800,
+                        padding: '4px 14px',
+                        borderRadius: '20px'
+                      }}>
+                        {historyTimeline[activeTimelineIdx].tag}
+                      </span>
+                    )}
+                  </div>
+
+                  <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'rgba(255, 255, 255, 0.45)' }}>
+                    Cột mốc {activeTimelineIdx + 1} / {historyTimeline.length}
+                  </span>
+                </div>
+
+                <h3 style={{ 
+                  fontSize: 'clamp(1.3rem, 2.5vw, 1.75rem)', 
+                  fontWeight: 800, 
+                  color: '#ffffff', 
+                  marginBottom: '20px', 
+                  lineHeight: '1.4',
+                  fontFamily: 'var(--font-sans)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.02em'
+                }}>
+                  {historyTimeline[activeTimelineIdx].title}
+                </h3>
+
+                <p style={{ 
+                  fontSize: '1.02rem', 
+                  color: 'rgba(255, 255, 255, 0.82)', 
+                  lineHeight: '1.85', 
+                  margin: 0,
+                  whiteSpace: 'pre-line'
+                }}>
+                  {historyTimeline[activeTimelineIdx].desc}
+                </p>
+              </div>
+
+              {/* Navigation Buttons */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '40px', paddingTop: '24px', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                <button
+                  onClick={() => setActiveTimelineIdx(prev => Math.max(0, prev - 1))}
+                  disabled={activeTimelineIdx === 0}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    background: 'none',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    borderRadius: '12px',
+                    padding: '12px 24px',
+                    fontWeight: 700,
+                    fontSize: '0.9rem',
+                    color: activeTimelineIdx === 0 ? 'rgba(255, 255, 255, 0.25)' : '#ffffff',
+                    cursor: activeTimelineIdx === 0 ? 'not-allowed' : 'pointer',
+                    transition: 'all 0.2s ease'
                   }}
                 >
-                  <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--primary)', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '15px', marginBottom: '20px', fontFamily: 'var(--font-sans)' }}>
-                    {item.year}
-                  </div>
-                  <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#ffffff', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                    <ScrollTypewriter text={item.title} />
-                  </h4>
-                  <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.75', margin: 0 }}>
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
+                  ← Cột mốc trước
+                </button>
+
+                <button
+                  onClick={() => setActiveTimelineIdx(prev => Math.min(historyTimeline.length - 1, prev + 1))}
+                  disabled={activeTimelineIdx === historyTimeline.length - 1}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    backgroundColor: activeTimelineIdx === historyTimeline.length - 1 ? 'rgba(255, 255, 255, 0.1)' : '#f37021',
+                    color: '#ffffff',
+                    border: 'none',
+                    borderRadius: '12px',
+                    padding: '12px 24px',
+                    fontWeight: 700,
+                    fontSize: '0.9rem',
+                    cursor: activeTimelineIdx === historyTimeline.length - 1 ? 'not-allowed' : 'pointer',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  Cột mốc tiếp theo →
+                </button>
+              </div>
             </div>
           </div>
         </section>
