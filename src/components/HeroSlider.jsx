@@ -55,7 +55,7 @@ const slides = [
     desc: 'Tiên phong đào tạo thiết kế vi mạch bán dẫn chuẩn quốc tế tại Việt Nam, trang bị năng lực thực chiến cho kỹ sư tương lai trong ngành bán dẫn toàn cầu',
     cta1: { text: 'Tìm hiểu chương trình FPT JETKING - CHIP DESIGN', href: '/dao-tao/chip-design' },
     slideNum: '05',
-    color: '#f37021',
+    color: '#ed232a',
   },
   {
     image: '/fai_banner_ai_agent_v2.png',
@@ -65,7 +65,7 @@ const slides = [
     desc: 'Kiến tạo thế hệ lập trình viên AI Agent làm chủ công nghệ AI, sẵn sàng tạo ra giá trị cho doanh nghiệp trong kỷ nguyên số.',
     cta1: { text: 'Tìm hiểu chương trình FPT JETKING - AI AGENT', href: '/dao-tao/ai-agent' },
     slideNum: '06',
-    color: '#0066b3',
+    color: '#ed232a',
   },
 ];
 

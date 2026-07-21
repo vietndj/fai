@@ -86,14 +86,14 @@ const programsList = [
   {
     title: 'FPT JETKING - CHIP DESIGN',
     subTitle: 'Thiết kế Vi mạch Bán dẫn',
-    color: '#f37021',
+    color: '#ed232a',
     logo: '/logo_jetking.png',
     items: ['Programming & Circuits', 'Chip Architecture', 'HDL & EDA Tools', 'SoC/ASIC/FPGA Design', 'AI Driven IC Design', 'IC Verification']
   },
   {
     title: 'FPT JETKING - AI AGENT',
     subTitle: 'Chuyên gia phát triển AI Agent',
-    color: '#0066b3',
+    color: '#ed232a',
     logo: '/logo_jetking.png',
     items: ['Python & Data Science', 'Machine & Deep Learning', 'NLP & Computer Vision', 'Generative AI & LLMs', 'Multi-Agent Systems', 'MLOps & Deployment']
   }

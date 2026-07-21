@@ -79,7 +79,7 @@ const programs = [
     image: '/fai_banner_chip_design_v2.png',
     stat: 'Semicon',
     statLabel: 'công nghệ bán dẫn toàn cầu',
-    color: '#f37021',
+    color: '#ed232a',
     href: '/dao-tao/chip-design',
   },
   {
@@ -96,7 +96,7 @@ const programs = [
     image: '/fai_banner_ai_agent_v2.png',
     stat: 'AI Agent',
     statLabel: '97 triệu việc làm mới',
-    color: '#0066b3',
+    color: '#ed232a',
     href: '/dao-tao/ai-agent',
   }
 ];
