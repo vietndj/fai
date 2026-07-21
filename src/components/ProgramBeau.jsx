@@ -54,10 +54,10 @@ const programs = [
     titleLine1: 'Digital Marketing',
     titleLine2: 'Fullstack',
     subtitle: 'DIGITAL MARKETING FULLSTACK',
-    desc: 'FPT Skillking tự hào là Hệ thống đào tạo chuyên sâu ngành Digital Marketing đầu tiên tại Việt Nam từ 2018, cung cấp kiến thức chuyên ngành trọng tâm từ căn bản đến nâng cao, tích hợp AI trong giảng dạy và thực hành giúp sinh viên nâng cao kỹ năng trong thời đại công nghệ 5.0',
+    desc: 'FPT Skillking là hệ thống đào tạo chuyên sâu về Digital Marketing được thành lập năm 2018 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn đào tạo công nghệ Jetking (Ấn Độ), cung cấp chương trình học theo định hướng thực tiễn, trang bị cho học viên kiến thức từ nền tảng đến chuyên sâu trong lĩnh vực tiếp thị số.\n\nChương trình đào tạo tại FPT Skillking tích hợp AI vào quá trình giảng dạy và thực hành, giúp học viên nâng cao năng lực ứng dụng công nghệ, phát triển tư duy chiến lược và sẵn sàng đáp ứng yêu cầu của doanh nghiệp trong kỷ nguyên số.',
     tags: [
-      'Fullstack Digital Marketing 18 tháng',
-      'Bộ Khoá học ngắn hạn 100h thực chiến',
+      'Fullstack Digital Marketing (18 tháng)',
+      'Bộ khóa học Digital Marketing thực chiến (100 giờ)',
     ],
     image: '/fai_banner_skillking_v2.png',
     stat: '2018',
