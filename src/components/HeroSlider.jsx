@@ -52,7 +52,7 @@ const slides = [
     logo: '/logo_jetking.png',
     eyebrow: 'Hệ thống Đào tạo Thiết kế Vi mạch Bán dẫn',
     title: 'FPT JETKING - CHIP DESIGN',
-    desc: 'Tiên phong đào tạo thiết kế vi mạch bán dẫn chuẩn quốc tế tại Việt Nam, trang bị năng lực thực chiến cho kỹ sư tương lai trong ngành bán dẫn toàn cầu',
+    desc: 'Tiên phong đào tạo thiết kế vi mạch bán dẫn chuẩn quốc tế tại Việt Nam',
     cta1: { text: 'Tìm hiểu chương trình FPT JETKING - CHIP DESIGN', href: '/dao-tao/chip-design' },
     slideNum: '05',
     color: '#ed232a',
