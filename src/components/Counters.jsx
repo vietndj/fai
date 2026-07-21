@@ -6,7 +6,7 @@ import { Building2, Globe } from 'lucide-react';
 /* ── 4 primary stats (hero display) ──────────────────── */
 const primaryStats = [
   { number: 27,  suffix: '+',  label: 'Năm kinh nghiệm đào tạo',       sub: 'Phát triển nguồn nhân lực chất lượng cao' },
-  { number: 60,  suffix: 'k+', label: 'Sinh viên lựa chọn',       sub: 'Học sinh, sinh viên và người đi làm tin dùng' },
+  { number: 60,  suffix: 'k+', label: 'Sinh viên lựa chọn',       sub: 'Học sinh, sinh viên và người đi làm tin tưởng theo học' },
   { number: 1000,  suffix: '+',  label: 'Đối tác tuyển dụng',    sub: 'Mạng lưới kết nối việc làm rộng khắp' },
   { number: 97, suffix: '% +',  label: 'Sinh viên có việc làm',    sub: 'trước khi tốt nghiệp' },
 ];

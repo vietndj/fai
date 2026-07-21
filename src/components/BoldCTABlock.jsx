@@ -8,8 +8,8 @@ import { Trophy, Globe, Briefcase, Handshake, ArrowRight } from 'lucide-react';
 const highlights = [
   { icon: Trophy, text: 'Top 1 đào tạo CNTT\ntư nhân Việt Nam' },
   { icon: Globe, text: 'Chứng chỉ được công nhận\ntại 40+ quốc gia' },
-  { icon: Briefcase, text: '95% sinh viên có việc\ntrong 6 tháng đầu' },
-  { icon: Handshake, text: '200+ doanh nghiệp\nký kết tuyển dụng' },
+  { icon: Briefcase, text: '97% sinh viên có việc làm\ntrước khi tốt nghiệp' },
+  { icon: Handshake, text: '1000+ doanh nghiệp\nký kết tuyển dụng' },
 ];
 
 export default function BoldCTABlock() {
@@ -45,13 +45,13 @@ export default function BoldCTABlock() {
         >
           <span className="bold-cta-eyebrow">Tại sao chọn FAI?</span>
           <h2 className="bold-cta-headline">
-            18 Năm Kiến Tạo<br />
+            27+ Năm Kiến Tạo<br />
             Chuyên Gia Tương Lai
           </h2>
           <p className="bold-cta-desc">
             Không chỉ là trường học — FAI là bệ phóng cho sự nghiệp quốc tế.
             Từ sinh viên năm nhất, bạn đã được thực chiến với dự án thật,
-            mentor là chuyên gia ngành và mạng lưới 200+ doanh nghiệp tuyển dụng.
+            mentor là chuyên gia ngành và mạng lưới 1000+ doanh nghiệp tuyển dụng.
           </p>
           <div className="bold-cta-actions">
             <Link href="/tuyen-sinh" className="bold-cta-btn bold-cta-btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>

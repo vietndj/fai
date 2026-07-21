@@ -54,15 +54,19 @@ export default function Footer() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                       <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      Số 8 Tôn Thất Thuyết, Nam Từ Liêm
+                      13 Phan Tây Nhạc, Phường Xuân Phương
                     </span>
                     <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                       <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      94 Lương Yên, Hai Bà Trưng
+                      Số 8 Tôn Thất Thuyết, Phường Cầu Giấy
                     </span>
                     <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                       <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      264 Đội Cấn, Ba Đình
+                      94 Lương Yên, Phường Hai Bà Trưng
+                    </span>
+                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
+                      264 Đội Cấn, Phường Ba Đình
                     </span>
                   </div>
                 </div>
@@ -73,34 +77,33 @@ export default function Footer() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                       <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      590 Cách Mạng Tháng Tám, Quận 3
+                      21 Bis Hậu Giang, Phường Tân Sơn Nhất
                     </span>
                     <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                       <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      302 Nguyễn Văn Đậu, Bình Thạnh
-                    </span>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      391A Nam Kỳ Khởi Nghĩa, Quận 3
-                    </span>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      KĐT Vạn Phúc, Thủ Đức
+                      84A Nguyên Hồng, P. Hạnh Thông, TP HCM
                     </span>
                   </div>
                 </div>
 
-                {/* Đà Nẵng & Cần Thơ */}
+                {/* Đà Nẵng */}
                 <div className="campus-city-block" style={{ marginTop: '5px' }}>
-                  <h5 style={{ fontSize: '0.88rem', fontWeight: '800', color: '#ffffff', margin: '0 0 6px 0', textTransform: 'uppercase', opacity: 0.9, letterSpacing: '0.05em' }}>Đà Nẵng &amp; Cần Thơ</h5>
+                  <h5 style={{ fontSize: '0.88rem', fontWeight: '800', color: '#ffffff', margin: '0 0 6px 0', textTransform: 'uppercase', opacity: 0.9, letterSpacing: '0.05em' }}>Đà Nẵng</h5>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                       <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      130 Đống Đa, Hải Châu, Đà Nẵng
+                      130 Đống Đa, Phường Hải Châu
                     </span>
+                  </div>
+                </div>
+
+                {/* Cần Thơ */}
+                <div className="campus-city-block" style={{ marginTop: '5px' }}>
+                  <h5 style={{ fontSize: '0.88rem', fontWeight: '800', color: '#ffffff', margin: '0 0 6px 0', textTransform: 'uppercase', opacity: 0.9, letterSpacing: '0.05em' }}>Cần Thơ</h5>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                       <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      55 Cách Mạng Tháng 8, Bình Thủy, Cần Thơ
+                      55 Cách Mạng Tháng Tám, Phường Cái Khế
                     </span>
                   </div>
                 </div>

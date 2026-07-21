@@ -57,14 +57,14 @@ const programsList = [
     items: ['Social Media Strategy', 'SEO & SEM Marketing', 'Paid Media (Ads)', 'HubSpot CRM Audit', 'Marketing Analytics', 'Capstone Project']
   },
   {
-    title: 'FPT JETKING CHIP DESIGN',
+    title: 'FPT JETKING - CHIP DESIGN',
     subTitle: 'Thiết kế Vi mạch Bán dẫn',
     color: '#f37021',
     logo: '/logo_jetking.png',
     items: ['Programming & Circuits', 'Chip Architecture', 'HDL & EDA Tools', 'SoC/ASIC/FPGA Design', 'AI Driven IC Design', 'IC Verification']
   },
   {
-    title: 'FPT JETKING AI AGENT',
+    title: 'FPT JETKING - AI AGENT',
     subTitle: 'Chuyên gia phát triển AI Agent',
     color: '#0066b3',
     logo: '/logo_jetking.png',

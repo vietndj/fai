@@ -21,6 +21,36 @@ const notices = [
     dept: 'Văn phòng Đào tạo',
     title: 'Thông báo v/v đổi lịch học môn SEO/SEM của lớp Skillking K12',
     date: '19-06-2026',
+  },
+  {
+    dept: 'Quan hệ Doanh nghiệp',
+    title: 'Thông báo ngày hội tuyển dụng FAI Career Day 2026 dành cho sinh viên IT & Thiết kế',
+    date: '17-06-2026',
+  },
+  {
+    dept: 'Ban Công tác Sinh viên',
+    title: 'Thông báo lịch khai giảng khóa học Đồ họa truyền thông đa phương tiện Arena K35',
+    date: '15-06-2026',
+  },
+  {
+    dept: 'Phòng Khảo thí & Quốc tế',
+    title: 'Thông báo lịch nhận bằng tốt nghiệp quốc tế chuẩn Aptech & Arena đợt 1/2026',
+    date: '12-06-2026',
+  },
+  {
+    dept: 'Văn phòng Đào tạo',
+    title: 'Thông báo lịch bảo vệ đồ án tốt nghiệp chuyên ngành Thiết kế Vi mạch Bán dẫn FPT Jetking',
+    date: '10-06-2026',
+  },
+  {
+    dept: 'Ban Công nghệ & Đổi mới',
+    title: 'Thông báo cuộc thi sáng tạo AI Agent & Lập trình phần mềm dành cho sinh viên FAI',
+    date: '08-06-2026',
+  },
+  {
+    dept: 'Văn phòng Tuyển sinh',
+    title: 'Thông báo gia hạn đăng ký học bổng nhập học đợt thu 2026 hệ chuyển tiếp quốc tế',
+    date: '05-06-2026',
   }
 ];
 
