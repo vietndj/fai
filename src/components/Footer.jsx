@@ -81,7 +81,7 @@ export default function Footer() {
                     </span>
                     <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                       <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      84A Nguyên Hồng, P. Hạnh Thông, TP HCM
+                      84A Nguyên Hồng, Phường Hạnh Thông
                     </span>
                   </div>
                 </div>
@@ -111,9 +111,11 @@ export default function Footer() {
 
               {/* Contact Info */}
               <div className="contact-branch" style={{ display: 'flex', flexDirection: 'column', gap: '8px', paddingTop: '15px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-                <p style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: 0, color: 'rgba(255, 255, 255, 0.75)' }}>
-                  <Phone size={16} style={{ color: 'rgba(255, 255, 255, 0.6)' }} />
-                  <span><strong>Hotline hỗ trợ:</strong> 1900 6000</span>
+                <p style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', margin: 0, color: 'rgba(255, 255, 255, 0.75)' }}>
+                  <Phone size={16} style={{ color: 'rgba(255, 255, 255, 0.6)', marginTop: '4px', flexShrink: 0 }} />
+                  <span>
+                    <strong>Hotline:</strong> <a href="tel:02473008855" style={{ color: 'inherit', textDecoration: 'none' }}>024 7300 8855</a> &nbsp;•&nbsp; <a href="tel:02367308826" style={{ color: 'inherit', textDecoration: 'none' }}>0236 730 8826</a>
+                  </span>
                 </p>
                 <p style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: 0, color: 'rgba(255, 255, 255, 0.75)' }}>
                   <Mail size={16} style={{ color: 'rgba(255, 255, 255, 0.6)' }} />

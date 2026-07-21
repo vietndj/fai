@@ -440,13 +440,19 @@ export default function LienHe() {
               Thời gian làm việc từ 8:00 - 21:00 hàng ngày, kể cả Thứ 7 và Chủ Nhật. Liên hệ ngay để được hỗ trợ thủ tục nhập học và tư vấn hướng nghiệp miễn phí.
             </p>
 
-            <div style={{ display: 'inline-block', background: '#0D2137', padding: '25px 50px', borderRadius: '24px', boxShadow: '0 20px 50px rgba(13,33,55,0.08)' }}>
-              <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)', margin: '0 0 5px 0', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.1em' }}>
-                ĐƯỜNG DÂY NÓNG HỖ TRỢ NHANH
+            <div style={{ display: 'inline-block', background: '#0D2137', padding: '25px 40px', borderRadius: '24px', boxShadow: '0 20px 50px rgba(13,33,55,0.08)' }}>
+              <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)', margin: '0 0 10px 0', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.1em' }}>
+                HOTLINE HỖ TRỢ NHANH
               </p>
-              <a href="tel:19006000" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 800, color: 'var(--primary)', display: 'block', textDecoration: 'none', lineHeight: '1' }}>
-                1900 6000
-              </a>
+              <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
+                <a href="tel:02473008855" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--primary)', textDecoration: 'none', lineHeight: '1' }}>
+                  024 7300 8855
+                </a>
+                <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '1.8rem' }}>|</span>
+                <a href="tel:02367308826" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--primary)', textDecoration: 'none', lineHeight: '1' }}>
+                  0236 730 8826
+                </a>
+              </div>
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginTop: '30px', flexWrap: 'wrap' }}>
