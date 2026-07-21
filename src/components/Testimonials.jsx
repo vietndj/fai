@@ -9,8 +9,8 @@ import { ArrowRight } from 'lucide-react';
 const quotes = [
   {
     quote: 'Lập trình không chỉ là gõ code — đó là nghệ thuật giải quyết vấn đề. Tại FAI, mỗi sinh viên được định hướng tư duy giải thuật mở rộng, tự tin chinh phục các dự án quốc tế.',
-    author: 'TS. Trần Đình Toàn',
-    role: 'Giám đốc Trung tâm Công nghệ Phần mềm FAI',
+    author: 'Nguyễn Tuân',
+    role: 'Head Academic FPT Aptech',
     brand: 'APTECH',
     avatar: '/fai_student_life_1.png',
   },
