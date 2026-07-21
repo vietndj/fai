@@ -65,7 +65,7 @@ const programsList = [
   {
     title: 'FPT APTECH',
     subTitle: 'Lập trình viên Quốc tế',
-    color: '#e31a22',
+    color: '#f37021',
     logo: '/logo_aptech.png',
     items: ['Software Engineering', 'Java / .NET / Web Dev', 'Cloud Computing (AWS)', 'AI & Machine Learning', 'Data Science', 'e-Project Practical']
   },
@@ -79,7 +79,7 @@ const programsList = [
   {
     title: 'FPT SKILLKING',
     subTitle: 'Digital Marketing chuyên sâu',
-    color: '#09529c',
+    color: '#29a9e1',
     logo: '/logo_skillking.png',
     items: ['Social Media Strategy', 'SEO & SEM Marketing', 'Paid Media (Ads)', 'HubSpot CRM Audit', 'Marketing Analytics', 'Capstone Project']
   },

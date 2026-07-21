@@ -25,7 +25,7 @@ const slides = [
     desc: 'Chương trình chuẩn quốc tế, đào tạo lập trình viên thực chiến đáp ứng nhu cầu tuyển dụng toàn cầu.',
     cta1: { text: 'Tìm hiểu chương trình FPT APTECH', href: '/dao-tao#aptech' },
     slideNum: '02',
-    color: '#e31a22',
+    color: '#f37021',
   },
   {
     image: '/fai_banner_arena_v2.jpg',
@@ -45,7 +45,7 @@ const slides = [
     desc: 'Chương trình đào tạo Full-Stack Digital Marketing thực chiến hàng đầu kết hợp công nghệ hiện đại.',
     cta1: { text: 'Tìm hiểu chương trình FPT SKILLKING', href: '/dao-tao#skillking' },
     slideNum: '04',
-    color: '#09529c',
+    color: '#29a9e1',
   },
   {
     image: '/fai_banner_chip_design_v2.png',

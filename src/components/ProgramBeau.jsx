@@ -62,7 +62,7 @@ const programs = [
     image: '/fai_banner_skillking_v2.png',
     stat: '2018',
     statLabel: 'tiên phong tại Việt Nam',
-    color: '#0072ce',
+    color: '#29a9e1',
     href: '/dao-tao/skillking',
   },
   {
