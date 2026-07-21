@@ -76,14 +76,73 @@ const programsList = [
 
 
 
+function useCountUp(target, duration = 1800, started) {
+  const [count, setCount] = useState(0);
+  const rafRef = useRef(null);
+
+  useEffect(() => {
+    if (!started) { setCount(0); return; }
+    const startTime = performance.now();
+    const tick = (now) => {
+      const raw  = Math.min((now - startTime) / duration, 1);
+      const ease = 1 - Math.pow(1 - raw, 4);
+      setCount(raw < 1 ? Math.round(ease * target) : target);
+      if (raw < 1) rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [started, target, duration]);
+
+  return count;
+}
+
+function AboutStatNumber({ target, suffix, isThousands, color, started }) {
+  const count = useCountUp(target, 1800, started);
+  
+  const formattedCount = isThousands 
+    ? (count >= 1000 ? count.toLocaleString('vi-VN') : count)
+    : count;
+
+  return (
+    <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
+      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>{formattedCount}</span>
+      {suffix && (
+        <span style={{ fontSize: '0.42em', fontWeight: 800, color: color || 'var(--primary)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}>
+          {suffix}
+        </span>
+      )}
+    </div>
+  );
+}
+
 export default function VeFai() {
   const [text1, setText1] = useState('');
   const [text2, setText2] = useState('');
   const [isDone, setIsDone] = useState(false);
   const [showParticles, setShowParticles] = useState(false);
 
+  const [statsStarted, setStatsStarted] = useState(false);
+  const statsRef = useRef(null);
+
   const fullText1 = "Viện Đào tạo Quốc tế FPT";
   const fullText2 = "FPT ACADEMY INTERNATIONAL";
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStatsStarted(true);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -184,7 +243,7 @@ export default function VeFai() {
               {text1.length === fullText1.length && (
                 <p style={{ 
                   fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)', 
-                  color: '#e31a22', 
+                  color: '#f37021', 
                   fontWeight: 800, 
                   marginTop: '12px', 
                   textTransform: 'uppercase', 
@@ -205,6 +264,7 @@ export default function VeFai() {
 
         {/* SECTION 2: Philosophy & Stats - Dark Navy Background - Proportional Height (75vh) */}
         <section 
+          ref={statsRef}
           className="about-slogan-section" 
           style={{ 
             padding: '120px 0', 
@@ -249,39 +309,28 @@ export default function VeFai() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px 60px' }}>
                   
                   <div>
-                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
-                      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>27</span>
-                      <span style={{ fontSize: '0.42em', fontWeight: 800, color: 'var(--primary)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}> NĂM</span>
-                    </div>
+                    <AboutStatNumber target={27} suffix=" NĂM" started={statsStarted} />
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
                       đơn vị tiên phong liên kết đào tạo quốc tế của Tập đoàn FPT từ năm 1999, kiến tạo nguồn nhân lực chất lượng cao sẵn sàng làm việc toàn cầu.
                     </p>
                   </div>
 
                   <div>
-                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
-                      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>60.000</span>
-                    </div>
+                    <AboutStatNumber target={60000} isThousands={true} started={statsStarted} />
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
                       Sinh viên đã lựa chọn
                     </p>
                   </div>
 
                   <div>
-                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
-                      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>98</span>
-                      <span style={{ fontSize: '0.42em', fontWeight: 800, color: 'var(--accent)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}>%</span>
-                    </div>
+                    <AboutStatNumber target={98} suffix="%" color="var(--accent)" started={statsStarted} />
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
                       Sinh viên có việc làm ngay sau khi tốt nghiệp
                     </p>
                   </div>
 
                   <div>
-                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
-                      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>1000</span>
-                      <span style={{ fontSize: '0.42em', fontWeight: 800, color: 'var(--primary)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}>+</span>
-                    </div>
+                    <AboutStatNumber target={1000} suffix="+" started={statsStarted} />
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
                       Đối tác doanh nghiệp ký kết liên kết cung ứng nhân sự, kiến tập thực tế và tuyển dụng trực tiếp hàng năm.
                     </p>

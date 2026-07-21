@@ -5854,3 +5854,14 @@ img {
   pointer-events: none;
   z-index: 1;
 }
+
+/* Core Values cards hover effect */
+.value-card-wrapper {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+
+.value-card-wrapper:hover {
+  transform: translateY(-8px) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 16px 36px rgba(13, 33, 55, 0.12) !important;
+}
