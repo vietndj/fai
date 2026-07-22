@@ -2170,7 +2170,7 @@ img {
   font-family: var(--font-sans);
   font-size: 2.8rem;
   font-weight: 800;
-  color: var(--accent);
+  color: var(--primary);
   line-height: 1;
   letter-spacing: -2px;
 }
