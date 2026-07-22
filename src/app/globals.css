@@ -42,6 +42,43 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/SVN-Acta-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/SVN-Acta-BookItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/SVN-Acta-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/SVN-Acta-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/SVN-Acta-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/SVN-Acta-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
 :root {
   /* Premium FAI Color Palette */
   --primary: #E8741E;          /* FPT Amber — warm, refined */
@@ -1400,8 +1437,8 @@ img {
 
 .prog-beau-item-inner {
   display: grid;
-  grid-template-columns: 4.8fr 7.2fr; /* 40% vs 60% ratio, more width for details */
-  gap: 80px; /* Enormous gap for whitespace */
+  grid-template-columns: 5.4fr 6.6fr; /* Give more width for titles to prevent wrapping */
+  gap: 40px; /* Reduced gap to prevent squeezing */
   padding: 120px 0; /* Massive top/bottom padding for bự, to, cao hơn */
   align-items: start;
   position: relative;
@@ -3080,7 +3117,7 @@ img {
 }
 
 .quote-block-text {
-  font-family: 'SVN-Aeonik', 'Aeonik', var(--font-sans), sans-serif;
+  font-family: 'SVN-Acta', 'Acta', serif;
   font-size: clamp(1.15rem, 1.8vw, 1.45rem);
   font-weight: 400;
   font-style: italic;
