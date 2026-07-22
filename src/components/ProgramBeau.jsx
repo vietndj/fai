@@ -32,8 +32,8 @@ const programs = [
     num: '02',
     brand: 'FPT ARENA MULTIMEDIA',
     logo: '/logo_arena.png',
-    titleLine1: 'Thiết kế mỹ thuật',
-    titleLine2: 'Đa phương tiện',
+    titleLine1: 'Thiết kế Mỹ thuật',
+    titleLine2: 'đa phương tiện',
     subtitle: 'ĐÀO TẠO MỸ THUẬT ĐA PHƯƠNG TIỆN TIÊN PHONG',
     desc: 'Được thành lập vào tháng 7/2004 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn Công nghệ thông tin toàn cầu Aptech (Ấn Độ), FPT Arena Multimedia là hệ thống đào tạo Mỹ thuật đa phương tiện đầu tiên tại Việt Nam, tiên phong đưa khái niệm Multimedia đến với thế hệ trẻ và góp phần đào tạo nguồn nhân lực chất lượng cao cho ngành công nghiệp sáng tạo.\n\nVới chương trình đào tạo bám sát xu hướng công nghệ và nhu cầu của doanh nghiệp, FPT Arena Multimedia giúp học viên phát triển tư duy sáng tạo, kỹ năng thực hành và xây dựng năng lực nghề nghiệp trong lĩnh vực thiết kế đa phương tiện.',
     tags: [
@@ -143,17 +143,17 @@ export default function ProgramBeau() {
                   <span className="prog-beau-num" style={{ color: prog.color }}>{prog.num}</span>
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '10px', marginBottom: '16px' }}>
-                      <div className="prog-beau-logo-wrapper" style={{ height: '36px', display: 'flex', alignItems: 'center' }}>
+                      <div className="prog-beau-logo-wrapper" style={{ height: '46px', display: 'flex', alignItems: 'center' }}>
                         <Image 
                           src={prog.logo} 
                           alt={prog.brand} 
-                          width={140} 
-                          height={36} 
+                          width={180} 
+                          height={46} 
                           style={{ 
                             objectFit: 'contain', 
                             width: 'auto', 
                             height: '100%', 
-                            maxWidth: '180px' 
+                            maxWidth: '220px' 
                           }} 
                         />
                       </div>
