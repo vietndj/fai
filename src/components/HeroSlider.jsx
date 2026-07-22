@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    image: '/fai_graduation_crowd.png',
+    image: '/banner_hero_fan_final.jpeg',
     video: '/videos/intro.mp4',
     logo: null,
     eyebrow: 'Khoảnh khắc Vinh quang & Đáng nhớ',
@@ -18,7 +18,7 @@ const slides = [
     color: '#f37021',
   },
   {
-    image: '/fai_banner_aptech_v2.png',
+    image: '/banner_hero_aptech.jpeg',
     logo: '/logo_aptech.png',
     eyebrow: 'Hệ thống Đào tạo Lập trình viên Quốc tế',
     title: 'FPT APTECH',
@@ -28,7 +28,7 @@ const slides = [
     color: '#f37021',
   },
   {
-    image: '/fai_banner_arena_v2.jpg',
+    image: '/banner_hero_arena.jpeg',
     logo: '/logo_arena.png',
     eyebrow: 'Hệ thống Đào tạo Mỹ thuật Đa phương tiện',
     title: 'FPT ARENA MULTIMEDIA',
@@ -38,7 +38,7 @@ const slides = [
     color: '#ffb600',
   },
   {
-    image: '/fai_banner_skillking_v2.png',
+    image: '/banner_hero_skillking.jpeg',
     logo: '/logo_skillking.png',
     eyebrow: 'Hệ thống Đào tạo Digital Marketing',
     title: 'FPT SKILLKING',
@@ -48,7 +48,7 @@ const slides = [
     color: '#29a9e1',
   },
   {
-    image: '/fai_banner_chip_design_v2.png',
+    image: '/banner_hero_chip.jpeg',
     logo: '/logo_jetking.png',
     eyebrow: 'Hệ thống Đào tạo Thiết kế Vi mạch Bán dẫn',
     title: 'FPT JETKING - CHIP DESIGN',
@@ -58,7 +58,7 @@ const slides = [
     color: '#ed232a',
   },
   {
-    image: '/fai_banner_ai_agent_v2.png',
+    image: '/banner_hero_ai_agent.jpeg',
     logo: '/logo_jetking.png',
     eyebrow: 'Hệ thống Đào tạo AI Agent tiên phong',
     title: 'FPT JETKING - AI AGENT',
