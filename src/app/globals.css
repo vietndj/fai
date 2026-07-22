@@ -1399,9 +1399,9 @@ img {
 ═══════════════════════════════════════════ */
 .prog-beau-section {
   background: #f2f0ec;
-  padding: 180px 0 160px;
+  padding: 180px 0 0;
   position: relative;
-  overflow: clip; /* clip is better as it allows position: sticky to work! Or overflow: visible */
+  overflow: clip;
 }
 
 .prog-beau-container-full {
@@ -1438,6 +1438,10 @@ img {
   transition: opacity 0.4s ease;
 }
 
+.prog-beau-item:last-child {
+  border-bottom: none;
+}
+
 .prog-beau-item.is-dimmed { opacity: 0.25; } /* Higher contrast dimming */
 .prog-beau-item.is-hovered { opacity: 1; }
 
@@ -1448,6 +1452,10 @@ img {
   padding: 120px 0; /* Massive top/bottom padding for bự, to, cao hơn */
   align-items: start;
   position: relative;
+}
+
+.prog-beau-item:last-child .prog-beau-item-inner {
+  padding-bottom: 80px;
 }
 
 /* Title column */
