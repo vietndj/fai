@@ -123,7 +123,7 @@ export default function HeroSlider() {
                   alt={slide.title} 
                   fill 
                   priority={index === 0}
-                  style={{ objectFit: 'cover', objectPosition: 'center' }} 
+                  style={{ objectFit: 'cover', objectPosition: 'right center' }} 
                 />
               )}
               <div className="slide-overlay-subtle" />
