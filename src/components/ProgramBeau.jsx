@@ -145,9 +145,9 @@ export default function ProgramBeau() {
                     <span className="prog-beau-num" style={{ color: prog.color, margin: 0, lineHeight: 1 }}>{prog.num}</span>
                   </div>
 
-                  {/* Right Column: Logo & Title (flush left 100%) */}
+                  {/* Right Column: Logo & Title (flush optical alignment) */}
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', margin: 0, padding: 0 }}>
-                    <div className="prog-beau-logo-wrapper" style={{ height: '68px', display: 'flex', alignItems: 'center', margin: '0 0 16px 0', padding: 0 }}>
+                    <div className="prog-beau-logo-wrapper" style={{ height: '68px', display: 'flex', alignItems: 'center', margin: '0 0 16px 14px', padding: 0 }}>
                       <Image 
                         src={prog.logo} 
                         alt={prog.brand} 
