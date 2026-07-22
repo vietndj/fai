@@ -52,7 +52,7 @@ const programs = [
     brand: 'FPT SKILLKING',
     logo: '/logo_skillking.png',
     titleLine1: 'Digital Marketing',
-    titleLine2: 'Fullstack',
+    titleLine2: 'Ứng dụng AI',
     subtitle: 'ĐÀO TẠO DIGITAL MARKETING FULLSTACK CHUYÊN SÂU',
     desc: 'FPT Skillking là hệ thống đào tạo chuyên sâu về Digital Marketing được thành lập năm 2018 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn đào tạo công nghệ Jetking (Ấn Độ), cung cấp chương trình học theo định hướng thực tiễn, trang bị cho học viên kiến thức từ nền tảng đến chuyên sâu trong lĩnh vực tiếp thị số.\n\nChương trình đào tạo tại FPT Skillking tích hợp AI vào quá trình giảng dạy và thực hành, giúp học viên nâng cao năng lực ứng dụng công nghệ, phát triển tư duy chiến lược và sẵn sàng đáp ứng yêu cầu của doanh nghiệp trong kỷ nguyên số.',
     tags: [
