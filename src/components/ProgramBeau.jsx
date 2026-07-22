@@ -151,6 +151,7 @@ export default function ProgramBeau() {
                           height={68} 
                           style={{ 
                             objectFit: 'contain', 
+                            objectPosition: 'left center',
                             width: 'auto', 
                             height: '100%', 
                             maxWidth: '280px' 
@@ -176,7 +177,7 @@ export default function ProgramBeau() {
                   
                   <ul className="prog-beau-tags">
                     {prog.tags.map((t, tIdx) => (
-                      <li key={tIdx}>{t}</li>
+                      <li key={tIdx} style={{ '--tag-arrow-color': prog.color }}>{t}</li>
                     ))}
                   </ul>
 

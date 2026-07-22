@@ -1579,8 +1579,9 @@ img {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--primary);
+  color: var(--tag-arrow-color, var(--primary));
   font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .prog-beau-meta {

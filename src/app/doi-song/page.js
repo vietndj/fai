@@ -30,7 +30,7 @@ const dailyTimeline = [
     time: '14:00',
     title: 'Làm việc nhóm e-Project',
     desc: 'Cùng nhóm của mình tập trung tại khu vực thư viện mở hoặc phòng tự học. Các bạn phân chia công việc thiết kế, lập trình hoặc viết content cho đồ án kỳ.',
-    image: '/fai_banner_aptech.png'
+    image: '/fai_banner_aptech_v2.png'
   },
   {
     time: '16:30',
@@ -46,122 +46,350 @@ const dailyTimeline = [
   }
 ];
 
-const activities = [
+const categoryBlocks = [
   {
-    id: 1,
-    title: 'CLB Lập trình Aptech Developer Club: Vững vàng chuyên môn phần mềm',
-    category: 'CLB Học Thuật',
-    date: '20-06-2026',
-    image: '/fai_graduation_hall.jpg',
-    excerpt: 'Sân chơi giao lưu thuật toán, phát triển phần mềm di động, làm game và tham gia thi Hackathon TechWiz toàn cầu.',
-    contentHtml: `
-      <p class="lead">Được thành lập từ năm 2018, Aptech Developer Club là nơi hội tụ các sinh viên đam mê lập trình, thuật toán và công nghệ số tại Viện Đào Tạo Quốc Tế FPT.</p>
-      
-      <h2>Nơi nuôi dưỡng đam mê lập trình thực chiến</h2>
-      <p>Tại đây, các bạn sinh viên không chỉ trao đổi về các bài tập trên lớp, mà cùng nhau bắt tay thực hiện các dự án thực tế: từ website quản lý học tập, ứng dụng di động theo dõi sức khoẻ đến các hệ thống tự động hoá tích hợp AI thông minh.</p>
-      
-      <p>Hàng tuần, CLB tổ chức các buổi Code-along chuyên sâu về cấu trúc dữ liệu, thuật toán nâng cao và các framework hiện đại như Next.js, Node.js, Spring Boot hay Django.</p>
-      
-      <h2>Bệ phóng cho các cuộc thi Hackathon quốc tế</h2>
-      <p>Câu lạc bộ là nôi tuyển chọn và bồi dưỡng các đội tuyển tham dự cuộc thi lập trình TechWiz toàn cầu do Tập đoàn Aptech Ấn Độ tổ chức. Qua nhiều năm tham gia, CLB tự hào đóng góp nhiều giải thưởng lớn, khẳng định bản lĩnh của lập trình viên FAI trên đấu trường quốc tế.</p>
-    `
+    id: 'graduation',
+    title: 'Lễ tốt nghiệp qua các năm',
+    eyebrow: 'Mốc son vinh quang',
+    themeBg: '#050d1a',
+    accentColor: '#f37021',
+    posts: [
+      {
+        id: 'grad-2026',
+        title: 'Lễ tốt nghiệp FAI 2026: Vinh danh hàng trăm tân khoa xuất sắc',
+        date: '20-06-2026',
+        image: '/fai_graduation_crowd.png',
+        excerpt: 'Khoảnh khắc xúc động khi các tân khoa Aptech, Arena và Skillking chính thức nhận bằng tốt nghiệp chuẩn quốc tế.',
+        contentHtml: `<p class="lead">Lễ tốt nghiệp FAI 2026 đã diễn ra trong không khí trang trọng và đầy cảm xúc với sự tham gia của đông đảo phụ huynh, giảng viên và doanh nghiệp đối tác.</p><p>Các sinh viên xuất sắc nhất đã nhận được bằng tốt nghiệp và những suất học bổng làm việc trực tiếp từ các tập đoàn công nghệ hàng đầu.</p>`
+      },
+      {
+        id: 'grad-speech',
+        title: 'Bài phát biểu truyền cảm hứng từ Tân khoa Thủ khoa FAI',
+        date: '18-06-2026',
+        image: '/fai_graduation_speech.jpg',
+        excerpt: 'Hành trình 2 năm từ người chưa biết lập trình đến vị trí Tech Lead tại FPT Software.',
+        contentHtml: `<p class="lead">Nhìn lại chặng đường 2 năm học tập tại FAI, thủ khoa chia sẻ về những đêm miệt mài gỡ code đồ án e-Project và sự đồng hành tận tâm của thầy cô.</p>`
+      },
+      {
+        id: 'grad-handshake',
+        title: 'Nghi thức tuyên hứa tân khoa và trao bằng chứng nhận quốc tế',
+        date: '15-06-2026',
+        image: '/fai_graduation_handshake.png',
+        excerpt: 'Lễ trao bằng đánh dấu sự trưởng thành và sẵn sàng chinh phục thị trường lao động toàn cầu của sinh viên.',
+        contentHtml: `<p class="lead">Nghi thức trang trọng khẳng định chất lượng đào tạo và cam kết đồng hành cùng sự nghiệp học viên của FAI.</p>`
+      }
+    ]
   },
   {
-    id: 2,
-    title: 'Arena Design Studio: Khai phá tư duy mỹ thuật & sáng tạo hình ảnh số',
-    category: 'CLB Sáng Tạo',
-    date: '18-06-2026',
-    image: '/fai_graduation_crowd.png',
-    excerpt: 'Sân chơi giao lưu cho các nghệ sĩ trẻ đam mê ký họa, thiết kế đồ hoạ thương hiệu, làm phim ngắn và hoạt hình 3D.',
-    contentHtml: `
-      <p class="lead">Arena Design Studio không chỉ là một câu lạc bộ — đây là không gian nghệ thuật mở, nơi mọi tư duy thiết kế đột phá được tự do thể hiện và phát triển thành sản phẩm sáng tạo.</p>
-      
-      <h2>Không gian sáng tạo nghệ thuật không giới hạn</h2>
-      <p>CLB thường xuyên tổ chức các buổi ký họa dã ngoại ngoài trời, các workshop nâng cao kỹ năng sử dụng Wacom, vẽ minh họa digital 2D và tạo mô hình nhân vật hoạt hình 3D (3D Modeling) phức tạp.</p>
-      
-      <p>Học viên tham gia sẽ được chia sẻ kinh nghiệm xây dựng Portfolio cá nhân chuyên nghiệp để thu hút các nhà tuyển dụng hàng đầu ngay từ học kỳ 2.</p>
-      
-      <h2>Show diễn đồ án tốt nghiệp Creative Show thường niên</h2>
-      <p>CLB là lực lượng nòng cốt hỗ trợ tổ chức triển lãm đồ án sáng tạo hàng năm của Arena. Nơi đây quy tụ hàng chục nhà thiết kế, đạo diễn mỹ thuật của các creative agency lớn đến để thẩm định sản phẩm và trực tiếp săn đón nhân sự chất lượng cao.</p>
-    `
+    id: 'enterprise',
+    title: 'Doanh nghiệp & FAI',
+    eyebrow: 'Kết nối việc làm thực chiến',
+    themeBg: '#081627',
+    accentColor: '#29a9e1',
+    posts: [
+      {
+        id: 'ent-visit',
+        title: 'Kiến tập tại FPT Software: Chạm ngõ quy trình làm việc chuẩn toàn cầu',
+        date: '10-06-2026',
+        image: '/fai_banner_aptech_v2.png',
+        excerpt: 'Học viên tham quan trực tiếp các văn phòng dự án lớn, nghe chia sẻ từ các Tech Lead và định hướng nghề nghiệp sớm.',
+        contentHtml: `<p class="lead">Chuyến đi giúp sinh viên hiểu sâu sắc môi trường làm việc thực tế và quy trình phát triển phần mềm chuẩn quốc tế.</p>`
+      },
+      {
+        id: 'ent-jobfair',
+        title: 'Ngày hội tuyển dụng FAI Job Fair: Cầu nối trực tiếp đến 50+ doanh nghiệp',
+        date: '05-06-2026',
+        image: '/fai_graduation_handshake.png',
+        excerpt: 'Ngày hội phỏng vấn trực tiếp, nộp CV và nhận học bổng làm việc tại các tập đoàn công nghệ & sáng tạo hàng đầu.',
+        contentHtml: `<p class="lead">Rất nhiều bạn sinh viên xuất sắc đã nhận được offer làm việc chính thức ngay tại ngày hội trước khi nhận bằng tốt nghiệp.</p>`
+      },
+      {
+        id: 'ent-agency',
+        title: 'Tọa đàm cùng Giám đốc Sáng tạo: Xu hướng nhân sự thiết kế & AI 2026',
+        date: '01-06-2026',
+        image: '/fai_banner_arena_v2.jpg',
+        excerpt: 'Buổi chia sẻ cởi mở về cách thiết lập portfolio gây ấn tượng và tư duy thiết kế kết hợp trí tuệ nhân tạo.',
+        contentHtml: `<p class="lead">Các chuyên gia hàng đầu từ agency truyền thông giải đáp những câu hỏi thực tế về phỏng vấn và thăng tiến nghề nghiệp.</p>`
+      }
+    ]
   },
   {
-    id: 3,
-    title: 'Skillking Pulse Marketing Hub: Xây dựng chiến dịch tiếp thị số thực chiến',
-    category: 'CLB Tiếp Thị',
-    date: '15-06-2026',
-    image: '/fai_banner_skillking.png',
-    excerpt: 'Thực hành lập kế hoạch nội dung mạng xã hội, setup quảng cáo Ads ngân sách thật và đo lường phễu chuyển đổi số.',
-    contentHtml: `
-      <p class="lead">Skillking Pulse là cộng đồng năng động dành cho các marketers trẻ tuổi, đam mê dữ liệu tiếp thị số và xu hướng phát triển phễu tăng trưởng doanh nghiệp.</p>
-      
-      <h2>Học đi đôi với hành cùng ngân sách thực tế</h2>
-      <p>CLB hoạt động theo mô hình một Agency thu nhỏ. Các thành viên được chia nhóm để trực tiếp xây dựng fanpage, sản xuất video ngắn TikTok thương mại, chạy chiến dịch SEO website và trực tiếp setup quảng cáo Google/Meta Ads sử dụng ngân sách thật do nhà trường tài trợ.</p>
-      
-      <p>Qua đó, sinh viên rèn luyện được tư duy nhạy bén trước các số liệu tiếp thị (CTR, CPA, ROI) và nắm vững cách tối ưu hóa phễu khách hàng số.</p>
-      
-      <h2>Đêm hội Pitching & Kết nối Agency lớn</h2>
-      <p>Hàng quý, CLB tổ chức cuộc thi lập kế hoạch Digital Marketing tổng thể mô phỏng các buổi pitching đấu thầu dự án của doanh nghiệp thực tế. Ban giám khảo là các Giám đốc Chiến lược, Digital Planners từ các tập đoàn truyền thông lớn, đem lại phản hồi thực tế và cơ hội việc làm đắt giá.</p>
-    `
+    id: 'sharing',
+    title: 'Nhỏ to cùng chia sẻ',
+    eyebrow: 'Góc tâm sự & kinh nghiệm',
+    themeBg: '#0f172a',
+    accentColor: '#ffb600',
+    posts: [
+      {
+        id: 'share-study',
+        title: 'Kinh nghiệm vượt qua các kỳ thi e-Project không ngủ của sinh viên Aptech',
+        date: '25-05-2026',
+        image: '/fai_student_life_1.png',
+        excerpt: 'Những bí quyết quản lý thời gian, phân chia công việc nhóm và giữ năng lượng tích cực trong tuần bảo vệ đồ án.',
+        contentHtml: `<p class="lead">Đồ án e-Project là thử thách lớn nhất nhưng cũng là trải nghiệm đáng nhớ nhất tạo nên bản lĩnh lập trình viên FAI.</p>`
+      },
+      {
+        id: 'share-portfolio',
+        title: 'Bí kíp xây dựng Portfolio thiết kế ấn tượng ngay từ năm nhất',
+        date: '20-05-2026',
+        image: '/fai_banner_arena_v2.jpg',
+        excerpt: 'Cách lựa chọn tác phẩm, kể câu chuyện thiết kế và showcase dự án UI/UX chuẩn phong cách agency.',
+        contentHtml: `<p class="lead">Một Portfolio chỉn chu là chìa khóa mở ra hàng loạt cơ hội làm việc freelance và chính thức cho dân Arena.</p>`
+      },
+      {
+        id: 'share-life',
+        title: 'Làm thế nào để cân bằng giữa học tập, CLB và công việc làm thêm?',
+        date: '15-05-2026',
+        image: '/fai_student_life_2.png',
+        excerpt: 'Lời khuyên chân thành từ các cựu sinh viên FAI đã thành công trong việc sắp xếp thời gian hiệu quả.',
+        contentHtml: `<p class="lead">Học cách ưu tiên công việc quan trọng và tận hưởng trọn vẹn những năm tháng sinh viên đầy nhiệt huyết.</p>`
+      }
+    ]
   },
   {
-    id: 4,
-    title: 'Kiến tập tại FPT Software: Chạm ngõ quy trình làm việc chuẩn toàn cầu',
-    category: 'TRẢI NGHIỆM DOANH NGHIỆP',
-    date: '10-06-2026',
-    image: '/fai_banner_aptech.png',
-    excerpt: 'Học viên tham quan trực tiếp các văn phòng dự án lớn, nghe chia sẻ từ các Tech Lead và định hướng nghề nghiệp sớm.',
-    contentHtml: `
-      <p class="lead">Hoạt động Company Visit là đặc quyền dành cho sinh viên FAI ngay từ học kỳ đầu tiên, nhằm định hướng nghề nghiệp rõ ràng và hiểu sâu sắc nhu cầu tuyển dụng.</p>
-      
-      <h2>Trải nghiệm văn phòng làm việc hiện đại hàng đầu Việt Nam</h2>
-      <p>Sinh viên đã có chuyến tham quan thực tế đầy hào hứng tại FPT Software Campus. Các bạn được trực tiếp quan sát quy trình phát triển phần mềm Agile/Scrum, các khu vực bảo mật dự án cao và hạ tầng Cloud lưu trữ dữ liệu quy mô toàn cầu.</p>
-      
-      <p>Chuyến đi giúp phá vỡ khoảng cách giữa lý thuyết và thực tiễn, tạo động lực to lớn cho sinh viên trong học tập.</p>
-      
-      <h2>Tọa đàm chuyên sâu cùng Tech Leads</h2>
-      <p>Trong khuôn khổ buổi kiến tập, sinh viên FAI đã được giao lưu trực tiếp với các Kỹ sư trưởng, Quản trị dự án về các chủ đề nóng như tích hợp AI/ML, điện toán đám mây và lộ trình phát triển sự nghiệp từ intern lên chuyên gia phần mềm chuẩn quốc tế.</p>
-    `
+    id: 'contests',
+    title: 'Sân chơi & giải thưởng',
+    eyebrow: 'Khai phóng tài năng',
+    themeBg: '#1a090a',
+    accentColor: '#ed232a',
+    posts: [
+      {
+        id: 'contest-techwiz',
+        title: 'Học viên FAI xuất sắc giành giải cao tại Hackathon TechWiz toàn cầu',
+        date: '12-05-2026',
+        image: '/fai_banner_chip_design_v2.png',
+        excerpt: 'Đội tuyển FAI vượt qua hàng nghìn đối thủ quốc tế để khẳng định năng lực lập trình và sáng tạo.',
+        contentHtml: `<p class="lead">TechWiz là đấu trường công nghệ uy tín do Aptech Worldwide tổ chức hàng năm cho sinh viên toàn thế giới.</p>`
+      },
+      {
+        id: 'contest-design',
+        title: 'Triển lãm đồ án sáng tạo Creative Show: Nơi tôn vinh các thiết kế xuất sắc',
+        date: '08-05-2026',
+        image: '/fai_graduation_hall.jpg',
+        excerpt: 'Quy tụ hàng trăm tác phẩm 2D, 3D, Video và Game Art độc đáo do chính tay sinh viên Arena thực hiện.',
+        contentHtml: `<p class="lead">Sự kiện thu hút đông đảo nhà thiết kế, đạo diễn và agency uy tín đến tham quan và đánh giá sản phẩm.</p>`
+      },
+      {
+        id: 'contest-marketing',
+        title: 'Skillking Digital Pitching: Cuộc thi lập chiến dịch tiếp thị số ngân sách thật',
+        date: '02-05-2026',
+        image: '/fai_banner_skillking_v2.png',
+        excerpt: 'Các nhóm sinh viên trực tiếp bảo vệ kế hoạch Marketing trước hội đồng giám khảo là các Digital Directors.',
+        contentHtml: `<p class="lead">Trải nghiệm thực chiến giúp sinh viên tự tin quản lý ngân sách và tối ưu hóa hiệu quả chiến dịch số.</p>`
+      }
+    ]
   },
   {
-    id: 5,
-    title: 'Ngày hội tuyển dụng FAI Job Fair: Cầu nối trực tiếp đến hơn 50 doanh nghiệp',
-    category: 'TRẢI NGHIỆM DOANH NGHIỆP',
-    date: '05-06-2026',
-    image: '/fai_graduation_handshake.png',
-    excerpt: 'Ngày hội phỏng vấn trực tiếp, nộp CV và nhận học bổng làm việc tại các tập đoàn công nghệ & sáng tạo hàng đầu.',
-    contentHtml: `
-      <p class="lead">FAI Job Fair là ngày hội tuyển dụng thường niên lớn nhất của Viện Đào Tạo Quốc Tế FPT, thu hút hàng nghìn sinh viên tốt nghiệp loại giỏi tham gia ứng tuyển.</p>
-      
-      <h2>Giao dịch phỏng vấn trực tiếp tại chỗ</h2>
-      <p>Tại các gian hàng tuyển dụng, đại diện doanh nghiệp trực tiếp tiến hành phỏng vấn thử việc và duyệt CV của sinh viên. Đây là cơ hội tuyệt vời để học viên Aptech, Arena, Skillking tự tin giới thiệu sản phẩm đồ án tốt nghiệp e-Project của mình.</p>
-      
-      <p>Rất nhiều bạn sinh viên xuất sắc đã nhận được offer làm việc chính thức ngay tại ngày hội trước cả khi chính thức nhận bằng tốt nghiệp.</p>
-      
-      <h2>Định hướng chỉnh sửa CV & Phỏng vấn giả định</h2>
-      <p>Bên cạnh tuyển dụng trực tiếp, ngày hội tổ chức chuỗi workshop hướng dẫn sinh viên viết CV chuyên nghiệp chuẩn ATS, cách đàm phán lương và thực hành trả lời phỏng vấn giả định cùng các chuyên gia nhân sự đầu ngành.</p>
-    `
-  },
-  {
-    id: 6,
-    title: 'Giải bóng đá FAI Champion League: Gắn kết tinh thần thể thao & đồng đội',
-    category: 'SỰ KIỆN & TEAMBUILDING',
-    date: '28-05-2026',
-    image: '/fai_student_life_1.png',
-    excerpt: 'Sân chơi thể thao lành mạnh, giao lưu thể chất và thắt chặt tinh thần hữu nghị giữa học viên 3 phân hệ đào tạo.',
-    contentHtml: `
-      <p class="lead">FAI Champion League là giải bóng đá nam - nữ thường niên được mong chờ nhất, thu hút sự tham gia tranh tài sôi nổi của hàng chục đội bóng đại diện các lớp toàn quốc.</p>
-      
-      <h2>Những trận cầu kịch tính và tinh thần fair-play</h2>
-      <p>Giải đấu đã diễn ra vô cùng sôi nổi với các pha bóng đẹp mắt, những bàn thắng nghẹt thở và sự cổ vũ nhiệt tình của hàng trăm cổ động viên FAI. Dù tranh đấu quyết liệt trên sân cỏ, các cầu thủ luôn thể hiện tinh thần thể thao cao thượng và sự tôn trọng đối thủ.</p>
-      
-      <p>Đây là cơ hội tuyệt vời để rèn luyện thể chất, giải tỏa căng thẳng sau những giờ code hay render đồ án mệt mỏi.</p>
-      
-      <h2>Thắt chặt tình đoàn kết liên phân hệ đào tạo</h2>
-      <p>Hơn cả một giải đấu thể thao, sự kiện là cầu nối giúp học viên Aptech (Lập trình), Arena (Sáng tạo) và Skillking (Tiếp thị) giao lưu gặp gỡ, thiết lập các nhóm dự án liên ngành đầy triển vọng trong tương lai.</p>
-    `
+    id: 'community',
+    title: 'FAI & cộng đồng',
+    eyebrow: 'Trách nhiệm xã hội & Trải nghiệm',
+    themeBg: '#061a12',
+    accentColor: '#10b981',
+    posts: [
+      {
+        id: 'comm-football',
+        title: 'Giải bóng đá FAI Champion League: Gắn kết tinh thần thể thao & đồng đội',
+        date: '28-04-2026',
+        image: '/fai_student_life_1.png',
+        excerpt: 'Sân chơi thể thao lành mạnh, giao lưu thể chất và thắt chặt tinh thần hữu nghị giữa học viên các phân hệ.',
+        contentHtml: `<p class="lead">Giải đấu thường niên tạo không khí sôi nổi và thắt chặt tình đoàn kết trong cộng đồng sinh viên FAI.</p>`
+      },
+      {
+        id: 'comm-charity',
+        title: 'Mùa hè xanh FAI: Hành trình chia sẻ yêu thương và chuyển đổi số cho cộng đồng',
+        date: '20-04-2026',
+        image: '/fai_graduation_crowd.png',
+        excerpt: 'Sinh viên FAI mang tri thức công nghệ và những phần quà ý nghĩa đến các vùng xa.',
+        contentHtml: `<p class="lead">Hoạt động tình nguyện giúp sinh viên phát triển tinh thần nhân văn và trách nhiệm xã hội.</p>`
+      },
+      {
+        id: 'comm-campustour',
+        title: 'Ngày hội Open Day: Đón hàng nghìn học sinh THPT trải nghiệm công nghệ FAI',
+        date: '15-04-2026',
+        image: '/fai_banner_ai_agent_v2.png',
+        excerpt: 'Các bạn học sinh được trải nghiệm viết code, vẽ Wacom và tương tác cùng các trợ lý AI Agent.',
+        contentHtml: `<p class="lead">Open Day mang đến góc nhìn chân thực về môi trường đào tạo công nghệ chuẩn quốc tế tại FAI.</p>`
+      }
+    ]
   }
 ];
+
+function CategoryBlockItem({ block, onSelectPost }) {
+  const scrollRef = useRef(null);
+  const [isGrabbing, setIsGrabbing] = useState(false);
+  const isDown = useRef(false);
+  const startX = useRef(0);
+  const scrollLeftVal = useRef(0);
+
+  const handlePointerDown = (e) => {
+    if (e.pointerType !== 'mouse') return;
+    isDown.current = true;
+    setIsGrabbing(true);
+    startX.current = e.pageX - scrollRef.current.offsetLeft;
+    scrollLeftVal.current = scrollRef.current.scrollLeft;
+  };
+
+  const handlePointerLeave = (e) => {
+    if (e.pointerType !== 'mouse') return;
+    isDown.current = false;
+    setIsGrabbing(false);
+  };
+
+  const handlePointerUp = (e) => {
+    if (e.pointerType !== 'mouse') return;
+    isDown.current = false;
+    setIsGrabbing(false);
+  };
+
+  const handlePointerMove = (e) => {
+    if (e.pointerType !== 'mouse') return;
+    if (!isDown.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeftVal.current - walk;
+  };
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 380;
+      scrollRef.current.scrollBy({
+        left: direction === 'next' ? scrollAmount : -scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  return (
+    <section 
+      style={{ 
+        padding: '80px 0', 
+        backgroundColor: block.themeBg, 
+        color: '#ffffff',
+        position: 'relative',
+        overflow: 'hidden',
+        borderBottom: '1px solid rgba(255,255,255,0.06)'
+      }}
+    >
+      <div className="container">
+        {/* Block Header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '35px' }}>
+          <div>
+            <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.2em', color: block.accentColor, textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+              {block.eyebrow}
+            </span>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.4rem)', fontWeight: 800, color: '#ffffff', fontFamily: 'var(--font-sans)', margin: 0 }}>
+              {block.title}
+            </h2>
+          </div>
+
+          {/* Navigation Arrows */}
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <button 
+              onClick={() => scroll('prev')}
+              aria-label="Previous posts"
+              style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                backgroundColor: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                color: '#ffffff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <ChevronLeft size={20} strokeWidth={2.5} />
+            </button>
+            <button 
+              onClick={() => scroll('next')}
+              aria-label="Next posts"
+              style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                backgroundColor: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                color: '#ffffff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <ChevronRight size={20} strokeWidth={2.5} />
+            </button>
+          </div>
+        </div>
+
+        {/* Horizontal Scroll Track */}
+        <div 
+          ref={scrollRef}
+          className="horizontal-timeline-wrapper"
+          style={{ 
+            display: 'flex', 
+            gap: '30px', 
+            overflowX: 'auto', 
+            paddingBottom: '20px', 
+            scrollSnapType: isGrabbing ? 'none' : 'x mandatory',
+            scrollbarWidth: 'thin',
+            scrollbarColor: 'rgba(255,255,255,0.2) transparent',
+            cursor: isGrabbing ? 'grabbing' : 'grab',
+            userSelect: 'none',
+            WebkitUserSelect: 'none'
+          }}
+          onPointerDown={handlePointerDown}
+          onPointerLeave={handlePointerLeave}
+          onPointerUp={handlePointerUp}
+          onPointerMove={handlePointerMove}
+        >
+          {block.posts.map((post) => (
+            <div 
+              key={post.id}
+              onClick={() => onSelectPost(post)}
+              style={{
+                flex: '0 0 360px',
+                scrollSnapAlign: 'start',
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                cursor: 'pointer',
+                display: 'flex',
+                flexDirection: 'column',
+                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                pointerEvents: isGrabbing ? 'none' : 'auto'
+              }}
+            >
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
+                <Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} />
+                <span style={{ position: 'absolute', top: '15px', left: '15px', background: 'rgba(5,13,26,0.85)', padding: '4px 10px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800, color: block.accentColor, textTransform: 'uppercase', border: '1px solid rgba(255,255,255,0.1)' }}>
+                  {post.date}
+                </span>
+              </div>
+              
+              <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '12px', flexGrow: 1 }}>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, lineHeight: '1.45', color: '#ffffff', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '50px', fontFamily: 'var(--font-sans)' }}>
+                  {post.title}
+                </h3>
+                <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '42px' }}>
+                  {post.excerpt}
+                </p>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 800, color: block.accentColor, marginTop: '10px' }}>
+                  Xem chi tiết <ArrowRight size={14} />
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function DoiSong() {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -201,10 +429,9 @@ export default function DoiSong() {
     timelineRef.current.scrollLeft = scrollLeftVal.current - walk;
   };
 
-
   const scrollTimeline = (direction) => {
     if (timelineRef.current) {
-      const scrollAmount = 370; // Card width + gap
+      const scrollAmount = 370;
       timelineRef.current.scrollBy({
         left: direction === 'next' ? scrollAmount : -scrollAmount,
         behavior: 'smooth'
@@ -212,7 +439,6 @@ export default function DoiSong() {
     }
   };
 
-  // Lock body scroll when modal is open
   useEffect(() => {
     if (selectedPost) {
       document.body.style.overflow = 'hidden';
@@ -224,7 +450,6 @@ export default function DoiSong() {
     };
   }, [selectedPost]);
 
-  // Handle escape key to close modal
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') setSelectedPost(null);
@@ -239,7 +464,7 @@ export default function DoiSong() {
 
       <main className="student-life-main" style={{ padding: 0 }}>
         
-        {/* BLOCK 1: Hero Section - Dark Navy Background - Proportional Height (45vh) */}
+        {/* BLOCK 1: Hero Section */}
         <section 
           className="student-life-hero-section" 
           style={{ 
@@ -254,7 +479,6 @@ export default function DoiSong() {
             overflow: 'hidden'
           }}
         >
-          {/* Subtle cyan aurora glow in background */}
           <div style={{
             position: 'absolute',
             width: '600px',
@@ -272,7 +496,7 @@ export default function DoiSong() {
               TRẢI NGHIỆM FAI
             </span>
             <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.15', marginTop: '20px', fontFamily: 'var(--font-sans)' }}>
-              Đời Sống Sinh Viên
+              Đời sống sinh viên
             </h1>
             <p style={{ maxWidth: '650px', color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: '1.75', marginTop: '25px' }}>
               Vượt qua giới hạn phòng học — tại FAI, cuộc sống sinh viên là chuỗi ngày rực rỡ sắc màu với các câu lạc bộ thực chiến, sự kiện teambuilding sôi động và cơ hội kiến tập doanh nghiệp từ sớm.
@@ -280,7 +504,7 @@ export default function DoiSong() {
           </div>
         </section>
 
-        {/* BLOCK 2: Một Ngày Của Sinh Viên FAI - Light Cream Background - Proportional Height (75vh) */}
+        {/* BLOCK 2: Một ngày của sinh viên FAI */}
         <section 
           className="student-life-timeline-section" 
           style={{ 
@@ -300,16 +524,14 @@ export default function DoiSong() {
                 DAILY ROUTINE
               </span>
               <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
-                Một Ngày Của Sinh Viên FAI
+                Một ngày của sinh viên FAI
               </h2>
               <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '20px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.7' }}>
                 Khám phá lịch trình học tập thực chiến đầy năng động và thú vị của sinh viên tại Viện Đào Tạo Quốc Tế FPT.
               </p>
             </div>
 
-            {/* Horizontal Timeline Outer Wrapper with Navigation Arrows */}
             <div style={{ position: 'relative', width: '100%', padding: '0 10px' }}>
-              {/* Left Arrow Button */}
               <button 
                 onClick={() => scrollTimeline('prev')}
                 style={{
@@ -331,20 +553,11 @@ export default function DoiSong() {
                   color: 'var(--secondary)',
                   transition: 'all 0.3s ease',
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--primary)';
-                  e.currentTarget.style.color = '#ffffff';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#ffffff';
-                  e.currentTarget.style.color = 'var(--secondary)';
-                }}
                 aria-label="Previous timeline slide"
               >
                 <ChevronLeft size={20} strokeWidth={2.5} />
               </button>
 
-              {/* Horizontal Timeline Wrapper */}
               <div 
                 ref={timelineRef}
                 className="horizontal-timeline-wrapper" 
@@ -364,7 +577,6 @@ export default function DoiSong() {
                 onPointerLeave={handlePointerLeave}
                 onPointerUp={handlePointerUp}
                 onPointerMove={handlePointerMove}
-
               >
                 {dailyTimeline.map((item, idx) => (
                   <div 
@@ -379,7 +591,7 @@ export default function DoiSong() {
                       padding: '28px',
                       boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
                       transition: 'all 0.3s ease',
-                      pointerEvents: isGrabbing ? 'none' : 'auto' // Prevent image dragging issues
+                      pointerEvents: isGrabbing ? 'none' : 'auto'
                     }}
                   >
                     <span 
@@ -406,7 +618,7 @@ export default function DoiSong() {
                         overflow: 'hidden', 
                         marginBottom: '20px',
                         boxShadow: '0 5px 15px rgba(0,0,0,0.05)',
-                        pointerEvents: 'none' // Prevent browser image drag
+                        pointerEvents: 'none'
                       }}
                     >
                       <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} className="timeline-img" />
@@ -422,7 +634,6 @@ export default function DoiSong() {
                 ))}
               </div>
 
-              {/* Right Arrow Button */}
               <button 
                 onClick={() => scrollTimeline('next')}
                 style={{
@@ -444,97 +655,20 @@ export default function DoiSong() {
                   color: 'var(--secondary)',
                   transition: 'all 0.3s ease',
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--primary)';
-                  e.currentTarget.style.color = '#ffffff';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#ffffff';
-                  e.currentTarget.style.color = 'var(--secondary)';
-                }}
                 aria-label="Next timeline slide"
               >
                 <ChevronRight size={20} strokeWidth={2.5} />
               </button>
             </div>
-
           </div>
         </section>
 
-        {/* BLOCK 3: Activities & Clubs - Dark Gray/Black Background - Proportional Height (75vh) */}
-        <section 
-          className="student-life-activities-section" 
-          style={{ 
-            padding: '100px 0',
-            backgroundColor: '#070a10',
-            color: '#ffffff',
-            minHeight: '75vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center'
-          }}
-        >
-          <div className="container">
-            <div className="section-header-centered" style={{ textAlign: 'center', marginBottom: '50px' }}>
-              <span className="section-eyebrow" style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.2em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>
-                ACTIVITIES & CLUBS
-              </span>
-              <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: '#ffffff', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
-                Hoạt Động &amp; Trải Nghiệm Sinh Viên
-              </h2>
-              <p style={{ color: 'rgba(255,255,255,0.6)', maxWidth: '600px', margin: '20px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.7' }}>
-                Học đi đôi với hành cùng các sân chơi học thuật chuyên sâu và ngày hội trải nghiệm liên tục suốt học kỳ.
-              </p>
-            </div>
+        {/* 5 CATEGORY BLOCKS (Lễ tốt nghiệp, Doanh nghiệp, Nhỏ to cùng chia sẻ, Sân chơi & giải thưởng, FAI & cộng đồng) */}
+        {categoryBlocks.map((block) => (
+          <CategoryBlockItem key={block.id} block={block} onSelectPost={setSelectedPost} />
+        ))}
 
-            {/* Grid of posts */}
-            <div className="activities-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
-              {activities.map((act) => (
-                <div 
-                  key={act.id} 
-                  className="activity-grid-card"
-                  onClick={() => setSelectedPost(act)}
-                  style={{
-                    background: 'rgba(255,255,255,0.02)',
-                    border: '1px solid rgba(255,255,255,0.06)',
-                    borderRadius: '16px',
-                    overflow: 'hidden',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-                  }}
-                >
-                  <div className="activity-card-image" style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
-                    <Image src={act.image} alt={act.title} fill style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }} className="act-img" />
-                    <span className="activity-card-cat" style={{ position: 'absolute', top: '15px', left: '15px', background: 'rgba(7,10,16,0.85)', padding: '5px 12px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', border: '1px solid rgba(255,255,255,0.08)' }}>
-                      {act.category}
-                    </span>
-                  </div>
-                  
-                  <div className="activity-card-body" style={{ padding: '30px', display: 'flex', flexDirection: 'column', gap: '14px', flexGrow: 1 }}>
-                    <span className="activity-card-date" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <Calendar size={14} />
-                      {act.date}
-                    </span>
-                    <h3 className="activity-card-title" style={{ fontSize: '1.2rem', fontWeight: 800, lineHeight: '1.5', color: '#ffffff', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '54px', fontFamily: 'var(--font-sans)' }}>
-                      {act.title}
-                    </h3>
-                    <p className="activity-card-excerpt" style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.65', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '44px' }}>
-                      {act.excerpt}
-                    </p>
-                    <span className="activity-card-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', marginTop: '10px' }}>
-                      Xem chi tiết <ArrowRight size={14} />
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* BLOCK 4: Support Hotline CTA - White Background - Compact Height */}
+        {/* Support Hotline CTA */}
         <section 
           className="student-life-cta-section" 
           style={{ 
@@ -559,146 +693,108 @@ export default function DoiSong() {
             <p style={{ maxWidth: '650px', color: 'var(--text-muted)', margin: '0 auto 30px auto', fontSize: '1.05rem', lineHeight: '1.75' }}>
               Hãy đăng ký tham gia các hoạt động Campus Tour, lớp học thử miễn phí hoặc liên hệ ngay hotline hỗ trợ tuyển sinh để được giải đáp mọi thắc mắc.
             </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-              <Link 
-                href="/lien-he" 
-                className="cta-btn-dark"
-                style={{ 
-                  display: 'inline-flex', 
-                  alignItems: 'center', 
-                  gap: '8px', 
-                  background: '#0D2137', 
-                  color: '#ffffff', 
-                  padding: '16px 36px', 
-                  borderRadius: '50px', 
-                  fontWeight: 700, 
-                  boxShadow: '0 10px 30px rgba(13,33,55,0.1)',
-                  transition: 'all 0.3s ease'
-                }}
-              >
-                Liên hệ ngay <ArrowRight size={18} />
+            <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/tuyen-sinh" className="btn btn-primary" style={{ padding: '14px 32px', fontSize: '1rem' }}>
+                Đăng ký tư vấn ngay
               </Link>
-              <a 
-                href="tel:19006000" 
-                className="cta-btn-outline-dark"
-                style={{ 
-                  display: 'inline-flex', 
-                  alignItems: 'center', 
-                  gap: '8px', 
-                  background: 'transparent', 
-                  color: 'var(--secondary)', 
-                  padding: '16px 36px', 
-                  borderRadius: '50px', 
-                  fontWeight: 700, 
-                  border: '2px solid var(--secondary)',
-                  transition: 'all 0.3s ease'
-                }}
-              >
-                Hotline: 1900 6000
+              <a href="tel:0983883883" className="btn btn-secondary" style={{ padding: '14px 32px', fontSize: '1rem', background: '#F8F5F0', color: 'var(--secondary)' }}>
+                Hotline: 0983 883 883
               </a>
             </div>
           </div>
         </section>
 
-        {/* Thăng Long popup overlay modal #popup-showContentPost */}
-        {selectedPost && (
+      </main>
+
+      {/* ARTICLE DETAIL MODAL */}
+      {selectedPost && (
+        <div 
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px',
+            backgroundColor: 'rgba(5, 12, 26, 0.85)',
+            backdropFilter: 'blur(8px)',
+            animation: 'fadeInUp 0.3s ease'
+          }}
+          onClick={() => setSelectedPost(null)}
+        >
           <div 
-            className="student-life-modal-overlay"
-            onClick={() => setSelectedPost(null)}
             style={{
-              position: 'fixed',
-              inset: 0,
-              backgroundColor: 'rgba(5, 7, 12, 0.85)',
-              backdropFilter: 'blur(12px)',
+              backgroundColor: '#ffffff',
+              color: '#1a2332',
+              borderRadius: '24px',
+              maxWidth: '850px',
+              width: '100%',
+              maxHeight: '90vh',
+              overflowY: 'auto',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)',
+              position: 'relative',
               display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              zIndex: 2000,
-              padding: '20px'
+              flexDirection: 'column'
             }}
+            onClick={(e) => e.stopPropagation()}
           >
+            {/* Modal Header Bar */}
             <div 
-              className="student-life-modal-box"
-              onClick={(e) => e.stopPropagation()}
               style={{
-                width: '100%',
-                maxWidth: '900px',
-                maxHeight: '90vh',
+                padding: '20px 30px',
+                borderBottom: '1px solid rgba(0,0,0,0.06)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                position: 'sticky',
+                top: 0,
                 backgroundColor: '#ffffff',
-                border: '1px solid rgba(0,0,0,0.08)',
-                borderRadius: '20px',
-                overflowY: 'auto',
-                position: 'relative',
-                boxShadow: '0 25px 60px rgba(0,0,0,0.2)',
-                color: '#1a2332',
-                animation: 'modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+                zIndex: 10
               }}
             >
-              
-              {/* Sticky Close Button */}
+              <span style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--primary)', letterSpacing: '0.1em' }}>
+                {selectedPost.date}
+              </span>
               <button 
-                className="modal-close-btn"
                 onClick={() => setSelectedPost(null)}
-                aria-label="Close dialog"
                 style={{
-                  position: 'absolute',
-                  top: '20px',
-                  right: '20px',
-                  width: '40px',
-                  height: '40px',
+                  background: '#f1f5f9',
+                  border: 'none',
                   borderRadius: '50%',
-                  backgroundColor: 'rgba(0,0,0,0.05)',
-                  border: '1px solid rgba(0,0,0,0.1)',
-                  color: '#1a2332',
+                  width: '36px',
+                  height: '36px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  zIndex: 10
+                  color: 'var(--secondary)',
+                  transition: 'all 0.2s ease'
                 }}
               >
-                <X size={20} />
+                <X size={18} />
               </button>
+            </div>
 
-              {/* Modal Body Header */}
-              <div className="modal-header-block" style={{ padding: '60px 50px 30px 50px', borderBottom: '1px solid rgba(0,0,0,0.05)', backgroundColor: '#F8F5F0' }}>
-                <span className="modal-badge" style={{ display: 'inline-block', background: 'rgba(232,116,30,0.08)', border: '1px solid rgba(232,116,30,0.15)', padding: '4px 12px', borderRadius: '50px', fontSize: '0.75rem', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', marginBottom: '20px' }}>
-                  {selectedPost.category}
-                </span>
-                <h2 className="modal-title" style={{ fontSize: 'clamp(1.4rem, 3.5vw, 2rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.3', margin: 0, fontFamily: 'var(--font-sans)' }}>
-                  {selectedPost.title}
-                </h2>
-                <div className="modal-meta" style={{ display: 'flex', gap: '20px', marginTop: '20px', fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Calendar size={14} />
-                    Đăng ngày {selectedPost.date}
-                  </span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Clock size={14} />
-                    Thời gian đọc: 3 phút
-                  </span>
-                </div>
-              </div>
-
-              {/* Modal Banner Image */}
-              <div className="modal-image-wrapper" style={{ position: 'relative', width: '100%', height: '400px' }}>
+            {/* Modal Content */}
+            <div style={{ padding: '30px 40px 40px 40px' }}>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.3', marginBottom: '20px', fontFamily: 'var(--font-sans)' }}>
+                {selectedPost.title}
+              </h2>
+              
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', borderRadius: '16px', overflow: 'hidden', marginBottom: '30px' }}>
                 <Image src={selectedPost.image} alt={selectedPost.title} fill style={{ objectFit: 'cover' }} />
               </div>
 
-              {/* Modal Detailed HTML Content */}
-              <div className="modal-content-rich" style={{ padding: '50px', color: '#334155', fontSize: '1.05rem', lineHeight: '1.8' }}>
-                <div 
-                  className="rich-editorial-content"
-                  dangerouslySetInnerHTML={{ __html: selectedPost.contentHtml }} 
-                />
-              </div>
-
+              <div 
+                className="article-body-html"
+                style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#334155' }}
+                dangerouslySetInnerHTML={{ __html: selectedPost.contentHtml || `<p>${selectedPost.excerpt}</p>` }}
+              />
             </div>
           </div>
-        )}
-
-      </main>
+        </div>
+      )}
 
       <Footer />
     </div>

@@ -9,7 +9,7 @@ const slides = [
   {
     image: '/fai_graduation_crowd.png',
     video: '/videos/intro.mp4',
-    logo: '/logo_fpt_fai.png',
+    logo: null,
     eyebrow: 'Khoảnh khắc Vinh quang & Đáng nhớ',
     title: 'LỄ TỐT NGHIỆP CỦA SINH VIÊN FAI',
     desc: 'Chúc mừng các tân khoa đã hoàn thành xuất sắc chặng đường chinh phục tri thức tại FPT Academy International.',
@@ -131,15 +131,17 @@ export default function HeroSlider() {
 
             <div className="slide-content container">
               <div className="slide-text-box-premium">
-                <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', height: '84px' }}>
-                  <Image 
-                    src={slide.logo} 
-                    alt={`${slide.title} Logo`} 
-                    width={320} 
-                    height={84} 
-                    style={{ objectFit: 'contain', height: '100%', width: 'auto', maxWidth: '340px' }} 
-                  />
-                </div>
+                {slide.logo && (
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', height: '84px' }}>
+                    <Image 
+                      src={slide.logo} 
+                      alt={`${slide.title} Logo`} 
+                      width={320} 
+                      height={84} 
+                      style={{ objectFit: 'contain', height: '100%', width: 'auto', maxWidth: '340px' }} 
+                    />
+                  </div>
+                )}
                 <span className="slide-eyebrow-premium" style={{ borderLeftColor: slide.color }}>
                   {slide.eyebrow}
                 </span>

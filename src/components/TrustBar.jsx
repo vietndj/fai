@@ -22,12 +22,12 @@ export default function TrustBar() {
         <div className="trust-divider" />
         <div className="trust-item trust-item--highlight">
           <span className="trust-years">27</span>
-          <span>Năm Dẫn Đầu Phát Triển<br/><small>Nhân Lực Công Nghệ & Sáng Tạo</small></span>
+          <span>năm dẫn đầu phát triển<br/><small>nhân lực công nghệ & sáng tạo</small></span>
         </div>
         <div className="trust-divider" />
         <div className="trust-item">
           <Link href="/tuyen-sinh" className="trust-cta-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-            Đăng Ký Tư Vấn Miễn Phí <ArrowRight size={18} />
+            Đăng ký tư vấn miễn phí <ArrowRight size={18} />
           </Link>
         </div>
       </div>
