@@ -1450,6 +1450,7 @@ img {
   align-items: flex-start;
   gap: 28px;
   position: relative;
+  padding-bottom: 24px; /* Push animated underline down to prevent text overlap */
 }
 
 .prog-beau-num {
