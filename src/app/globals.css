@@ -1520,15 +1520,14 @@ img {
   transform: translateX(6px);
 }
 
-/* Animated underline */
+/* Animated underline - 1px thin matching right grey line and raised up to level */
 .prog-beau-line {
   position: absolute;
-  bottom: -1px;
+  bottom: 24px;
   left: 0;
-  height: 2px;
+  height: 1px;
   width: 0%;
   transition: width 0.55s cubic-bezier(0.16,1,0.3,1);
-  border-radius: 1px;
 }
 
 .prog-beau-item:hover .prog-beau-line { width: 100%; }
