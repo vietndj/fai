@@ -745,11 +745,11 @@ export default function VeFai() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Các phân hệ đào tạo" /></h2>
             </div>
 
-            {/* 5 Equal Program Blocks Grid */}
+            {/* 5 Equal Program Cards (Logo + Title + SubTitle ONLY) */}
             <div 
               style={{ 
                 display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
                 gap: '24px',
                 alignItems: 'stretch' 
               }}
@@ -760,45 +760,34 @@ export default function VeFai() {
                   className="program-list-card"
                   style={{ 
                     background: '#F8F5F0', 
-                    border: '1px solid rgba(0,0,0,0.04)', 
-                    borderRadius: '16px', 
-                    padding: '32px 24px',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.01)',
+                    border: '1px solid rgba(13, 33, 55, 0.05)', 
+                    borderRadius: '20px', 
+                    padding: '36px 28px',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    height: '100%',
-                    transition: 'all 0.3s ease'
+                    alignItems: 'flex-start',
+                    justifyContent: 'center',
+                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                   }}
                 >
-                  <div>
-                    <div 
-                      style={{ 
-                        height: '56px', 
-                        display: 'flex',
-                        alignItems: 'center',
-                        marginBottom: '20px',
-                        position: 'relative'
-                      }}
-                    >
-                      <Image src={prog.logo} alt={prog.title} width={240} height={56} style={{ objectFit: 'contain', objectPosition: 'left center', width: 'auto', height: '100%' }} />
-                    </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '4px', fontFamily: 'var(--font-sans)' }}>
-                      {prog.title}
-                    </h3>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.04em' }}>
-                      {prog.subTitle}
-                    </span>
+                  <div 
+                    style={{ 
+                      height: '60px', 
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginBottom: '20px',
+                      position: 'relative'
+                    }}
+                  >
+                    <Image src={prog.logo} alt={prog.title} width={240} height={60} style={{ objectFit: 'contain', objectPosition: 'left center', width: 'auto', height: '100%' }} />
                   </div>
-                  
-                  <ul style={{ marginTop: '28px', borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    {prog.items.map((item, i) => (
-                      <li key={i} style={{ fontSize: '0.88rem', color: 'var(--text-dark)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: prog.color, flexShrink: 0 }}></span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '6px', fontFamily: 'var(--font-sans)' }}>
+                    {prog.title}
+                  </h3>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.04em' }}>
+                    {prog.subTitle}
+                  </span>
                 </div>
               ))}
             </div>
