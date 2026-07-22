@@ -17,44 +17,44 @@ const historyTimeline = [
   },
   {
     year: '2004',
-    title: 'TIÊN PHONG KHÁI NIỆM VỀ MULTIMEDIA TẠI VIỆT NAM',
+    title: 'Tiên phong khái niệm về Multimedia tại Việt Nam',
     desc: 'FPT Arena Multimedia là đơn vị tiên phong đưa và định hình khái niệm Multimedia – Mỹ thuật đa phương tiện tại Việt Nam. Trải qua hơn 20 năm phát triển, FPT Arena kế thừa văn hóa giáo dục của Tổ chức Giáo dục FPT và chuẩn đào tạo quốc tế của Tập đoàn Aptech (Ấn Độ), kiên định đào tạo gắn với thực tiễn, xây dựng đội ngũ giảng viên giàu kinh nghiệm và mạng lưới hợp tác quốc tế, góp phần hình thành thế hệ nhân lực sáng tạo cho ngành công nghiệp nội dung số Việt Nam.'
   },
   {
     year: '2011',
-    title: 'CHUẨN HÓA ĐÀO TẠO QUẢN TRỊ VÀ AN NINH MẠNG',
+    title: 'Chuẩn hóa đào tạo quản trị và an ninh mạng',
     desc: 'Chương trình đào tạo Quản trị và An ninh mạng FPT Jetking được thành lập từ sự hợp tác giữa FAI và tập đoàn Jetking (Ấn Độ) – một trong những học viện đào tạo An ninh mạng và Cloud hàng đầu với hơn 75 năm kinh nghiệm và 1 triệu học viên toàn cầu, mang các chương trình đào tạo công nghệ thông tin theo chuẩn quốc tế về Việt Nam.'
   },
   {
     year: '2018',
-    title: 'BỆ PHÓNG DIGITAL MARKETING SỐ TOÀN DIỆN',
+    title: 'Bệ phóng Digital Marketing số toàn diện',
     desc: 'Chương trình đào tạo Digital Marketing FPT Skillking chính thức ra mắt vào năm 2018, là hệ thống đào tạo chuyên sâu về Digital Marketing đầu tiên tại Việt Nam, cung cấp chương trình Full-Stack Digital Marketing theo chuẩn quốc tế, góp phần đào tạo nguồn nhân lực chất lượng cao cho doanh nghiệp trong và ngoài nước.'
   },
   {
     year: '2019',
-    title: 'KHAI PHÁ KỶ NGUYÊN INTERNET OF THINGS',
+    title: 'Khai phá kỷ nguyên Internet of Things',
     desc: 'FPT Coking chính thức ra mắt, là kết quả hợp tác giữa FAI và Tập đoàn Jetking (Ấn Độ), triển khai đào tạo chuyên sâu Internet of Things (IoT) theo chuẩn quốc tế. FPT Coking trở thành học viện IoT đầu tiên tại Việt Nam cấp bằng quốc tế, góp phần phát triển nguồn nhân lực chất lượng cao cho kỷ nguyên công nghiệp 4.0.'
   },
   {
     year: '2022',
-    title: 'ƯƠM MẦM NĂNG LỰC TƯƠNG LAI',
+    title: 'Ươm mầm năng lực tương lai',
     desc: 'Thành lập FPT AfterSchool – hệ thống đào tạo kỹ năng học đường dành cho học sinh từ 10 đến 18 tuổi, tập trung khai phá tư duy và phát triển kỹ năng trên nền tảng công nghệ, hướng tới thế hệ công dân tương lai. Ngay từ những ngày đầu, FAS nhất quán theo đuổi triết lý giáo dục của FPT Education: “Giáo dục đào tạo là tổ chức và quản trị việc tự học của người học” , lấy người học làm trung tâm của quá trình phát triển.'
   },
   {
     year: '2025',
     tag: 'Đào tạo Vi mạch',
-    title: 'BƯỚC CHÂN VÀO KỶ NGUYÊN BÁN DẪN',
+    title: 'Bước chân vào kỷ nguyên bán dẫn',
     desc: 'FAI tiếp tục khẳng định vai trò tiên phong khi mở rộng đào tạo Thiết kế vi mạch bán dẫn FPT Jetking, một trong những ngành công nghiệp lõi của kỷ nguyên công nghệ. Sự ra mắt chương trình đào tạo này không chỉ mở ra hướng đi mới mà còn đánh dấu bước tiến quan trọng trong chiến lược phát triển nhân lực bán dẫn tại Việt Nam.'
   },
   {
     year: '2025',
     tag: 'Tháng 02/2025',
-    title: 'DẪN LỐI CÔNG NGHỆ MŨI NHỌN & TỰ ĐỘNG HÓA',
+    title: 'Dẫn lối công nghệ mũi nhọn & tự động hóa',
     desc: 'Tháng 02/2025, Tập đoàn FPT hợp tác cùng Cranes Varsity ra mắt hai chương trình đào tạo theo chuẩn quốc tế đầu tiên tại Việt Nam: Phát triển phần mềm ô tô thông minh FPT Cranes và Khoa học Dữ liệu FPT Cranes, góp phần đào tạo nguồn nhân lực chất lượng cao cho ngành ô tô thông minh và dữ liệu.\n\nSong song đó, chương trình AI Agent – FPT Jetking chính thức triển khai, kết hợp năng lực công nghệ của Tập đoàn FPT và kinh nghiệm đào tạo quốc tế của Tập đoàn Jetking (Ấn Độ), hướng tới đào tạo nhân lực làm chủ Trí tuệ Nhân tạo và tự động hóa trong kỷ nguyên số.'
   },
   {
     year: '2026',
-    title: 'BÁM SÁT CHIẾN LƯỢC TẬP ĐOÀN, DẪN LỐI ĐÀO TẠO THỰC CHIẾN',
+    title: 'Bám sát chiến lược tập đoàn, dẫn lối đào tạo thực chiến',
     desc: 'Bám sát chiến lược công nghệ của Tập đoàn FPT với AI là trung tâm, và 5 trụ cột Trí tuệ nhân tạo – Bán dẫn – Xe thông minh – Chuyển đổi số – Chuyển đổi xanh, FAI cho ra mắt 3 chương trình đào tạo trọng điểm: Phát triển phần mềm ứng dụng FPT Cranes, Công nghệ tài chính FPT cranes & Thiết kế và vận hành hệ thống Drone FPT Cranes góp phần đào tạo nguồn nhân lực công nghệ chất lượng cao cho các lĩnh vực mũi nhọn của tập đoàn.'
   }
 ];
@@ -152,7 +152,7 @@ export default function VeFai() {
   const [activeTimelineIdx, setActiveTimelineIdx] = useState(0);
   const statsRef = useRef(null);
 
-  const fullText1 = "Viện Đào tạo Quốc tế FPT";
+  const fullText1 = "Viện đào tạo quốc tế FPT";
   const fullText2 = "FPT ACADEMY INTERNATIONAL";
 
   useEffect(() => {
@@ -437,7 +437,7 @@ export default function VeFai() {
           </div>
         </section>
 
-        {/* SECTION 4: VinUni-Style Interactive Timeline */}
+        {/* SECTION 4: High-Tech Futuristic Cyber Timeline */}
         <section 
           className="about-history-section" 
           style={{ 
@@ -448,47 +448,59 @@ export default function VeFai() {
             overflow: 'hidden'
           }}
         >
-          {/* Subtle dot overlay */}
+          {/* Subtle tech grid background */}
           <div style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: 'radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(rgba(232, 116, 30, 0.06) 1px, transparent 1px)',
             backgroundSize: '24px 24px',
             pointerEvents: 'none',
             zIndex: 0
           }} />
 
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            {/* Header */}
+            {/* Section Header */}
             <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 60px auto' }}>
-              <span className="section-eyebrow" style={{ color: '#f37021', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
-                HÀNH TRÌNH PHÁT TRIỂN
+              <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em' }}>
+                Hành trình phát triển
               </span>
               <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-                <ScrollTypewriter text="NHỮNG CỘT MỐC LỊCH SỬ FAI" />
+                <ScrollTypewriter text="Những cột mốc lịch sử FAI" />
               </h2>
               <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.02rem', lineHeight: '1.75', marginTop: '15px' }}>
                 Hơn 27 năm kiên định tiên phong đặt nền móng và định hình đào tạo công nghệ, mỹ thuật đa phương tiện &amp; kỹ năng thế hệ mới tại Việt Nam.
               </p>
             </div>
 
-            {/* VinUni Horizontal Timeline Bar */}
+            {/* High-Tech Cyber Timeline Bar */}
             <div className="vinuni-timeline-axis-wrap" style={{ position: 'relative', margin: '50px 0 70px 0', padding: '20px 0' }}>
-              {/* Horizontal Axis Line */}
+              {/* Horizontal Connecting Beam */}
               <div 
                 style={{
                   position: 'absolute',
-                  top: '40%',
+                  top: '32px',
                   left: '40px',
                   right: '40px',
-                  height: '2px',
+                  height: '3px',
                   backgroundColor: 'rgba(255, 255, 255, 0.12)',
-                  transform: 'translateY(-50%)',
+                  borderRadius: '3px',
                   zIndex: 0
                 }} 
-              />
+              >
+                {/* Active Orange Progress Line */}
+                <div 
+                  style={{
+                    height: '100%',
+                    width: `${(activeTimelineIdx / (historyTimeline.length - 1)) * 100}%`,
+                    background: 'linear-gradient(90deg, var(--primary) 0%, #ff9e42 100%)',
+                    borderRadius: '3px',
+                    boxShadow: '0 0 12px var(--primary)',
+                    transition: 'width 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
+                  }}
+                />
+              </div>
 
-              {/* Timeline Nodes Container */}
+              {/* High-Tech Node Pills Container */}
               <div 
                 className="vinuni-timeline-nodes-scroll"
                 style={{
@@ -498,8 +510,8 @@ export default function VeFai() {
                   position: 'relative',
                   zIndex: 1,
                   overflowX: 'auto',
-                  padding: '10px 20px',
-                  gap: '24px',
+                  padding: '10px 10px 20px 10px',
+                  gap: '16px',
                   scrollbarWidth: 'none'
                 }}
               >
@@ -509,7 +521,6 @@ export default function VeFai() {
                     <button
                       key={idx}
                       onClick={() => setActiveTimelineIdx(idx)}
-                      className={`vinuni-node-btn ${isActive ? 'active' : ''}`}
                       style={{
                         background: 'none',
                         border: 'none',
@@ -518,50 +529,62 @@ export default function VeFai() {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        gap: '14px',
+                        gap: '10px',
                         flexShrink: 0,
                         outline: 'none',
                         transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                       }}
                     >
-                      {/* Diamond Node Box */}
+                      {/* Cyber Node Pill */}
                       <div 
                         style={{
-                          width: isActive ? '58px' : '44px',
-                          height: isActive ? '58px' : '44px',
-                          transform: 'rotate(45deg)',
-                          backgroundColor: isActive ? '#f37021' : '#0d1d30',
-                          border: isActive ? '3px solid #ffffff' : '2px solid rgba(255, 255, 255, 0.25)',
-                          boxShadow: isActive ? '0 0 24px rgba(243, 112, 33, 0.65)' : '0 2px 8px rgba(0,0,0,0.2)',
+                          padding: isActive ? '10px 22px' : '8px 16px',
+                          borderRadius: '30px',
+                          backgroundColor: isActive ? 'var(--primary)' : 'rgba(13, 29, 48, 0.85)',
+                          border: isActive ? '2px solid #ffffff' : '1px solid rgba(255, 255, 255, 0.18)',
+                          boxShadow: isActive ? '0 0 25px rgba(232, 116, 30, 0.75), 0 0 50px rgba(232, 116, 30, 0.3)' : '0 4px 12px rgba(0,0,0,0.3)',
                           display: 'flex',
                           alignItems: 'center',
-                          justifyContent: 'center',
-                          transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                          gap: '8px',
+                          transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                          backdropFilter: 'blur(8px)'
                         }}
                       >
-                        {/* Text inside Diamond (counter rotated) */}
                         <span 
                           style={{
-                            transform: 'rotate(-45deg)',
-                            fontSize: isActive ? '0.92rem' : '0.82rem',
-                            fontWeight: isActive ? 900 : 700,
-                            color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.7)',
-                            whiteSpace: 'nowrap'
+                            width: isActive ? '8px' : '6px',
+                            height: isActive ? '8px' : '6px',
+                            borderRadius: '50%',
+                            backgroundColor: isActive ? '#ffffff' : 'rgba(255,255,255,0.4)',
+                            boxShadow: isActive ? '0 0 8px #ffffff' : 'none'
+                          }} 
+                        />
+                        <span 
+                          style={{
+                            fontSize: isActive ? '0.95rem' : '0.85rem',
+                            fontWeight: isActive ? 850 : 700,
+                            color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.75)',
+                            whiteSpace: 'nowrap',
+                            letterSpacing: '0.05em'
                           }}
                         >
                           {item.year}
                         </span>
                       </div>
 
-                      {/* Tag below if exists */}
+                      {/* Tag pill below */}
                       {item.tag && (
                         <span style={{
                           fontSize: '0.7rem',
-                          fontWeight: 700,
-                          color: isActive ? '#f37021' : 'rgba(255, 255, 255, 0.45)',
+                          fontWeight: 800,
+                          color: isActive ? 'var(--primary)' : 'rgba(255, 255, 255, 0.5)',
                           textTransform: 'uppercase',
-                          letterSpacing: '0.04em',
-                          whiteSpace: 'nowrap'
+                          letterSpacing: '0.05em',
+                          whiteSpace: 'nowrap',
+                          backgroundColor: isActive ? 'rgba(232, 116, 30, 0.15)' : 'rgba(255, 255, 255, 0.04)',
+                          border: isActive ? '1px solid rgba(232, 116, 30, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
+                          padding: '2px 8px',
+                          borderRadius: '12px'
                         }}>
                           {item.tag}
                         </span>
@@ -572,41 +595,40 @@ export default function VeFai() {
               </div>
             </div>
 
-            {/* Content Card Box Below */}
+            {/* Futuristic Glassmorphism Card */}
             <div 
-              className="vinuni-content-card"
               style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                backgroundColor: 'rgba(13, 29, 48, 0.65)',
+                border: '1px solid rgba(232, 116, 30, 0.25)',
                 borderRadius: '24px',
-                padding: '50px 45px',
-                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.3)',
+                padding: '45px',
+                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(232, 116, 30, 0.05)',
                 position: 'relative',
                 transition: 'all 0.35s ease',
                 minHeight: '280px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                backdropFilter: 'blur(10px)'
+                backdropFilter: 'blur(12px)'
               }}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px', flexWrap: 'wrap', gap: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                     <span style={{ 
                       fontSize: '2rem', 
                       fontWeight: 900, 
-                      color: '#f37021', 
+                      color: 'var(--primary)', 
                       fontFamily: 'var(--font-sans)',
                       letterSpacing: '-0.02em'
                     }}>
-                      Cột Mốc {historyTimeline[activeTimelineIdx].year}
+                      Cột mốc {historyTimeline[activeTimelineIdx].year}
                     </span>
                     {historyTimeline[activeTimelineIdx].tag && (
                       <span style={{
-                        backgroundColor: 'rgba(243, 112, 33, 0.15)',
-                        color: '#f37021',
-                        border: '1px solid rgba(243, 112, 33, 0.3)',
+                        backgroundColor: 'rgba(232, 116, 30, 0.15)',
+                        color: 'var(--primary)',
+                        border: '1px solid rgba(232, 116, 30, 0.3)',
                         fontSize: '0.8rem',
                         fontWeight: 800,
                         padding: '4px 14px',
@@ -617,7 +639,7 @@ export default function VeFai() {
                     )}
                   </div>
 
-                  <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'rgba(255, 255, 255, 0.45)' }}>
+                  <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'rgba(255, 255, 255, 0.5)' }}>
                     Cột mốc {activeTimelineIdx + 1} / {historyTimeline.length}
                   </span>
                 </div>
@@ -629,15 +651,14 @@ export default function VeFai() {
                   marginBottom: '20px', 
                   lineHeight: '1.4',
                   fontFamily: 'var(--font-sans)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.02em'
+                  letterSpacing: '-0.01em'
                 }}>
                   {historyTimeline[activeTimelineIdx].title}
                 </h3>
 
                 <p style={{ 
                   fontSize: '1.02rem', 
-                  color: 'rgba(255, 255, 255, 0.82)', 
+                  color: 'rgba(255, 255, 255, 0.85)', 
                   lineHeight: '1.85', 
                   margin: 0,
                   whiteSpace: 'pre-line'
@@ -646,7 +667,7 @@ export default function VeFai() {
                 </p>
               </div>
 
-              {/* Navigation Buttons */}
+              {/* Navigation Controls */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '40px', paddingTop: '24px', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
                 <button
                   onClick={() => setActiveTimelineIdx(prev => Math.max(0, prev - 1))}
@@ -676,7 +697,7 @@ export default function VeFai() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '8px',
-                    backgroundColor: activeTimelineIdx === historyTimeline.length - 1 ? 'rgba(255, 255, 255, 0.1)' : '#f37021',
+                    backgroundColor: activeTimelineIdx === historyTimeline.length - 1 ? 'rgba(255, 255, 255, 0.1)' : 'var(--primary)',
                     color: '#ffffff',
                     border: 'none',
                     borderRadius: '12px',
