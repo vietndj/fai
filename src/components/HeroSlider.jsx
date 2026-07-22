@@ -7,24 +7,13 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    image: '/banner_hero_fan_final.jpeg',
-    video: '/videos/intro.mp4',
-    logo: null,
-    eyebrow: 'Khoảnh khắc Vinh quang & Đáng nhớ',
-    title: 'LỄ TỐT NGHIỆP CỦA SINH VIÊN FAI',
-    desc: 'Chúc mừng các tân khoa đã hoàn thành xuất sắc chặng đường chinh phục tri thức tại FPT Academy International.',
-    cta1: { text: 'Xem ảnh lễ tốt nghiệp', href: '/tin-tuc#le-tot-nghiep' },
-    slideNum: '01',
-    color: '#f37021',
-  },
-  {
     image: '/banner_hero_aptech.jpeg',
     logo: '/logo_aptech.png',
     eyebrow: 'Hệ thống Đào tạo Lập trình viên Quốc tế',
     title: 'FPT APTECH',
     desc: 'Chương trình chuẩn quốc tế, đào tạo lập trình viên thực chiến đáp ứng nhu cầu tuyển dụng toàn cầu.',
     cta1: { text: 'Tìm hiểu chương trình FPT APTECH', href: '/dao-tao#aptech' },
-    slideNum: '02',
+    slideNum: '01',
     color: '#f37021',
   },
   {
@@ -34,7 +23,7 @@ const slides = [
     title: 'FPT ARENA MULTIMEDIA',
     desc: 'Chạm ngõ sáng tạo cùng cộng đồng mỹ thuật đa phương tiện lớn nhất Việt Nam.',
     cta1: { text: 'Tìm hiểu chương trình FPT ARENA', href: '/dao-tao#arena' },
-    slideNum: '03',
+    slideNum: '02',
     color: '#ffb600',
   },
   {
@@ -44,7 +33,7 @@ const slides = [
     title: 'FPT SKILLKING',
     desc: 'Chương trình đào tạo Full-Stack Digital Marketing thực chiến hàng đầu kết hợp công nghệ hiện đại.',
     cta1: { text: 'Tìm hiểu chương trình FPT SKILLKING', href: '/dao-tao#skillking' },
-    slideNum: '04',
+    slideNum: '03',
     color: '#29a9e1',
   },
   {
@@ -54,7 +43,7 @@ const slides = [
     title: 'FPT JETKING - CHIP DESIGN',
     desc: 'Tiên phong đào tạo thiết kế vi mạch bán dẫn chuẩn quốc tế tại Việt Nam',
     cta1: { text: 'Tìm hiểu chương trình FPT JETKING - CHIP DESIGN', href: '/dao-tao/chip-design' },
-    slideNum: '05',
+    slideNum: '04',
     color: '#ed232a',
   },
   {
@@ -64,8 +53,19 @@ const slides = [
     title: 'FPT JETKING - AI AGENT',
     desc: 'Kiến tạo thế hệ lập trình viên AI Agent làm chủ công nghệ AI, sẵn sàng tạo ra giá trị cho doanh nghiệp trong kỷ nguyên số.',
     cta1: { text: 'Tìm hiểu chương trình FPT JETKING - AI AGENT', href: '/dao-tao/ai-agent' },
-    slideNum: '06',
+    slideNum: '05',
     color: '#ed232a',
+  },
+  {
+    image: '/banner_hero_fan_final.jpeg',
+    video: '/videos/intro.mp4',
+    logo: null,
+    eyebrow: 'Khoảnh khắc Vinh quang & Đáng nhớ',
+    title: 'LỄ TỐT NGHIỆP CỦA SINH VIÊN FAI',
+    desc: 'Chúc mừng các tân khoa đã hoàn thành xuất sắc chặng đường chinh phục tri thức tại FPT Academy International.',
+    cta1: { text: 'Xem ảnh lễ tốt nghiệp', href: '/tin-tuc#le-tot-nghiep' },
+    slideNum: '06',
+    color: '#f37021',
   },
 ];
 
