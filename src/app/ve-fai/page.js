@@ -732,14 +732,14 @@ export default function VeFai() {
                   >
                     <div 
                       style={{ 
-                        height: '42px', 
+                        height: '64px', 
                         display: 'flex',
                         alignItems: 'center',
                         marginBottom: '25px',
                         position: 'relative'
                       }}
                     >
-                      <Image src={prog.logo} alt={prog.title} width={150} height={42} style={{ objectFit: 'contain', width: 'auto', height: '100%' }} />
+                      <Image src={prog.logo} alt={prog.title} width={260} height={64} style={{ objectFit: 'contain', width: 'auto', height: '100%' }} />
                     </div>
                     <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '6px', fontFamily: 'var(--font-sans)' }}>
                       {prog.title}
@@ -778,14 +778,14 @@ export default function VeFai() {
                   >
                     <div 
                       style={{ 
-                        height: '42px', 
+                        height: '64px', 
                         display: 'flex',
                         alignItems: 'center',
                         marginBottom: '25px',
                         position: 'relative'
                       }}
                     >
-                      <Image src={prog.logo} alt={prog.title} width={150} height={42} style={{ objectFit: 'contain', width: 'auto', height: '100%' }} />
+                      <Image src={prog.logo} alt={prog.title} width={260} height={64} style={{ objectFit: 'contain', width: 'auto', height: '100%' }} />
                     </div>
                     <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '6px', fontFamily: 'var(--font-sans)' }}>
                       {prog.title}

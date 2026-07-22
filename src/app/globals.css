@@ -456,7 +456,7 @@ img {
 
 /* Main Navbar */
 .main-nav-container {
-  height: 80px;
+  height: 92px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -1479,6 +1479,11 @@ img {
 .prog-beau-item:hover .prog-beau-logo-wrapper img {
   transform: scale(1.05);
   filter: grayscale(0%) brightness(100%);
+}
+
+.beau-hero-logo svg, .beau-hero-logo img {
+  transform: scale(1.6);
+  transform-origin: left center;
 }
 
 .prog-beau-brand-tag {

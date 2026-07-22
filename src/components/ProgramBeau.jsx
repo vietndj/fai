@@ -143,17 +143,17 @@ export default function ProgramBeau() {
                   <span className="prog-beau-num" style={{ color: prog.color }}>{prog.num}</span>
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '10px', marginBottom: '16px' }}>
-                      <div className="prog-beau-logo-wrapper" style={{ height: '46px', display: 'flex', alignItems: 'center' }}>
+                      <div className="prog-beau-logo-wrapper" style={{ height: '68px', display: 'flex', alignItems: 'center' }}>
                         <Image 
                           src={prog.logo} 
                           alt={prog.brand} 
-                          width={180} 
-                          height={46} 
+                          width={260} 
+                          height={68} 
                           style={{ 
                             objectFit: 'contain', 
                             width: 'auto', 
                             height: '100%', 
-                            maxWidth: '220px' 
+                            maxWidth: '280px' 
                           }} 
                         />
                       </div>

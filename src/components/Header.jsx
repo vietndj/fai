@@ -27,8 +27,8 @@ export default function Header() {
       <div className="main-nav-container">
         <div className="container main-nav-content">
           {/* Logo */}
-          <Link href="/" className="logo" onClick={closeMenu} style={{ display: 'flex', alignItems: 'center', height: '48px', padding: '4px 0' }}>
-            <Image src="/logo_fpt_fai.png" alt="FPT FAI Logo" width={200} height={40} style={{ objectFit: 'contain', height: '100%', width: 'auto' }} />
+          <Link href="/" className="logo" onClick={closeMenu} style={{ display: 'flex', alignItems: 'center', height: '68px', padding: '2px 0' }}>
+            <Image src="/logo_fpt_fai.png" alt="FPT FAI Logo" width={280} height={64} style={{ objectFit: 'contain', height: '100%', width: 'auto' }} />
           </Link>
 
           {/* Desktop Navigation Menu */}
