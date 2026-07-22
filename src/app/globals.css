@@ -526,7 +526,7 @@ img {
 }
 
 .menu-link {
-  padding: 0 20px;
+  padding: 0 16px;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--secondary);
@@ -534,6 +534,7 @@ img {
   display: flex;
   align-items: center;
   position: relative;
+  white-space: nowrap;
 }
 
 .menu-link::after {

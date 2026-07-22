@@ -151,9 +151,6 @@ export default function Header() {
               <li className="menu-item">
                 <Link href="/tin-tuc" className="menu-link">Tin tức - Sự kiện</Link>
               </li>
-              <li className="menu-item">
-                <Link href="/lien-he" className="menu-link">Liên hệ</Link>
-              </li>
             </ul>
           </nav>
 
@@ -252,9 +249,6 @@ export default function Header() {
 
             <li className="mobile-menu-item-single" style={{ padding: '8px 0', borderBottom: '1px solid rgba(13,33,55,0.05)' }}>
               <Link href="/tin-tuc" className="mobile-single-link" style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--secondary)' }} onClick={closeMenu}>Tin tức - Sự kiện</Link>
-            </li>
-            <li className="mobile-menu-item-single" style={{ padding: '8px 0', borderBottom: '1px solid rgba(13,33,55,0.05)' }}>
-              <Link href="/lien-he" className="mobile-single-link" style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--secondary)' }} onClick={closeMenu}>Liên hệ</Link>
             </li>
           </ul>
 
