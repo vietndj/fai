@@ -86,9 +86,9 @@ const programs = [
     num: '05',
     brand: 'FPT JETKING',
     logo: '/logo_jetking.png',
-    titleLine1: 'Kỹ sư',
+    titleLine1: 'Lập trình',
     titleLine2: 'AI Agent',
-    subtitle: 'KỸ SƯ AI AGENT',
+    subtitle: 'KỸ SƯ PHÁT TRIỂN HỆ THỐNG AI AGENT',
     desc: 'Nhu cầu về nhân lực AI Agent đang tăng trưởng từ 35-50% mỗi năm, là nòng cốt của mọi doanh nghiệp trong thời đại mới. AI hiện diện trong chatbot, trợ lý ảo, hệ thống đề xuất, dịch vụ khách hàng tự động và xây dựng các hệ thống đa tác nhân (Multi-Agent System) có thể phối hợp giải quyết các vấn đề phức tạp như con người. Theo dự báo đến năm 2027, AI có thể tạo ra hơn 97 triệu việc làm mới, đặc biệt là các vị trí liên quan đến AI Agent, NLP và học máy.\n\nVới định hướng đào tạo nguồn nhân lực công nghệ theo chuẩn quốc tế, FPT Jetking kế thừa nền tảng đào tạo CNTT của Tập đoàn FPT, triển khai chương trình Lập trình AI Agent giúp học viên tiếp cận các công nghệ AI hiện đại, sẵn sàng thích ứng với nhu cầu nhân lực trong kỷ nguyên trí tuệ nhân tạo.',
     tags: [
       'Lập trình AI Agent',
