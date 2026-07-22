@@ -54,7 +54,7 @@ const programs = [
     titleLine1: 'Digital Marketing',
     titleLine2: 'Ứng dụng AI',
     subtitle: 'ĐÀO TẠO MARKETING SỐ ỨNG DỤNG AI',
-    desc: 'FPT Skillking là hệ thống đào tạo chuyên sâu về Digital Marketing được thành lập năm 2018 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn đào tạo công nghệ Jetking (Ấn Độ), cung cấp chương trình học theo định hướng thực tiễn, trang bị cho học viên kiến thức từ nền tảng đến chuyên sâu trong lĩnh vực tiếp thị số.\n\nChương trình đào tạo tại FPT Skillking tích hợp AI vào quá trình giảng dạy và thực hành, giúp học viên nâng cao năng lực ứng dụng công nghệ, phát triển tư duy chiến lược và sẵn sàng đáp ứng yêu cầu của doanh nghiệp trong kỷ nguyên số.',
+    desc: 'FPT Skillking là hệ thống đào tạo Digital Marketing được thành lập năm 2018, trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn Jetking (Ấn Độ), cung cấp chương trình học theo định hướng thực tiễn, trang bị cho học viên kiến thức từ nền tảng đến chuyên sâu trong lĩnh vực tiếp thị số.\n\nChương trình đào tạo tại FPT Skillking ứng dụng AI vào quá trình giảng dạy và thực hành, giúp học viên nâng cao năng lực công nghệ, phát triển tư duy chiến lược và đáp ứng yêu cầu của doanh nghiệp trong kỷ nguyên số.',
     tags: [
       'Fullstack Digital Marketing (18 tháng)',
       'Bộ khóa học Digital Marketing thực chiến (100 giờ)',
@@ -72,7 +72,7 @@ const programs = [
     titleLine1: 'Thiết kế vi mạch',
     titleLine2: 'Bán dẫn',
     subtitle: 'ĐÀO TẠO THIẾT KẾ VI MẠCH BÁN DẪN TÍCH HỢP AI',
-    desc: 'Ngành vi mạch bán dẫn (Semiconductor) đang là nền tảng cốt lõi của các công nghệ hiện đại như AI, IoT và 5G, với giá trị thị trường toàn cầu dự báo sẽ đạt hàng nghìn tỷ USD trong thập kỷ tới. Tuy nhiên, tình trạng thiếu hụt nhân lực chất lượng cao đang trở thành rào cản lớn. Trên cơ sở hợp tác giữa Tập đoàn FPT và Jetking (Ấn Độ), FPT Jetking tập trung phát triển nguồn nhân lực có năng lực chuyên môn vững vàng, sẵn sàng thích ứng với sự thay đổi nhanh chóng của thị trường công nghệ.\n\nChương trình Thiết kế vi mạch bán dẫn quốc tế tích hợp AI của FPT Jetking được xây dựng theo lộ trình chuyên sâu, kết hợp kiến thức nền tảng, kỹ năng thực hành và trải nghiệm thực tế, hướng tới đào tạo thế hệ kỹ sư vi mạch đáp ứng yêu cầu của doanh nghiệp trong nước và thị trường quốc tế.',
+    desc: 'Ngành vi mạch bán dẫn là nền tảng của các công nghệ như AI, IoT và 5G, đồng thời đang đối mặt với tình trạng thiếu hụt nhân lực chất lượng cao trên toàn cầu. Hợp tác cùng Jetking (Ấn Độ), FPT Jetking triển khai chương trình Thiết kế vi mạch bán dẫn tích hợp AI theo chuẩn quốc tế, trang bị kiến thức, kỹ năng thực hành và kinh nghiệm thực tiễn, đáp ứng nhu cầu tuyển dụng trong nước và quốc tế.',
     tags: [
       'Thiết kế vi mạch bán dẫn quốc tế tích hợp AI',
     ],
@@ -89,7 +89,7 @@ const programs = [
     titleLine1: 'Lập trình',
     titleLine2: 'AI Agent',
     subtitle: 'KỸ SƯ PHÁT TRIỂN HỆ THỐNG AI AGENT',
-    desc: 'Nhu cầu về nhân lực AI Agent đang tăng trưởng từ 35-50% mỗi năm, là nòng cốt của mọi doanh nghiệp trong thời đại mới. AI hiện diện trong chatbot, trợ lý ảo, hệ thống đề xuất, dịch vụ khách hàng tự động và xây dựng các hệ thống đa tác nhân (Multi-Agent System) có thể phối hợp giải quyết các vấn đề phức tạp như con người. Theo dự báo đến năm 2027, AI có thể tạo ra hơn 97 triệu việc làm mới, đặc biệt là các vị trí liên quan đến AI Agent, NLP và học máy.\n\nVới định hướng đào tạo nguồn nhân lực công nghệ theo chuẩn quốc tế, FPT Jetking kế thừa nền tảng đào tạo CNTT của Tập đoàn FPT, triển khai chương trình Lập trình AI Agent giúp học viên tiếp cận các công nghệ AI hiện đại, sẵn sàng thích ứng với nhu cầu nhân lực trong kỷ nguyên trí tuệ nhân tạo.',
+    desc: 'Nhu cầu nhân lực AI Agent đang tăng trưởng 35 - 50% mỗi năm. Đến năm 2027, AI được dự báo sẽ tạo ra hơn 97 triệu việc làm mới, trong đó AI Agent là một trong những lĩnh vực có nhu cầu tuyển dụng cao.\n\nFPT Jetking triển khai chương trình Lập trình AI Agent, trang bị kiến thức và kỹ năng xây dựng AI Agent hiện đại, giúp học viên sẵn sàng nắm bắt cơ hội nghề nghiệp trong kỷ nguyên AI.',
     tags: [
       'Lập trình AI Agent',
     ],
