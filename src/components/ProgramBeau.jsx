@@ -14,7 +14,7 @@ const programs = [
     logo: '/logo_aptech.png',
     titleLine1: 'Lập trình viên',
     titleLine2: 'Quốc tế',
-    subtitle: 'ĐÀO TẠO LẬP TRÌNH VIÊN QUỐC TẾ THỰC CHIẾN',
+    subtitle: 'ĐÀO TẠO LẬP TRÌNH VIÊN QUỐC TẾ AI ĐA KỸ NĂNG',
     desc: 'Là đơn vị đào tạo công nghệ đầu tiên của Tập đoàn FPT từ năm 1999 liên kết với Tập đoàn Công nghệ thông tin toàn cầu Aptech Ấn Độ, với kinh nghiệm đào tạo 27 năm tại Việt Nam chương trình Lập trình tại FPT Aptech tích hợp AI được thiết kế giúp bạn học nhanh – đi làm sớm, tối ưu thời gian, tăng trải nghiệm thực tế và đáp ứng đúng nhu cầu của doanh nghiệp.',
     tags: [
       'Lập trình Fullstack trong 2 năm',
@@ -34,7 +34,7 @@ const programs = [
     logo: '/logo_arena.png',
     titleLine1: 'Thiết kế Mỹ thuật',
     titleLine2: 'đa phương tiện',
-    subtitle: 'ĐÀO TẠO MỸ THUẬT ĐA PHƯƠNG TIỆN TIÊN PHONG',
+    subtitle: 'ĐÀO TẠO MULTIMEDIA ĐA KỸ NĂNG ỨNG DỤNG AI',
     desc: 'Được thành lập vào tháng 7/2004 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn Công nghệ thông tin toàn cầu Aptech (Ấn Độ), FPT Arena Multimedia là hệ thống đào tạo Mỹ thuật đa phương tiện đầu tiên tại Việt Nam, tiên phong đưa khái niệm Multimedia đến với thế hệ trẻ và góp phần đào tạo nguồn nhân lực chất lượng cao cho ngành công nghiệp sáng tạo.\n\nVới chương trình đào tạo bám sát xu hướng công nghệ và nhu cầu của doanh nghiệp, FPT Arena Multimedia giúp học viên phát triển tư duy sáng tạo, kỹ năng thực hành và xây dựng năng lực nghề nghiệp trong lĩnh vực thiết kế đa phương tiện.',
     tags: [
       'Arena Multimedia Specialist Program (2 năm)',
@@ -53,7 +53,7 @@ const programs = [
     logo: '/logo_skillking.png',
     titleLine1: 'Digital Marketing',
     titleLine2: 'Ứng dụng AI',
-    subtitle: 'ĐÀO TẠO DIGITAL MARKETING FULLSTACK CHUYÊN SÂU',
+    subtitle: 'ĐÀO TẠO MARKETING SỐ ỨNG DỤNG AI',
     desc: 'FPT Skillking là hệ thống đào tạo chuyên sâu về Digital Marketing được thành lập năm 2018 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn đào tạo công nghệ Jetking (Ấn Độ), cung cấp chương trình học theo định hướng thực tiễn, trang bị cho học viên kiến thức từ nền tảng đến chuyên sâu trong lĩnh vực tiếp thị số.\n\nChương trình đào tạo tại FPT Skillking tích hợp AI vào quá trình giảng dạy và thực hành, giúp học viên nâng cao năng lực ứng dụng công nghệ, phát triển tư duy chiến lược và sẵn sàng đáp ứng yêu cầu của doanh nghiệp trong kỷ nguyên số.',
     tags: [
       'Fullstack Digital Marketing (18 tháng)',
@@ -71,7 +71,7 @@ const programs = [
     logo: '/logo_jetking.png',
     titleLine1: 'Thiết kế vi mạch',
     titleLine2: 'Bán dẫn',
-    subtitle: 'ĐÀO TẠO THIẾT KẾ VI MẠCH BÁN DẪN QUỐC TẾ',
+    subtitle: 'ĐÀO TẠO THIẾT KẾ VI MẠCH BÁN DẪN TÍCH HỢP AI',
     desc: 'Ngành vi mạch bán dẫn (Semiconductor) đang là nền tảng cốt lõi của các công nghệ hiện đại như AI, IoT và 5G, với giá trị thị trường toàn cầu dự báo sẽ đạt hàng nghìn tỷ USD trong thập kỷ tới. Tuy nhiên, tình trạng thiếu hụt nhân lực chất lượng cao đang trở thành rào cản lớn. Trên cơ sở hợp tác giữa Tập đoàn FPT và Jetking (Ấn Độ), FPT Jetking tập trung phát triển nguồn nhân lực có năng lực chuyên môn vững vàng, sẵn sàng thích ứng với sự thay đổi nhanh chóng của thị trường công nghệ.\n\nChương trình Thiết kế vi mạch bán dẫn quốc tế tích hợp AI của FPT Jetking được xây dựng theo lộ trình chuyên sâu, kết hợp kiến thức nền tảng, kỹ năng thực hành và trải nghiệm thực tế, hướng tới đào tạo thế hệ kỹ sư vi mạch đáp ứng yêu cầu của doanh nghiệp trong nước và thị trường quốc tế.',
     tags: [
       'Thiết kế vi mạch bán dẫn quốc tế tích hợp AI',
