@@ -1452,6 +1452,7 @@ img {
   line-height: 1.05;
   letter-spacing: -0.03em;
   transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  white-space: nowrap;
 }
 
 .prog-beau-item:hover .prog-beau-item-title {
