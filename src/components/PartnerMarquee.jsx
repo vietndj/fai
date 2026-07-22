@@ -71,7 +71,7 @@ export default function PartnerMarquee() {
             <ScrollTypewriter text="1000+ Đối tác tuyển dụng" />
           </h2>
           <p className="partner-desc">
-            Từ các tập đoàn công nghệ toàn cầu đến doanh nghiệp Việt Nam hàng đầu — mạng lưới tuyển dụng rộng khắp của FAI đảm bảo cơ hội việc làm ngay sau tốt nghiệp.
+            Với mạng lưới kết nối cùng các tập đoàn công nghệ toàn cầu và doanh nghiệp Việt Nam hàng đầu, Viện đào tạo quốc tế FPT (FAI) đồng hành cùng sinh viên trên hành trình phát triển nghề nghiệp, mở rộng cơ hội việc làm ngay sau khi tốt nghiệp.
           </p>
         </div>
       </div>
