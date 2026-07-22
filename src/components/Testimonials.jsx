@@ -16,8 +16,8 @@ const quotes = [
   },
   {
     quote: 'Thiết kế không phải là vẽ đẹp — thiết kế là giải quyết vấn đề bằng hình ảnh. Chúng tôi đào tạo những người nhìn thấy thế giới khác biệt và biến tầm nhìn đó thành sản phẩm.',
-    author: 'Kỹ sư Trương Ngọc Kim',
-    role: 'Chủ tịch Hội đồng Khoa học Arena Multimedia',
+    author: 'Hà Dũng Hiệp',
+    role: 'Giảng viên mỹ thuật đa phương tiện',
     brand: 'ARENA',
     avatar: '/fai_banner_arena.png',
   },
