@@ -71,7 +71,7 @@ const programsList = [
   },
   {
     title: 'FPT ARENA',
-    subTitle: 'Mỹ thuật Đa phương tiện',
+    subTitle: 'Mỹ thuật đa phương tiện',
     color: '#ffb600',
     logo: '/logo_arena.png',
     items: ['Graphic Design', 'Web & UI/UX Design', 'Filmmaking & Video', '3D Modeling & Animation', 'Game Art & Design', 'Graduation Project']
@@ -85,14 +85,14 @@ const programsList = [
   },
   {
     title: 'FPT JETKING - CHIP DESIGN',
-    subTitle: 'Thiết kế Vi mạch Bán dẫn',
+    subTitle: 'Thiết kế vi mạch bán dẫn',
     color: '#ed232a',
     logo: '/logo_jetking.png',
     items: ['Programming & Circuits', 'Chip Architecture', 'HDL & EDA Tools', 'SoC/ASIC/FPGA Design', 'AI Driven IC Design', 'IC Verification']
   },
   {
     title: 'FPT JETKING - AI AGENT',
-    subTitle: 'Chuyên gia phát triển AI Agent',
+    subTitle: 'Kỹ sư phát triển AI Agent',
     color: '#ed232a',
     logo: '/logo_jetking.png',
     items: ['Python & Data Science', 'Machine & Deep Learning', 'NLP & Computer Vision', 'Generative AI & LLMs', 'Multi-Agent Systems', 'MLOps & Deployment']

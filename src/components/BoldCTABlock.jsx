@@ -45,8 +45,8 @@ export default function BoldCTABlock() {
         >
           <span className="bold-cta-eyebrow">Tại sao chọn FAI?</span>
           <h2 className="bold-cta-headline">
-            27+ Năm Kiến Tạo<br />
-            Chuyên Gia Tương Lai
+            27+ năm kiến tạo<br />
+            chuyên gia tương lai
           </h2>
           <p className="bold-cta-desc">
             Không chỉ là trường học — FAI là bệ phóng cho sự nghiệp quốc tế.
@@ -55,7 +55,7 @@ export default function BoldCTABlock() {
           </p>
           <div className="bold-cta-actions">
             <Link href="/tuyen-sinh" className="bold-cta-btn bold-cta-btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              Đăng Ký Nhập Học 2026
+              Đăng ký nhập học 2026
               <ArrowRight size={20} strokeWidth={2.5} />
             </Link>
             <Link href="/ve-fai" className="bold-cta-btn bold-cta-btn--outline">
