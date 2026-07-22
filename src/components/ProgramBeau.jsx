@@ -140,28 +140,31 @@ export default function ProgramBeau() {
               <div className="prog-beau-item-inner">
                 {/* Title Column */}
                 <div className="prog-beau-title-col">
-                  <span className="prog-beau-num" style={{ color: prog.color }}>{prog.num}</span>
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '10px', marginBottom: '16px' }}>
-                      <div className="prog-beau-logo-wrapper" style={{ height: '68px', display: 'flex', alignItems: 'center' }}>
-                        <Image 
-                          src={prog.logo} 
-                          alt={prog.brand} 
-                          width={260} 
-                          height={68} 
-                          style={{ 
-                            objectFit: 'contain', 
-                            objectPosition: 'left center',
-                            width: 'auto', 
-                            height: '100%', 
-                            maxWidth: '280px' 
-                          }} 
-                        />
-                      </div>
-                      <span className="prog-beau-brand-tag" style={{ color: prog.color, margin: 0 }}>
-                        {prog.brand}
-                      </span>
+                  {/* Left Column: Number (centered vertically with logo) */}
+                  <div style={{ height: '68px', display: 'flex', alignItems: 'center' }}>
+                    <span className="prog-beau-num" style={{ color: prog.color, margin: 0, lineHeight: 1 }}>{prog.num}</span>
+                  </div>
+
+                  {/* Right Column: Logo, Brand Tag, Title (flush left) */}
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                    <div className="prog-beau-logo-wrapper" style={{ height: '68px', display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                      <Image 
+                        src={prog.logo} 
+                        alt={prog.brand} 
+                        width={260} 
+                        height={68} 
+                        style={{ 
+                          objectFit: 'contain', 
+                          objectPosition: 'left center',
+                          width: 'auto', 
+                          height: '100%', 
+                          maxWidth: '280px' 
+                        }} 
+                      />
                     </div>
+                    <span className="prog-beau-brand-tag" style={{ color: prog.color, marginBottom: '12px' }}>
+                      {prog.brand}
+                    </span>
                     <h3 className="prog-beau-item-title">
                       {prog.titleLine1} <br />
                       <span>{prog.titleLine2}</span>
