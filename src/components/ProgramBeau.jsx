@@ -111,9 +111,9 @@ export default function ProgramBeau() {
       <ParticleCanvas className="prog-beau-particles" />
 
       {/* HEADER */}
-      <div className="prog-beau-header-wrap" data-reveal>
-        <span className="section-eyebrow">Chương trình đào tạo Liên kết Quốc Tế</span>
-        <h2 className="prog-beau-title-main">
+      <div className="prog-beau-header-wrap" data-reveal style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+        <span className="section-eyebrow" style={{ letterSpacing: '0.05em', marginLeft: 0, paddingLeft: 0 }}>Chương trình đào tạo Liên kết Quốc Tế</span>
+        <h2 className="prog-beau-title-main" style={{ letterSpacing: 0, marginLeft: 0, paddingLeft: 0 }}>
           <ScrollTypewriter text="FPT ACADEMY INTERNATIONAL" />
         </h2>
       </div>
