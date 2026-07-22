@@ -35,7 +35,7 @@ const programs = [
     titleLine1: 'Thiết kế Mỹ thuật',
     titleLine2: 'đa phương tiện',
     subtitle: 'ĐÀO TẠO MULTIMEDIA ĐA KỸ NĂNG ỨNG DỤNG AI',
-    desc: 'Được thành lập vào tháng 7/2004 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn Công nghệ thông tin toàn cầu Aptech (Ấn Độ), FPT Arena Multimedia là hệ thống đào tạo Mỹ thuật đa phương tiện đầu tiên tại Việt Nam, tiên phong đưa khái niệm Multimedia đến với thế hệ trẻ và góp phần đào tạo nguồn nhân lực chất lượng cao cho ngành công nghiệp sáng tạo.\n\nVới chương trình đào tạo bám sát xu hướng công nghệ và nhu cầu của doanh nghiệp, FPT Arena Multimedia giúp học viên phát triển tư duy sáng tạo, kỹ năng thực hành và xây dựng năng lực nghề nghiệp trong lĩnh vực thiết kế đa phương tiện.',
+    desc: 'Được thành lập vào tháng 7/2004 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn CNTT toàn cầu Aptech (Ấn Độ), FPT Arena Multimedia là hệ thống đào tạo Mỹ thuật đa phương tiện, tiên phong đưa khái niệm Multimedia đến với thế hệ trẻ Việt Nam.\n\nVới chương trình đào tạo bám sát nhu cầu của doanh nghiệp, FPT Arena Multimedia giúp học viên phát triển tư duy sáng tạo, xây dựng năng lực nghề nghiệp trong lĩnh vực thiết kế đa phương tiện.',
     tags: [
       'Arena Multimedia Specialist Program (2 năm)',
       'Thiết kế 2D, 3D, Game và App (6–18 tháng)',
