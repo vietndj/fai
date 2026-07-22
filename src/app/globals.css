@@ -1468,6 +1468,19 @@ img {
   transform: translateY(-4px);
 }
 
+.prog-beau-logo-wrapper {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+}
+.prog-beau-logo-wrapper img {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  filter: grayscale(15%) brightness(95%);
+}
+.prog-beau-item:hover .prog-beau-logo-wrapper img {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(100%);
+}
+
 .prog-beau-brand-tag {
   font-size: 0.85rem; /* Larger, more premium tags */
   font-weight: 850;

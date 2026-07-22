@@ -142,9 +142,24 @@ export default function ProgramBeau() {
                 <div className="prog-beau-title-col">
                   <span className="prog-beau-num" style={{ color: prog.color }}>{prog.num}</span>
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                      <Image src={prog.logo} alt={prog.brand} width={20} height={20} style={{ objectFit: 'contain' }} />
-                      <span className="prog-beau-brand-tag" style={{ color: prog.color, margin: 0 }}>{prog.brand}</span>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '10px', marginBottom: '16px' }}>
+                      <div className="prog-beau-logo-wrapper" style={{ height: '36px', display: 'flex', alignItems: 'center' }}>
+                        <Image 
+                          src={prog.logo} 
+                          alt={prog.brand} 
+                          width={140} 
+                          height={36} 
+                          style={{ 
+                            objectFit: 'contain', 
+                            width: 'auto', 
+                            height: '100%', 
+                            maxWidth: '180px' 
+                          }} 
+                        />
+                      </div>
+                      <span className="prog-beau-brand-tag" style={{ color: prog.color, margin: 0 }}>
+                        {prog.brand}
+                      </span>
                     </div>
                     <h3 className="prog-beau-item-title">
                       {prog.titleLine1} <br />

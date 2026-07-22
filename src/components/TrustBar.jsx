@@ -6,17 +6,17 @@ export default function TrustBar() {
     <div className="trust-bar">
       <div className="trust-bar-inner container">
         <div className="trust-item">
-          <Check size={22} strokeWidth={2.5} style={{ color: 'var(--accent)', flexShrink: 0 }} />
+          <Check size={22} strokeWidth={2.5} style={{ color: 'var(--primary)', flexShrink: 0 }} />
           <span>Thành viên <strong>Tổ chức giáo dục FPT</strong></span>
         </div>
         <div className="trust-divider" />
         <div className="trust-item">
-          <Check size={22} strokeWidth={2.5} style={{ color: 'var(--accent)', flexShrink: 0 }} />
+          <Check size={22} strokeWidth={2.5} style={{ color: 'var(--primary)', flexShrink: 0 }} />
           <span>Chương trình học <strong>tích hợp AI</strong></span>
         </div>
         <div className="trust-divider" />
         <div className="trust-item">
-          <Check size={22} strokeWidth={2.5} style={{ color: 'var(--accent)', flexShrink: 0 }} />
+          <Check size={22} strokeWidth={2.5} style={{ color: 'var(--primary)', flexShrink: 0 }} />
           <span>Chứng chỉ <strong>Quốc Tế từ Ấn Độ</strong></span>
         </div>
         <div className="trust-divider" />
