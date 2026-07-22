@@ -49,9 +49,7 @@ export default function BoldCTABlock() {
             chuyên gia tương lai
           </h2>
           <p className="bold-cta-desc">
-            Không chỉ là trường học — FAI là bệ phóng cho sự nghiệp quốc tế.
-            Từ sinh viên năm nhất, bạn đã được thực chiến với dự án thật,
-            mentor là chuyên gia ngành và mạng lưới 1000+ doanh nghiệp tuyển dụng.
+            Không chỉ là trường học — FAI là bệ phóng cho sự nghiệp quốc tế. Từ sinh viên năm nhất, bạn đã được thực chiến với dự án thật, mentor là những chuyên gia đầu ngành và mạng lưới 1000+ doanh nghiệp tuyển dụng.
           </p>
           <div className="bold-cta-actions">
             <Link href="/tuyen-sinh" className="bold-cta-btn bold-cta-btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
