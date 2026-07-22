@@ -1488,26 +1488,30 @@ img {
 }
 
 .prog-beau-brand-tag {
-  font-size: 0.85rem; /* Larger, more premium tags */
+  font-size: 0.85rem;
   font-weight: 850;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 14px;
-  transition: letter-spacing 0.35s ease;
+  margin-bottom: 12px;
+  margin-left: 0;
+  padding-left: 0;
+  transition: color 0.35s ease;
 }
 
 .prog-beau-item:hover .prog-beau-brand-tag {
-  letter-spacing: 0.3em;
+  color: var(--primary);
 }
 
 .prog-beau-item-title {
   font-family: var(--font-sans);
-  font-size: clamp(2.4rem, 4vw, 3.8rem); /* Massive, bold headings */
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
   font-weight: 850;
   color: var(--secondary);
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
+  margin-left: 0;
+  padding-left: 0;
   transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
   white-space: nowrap;
 }

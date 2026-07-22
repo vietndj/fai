@@ -145,9 +145,9 @@ export default function ProgramBeau() {
                     <span className="prog-beau-num" style={{ color: prog.color, margin: 0, lineHeight: 1 }}>{prog.num}</span>
                   </div>
 
-                  {/* Right Column: Logo, Brand Tag, Title (flush left) */}
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                    <div className="prog-beau-logo-wrapper" style={{ height: '68px', display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                  {/* Right Column: Logo, Brand Tag, Title (flush left 100%) */}
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', margin: 0, padding: 0 }}>
+                    <div className="prog-beau-logo-wrapper" style={{ height: '68px', display: 'flex', alignItems: 'center', marginBottom: '16px', margin: '0 0 16px 0', padding: 0 }}>
                       <Image 
                         src={prog.logo} 
                         alt={prog.brand} 
@@ -158,14 +158,16 @@ export default function ProgramBeau() {
                           objectPosition: 'left center',
                           width: 'auto', 
                           height: '100%', 
-                          maxWidth: '280px' 
+                          maxWidth: '280px',
+                          margin: 0,
+                          padding: 0
                         }} 
                       />
                     </div>
-                    <span className="prog-beau-brand-tag" style={{ color: prog.color, marginBottom: '12px' }}>
+                    <span className="prog-beau-brand-tag" style={{ color: prog.color, margin: '0 0 12px 0', padding: 0, letterSpacing: '0.08em' }}>
                       {prog.brand}
                     </span>
-                    <h3 className="prog-beau-item-title">
+                    <h3 className="prog-beau-item-title" style={{ letterSpacing: 0, margin: 0, padding: 0 }}>
                       {prog.titleLine1} <br />
                       <span>{prog.titleLine2}</span>
                     </h3>
