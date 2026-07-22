@@ -51,8 +51,8 @@ const categoryBlocks = [
     id: 'graduation',
     title: 'Lễ tốt nghiệp qua các năm',
     eyebrow: 'Mốc son vinh quang',
-    themeBg: '#050d1a',
-    accentColor: '#f37021',
+    desc: 'Tôn vinh hành trình chinh phục tri thức và trưởng thành của các thế hệ tân khoa tại Viện Đào Tạo Quốc Tế FPT.',
+    isLight: false,
     posts: [
       {
         id: 'grad-2026',
@@ -84,8 +84,8 @@ const categoryBlocks = [
     id: 'enterprise',
     title: 'Doanh nghiệp & FAI',
     eyebrow: 'Kết nối việc làm thực chiến',
-    themeBg: '#081627',
-    accentColor: '#29a9e1',
+    desc: 'Cầu nối bền vững giữa nhà trường và các tập đoàn công nghệ & agency hàng đầu mang lại cơ hội nghề nghiệp sớm cho sinh viên.',
+    isLight: true,
     posts: [
       {
         id: 'ent-visit',
@@ -117,8 +117,8 @@ const categoryBlocks = [
     id: 'sharing',
     title: 'Nhỏ to cùng chia sẻ',
     eyebrow: 'Góc tâm sự & kinh nghiệm',
-    themeBg: '#0f172a',
-    accentColor: '#ffb600',
+    desc: 'Nơi sinh viên và cựu học viên FAI trao đổi bí quyết học tập, vượt qua áp lực đồ án và cân bằng cuộc sống.',
+    isLight: false,
     posts: [
       {
         id: 'share-study',
@@ -150,8 +150,8 @@ const categoryBlocks = [
     id: 'contests',
     title: 'Sân chơi & giải thưởng',
     eyebrow: 'Khai phóng tài năng',
-    themeBg: '#1a090a',
-    accentColor: '#ed232a',
+    desc: 'Khám phá các cuộc thi học thuật quy mô lớn, đấu trường Hackathon quốc tế và triển lãm thiết kế thường niên.',
+    isLight: true,
     posts: [
       {
         id: 'contest-techwiz',
@@ -183,8 +183,8 @@ const categoryBlocks = [
     id: 'community',
     title: 'FAI & cộng đồng',
     eyebrow: 'Trách nhiệm xã hội & Trải nghiệm',
-    themeBg: '#061a12',
-    accentColor: '#10b981',
+    desc: 'Chuỗi hoạt động thể thao, phong trào tình nguyện và ngày hội trải nghiệm công nghệ gắn kết cộng đồng.',
+    isLight: false,
     posts: [
       {
         id: 'comm-football',
@@ -260,131 +260,154 @@ function CategoryBlockItem({ block, onSelectPost }) {
     }
   };
 
+  const isLight = block.isLight;
+  const bgColor = isLight ? '#ffffff' : '#070d18';
+  const textColor = isLight ? 'var(--secondary)' : '#ffffff';
+  const cardBg = isLight ? '#ffffff' : 'rgba(255,255,255,0.03)';
+  const cardBorder = isLight ? '1px solid rgba(13,33,55,0.08)' : '1px solid rgba(255,255,255,0.08)';
+  const cardShadow = isLight ? '0 10px 30px rgba(0,0,0,0.04)' : '0 10px 30px rgba(0,0,0,0.2)';
+  const descColor = isLight ? 'var(--text-muted)' : 'rgba(255,255,255,0.65)';
+
   return (
     <section 
       style={{ 
-        padding: '80px 0', 
-        backgroundColor: block.themeBg, 
-        color: '#ffffff',
+        padding: '90px 0', 
+        backgroundColor: bgColor, 
+        color: textColor,
         position: 'relative',
         overflow: 'hidden',
-        borderBottom: '1px solid rgba(255,255,255,0.06)'
+        borderBottom: isLight ? '1px solid rgba(0,0,0,0.05)' : '1px solid rgba(255,255,255,0.05)'
       }}
     >
       <div className="container">
-        {/* Block Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '35px' }}>
-          <div>
-            <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.2em', color: block.accentColor, textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
-              {block.eyebrow}
-            </span>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.4rem)', fontWeight: 800, color: '#ffffff', fontFamily: 'var(--font-sans)', margin: 0 }}>
-              {block.title}
-            </h2>
-          </div>
-
-          {/* Navigation Arrows */}
-          <div style={{ display: 'flex', gap: '12px' }}>
-            <button 
-              onClick={() => scroll('prev')}
-              aria-label="Previous posts"
-              style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                color: '#ffffff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              <ChevronLeft size={20} strokeWidth={2.5} />
-            </button>
-            <button 
-              onClick={() => scroll('next')}
-              aria-label="Next posts"
-              style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                color: '#ffffff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              <ChevronRight size={20} strokeWidth={2.5} />
-            </button>
-          </div>
+        {/* Centered Block Header */}
+        <div style={{ textAlign: 'center', marginBottom: '45px' }}>
+          <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.2em', color: 'var(--primary)', textTransform: 'uppercase', display: 'block', marginBottom: '10px' }}>
+            {block.eyebrow}
+          </span>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: textColor, fontFamily: 'var(--font-sans)', margin: 0 }}>
+            {block.title}
+          </h2>
+          <p style={{ color: descColor, maxWidth: '620px', margin: '14px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.65' }}>
+            {block.desc}
+          </p>
         </div>
 
-        {/* Horizontal Scroll Track */}
-        <div 
-          ref={scrollRef}
-          className="horizontal-timeline-wrapper"
-          style={{ 
-            display: 'flex', 
-            gap: '30px', 
-            overflowX: 'auto', 
-            paddingBottom: '20px', 
-            scrollSnapType: isGrabbing ? 'none' : 'x mandatory',
-            scrollbarWidth: 'thin',
-            scrollbarColor: 'rgba(255,255,255,0.2) transparent',
-            cursor: isGrabbing ? 'grabbing' : 'grab',
-            userSelect: 'none',
-            WebkitUserSelect: 'none'
-          }}
-          onPointerDown={handlePointerDown}
-          onPointerLeave={handlePointerLeave}
-          onPointerUp={handlePointerUp}
-          onPointerMove={handlePointerMove}
-        >
-          {block.posts.map((post) => (
-            <div 
-              key={post.id}
-              onClick={() => onSelectPost(post)}
-              style={{
-                flex: '0 0 360px',
-                scrollSnapAlign: 'start',
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: '16px',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                display: 'flex',
-                flexDirection: 'column',
-                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                pointerEvents: isGrabbing ? 'none' : 'auto'
-              }}
-            >
-              <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
-                <Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} />
-                <span style={{ position: 'absolute', top: '15px', left: '15px', background: 'rgba(5,13,26,0.85)', padding: '4px 10px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800, color: block.accentColor, textTransform: 'uppercase', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  {post.date}
-                </span>
+        {/* Outer Wrapper with Side Arrows */}
+        <div style={{ position: 'relative', width: '100%', padding: '0 10px' }}>
+          <button 
+            onClick={() => scroll('prev')}
+            style={{
+              position: 'absolute',
+              left: '-20px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              width: '46px',
+              height: '46px',
+              borderRadius: '50%',
+              backgroundColor: isLight ? '#ffffff' : 'rgba(255,255,255,0.1)',
+              border: isLight ? '1px solid rgba(13,33,55,0.1)' : '1px solid rgba(255,255,255,0.15)',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              zIndex: 10,
+              color: isLight ? 'var(--secondary)' : '#ffffff',
+              transition: 'all 0.3s ease',
+            }}
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={20} strokeWidth={2.5} />
+          </button>
+
+          {/* Horizontal Scroll Track */}
+          <div 
+            ref={scrollRef}
+            className="horizontal-timeline-wrapper"
+            style={{ 
+              display: 'flex', 
+              gap: '30px', 
+              overflowX: 'auto', 
+              paddingBottom: '20px', 
+              scrollSnapType: isGrabbing ? 'none' : 'x mandatory',
+              scrollbarWidth: 'thin',
+              scrollbarColor: isLight ? 'rgba(13,33,55,0.15) transparent' : 'rgba(255,255,255,0.2) transparent',
+              cursor: isGrabbing ? 'grabbing' : 'grab',
+              userSelect: 'none',
+              WebkitUserSelect: 'none'
+            }}
+            onPointerDown={handlePointerDown}
+            onPointerLeave={handlePointerLeave}
+            onPointerUp={handlePointerUp}
+            onPointerMove={handlePointerMove}
+          >
+            {block.posts.map((post) => (
+              <div 
+                key={post.id}
+                onClick={() => onSelectPost(post)}
+                style={{
+                  flex: '0 0 360px',
+                  scrollSnapAlign: 'start',
+                  background: cardBg,
+                  border: cardBorder,
+                  borderRadius: '16px',
+                  boxShadow: cardShadow,
+                  overflow: 'hidden',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                  pointerEvents: isGrabbing ? 'none' : 'auto'
+                }}
+              >
+                <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
+                  <Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} />
+                  <span style={{ position: 'absolute', top: '15px', left: '15px', background: 'var(--primary)', padding: '4px 10px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800, color: '#ffffff', textTransform: 'uppercase' }}>
+                    {post.date}
+                  </span>
+                </div>
+                
+                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '12px', flexGrow: 1 }}>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, lineHeight: '1.45', color: textColor, margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '50px', fontFamily: 'var(--font-sans)' }}>
+                    {post.title}
+                  </h3>
+                  <p style={{ fontSize: '0.88rem', color: descColor, lineHeight: '1.6', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '42px' }}>
+                    {post.excerpt}
+                  </p>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 800, color: 'var(--primary)', marginTop: '10px' }}>
+                    Xem chi tiết <ArrowRight size={14} />
+                  </span>
+                </div>
               </div>
-              
-              <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '12px', flexGrow: 1 }}>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, lineHeight: '1.45', color: '#ffffff', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '50px', fontFamily: 'var(--font-sans)' }}>
-                  {post.title}
-                </h3>
-                <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '42px' }}>
-                  {post.excerpt}
-                </p>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 800, color: block.accentColor, marginTop: '10px' }}>
-                  Xem chi tiết <ArrowRight size={14} />
-                </span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <button 
+            onClick={() => scroll('next')}
+            style={{
+              position: 'absolute',
+              right: '-20px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              width: '46px',
+              height: '46px',
+              borderRadius: '50%',
+              backgroundColor: isLight ? '#ffffff' : 'rgba(255,255,255,0.1)',
+              border: isLight ? '1px solid rgba(13,33,55,0.1)' : '1px solid rgba(255,255,255,0.15)',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              zIndex: 10,
+              color: isLight ? 'var(--secondary)' : '#ffffff',
+              transition: 'all 0.3s ease',
+            }}
+            aria-label="Next slide"
+          >
+            <ChevronRight size={20} strokeWidth={2.5} />
+          </button>
         </div>
       </div>
     </section>
@@ -491,42 +514,40 @@ export default function DoiSong() {
             zIndex: 0
           }} />
 
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
             <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
               TRẢI NGHIỆM FAI
             </span>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.15', marginTop: '20px', fontFamily: 'var(--font-sans)' }}>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.15', marginTop: '16px', fontFamily: 'var(--font-sans)' }}>
               Đời sống sinh viên
             </h1>
-            <p style={{ maxWidth: '650px', color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: '1.75', marginTop: '25px' }}>
+            <p style={{ maxWidth: '650px', color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: '1.75', margin: '20px auto 0 auto' }}>
               Vượt qua giới hạn phòng học — tại FAI, cuộc sống sinh viên là chuỗi ngày rực rỡ sắc màu với các câu lạc bộ thực chiến, sự kiện teambuilding sôi động và cơ hội kiến tập doanh nghiệp từ sớm.
             </p>
           </div>
         </section>
 
-        {/* BLOCK 2: Một ngày của sinh viên FAI */}
+        {/* BLOCK 2: Một ngày của sinh viên FAI (LIGHT BACKGROUND) */}
         <section 
           className="student-life-timeline-section" 
           style={{ 
-            padding: '100px 0', 
+            padding: '90px 0', 
             backgroundColor: '#F8F5F0', 
             color: 'var(--secondary)',
-            minHeight: '75vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            overflow: 'hidden'
+            position: 'relative',
+            overflow: 'hidden',
+            borderBottom: '1px solid rgba(0,0,0,0.05)'
           }}
         >
           <div className="container">
-            <div className="section-header-centered" style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <div className="section-header-centered" style={{ textAlign: 'center', marginBottom: '45px' }}>
               <span className="section-eyebrow" style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.2em', color: 'var(--primary)', textTransform: 'uppercase' }}>
                 DAILY ROUTINE
               </span>
               <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
                 Một ngày của sinh viên FAI
               </h2>
-              <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '20px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.7' }}>
+              <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '14px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.65' }}>
                 Khám phá lịch trình học tập thực chiến đầy năng động và thú vị của sinh viên tại Viện Đào Tạo Quốc Tế FPT.
               </p>
             </div>
@@ -565,7 +586,7 @@ export default function DoiSong() {
                   display: 'flex', 
                   gap: '30px', 
                   overflowX: 'auto', 
-                  paddingBottom: '30px', 
+                  paddingBottom: '20px', 
                   scrollSnapType: isGrabbing ? 'none' : 'x mandatory',
                   scrollbarWidth: 'thin',
                   scrollbarColor: 'rgba(13,33,55,0.15) transparent',
@@ -663,17 +684,17 @@ export default function DoiSong() {
           </div>
         </section>
 
-        {/* 5 CATEGORY BLOCKS (Lễ tốt nghiệp, Doanh nghiệp, Nhỏ to cùng chia sẻ, Sân chơi & giải thưởng, FAI & cộng đồng) */}
+        {/* 5 CATEGORY BLOCKS ALTERNATING DARK/LIGHT WITH FPT ORANGE HIGHLIGHT */}
         {categoryBlocks.map((block) => (
           <CategoryBlockItem key={block.id} block={block} onSelectPost={setSelectedPost} />
         ))}
 
-        {/* Support Hotline CTA */}
+        {/* Support Hotline CTA (LIGHT BACKGROUND) */}
         <section 
           className="student-life-cta-section" 
           style={{ 
-            padding: '60px 0', 
-            backgroundColor: '#ffffff',
+            padding: '80px 0', 
+            backgroundColor: '#F8F5F0',
             color: 'var(--secondary)',
             display: 'flex',
             flexDirection: 'column',
@@ -697,7 +718,7 @@ export default function DoiSong() {
               <Link href="/tuyen-sinh" className="btn btn-primary" style={{ padding: '14px 32px', fontSize: '1rem' }}>
                 Đăng ký tư vấn ngay
               </Link>
-              <a href="tel:0983883883" className="btn btn-secondary" style={{ padding: '14px 32px', fontSize: '1rem', background: '#F8F5F0', color: 'var(--secondary)' }}>
+              <a href="tel:0983883883" className="btn btn-secondary" style={{ padding: '14px 32px', fontSize: '1rem', background: '#ffffff', color: 'var(--secondary)' }}>
                 Hotline: 0983 883 883
               </a>
             </div>
