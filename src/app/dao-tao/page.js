@@ -10,106 +10,97 @@ const programs = [
   {
     id: 'aptech',
     number: '01/',
-    title: 'FPT Aptech',
+    title: 'FPT APTECH',
     subTitle: 'Lập trình viên Quốc tế',
-    desc: 'Chương trình đào tạo Công nghệ thông tin chất lượng cao chuyển giao trực tiếp từ Aptech Ấn Độ. Sinh viên được trang bị kiến thức phát triển phần mềm toàn diện, điện toán đám mây và trí tuệ nhân tạo thực chiến.',
+    desc: 'Là đơn vị đào tạo công nghệ đầu tiên của Tập đoàn FPT từ năm 1999 liên kết với Tập đoàn Công nghệ thông tin toàn cầu Aptech Ấn Độ, với kinh nghiệm đào tạo 27 năm tại Việt Nam chương trình Lập trình tại FPT Aptech tích hợp AI được thiết kế giúp bạn học nhanh – đi làm sớm, tối ưu thời gian, tăng trải nghiệm thực tế và đáp ứng đúng nhu cầu của doanh nghiệp.',
     image: '/fai_banner_aptech_v2.png',
     link: '/dao-tao/aptech',
-    color: '#e31a22',
+    color: '#f37021',
     isDark: true,
     bgStyle: {
-      background: 'linear-gradient(135deg, #050c1a 0%, #0D2137 100%)',
+      background: 'linear-gradient(135deg, #0f0702 0%, #1c0e04 100%)',
       color: '#ffffff'
     },
     curriculums: [
-      'Học kỳ 1: Lập trình cơ bản & Cơ sở dữ liệu SQL Server',
-      'Học kỳ 2: Lập trình hướng đối tượng Java SE chuyên sâu',
-      'Học kỳ 3: Phát triển ứng dụng Web (React, Node.js) & Di động',
-      'Học kỳ 4: Điện toán đám mây AWS & Tích hợp Trí tuệ Nhân tạo (AI/ML)'
+      'Lập trình Fullstack trong 2 năm',
+      'Lập trình Back end trong 1 năm',
+      'Lập trình Front end trong 6 tháng',
+      'Lập trình ngắn hạn 100-200h'
     ]
   },
   {
     id: 'arena',
     number: '02/',
-    title: 'FPT Arena Multimedia',
-    subTitle: 'Mỹ thuật Đa phương tiện',
-    desc: 'Chương trình đào tạo Chuyên gia Mỹ thuật Đa phương tiện kéo dài 2 năm. Sinh viên được rèn luyện tư duy thẩm mỹ, thiết kế đồ họa thương hiệu, làm phim kỹ thuật số, hậu kỳ video và hoạt hình 3D chuyên nghiệp.',
+    title: 'FPT ARENA MULTIMEDIA',
+    subTitle: 'Thiết kế Mỹ thuật đa phương tiện',
+    desc: 'Được thành lập vào tháng 7/2004 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn CNTT toàn cầu Aptech (Ấn Độ), FPT Arena Multimedia là hệ thống đào tạo Mỹ thuật đa phương tiện, tiên phong đưa khái niệm Multimedia đến với thế hệ trẻ Việt Nam. Với chương trình đào tạo bám sát nhu cầu của doanh nghiệp, FPT Arena Multimedia giúp học viên phát triển tư duy sáng tạo, xây dựng năng lực nghề nghiệp trong lĩnh vực thiết kế đa phương tiện.',
     image: '/fai_banner_arena_v2.jpg',
     link: '/dao-tao/arena',
     color: '#ffb600',
     isDark: false,
     bgStyle: {
-      backgroundColor: '#F8F5F0',
+      backgroundColor: '#FFFBEB',
       color: '#1a2332'
     },
     curriculums: [
-      'Học kỳ 1: Graphic Design - Thiết kế đồ họa thương hiệu',
-      'Học kỳ 2: Web & UI/UX Design - Thiết kế trải nghiệm người dùng',
-      'Học kỳ 3: Filmmaking & Video Editing - Kịch bản, quay phim & dựng phim',
-      'Học kỳ 4: 3D Animation & Game Design - Hoạt hình 3D & thiết kế game'
+      'Arena Multimedia Specialist Program (2 năm)',
+      'Thiết kế 2D, 3D, Game và App (6–18 tháng)',
+      'Các khóa học ngắn hạn (100 giờ)'
     ]
   },
   {
     id: 'skillking',
     number: '03/',
-    title: 'FPT Skillking',
-    subTitle: 'Digital Marketing chuyên sâu',
-    desc: 'Chương trình đào tạo Chuyên gia Tiếp thị số chuẩn quốc tế đầu tiên tại Việt Nam. Sinh viên trực tiếp thực hành sáng tạo nội dung, chạy quảng cáo Meta/Google Ads ngân sách thật và tối ưu phễu chuyển đổi CRM.',
+    title: 'FPT SKILLKING',
+    subTitle: 'Digital Marketing Ứng dụng AI',
+    desc: 'FPT Skillking là hệ thống đào tạo Digital Marketing được thành lập năm 2018, trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn Jetking (Ấn Độ), cung cấp chương trình học theo định hướng thực tiễn, trang bị cho học viên kiến thức từ nền tảng đến chuyên sâu trong lĩnh vực tiếp thị số. Chương trình đào tạo tại FPT Skillking ứng dụng AI vào quá trình giảng dạy và thực hành, giúp học viên nâng cao năng lực công nghệ, phát triển tư duy chiến lược và đáp ứng yêu cầu của doanh nghiệp trong kỷ nguyên số.',
     image: '/fai_banner_skillking_v2.png',
     link: '/dao-tao/skillking',
-    color: '#09529c',
+    color: '#29a9e1',
     isDark: true,
     bgStyle: {
-      backgroundColor: '#070a10',
+      backgroundColor: '#041019',
       color: '#ffffff'
     },
     curriculums: [
-      'Học kỳ 1: Social Media & Content Strategy - Sáng tạo nội dung tiếp thị số',
-      'Học kỳ 2: Search Engine Optimization (SEO) & Web Audit chuyên sâu',
-      'Học kỳ 3: Paid Advertising - Setup chiến dịch Google/Meta/Tiktok Ads',
-      'Học kỳ 4: Digital Marketing Management - Quản trị & lập kế hoạch tổng thể'
+      'Fullstack Digital Marketing With AI (18 tháng)',
+      'Bộ khóa học Digital Marketing thực chiến (100 giờ)'
     ]
   },
   {
     id: 'chip-design',
     number: '04/',
-    title: 'FPT Jetking Chip Design',
-    subTitle: 'Thiết kế Vi mạch Bán dẫn',
-    desc: 'Chương trình đào tạo Thiết kế Vi mạch Bán dẫn tích hợp AI chuẩn quốc tế. Sinh viên được trang bị kiến thức chuyên sâu về SoC/ASIC/FPGA, làm chủ công cụ thiết kế EDA tiên tiến dưới sự hỗ trợ của các mô hình AI chuyên dụng.',
+    title: 'FPT JETKING CHIP DESIGN',
+    subTitle: 'Thiết kế vi mạch Bán dẫn',
+    desc: 'Ngành vi mạch bán dẫn là nền tảng của các công nghệ như AI, IoT và 5G, đồng thời đang đối mặt với tình trạng thiếu hụt nhân lực chất lượng cao trên toàn cầu. Hợp tác cùng Jetking (Ấn Độ), FPT Jetking triển khai chương trình Thiết kế vi mạch bán dẫn tích hợp AI theo chuẩn quốc tế, trang bị kiến thức, kỹ năng thực hành và kinh nghiệm thực tiễn, đáp ứng nhu cầu tuyển dụng trong nước và quốc tế.',
     image: '/fai_banner_chip_design_v2.png',
     link: '/dao-tao/chip-design',
-    color: '#f37021',
+    color: '#ed232a',
     isDark: true,
     bgStyle: {
-      backgroundColor: '#0c051a',
+      backgroundColor: '#180405',
       color: '#ffffff'
     },
     curriculums: [
-      'Học kỳ 1: Mạch điện tử và lập trình vi điều khiển (Programming Elements & Electronic Circuits)',
-      'Học kỳ 2: Kiến trúc và quy trình thiết kế vi mạch (Chip Architecture Framework)',
-      'Học kỳ 3: Ngôn ngữ mô tả phần cứng và công cụ thiết kế (HDL & EDA Tools)',
-      'Học kỳ 4: Thiết kế vi mạch chuyên sâu SoC/ASIC/FPGA'
+      'Thiết kế vi mạch bán dẫn quốc tế tích hợp AI'
     ]
   },
   {
     id: 'ai-agent',
     number: '05/',
-    title: 'FPT Jetking AI Agent',
-    subTitle: 'Chuyên gia phát triển AI Agent',
-    desc: 'Chương trình đào tạo tiên phong về AI Agent và Kỹ nghệ AI tại Việt Nam. Sinh viên trực tiếp thực hành xây dựng các nhân sự AI tự hành, phát triển mô hình Machine Learning/Deep Learning và hệ thống Multi-Agent thực chiến.',
+    title: 'FPT JETKING AI AGENT',
+    subTitle: 'Lập trình AI Agent',
+    desc: 'Nhu cầu nhân lực AI Agent đang tăng trưởng 35 - 50% mỗi năm. Đến năm 2027, AI được dự báo sẽ tạo ra hơn 97 triệu việc làm mới, trong đó AI Agent là một trong những lĩnh vực có nhu cầu tuyển dụng cao. FPT Jetking triển khai chương trình Lập trình AI Agent, trang bị kiến thức và kỹ năng xây dựng AI Agent hiện đại, giúp học viên sẵn sàng nắm bắt cơ hội nghề nghiệp trong kỷ nguyên AI.',
     image: '/fai_banner_ai_agent_v2.png',
     link: '/dao-tao/ai-agent',
-    color: '#0066b3',
+    color: '#ed232a',
     isDark: true,
     bgStyle: {
-      backgroundColor: '#050716',
+      backgroundColor: '#140304',
       color: '#ffffff'
     },
     curriculums: [
-      'Học kỳ 1: Nền tảng lập trình Python & Phân tích dữ liệu AI (Foundations & Python Elements)',
-      'Học kỳ 2: Trí tuệ nhân tạo chuyên sâu (Machine Learning & Deep Learning Core)',
-      'Học kỳ 3: AI tạo sinh & Xử lý ngôn ngữ tự nhiên (NLP, Computer Vision & Generative AI)',
-      'Học kỳ 4: Hệ thống Multi-Agent & Vận hành thực tế (Multi-Agent Systems & Deployment)'
+      'Lập trình AI Agent'
     ]
   }
 ];
@@ -138,11 +129,11 @@ export default function DaoTao() {
             <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
               HỆ THỐNG ĐÀO TẠO
             </span>
-            <h1 style={{ fontSize: 'clamp(2.3rem, 5.5vw, 4rem)', fontWeight: 800, fontFamily: 'var(--font-sans)', color: 'var(--secondary)', marginTop: '20px', lineHeight: '1.25' }}>
-              Chương trình đào tạo chuyển giao chuẩn quốc tế
+            <h1 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 800, fontFamily: 'var(--font-sans)', color: 'var(--secondary)', marginTop: '20px', lineHeight: '1.25' }}>
+              Chương trình đào tạo tại Viện đào tạo Quốc tế FPT
             </h1>
-            <p style={{ color: 'var(--text-muted)', maxWidth: '650px', marginTop: '20px', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Thời lượng thực hành chuyên sâu lên tới 70% tại phòng Lab, cập nhật công nghệ và xu thế thiết kế, truyền thông số mới nhất.
+            <p style={{ color: 'var(--text-muted)', maxWidth: '850px', marginTop: '20px', fontSize: '1.05rem', lineHeight: '1.75' }}>
+              FPT Academy International (FAI) kế thừa chiến lược đào tạo liên kết quốc tế của Tập đoàn FPT, triển khai mô hình đào tạo nhanh – làm được nghề ngay theo xu hướng số, với thời gian học tối ưu từ 3–24 tháng, dựa trên lợi thế của đối tác toàn cầu và hệ sinh thái FPT, cùng các chương trình FPT Aptech, FPT Arena, FPT Jetking, FPT Skillking
             </p>
           </div>
         </section>
