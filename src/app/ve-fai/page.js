@@ -14,7 +14,7 @@ const historyTimeline = [
     year: '1999',
     subTitle: 'FPT Aptech',
     title: 'Thành lập FPT Aptech',
-    desc: 'Là đơn vị sáng lập Aptech Việt Nam từ năm 1999, chương trình đào tạo Lập trình viên quốc tế FPT Aptech sở hữu hơn 20 năm kinh nghiệm đào tạo theo chuẩn quốc tế, trở thành lựa chọn uy tín của người học và doanh nghiệp. Chương trình đào tạo tại FPT Aptech kết hợp giáo trình lập trình viên quốc tế ACCP Aptech với đào tạo thực tiễn tại doanh nghiệp FPT, giúp sinh viên vững chuyên môn, làm đúng nghề và hướng tới bằng đại học CNTT. FPT Aptech hiện là thành viên của mạng lưới hơn 3.200 trung tâm APTECH Worldwide tại 52 quốc gia.'
+    desc: 'Là đơn vị sáng lập Aptech Việt Nam từ năm 1999, chương trình đào tạo Lập trình viên quốc tế FPT Aptech sở hữu hơn 20 năm kinh nghiệm đào tạo theo chuẩn quốc tế, trở thành lựa chọn uy tín của người học và doanh nghiệp. Chương trình đào tạo tại FPT Aptech kết hợp giáo trình lập trình viên quốc tế ACCP Aptech với đào tạo thực tiễn tại doanh nghiệp FPT, giúp sinh viên vững chuyên môn, làm đúng nghề. FPT Aptech hiện là thành viên của mạng lưới hơn 3.200 trung tâm APTECH Worldwide tại 52 quốc gia.'
   },
   {
     year: '2004',
