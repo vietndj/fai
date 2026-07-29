@@ -44,7 +44,7 @@ const historyTimeline = [
     year: '2025',
     subTitle: 'AI & Tự động hóa',
     title: 'Dẫn lối công nghệ mũi nhọn & tự động hóa',
-    desc: 'Tháng 02/2025, Tập đoàn FPT hợp tác cùng Cranes Varsity ra mắt hai chương trình đào tạo theo chuẩn quốc tế đầu tiên tại Việt Nam: Phát triển phần mềm ô tô thông minh FPT Cranes và Khoa học Dữ liệu FPT Cranes, góp phần đào tạo nguồn nhân lực chất lượng cao cho ngành ô tô thông minh và dữ liệu.\n\nSong song đó, chương trình AI Agent – FPT Jetking chính thức triển khai, kết hợp năng lực công nghệ của Tập đoàn FPT và kinh nghiệm đào tạo quốc tế của Tập đoàn Jetking (Ấn Độ), hướng tới đào tạo nhân lực làm chủ Trí tuệ Nhân tạo và tự động hóa trong kỷ nguyên số.'
+    desc: 'Năm 2025, Chương trình AI Agent – FPT Jetking chính thức triển khai, kết hợp năng lực công nghệ của Tập đoàn FPT và kinh nghiệm đào tạo quốc tế của Tập đoàn Jetking (Ấn Độ), hướng tới đào tạo nhân lực làm chủ Trí tuệ Nhân tạo và tự động hóa trong kỷ nguyên số.'
   }
 ];
 
