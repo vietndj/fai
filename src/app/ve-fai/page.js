@@ -52,39 +52,29 @@ const historyTimeline = [
 
 const programsList = [
   {
-    title: 'FPT APTECH',
-    subTitle: 'Lập trình viên Quốc tế',
+    programName: 'Lập trình viên Quốc tế',
     color: '#f37021',
     logo: '/logo_aptech.png',
-    items: ['Software Engineering', 'Java / .NET / Web Dev', 'Cloud Computing (AWS)', 'AI & Machine Learning', 'Data Science', 'e-Project Practical']
   },
   {
-    title: 'FPT ARENA',
-    subTitle: 'Mỹ thuật đa phương tiện',
+    programName: 'Thiết kế mỹ thuật đa phương tiện',
     color: '#ffb600',
     logo: '/logo_arena.png',
-    items: ['Graphic Design', 'Web & UI/UX Design', 'Filmmaking & Video', '3D Modeling & Animation', 'Game Art & Design', 'Graduation Project']
   },
   {
-    title: 'FPT SKILLKING',
-    subTitle: 'Digital Marketing chuyên sâu',
+    programName: 'Digital Marketing Ứng dụng AI',
     color: '#29a9e1',
     logo: '/logo_skillking.png',
-    items: ['Social Media Strategy', 'SEO & SEM Marketing', 'Paid Media (Ads)', 'HubSpot CRM Audit', 'Marketing Analytics', 'Capstone Project']
   },
   {
-    title: 'FPT JETKING - CHIP DESIGN',
-    subTitle: 'Thiết kế vi mạch bán dẫn',
+    programName: 'Thiết kế vi mạch bán dẫn',
     color: '#ed232a',
     logo: '/logo_jetking.png',
-    items: ['Programming & Circuits', 'Chip Architecture', 'HDL & EDA Tools', 'SoC/ASIC/FPGA Design', 'AI Driven IC Design', 'IC Verification']
   },
   {
-    title: 'FPT JETKING - AI AGENT',
-    subTitle: 'Kỹ sư phát triển AI Agent',
+    programName: 'Lập trình AI Agent',
     color: '#ed232a',
     logo: '/logo_jetking.png',
-    items: ['Python & Data Science', 'Machine & Deep Learning', 'NLP & Computer Vision', 'Generative AI & LLMs', 'Multi-Agent Systems', 'MLOps & Deployment']
   }
 ];
 
@@ -710,10 +700,10 @@ export default function VeFai() {
           <div className="container">
             <div style={{ marginBottom: '50px', textAlign: 'center' }}>
               <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800 }}>MẠNG LƯỚI ĐÀO TẠO</span>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Các phân hệ đào tạo" /></h2>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Các chương trình đào tạo" /></h2>
             </div>
 
-            {/* 5 Equal Program Cards (Logo + Title + SubTitle ONLY) */}
+            {/* 5 Equal Program Cards (Centered Logo + Program Name ONLY) */}
             <div 
               style={{ 
                 display: 'grid', 
@@ -730,32 +720,32 @@ export default function VeFai() {
                     background: '#F8F5F0', 
                     border: '1px solid rgba(13, 33, 55, 0.05)', 
                     borderRadius: '20px', 
-                    padding: '36px 28px',
+                    padding: '36px 20px',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'flex-start',
+                    alignItems: 'center',
                     justifyContent: 'center',
+                    textAlign: 'center',
                     transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                   }}
                 >
                   <div 
                     style={{ 
                       height: '60px', 
+                      width: '100%',
                       display: 'flex',
                       alignItems: 'center',
+                      justifyContent: 'center',
                       marginBottom: '20px',
                       position: 'relative'
                     }}
                   >
-                    <Image src={prog.logo} alt={prog.title} width={240} height={60} style={{ objectFit: 'contain', objectPosition: 'left center', width: 'auto', height: '100%' }} />
+                    <Image src={prog.logo} alt={prog.programName} width={240} height={60} style={{ objectFit: 'contain', objectPosition: 'center center', width: 'auto', height: '100%', maxWidth: '100%' }} />
                   </div>
-                  <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '6px', fontFamily: 'var(--font-sans)' }}>
-                    {prog.title}
+                  <h3 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--secondary)', margin: 0, fontFamily: 'var(--font-sans)', lineHeight: '1.45' }}>
+                    {prog.programName}
                   </h3>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.04em' }}>
-                    {prog.subTitle}
-                  </span>
                 </div>
               ))}
             </div>

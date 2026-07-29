@@ -18,49 +18,49 @@ const quotes = [
     quote: 'Về Software Engineering, chúng ta cần tiếp cận theo hướng đa kỹ năng, người học không chỉ biết về một công nghệ hay mạnh về một sở trường, mà người học cần có khả năng thích nghi để phù hợp với mọi công nghệ.',
     author: 'Thầy Nguyễn Tuân',
     role: 'Giám đốc đào tạo FPT Aptech',
-    brand: 'APTECH',
+    brand: 'FPT APTECH',
     avatar: '/nguyen_tuan.png',
   },
   {
     quote: 'Từ những vật nhỏ nhất cho đến không gian lớn đều yêu cầu về thiết kế, mỹ thuật và tính năng sử dụng, vì vậy nhu cầu về lực lượng nhân sự thiết kế là luôn có. Khi đã quyết định theo ngành thì cần có sự đầu tư về chuyên môn, mở rộng khoảng kiến thức để kiểm soát quy trình thiết kế cũng như sử dụng AI để hỗ trợ công việc.',
     author: 'Cô Lê Thị Ngọc Quyên',
     role: 'Giám đốc đào tạo FPT Arena Đà Nẵng',
-    brand: 'ARENA',
+    brand: 'FPT ARENA',
     avatar: '/le_thi_ngoc_quyen.jpg',
   },
   {
     quote: 'Nghề đồ họa lúc nào cũng hot, bởi vì hiện nay mỗi người đều có một thiết bị số cá nhân, tất cả những gì diễn ra trên màn hình đều là sản phẩm của đồ họa. Vấn đề là giờ đây chúng ta cần tiếp cận với công nghệ AI, coi AI là người giúp việc. Nếu chúng ta không học tư duy thiết kế, nguyên lý thẩm mỹ thì chúng ta không thể ra lệnh cho người giúp việc của mình.',
     author: 'Thầy Hà Dũng Hiệp',
     role: 'Giám đốc đào tạo FPT Arena Multimedia',
-    brand: 'ARENA',
+    brand: 'FPT ARENA',
     avatar: '/ha_dung_hiep.jpg',
   },
   {
     quote: 'Với những người mới bắt đầu, sự lựa chọn đi từ Foundation vẫn là lựa chọn tốt nhất. Quan trọng hơn cả là công cụ sẽ luôn thay đổi, Tiktok thay đổi giao diện liên tục, Facebook thay đổi rất nhiều tính năng, nhưng tư duy nền tảng luôn còn mãi. Hãy xây dựng cho mình nền tảng vững chắc trước khi triển khai và thực thi trên các công cụ.',
     author: 'Cô Đỗ Thanh Hiền',
     role: 'Giảng viên FPT Skillking Hà Nội',
-    brand: 'SKILLKING',
+    brand: 'FPT SKILLKING',
     avatar: '/do_thanh_hien.png',
   },
   {
     quote: 'Trong tương lai gần AI sẽ không thể thay thế người làm Marketing, nhưng người biết dùng AI sẽ thay thế người không biết dùng. Nếu bạn hiểu và biết ứng dụng AI thì đây sẽ là lợi thế rất lớn trong Digital Marketing.',
     author: 'Cô Trần Thị Kim Cúc',
     role: 'Giảng viên FPT Skillking Đà Nẵng',
-    brand: 'SKILLKING',
+    brand: 'FPT SKILLKING',
     avatar: '/tran_thi_kim_cuc.png',
   },
   {
     quote: 'Khi Generative AI đang định nghĩa lại mọi giới hạn, việc làm chủ Machine Learning, hay Computer Vision không còn là lựa chọn, mà đó chính là tấm vé sống còn để các bạn dẫn đầu kỳ nguyên số, đừng để mình bị bỏ lại phía sau trong cuộc đua nghìn tỷ đô này.',
     author: 'Cô Đặng Kim Thi',
     role: 'Giảng viên FPT Jetking',
-    brand: 'JETKING',
+    brand: 'FPT JETKING',
     avatar: '/dang_kim_thi.png',
   },
   {
     quote: 'Việt Nam đã vươn lên Top 3 quốc gia xuất khẩu Chip sang Mỹ, nhưng chúng ta đang đứng trước một bài toán nan giải, đó là thiếu hụt 50.000 kỹ sư để hiện thực hóa chiến lược quốc gia. Khi những gã khổng lồ SAMSUNG, Intel đang đổ hàng nghìn tỷ đô la vào đây, với mức lương khởi điểm 15 - 20 triệu và có thể lên đến hàng trăm triệu mỗi tháng, đây chính là lúc để bắt đầu.',
     author: 'Thầy Nguyễn Duy Hoàng',
     role: 'Giảng viên FPT Jetking',
-    brand: 'JETKING',
+    brand: 'FPT JETKING',
     avatar: '/nguyen_duy_hoang.png',
   },
 ];
@@ -106,9 +106,9 @@ export default function Testimonials() {
             {q.quote}
           </blockquote>
           <div className="quote-block-author">
-            <div className="quote-block-avatar">
+            <div className="quote-block-avatar" style={{ width: '56px', height: '56px', borderRadius: '50%', overflow: 'hidden' }}>
               <Image src={q.avatar} alt={q.author} width={56} height={56}
-                style={{ objectFit: 'cover', borderRadius: '50%' }} />
+                style={{ objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%', borderRadius: '50%' }} />
             </div>
             <div>
               <strong className="quote-block-name">{q.author}</strong>
