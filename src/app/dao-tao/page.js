@@ -14,6 +14,7 @@ const programs = [
     subTitle: 'Lập trình viên Quốc tế',
     desc: 'Là đơn vị đào tạo công nghệ đầu tiên của Tập đoàn FPT từ năm 1999 liên kết với Tập đoàn Công nghệ thông tin toàn cầu Aptech Ấn Độ, với kinh nghiệm đào tạo 27 năm tại Việt Nam chương trình Lập trình tại FPT Aptech tích hợp AI được thiết kế giúp bạn học nhanh – đi làm sớm, tối ưu thời gian, tăng trải nghiệm thực tế và đáp ứng đúng nhu cầu của doanh nghiệp.',
     image: '/fai_banner_aptech_v2.png',
+    youtubeId: '9qkfC1AKMNU',
     link: '/dao-tao/aptech',
     color: '#f37021',
     isDark: true,
@@ -185,12 +186,24 @@ export default function DaoTao() {
                           border: prog.isDark ? '1px solid rgba(255,255,255,0.06)' : '1px solid rgba(13, 33, 55, 0.05)'
                         }}
                       >
-                        <Image 
-                          src={prog.image} 
-                          alt={prog.title} 
-                          fill 
-                          style={{ objectFit: 'cover' }} 
-                        />
+                        {prog.youtubeId ? (
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src={`https://www.youtube.com/embed/${prog.youtubeId}?autoplay=0&rel=0`}
+                            title={prog.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            style={{ border: 'none', position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+                          />
+                        ) : (
+                          <Image 
+                            src={prog.image} 
+                            alt={prog.title} 
+                            fill 
+                            style={{ objectFit: 'cover' }} 
+                          />
+                        )}
                       </div>
                     </div>
                   </div>
