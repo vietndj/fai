@@ -20,7 +20,7 @@ const historyTimeline = [
     year: '2004',
     subTitle: 'FPT Arena',
     title: 'Tiên phong khái niệm về Multimedia tại Việt Nam',
-    desc: 'FPT Arena Multimedia là đơn vị tiên phong đưa và định hình khái niệm Multimedia – Mỹ thuật đa phương tiện tại Việt Nam. Trải qua hơn 20 năm phát triển, FPT Arena kế thừa văn hóa giáo dục của Tổ chức Giáo dục FPT và chuẩn đào tạo quốc tế của Tập đoàn Aptech (Ấn Độ), kiên định đào tạo gắn với thực tiễn, xây dựng đội ngũ giảng viên giàu kinh nghiệm và mạng lưới hợp tác quốc tế, góp phần hình thành thế hệ nhân lực sáng tạo cho ngành công nghiệp nội dung số Việt Nam.'
+    desc: 'FPT Arena Multimedia là đơn vị tiên phong đưa và định hình khái niệm Multimedia – Mỹ thuật đa phương tiện tại Việt Nam. Trải qua hơn 22 năm phát triển, FPT Arena kế thừa văn hóa giáo dục của Tổ chức Giáo dục FPT và chuẩn đào tạo quốc tế của Tập đoàn Aptech (Ấn Độ), kiên định đào tạo gắn với thực tiễn, xây dựng đội ngũ giảng viên giàu kinh nghiệm và mạng lưới hợp tác quốc tế, góp phần hình thành thế hệ nhân lực sáng tạo cho ngành công nghiệp nội dung số Việt Nam.'
   },
   {
     year: '2011',
@@ -52,27 +52,27 @@ const historyTimeline = [
 
 const programsList = [
   {
-    programName: 'Lập trình viên Quốc tế',
+    programName: <>Lập trình viên <br /> Quốc tế</>,
     color: '#f37021',
     logo: '/logo_aptech.png',
   },
   {
-    programName: 'Thiết kế mỹ thuật đa phương tiện',
+    programName: <>Thiết kế mỹ thuật <br /> đa phương tiện</>,
     color: '#ffb600',
     logo: '/logo_arena.png',
   },
   {
-    programName: 'Digital Marketing Ứng dụng AI',
+    programName: <>Digital Marketing <br /> Ứng dụng AI</>,
     color: '#29a9e1',
     logo: '/logo_skillking.png',
   },
   {
-    programName: 'Thiết kế vi mạch bán dẫn',
+    programName: <>Thiết kế vi mạch <br /> bán dẫn</>,
     color: '#ed232a',
     logo: '/logo_jetking.png',
   },
   {
-    programName: 'Lập trình AI Agent',
+    programName: <>Lập trình <br /> AI Agent</>,
     color: '#ed232a',
     logo: '/logo_jetking.png',
   }
