@@ -7,7 +7,7 @@ export default function TrustBar() {
       <div className="trust-bar-inner container">
         <div className="trust-item">
           <Check size={22} strokeWidth={2.5} style={{ color: 'var(--primary)', flexShrink: 0 }} />
-          <span>Thành viên <strong>Tổ chức giáo dục FPT</strong></span>
+          <span>Thành viên <strong>Tập đoàn FPT</strong></span>
         </div>
         <div className="trust-divider" />
         <div className="trust-item">
