@@ -138,13 +138,13 @@ export default function HeroSlider() {
             <div className="slide-content container">
               <div className="slide-text-box-premium">
                 {slide.logo && (
-                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', height: '84px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '14px', height: '60px' }}>
                     <Image 
                       src={slide.logo} 
                       alt={`${slide.title} Logo`} 
-                      width={320} 
-                      height={84} 
-                      style={{ objectFit: 'contain', height: '100%', width: 'auto', maxWidth: '340px' }} 
+                      width={260} 
+                      height={60} 
+                      style={{ objectFit: 'contain', height: '100%', width: 'auto', maxWidth: '280px' }} 
                     />
                   </div>
                 )}
