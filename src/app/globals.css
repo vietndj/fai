@@ -1991,7 +1991,7 @@ img {
 }
 
 .slide-text-box-premium {
-  max-width: 560px;
+  max-width: 620px;
   background: rgba(13, 33, 55, 0.45);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -2022,7 +2022,7 @@ img {
 
 .slide-title-premium {
   font-family: var(--font-sans);
-  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  font-size: clamp(1.4rem, 2.8vw, 2.25rem);
   font-weight: 850;
   color: #ffffff;
   line-height: 1.15;
