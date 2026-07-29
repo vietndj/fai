@@ -339,7 +339,7 @@ export default function VeFai() {
                   <div>
                     <AboutStatNumber target={1000} suffix="+" started={statsStarted} />
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
-                      Đối tác doanh nghiệp ký kết hợp tác phát triển nhân lực, kiến tập thực tế và tuyển dụng trực tiếp hằng năm.
+                      Đối tác doanh nghiệp ký kết hợp tác phát triển nhân lực hằng năm.
                     </p>
                   </div>
 
