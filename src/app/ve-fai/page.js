@@ -35,18 +35,6 @@ const historyTimeline = [
     desc: 'Chương trình đào tạo Digital Marketing FPT Skillking chính thức ra mắt vào năm 2018, là hệ thống đào tạo chuyên sâu về Digital Marketing đầu tiên tại Việt Nam, cung cấp chương trình Full-Stack Digital Marketing theo chuẩn quốc tế, góp phần đào tạo nguồn nhân lực chất lượng cao cho doanh nghiệp trong và ngoài nước.'
   },
   {
-    year: '2019',
-    subTitle: 'FPT Coking',
-    title: 'Khai phá kỷ nguyên Internet of Things',
-    desc: 'FPT Coking chính thức ra mắt, là kết quả hợp tác giữa FAI và Tập đoàn Jetking (Ấn Độ), triển khai đào tạo chuyên sâu Internet of Things (IoT) theo chuẩn quốc tế. FPT Coking trở thành học viện IoT đầu tiên tại Việt Nam cấp bằng quốc tế, góp phần phát triển nguồn nhân lực chất lượng cao cho kỷ nguyên công nghiệp 4.0.'
-  },
-  {
-    year: '2022',
-    subTitle: 'FPT AfterSchool',
-    title: 'Ươm mầm năng lực tương lai',
-    desc: 'Thành lập FPT AfterSchool – hệ thống đào tạo kỹ năng học đường dành cho học sinh từ 10 đến 18 tuổi, tập trung khai phá tư duy và phát triển kỹ năng trên nền tảng công nghệ, hướng tới thế hệ công dân tương lai. Ngay từ những ngày đầu, FAS nhất quán theo đuổi triết lý giáo dục của FPT Education: “Giáo dục đào tạo là tổ chức và quản trị việc tự học của người học” , lấy người học làm trung tâm của quá trình phát triển.'
-  },
-  {
     year: '2025',
     subTitle: 'Vi mạch bán dẫn',
     title: 'Bước chân vào kỷ nguyên bán dẫn',
@@ -57,12 +45,6 @@ const historyTimeline = [
     subTitle: 'AI & Tự động hóa',
     title: 'Dẫn lối công nghệ mũi nhọn & tự động hóa',
     desc: 'Tháng 02/2025, Tập đoàn FPT hợp tác cùng Cranes Varsity ra mắt hai chương trình đào tạo theo chuẩn quốc tế đầu tiên tại Việt Nam: Phát triển phần mềm ô tô thông minh FPT Cranes và Khoa học Dữ liệu FPT Cranes, góp phần đào tạo nguồn nhân lực chất lượng cao cho ngành ô tô thông minh và dữ liệu.\n\nSong song đó, chương trình AI Agent – FPT Jetking chính thức triển khai, kết hợp năng lực công nghệ của Tập đoàn FPT và kinh nghiệm đào tạo quốc tế của Tập đoàn Jetking (Ấn Độ), hướng tới đào tạo nhân lực làm chủ Trí tuệ Nhân tạo và tự động hóa trong kỷ nguyên số.'
-  },
-  {
-    year: '2026',
-    subTitle: 'Drone & Fintech',
-    title: 'Bám sát chiến lược tập đoàn, dẫn lối đào tạo thực chiến',
-    desc: 'Bám sát chiến lược công nghệ của Tập đoàn FPT với AI là trung tâm, và 5 trụ cột Trí tuệ nhân tạo – Bán dẫn – Xe thông minh – Chuyển đổi số – Chuyển đổi xanh, FAI cho ra mắt 3 chương trình đào tạo trọng điểm: Phát triển phần mềm ứng dụng FPT Cranes, Công nghệ tài chính FPT cranes & Thiết kế và vận hành hệ thống Drone FPT Cranes góp phần đào tạo nguồn nhân lực công nghệ chất lượng cao cho các lĩnh vực mũi nhọn của tập đoàn.'
   }
 ];
 
@@ -327,7 +309,7 @@ export default function VeFai() {
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ maxWidth: '950px', marginBottom: '60px' }}>
               <h2 style={{ fontSize: 'clamp(1.4rem, 3.2vw, 2rem)', fontWeight: 400, lineHeight: '1.6', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-sans)' }}>
-                Là đơn vị trực thuộc Tập đoàn FPT, FAI tự hào đồng hành cùng đất nước trong kỷ nguyên vươn mình, đưa thế hệ trẻ trên làm chủ các công nghệ cốt lõi, mỹ thuật số và truyền thông thực chiến thông qua các chương trình đào tạo chuyển giao quốc tế chuẩn mực nhất.
+                Là đơn vị trực thuộc Tập đoàn FPT, FAI tự hào đồng hành cùng đất nước trong kỷ nguyên vươn mình, đưa thế hệ trẻ làm chủ các công nghệ cốt lõi, mỹ thuật số và truyền thông thực chiến thông qua các chương trình đào tạo chuyển giao quốc tế chuẩn mực nhất.
               </h2>
             </div>
 
@@ -367,7 +349,7 @@ export default function VeFai() {
                   <div>
                     <AboutStatNumber target={1000} suffix="+" started={statsStarted} />
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.7', marginTop: '15px' }}>
-                      Đối tác doanh nghiệp ký kết liên kết cung ứng nhân sự, kiến tập thực tế và tuyển dụng trực tiếp hàng năm.
+                      Đối tác doanh nghiệp ký kết hợp tác phát triển nhân lực, kiến tập thực tế và tuyển dụng trực tiếp hằng năm.
                     </p>
                   </div>
 
@@ -586,26 +568,6 @@ export default function VeFai() {
                         </div>
                       </div>
 
-                      {/* Subtitle Row below - Displayed for EVERY milestone */}
-                      <div style={{ marginTop: '10px', minHeight: '36px', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-                        <span style={{
-                          fontSize: '0.72rem',
-                          fontWeight: 800,
-                          color: isActive ? 'var(--primary)' : 'rgba(255, 255, 255, 0.6)',
-                          letterSpacing: '0.02em',
-                          textAlign: 'center',
-                          lineHeight: '1.35',
-                          whiteSpace: 'normal',
-                          maxWidth: '115px',
-                          backgroundColor: isActive ? 'rgba(232, 116, 30, 0.15)' : 'rgba(255, 255, 255, 0.04)',
-                          border: isActive ? '1px solid rgba(232, 116, 30, 0.35)' : '1px solid rgba(255, 255, 255, 0.08)',
-                          padding: '3px 8px',
-                          borderRadius: '10px',
-                          transition: 'all 0.3s ease'
-                        }}>
-                          {item.subTitle}
-                        </span>
-                      </div>
                     </button>
                   );
                 })}

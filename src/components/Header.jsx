@@ -70,35 +70,35 @@ export default function Header() {
                             <Zap size={18} style={{ color: '#1a6ed8' }} />
                             APTECH — Công Nghệ
                           </h4>
-                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình viên Quốc tế (ADSE)</Link>
-                          <Link href="/dao-tao/aptech" className="megamenu-link">Trí tuệ Nhân tạo (AI)</Link>
-                          <Link href="/dao-tao/aptech" className="megamenu-link">Khoa học Dữ liệu</Link>
+                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
+                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Back end 1 năm</Link>
+                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Front end 6 tháng</Link>
+                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình ngắn hạn 100-200h</Link>
                         </div>
                         <div className="program-cat brand-arena">
                           <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Palette size={18} style={{ color: '#e8741e' }} />
                             ARENA — Sáng Tạo
                           </h4>
-                          <Link href="/dao-tao/arena" className="megamenu-link">Mỹ thuật Đa phương tiện</Link>
-                          <Link href="/dao-tao/arena" className="megamenu-link">Thiết kế Đồ họa & Web</Link>
-                          <Link href="/dao-tao/arena" className="megamenu-link">Kỹ xảo & Hoạt hình 3D</Link>
+                          <Link href="/dao-tao/arena" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
+                          <Link href="/dao-tao/arena" className="megamenu-link">Thiết kế 2D, 3D, Game và App (6–18 tháng)</Link>
+                          <Link href="/dao-tao/arena" className="megamenu-link">Các khóa học ngắn hạn (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-skillking">
                           <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Megaphone size={18} style={{ color: '#16a34a' }} />
                             SKILLKING — Marketing
                           </h4>
-                          <Link href="/dao-tao/skillking" className="megamenu-link">Digital Marketing chuyên sâu</Link>
-                          <Link href="/dao-tao/skillking" className="megamenu-link">Social Media & SEO</Link>
-                          <Link href="/dao-tao/skillking" className="megamenu-link">Quản trị chiến dịch số</Link>
+                          <Link href="/dao-tao/skillking" className="megamenu-link">Fullstack Digital Marketing With AI (18 tháng)</Link>
+                          <Link href="/dao-tao/skillking" className="megamenu-link">Bộ khóa học Digital Marketing thực chiến (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-jetking">
                           <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Cpu size={18} style={{ color: '#8b5cf6' }} />
                             JETKING — Công Nghệ Mới
                           </h4>
-                          <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế Vi mạch Bán dẫn</Link>
-                          <Link href="/dao-tao/ai-agent" className="megamenu-link">Chuyên gia AI Agent</Link>
+                          <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế vi mạch bán dẫn quốc tế tích hợp AI</Link>
+                          <Link href="/dao-tao/ai-agent" className="megamenu-link">Lập trình AI Agent</Link>
                         </div>
                       </div>
                     </div>
