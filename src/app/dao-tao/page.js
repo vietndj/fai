@@ -135,7 +135,7 @@ export default function DaoTao() {
               HỆ THỐNG ĐÀO TẠO
             </span>
             <h1 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 800, fontFamily: 'var(--font-sans)', color: 'var(--secondary)', marginTop: '20px', lineHeight: '1.25' }}>
-              Chương trình đào tạo tại Viện đào tạo Quốc tế FPT
+              Chương trình đào tạo tại <br style={{ display: 'inline' }} /> Viện Đào tạo Quốc tế FPT
             </h1>
             <p style={{ color: 'var(--text-muted)', maxWidth: '850px', marginTop: '20px', fontSize: '1.05rem', lineHeight: '1.75' }}>
               FPT Academy International (FAI) kế thừa chiến lược đào tạo liên kết quốc tế của Tập đoàn FPT, triển khai mô hình đào tạo nhanh – làm được nghề ngay theo xu hướng số, với thời gian học tối ưu từ 3–24 tháng, dựa trên lợi thế của đối tác toàn cầu và hệ sinh thái FPT, cùng các chương trình FPT Aptech, FPT Arena, FPT Jetking, FPT Skillking
