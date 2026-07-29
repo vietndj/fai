@@ -9,7 +9,7 @@ import { ArrowRight } from 'lucide-react';
 const programs = [
   {
     id: 'aptech',
-    number: '01/',
+    categoryTag: 'ĐÀO TẠO LẬP TRÌNH VIÊN QUỐC TẾ AI ĐA KỸ NĂNG',
     title: 'FPT APTECH',
     subTitle: 'Lập trình viên Quốc tế',
     desc: 'Là đơn vị đào tạo công nghệ đầu tiên của Tập đoàn FPT từ năm 1999 liên kết với Tập đoàn Công nghệ thông tin toàn cầu Aptech Ấn Độ, với kinh nghiệm đào tạo 27 năm tại Việt Nam chương trình Lập trình tại FPT Aptech tích hợp AI được thiết kế giúp bạn học nhanh – đi làm sớm, tối ưu thời gian, tăng trải nghiệm thực tế và đáp ứng đúng nhu cầu của doanh nghiệp.',
@@ -31,7 +31,7 @@ const programs = [
   },
   {
     id: 'arena',
-    number: '02/',
+    categoryTag: 'ĐÀO TẠO MULTIMEDIA ĐA KỸ NĂNG ỨNG DỤNG AI',
     title: 'FPT ARENA MULTIMEDIA',
     subTitle: 'Thiết kế Mỹ thuật đa phương tiện',
     desc: 'Được thành lập vào tháng 7/2004 trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn CNTT toàn cầu Aptech (Ấn Độ), FPT Arena Multimedia là hệ thống đào tạo Mỹ thuật đa phương tiện, tiên phong đưa khái niệm Multimedia đến với thế hệ trẻ Việt Nam. Với chương trình đào tạo bám sát nhu cầu của doanh nghiệp, FPT Arena Multimedia giúp học viên phát triển tư duy sáng tạo, xây dựng năng lực nghề nghiệp trong lĩnh vực thiết kế đa phương tiện.',
@@ -52,7 +52,7 @@ const programs = [
   },
   {
     id: 'skillking',
-    number: '03/',
+    categoryTag: 'ĐÀO TẠO MARKETING SỐ ỨNG DỤNG AI',
     title: 'FPT SKILLKING',
     subTitle: 'Digital Marketing Ứng dụng AI',
     desc: 'FPT Skillking là hệ thống đào tạo Digital Marketing được thành lập năm 2018, trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn Jetking (Ấn Độ), cung cấp chương trình học theo định hướng thực tiễn, trang bị cho học viên kiến thức từ nền tảng đến chuyên sâu trong lĩnh vực tiếp thị số. Chương trình đào tạo tại FPT Skillking ứng dụng AI vào quá trình giảng dạy và thực hành, giúp học viên nâng cao năng lực công nghệ, phát triển tư duy chiến lược và đáp ứng yêu cầu của doanh nghiệp trong kỷ nguyên số.',
@@ -72,7 +72,7 @@ const programs = [
   },
   {
     id: 'chip-design',
-    number: '04/',
+    categoryTag: 'ĐÀO TẠO THIẾT KẾ VI MẠCH BÁN DẪN TÍCH HỢP AI',
     title: 'FPT JETKING CHIP DESIGN',
     subTitle: 'Thiết kế vi mạch Bán dẫn',
     desc: 'Ngành vi mạch bán dẫn là nền tảng của các công nghệ như AI, IoT và 5G, đồng thời đang đối mặt với tình trạng thiếu hụt nhân lực chất lượng cao trên toàn cầu. Hợp tác cùng Jetking (Ấn Độ), FPT Jetking triển khai chương trình Thiết kế vi mạch bán dẫn tích hợp AI theo chuẩn quốc tế, trang bị kiến thức, kỹ năng thực hành và kinh nghiệm thực tiễn, đáp ứng nhu cầu tuyển dụng trong nước và quốc tế.',
@@ -91,7 +91,7 @@ const programs = [
   },
   {
     id: 'ai-agent',
-    number: '05/',
+    categoryTag: 'KỸ SƯ PHÁT TRIỂN HỆ THỐNG AI AGENT',
     title: 'FPT JETKING AI AGENT',
     subTitle: 'Lập trình AI Agent',
     desc: 'Nhu cầu nhân lực AI Agent đang tăng trưởng 35 - 50% mỗi năm. Đến năm 2027, AI được dự báo sẽ tạo ra hơn 97 triệu việc làm mới, trong đó AI Agent là một trong những lĩnh vực có nhu cầu tuyển dụng cao. FPT Jetking triển khai chương trình Lập trình AI Agent, trang bị kiến thức và kỹ năng xây dựng AI Agent hiện đại, giúp học viên sẵn sàng nắm bắt cơ hội nghề nghiệp trong kỷ nguyên AI.',
@@ -215,8 +215,8 @@ export default function DaoTao() {
                   {/* Right Column: Semesters and Link */}
                   <div style={{ flex: '1 1 400px', maxWidth: '550px' }} className="program-block-right">
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-                      <div style={{ fontSize: '1.25rem', fontWeight: 800, color: prog.color, fontFamily: 'var(--font-sans)', letterSpacing: '0.05em' }}>
-                        Chương trình {prog.number}
+                      <div style={{ fontSize: '1.05rem', fontWeight: 800, color: prog.color, fontFamily: 'var(--font-sans)', letterSpacing: '0.05em' }}>
+                        {prog.categoryTag}
                       </div>
                       
                       <p style={{ color: prog.isDark ? 'rgba(255,255,255,0.85)' : 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.75', margin: 0 }}>
