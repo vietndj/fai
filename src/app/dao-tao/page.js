@@ -80,10 +80,10 @@ const programs = [
     youtubeId: 'C-No0GKGQhk',
     link: '/dao-tao/chip-design',
     color: '#ed232a',
-    isDark: true,
+    isDark: false,
     bgStyle: {
-      backgroundColor: '#180405',
-      color: '#ffffff'
+      backgroundColor: '#F9FAFC',
+      color: '#1a2332'
     },
     curriculums: [
       'Thiết kế vi mạch bán dẫn quốc tế tích hợp AI'
