@@ -479,45 +479,6 @@ export default function VeFai() {
               </span>
               <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
                 <ScrollTypewriter text="Những dấu ấn tiên phong" />
-              </h2>ên, rèn luyện phỏng vấn giả định và kết nối việc làm trọn đời sau tốt nghiệp.
-                    </p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 4: High-Tech Futuristic Cyber Timeline */}
-        <section 
-          className="about-history-section" 
-          style={{ 
-            padding: '100px 0 120px 0', 
-            backgroundColor: '#070a10', 
-            color: '#ffffff',
-            position: 'relative',
-            overflow: 'hidden'
-          }}
-        >
-          {/* Subtle tech grid background */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: 'radial-gradient(rgba(232, 116, 30, 0.06) 1px, transparent 1px)',
-            backgroundSize: '24px 24px',
-            pointerEvents: 'none',
-            zIndex: 0
-          }} />
-
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            {/* Section Header */}
-            <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 60px auto' }}>
-              <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em' }}>
-                Hành trình phát triển
-              </span>
-              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-                <ScrollTypewriter text="Những cột mốc lịch sử FAI" />
               </h2>
               <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.02rem', lineHeight: '1.75', marginTop: '15px' }}>
                 Hơn 27 năm kiên định tiên phong đặt nền móng và định hình đào tạo công nghệ, mỹ thuật đa phương tiện &amp; kỹ năng thế hệ mới tại Việt Nam.
