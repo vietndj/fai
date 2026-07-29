@@ -86,7 +86,7 @@ const programs = [
       color: '#1a2332'
     },
     curriculums: [
-      'Thiết kế vi mạch bán dẫn quốc tế tích hợp AI'
+      'Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)'
     ]
   },
   {
@@ -105,7 +105,7 @@ const programs = [
       color: '#ffffff'
     },
     curriculums: [
-      'Lập trình AI Agent'
+      'Lập trình AI Agent (6 tháng - 2 năm)'
     ]
   }
 ];

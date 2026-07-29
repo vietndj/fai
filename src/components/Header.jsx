@@ -97,8 +97,8 @@ export default function Header() {
                             <Cpu size={18} style={{ color: '#8b5cf6' }} />
                             FPT Jetking
                           </h4>
-                          <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế vi mạch bán dẫn quốc tế tích hợp AI</Link>
-                          <Link href="/dao-tao/ai-agent" className="megamenu-link">Lập trình AI Agent</Link>
+                          <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)</Link>
+                          <Link href="/dao-tao/ai-agent" className="megamenu-link">Lập trình AI Agent (6 tháng - 2 năm)</Link>
                         </div>
                       </div>
                     </div>
