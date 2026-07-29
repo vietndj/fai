@@ -395,10 +395,10 @@ export default function VeFai() {
               <div style={{ gridColumn: 'span 4' }}>
                 <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800 }}>GIÁ TRỊ CỐT LÕI</span>
                 <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
-                  <ScrollTypewriter text="Những giá trị đại diện cho chúng tôi" speed={12} />
+                  <ScrollTypewriter text="Những giá trị tạo nên sự khác biệt" speed={12} />
                 </h2>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.7', marginTop: '20px', maxWidth: '340px' }}>
-                  Kim chỉ nam giúp FAI xây dựng hệ thống đào tạo chất lượng cao chuẩn quốc tế, gắn liền giữa lý thuyết và thực tiễn doanh nghiệp.
+                  Kim chỉ nam giúp Viện đào tạo Quốc tế FPT xây dựng chương trình đào tạo chuẩn quốc tế, gắn kết giữa kiến thức, thực hành và nhu cầu của doanh nghiệp.
                 </p>
               </div>
               
@@ -410,9 +410,11 @@ export default function VeFai() {
                     <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(232, 116, 30, 0.08)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
                       <Zap size={22} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Practical — Thực chiến" /></h3>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
+                      Practical — Thực chiến
+                    </h3>
                     <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
-                      Nói không với lý thuyết suông. Thời lượng học thực hành tại Lab đạt 70%. Sinh viên làm đồ án e-Project thực tế mỗi học kỳ giúp tích lũy portfolio đắt giá trước khi ra trường.
+                      70 - 80% thực hành, học qua dự án thực tế theo phương pháp Project Based Learning, xây dựng portfolio ngay trong quá trình học.
                     </p>
                   </div>
 
@@ -421,9 +423,11 @@ export default function VeFai() {
                     <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(201, 151, 44, 0.08)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
                       <Globe size={22} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Global — Toàn cầu" /></h3>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
+                      Global — Toàn cầu
+                    </h3>
                     <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
-                      Giáo trình được chuyển giao trực tiếp từ các tổ chức giáo dục hàng đầu thế giới, cập nhật liên tục các xu hướng công nghiệp mới nhất như Cloud, AI/ML, UI/UX hay Data.
+                      Chương trình đào tạo được chuyển giao từ các đối tác quốc tế, liên tục cập nhật các công nghệ và xu hướng mới như AI, Cloud, Data hay UI/UX.
                     </p>
                   </div>
 
@@ -432,9 +436,50 @@ export default function VeFai() {
                     <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(22, 163, 74, 0.08)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
                       <Users size={22} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Connect — Đồng hành" /></h3>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
+                      Connect — Đồng hành
+                    </h3>
                     <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
-                      Hỗ trợ sinh viên toàn diện thông qua mạng lưới Job Hub. Tổ chức Company Visit thường xuyên, rèn luyện phỏng vấn giả định và kết nối việc làm trọn đời sau tốt nghiệp.
+                      Hệ sinh thái hỗ trợ nghề nghiệp toàn diện với mạng lưới hợp tác doanh nghiệp, Company Visit, phỏng vấn thử và kết nối cơ hội việc làm.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 4: High-Tech Futuristic Cyber Timeline */}
+        <section 
+          className="about-history-section" 
+          style={{ 
+            padding: '100px 0 120px 0', 
+            backgroundColor: '#070a10', 
+            color: '#ffffff',
+            position: 'relative',
+            overflow: 'hidden'
+          }}
+        >
+          {/* Subtle tech grid background */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: 'radial-gradient(rgba(232, 116, 30, 0.06) 1px, transparent 1px)',
+            backgroundSize: '24px 24px',
+            pointerEvents: 'none',
+            zIndex: 0
+          }} />
+
+          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+            {/* Section Header */}
+            <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 60px auto' }}>
+              <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em' }}>
+                Hành trình phát triển
+              </span>
+              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+                <ScrollTypewriter text="Những dấu ấn tiên phong" />
+              </h2>ên, rèn luyện phỏng vấn giả định và kết nối việc làm trọn đời sau tốt nghiệp.
                     </p>
                   </div>
 

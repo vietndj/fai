@@ -24,7 +24,7 @@ export default function Footer() {
             
             <div className="footer-intro-block" style={{ padding: '15px 20px', background: 'rgba(255,255,255,0.04)', borderRadius: '12px', borderLeft: '3px solid rgba(255,255,255,0.2)' }}>
               <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: '0.85rem', lineHeight: '1.65', margin: 0 }}>
-                Hệ sinh thái FAI gồm 5 phân hệ đào tạo chuẩn quốc tế chuyển giao trực tiếp từ đối tác nước ngoài: Lập trình (Aptech), Thiết kế (Arena), Tiếp thị số (Skillking), Thiết kế vi mạch bán dẫn (Jetking Chip Design) và Trí tuệ nhân tạo (Jetking AI Agent).
+                Hệ sinh thái FAI gồm 5 chương trình đào tạo chuẩn quốc tế chuyển giao trực tiếp từ đối tác nước ngoài: Lập trình viên Quốc tế (FPT Aptech), Thiết kế mỹ thuật đa phương tiện (FPT Arena), Digital Marketing Ứng dụng AI (FPT Skillking), Thiết kế vi mạch bán dẫn - Chip Design (FPT Jetking) và Lập trình AI Agent (FPT Jetking).
               </p>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function Footer() {
 
           {/* Mạng xã hội thành viên */}
           <div className="footer-fanpage-col">
-            <h4 className="footer-col-title">THƯƠNG HIỆU THÀNH VIÊN</h4>
+            <h4 className="footer-col-title">CHƯƠNG TRÌNH ĐÀO TẠO</h4>
             <ul className="footer-links-list" style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
               <li>
                 <a href="https://aptech.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
@@ -141,26 +141,26 @@ export default function Footer() {
               </li>
               <li>
                 <a href="https://arena.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Arena Multimedia</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Mỹ thuật Đa phương tiện</span>
+                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Arena</strong>
+                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Thiết kế mỹ thuật đa phương tiện</span>
                 </a>
               </li>
               <li>
                 <a href="https://skillking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
                   <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Skillking</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Digital Marketing chuyên sâu</span>
+                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Digital Marketing Ứng dụng AI</span>
                 </a>
               </li>
               <li>
                 <a href="https://jetking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Jetking Chip Design</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Thiết kế Vi mạch Bán dẫn</span>
+                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Jetking</strong>
+                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Thiết kế vi mạch bán dẫn</span>
                 </a>
               </li>
               <li>
                 <a href="https://jetking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Jetking AI Agent</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Chuyên gia phát triển AI Agent</span>
+                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Jetking</strong>
+                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Lập trình AI Agent</span>
                 </a>
               </li>
             </ul>
