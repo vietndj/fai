@@ -41,7 +41,7 @@ const programs = [
     color: '#ffb600',
     isDark: false,
     bgStyle: {
-      backgroundColor: '#FFFBEB',
+      backgroundColor: '#ffffff',
       color: '#1a2332'
     },
     curriculums: [
@@ -82,7 +82,7 @@ const programs = [
     color: '#ed232a',
     isDark: false,
     bgStyle: {
-      backgroundColor: '#F9FAFC',
+      backgroundColor: '#ffffff',
       color: '#1a2332'
     },
     curriculums: [
