@@ -138,8 +138,8 @@ export default function AptechSubpage() {
           <span className="beau-hero-brand" style={{ backgroundColor: '#f37021', color: '#ffffff', letterSpacing: '0.08em', padding: '8px 20px', borderRadius: '30px' }}>
             FPT APTECH ACCP AI 2026
           </span>
-          <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.2' }}>
-            CHƯƠNG TRÌNH LẬP TRÌNH VIÊN QUỐC TẾ AI ĐA KỸ NĂNG
+          <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance' }}>
+            CHƯƠNG TRÌNH LẬP TRÌNH VIÊN QUỐC TẾ<br />AI ĐA KỸ NĂNG
           </h1>
           <div style={{ color: '#f37021', fontSize: '1.25rem', fontWeight: 800, marginTop: '8px', letterSpacing: '0.04em' }}>
             ✦ Đón đầu xu hướng – Nắm bắt cơ hội thực chiến

@@ -123,6 +123,11 @@ section[id], div[id], [id] {
   scroll-margin-top: 110px;
 }
 
+/* Prevent orphan words in headings site-wide */
+h1, h2, h3, .beau-hero-title, .section-headline {
+  text-wrap: balance;
+}
+
 @media (max-width: 900px) {
   html, body {
     padding-top: 0;
