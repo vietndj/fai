@@ -57,7 +57,7 @@ export default function Header() {
 
               <li className="menu-item has-megamenu">
                 <Link href="/dao-tao" className="menu-link">Chương trình Đào tạo</Link>
-                <div className="megamenu">
+                <div className="megamenu megamenu-light">
                   <div className="container megamenu-grid">
                     <div className="megamenu-title-col">
                       <h3>Chương trình Đào tạo</h3>
@@ -66,8 +66,8 @@ export default function Header() {
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
                         <div className="program-cat brand-aptech">
-                          <div style={{ marginBottom: '16px', height: '34px', display: 'flex', alignItems: 'center' }}>
-                            <Image src="/logo_aptech.png" alt="FPT Aptech" width={140} height={28} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '28px', maxWidth: '140px' }} />
+                          <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
+                            <Image src="/logo_aptech.png" alt="FPT Aptech" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Back end 1 năm</Link>
@@ -75,23 +75,23 @@ export default function Header() {
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình ngắn hạn 100-200h</Link>
                         </div>
                         <div className="program-cat brand-arena">
-                          <div style={{ marginBottom: '16px', height: '34px', display: 'flex', alignItems: 'center' }}>
-                            <Image src="/logo_arena.png" alt="FPT Arena" width={140} height={28} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '28px', maxWidth: '140px' }} />
+                          <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
+                            <Image src="/logo_arena.png" alt="FPT Arena" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/arena" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
                           <Link href="/dao-tao/arena" className="megamenu-link">Thiết kế 2D, 3D, Game và App (6–18 tháng)</Link>
                           <Link href="/dao-tao/arena" className="megamenu-link">Các khóa học ngắn hạn (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-skillking">
-                          <div style={{ marginBottom: '16px', height: '34px', display: 'flex', alignItems: 'center' }}>
-                            <Image src="/logo_skillking.png" alt="FPT Skillking" width={140} height={28} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '28px', maxWidth: '140px' }} />
+                          <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
+                            <Image src="/logo_skillking.png" alt="FPT Skillking" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/skillking" className="megamenu-link">Fullstack Digital Marketing With AI (18 tháng)</Link>
                           <Link href="/dao-tao/skillking" className="megamenu-link">Bộ khóa học Digital Marketing thực chiến (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-jetking">
-                          <div style={{ marginBottom: '16px', height: '34px', display: 'flex', alignItems: 'center' }}>
-                            <Image src="/logo_jetking.png" alt="FPT Jetking" width={140} height={28} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '28px', maxWidth: '140px' }} />
+                          <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
+                            <Image src="/logo_jetking.png" alt="FPT Jetking" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)</Link>
                           <Link href="/dao-tao/ai-agent" className="megamenu-link">Lập trình AI Agent (6 tháng - 2 năm)</Link>

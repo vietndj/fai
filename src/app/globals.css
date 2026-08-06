@@ -594,6 +594,37 @@ img {
   transform: translateY(0);
 }
 
+/* Special Light Palette Megamenu for 'Chương trình Đào tạo' */
+.megamenu-light {
+  background-color: #F8F5F0 !important;
+  color: #0D2137 !important;
+  box-shadow: 0 30px 70px rgba(13, 33, 55, 0.15) !important;
+  border-top: 1px solid rgba(13, 33, 55, 0.1) !important;
+  border-bottom: 1px solid rgba(13, 33, 55, 0.1) !important;
+}
+
+.megamenu-light .megamenu-title-col h3 {
+  color: #0D2137 !important;
+}
+
+.megamenu-light .megamenu-title-col p {
+  color: #475569 !important;
+}
+
+.megamenu-light .megamenu-links-col {
+  border-left: 1px solid rgba(13, 33, 55, 0.1) !important;
+}
+
+.megamenu-light .megamenu-link {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+.megamenu-light .megamenu-link:hover {
+  color: #E8741E !important;
+  transform: translateX(4px);
+}
+
 .megamenu-grid {
   display: grid;
   grid-template-columns: 2.2fr 7.8fr;
