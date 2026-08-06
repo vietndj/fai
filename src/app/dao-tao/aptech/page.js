@@ -290,72 +290,76 @@ export default function AptechSubpage() {
             <h2 className="beau-section-title">Chi tiết chương trình học (4 học kỳ)</h2>
           </div>
 
-          {/* Sticky 2-Line Responsive Semester Tabs Bar */}
+          {/* Redesigned Floating Segmented Semester Tabs (Option 1) */}
           <div 
             style={{ 
               position: 'sticky', 
-              top: '72px', 
+              top: '80px', 
               zIndex: 90, 
-              background: 'rgba(8, 14, 25, 0.95)', 
-              backdropFilter: 'blur(16px)', 
-              WebkitBackdropFilter: 'blur(16px)',
-              padding: '14px 0',
-              margin: '0 0 40px',
-              borderTop: '1px solid rgba(243, 112, 33, 0.25)',
-              borderBottom: '1px solid rgba(243, 112, 33, 0.25)',
-              boxShadow: '0 12px 30px rgba(0, 0, 0, 0.6)'
+              padding: '12px 0',
+              marginBottom: '36px',
+              maxWidth: '1100px',
+              margin: '0 auto 36px'
             }}
           >
             <div 
               style={{ 
                 display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', 
-                gap: '10px', 
-                alignItems: 'stretch'
+                gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', 
+                gap: '14px'
               }}
             >
-              {semesters.map((sem, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveTab(idx)}
-                  style={{
-                    padding: '10px 14px',
-                    borderRadius: '14px',
-                    border: '1px solid',
-                    borderColor: activeTab === idx ? '#f37021' : 'rgba(255, 255, 255, 0.12)',
-                    background: activeTab === idx ? 'linear-gradient(135deg, #f37021 0%, #c8500e 100%)' : 'rgba(255, 255, 255, 0.04)',
-                    color: '#ffffff',
-                    cursor: 'pointer',
-                    transition: 'all 0.25s ease',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    textAlign: 'center',
-                    boxShadow: activeTab === idx ? '0 6px 18px rgba(243, 112, 33, 0.4)' : 'none'
-                  }}
-                >
-                  <span style={{ 
-                    fontSize: '0.72rem', 
-                    fontWeight: 800, 
-                    letterSpacing: '0.08em', 
-                    color: activeTab === idx ? '#ffffff' : '#f37021',
-                    textTransform: 'uppercase',
-                    marginBottom: '3px'
-                  }}>
-                    {sem.num}
-                  </span>
-                  <span style={{ 
-                    fontSize: '0.88rem', 
-                    fontWeight: 700, 
-                    lineHeight: '1.25',
-                    color: '#ffffff',
-                    wordBreak: 'break-word'
-                  }}>
-                    {sem.shortTitle}
-                  </span>
-                </button>
-              ))}
+              {semesters.map((sem, idx) => {
+                const isActive = activeTab === idx;
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveTab(idx)}
+                    style={{
+                      padding: '14px 18px',
+                      borderRadius: '16px',
+                      border: isActive ? '1px solid #f37021' : '1px solid rgba(255, 255, 255, 0.12)',
+                      background: isActive 
+                        ? 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)' 
+                        : 'rgba(13, 33, 55, 0.75)',
+                      color: '#ffffff',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      textAlign: 'left',
+                      boxShadow: isActive ? '0 10px 28px rgba(243, 112, 33, 0.45)' : '0 4px 15px rgba(0,0,0,0.2)',
+                      backdropFilter: 'blur(12px)',
+                      WebkitBackdropFilter: 'blur(12px)'
+                    }}
+                  >
+                    <span 
+                      style={{ 
+                        fontSize: '0.78rem', 
+                        fontWeight: 900, 
+                        color: isActive ? '#ffffff' : '#f37021',
+                        background: isActive ? 'rgba(0, 0, 0, 0.25)' : 'rgba(243, 112, 33, 0.15)',
+                        padding: '4px 9px',
+                        borderRadius: '10px',
+                        flexShrink: 0
+                      }}
+                    >
+                      {sem.num}
+                    </span>
+                    <span 
+                      style={{ 
+                        fontSize: '0.92rem', 
+                        fontWeight: isActive ? 800 : 600, 
+                        lineHeight: '1.3',
+                        color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.85)'
+                      }}
+                    >
+                      {sem.shortTitle}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
