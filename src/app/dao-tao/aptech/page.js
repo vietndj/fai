@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
+import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
@@ -480,6 +481,9 @@ export default function AptechSubpage() {
           </Link>
         </div>
       </section>
+
+      {/* Section 5: Form nhận thông tin học bổng & Google Sheet */}
+      <ScholarshipFormSection programName="FPT Aptech" />
 
       <Footer />
     </div>
