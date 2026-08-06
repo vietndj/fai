@@ -640,14 +640,9 @@ export default function DoiSong() {
                 “Một cộng đồng – nhiều hành trình – không có khuôn mẫu”
               </p>
               
-              <div style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.02rem', lineHeight: '1.85', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                <p style={{ margin: 0 }}>Ở đây không có “mẫu số chung” của một sinh viên Viện đào tạo quốc tế FPT (FAI).</p>
-                <p style={{ margin: 0 }}>Có người đến FAI để bắt đầu một hành trình nghề nghiệp.</p>
-                <p style={{ margin: 0 }}>Có người rẽ hướng sang một lĩnh vực mới.</p>
-                <p style={{ margin: 0 }}>Có người vừa đi làm, vừa đi học để nâng cấp chuyên môn.</p>
-                <p style={{ margin: 0 }}>Có người đã có công việc, dự án riêng hay đang xây dựng doanh nghiệp nhưng vẫn tiếp tục học thêm mỗi ngày.</p>
-                <p style={{ margin: 0 }}>FAI không định nghĩa người học bằng tuổi tác, xuất phát điểm hay công việc hiện tại.</p>
-              </div>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.02rem', lineHeight: '1.85', margin: 0 }}>
+                Ở đây không có “mẫu số chung” của một sinh viên Viện đào tạo quốc tế FPT (FAI). Có người đến FAI để bắt đầu một hành trình nghề nghiệp. Có người rẽ hướng sang một lĩnh vực mới. Có người vừa đi làm, vừa đi học để nâng cấp chuyên môn. Có người đã có công việc, dự án riêng hay đang xây dựng doanh nghiệp nhưng vẫn tiếp tục học thêm mỗi ngày. FAI không định nghĩa người học bằng tuổi tác, xuất phát điểm hay công việc hiện tại.
+              </p>
 
               <p style={{ fontSize: '1.1rem', fontWeight: 700, color: '#ffffff', marginTop: '22px', fontStyle: 'italic', letterSpacing: '0.01em' }}>
                 Mỗi FAIer một hành trình. Mỗi hành trình một câu chuyện. Và tất cả cùng gặp nhau tại FAI.
