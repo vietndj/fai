@@ -22,13 +22,13 @@ const corePillars = [
   },
   {
     tag: 'TRẢI NGHIỆM',
-    title: 'KHÔNG CHỈ ĐI HỌC – HÃY SỐNG TRỌN FAI LIFE',
-    desc: 'Từ workshop, talkshow, cuộc thi đến thể thao, hoạt động cộng đồng và những sân chơi mới – mỗi trải nghiệm là một cơ hội để thử sức, kết nối và khám phá phiên bản khác của chính mình.',
+    title: 'KHÔNG CHỈ ĐI HỌC - HÃY SỐNG TRỌN FAI LIFE',
+    desc: 'Từ workshop, talkshow, cuộc thi đến thể thao, hoạt động cộng đồng và những sân chơi mới - mỗi trải nghiệm là một cơ hội để thử sức, kết nối và khám phá phiên bản khác của chính mình.',
     image: '/fai_pillar_3.jpg'
   },
   {
     tag: 'KẾT NỐI',
-    title: 'MỞ RỘNG NETWORK – MỞ RỘNG CƠ HỘI',
+    title: 'MỞ RỘNG NETWORK - MỞ RỘNG CƠ HỘI',
     desc: 'Kết nối với doanh nghiệp, chuyên gia, nhà tuyển dụng và cộng đồng FAI để cập nhật cơ hội việc làm và phát triển nghề nghiệp liên tục.',
     image: '/fai_graduation_handshake.png'
   }
@@ -637,7 +637,7 @@ export default function DoiSong() {
             </h1>
             <div style={{ maxWidth: '820px', margin: '24px auto 0 auto', textAlign: 'center' }}>
               <p style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '18px', lineHeight: '1.5' }}>
-                “Một cộng đồng – nhiều hành trình – không có khuôn mẫu”
+                “Một cộng đồng - nhiều hành trình - không có khuôn mẫu”
               </p>
               
               <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.02rem', lineHeight: '1.85', margin: 0 }}>
@@ -669,7 +669,7 @@ export default function DoiSong() {
                 Mỗi FAIer một nhịp sống
               </span>
               <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
-                Học – Làm – Trải Nghiệm – Kết Nối
+                Học - Làm - Trải Nghiệm - Kết Nối
               </h2>
               <p style={{ color: 'var(--text-muted)', maxWidth: '650px', margin: '14px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.65' }}>
                 Bốn trụ cột định hình môi trường đào tạo thực chiến và tạo nên hành trình phát triển toàn diện của sinh viên tại Viện Đào Tạo Quốc Tế FPT.
