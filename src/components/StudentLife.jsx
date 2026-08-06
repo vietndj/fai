@@ -49,7 +49,7 @@ export default function StudentLife() {
         <div className="student-life-header">
           <div>
             <span className="section-eyebrow">Trải nghiệm sinh viên</span>
-            <h2 className="section-headline"><ScrollTypewriter text="Đời Sống Sinh Viên FAI" /></h2>
+            <h2 className="section-headline"><ScrollTypewriter text="Trải Nghiệm Sinh Viên FAI" /></h2>
             <p className="section-subhead" style={{ maxWidth: 560 }}>
               Tại Viện đào tạo quốc tế FPT (FAI), sinh viên được trải nghiệm các sân chơi chuyên ngành, ngày hội công nghệ, sự kiện sáng tạo và chương trình kết nối doanh nghiệp, từ đó phát triển kỹ năng thực tế, khám phá cơ hội nghề nghiệp ngay từ năm nhất.
             </p>
@@ -58,7 +58,7 @@ export default function StudentLife() {
             <ul className="info-checklist">
               <li>Sân chơi chuyên ngành</li>
               <li>Hoạt động doanh nghiệp</li>
-              <li>Đời sống sinh viên</li>
+              <li>Trải nghiệm sinh viên</li>
             </ul>
             <Link href="/doi-song" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
               Xem thêm hoạt động <ArrowRight size={16} />

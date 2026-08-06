@@ -79,7 +79,7 @@ export default function Footer() {
               <li><Link href="/ve-fai" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Về FAI</Link></li>
               <li><Link href="/dao-tao" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Chương trình Đào tạo</Link></li>
               <li><Link href="/tuyen-sinh" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Tuyển sinh 2026</Link></li>
-              <li><Link href="/doi-song" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Đời sống Sinh viên</Link></li>
+              <li><Link href="/doi-song" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Trải nghiệm Sinh viên</Link></li>
               <li><Link href="/tin-tuc" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Tin tức &amp; Sự kiện</Link></li>
               <li><Link href="/lien-he" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Liên hệ</Link></li>
             </ul>

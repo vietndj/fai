@@ -633,7 +633,7 @@ export default function DoiSong() {
               TRẢI NGHIỆM FAI
             </span>
             <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.15', marginTop: '16px', fontFamily: 'var(--font-sans)' }}>
-              Đời sống sinh viên
+              Trải nghiệm sinh viên
             </h1>
             <div style={{ maxWidth: '820px', margin: '24px auto 0 auto', textAlign: 'center' }}>
               <p style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '18px', lineHeight: '1.5' }}>

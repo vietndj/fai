@@ -128,7 +128,7 @@ export default function Header() {
               </li>
 
               <li className="menu-item has-megamenu">
-                <Link href="/doi-song" className="menu-link">Đời sống Sinh viên</Link>
+                <Link href="/doi-song" className="menu-link">Trải nghiệm Sinh viên</Link>
                 <div className="megamenu">
                   <div className="container megamenu-grid">
                     <div className="megamenu-title-col">
@@ -235,7 +235,7 @@ export default function Header() {
 
             <li className="mobile-menu-item">
               <div className="mobile-category-header" onClick={() => toggleCategory('doi-song')}>
-                <span>Đời sống Sinh viên</span>
+                <span>Trải nghiệm Sinh viên</span>
                 <ChevronDown size={18} className={expandedCats['doi-song'] ? 'rotate' : ''} />
               </div>
               <ul className={`mobile-submenu ${expandedCats['doi-song'] ? 'open' : ''}`}>
