@@ -483,7 +483,10 @@ export default function AptechSubpage() {
       </section>
 
       {/* Section 5: Form nhận thông tin học bổng & Google Sheet */}
-      <ScholarshipFormSection programName="FPT Aptech" />
+      <ScholarshipFormSection 
+        programName="FPT Aptech" 
+        googleSheetScriptUrl="https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec"
+      />
 
       <Footer />
     </div>

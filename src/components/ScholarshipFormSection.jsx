@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Check, Send, CheckCircle2 } from 'lucide-react';
 
 export default function ScholarshipFormSection({ 
-  googleSheetScriptUrl = '', // Pass Google Apps Script Web App URL here
+  googleSheetScriptUrl = 'https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec',
   programName = 'FPT Aptech'
 }) {
   const [formData, setFormData] = useState({
@@ -79,13 +79,14 @@ export default function ScholarshipFormSection({
       className="scholarship-form-section"
       style={{
         position: 'relative',
-        background: 'linear-gradient(135deg, #a64200 0%, #d85d0d 30%, #e8741e 60%, #b84b00 100%)',
-        color: '#ffffff',
-        padding: '70px 0',
+        background: '#ffffff',
+        color: '#0D2137',
+        padding: '75px 0',
         overflow: 'hidden',
+        borderTop: '1px solid rgba(13, 33, 55, 0.08)'
       }}
     >
-      {/* Subtle Binary Code Overlay Background */}
+      {/* Subtle Code Pattern Background */}
       <div 
         style={{
           position: 'absolute',
@@ -93,8 +94,8 @@ export default function ScholarshipFormSection({
           left: 0,
           right: 0,
           bottom: 0,
-          opacity: 0.08,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' fill='%23ffffff' font-family='monospace' font-size='12'%3E01000101%3C/text%3E%3Ctext x='10' y='60' fill='%23ffffff' font-family='monospace' font-size='12'%3E11100100%3C/text%3E%3Ctext x='10' y='90' fill='%23ffffff' font-family='monospace' font-size='12'%3E00110011%3C/text%3E%3C/svg%3E")`,
+          opacity: 0.03,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' fill='%23e8741e' font-family='monospace' font-size='12'%3E01000101%3C/text%3E%3Ctext x='10' y='60' fill='%230d2137' font-family='monospace' font-size='12'%3E11100100%3C/text%3E%3Ctext x='10' y='90' fill='%23e8741e' font-family='monospace' font-size='12'%3E00110011%3C/text%3E%3C/svg%3E")`,
           pointerEvents: 'none',
         }}
       />
@@ -107,15 +108,14 @@ export default function ScholarshipFormSection({
               fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)',
               fontWeight: 900,
               textTransform: 'uppercase',
-              color: '#ffffff',
+              color: '#0D2137',
               letterSpacing: '0.02em',
               lineHeight: '1.3',
               maxWidth: '1000px',
-              margin: '0 auto',
-              textShadow: '0 2px 10px rgba(0,0,0,0.3)'
+              margin: '0 auto'
             }}
           >
-            NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI {programName.toUpperCase()}
+            NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI <span style={{ color: '#E8741E' }}>{programName.toUpperCase()}</span>
           </h2>
         </div>
 
@@ -137,11 +137,11 @@ export default function ScholarshipFormSection({
             <div 
               style={{
                 position: 'relative',
-                background: 'linear-gradient(135deg, #fff3e6 0%, #ffdfc4 100%)',
+                background: 'linear-gradient(135deg, #FFF6EE 0%, #FFE9D6 100%)',
                 borderRadius: '24px',
                 padding: '24px 30px',
-                border: '3px solid #ffb380',
-                boxShadow: '0 12px 30px rgba(0,0,0,0.25)',
+                border: '2px solid #FFC299',
+                boxShadow: '0 10px 25px rgba(232, 116, 30, 0.12)',
                 color: '#1a2332',
                 textAlign: 'center'
               }}
@@ -178,11 +178,11 @@ export default function ScholarshipFormSection({
             <div 
               style={{
                 position: 'relative',
-                background: 'linear-gradient(135deg, #fff3e6 0%, #ffdfc4 100%)',
+                background: 'linear-gradient(135deg, #FFF6EE 0%, #FFE9D6 100%)',
                 borderRadius: '24px',
                 padding: '24px 30px',
-                border: '3px solid #ffb380',
-                boxShadow: '0 12px 30px rgba(0,0,0,0.25)',
+                border: '2px solid #FFC299',
+                boxShadow: '0 10px 25px rgba(232, 116, 30, 0.12)',
                 color: '#1a2332',
                 textAlign: 'center'
               }}
@@ -219,11 +219,11 @@ export default function ScholarshipFormSection({
             <div 
               style={{
                 position: 'relative',
-                background: 'linear-gradient(135deg, #fff3e6 0%, #ffdfc4 100%)',
+                background: 'linear-gradient(135deg, #FFF6EE 0%, #FFE9D6 100%)',
                 borderRadius: '24px',
                 padding: '24px 30px',
-                border: '3px solid #ffb380',
-                boxShadow: '0 12px 30px rgba(0,0,0,0.25)',
+                border: '2px solid #FFC299',
+                boxShadow: '0 10px 25px rgba(232, 116, 30, 0.12)',
                 color: '#1a2332',
                 textAlign: 'center'
               }}
@@ -264,7 +264,8 @@ export default function ScholarshipFormSection({
               background: '#ffffff',
               borderRadius: '28px',
               padding: '36px 32px',
-              boxShadow: '0 25px 60px rgba(0,0,0,0.3)',
+              border: '1px solid #E2E8F0',
+              boxShadow: '0 20px 50px rgba(13, 33, 55, 0.08)',
               color: '#1a2332'
             }}
           >
