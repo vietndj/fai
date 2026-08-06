@@ -68,7 +68,7 @@ export default function Header() {
                         <div className="program-cat brand-aptech">
                           <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Zap size={18} style={{ color: '#1a6ed8' }} />
-                            FPT Aptech
+                            Lập trình viên Quốc tế
                           </h4>
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Back end 1 năm</Link>
@@ -78,7 +78,7 @@ export default function Header() {
                         <div className="program-cat brand-arena">
                           <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Palette size={18} style={{ color: '#e8741e' }} />
-                            FPT Arena
+                            Thiết kế Mỹ thuật Đa phương tiện
                           </h4>
                           <Link href="/dao-tao/arena" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
                           <Link href="/dao-tao/arena" className="megamenu-link">Thiết kế 2D, 3D, Game và App (6–18 tháng)</Link>
@@ -87,7 +87,7 @@ export default function Header() {
                         <div className="program-cat brand-skillking">
                           <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Megaphone size={18} style={{ color: '#16a34a' }} />
-                            FPT Skillking
+                            Digital Marketing (Tiếp thị số)
                           </h4>
                           <Link href="/dao-tao/skillking" className="megamenu-link">Fullstack Digital Marketing With AI (18 tháng)</Link>
                           <Link href="/dao-tao/skillking" className="megamenu-link">Bộ khóa học Digital Marketing thực chiến (100 giờ)</Link>
@@ -95,7 +95,7 @@ export default function Header() {
                         <div className="program-cat brand-jetking">
                           <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Cpu size={18} style={{ color: '#8b5cf6' }} />
-                            FPT Jetking
+                            Vi mạch Bán dẫn & AI
                           </h4>
                           <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)</Link>
                           <Link href="/dao-tao/ai-agent" className="megamenu-link">Lập trình AI Agent (6 tháng - 2 năm)</Link>
