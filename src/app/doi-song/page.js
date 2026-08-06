@@ -10,25 +10,25 @@ import { Calendar, Clock, X, ArrowRight, BookOpen, Coffee, Award, Play, ChevronL
 const corePillars = [
   {
     tag: 'HỌC',
-    title: 'HỌC ĐỂ HIỂU – HIỂU ĐỂ LÀM ĐƯỢC!',
+    title: 'Học để hiểu - Hiểu để làm được!',
     desc: 'Tiếp cận kiến thức chuyên môn, cập nhật xu hướng và rèn luyện năng lực thông qua các project thực chiến.',
     image: '/fai_pillar_1.jpg'
   },
   {
     tag: 'LÀM',
-    title: 'HỌC TỪ THỰC TẾ, LÀM RA SẢN PHẨM, ỨNG DỤNG VÀO CÔNG VIỆC',
+    title: 'Học từ thực tế, làm ra sản phẩm, ứng dụng vào công việc',
     desc: 'Biến kiến thức thành project, sản phẩm, portfolio và những trải nghiệm có thể ứng dụng vào công việc.',
     image: '/fai_pillar_2.jpg'
   },
   {
     tag: 'TRẢI NGHIỆM',
-    title: 'KHÔNG CHỈ ĐI HỌC - HÃY SỐNG TRỌN FAI LIFE',
+    title: 'Không chỉ đi học - Hãy sống trọn FAI Life',
     desc: 'Từ workshop, talkshow, cuộc thi đến thể thao, hoạt động cộng đồng và những sân chơi mới - mỗi trải nghiệm là một cơ hội để thử sức, kết nối và khám phá phiên bản khác của chính mình.',
     image: '/fai_pillar_3.jpg'
   },
   {
     tag: 'KẾT NỐI',
-    title: 'MỞ RỘNG NETWORK - MỞ RỘNG CƠ HỘI',
+    title: 'Mở rộng Network - Mở rộng cơ hội',
     desc: 'Kết nối với doanh nghiệp, chuyên gia, nhà tuyển dụng và cộng đồng FAI để cập nhật cơ hội việc làm và phát triển nghề nghiệp liên tục.',
     image: '/fai_graduation_handshake.png'
   }
@@ -741,20 +741,27 @@ export default function DoiSong() {
                       pointerEvents: isGrabbing ? 'none' : 'auto'
                     }}
                   >
-                    <span 
-                      className="timeline-card-time" 
-                      style={{ 
-                        fontSize: '1.6rem', 
-                        fontWeight: 800, 
-                        color: 'var(--primary)', 
-                        display: 'block', 
-                        marginBottom: '16px',
-                        fontFamily: 'var(--font-sans)',
-                        letterSpacing: '0.04em'
-                      }}
-                    >
-                      {item.tag}
-                    </span>
+                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                      <span 
+                        style={{ 
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          padding: '6px 14px', 
+                          borderRadius: '20px', 
+                          background: 'rgba(249, 115, 22, 0.08)', 
+                          border: '1px solid rgba(249, 115, 22, 0.2)',
+                          color: 'var(--primary)', 
+                          fontSize: '0.8rem', 
+                          fontWeight: 800, 
+                          letterSpacing: '0.08em', 
+                          textTransform: 'uppercase',
+                          fontFamily: 'var(--font-sans)'
+                        }}
+                      >
+                        TRỤ CỘT 0{idx + 1} • {item.tag}
+                      </span>
+                    </div>
                     
                     <div 
                       className="timeline-card-img-wrapper" 
@@ -762,7 +769,7 @@ export default function DoiSong() {
                         position: 'relative', 
                         width: '100%', 
                         aspectRatio: '16/10', 
-                        borderRadius: '12px', 
+                        borderRadius: '14px', 
                         overflow: 'hidden', 
                         marginBottom: '20px',
                         boxShadow: '0 5px 15px rgba(0,0,0,0.06)',
@@ -772,7 +779,7 @@ export default function DoiSong() {
                       <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} className="timeline-img" />
                     </div>
                     
-                    <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '10px', lineHeight: '1.45', fontFamily: 'var(--font-sans)', textTransform: 'uppercase' }}>
+                    <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '10px', lineHeight: '1.45', fontFamily: 'var(--font-sans)' }}>
                       {item.title}
                     </h4>
                     <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
