@@ -619,8 +619,14 @@ export default function DoiSong() {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
           setTimeout(() => {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 150);
+            const headerOffset = 110;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }, 100);
         }
       }
     };

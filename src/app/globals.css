@@ -118,6 +118,11 @@ html, body {
   padding-top: 0; /* Offset managed on first sections individually */
 }
 
+/* Ensure smooth scrolling anchor targets leave breathing room below sticky header */
+section[id], div[id], [id] {
+  scroll-margin-top: 110px;
+}
+
 @media (max-width: 900px) {
   html, body {
     padding-top: 0;
