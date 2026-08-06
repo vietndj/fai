@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
+import TechCTAButton from '@/components/TechCTAButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
@@ -475,16 +476,7 @@ export default function AptechSubpage() {
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', marginBottom: '30px' }}>
             Đăng ký nhận tư vấn lộ trình học cá nhân hóa và thông tin học bổng mới nhất từ FPT Aptech
           </p>
-          <a 
-            href="https://zalo.me/fptaptech" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="beau-cta-btn" 
-            style={{ background: '#f37021' }}
-          >
-            Tư vấn ngay
-            <ArrowRight size={24} strokeWidth={2.5} />
-          </a>
+          <TechCTAButton text="Tư vấn ngay" href="https://zalo.me/fptaptech" />
         </div>
       </section>
 
