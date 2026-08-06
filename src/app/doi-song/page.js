@@ -10,7 +10,7 @@ import { Calendar, Clock, X, ArrowRight, BookOpen, Coffee, Award, Play, ChevronL
 const corePillars = [
   {
     tag: 'HỌC',
-    title: 'Học để hiểu - Hiểu để làm được!',
+    title: 'HỌC ĐỂ HIỂU – HIỂU ĐỂ LÀM ĐƯỢC!',
     desc: 'Tiếp cận kiến thức chuyên môn, cập nhật xu hướng và rèn luyện năng lực thông qua các project thực chiến.',
     image: '/fai_pillar_1.jpg'
   },
@@ -310,6 +310,29 @@ const categoryBlocks = [
   }
 ];
 
+function PostCardImage({ src, alt, date }) {
+  const [imgSrc, setImgSrc] = useState(src);
+
+  useEffect(() => {
+    setImgSrc(src);
+  }, [src]);
+
+  return (
+    <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
+      <Image 
+        src={imgSrc} 
+        alt={alt || ''} 
+        fill 
+        style={{ objectFit: 'cover' }} 
+        onError={() => setImgSrc('/fai_pillar_1.jpg')} 
+      />
+      <span style={{ position: 'absolute', top: '15px', left: '15px', background: 'var(--primary)', padding: '4px 10px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800, color: '#ffffff', textTransform: 'uppercase' }}>
+        {date}
+      </span>
+    </div>
+  );
+}
+
 function CategoryBlockItem({ block, onSelectPost }) {
   const scrollRef = useRef(null);
   const [isGrabbing, setIsGrabbing] = useState(false);
@@ -457,12 +480,7 @@ function CategoryBlockItem({ block, onSelectPost }) {
                   pointerEvents: isGrabbing ? 'none' : 'auto'
                 }}
               >
-                <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
-                  <Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} />
-                  <span style={{ position: 'absolute', top: '15px', left: '15px', background: 'var(--primary)', padding: '4px 10px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800, color: '#ffffff', textTransform: 'uppercase' }}>
-                    {post.date}
-                  </span>
-                </div>
+                <PostCardImage src={post.image} alt={post.title} date={post.date} />
                 
                 <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '12px', flexGrow: 1 }}>
                   <h3 style={{ fontSize: '1.15rem', fontWeight: 800, lineHeight: '1.45', color: textColor, margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '50px', fontFamily: 'var(--font-sans)' }}>
@@ -617,9 +635,24 @@ export default function DoiSong() {
             <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.15', marginTop: '16px', fontFamily: 'var(--font-sans)' }}>
               Đời sống sinh viên
             </h1>
-            <p style={{ maxWidth: '650px', color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: '1.75', margin: '20px auto 0 auto' }}>
-              Vượt qua giới hạn phòng học — tại FAI, cuộc sống sinh viên là chuỗi ngày rực rỡ sắc màu với các câu lạc bộ thực chiến, sự kiện teambuilding sôi động và cơ hội kiến tập doanh nghiệp từ sớm.
-            </p>
+            <div style={{ maxWidth: '820px', margin: '24px auto 0 auto', textAlign: 'center' }}>
+              <p style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--primary)', marginBottom: '18px', lineHeight: '1.5' }}>
+                “Một cộng đồng – nhiều hành trình – không có khuôn mẫu”
+              </p>
+              
+              <div style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.02rem', lineHeight: '1.85', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <p style={{ margin: 0 }}>Ở đây không có “mẫu số chung” của một sinh viên Viện đào tạo quốc tế FPT (FAI).</p>
+                <p style={{ margin: 0 }}>Có người đến FAI để bắt đầu một hành trình nghề nghiệp.</p>
+                <p style={{ margin: 0 }}>Có người rẽ hướng sang một lĩnh vực mới.</p>
+                <p style={{ margin: 0 }}>Có người vừa đi làm, vừa đi học để nâng cấp chuyên môn.</p>
+                <p style={{ margin: 0 }}>Có người đã có công việc, dự án riêng hay đang xây dựng doanh nghiệp nhưng vẫn tiếp tục học thêm mỗi ngày.</p>
+                <p style={{ margin: 0 }}>FAI không định nghĩa người học bằng tuổi tác, xuất phát điểm hay công việc hiện tại.</p>
+              </div>
+
+              <p style={{ fontSize: '1.1rem', fontWeight: 700, color: '#ffffff', marginTop: '22px', fontStyle: 'italic', letterSpacing: '0.01em' }}>
+                Mỗi FAIer một hành trình. Mỗi hành trình một câu chuyện. Và tất cả cùng gặp nhau tại FAI.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -744,7 +777,7 @@ export default function DoiSong() {
                       <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} className="timeline-img" />
                     </div>
                     
-                    <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '10px', lineHeight: '1.45', fontFamily: 'var(--font-sans)' }}>
+                    <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '10px', lineHeight: '1.45', fontFamily: 'var(--font-sans)', textTransform: 'uppercase' }}>
                       {item.title}
                     </h4>
                     <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
