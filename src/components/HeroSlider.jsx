@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const slides = [
   {
     image: '/banner_hero_fan_final_v2.jpeg',
-    video: '/videos/intro.mp4',
+    video: '/videos/tungmu.mp4',
     logo: null,
     eyebrow: 'Khoảnh khắc Vinh quang & Đáng nhớ',
     title: 'LỄ TỐT NGHIỆP CỦA SINH VIÊN FAI',
