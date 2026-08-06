@@ -393,6 +393,7 @@ function CategoryBlockItem({ block, onSelectPost }) {
 
   return (
     <section 
+      id={block.id}
       style={{ 
         padding: '90px 0', 
         backgroundColor: bgColor, 
@@ -611,6 +612,24 @@ export default function DoiSong() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  useEffect(() => {
+    const handleHashScroll = () => {
+      if (typeof window !== 'undefined' && window.location.hash) {
+        const targetId = window.location.hash.replace('#', '');
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          setTimeout(() => {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 150);
+        }
+      }
+    };
+
+    handleHashScroll();
+    window.addEventListener('hashchange', handleHashScroll);
+    return () => window.removeEventListener('hashchange', handleHashScroll);
+  }, []);
+
   return (
     <div className="student-life-page-container" style={{ backgroundColor: '#ffffff', color: '#1a2332' }}>
       <Header />
@@ -669,6 +688,7 @@ export default function DoiSong() {
 
         {/* BLOCK 2: 4 TRỤ CỘT SINH VIÊN (HỌC - LÀM - TRẢI NGHIỆM - KẾT NỐI) */}
         <section 
+          id="nhip-song"
           className="student-life-timeline-section" 
           style={{ 
             padding: '90px 0', 
@@ -804,8 +824,8 @@ export default function DoiSong() {
               <Link href="/tuyen-sinh" className="btn btn-primary" style={{ padding: '14px 32px', fontSize: '1rem' }}>
                 Đăng ký tư vấn ngay
               </Link>
-              <a href="tel:0983883883" className="btn btn-secondary" style={{ padding: '14px 32px', fontSize: '1rem', background: '#ffffff', color: 'var(--secondary)' }}>
-                Hotline: 0983 883 883
+              <a href="tel:02473008855" className="btn btn-secondary" style={{ padding: '14px 32px', fontSize: '1rem', background: '#ffffff', color: 'var(--secondary)' }}>
+                Hotline: 024 7300 8855
               </a>
             </div>
           </div>

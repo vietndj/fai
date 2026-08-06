@@ -137,11 +137,12 @@ export default function Header() {
                     </div>
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid">
-                        <Link href="/doi-song#san-choi" className="megamenu-link">Câu lạc bộ & Sân chơi học thuật</Link>
-                        <Link href="/doi-song#doanh-nghiep" className="megamenu-link">Liên kết & Trải nghiệm Doanh nghiệp</Link>
-                        <Link href="/doi-song#su-kien" className="megamenu-link">Hoạt động Sự kiện & Teambuilding</Link>
-                        <Link href="/doi-song#viec-lam" className="megamenu-link">Dịch vụ Hỗ trợ việc làm (Job Hub)</Link>
-                        <Link href="/doi-song#alumni" className="megamenu-link">Cựu sinh viên tiêu biểu</Link>
+                        <Link href="/doi-song#nhip-song" className="megamenu-link">Mỗi FAIer một nhịp sống (4 Trụ cột)</Link>
+                        <Link href="/doi-song#graduation" className="megamenu-link">Lễ Tốt nghiệp & Vinh danh</Link>
+                        <Link href="/doi-song#enterprise" className="megamenu-link">Doanh nghiệp & FAI</Link>
+                        <Link href="/doi-song#sharing" className="megamenu-link">Nhỏ to cùng chia sẻ</Link>
+                        <Link href="/doi-song#contests" className="megamenu-link">Sân chơi & Giải thưởng</Link>
+                        <Link href="/doi-song#community" className="megamenu-link">FAI & Cộng đồng</Link>
                       </div>
                     </div>
                   </div>
@@ -239,11 +240,12 @@ export default function Header() {
                 <ChevronDown size={18} className={expandedCats['doi-song'] ? 'rotate' : ''} />
               </div>
               <ul className={`mobile-submenu ${expandedCats['doi-song'] ? 'open' : ''}`}>
-                <li><Link href="/doi-song#san-choi" onClick={closeMenu}>Câu lạc bộ & Sân chơi học thuật</Link></li>
-                <li><Link href="/doi-song#doanh-nghiep" onClick={closeMenu}>Liên kết & Trải nghiệm Doanh nghiệp</Link></li>
-                <li><Link href="/doi-song#su-kien" onClick={closeMenu}>Hoạt động Sự kiện & Teambuilding</Link></li>
-                <li><Link href="/doi-song#viec-lam" onClick={closeMenu}>Dịch vụ Hỗ trợ việc làm (Job Hub)</Link></li>
-                <li><Link href="/doi-song#alumni" onClick={closeMenu}>Cựu sinh viên tiêu biểu</Link></li>
+                <li><Link href="/doi-song#nhip-song" onClick={closeMenu}>Mỗi FAIer một nhịp sống (4 Trụ cột)</Link></li>
+                <li><Link href="/doi-song#graduation" onClick={closeMenu}>Lễ Tốt nghiệp & Vinh danh</Link></li>
+                <li><Link href="/doi-song#enterprise" onClick={closeMenu}>Doanh nghiệp & FAI</Link></li>
+                <li><Link href="/doi-song#sharing" onClick={closeMenu}>Nhỏ to cùng chia sẻ</Link></li>
+                <li><Link href="/doi-song#contests" onClick={closeMenu}>Sân chơi & Giải thưởng</Link></li>
+                <li><Link href="/doi-song#community" onClick={closeMenu}>FAI & Cộng đồng</Link></li>
               </ul>
             </li>
 
