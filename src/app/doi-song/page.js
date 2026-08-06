@@ -30,7 +30,7 @@ const corePillars = [
     tag: 'KẾT NỐI',
     title: 'Mở rộng Network - Mở rộng cơ hội',
     desc: 'Kết nối với doanh nghiệp, chuyên gia, nhà tuyển dụng và cộng đồng FAI để cập nhật cơ hội việc làm và phát triển nghề nghiệp liên tục.',
-    image: '/fai_graduation_handshake.png'
+    image: '/fai_pillar_4.jpg'
   }
 ];
 
