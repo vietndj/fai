@@ -205,7 +205,7 @@ const categoryBlocks = [
   {
     id: 'contests',
     title: 'Sân chơi & giải thưởng',
-    eyebrow: 'Khai phóng tài năng',
+    eyebrow: 'Khai phá tài năng',
     desc: 'Khám phá các cuộc thi học thuật quy mô lớn, đấu trường quốc tế và triển lãm thiết kế thường niên.',
     isLight: true,
     posts: [
