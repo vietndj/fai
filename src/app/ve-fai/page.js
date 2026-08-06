@@ -56,12 +56,13 @@ const programsList = [
     logo: '/logo_arena.png',
   },
   {
-    programName: <>Digital Marketing <br /> Ứng dụng AI</>,
+    programName: <>Digital Marketing</>,
     color: '#29a9e1',
     logo: '/logo_skillking.png',
   },
   {
-    programName: <>Thiết kế vi mạch bán dẫn <br /> Lập trình AI Agent</>,
+    isMulti: true,
+    programs: ['Thiết kế vi mạch bán dẫn', 'Lập trình AI Agent'],
     color: '#ed232a',
     logo: '/logo_jetking.png',
   }
@@ -713,9 +714,9 @@ export default function VeFai() {
             <div 
               style={{ 
                 display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
-                gap: '24px',
-                alignItems: 'stretch' 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', 
+                gap: '36px',
+                alignItems: 'center' 
               }}
             >
               {programsList.map((prog, idx) => (
@@ -726,32 +727,51 @@ export default function VeFai() {
                     background: 'transparent', 
                     border: 'none', 
                     borderRadius: '20px', 
-                    padding: '24px 16px',
+                    padding: '32px 20px',
                     boxShadow: 'none',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                    transition: 'none',
+                    transform: 'none'
                   }}
                 >
                   <div 
                     style={{ 
-                      height: '60px', 
+                      height: '90px', 
                       width: '100%',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      marginBottom: '20px',
+                      marginBottom: '24px',
                       position: 'relative'
                     }}
                   >
-                    <Image src={prog.logo} alt={prog.programName} width={240} height={60} style={{ objectFit: 'contain', objectPosition: 'center center', width: 'auto', height: '100%', maxWidth: '100%' }} />
+                    <Image 
+                      src={prog.logo} 
+                      alt="Program Logo" 
+                      width={300} 
+                      height={90} 
+                      style={{ objectFit: 'contain', objectPosition: 'center center', width: 'auto', height: '85px', maxWidth: '240px' }} 
+                    />
                   </div>
-                  <h3 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--secondary)', margin: 0, fontFamily: 'var(--font-sans)', lineHeight: '1.45' }}>
-                    {prog.programName}
-                  </h3>
+
+                  {prog.isMulti ? (
+                    <div style={{ textAlign: 'left', display: 'inline-flex', flexDirection: 'column', gap: '8px' }}>
+                      {prog.programs.map((pName, pIdx) => (
+                        <div key={pIdx} style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--secondary)', display: 'flex', alignItems: 'center', gap: '8px', lineHeight: '1.4' }}>
+                          <span style={{ color: '#f37021', fontSize: '1.3rem', fontWeight: 900, lineHeight: 1 }}>•</span>
+                          <span>{pName}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: 0, fontFamily: 'var(--font-sans)', lineHeight: '1.5' }}>
+                      {prog.programName}
+                    </h3>
+                  )}
                 </div>
               ))}
             </div>
