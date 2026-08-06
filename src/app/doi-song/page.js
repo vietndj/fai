@@ -666,7 +666,7 @@ export default function DoiSong() {
           <div className="container">
             <div className="section-header-centered" style={{ textAlign: 'center', marginBottom: '45px' }}>
               <span className="section-eyebrow" style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.2em', color: 'var(--primary)', textTransform: 'uppercase' }}>
-                FAI STUDENT LIFE
+                Mỗi FAIer một nhịp sống
               </span>
               <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
                 Học – Làm – Trải Nghiệm – Kết Nối
