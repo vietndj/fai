@@ -60,43 +60,39 @@ export default function Header() {
                 <div className="megamenu">
                   <div className="container megamenu-grid">
                     <div className="megamenu-title-col">
-                      <h3>Ngành Đào tạo</h3>
+                      <h3>Chương trình Đào tạo</h3>
                       <p>Hệ thống chương trình chuẩn quốc tế chuyển giao trực tiếp từ đối tác nước ngoài hàng đầu.</p>
                     </div>
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
                         <div className="program-cat brand-aptech">
-                          <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <Zap size={18} style={{ color: '#1a6ed8' }} />
-                            Lập trình viên Quốc tế
-                          </h4>
+                          <div style={{ marginBottom: '16px', height: '32px', display: 'flex', alignItems: 'center' }}>
+                            <Image src="/logo_aptech.png" alt="FPT Aptech" width={130} height={28} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+                          </div>
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Back end 1 năm</Link>
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Front end 6 tháng</Link>
                           <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình ngắn hạn 100-200h</Link>
                         </div>
                         <div className="program-cat brand-arena">
-                          <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <Palette size={18} style={{ color: '#e8741e' }} />
-                            Thiết kế Mỹ thuật Đa phương tiện
-                          </h4>
+                          <div style={{ marginBottom: '16px', height: '32px', display: 'flex', alignItems: 'center' }}>
+                            <Image src="/logo_arena.png" alt="FPT Arena" width={130} height={28} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+                          </div>
                           <Link href="/dao-tao/arena" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
                           <Link href="/dao-tao/arena" className="megamenu-link">Thiết kế 2D, 3D, Game và App (6–18 tháng)</Link>
                           <Link href="/dao-tao/arena" className="megamenu-link">Các khóa học ngắn hạn (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-skillking">
-                          <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <Megaphone size={18} style={{ color: '#16a34a' }} />
-                            Digital Marketing (Tiếp thị số)
-                          </h4>
+                          <div style={{ marginBottom: '16px', height: '32px', display: 'flex', alignItems: 'center' }}>
+                            <Image src="/logo_skillking.png" alt="FPT Skillking" width={130} height={28} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+                          </div>
                           <Link href="/dao-tao/skillking" className="megamenu-link">Fullstack Digital Marketing With AI (18 tháng)</Link>
                           <Link href="/dao-tao/skillking" className="megamenu-link">Bộ khóa học Digital Marketing thực chiến (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-jetking">
-                          <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <Cpu size={18} style={{ color: '#8b5cf6' }} />
-                            Vi mạch Bán dẫn & AI
-                          </h4>
+                          <div style={{ marginBottom: '16px', height: '32px', display: 'flex', alignItems: 'center' }}>
+                            <Image src="/logo_jetking.png" alt="FPT Jetking" width={130} height={28} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+                          </div>
                           <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)</Link>
                           <Link href="/dao-tao/ai-agent" className="megamenu-link">Lập trình AI Agent (6 tháng - 2 năm)</Link>
                         </div>
