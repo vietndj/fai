@@ -18,7 +18,7 @@ export default function TechCTAButton({
     };
 
     checkOnlineTime();
-    const interval = setInterval(checkOnlineTime, 60000); // Check every minute
+    const interval = setInterval(checkOnlineTime, 60000);
     return () => clearInterval(interval);
   }, []);
 
@@ -27,9 +27,9 @@ export default function TechCTAButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="beau-cta-btn tech-pulse-cta"
+      className="tech-glow-cta"
       style={{
-        background: 'linear-gradient(135deg, #f37021 0%, #e8741e 50%, #d85d0d 100%)',
+        background: '#f37021',
         color: '#ffffff',
         display: 'inline-flex',
         alignItems: 'center',
@@ -41,17 +41,13 @@ export default function TechCTAButton({
         fontWeight: 800,
         textDecoration: 'none',
         transition: 'all 0.3s ease',
-        boxShadow: '0 10px 25px rgba(243, 112, 33, 0.4)',
         cursor: 'pointer',
         ...style
       }}
     >
-      {/* Time-based Online Notification Badge (7h - 22h) */}
+      {/* Time-based Green Online Dot Icon Only (7h - 22h) */}
       {isOnline && (
-        <span className="online-dot-badge">
-          <span className="online-dot-icon" />
-          <span>ONLINE</span>
-        </span>
+        <span className="online-green-dot" title="Tư vấn viên đang online" />
       )}
 
       <span>{text}</span>
