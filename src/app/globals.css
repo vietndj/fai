@@ -5615,16 +5615,16 @@ img {
   }
 }
 
-/* Horizontal scroll routine timeline styling */
-.horizontal-timeline-card {
+/* 4-Column Informational Pillar Cards */
+.pillar-info-card {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.horizontal-timeline-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(13, 33, 55, 0.12) !important;
+.pillar-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(13, 33, 55, 0.08) !important;
   border-color: rgba(249, 115, 22, 0.25) !important;
 }
-.horizontal-timeline-card:hover .timeline-img {
+.pillar-info-card:hover .timeline-img {
   transform: scale(1.04);
 }
 .timeline-img {

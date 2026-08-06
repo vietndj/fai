@@ -676,154 +676,80 @@ export default function DoiSong() {
               </p>
             </div>
 
-            <div style={{ position: 'relative', width: '100%', padding: '0 10px' }}>
-              <button 
-                onClick={() => scrollTimeline('prev')}
-                style={{
-                  position: 'absolute',
-                  left: '-20px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  width: '46px',
-                  height: '46px',
-                  borderRadius: '50%',
-                  backgroundColor: '#ffffff',
-                  border: '1px solid rgba(13, 33, 55, 0.08)',
-                  boxShadow: '0 4px 15px rgba(0,0,0,0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer',
-                  zIndex: 10,
-                  color: 'var(--secondary)',
-                  transition: 'all 0.3s ease',
-                }}
-                aria-label="Previous timeline slide"
-              >
-                <ChevronLeft size={20} strokeWidth={2.5} />
-              </button>
-
-              <div 
-                ref={timelineRef}
-                className="horizontal-timeline-wrapper" 
-                style={{ 
-                  display: 'flex', 
-                  gap: '30px', 
-                  overflowX: 'auto', 
-                  paddingBottom: '20px', 
-                  scrollSnapType: isGrabbing ? 'none' : 'x mandatory',
-                  scrollbarWidth: 'thin',
-                  scrollbarColor: 'rgba(13,33,55,0.15) transparent',
-                  cursor: isGrabbing ? 'grabbing' : 'grab',
-                  userSelect: 'none',
-                  WebkitUserSelect: 'none'
-                }}
-                onPointerDown={handlePointerDown}
-                onPointerLeave={handlePointerLeave}
-                onPointerUp={handlePointerUp}
-                onPointerMove={handlePointerMove}
-              >
-                {corePillars.map((item, idx) => (
-                  <div 
-                    key={idx} 
-                    className="horizontal-timeline-card" 
-                    style={{ 
-                      flex: '0 0 350px', 
-                      scrollSnapAlign: 'start',
-                      background: '#ffffff',
-                      border: '1px solid rgba(13, 33, 55, 0.08)',
-                      borderRadius: '18px',
-                      padding: '28px',
-                      boxShadow: '0 10px 30px rgba(0,0,0,0.04)',
-                      transition: 'all 0.3s ease',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      pointerEvents: isGrabbing ? 'none' : 'auto'
-                    }}
-                  >
-                    {/* Primary Landmark Title */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', paddingBottom: '12px', borderBottom: '2px solid rgba(249, 115, 22, 0.15)' }}>
-                      <h3 
-                        style={{ 
-                          fontSize: '1.65rem', 
-                          fontWeight: 900, 
-                          color: 'var(--primary)', 
-                          margin: 0,
-                          fontFamily: 'var(--font-sans)',
-                          letterSpacing: '0.04em',
-                          textTransform: 'uppercase',
-                          lineHeight: '1.1'
-                        }}
-                      >
-                        {item.tag}
-                      </h3>
-                      <span 
-                        style={{ 
-                          fontSize: '0.85rem', 
-                          fontWeight: 800, 
-                          color: 'var(--primary)', 
-                          background: 'rgba(249, 115, 22, 0.08)',
-                          padding: '3px 10px',
-                          borderRadius: '12px',
-                          fontFamily: 'var(--font-sans)', 
-                          letterSpacing: '0.05em' 
-                        }}
-                      >
-                        0{idx + 1}
-                      </span>
-                    </div>
-                    
-                    <div 
-                      className="timeline-card-img-wrapper" 
+            <div className="pillars-grid-wrapper" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
+              {corePillars.map((item, idx) => (
+                <div 
+                  key={idx} 
+                  className="pillar-info-card" 
+                  style={{ 
+                    background: '#ffffff',
+                    border: '1px solid rgba(13, 33, 55, 0.08)',
+                    borderRadius: '20px',
+                    padding: '24px',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
+                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}
+                >
+                  {/* Primary Landmark Title */}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', paddingBottom: '12px', borderBottom: '2px solid rgba(249, 115, 22, 0.12)' }}>
+                    <h3 
                       style={{ 
-                        position: 'relative', 
-                        width: '100%', 
-                        aspectRatio: '16/10', 
-                        borderRadius: '14px', 
-                        overflow: 'hidden', 
-                        marginBottom: '20px',
-                        boxShadow: '0 5px 15px rgba(0,0,0,0.06)',
-                        pointerEvents: 'none'
+                        fontSize: '1.5rem', 
+                        fontWeight: 900, 
+                        color: 'var(--primary)', 
+                        margin: 0,
+                        fontFamily: 'var(--font-sans)',
+                        letterSpacing: '0.04em',
+                        textTransform: 'uppercase',
+                        lineHeight: '1.1'
                       }}
                     >
-                      <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} className="timeline-img" />
-                    </div>
-                    
-                    <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '10px', lineHeight: '1.45', fontFamily: 'var(--font-sans)' }}>
-                      {item.title}
-                    </h4>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
-                      {item.desc}
-                    </p>
+                      {item.tag}
+                    </h3>
+                    <span 
+                      style={{ 
+                        fontSize: '0.82rem', 
+                        fontWeight: 800, 
+                        color: 'var(--primary)', 
+                        background: 'rgba(249, 115, 22, 0.08)',
+                        padding: '3px 10px',
+                        borderRadius: '12px',
+                        fontFamily: 'var(--font-sans)', 
+                        letterSpacing: '0.05em' 
+                      }}
+                    >
+                      0{idx + 1}
+                    </span>
                   </div>
-                ))}
-              </div>
-
-              <button 
-                onClick={() => scrollTimeline('next')}
-                style={{
-                  position: 'absolute',
-                  right: '-20px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  width: '46px',
-                  height: '46px',
-                  borderRadius: '50%',
-                  backgroundColor: '#ffffff',
-                  border: '1px solid rgba(13, 33, 55, 0.08)',
-                  boxShadow: '0 4px 15px rgba(0,0,0,0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer',
-                  zIndex: 10,
-                  color: 'var(--secondary)',
-                  transition: 'all 0.3s ease',
-                }}
-                aria-label="Next timeline slide"
-              >
-                <ChevronRight size={20} strokeWidth={2.5} />
-              </button>
+                  
+                  {/* Image Showcase */}
+                  <div 
+                    style={{ 
+                      position: 'relative', 
+                      width: '100%', 
+                      aspectRatio: '16/10', 
+                      borderRadius: '14px', 
+                      overflow: 'hidden', 
+                      marginBottom: '18px',
+                      boxShadow: '0 5px 15px rgba(0,0,0,0.05)'
+                    }}
+                  >
+                    <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} className="timeline-img" />
+                  </div>
+                  
+                  {/* Sub-headline Slogan */}
+                  <h4 style={{ fontSize: '1.08rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '10px', lineHeight: '1.45', fontFamily: 'var(--font-sans)' }}>
+                    {item.title}
+                  </h4>
+                  
+                  {/* Description */}
+                  <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.65', margin: 0 }}>
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
