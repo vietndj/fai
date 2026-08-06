@@ -106,8 +106,8 @@ export default function Testimonials() {
             {q.quote}
           </blockquote>
           <div className="quote-block-author">
-            <div className="quote-block-avatar" style={{ width: '56px', height: '56px', borderRadius: '50%', overflow: 'hidden' }}>
-              <Image src={q.avatar} alt={q.author} width={56} height={56}
+            <div className="quote-block-avatar" style={{ width: '88px', height: '88px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0, border: '3px solid rgba(243, 112, 33, 0.5)' }}>
+              <Image src={q.avatar} alt={q.author} width={88} height={88}
                 style={{ objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%', borderRadius: '50%' }} />
             </div>
             <div>
@@ -139,7 +139,7 @@ export default function Testimonials() {
         >
           <div className="quote-cta-card">
             <span className="quote-cta-label">Tuyển sinh 2026</span>
-            <h3 className="quote-cta-title"><ScrollTypewriter text="Bắt Đầu Hành Trình Của Bạn" /></h3>
+            <h3 className="quote-cta-title"><ScrollTypewriter text="Bắt đầu hành trình của bạn" /></h3>
             <p className="quote-cta-desc">Học bổng lên đến 50% — Nhập học linh hoạt — Đào tạo chuẩn quốc tế</p>
             <Link href="/tuyen-sinh" className="quote-cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               Đăng ký tư vấn miễn phí
