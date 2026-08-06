@@ -671,8 +671,8 @@ export default function DoiSong() {
               <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
                 Học - Làm - Trải Nghiệm - Kết Nối
               </h2>
-              <p style={{ color: 'var(--text-muted)', maxWidth: '650px', margin: '14px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.65' }}>
-                Bốn trụ cột định hình môi trường đào tạo thực chiến và tạo nên hành trình phát triển toàn diện của sinh viên tại Viện Đào Tạo Quốc Tế FPT.
+              <p style={{ color: 'var(--text-muted)', maxWidth: '780px', margin: '14px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.65' }}>
+                Một ngày của FAIer có thể bắt đầu một ngày làm việc tiếp nối bằng những giờ học, một buổi chạy project, một workshop chuyên môn, những trận đấu thể thao cháy hết mình đến cuộc thi, chuyến đi doanh nghiệp và vô vàn khoảnh khắc “không có trong lớp học” hay đơn giản chỉ là cuộc hẹn kết nối với những người bạn cùng lớp.
               </p>
             </div>
 
