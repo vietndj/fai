@@ -816,14 +816,14 @@ export default function VeFai() {
 
 
 
-        {/* SECTION 8: Careers CTA - Dark Gray/Black Background - Proportional Height (40vh) */}
+        {/* SECTION 8: Careers CTA - White Background */}
         <section 
           className="about-last-cta-section" 
           style={{ 
             padding: '80px 0', 
-            backgroundColor: '#070a10',
-            color: '#ffffff',
-            minHeight: '40vh',
+            backgroundColor: '#ffffff',
+            color: '#0D2137',
+            minHeight: '35vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center'
@@ -839,11 +839,11 @@ export default function VeFai() {
                 padding: '30px 0',
                 borderBottom: '2px solid var(--primary)',
                 transition: 'all 0.3s ease',
-                color: '#ffffff'
+                color: '#0D2137'
               }}
               className="about-join-link"
             >
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 800, margin: 0, fontFamily: 'var(--font-sans)' }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 800, margin: 0, fontFamily: 'var(--font-sans)', color: '#0D2137' }}>
                 Gia nhập FAI cùng chúng tôi
               </h2>
               <span style={{ color: 'var(--primary)' }}>
