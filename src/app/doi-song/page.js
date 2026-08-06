@@ -285,7 +285,7 @@ const categoryBlocks = [
       },
       {
         id: 'video-trai-nghiem-fai-life',
-        title: 'Video Trải Nghiệm Sinh Viên FAI: Hành trình thanh xuân & Kết nối cộng đồng',
+        title: 'Video trải nghiệm sinh viên FAI: Hành trình thanh xuân & Kết nối cộng đồng',
         date: '15-02-2026',
         image: 'https://img.youtube.com/vi/1zBrZkTbPw8/maxresdefault.jpg',
         sourceUrl: 'https://www.youtube.com/watch?v=1zBrZkTbPw8',
@@ -297,7 +297,7 @@ const categoryBlocks = [
     width="100%" 
     height="100%" 
     src="https://www.youtube.com/embed/1zBrZkTbPw8?autoplay=1" 
-    title="Video Trải Nghiệm Sinh Viên FAI" 
+    title="Video trải nghiệm sinh viên FAI" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen
@@ -711,7 +711,7 @@ export default function DoiSong() {
                 Mỗi FAIer một nhịp sống
               </span>
               <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
-                Học - Làm - Trải Nghiệm - Kết Nối
+                Học - làm - trải nghiệm - kết nối
               </h2>
               <p style={{ color: 'rgba(13, 33, 55, 0.82)', maxWidth: '780px', margin: '14px auto 0 auto', fontSize: '0.98rem', lineHeight: '1.7' }}>
                 Một ngày của FAIer có thể bắt đầu một ngày làm việc tiếp nối bằng những giờ học, một buổi chạy project, một workshop chuyên môn, những trận đấu thể thao cháy hết mình đến cuộc thi, chuyến đi doanh nghiệp và vô vàn khoảnh khắc “không có trong lớp học” hay đơn giản chỉ là cuộc hẹn kết nối với những người bạn cùng lớp.

@@ -147,7 +147,7 @@ export default function ProgramSelector() {
       <div className="container">
         <div className="pillars-header" data-reveal>
           <span className="section-eyebrow">Chương trình đào tạo quốc tế</span>
-          <h2 className="section-headline">Ba Trụ Cột Đào Tạo</h2>
+          <h2 className="section-headline">Ba trụ cột đào tạo</h2>
           <p className="section-subhead">
             FAI quy tụ 3 hệ thống đào tạo hàng đầu — mỗi trụ cột là một thế giới chuyên biệt, cùng chung một chuẩn mực quốc tế.
           </p>

@@ -22,7 +22,7 @@ export default function TinTuc() {
           <div className="container">
             <span className="sub-hero-tag">FAI HUB</span>
             <h1 className="sub-hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, marginBottom: '40px' }}>
-              Tin Tức &amp; Sự Kiện
+              Tin tức &amp; sự kiện
             </h1>
           </div>
         </section>
@@ -34,7 +34,7 @@ export default function TinTuc() {
         <section className="news-feed-section" style={{ padding: '80px 0' }}>
           <div className="container">
             <h2 className="feed-section-headline" style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '40px' }}>
-              Tất Cả Bài Viết
+              Tất cả bài viết
             </h2>
             <div className="news-feed-grid">
               {allNews.map((news, idx) => (

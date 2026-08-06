@@ -298,7 +298,7 @@ export default function ScholarshipFormSection({
             {isSuccess ? (
               <div style={{ textAlign: 'center', padding: '30px 10px' }}>
                 <CheckCircle2 size={56} style={{ color: '#16a34a', margin: '0 auto 16px' }} />
-                <h4 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0D2137' }}>Đăng Ký Thành Công!</h4>
+                <h4 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0D2137' }}>Đăng ký thành công!</h4>
                 <p style={{ color: '#475569', fontSize: '0.95rem', marginTop: '8px' }}>
                   Cảm ơn bạn đã đăng ký. Đội ngũ tư vấn tuyển sinh {programName} sẽ liên hệ với bạn trong thời gian sớm nhất!
                 </p>

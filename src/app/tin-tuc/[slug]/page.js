@@ -155,7 +155,7 @@ export default async function ArticleDetailPage({ params }) {
         <section className="article-related-section">
           <div className="container">
             <span className="related-eyebrow">XEM THÊM CHỦ ĐỀ KHÁC</span>
-            <h2 className="related-section-title">Có Thể Bạn Quan Tâm</h2>
+            <h2 className="related-section-title">Có thể bạn quan tâm</h2>
             
             <div className="related-news-grid">
               {related.map((item) => (

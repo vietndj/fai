@@ -85,7 +85,7 @@ export default function ArenaSubpage() {
       <section className="beau-section beau-full-viewport">
         <div className="container" data-reveal>
           <span className="beau-section-eyebrow">LỘ TRÌNH ĐÀO TẠO</span>
-          <h2 className="beau-section-title">4 Học Kỳ Chuyên Sâu</h2>
+          <h2 className="beau-section-title">4 học kỳ chuyên sâu</h2>
 
           <div className="beau-split-grid">
             {/* Left label */}
@@ -221,7 +221,7 @@ export default function ArenaSubpage() {
       <section className="beau-section beau-full-viewport">
         <div className="container" data-reveal>
           <span className="beau-section-eyebrow">CAREERS</span>
-          <h2 className="beau-section-title">Vị Trí Việc Làm Hậu Tốt Nghiệp</h2>
+          <h2 className="beau-section-title">Vị trí việc làm hậu tốt nghiệp</h2>
 
           <div className="beau-careers-grid">
             <div className="beau-career-card" style={{ borderLeftColor: '#ffb600' }} data-reveal data-reveal-delay="0.05">
@@ -252,11 +252,11 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 4: Ưu Đãi Tuyển Sinh Đặc Quyền (Split section) */}
+      {/* Section 4: Ưu đãi tuyển sinh đặc quyền (Split section) */}
       <section className="beau-section beau-full-viewport">
         <div className="container" data-reveal>
           <span className="beau-section-eyebrow">HỌC BỔNG & CHÍNH SÁCH</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Ưu Đãi Tuyển Sinh Đặc Quyền</h2>
+          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Ưu đãi tuyển sinh đặc quyền</h2>
           
           <div className="beau-incentives-grid">
             <div className="beau-incentive-card" style={{ '--accent': '#ffb600' }} data-reveal data-reveal-delay="0.05">
@@ -278,11 +278,11 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 5: Chuyển Hướng Nhanh Ngành Học (Split section) */}
+      {/* Section 5: Chuyển hướng nhanh ngành học (Split section) */}
       <section className="beau-section beau-full-viewport">
         <div className="container" data-reveal>
           <span className="beau-section-eyebrow">KHÁM PHÁ CÁC NGÀNH HỌC KHÁC</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Chuyển Hướng Nhanh Ngành Học</h2>
+          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Chuyển hướng nhanh ngành học</h2>
           
           <div className="beau-other-programs-grid">
             <Link href="/dao-tao/aptech" className="beau-other-program-card" data-reveal data-reveal-delay="0.05">
@@ -316,11 +316,11 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 6: Có Thể Bạn Quan Tâm (Split section) */}
+      {/* Section 6: Có thể bạn quan tâm (Split section) */}
       <section className="beau-section beau-full-viewport">
         <div className="container" data-reveal>
           <span className="beau-section-eyebrow">TIN TỨC & SỰ KIỆN NỔI BẬT</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Có Thể Bạn Quan Tâm</h2>
+          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Có thể bạn quan tâm</h2>
           
           <div className="beau-news-links-grid">
             <Link href="/tin-tuc/le-tot-nghiep-fai-2026-vinh-danh-tan-khoa" className="beau-news-link-card" data-reveal data-reveal-delay="0.05">
@@ -352,7 +352,7 @@ export default function ArenaSubpage() {
       <section className="beau-cta-section beau-full-viewport">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Khai Phóng Tư Duy Sáng Tạo</h2>
+          <h2 className="beau-cta-title">Khai phóng tư duy sáng tạo</h2>
           <Link href="/tuyen-sinh#dang-ky" className="beau-cta-btn">
             Đăng Ký Nhập Học Arena
             <ArrowRight size={24} strokeWidth={2.5} />
