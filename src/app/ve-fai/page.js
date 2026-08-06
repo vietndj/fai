@@ -23,12 +23,6 @@ const historyTimeline = [
     desc: 'FPT Arena Multimedia là đơn vị tiên phong đưa và định hình khái niệm Multimedia – Mỹ thuật đa phương tiện tại Việt Nam. Trải qua hơn 22 năm phát triển, FPT Arena kế thừa văn hóa giáo dục của Tổ chức Giáo dục FPT và chuẩn đào tạo quốc tế của Tập đoàn Aptech (Ấn Độ), kiên định đào tạo gắn với thực tiễn, xây dựng đội ngũ giảng viên giàu kinh nghiệm và mạng lưới hợp tác quốc tế, góp phần hình thành thế hệ nhân lực sáng tạo cho ngành công nghiệp nội dung số Việt Nam.'
   },
   {
-    year: '2011',
-    subTitle: 'FPT Jetking',
-    title: 'Chuẩn hóa đào tạo quản trị và an ninh mạng',
-    desc: 'Chương trình đào tạo Quản trị và An ninh mạng FPT Jetking được thành lập từ sự hợp tác giữa FAI và tập đoàn Jetking (Ấn Độ) – một trong những học viện đào tạo An ninh mạng và Cloud hàng đầu với hơn 75 năm kinh nghiệm và 1 triệu học viên toàn cầu, mang các chương trình đào tạo công nghệ thông tin theo chuẩn quốc tế về Việt Nam.'
-  },
-  {
     year: '2018',
     subTitle: 'FPT Skillking',
     title: 'Bệ phóng Digital Marketing số toàn diện',
@@ -67,12 +61,7 @@ const programsList = [
     logo: '/logo_skillking.png',
   },
   {
-    programName: <>Thiết kế vi mạch <br /> bán dẫn</>,
-    color: '#ed232a',
-    logo: '/logo_jetking.png',
-  },
-  {
-    programName: <>Lập trình <br /> AI Agent</>,
+    programName: <>Thiết kế vi mạch bán dẫn <br /> Lập trình AI Agent</>,
     color: '#ed232a',
     logo: '/logo_jetking.png',
   }
@@ -734,11 +723,11 @@ export default function VeFai() {
                   key={idx} 
                   className="program-list-card"
                   style={{ 
-                    background: '#F8F5F0', 
-                    border: '1px solid rgba(13, 33, 55, 0.05)', 
+                    background: 'transparent', 
+                    border: 'none', 
                     borderRadius: '20px', 
-                    padding: '36px 20px',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
+                    padding: '24px 16px',
+                    boxShadow: 'none',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
