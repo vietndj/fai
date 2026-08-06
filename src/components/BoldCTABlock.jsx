@@ -45,7 +45,7 @@ export default function BoldCTABlock() {
         >
           <span className="bold-cta-eyebrow">Tại sao chọn FAI?</span>
           <h2 className="bold-cta-headline">
-            27+ năm kiến tạo<br />
+            27<span style={{ display: 'inline-block', transform: 'translateY(-0.32em)', fontSize: '0.62em', fontWeight: 900 }}>+</span> năm kiến tạo<br />
             chuyên gia tương lai
           </h2>
           <p className="bold-cta-desc">
