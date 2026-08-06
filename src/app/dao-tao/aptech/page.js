@@ -359,70 +359,71 @@ export default function AptechSubpage() {
             </div>
           </div>
 
-          {/* Active Tab Card Content */}
+          {/* Active Tab Card Content (Option 1: Flat Clean Grid without nested boxes) */}
           <div style={{ 
-            background: 'rgba(15, 10, 5, 0.8)', 
+            background: 'linear-gradient(135deg, rgba(13, 33, 55, 0.88) 0%, rgba(22, 43, 74, 0.92) 100%)', 
             border: '1px solid rgba(243, 112, 33, 0.3)', 
             borderRadius: '24px', 
-            padding: '40px',
-            boxShadow: '0 20px 50px rgba(0,0,0,0.4)'
+            padding: '40px 44px',
+            boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)'
           }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px', marginBottom: '24px' }}>
-              <div>
-                <span style={{ fontSize: '0.9rem', color: '#f37021', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                  {semesters[activeTab].num}
-                </span>
-                <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#ffffff', margin: '4px 0' }}>
-                  {semesters[activeTab].fullTitle}
-                </h3>
-                <h4 style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)', fontWeight: 600, margin: 0 }}>
-                  ({semesters[activeTab].subTitle})
-                </h4>
-              </div>
+            <div style={{ marginBottom: '24px' }}>
+              <span style={{ fontSize: '0.85rem', color: '#f37021', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                {semesters[activeTab].num}
+              </span>
+              <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#ffffff', margin: '6px 0 4px' }}>
+                {semesters[activeTab].fullTitle}
+              </h3>
+              <h4 style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500, margin: 0 }}>
+                ({semesters[activeTab].subTitle})
+              </h4>
             </div>
 
-            <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '32px' }}>
+            <p style={{ color: 'rgba(255,255,255,0.88)', fontSize: '1.05rem', lineHeight: '1.75', marginBottom: '36px', paddingBottom: '24px', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
               {semesters[activeTab].desc}
             </p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
+            {/* Flat 3-Column Grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '36px' }}>
               {/* Core Stack */}
-              <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: '16px', padding: '24px', border: '1px solid rgba(255,255,255,0.06)' }}>
-                <h4 style={{ fontSize: '1.05rem', color: '#f37021', fontWeight: 800, margin: '0 0 16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Code size={20} /> Công nghệ lõi (Core Stack)
+              <div>
+                <h4 style={{ fontSize: '0.95rem', color: '#f37021', fontWeight: 800, margin: '0 0 16px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  Công nghệ lõi (Core Stack)
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {semesters[activeTab].coreStack.map((item, idx) => (
-                    <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', marginBottom: '10px' }}>
-                      <Check size={16} style={{ color: '#f37021' }} /> {item}
+                    <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.95)', fontSize: '0.98rem', marginBottom: '12px' }}>
+                      <span style={{ color: '#f37021', fontWeight: 800 }}>✓</span> {item}
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* AI & Support Tools */}
-              <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: '16px', padding: '24px', border: '1px solid rgba(255,255,255,0.06)' }}>
-                <h4 style={{ fontSize: '1.05rem', color: '#f37021', fontWeight: 800, margin: '0 0 16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Sparkles size={20} /> Công cụ AI & Hỗ trợ
+              <div>
+                <h4 style={{ fontSize: '0.95rem', color: '#f37021', fontWeight: 800, margin: '0 0 16px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  Công cụ AI & Hỗ trợ
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {semesters[activeTab].aiTools.map((item, idx) => (
-                    <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', marginBottom: '10px' }}>
-                      <Zap size={16} style={{ color: '#f37021' }} /> {item}
+                    <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.95)', fontSize: '0.98rem', marginBottom: '12px' }}>
+                      <span style={{ color: '#f37021', fontWeight: 800 }}>⚡</span> {item}
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Careers */}
-              <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: '16px', padding: '24px', border: '1px solid rgba(255,255,255,0.06)' }}>
-                <h4 style={{ fontSize: '1.05rem', color: '#f37021', fontWeight: 800, margin: '0 0 16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Briefcase size={20} /> Cơ hội nghề nghiệp
+              <div>
+                <h4 style={{ fontSize: '0.95rem', color: '#f37021', fontWeight: 800, margin: '0 0 16px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  Cơ hội nghề nghiệp
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {semesters[activeTab].careers.map((item, idx) => (
-                    <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', marginBottom: '10px' }}>
-                      <ArrowRight size={16} style={{ color: '#f37021' }} /> {item}
+                    <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.95)', fontSize: '0.98rem', marginBottom: '12px' }}>
+                      <span style={{ color: '#f37021', fontWeight: 800 }}>→</span> {item}
                     </li>
                   ))}
                 </ul>
