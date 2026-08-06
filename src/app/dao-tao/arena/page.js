@@ -46,13 +46,8 @@ export default function ArenaSubpage() {
           <h1 className="beau-hero-title">
             Mỹ Thuật<br />Đa Phương Tiện
           </h1>
-          <div className="beau-hero-logo" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
-            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="120" height="20" rx="3" fill="#e31a22"/>
-              <text x="22" y="15" fill="white" fontSize="11" fontWeight="900" fontFamily="sans-serif" letterSpacing="2">ARENA</text>
-              <rect y="22" width="120" height="18" rx="3" fill="#ffcc00"/>
-              <text x="12" y="35" fill="black" fontSize="9" fontWeight="800" fontFamily="sans-serif" letterSpacing="1">MULTIMEDIA</text>
-            </svg>
+          <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
+            <Image src="/logo_arena.png" alt="FPT Arena Multimedia Logo" width={180} height={42} style={{ objectFit: 'contain', objectPosition: 'left' }} />
           </div>
           <p className="beau-hero-desc">
             Chương trình đào tạo Mỹ thuật Đa phương tiện chuẩn quốc tế (AMSP) hàng đầu thế giới. Nơi sáng tạo gặp gỡ công nghệ kỹ thuật số. Trang bị toàn diện kỹ năng từ thiết kế đồ họa 2D, giao diện web UI/UX đến làm phim kỹ thuật số, kỹ xảo điện ảnh và hoạt hình 3D đỉnh cao.
@@ -183,7 +178,7 @@ export default function ArenaSubpage() {
       <section className="beau-section beau-full-viewport">
         <div className="container" data-reveal>
           <span className="beau-section-eyebrow">CREATIVE TOOLS</span>
-          <h2 className="beau-section-title">Làm Chủ Công Cụ Sáng Tạo</h2>
+          <h2 className="beau-section-title">Làm chủ công cụ sáng tạo</h2>
 
           <div className="beau-tech-grid">
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.05">

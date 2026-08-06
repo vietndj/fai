@@ -142,7 +142,7 @@ export default function AptechSubpage() {
             CHƯƠNG TRÌNH LẬP TRÌNH VIÊN QUỐC TẾ<br />AI ĐA KỸ NĂNG
           </h1>
           <div style={{ color: '#f37021', fontSize: '1.25rem', fontWeight: 800, marginTop: '8px', letterSpacing: '0.04em' }}>
-            ✦ Đón đầu xu hướng – Nắm bắt cơ hội thực chiến
+            Đón đầu xu hướng – Nắm bắt cơ hội thực chiến
           </div>
 
           <div style={{ maxWidth: '900px', marginTop: '24px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.05rem', lineHeight: '1.75' }}>
@@ -154,19 +154,38 @@ export default function AptechSubpage() {
             </p>
           </div>
 
-          {/* 🌟 ĐIỂM KHÁC BIỆT CỐT LÕI Banner */}
+          {/* 🌟 ĐIỂM KHÁC BIỆT CỐT LÕI Banner (Redesigned Premium Glassmorphism) */}
           <div style={{ 
-            marginTop: '36px', 
-            padding: '24px 30px', 
-            background: 'linear-gradient(135deg, rgba(243, 112, 33, 0.12) 0%, rgba(20, 10, 5, 0.6) 100%)', 
-            borderLeft: '4px solid #f37021', 
-            borderRadius: '16px',
-            maxWidth: '920px'
+            marginTop: '48px', 
+            marginBottom: '48px',
+            padding: '36px 44px', 
+            background: 'linear-gradient(135deg, rgba(232, 116, 30, 0.18) 0%, rgba(13, 33, 55, 0.82) 40%, rgba(22, 43, 74, 0.9) 100%)', 
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            border: '1px solid rgba(232, 116, 30, 0.35)', 
+            borderLeft: '6px solid #e8741e', 
+            borderRadius: '24px',
+            maxWidth: '1050px',
+            boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 0 32px rgba(232, 116, 30, 0.12)',
+            position: 'relative',
+            overflow: 'hidden'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#f37021', fontWeight: 800, fontSize: '1.1rem', marginBottom: '8px' }}>
-              <Sparkles size={20} /> ĐIỂM KHÁC BIỆT CỐT LÕI
+            <div style={{
+              display: 'inline-block',
+              padding: '6px 16px',
+              borderRadius: '20px',
+              background: 'rgba(232, 116, 30, 0.2)',
+              border: '1px solid rgba(232, 116, 30, 0.4)',
+              color: '#f37021', 
+              fontWeight: 800, 
+              fontSize: '0.95rem', 
+              letterSpacing: '0.08em',
+              marginBottom: '14px',
+              textTransform: 'uppercase'
+            }}>
+              ĐIỂM KHÁC BIỆT CỐT LÕI
             </div>
-            <p style={{ margin: 0, color: '#ffffff', fontSize: '1rem', lineHeight: '1.7' }}>
+            <p style={{ margin: 0, color: 'rgba(255, 255, 255, 0.95)', fontSize: '1.15rem', lineHeight: '1.8', fontWeight: 400 }}>
               Mỗi sinh viên được định hướng và thiết kế một lộ trình cá nhân hóa dựa trên kỹ năng, sở thích và mục tiêu nghề nghiệp. Giúp bạn tối ưu thời gian học tập, phát huy tối đa thế mạnh và sẵn sàng hòa nhập ngay vào môi trường doanh nghiệp.
             </p>
           </div>
@@ -189,8 +208,8 @@ export default function AptechSubpage() {
       <section className="beau-section">
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>📊 HÀNH TRÌNH TỔNG QUAN</span>
-            <h2 className="beau-section-title">Lộ Trình Đào Tạo Tổng Quan</h2>
+            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>HÀNH TRÌNH TỔNG QUAN</span>
+            <h2 className="beau-section-title">Lộ trình đào tạo tổng quan</h2>
             <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '12px auto 0', fontSize: '1rem' }}>
               Một hành trình toàn diện được đúc kết qua những con số biết nói
             </p>
@@ -241,7 +260,7 @@ export default function AptechSubpage() {
           }}>
             <div>
               <span style={{ fontSize: '0.85rem', color: '#f37021', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tổng thời lượng đào tạo</span>
-              <h4 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', margin: '4px 0 0' }}>⏱️ 992 Giờ học chuẩn quốc tế</h4>
+              <h4 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', margin: '4px 0 0' }}>992 Giờ học chuẩn quốc tế</h4>
             </div>
             <div style={{ display: 'flex', gap: '30px', flexWrap: 'wrap' }}>
               <div>
@@ -265,8 +284,8 @@ export default function AptechSubpage() {
       <section className="beau-section">
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>🗺️ NỘI DUNG ĐÀO TẠO</span>
-            <h2 className="beau-section-title">Chi Tiết Chương Trình Học (4 Học Kỳ)</h2>
+            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>NỘI DUNG ĐÀO TẠO</span>
+            <h2 className="beau-section-title">Chi tiết chương trình học (4 học kỳ)</h2>
           </div>
 
           {/* Sticky 2-Line Responsive Semester Tabs Bar */}
@@ -415,8 +434,8 @@ export default function AptechSubpage() {
       <section className="beau-section">
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>⚡ ĐẶC QUYỀN ĐÀO TẠO</span>
-            <h2 className="beau-section-title">Tại Sao Học Lập Trình Nên Chọn FPT Aptech?</h2>
+            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>ĐẶC QUYỀN ĐÀO TẠO</span>
+            <h2 className="beau-section-title">Tại sao học lập trình nên chọn FPT Aptech?</h2>
             <p style={{ color: 'rgba(255, 255, 255, 0.8)', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
               FPT Aptech mang đến môi trường học tập chuẩn Quốc Tế với chương trình ACCP AI mới nhất. Chúng tôi cam kết giới thiệu việc làm và kết nối trực tiếp sinh viên với hệ sinh thái công nghệ FPT cùng hàng trăm doanh nghiệp công nghệ hàng đầu.
             </p>
@@ -451,7 +470,7 @@ export default function AptechSubpage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Sẵn Sàng Trở Thành Lập Trình Viên AI Đa Kỹ Năng?</h2>
+          <h2 className="beau-cta-title">Sẵn sàng trở thành lập trình viên AI đa kỹ năng?</h2>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', marginBottom: '30px' }}>
             Đăng ký nhận tư vấn lộ trình học cá nhân hóa và thông tin học bổng mới nhất từ FPT Aptech
           </p>

@@ -182,7 +182,7 @@ export default function SkillkingSubpage() {
       <section className="beau-section beau-full-viewport">
         <div className="container" data-reveal>
           <span className="beau-section-eyebrow">MARKETING TOOLS</span>
-          <h2 className="beau-section-title">Làm Chủ Công Cụ Tiếp Thị</h2>
+          <h2 className="beau-section-title">Làm chủ công cụ tiếp thị</h2>
 
           <div className="beau-tech-grid">
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.05">
