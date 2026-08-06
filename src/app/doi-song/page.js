@@ -206,7 +206,7 @@ const categoryBlocks = [
     id: 'contests',
     title: 'Sân chơi & giải thưởng',
     eyebrow: 'Khai phá tài năng',
-    desc: 'Khám phá các cuộc thi học thuật quy mô lớn, đấu trường quốc tế và triển lãm thiết kế thường niên.',
+    desc: 'Khám phá các cuộc thi học thuật quy mô lớn, đấu trường quốc tế cùng các triển lãm thiết kế thường niên.',
     isLight: true,
     posts: [
       {
@@ -239,7 +239,7 @@ const categoryBlocks = [
         id: 'vietfuture-awards-2025-fpt',
         title: 'Sinh viên Viện Đào tạo Quốc tế FPT bùng nổ sáng tạo tại VietFuture Awards 2025',
         date: '15-12-2025',
-        image: 'https://arena.fpt.edu.vn/wp-content/uploads/2026/03/Anh-3-1-1024x576.webp',
+        image: '/vietfuture_awards_2025.jpg',
         sourceUrl: 'https://arena.fpt.edu.vn/sinh-vien-vien-dao-tao-quoc-te-fpt-bung-no-sang-tao-tai-vietfuture-awards-2025/',
         excerpt: 'Sau sáu tháng tranh tài cùng hơn 200 đề cử từ khắp cả nước, sinh viên Viện Đào tạo Quốc tế FPT đã ghi dấu ấn mạnh mẽ tại VietFuture Awards 2025.',
         contentHtml: `<p class="lead" style="font-size:1.15rem;font-weight:600;line-height:1.7;color:#1e293b;margin-bottom:20px;">Sau 6 tháng tranh tài quyết liệt cùng hơn 200 đề cử xuất sắc từ khắp các trường đại học toàn quốc, sinh viên <strong>Viện Đào tạo Quốc tế FPT (FAI)</strong> đã ghi dấu ấn bùng nổ tại <strong>VietFuture Awards 2025</strong>.</p>
@@ -337,13 +337,14 @@ function CategoryBlockItem({ block, onSelectPost }) {
   const scrollRef = useRef(null);
   const [isGrabbing, setIsGrabbing] = useState(false);
   const isDown = useRef(false);
+  const hasDragged = useRef(false);
   const startX = useRef(0);
   const scrollLeftVal = useRef(0);
 
   const handlePointerDown = (e) => {
     if (e.pointerType !== 'mouse') return;
     isDown.current = true;
-    setIsGrabbing(true);
+    hasDragged.current = false;
     startX.current = e.pageX - scrollRef.current.offsetLeft;
     scrollLeftVal.current = scrollRef.current.scrollLeft;
   };
@@ -361,12 +362,15 @@ function CategoryBlockItem({ block, onSelectPost }) {
   };
 
   const handlePointerMove = (e) => {
-    if (e.pointerType !== 'mouse') return;
-    if (!isDown.current) return;
-    e.preventDefault();
+    if (e.pointerType !== 'mouse' || !isDown.current) return;
     const x = e.pageX - scrollRef.current.offsetLeft;
     const walk = (x - startX.current) * 1.5;
-    scrollRef.current.scrollLeft = scrollLeftVal.current - walk;
+    if (Math.abs(walk) > 5) {
+      hasDragged.current = true;
+      setIsGrabbing(true);
+      e.preventDefault();
+      scrollRef.current.scrollLeft = scrollLeftVal.current - walk;
+    }
   };
 
   const scroll = (direction) => {
@@ -471,7 +475,12 @@ function CategoryBlockItem({ block, onSelectPost }) {
               return sortedPosts.map((post) => (
                 <div 
                   key={post.id}
-                  onClick={() => onSelectPost(post)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (!hasDragged.current) {
+                      onSelectPost(post);
+                    }
+                  }}
                   style={{
                     flex: '0 0 360px',
                     scrollSnapAlign: 'start',
@@ -483,8 +492,7 @@ function CategoryBlockItem({ block, onSelectPost }) {
                     cursor: 'pointer',
                     display: 'flex',
                     flexDirection: 'column',
-                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                    pointerEvents: isGrabbing ? 'none' : 'auto'
+                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                   }}
                 >
                   <PostCardImage src={post.image} alt={post.title} date={post.date} />
