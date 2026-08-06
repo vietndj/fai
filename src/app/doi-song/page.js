@@ -153,7 +153,7 @@ const categoryBlocks = [
   },
   {
     id: 'sharing',
-    title: 'Nhỏ to cùng chia sẻ',
+    title: 'Nhỏ to cùng chia sẻ - Nói nhỏ nói to',
     eyebrow: 'Góc tâm sự & kinh nghiệm',
     desc: 'Nơi sinh viên chia sẻ bí quyết học tập, vượt qua áp lực đồ án và cân bằng cuộc sống.',
     isLight: false,
@@ -461,40 +461,48 @@ function CategoryBlockItem({ block, onSelectPost }) {
             onPointerUp={handlePointerUp}
             onPointerMove={handlePointerMove}
           >
-            {block.posts.map((post) => (
-              <div 
-                key={post.id}
-                onClick={() => onSelectPost(post)}
-                style={{
-                  flex: '0 0 360px',
-                  scrollSnapAlign: 'start',
-                  background: cardBg,
-                  border: cardBorder,
-                  borderRadius: '16px',
-                  boxShadow: cardShadow,
-                  overflow: 'hidden',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                  pointerEvents: isGrabbing ? 'none' : 'auto'
-                }}
-              >
-                <PostCardImage src={post.image} alt={post.title} date={post.date} />
-                
-                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '12px', flexGrow: 1 }}>
-                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, lineHeight: '1.45', color: textColor, margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '50px', fontFamily: 'var(--font-sans)' }}>
-                    {post.title}
-                  </h3>
-                  <p style={{ fontSize: '0.88rem', color: descColor, lineHeight: '1.6', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '42px' }}>
-                    {post.excerpt}
-                  </p>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 800, color: 'var(--primary)', marginTop: '10px' }}>
-                    Xem chi tiết <ArrowRight size={14} />
-                  </span>
+            {(() => {
+              const parsePostDate = (dStr) => {
+                if (!dStr) return 0;
+                const p = dStr.split('-');
+                return p.length === 3 ? new Date(parseInt(p[2], 10), parseInt(p[1], 10) - 1, parseInt(p[0], 10)).getTime() : 0;
+              };
+              const sortedPosts = [...block.posts].sort((a, b) => parsePostDate(b.date) - parsePostDate(a.date));
+              return sortedPosts.map((post) => (
+                <div 
+                  key={post.id}
+                  onClick={() => onSelectPost(post)}
+                  style={{
+                    flex: '0 0 360px',
+                    scrollSnapAlign: 'start',
+                    background: cardBg,
+                    border: cardBorder,
+                    borderRadius: '16px',
+                    boxShadow: cardShadow,
+                    overflow: 'hidden',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                    pointerEvents: isGrabbing ? 'none' : 'auto'
+                  }}
+                >
+                  <PostCardImage src={post.image} alt={post.title} date={post.date} />
+                  
+                  <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '12px', flexGrow: 1 }}>
+                    <h3 style={{ fontSize: '1.15rem', fontWeight: 800, lineHeight: '1.45', color: textColor, margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '50px', fontFamily: 'var(--font-sans)' }}>
+                      {post.title}
+                    </h3>
+                    <p style={{ fontSize: '0.88rem', color: descColor, lineHeight: '1.6', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', height: '42px' }}>
+                      {post.excerpt}
+                    </p>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 800, color: 'var(--primary)', marginTop: '10px' }}>
+                      Xem chi tiết <ArrowRight size={14} />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ));
+            })()}
           </div>
 
           <button 
