@@ -475,10 +475,28 @@ export default function AptechSubpage() {
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', marginBottom: '30px' }}>
             Đăng ký nhận tư vấn lộ trình học cá nhân hóa và thông tin học bổng mới nhất từ FPT Aptech
           </p>
-          <Link href="/tuyen-sinh#dang-ky" className="beau-cta-btn" style={{ background: '#f37021' }}>
-            Đăng Ký Tư Vấn Ngay
-            <ArrowRight size={24} strokeWidth={2.5} />
-          </Link>
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+            <Link href="/tuyen-sinh#dang-ky" className="beau-cta-btn" style={{ background: '#f37021' }}>
+              Đăng Ký Tư Vấn Ngay
+              <ArrowRight size={24} strokeWidth={2.5} />
+            </Link>
+            <a 
+              href="https://zalo.me/0934688632" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="beau-cta-btn"
+              style={{ 
+                background: '#0068FF', 
+                color: '#ffffff',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px'
+              }}
+            >
+              <Image src="/logo_zalo_official_clean.png" alt="Zalo Logo" width={24} height={24} style={{ objectFit: 'contain' }} />
+              Chat Zalo: 0934 688 632
+            </a>
+          </div>
         </div>
       </section>
 
