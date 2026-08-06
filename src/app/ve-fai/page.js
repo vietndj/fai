@@ -59,6 +59,7 @@ const programsList = [
     programName: <>Digital Marketing</>,
     color: '#29a9e1',
     logo: '/logo_skillking.png',
+    logoOffsetY: '-8px'
   },
   {
     isMulti: true,
@@ -743,7 +744,7 @@ export default function VeFai() {
                       height: '90px', 
                       width: '100%',
                       display: 'flex',
-                      alignItems: 'center',
+                      alignItems: 'flex-end',
                       justifyContent: 'center',
                       marginBottom: '24px',
                       position: 'relative'
@@ -754,7 +755,14 @@ export default function VeFai() {
                       alt="Program Logo" 
                       width={300} 
                       height={90} 
-                      style={{ objectFit: 'contain', objectPosition: 'center center', width: 'auto', height: '85px', maxWidth: '240px' }} 
+                      style={{ 
+                        objectFit: 'contain', 
+                        objectPosition: 'center bottom', 
+                        width: 'auto', 
+                        height: '85px', 
+                        maxWidth: '240px',
+                        transform: prog.logoOffsetY ? 'translateY(' + prog.logoOffsetY + ')' : 'none'
+                      }} 
                     />
                   </div>
 
