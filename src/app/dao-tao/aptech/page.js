@@ -395,7 +395,7 @@ export default function AptechSubpage() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {semesters[activeTab].coreStack.map((item, idx) => (
                     <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.95)', fontSize: '0.98rem', marginBottom: '12px' }}>
-                      <span style={{ color: '#f37021', fontWeight: 800 }}>✓</span> {item}
+                      <Check size={16} style={{ color: '#f37021', flexShrink: 0 }} /> {item}
                     </li>
                   ))}
                 </ul>
@@ -409,7 +409,7 @@ export default function AptechSubpage() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {semesters[activeTab].aiTools.map((item, idx) => (
                     <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.95)', fontSize: '0.98rem', marginBottom: '12px' }}>
-                      <span style={{ color: '#f37021', fontWeight: 800 }}>⚡</span> {item}
+                      <Check size={16} style={{ color: '#f37021', flexShrink: 0 }} /> {item}
                     </li>
                   ))}
                 </ul>
@@ -423,7 +423,7 @@ export default function AptechSubpage() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {semesters[activeTab].careers.map((item, idx) => (
                     <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.95)', fontSize: '0.98rem', marginBottom: '12px' }}>
-                      <span style={{ color: '#f37021', fontWeight: 800 }}>→</span> {item}
+                      <Check size={16} style={{ color: '#f37021', flexShrink: 0 }} /> {item}
                     </li>
                   ))}
                 </ul>
