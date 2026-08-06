@@ -46,7 +46,7 @@ const categoryBlocks = [
         id: 'le-tot-nghiep-2026-being-beyond',
         title: 'Lễ Tốt nghiệp 2026 Viện Đào tạo Quốc tế FPT Hà Nội: Khép lại hành trình “Being”, sẵn sàng bứt phá đến chân trời “Beyond”',
         date: '06-06-2026',
-        image: 'https://arena.fpt.edu.vn/wp-content/uploads/2026/03/Anh-1-3-1024x576.webp',
+        image: '/le_tot_nghiep_2026_banner.jpg',
         sourceUrl: 'https://aptech.fpt.edu.vn/le-tot-nghiep-2026-vien-dao-tao-quoc-te-fpt-ha-noi-khep-lai-hanh-trinh-being-san-sang-but-pha-den-chan-troi-beyond.html',
         excerpt: 'Gần 300 tân khoa đến từ FPT Aptech, FPT Arena Multimedia, FPT Skillking và FPT Jetking đã cùng nhau đánh dấu cột mốc trưởng thành tại Lễ Tốt nghiệp 2026 với chủ đề “Beyond Being”.',
         contentHtml: `<p class="lead" style="font-size:1.15rem;font-weight:600;line-height:1.7;color:#1e293b;margin-bottom:20px;">Gần 300 tân khoa đến từ FPT Aptech, FPT Arena Multimedia, FPT Skillking và FPT Jetking đã cùng nhau đánh dấu cột mốc trưởng thành tại Lễ Tốt nghiệp 2026 Viện Đào tạo Quốc tế FPT Hà Nội với chủ đề <strong>“Beyond Being”</strong>.</p>
