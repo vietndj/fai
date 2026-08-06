@@ -88,7 +88,7 @@ const categoryBlocks = [
         id: 'hbr-holdings-dong-hanh-le-tot-nghiep-fai-2025',
         title: 'HBR Holdings Đồng Hành Cùng Lễ Tốt Nghiệp Viện Đào Tạo Quốc Tế FPT 2025',
         date: '16-07-2025',
-        image: 'https://hbrholdings.vn/storage/images/2025/07/16/anh-thumbnail-1752654990.webp',
+        image: '/hbr_holdings_banner.png',
         sourceUrl: 'https://hbrholdings.vn/hbr-holdings-dong-hanh-cung-le-tot-nghiep-fai-ha-noi-2025',
         excerpt: 'HBR Holdings đồng hành cùng Lễ Tốt nghiệp 2025 Viện Đào tạo Quốc tế FPT - sự kiện tôn vinh thế hệ “Neoformers” trẻ trung, bản lĩnh.',
         contentHtml: `<p class="lead" style="font-size:1.15rem;font-weight:600;line-height:1.7;color:#1e293b;margin-bottom:20px;"><strong>HBR Holdings</strong> hân hạnh đồng hành cùng Lễ Tốt nghiệp Viện Đào tạo Quốc tế FPT – sự kiện tôn vinh thế hệ tân khoa <em>“Neoformers”</em> trẻ trung, bản lĩnh và giàu khát vọng sáng tạo.</p>
