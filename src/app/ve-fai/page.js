@@ -102,7 +102,7 @@ function useCountUp(target, duration = 1800, started) {
   return count;
 }
 
-function AboutStatNumber({ target, suffix, isThousands, color, started }) {
+function AboutStatNumber({ target, suffix, isThousands, started }) {
   const count = useCountUp(target, 1800, started);
   
   const formattedCount = isThousands 
@@ -110,10 +110,27 @@ function AboutStatNumber({ target, suffix, isThousands, color, started }) {
     : count;
 
   return (
-    <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#ffffff', lineHeight: '1', fontWeight: 800, letterSpacing: '-0.04em' }}>
-      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800 }}>{formattedCount}</span>
+    <div style={{ 
+      display: 'inline-flex', 
+      alignItems: 'baseline', 
+      gap: '4px', 
+      fontSize: 'clamp(2.5rem, 5vw, 4rem)', 
+      color: '#f37021', 
+      lineHeight: '1', 
+      fontWeight: 800, 
+      letterSpacing: '-0.03em' 
+    }}>
+      <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 800, color: '#f37021' }}>
+        {formattedCount}
+      </span>
       {suffix && (
-        <span style={{ fontSize: '0.42em', fontWeight: 800, color: color || 'var(--primary)', alignSelf: 'flex-start', fontFamily: 'var(--font-sans)', marginTop: '0.1em' }}>
+        <span style={{ 
+          fontSize: '0.55em', 
+          fontWeight: 800, 
+          color: '#f37021', 
+          fontFamily: 'var(--font-sans)',
+          lineHeight: '1'
+        }}>
           {suffix}
         </span>
       )}
