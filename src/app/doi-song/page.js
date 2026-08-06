@@ -741,25 +741,35 @@ export default function DoiSong() {
                       pointerEvents: isGrabbing ? 'none' : 'auto'
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                      <span 
+                    {/* Primary Landmark Title */}
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', paddingBottom: '12px', borderBottom: '2px solid rgba(249, 115, 22, 0.15)' }}>
+                      <h3 
                         style={{ 
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          padding: '6px 14px', 
-                          borderRadius: '20px', 
-                          background: 'rgba(249, 115, 22, 0.08)', 
-                          border: '1px solid rgba(249, 115, 22, 0.2)',
+                          fontSize: '1.65rem', 
+                          fontWeight: 900, 
                           color: 'var(--primary)', 
-                          fontSize: '0.8rem', 
-                          fontWeight: 800, 
-                          letterSpacing: '0.08em', 
+                          margin: 0,
+                          fontFamily: 'var(--font-sans)',
+                          letterSpacing: '0.04em',
                           textTransform: 'uppercase',
-                          fontFamily: 'var(--font-sans)'
+                          lineHeight: '1.1'
                         }}
                       >
-                        TRỤ CỘT 0{idx + 1} • {item.tag}
+                        {item.tag}
+                      </h3>
+                      <span 
+                        style={{ 
+                          fontSize: '0.85rem', 
+                          fontWeight: 800, 
+                          color: 'var(--primary)', 
+                          background: 'rgba(249, 115, 22, 0.08)',
+                          padding: '3px 10px',
+                          borderRadius: '12px',
+                          fontFamily: 'var(--font-sans)', 
+                          letterSpacing: '0.05em' 
+                        }}
+                      >
+                        0{idx + 1}
                       </span>
                     </div>
                     
