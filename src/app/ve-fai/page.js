@@ -362,7 +362,7 @@ export default function VeFai() {
           className="about-values-section" 
           style={{ 
             padding: '120px 0 140px 0', 
-            backgroundColor: '#FAF7F2', 
+            backgroundColor: '#F8FAFC', 
             color: '#0f172a',
             position: 'relative'
           }}

@@ -451,7 +451,7 @@ export default function DoiSong() {
           className="student-life-timeline-section" 
           style={{ 
             padding: '90px 0', 
-            backgroundColor: '#F8F5F0', 
+            backgroundColor: '#F8FAFC', 
             color: 'var(--secondary)',
             position: 'relative',
             overflow: 'hidden',
@@ -566,7 +566,7 @@ export default function DoiSong() {
           className="student-life-cta-section" 
           style={{ 
             padding: '80px 0', 
-            backgroundColor: '#F8F5F0',
+            backgroundColor: '#F8FAFC',
             color: 'var(--secondary)',
             display: 'flex',
             flexDirection: 'column',

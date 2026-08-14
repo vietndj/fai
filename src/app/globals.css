@@ -90,7 +90,7 @@
   --text-light: #f3f4f6;
   --text-muted: #64748b;
   --bg-light: #ffffff;
-  --bg-cream: #F8F5F0;         /* Warm off-white — premium feel */
+  --bg-cream: #F8FAFC;         /* Crisp neutral off-white — premium modern feel */
   --bg-gray: #f1f5f9;
   --bg-dark: #0D2137;
 
@@ -596,7 +596,7 @@ img {
 
 /* Special Light Palette Megamenu for 'Chương trình Đào tạo' */
 .megamenu-light {
-  background-color: #F8F5F0 !important;
+  background-color: #F8FAFC !important;
   color: #0D2137 !important;
   box-shadow: 0 30px 70px rgba(13, 33, 55, 0.15) !important;
   border-top: 1px solid rgba(13, 33, 55, 0.1) !important;
@@ -5240,7 +5240,7 @@ img {
 .article-related-section {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding: 100px 0;
-  background-color: #F8F5F0;
+  background-color: #F8FAFC;
   color: #1a2332;
 }
 

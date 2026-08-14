@@ -207,7 +207,7 @@ export default function Fullstack2NamPage() {
       <section 
         className="beau-section" 
         style={{ 
-          backgroundColor: '#FAF7F2', 
+          backgroundColor: '#F8FAFC', 
           color: '#0f172a',
           padding: '100px 0 110px 0' 
         }}
@@ -452,7 +452,7 @@ export default function Fullstack2NamPage() {
       <section 
         className="beau-section"
         style={{ 
-          backgroundColor: '#FAF7F2', 
+          backgroundColor: '#F8FAFC', 
           color: '#0f172a',
           padding: '100px 0 120px 0' 
         }}

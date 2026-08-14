@@ -254,7 +254,7 @@ export default function Frontend6ThangPage() {
       <section 
         className="beau-section"
         style={{ 
-          backgroundColor: '#FAF7F2', 
+          backgroundColor: '#F8FAFC', 
           color: '#0f172a',
           padding: '100px 0 110px 0' 
         }}
@@ -366,7 +366,7 @@ export default function Frontend6ThangPage() {
       <section 
         className="beau-section" 
         style={{ 
-          backgroundColor: '#FAF7F2', 
+          backgroundColor: '#F8FAFC', 
           color: '#0f172a',
           padding: '90px 0 100px 0' 
         }}
@@ -472,7 +472,7 @@ export default function Frontend6ThangPage() {
       <section 
         className="beau-section"
         style={{ 
-          backgroundColor: '#FAF7F2', 
+          backgroundColor: '#F8FAFC', 
           color: '#0f172a',
           padding: '100px 0 120px 0' 
         }}

@@ -246,7 +246,7 @@ export default function LienHe() {
           className="contact-program-section" 
           style={{ 
             padding: '100px 0', 
-            backgroundColor: '#F8F5F0', 
+            backgroundColor: '#F8FAFC', 
             color: 'var(--secondary)',
             minHeight: '75vh',
             display: 'flex',
