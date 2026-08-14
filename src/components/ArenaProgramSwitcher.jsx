@@ -7,7 +7,7 @@ export default function ArenaProgramSwitcher({ activePath }) {
   const programs = [
     { label: 'Arena Multimedia Specialist (2 năm)', href: '/dao-tao/arena/2-nam', path: '/dao-tao/arena/2-nam' },
     { label: 'Thiết kế 2D, 3D, Game & App (6–18 tháng)', href: '/dao-tao/arena/6-18-thang', path: '/dao-tao/arena/6-18-thang' },
-    { label: 'Các khóa học ngắn hạn (100 giờ)', href: '/dao-tao/arena/100h', path: '/dao-tao/arena/100h' },
+    { label: 'Bộ khóa học Multimedia ngắn hạn (100 giờ)', href: '/dao-tao/arena/100h', path: '/dao-tao/arena/100h' },
   ];
 
   return (

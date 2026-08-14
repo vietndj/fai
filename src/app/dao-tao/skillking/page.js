@@ -8,10 +8,11 @@ import SkillkingProgramSwitcher from '@/components/SkillkingProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles } from 'lucide-react';
+import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, TrendingUp, Search, Video, BarChart2, Briefcase } from 'lucide-react';
 
 export default function SkillkingSubpage() {
   const [activeSection, setActiveSection] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
     const sections = document.querySelectorAll('.beau-hero, .beau-section, .beau-cta-section');
@@ -33,23 +34,134 @@ export default function SkillkingSubpage() {
     return () => observer.disconnect();
   }, []);
 
+  const semesters = [
+    {
+      num: 'HỌC KỲ 01',
+      shortTitle: 'Social & Content AI',
+      title: 'Social Media & Content Strategy with AI',
+      subtitle: '(Nghiên cứu Thị trường, Sáng tạo Nội dung & Quản trị Mạng xã hội)',
+      desc: 'Thấu hiểu hành vi khách hàng mục tiêu. Học viên nắm vững quy trình nghiên cứu thị trường, xây dựng chân dung khách hàng (Buyer Persona), sáng tạo nội dung đa kênh chuẩn SEO với AI và thiết kế ấn phẩm truyền thông chuyên nghiệp.',
+      coreStack: [
+        'Nghiên cứu thị trường & Chân dung khách hàng',
+        'Chiến lược Content Marketing đa nền tảng',
+        'Kỹ thuật Copywriting thu hút chuyển đổi',
+        'Thiết kế hình ảnh tiếp thị truyền thông Canva',
+        'Quản trị & Phát triển Fanpage / TikTok / YouTube'
+      ],
+      aiTools: [
+        'ChatGPT Plus & Claude 3.5 Sonnet',
+        'Canva AI Magic Studio',
+        'CapCut AI Video Generation',
+        'Midjourney Marketing Visuals',
+        'Notion AI Workflow'
+      ],
+      careers: [
+        'Social Media Executive (Chuyên viên Mạng xã hội)',
+        'Content Creator (Nhà sáng tạo nội dung số)',
+        'Copywriter & Creative Strategist',
+        'Đồ án eProject: Kế hoạch Truyền thông Mạng xã hội'
+      ]
+    },
+    {
+      num: 'HỌC KỲ 02',
+      shortTitle: 'SEO & Growth',
+      title: 'Search Engine Optimization (SEO) & Technical Growth',
+      subtitle: '(Tối ưu hóa Công cụ tìm kiếm Google & Tăng trưởng truy cập tự nhiên)',
+      desc: 'Chinh phục thứ hạng TOP 1 Google. Nghiên cứu cấu trúc từ khóa chuyên sâu, tối ưu hóa On-page, cấu trúc Silo, kỹ thuật Technical SEO và xây dựng liên kết Off-page bền vững kết hợp các công cụ phân tích dữ liệu hàng đầu.',
+      coreStack: [
+        'Nghiên cứu từ khóa & Phân tích đối thủ cạnh tranh',
+        'Tối ưu hóa On-page & Cấu trúc liên kết nội bộ',
+        'Technical SEO: Tốc độ tải trang, Core Web Vitals',
+        'Chiến lược xây dựng Backlink (Off-page SEO)',
+        'Phân tích đo lường Google Search Console & GA4'
+      ],
+      aiTools: [
+        'SurferSEO AI Content Optimizer',
+        'Semrush AI Keyword Insights',
+        'Ahrefs SEO Intelligence',
+        'Screaming Frog SEO Spider',
+        'RankMath AI Assistant'
+      ],
+      careers: [
+        'SEO Specialist (Chuyên viên Tối ưu hóa tìm kiếm)',
+        'Website Content Manager',
+        'SEO Project Leader & Consultant',
+        'Đồ án eProject: Dự án Đẩy Top SEO Website thực tế'
+      ]
+    },
+    {
+      num: 'HỌC KỲ 03',
+      shortTitle: 'Paid Ads & Performance',
+      title: 'Performance Marketing & Paid Advertising',
+      subtitle: '(Chạy quảng cáo Google Ads, Meta Ads, TikTok Ads & Tối ưu chuyển đổi)',
+      desc: 'Làm chủ dòng tiền và tỷ lệ hoàn vốn ROI. Thiết lập cấu trúc tài khoản quảng cáo chuyên nghiệp, đấu thầu từ khóa Google Search/Display/YouTube, chạy quảng cáo chuyển đổi Meta Ads, TikTok Shop và đo lường thông số chuyển đổi.',
+      coreStack: [
+        'Quản trị quảng cáo tìm kiếm Google Search Ads',
+        'Quảng cáo Google Display Network (GDN) & YouTube',
+        'Chiến dịch quảng cáo chuyển đổi Meta Ads (FB/IG)',
+        'Quảng cáo TikTok Ads & Vận hành TikTok Shop',
+        'Thiết lập theo dõi chuyển đổi Pixel & Google Tag Manager'
+      ],
+      aiTools: [
+        'Google Ads Smart Bidding AI',
+        'Meta Advantage+ AI Campaigns',
+        'TikTok Symphony Creative AI',
+        'AdCreative.ai High-Converting Ads',
+        'Triple Whale Attribution AI'
+      ],
+      careers: [
+        'Performance Marketing Specialist',
+        'Media Buyer (Chuyên viên Quản lý ngân sách Ads)',
+        'E-commerce Ads Specialist (TikTok Shop / Shopee)',
+        'Đồ án eProject: Chiến dịch Quảng cáo Trả phí đa kênh'
+      ]
+    },
+    {
+      num: 'HỌC KỲ 04',
+      shortTitle: 'Strategy & Automation',
+      title: 'Marketing Automation, CRM & Data Strategy',
+      subtitle: '(Tự động hóa Tiếp thị, Quản trị Quan hệ khách hàng & Chiến lược IMC)',
+      desc: 'Trở thành nhà hoạch định chiến lược số toàn diện. Thiết lập phễu bán hàng tự động (Sales Funnel), tự động hóa Email Marketing trên HubSpot/Mailchimp, quản trị tệp khách hàng CRM và xây dựng kế hoạch IMC tổng thể cho doanh nghiệp.',
+      coreStack: [
+        'Hoạch định chiến dịch truyền thông tích hợp (IMC)',
+        'Xây dựng phễu Marketing Automation & Lead Nurturing',
+        'Quản trị hệ thống dữ liệu khách hàng CRM (HubSpot)',
+        'Email Marketing tự động hóa theo kịch bản hành vi',
+        'Phân tích dữ liệu tiếp thị số chuyên sâu & Báo cáo ROI'
+      ],
+      aiTools: [
+        'HubSpot AI Marketing Hub',
+        'Zapier & Make.com AI Automation',
+        'Mailchimp AI Customer Journeys',
+        'Power BI & Looker Studio AI Dashboards',
+        'Google Analytics 4 Predictive Metrics'
+      ],
+      careers: [
+        'Digital Marketing Manager (Trưởng phòng Marketing)',
+        'Marketing Automation & CRM Specialist',
+        'Growth Marketing Strategist',
+        'Đồ án Tốt nghiệp: Kế hoạch Chiến lược Digital Marketing tổng thể'
+      ]
+    }
+  ];
+
   return (
     <div className={`beau-subpage-container theme-skillking active-sec-${activeSection}`}>
       <Header />
 
-      {/* Sticky Program Switcher Bar */}
+      {/* Program Switcher Bar */}
       <SkillkingProgramSwitcher activePath="/dao-tao/skillking/18-thang" />
 
       {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
-      <section className="beau-hero">
+      <section className="beau-hero" style={{ paddingBottom: '70px', paddingTop: '50px' }}>
         <ParticleCanvas className="beau-hero-particles" />
-        <div className="beau-hero-bg-text">SKILLKING</div>
+        <div className="beau-hero-bg-text">18 THÁNG</div>
         <div className="container beau-hero-inner" data-reveal>
           <span className="beau-hero-brand" style={{ backgroundColor: '#09529c', color: '#ffffff', fontWeight: 800 }}>
-            FPT SKILLKING
+            FPT SKILLKING — 18 THÁNG
           </span>
           <h1 className="beau-hero-title">
-            Tiếp Thị<br />Kỹ Thuật Số
+            Fullstack Digital Marketing<br />With AI (18 Tháng)
           </h1>
           <div className="beau-hero-logo" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
             <svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,349 +171,283 @@ export default function SkillkingSubpage() {
             </svg>
           </div>
           <p className="beau-hero-desc">
-            Chương trình đào tạo Chuyên gia Digital Marketing chuẩn quốc tế thực chiến 100%. Được phát triển trên nền tảng liên kết giữa Viện Giáo dục Quốc tế FPT và tập đoàn đào tạo công nghệ Jetking Ấn Độ. Trang bị kiến thức toàn diện từ Social Media, SEO, Performance Marketing đến quản trị dữ liệu số và hoạch định chiến dịch số.
+            Chương trình đào tạo Chuyên gia Digital Marketing toàn diện 18 tháng tích hợp công nghệ AI. Học thực chiến 100% qua dự án doanh nghiệp, từ Social Media, SEO, Performance Ads đến Marketing Automation và Data-Driven Strategy.
           </p>
 
           <div className="beau-stats-bar">
             <div className="beau-stat-item">
-              <h3 style={{ color: '#38bdf8' }}>Google &amp; Meta</h3>
-              <p>Hệ thống kiến thức chuẩn chứng chỉ quảng cáo toàn cầu trực quan nhất.</p>
+              <h3 style={{ color: '#38bdf8' }}>18 Tháng</h3>
+              <p>4 học kỳ chuyên sâu đưa bạn trở thành Marketer toàn diện.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#38bdf8' }}>25+ Năm</h3>
-              <p>Kinh nghiệm đào tạo quốc tế uy tín chuyển giao trực tiếp từ Ấn Độ.</p>
+              <h3 style={{ color: '#38bdf8' }}>Jetking AD</h3>
+              <p>Bằng Advanced Diploma quốc tế danh tiếng do Jetking Ấn Độ cấp.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#38bdf8' }}>100%</h3>
-              <p>Thời lượng thực chiến học đi đôi với hành thông qua dự án doanh nghiệp thực tế.</p>
+              <h3 style={{ color: '#38bdf8' }}>AI Powered</h3>
+              <p>Ứng dụng AI tăng gấp 5 lần hiệu suất sáng tạo và tối ưu chiến dịch.</p>
             </div>
           </div>
 
           {/* Banner Image */}
-          <div className="beau-hero-banner">
+          <div className="beau-hero-banner" style={{ marginTop: '40px' }}>
             <Image
               src="/banner_skillking_sub_v2.png"
-              alt="Tuyển sinh FPT Skillking"
+              alt="Tuyển sinh FPT Skillking 18 tháng"
               width={1200}
               height={400}
               priority
+              style={{ borderRadius: '16px', objectFit: 'cover' }}
             />
           </div>
         </div>
       </section>
 
-      {/* Section 1: Lộ Trình Đào Tạo (☀️ LIGHT BRIGHT THEME) */}
+      {/* Section 1: HÀNH TRÌNH TỔNG QUAN (☀️ LIGHT BRIGHT THEME) */}
       <section 
         className="beau-section"
         style={{ 
           backgroundColor: '#F8FAFC', 
           color: '#0f172a',
-          padding: '110px 0 120px 0',
+          padding: '100px 0 110px 0',
           borderTop: 'none'
         }}
       >
         <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
             <span style={{ color: '#09529c', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              LỘ TRÌNH ĐÀO TẠO
+              HÀNH TRÌNH TỔNG QUAN
             </span>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              4 học kỳ chuyên sâu thực chiến 100%
+              Lộ trình đào tạo chuẩn quốc tế 18 tháng
             </h2>
             <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Giáo trình cập nhật liên tục theo các thuật toán phân tích hành vi và quảng cáo đa nền tảng: SEO Google, Meta Ads, TikTok Ads, dữ liệu marketing CRM HubSpot.
+              Trang bị trọn vẹn bộ kỹ năng từ thực thi kỹ thuật số đến quản trị chiến lược
             </p>
           </div>
 
-          {/* 4 Semester Cards in Modern Light Theme */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
-            {/* Semester 1 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ color: '#09529c', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                HỌC KỲ 01
-              </span>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
-                Social Media & Content Strategy — Tiếp thị mạng xã hội
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
-                Thấu hiểu hành vi khách hàng trực tuyến. Học viên làm quen với nghiên cứu thị trường, viết nội dung sáng tạo chuẩn SEO, thiết kế hình ảnh bằng Canva và quản trị Facebook, TikTok, Instagram, Youtube.
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#09529c', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
-                  Môn học trọng tâm
-                </span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Nghiên cứu thị trường & Chân dung khách hàng</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Sáng tạo nội dung (Copywriting & Strategy)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Thiết kế hình ảnh tiếp thị truyền thông với Canva</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Quản trị và tối ưu trang mạng xã hội thương hiệu</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Đồ án Kế hoạch Tiếp thị Mạng xã hội e-Project</li>
-                </ul>
-              </div>
+          {/* 4 Stats Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
+              <BookOpen size={34} style={{ color: '#09529c', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>20+</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học &amp; Nền tảng tiếp thị số</p>
             </div>
-
-            {/* Semester 2 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ color: '#09529c', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                HỌC KỲ 02
-              </span>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
-                SEO — Tối ưu hóa công cụ tìm kiếm
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
-                Chinh phục thứ hạng tìm kiếm Google. Nghiên cứu từ khóa, tối ưu Onpage/Offpage, phân tích kỹ thuật (Technical SEO) và đo lường truy cập qua Search Console, GA4.
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#09529c', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
-                  Môn học trọng tâm
-                </span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Nghiên cứu từ khóa & Phân tích đối thủ</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Tối ưu cấu trúc & kỹ thuật On-page Website</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Xây dựng liên kết ngoài (Off-page Link building)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Sử dụng các công cụ phân tích SEO (Semrush, Ahrefs)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Đồ án Tối ưu hóa SEO Website e-Project</li>
-                </ul>
-              </div>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
+              <Clock size={34} style={{ color: '#09529c', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ chuyên sâu</p>
             </div>
-
-            {/* Semester 3 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ color: '#09529c', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                HỌC KỲ 03
-              </span>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
-                Performance Marketing & Paid Ads — Tối ưu quảng cáo
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
-                Tận dụng tối đa ngân sách truyền thông số. Thiết lập tài khoản quảng cáo, đấu thầu từ khóa Google Search Ads, chạy quảng cáo Facebook/Instagram và tiếp thị lại (Remarketing).
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#09529c', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
-                  Môn học trọng tâm
-                </span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Quản trị quảng cáo tìm kiếm Google Search Ads</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Quảng cáo mạng hiển thị Google Display & YouTube</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Tối ưu chiến dịch quảng cáo Meta Ads</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Triển khai TikTok Ads và Video ngắn chuyển đổi</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Đồ án Chiến dịch Quảng cáo Trả phí e-Project</li>
-                </ul>
-              </div>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
+              <Trophy size={34} style={{ color: '#09529c', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Đồ án thực tế (eProject)</p>
             </div>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
+              <Briefcase size={34} style={{ color: '#09529c', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Chiến lược IMC Doanh nghiệp</p>
+            </div>
+          </div>
 
-            {/* Semester 4 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ color: '#09529c', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                HỌC KỲ 04
-              </span>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
-                Strategy & Automation — Chiến lược & Tự động hóa
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
-                Trở thành nhà hoạch định chiến dịch chuyên nghiệp. Xây dựng chiến lược IMC, tự động hóa Email Marketing qua HubSpot, phân tích dữ liệu chuyên sâu và quản trị ngân sách lớn.
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#09529c', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
-                  Môn học trọng tâm
-                </span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Hoạch định chiến dịch truyền thông tích hợp (IMC)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Tự động hóa tiếp thị (Marketing Automation & CRM)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Phân tích dữ liệu tiếp thị số & Đo lường ROI</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Tối ưu hóa tỷ lệ chuyển đổi (CRO)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />Đồ án Tốt nghiệp Chiến lược Digital Marketing tổng thể</li>
-                </ul>
+          {/* Time banner */}
+          <div style={{ 
+            marginTop: '36px', 
+            background: '#ffffff', 
+            border: '1px solid rgba(9, 82, 156, 0.35)', 
+            borderLeft: '6px solid #09529c',
+            borderRadius: '20px', 
+            padding: '32px 40px',
+            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '24px'
+          }}>
+            <div>
+              <span style={{ fontSize: '0.82rem', color: '#09529c', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tổng thời lượng đào tạo</span>
+              <h4 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--secondary)', margin: '6px 0 0', fontFamily: 'var(--font-sans)' }}>800 Giờ học thực chiến</h4>
+            </div>
+            <div style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
+              <div>
+                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Tư duy &amp; Kế hoạch</span>
+                <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>200 giờ</strong>
+              </div>
+              <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
+                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Thực hành chạy Ads/SEO</span>
+                <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>400 giờ</strong>
+              </div>
+              <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
+                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Đồ án eProject</span>
+                <strong style={{ color: '#09529c', fontSize: '1.3rem', fontWeight: 800 }}>200 giờ</strong>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: Công Cụ & Nền Tảng (🌙 DARK TECH THEME) */}
+      {/* Section 2: CHI TIẾT CHƯƠNG TRÌNH HỌC (4 HỌC KỲ) - DẠNG TAB TƯƠNG TÁC (🌙 DARK CYBER THEME) */}
       <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#38bdf8' }}>DIGITAL TOOLS & PLATFORMS</span>
-            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Làm chủ hệ sinh thái công cụ tiếp thị</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Thực hành trực tiếp trên các nền tảng quảng cáo và công cụ phân tích hàng đầu toàn cầu
-            </p>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#38bdf8' }}>NỘI DUNG ĐÀO TẠO</span>
+            <h2 className="beau-section-title">Chi tiết chương trình học (4 học kỳ)</h2>
           </div>
 
-          <div className="beau-tech-grid">
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.05">
-              <span className="beau-tech-icon" style={{ color: '#4285f4' }}>G-Ads</span>
-              <span className="beau-tech-name">Google Ads</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.1">
-              <span className="beau-tech-icon" style={{ color: '#0668e1' }}>Meta</span>
-              <span className="beau-tech-name">Meta Business Suite</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.15">
-              <span className="beau-tech-icon" style={{ color: '#ff0050' }}>TikTok</span>
-              <span className="beau-tech-name">TikTok Ads Manager</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.2">
-              <span className="beau-tech-icon" style={{ color: '#ff7a59' }}>HubSpot</span>
-              <span className="beau-tech-name">HubSpot CRM</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.25">
-              <span className="beau-tech-icon" style={{ color: '#f37021' }}>GA4</span>
-              <span className="beau-tech-name">Google Analytics 4</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.3">
-              <span className="beau-tech-icon" style={{ color: '#ff642d' }}>Semrush</span>
-              <span className="beau-tech-name">Semrush & Ahrefs</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.35">
-              <span className="beau-tech-icon" style={{ color: '#00c4cc' }}>Canva</span>
-              <span className="beau-tech-name">Canva Pro</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.4">
-              <span className="beau-tech-icon" style={{ color: '#ffffff' }}>AI Ads</span>
-              <span className="beau-tech-name">ChatGPT & AI Copy</span>
+          {/* Segmented Semester Tabs */}
+          <div 
+            style={{ 
+              position: 'sticky', 
+              top: '80px', 
+              zIndex: 90, 
+              padding: '12px 0',
+              marginBottom: '36px',
+              maxWidth: '1100px',
+              margin: '0 auto 36px'
+            }}
+          >
+            <div 
+              style={{ 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', 
+                gap: '14px'
+              }}
+            >
+              {semesters.map((sem, idx) => {
+                const isActive = activeTab === idx;
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveTab(idx)}
+                    style={{
+                      padding: '14px 18px',
+                      borderRadius: '16px',
+                      border: isActive ? '1px solid #38bdf8' : '1px solid rgba(255, 255, 255, 0.12)',
+                      background: isActive 
+                        ? 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)' 
+                        : 'rgba(13, 33, 55, 0.75)',
+                      color: '#ffffff',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      textAlign: 'left',
+                      boxShadow: isActive ? '0 10px 28px rgba(2, 132, 199, 0.45)' : '0 4px 15px rgba(0,0,0,0.2)',
+                      backdropFilter: 'blur(12px)',
+                      WebkitBackdropFilter: 'blur(12px)'
+                    }}
+                  >
+                    <span 
+                      style={{ 
+                        fontSize: '0.78rem', 
+                        fontWeight: 900, 
+                        color: isActive ? '#ffffff' : '#38bdf8',
+                        background: isActive ? 'rgba(0, 0, 0, 0.25)' : 'rgba(2, 132, 199, 0.2)',
+                        padding: '4px 9px',
+                        borderRadius: '10px',
+                        flexShrink: 0
+                      }}
+                    >
+                      {sem.num}
+                    </span>
+                    <span 
+                      style={{ 
+                        fontSize: '0.92rem', 
+                        fontWeight: isActive ? 800 : 600, 
+                        lineHeight: '1.3',
+                        color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.85)'
+                      }}
+                    >
+                      {sem.shortTitle}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Section 3: Cơ Hội Nghề Nghiệp (☀️ LIGHT BRIGHT THEME) */}
-      <section 
-        className="beau-section"
-        style={{ 
-          backgroundColor: '#F8FAFC', 
-          color: '#0f172a',
-          padding: '100px 0 110px 0',
-          borderTop: 'none'
-        }}
-      >
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span style={{ color: '#09529c', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              CAREERS
-            </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Vị trí việc làm sau khi tốt nghiệp
-            </h2>
-            <p style={{ color: '#64748b', maxWidth: '650px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Đáp ứng nhu cầu tuyển dụng khát nhân lực chất lượng cao trong ngành Digital Marketing
-            </p>
-          </div>
-
-          <div className="beau-careers-grid">
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #09529c', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Digital Marketing Specialist</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Hoạch định và thực thi các chiến dịch tiếp thị số tổng thể, đa kênh cho thương hiệu doanh nghiệp.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #09529c', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Performance Marketing Executive</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Trực tiếp quản lý và tối ưu hóa ngân sách quảng cáo số Google, Facebook, TikTok đạt chuyển đổi cao nhất.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #09529c', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>SEO & Content Manager</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Quản lý chiến lược nội dung chuẩn SEO, tối ưu thứ hạng website bền vững trên công cụ tìm kiếm.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #09529c', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Social Media Manager</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Xây dựng chiến lược kênh, quản trị cộng đồng fanpage và sáng tạo xu hướng tương tác viral.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #09529c', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Marketing Automation & CRM Executive</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Vận hành các hệ thống tự động hóa tiếp thị, chăm sóc khách hàng tự động và tối ưu vòng đời khách hàng.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #09529c', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Data-Driven Marketer</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Thu thập, phân tích dữ liệu chiến dịch và trực quan hóa báo cáo thông minh phục vụ ra quyết định kinh doanh.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: Ưu đãi tuyển sinh đặc quyền (🌙 DARK TECH THEME) */}
-      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#38bdf8' }}>HỌC BỔNG & CHÍNH SÁCH</span>
-            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Ưu đãi tuyển sinh đặc quyền Skillking</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Tạo mọi điều kiện thuận lợi nhất để bạn tự tin bứt phá trong kỷ nguyên số
-            </p>
-          </div>
-          
-          <div className="beau-incentives-grid">
-            <div className="beau-incentive-card" style={{ '--accent': '#09529c' }} data-reveal data-reveal-delay="0.05">
-              <span className="incentive-badge">HỌC BỔNG</span>
-              <h3 className="incentive-value">Lên tới 50%</h3>
-              <p className="incentive-desc">Học bổng Chuyên gia Tiếp thị số hỗ trợ thế hệ Marketer trẻ tài năng phát triển sự nghiệp.</p>
-            </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#09529c' }} data-reveal data-reveal-delay="0.1">
-              <span className="incentive-badge">QUÀ TẶNG CÔNG NGHỆ</span>
-              <h3 className="incentive-value">Combo Tools AI</h3>
-              <p className="incentive-desc">Tặng ngay gói tài khoản công cụ Marketing AI cao cấp khi hoàn tất thủ tục nhập học sớm.</p>
-            </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#09529c' }} data-reveal data-reveal-delay="0.15">
-              <span className="incentive-badge">TRẢ GÓP</span>
-              <h3 className="incentive-value">0% Lãi Suất</h3>
-              <p className="incentive-desc">Hỗ trợ chia nhỏ học phí đóng theo từng tháng qua thẻ tín dụng ngân hàng đối tác.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: Chuyển hướng nhanh ngành học & Tin tức (☀️ LIGHT BRIGHT THEME) */}
-      <section 
-        className="beau-section"
-        style={{ 
-          backgroundColor: '#F8FAFC', 
-          color: '#0f172a',
-          padding: '100px 0 110px 0',
-          borderTop: 'none'
-        }}
-      >
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span style={{ color: '#09529c', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              KHÁM PHÁ CÁC NGÀNH HỌC KHÁC
-            </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Hệ sinh thái đào tạo FPT
-            </h2>
-          </div>
-          
-          <div className="beau-other-programs-grid">
-            <Link href="/dao-tao/aptech/2-nam" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.05">
-              <div>
-                <span className="other-prog-tag" style={{ color: '#f37021' }}>✦ APTECH</span>
-                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Software Engineering & AI</h3>
-                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Lập trình viên Quốc tế ACCP AI — Làm chủ Java, Python, Fullstack Web/Mobile, Cloud Computing và Vibe Coding.
-                </p>
-              </div>
-              <span className="other-prog-link" style={{ color: '#f37021', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
-                Khám phá Công Nghệ
-                <ArrowRight size={18} />
+          {/* Active Tab Card Content */}
+          <div style={{ 
+            background: 'linear-gradient(135deg, rgba(13, 33, 55, 0.88) 0%, rgba(22, 43, 74, 0.92) 100%)', 
+            border: '1px solid rgba(2, 132, 199, 0.35)', 
+            borderRadius: '24px', 
+            padding: '44px',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            boxShadow: '0 24px 60px rgba(0, 0, 0, 0.45)',
+            maxWidth: '1100px',
+            margin: '0 auto'
+          }}>
+            <div style={{ marginBottom: '28px' }}>
+              <span style={{ color: '#38bdf8', fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                {semesters[activeTab].num}
               </span>
-            </Link>
+              <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800, color: '#ffffff', margin: '8px 0 4px', fontFamily: 'var(--font-sans)' }}>
+                {semesters[activeTab].title}
+              </h3>
+              <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: '0.98rem', margin: '0 0 16px' }}>
+                {semesters[activeTab].subtitle}
+              </p>
+              <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
+                {semesters[activeTab].desc}
+              </p>
+            </div>
 
-            <Link href="/dao-tao/arena" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.1">
+            <hr style={{ borderColor: 'rgba(255, 255, 255, 0.1)', margin: '30px 0' }} />
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '36px' }}>
+              {/* Col 1 */}
               <div>
-                <span className="other-prog-tag" style={{ color: '#d97706' }}>◈ ARENA MULTIMEDIA</span>
-                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Mỹ Thuật Đa Phương Tiện</h3>
-                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Thiết kế đồ họa 2D, UI/UX Web-App, Làm phim kỹ thuật số, Kỹ xảo CGI và Hoạt hình 3D đỉnh cao.
-                </p>
+                <h4 style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                  KỸ NĂNG &amp; MÔN HỌC LÕI
+                </h4>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {semesters[activeTab].coreStack.map((item, idx) => (
+                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
+                      <Check size={18} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '2px' }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <span className="other-prog-link" style={{ color: '#d97706', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
-                Khám phá Sáng Tạo Mỹ Thuật
-                <ArrowRight size={18} />
-              </span>
-            </Link>
+
+              {/* Col 2 */}
+              <div>
+                <h4 style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                  CÔNG CỤ AI &amp; NỀN TẢNG TIẾP THỊ
+                </h4>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {semesters[activeTab].aiTools.map((item, idx) => (
+                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
+                      <Check size={18} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '2px' }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Col 3 */}
+              <div>
+                <h4 style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                  CƠ HỘI NGHỀ NGHIỆP &amp; ĐỒ ÁN
+                </h4>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {semesters[activeTab].careers.map((item, idx) => (
+                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
+                      <Check size={18} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '2px' }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 6: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      {/* Section 3: Bottom CTA Section (🌙 DARK CYBER THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
@@ -409,16 +455,16 @@ export default function SkillkingSubpage() {
           <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
             Nắm bắt phương pháp Marketing dữ liệu và công cụ AI thực chiến ngay hôm nay.
           </p>
-          <a href="#dang-ky-skillking" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #09529c 0%, #1a6ed8 100%)', color: '#ffffff', fontWeight: 800 }}>
-            Đăng Ký Tư Vấn & Nhận Học Bổng
+          <a href="#dang-ky-skillking-18t" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)', color: '#ffffff', fontWeight: 800 }}>
+            Đăng Ký Tư Vấn &amp; Nhận Học Bổng
             <ArrowRight size={22} strokeWidth={2.5} />
           </a>
         </div>
       </section>
 
-      {/* Section 7: Scholarship Application Form (☀️ LIGHT THEME) */}
-      <div id="dang-ky-skillking">
-        <ScholarshipFormSection programName="FPT Skillking" />
+      {/* Section 4: Scholarship Application Form (☀️ LIGHT THEME) */}
+      <div id="dang-ky-skillking-18t">
+        <ScholarshipFormSection programName="FPT Skillking (18 Tháng)" />
       </div>
 
       <Footer />

@@ -6,7 +6,7 @@ import { Sparkles } from 'lucide-react';
 export default function SkillkingProgramSwitcher({ activePath }) {
   const programs = [
     { label: 'Fullstack Digital Marketing With AI (18 tháng)', href: '/dao-tao/skillking/18-thang', path: '/dao-tao/skillking/18-thang' },
-    { label: 'Bộ khóa học Digital Marketing thực chiến (100 giờ)', href: '/dao-tao/skillking/100h', path: '/dao-tao/skillking/100h' },
+    { label: 'Bộ khóa học Digital Marketing ngắn hạn (100 giờ)', href: '/dao-tao/skillking/100h', path: '/dao-tao/skillking/100h' },
   ];
 
   return (

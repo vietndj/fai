@@ -8,10 +8,11 @@ import JetkingProgramSwitcher from '@/components/JetkingProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles } from 'lucide-react';
+import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, Cpu, Layers, ShieldCheck, Zap, Briefcase } from 'lucide-react';
 
 export default function ChipDesignSubpage() {
   const [activeSection, setActiveSection] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
     const sections = document.querySelectorAll('.beau-hero, .beau-section, .beau-cta-section');
@@ -33,6 +34,117 @@ export default function ChipDesignSubpage() {
     return () => observer.disconnect();
   }, []);
 
+  const semesters = [
+    {
+      num: 'HỌC KỲ 01',
+      shortTitle: 'Electronics & C/C++',
+      title: 'Electronic Fundamentals & Embedded C/C++',
+      subtitle: '(Điện tử cơ bản, Kỹ thuật Mạch số & Lập trình C/C++ phần cứng)',
+      desc: 'Thiết lập nền tảng kỹ thuật phần cứng vững chắc. Nghiên cứu linh kiện bán dẫn, mạch tương tự, kiến trúc logic số (Boolean, Flip-Flops, Registers) và lập trình C/C++ chuyên sâu cho hệ thống nhúng.',
+      coreStack: [
+        'Kỹ thuật điện tử mạch tương tự & Số (Digital Logic)',
+        'Kiến trúc máy tính & Vi xử lý cơ bản',
+        'Lập trình C/C++ tối ưu cho phần cứng',
+        'Thuật toán & Cấu trúc dữ liệu trong thiết kế mạch',
+        'Phân tích & Đo kiểm mạch điện tử thực tế'
+      ],
+      aiTools: [
+        'Proteus & Multisim Circuit Simulation',
+        'MATLAB / Simulink Hardware Modeling',
+        'VS Code Hardware Dev Extension',
+        'Git & Linux Environment Tools',
+        'Copilot for Hardware Description'
+      ],
+      careers: [
+        'Junior Firmware Engineer (Kỹ sư Nhúng)',
+        'Hardware Testing Assistant (Kỹ thuật viên Kiểm thử)',
+        'Digital Logic Designer',
+        'Đồ án eProject: Mạch Vi điều khiển số hoàn chỉnh'
+      ]
+    },
+    {
+      num: 'HỌC KỲ 02',
+      shortTitle: 'Verilog & RTL Design',
+      title: 'Hardware Description Languages & RTL Design',
+      subtitle: '(Ngôn ngữ mô tả phần cứng Verilog, SystemVerilog & Mô phỏng chức năng)',
+      desc: 'Chuyển đổi ý tưởng phần cứng thành mã lệnh. Làm chủ ngôn ngữ Verilog và SystemVerilog để thiết kế tầng RTL (Register-Transfer Level), viết Testbench mô phỏng và nạp thử nghiệm trên chip FPGA.',
+      coreStack: [
+        'Ngôn ngữ mô tả phần cứng Verilog HDL',
+        'Thiết kế kiến trúc số RTL (State Machines, FSM)',
+        'Mô phỏng kiểm tra chức năng (Functional Simulation)',
+        'Viết Testbench kiểm thử SystemVerilog cơ bản',
+        'Hiện thực hóa và kiểm thử mạch trên kit FPGA Xilinx'
+      ],
+      aiTools: [
+        'Synopsys Design Compiler (Synthesis)',
+        'Siemens ModelSim / QuestaSim Simulation',
+        'Xilinx Vivado FPGA Design Suite',
+        'Intel Quartus Prime',
+        'AI Verilog Code Generator & Linter'
+      ],
+      careers: [
+        'RTL Design Engineer (Kỹ sư Thiết kế RTL)',
+        'FPGA Prototyping Engineer',
+        'Digital Design Verification Junior',
+        'Đồ án eProject: Thiết kế Bộ vi xử lý ALU / RISC-V'
+      ]
+    },
+    {
+      num: 'HỌC KỲ 03',
+      shortTitle: 'Physical Design & EDA',
+      title: 'Physical Design, IC Layout & STA',
+      subtitle: '(Thiết kế vật lý Vi mạch, Bố trí Layout & Phân tích định thời tĩnh)',
+      desc: 'Đưa mã nguồn RTL thành bố cục vật lý trên tấm bán dẫn Silicon. Thực hiện tổng hợp logic, lập bản đồ Floorplanning, Placement, Clock Tree Synthesis (CTS), Routing và phân tích định thời tĩnh (STA).',
+      coreStack: [
+        'Quy trình thiết kế vật lý ASIC Flow từ A-Z',
+        'Phân tích định thời tĩnh (Static Timing Analysis - STA)',
+        'Bố trí mặt bằng (Floorplanning) & Định tuyến (Routing)',
+        'Phân tích tính toàn vẹn tín hiệu (Signal Integrity & IR-Drop)',
+        'Kiểm tra luật thiết kế vật lý (DRC, LVS, Antenna Rules)'
+      ],
+      aiTools: [
+        'Cadence Innovus Implementation System',
+        'Synopsys PrimeTime STA Suite',
+        'Cadence Virtuoso IC Layout Editor',
+        'Siemens Calibre DRC / LVS',
+        'Cadence Cerebrus AI Physical Optimization'
+      ],
+      careers: [
+        'Physical Design Engineer (Kỹ sư Thiết kế Vật lý)',
+        'IC Layout Design Engineer',
+        'Static Timing Analysis (STA) Specialist',
+        'Đồ án eProject: Thiết kế Layout hoàn chỉnh cho Chip GDSII'
+      ]
+    },
+    {
+      num: 'HỌC KỲ 04',
+      shortTitle: 'SoC, UVM & AI in EDA',
+      title: 'SoC Integration, UVM Verification & AI in EDA',
+      subtitle: '(Tích hợp Hệ thống trên Chip SoC, Kiểm chuẩn UVM & AI trong Bán dẫn)',
+      desc: 'Làm chủ công nghệ vi mạch đỉnh cao. Tích hợp các khối IP theo chuẩn giao thức AMBA (AXI/AHB/APB), xây dựng môi trường kiểm chuẩn UVM tự động và ứng dụng AI để tối ưu hóa PPA (Power, Performance, Area).',
+      coreStack: [
+        'Kiến trúc hệ thống System-on-Chip (SoC) & Giao thức AMBA',
+        'Kiểm chuẩn chức năng nâng cao theo chuẩn quốc tế UVM',
+        'Phương pháp thiết kế vi mạch tiết kiệm năng lượng (Low-Power UPF)',
+        'Thiết kế phục vụ kiểm tra sản xuất (DFT - Design for Testability)',
+        'Ứng dụng AI / Machine Learning trong tự động hóa EDA'
+      ],
+      aiTools: [
+        'Synopsys DSO.ai (AI-driven Design Space Optimization)',
+        'Synopsys VCS Functional Verification',
+        'Cadence Xcelium Logic Simulator',
+        'UVM Verification Frameworks',
+        'Ansys RedHawk Power Integrity AI'
+      ],
+      careers: [
+        'SoC Integration & Architecture Engineer',
+        'ASIC Verification Engineer (Kỹ sư Kiểm chuẩn UVM)',
+        'Semiconductor Design Lead Specialist',
+        'Đồ án Tốt nghiệp: Hệ thống Chip SoC Bán dẫn hoàn chỉnh'
+      ]
+    }
+  ];
+
   return (
     <div className={`beau-subpage-container theme-chip-design active-sec-${activeSection}`}>
       <Header />
@@ -41,384 +153,318 @@ export default function ChipDesignSubpage() {
       <JetkingProgramSwitcher activePath="/dao-tao/chip-design" />
 
       {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
-      <section className="beau-hero">
+      <section className="beau-hero" style={{ paddingBottom: '70px', paddingTop: '50px' }}>
         <ParticleCanvas className="beau-hero-particles" />
-        <div className="beau-hero-bg-text">CHIP DESIGN</div>
+        <div className="beau-hero-bg-text">SEMICONDUCTOR</div>
         <div className="container beau-hero-inner" data-reveal>
           <span className="beau-hero-brand" style={{ backgroundColor: '#f37021', color: '#ffffff', fontWeight: 800 }}>
-            FPT JETKING — CHIP DESIGN
+            FPT JETKING — THIẾT KẾ VI MẠCH BÁN DẪN (2 NĂM)
           </span>
           <h1 className="beau-hero-title">
-            Thiết Kế Vi Mạch<br />Bán Dẫn Tích Hợp AI
+            Thiết Kế Vi Mạch Bán Dẫn<br />Quốc Tế Tích Hợp AI
           </h1>
           <div className="beau-hero-logo" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
-            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="10" y="26" fill="#0066b3" fontSize="20" fontWeight="bold" fontFamily="sans-serif">Jet</text>
-              <text x="40" y="26" fill="#f37021" fontSize="20" fontWeight="bold" fontFamily="sans-serif">king</text>
-              <path d="M100 10 L108 17 L100 24" stroke="#f37021" strokeWidth="3" fill="none"/>
+            <svg width="120" height="38" viewBox="0 0 120 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 8 L22 8 L18 28 L6 28 Z" fill="#f37021"/>
+              <path d="M24 14 L34 14 L31 28 L21 28 Z" fill="#0066b3"/>
+              <text x="40" y="25" fill="#ffffff" fontSize="16" fontWeight="bold" fontFamily="sans-serif">Jetking</text>
             </svg>
           </div>
           <p className="beau-hero-desc">
-            Chương trình đào tạo Thiết kế Vi mạch Bán dẫn chuẩn quốc tế đầu tiên tại Việt Nam, chuyển giao từ đối tác Jetking Ấn Độ. Sinh viên được đào tạo chuyên sâu về quy trình thiết kế chip hoàn chỉnh, làm chủ ngôn ngữ mô tả phần cứng Verilog/VHDL, công cụ thiết kế vi mạch EDA hiện đại cùng kỹ năng tích hợp AI để tối ưu hóa quy trình tự động hóa thiết kế (EDA).
+            Chương trình đào tạo Chuyên gia Thiết kế Vi mạch Bán dẫn chuẩn quốc tế 2 năm hợp tác cùng Tập đoàn Jetking Ấn Độ. Tiếp cận trực tiếp bản quyền phần mềm EDA hàng đầu (Synopsys, Cadence, Siemens) và thực hành thiết kế chip vật lý từ RTL đến GDSII.
           </p>
 
           <div className="beau-stats-bar">
             <div className="beau-stat-item">
-              <h3 style={{ color: '#f37021' }}>70% Thực Hành</h3>
-              <p>Học tập thực chiến tại phòng Lab tiêu chuẩn công nghiệp.</p>
+              <h3 style={{ color: '#f37021' }}>2 Năm</h3>
+              <p>4 học kỳ chuyên sâu toàn diện quy trình thiết kế vi mạch ASIC/SoC.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#f37021' }}>Jetking AD</h3>
-              <p>Bằng cấp Advanced Diploma do tập đoàn Jetking Ấn Độ cấp, giá trị toàn cầu.</p>
+              <h3 style={{ color: '#f37021' }}>Jetking HDSE</h3>
+              <p>Bằng Higher Diploma danh giá do Jetking Ấn Độ cấp có giá trị toàn cầu.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#f37021' }}>50.000</h3>
-              <p>Chỉ tiêu đào tạo kỹ sư bán dẫn Việt Nam đến năm 2030, mở rộng cơ hội việc làm.</p>
+              <h3 style={{ color: '#f37021' }}>EDA Chuẩn Quốc Tế</h3>
+              <p>Thực hành trên bộ công cụ Synopsys &amp; Cadence chuẩn công nghiệp.</p>
             </div>
           </div>
 
           {/* Banner Image */}
-          <div className="beau-hero-banner">
+          <div className="beau-hero-banner" style={{ marginTop: '40px' }}>
             <Image
-              src="/banner_chip_design_sub_v2.png"
-              alt="Tuyển sinh Thiết kế vi mạch bán dẫn FPT Jetking"
+              src="/banner_chip_sub_v2.png"
+              alt="Tuyển sinh FPT Jetking Vi mạch bán dẫn"
               width={1200}
               height={400}
               priority
+              style={{ borderRadius: '16px', objectFit: 'cover' }}
             />
           </div>
         </div>
       </section>
 
-      {/* Section 1: Lộ Trình Đào Tạo (☀️ LIGHT BRIGHT THEME) */}
+      {/* Section 1: HÀNH TRÌNH TỔNG QUAN (☀️ LIGHT BRIGHT THEME) */}
       <section 
         className="beau-section"
         style={{ 
           backgroundColor: '#F8FAFC', 
           color: '#0f172a',
-          padding: '110px 0 120px 0',
+          padding: '100px 0 110px 0',
           borderTop: 'none'
         }}
       >
         <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
             <span style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              LỘ TRÌNH ĐÀO TẠO
+              HÀNH TRÌNH TỔNG QUAN
             </span>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Lộ trình đào tạo 24 tháng chuẩn quốc tế
+              Lộ trình đào tạo Kỹ sư Vi mạch 2 năm
             </h2>
             <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Chương trình gồm 4 học kỳ, phân chia khoa học từ phần cứng vi điều khiển đến thiết kế vi mạch chuyên sâu SoC/ASIC/FPGA và ứng dụng AI/ML vào chip.
+              Đào tạo đón đầu chiến lược quốc gia đưa Việt Nam thành trung tâm Bán dẫn toàn cầu
             </p>
           </div>
 
-          {/* 4 Semester Cards in Modern Light Theme */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
-            {/* Semester 1 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ color: '#f37021', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                HỌC KỲ 01
-              </span>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
-                Electronic Circuits &amp; MCU — Mạch điện tử &amp; Vi điều khiển
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
-                Kiến tạo nền tảng vững chắc với lập trình C/C++, nguyên lý mạch điện tử cơ bản và linh kiện (Transistor, MOSFET, Diode). Bắt đầu tiếp cận Digital Logic tích hợp AI Driven Design.
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#f37021', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
-                  Môn học trọng tâm
-                </span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Cơ bản về lập trình & Thuật toán C/C++</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Nguyên lý mạch điện và Linh kiện điện tử</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Vật lý bán dẫn và linh kiện MOSFET, Op-Amp</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Mạch điện tử số tích hợp AI Driven Design</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Đồ án Hệ thống vi điều khiển thực tế</li>
-                </ul>
-              </div>
+          {/* 4 Stats Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
+              <BookOpen size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>22+</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học &amp; Công nghệ EDA</p>
             </div>
-
-            {/* Semester 2 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ color: '#f37021', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                HỌC KỲ 02
-              </span>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
-                Chip Architecture — Kiến trúc &amp; Quy trình thiết kế chip
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
-                Đi sâu vào hệ thống truyền thông, cấu trúc tín hiệu Analog/Digital và quy trình sản xuất Chip hoàn chỉnh. Ứng dụng AI trong Chip Design qua các bài thực hành thiết kế.
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#f37021', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
-                  Môn học trọng tâm
-                </span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Cấu trúc truyền thông & Xử lý Analog/Digital</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Mạch tích hợp tuyến tính & Kiến trúc vi xử lý</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Các bước thiết kế và chế tạo IC (Steps to Chip Design)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Ứng dụng AI tối ưu hóa cấu trúc thiết kế chip</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Đồ án Phân tích Kiến trúc vi mạch e-Project</li>
-                </ul>
-              </div>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
+              <Clock size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ chuyên sâu</p>
             </div>
-
-            {/* Semester 3 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ color: '#f37021', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                HỌC KỲ 03
-              </span>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
-                HDL &amp; EDA Tools — Ngôn ngữ HDL &amp; Công cụ EDA
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
-                Làm chủ ngôn ngữ mô tả phần cứng tiêu chuẩn (Verilog/VHDL) cùng bộ công cụ tự động hóa EDA. Tích hợp các thuật toán AI nâng cao để tự động tối ưu hóa thiết kế IC.
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#f37021', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
-                  Môn học trọng tâm
-                </span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Lập trình mô tả phần cứng Verilog HDL</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Bộ công cụ mô phỏng Synopsys / Cadence EDA</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Advanced AI in Chip Design: Tự động hóa EDA</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Thiết kế Layout vi mạch bán dẫn VLSI</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Đồ án Thiết kế vi mạch số trên EDA Tools</li>
-                </ul>
-              </div>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
+              <Trophy size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Đồ án Thiết kế Chip eProject</p>
             </div>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
+              <Briefcase size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Hồ sơ Layout GDSII Doanh nghiệp</p>
+            </div>
+          </div>
 
-            {/* Semester 4 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ color: '#f37021', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
-                HỌC KỲ 04
-              </span>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
-                SoC/FPGA &amp; AI Integration — Thiết kế hệ thống SoC &amp; Chip AI
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
-                Hiện thực hóa thiết kế trên chip FPGA thực tế, xây dựng kiến trúc System on Chip (SoC), tích hợp bộ tăng tốc AI Hardware Accelerator (NPU) và kiểm thử chip (DFT).
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#f37021', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
-                  Môn học trọng tâm
-                </span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Hiện thực hóa và kiểm thử mạch trên kit FPGA</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Kiến trúc hệ thống System-on-Chip (SoC)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Tích hợp AI Accelerators (NPU) vào Chip bán dẫn</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Kỹ thuật kiểm thử vi mạch Design For Test (DFT)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#f37021', flexShrink: 0 }} />Đồ án tốt nghiệp Thiết kế Chip bán dẫn AI hoàn chỉnh</li>
-                </ul>
+          {/* Time banner */}
+          <div style={{ 
+            marginTop: '36px', 
+            background: '#ffffff', 
+            border: '1px solid rgba(243, 112, 33, 0.3)', 
+            borderLeft: '6px solid #f37021',
+            borderRadius: '20px', 
+            padding: '32px 40px',
+            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '24px'
+          }}>
+            <div>
+              <span style={{ fontSize: '0.82rem', color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tổng thời lượng đào tạo</span>
+              <h4 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--secondary)', margin: '6px 0 0', fontFamily: 'var(--font-sans)' }}>900 Giờ học thực hành Lab</h4>
+            </div>
+            <div style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
+              <div>
+                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Kiến thức Mạch &amp; RTL</span>
+                <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>300 giờ</strong>
+              </div>
+              <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
+                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Thực hành EDA Synopsys/Cadence</span>
+                <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>400 giờ</strong>
+              </div>
+              <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
+                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Đồ án Chip eProject</span>
+                <strong style={{ color: '#f37021', fontSize: '1.3rem', fontWeight: 800 }}>200 giờ</strong>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: Công Cụ Thiết Kế EDA (🌙 DARK TECH THEME) */}
+      {/* Section 2: CHI TIẾT CHƯƠNG TRÌNH HỌC (4 HỌC KỲ) - DẠNG TAB TƯƠNG TÁC (🌙 DARK CYBER THEME) */}
       <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>EDA &amp; HARDWARE TOOLS</span>
-            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Làm chủ công cụ thiết kế EDA chuẩn quốc tế</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Trải nghiệm môi trường thực hành chuyên nghiệp chuẩn phòng Lab bán dẫn toàn cầu
-            </p>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>NỘI DUNG ĐÀO TẠO</span>
+            <h2 className="beau-section-title">Chi tiết chương trình học (4 học kỳ)</h2>
           </div>
 
-          <div className="beau-tech-grid">
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.05">
-              <span className="beau-tech-icon" style={{ color: '#f37021' }}>Verilog</span>
-              <span className="beau-tech-name">Verilog / VHDL</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.1">
-              <span className="beau-tech-icon" style={{ color: '#0066b3' }}>Synopsys</span>
-              <span className="beau-tech-name">Synopsys EDA</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.15">
-              <span className="beau-tech-icon" style={{ color: '#00d2ff' }}>Cadence</span>
-              <span className="beau-tech-name">Cadence Virtuoso</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.2">
-              <span className="beau-tech-icon" style={{ color: '#ff4d4f' }}>FPGA</span>
-              <span className="beau-tech-name">Xilinx Vivado</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.25">
-              <span className="beau-tech-icon" style={{ color: '#52c41a' }}>ModelSim</span>
-              <span className="beau-tech-name">ModelSim / Questa</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.3">
-              <span className="beau-tech-icon" style={{ color: '#faad14' }}>RISC-V</span>
-              <span className="beau-tech-name">RISC-V Architecture</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.35">
-              <span className="beau-tech-icon" style={{ color: '#13c2c2' }}>Python</span>
-              <span className="beau-tech-name">Python for EDA</span>
-            </div>
-            <div className="beau-tech-item" data-reveal data-reveal-delay="0.4">
-              <span className="beau-tech-icon" style={{ color: '#ffffff' }}>Linux</span>
-              <span className="beau-tech-name">Linux Semiconductor OS</span>
+          {/* Segmented Semester Tabs */}
+          <div 
+            style={{ 
+              position: 'sticky', 
+              top: '80px', 
+              zIndex: 90, 
+              padding: '12px 0',
+              marginBottom: '36px',
+              maxWidth: '1100px',
+              margin: '0 auto 36px'
+            }}
+          >
+            <div 
+              style={{ 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', 
+                gap: '14px'
+              }}
+            >
+              {semesters.map((sem, idx) => {
+                const isActive = activeTab === idx;
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveTab(idx)}
+                    style={{
+                      padding: '14px 18px',
+                      borderRadius: '16px',
+                      border: isActive ? '1px solid #f37021' : '1px solid rgba(255, 255, 255, 0.12)',
+                      background: isActive 
+                        ? 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)' 
+                        : 'rgba(13, 33, 55, 0.75)',
+                      color: '#ffffff',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      textAlign: 'left',
+                      boxShadow: isActive ? '0 10px 28px rgba(243, 112, 33, 0.45)' : '0 4px 15px rgba(0,0,0,0.2)',
+                      backdropFilter: 'blur(12px)',
+                      WebkitBackdropFilter: 'blur(12px)'
+                    }}
+                  >
+                    <span 
+                      style={{ 
+                        fontSize: '0.78rem', 
+                        fontWeight: 900, 
+                        color: isActive ? '#ffffff' : '#f37021',
+                        background: isActive ? 'rgba(0, 0, 0, 0.25)' : 'rgba(243, 112, 33, 0.15)',
+                        padding: '4px 9px',
+                        borderRadius: '10px',
+                        flexShrink: 0
+                      }}
+                    >
+                      {sem.num}
+                    </span>
+                    <span 
+                      style={{ 
+                        fontSize: '0.92rem', 
+                        fontWeight: isActive ? 800 : 600, 
+                        lineHeight: '1.3',
+                        color: isActive ? '#ffffff' : 'rgba(255, 255, 255, 0.85)'
+                      }}
+                    >
+                      {sem.shortTitle}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Section 3: Cơ Hội Nghề Nghiệp (☀️ LIGHT BRIGHT THEME) */}
-      <section 
-        className="beau-section"
-        style={{ 
-          backgroundColor: '#F8FAFC', 
-          color: '#0f172a',
-          padding: '100px 0 110px 0',
-          borderTop: 'none'
-        }}
-      >
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              CAREERS
-            </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Cơ hội nghề nghiệp ngành Bán dẫn
-            </h2>
-            <p style={{ color: '#64748b', maxWidth: '650px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Đón đầu làn sóng đầu tư hàng tỷ USD từ các tập đoàn vi mạch công nghệ cao toàn cầu
-            </p>
-          </div>
-
-          <div className="beau-careers-grid">
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #f37021', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>IC Design Engineer (Kỹ sư Thiết kế Vi mạch)</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Trực tiếp tham gia thiết kế logic (RTL Design) và thiết kế vi kiến trúc cho các dòng chip xử lý hiện đại.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #f37021', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>IC Verification Engineer (Kỹ sư Kiểm thử Vi mạch)</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Xây dựng môi trường kiểm thử UVM/SystemVerilog để xác minh và kiểm tra độ chính xác của chip trước khi sản xuất.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #f37021', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Physical Design / Layout Engineer</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Chuyển đổi thiết kế logic sang thiết kế vật lý layout vi mạch, tối ưu hóa diện tích, công suất và hiệu năng (PPA).</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #f37021', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>FPGA Design Engineer</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Thiết kế, mô phỏng và hiện thực hóa các thuật toán xử lý dữ liệu lớn tốc độ cao trên chip bán dẫn FPGA.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #f37021', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Embedded System Engineer (Kỹ sư Nhúng)</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Phát triển phần mềm nhúng, trình điều khiển firmware điều khiển trực tiếp các hệ thống chip SoC.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #f37021', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>AI Semiconductor Specialist</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Nghiên cứu ứng dụng trí tuệ nhân tạo trong tự động hóa quy trình EDA và tối ưu hóa bộ tăng tốc NPU trên chip.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: Ưu đãi tuyển sinh đặc quyền (🌙 DARK TECH THEME) */}
-      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>HỌC BỔNG & CHÍNH SÁCH</span>
-            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Ưu đãi tuyển sinh đặc quyền FPT Jetking</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Quỹ học bổng Tài năng Bán dẫn FPT tiếp sức thế hệ kỹ sư vi mạch tương lai của Việt Nam
-            </p>
-          </div>
-          
-          <div className="beau-incentives-grid">
-            <div className="beau-incentive-card" style={{ '--accent': '#f37021' }} data-reveal data-reveal-delay="0.05">
-              <span className="incentive-badge">HỌC BỔNG TÀI NĂNG</span>
-              <h3 className="incentive-value">Lên tới 50%</h3>
-              <p className="incentive-desc">Học bổng Ươm mầm Kỹ sư Bán dẫn tương lai do FPT Semiconductor tài trợ độc quyền.</p>
-            </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#f37021' }} data-reveal data-reveal-delay="0.1">
-              <span className="incentive-badge">NHẬP HỌC SỚM</span>
-              <h3 className="incentive-value">Tặng Laptop / Kit FPGA</h3>
-              <p className="incentive-desc">Ưu đãi tặng ngay Kit thực hành FPGA hoặc hỗ trợ thiết bị học tập cho tân sinh viên hoàn tất thủ tục sớm.</p>
-            </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#f37021' }} data-reveal data-reveal-delay="0.15">
-              <span className="incentive-badge">TRẢ GÓP</span>
-              <h3 className="incentive-value">0% Lãi Suất</h3>
-              <p className="incentive-desc">Hỗ trợ chia nhỏ học phí đóng theo từng tháng qua thẻ tín dụng ngân hàng đối tác.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: Chuyển hướng nhanh ngành học & Tin tức (☀️ LIGHT BRIGHT THEME) */}
-      <section 
-        className="beau-section"
-        style={{ 
-          backgroundColor: '#F8FAFC', 
-          color: '#0f172a',
-          padding: '100px 0 110px 0',
-          borderTop: 'none'
-        }}
-      >
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              KHÁM PHÁ CÁC NGÀNH HỌC KHÁC
-            </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Hệ sinh thái đào tạo FPT
-            </h2>
-          </div>
-          
-          <div className="beau-other-programs-grid">
-            <Link href="/dao-tao/ai-agent" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.05">
-              <div>
-                <span className="other-prog-tag" style={{ color: '#0066b3' }}>✦ JETKING AI AGENT</span>
-                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Chuyên Gia Phát Triển AI Agent</h3>
-                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Làm chủ kỹ nghệ AI thực chiến, Machine Learning, Deep Learning và kiến trúc AI Agents tự động hóa đa tác vụ.
-                </p>
-              </div>
-              <span className="other-prog-link" style={{ color: '#0066b3', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
-                Khám phá AI Agent
-                <ArrowRight size={18} />
+          {/* Active Tab Card Content */}
+          <div style={{ 
+            background: 'linear-gradient(135deg, rgba(13, 33, 55, 0.88) 0%, rgba(22, 43, 74, 0.92) 100%)', 
+            border: '1px solid rgba(243, 112, 33, 0.3)', 
+            borderRadius: '24px', 
+            padding: '44px',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            boxShadow: '0 24px 60px rgba(0, 0, 0, 0.45)',
+            maxWidth: '1100px',
+            margin: '0 auto'
+          }}>
+            <div style={{ marginBottom: '28px' }}>
+              <span style={{ color: '#f37021', fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                {semesters[activeTab].num}
               </span>
-            </Link>
+              <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800, color: '#ffffff', margin: '8px 0 4px', fontFamily: 'var(--font-sans)' }}>
+                {semesters[activeTab].title}
+              </h3>
+              <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: '0.98rem', margin: '0 0 16px' }}>
+                {semesters[activeTab].subtitle}
+              </p>
+              <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
+                {semesters[activeTab].desc}
+              </p>
+            </div>
 
-            <Link href="/dao-tao/aptech/2-nam" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.1">
+            <hr style={{ borderColor: 'rgba(255, 255, 255, 0.1)', margin: '30px 0' }} />
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '36px' }}>
+              {/* Col 1 */}
               <div>
-                <span className="other-prog-tag" style={{ color: '#f37021' }}>◈ APTECH ACCP AI</span>
-                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Software Engineering & AI</h3>
-                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Lập trình viên Quốc tế ACCP AI — Làm chủ ngôn ngữ Java, Python, Web/Mobile Fullstack, Cloud và Vibe Coding.
-                </p>
+                <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                  CÔNG NGHỆ &amp; MÔN HỌC LÕI
+                </h4>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {semesters[activeTab].coreStack.map((item, idx) => (
+                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
+                      <Check size={18} style={{ color: '#f37021', flexShrink: 0, marginTop: '2px' }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <span className="other-prog-link" style={{ color: '#f37021', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
-                Khám phá Lập Trình
-                <ArrowRight size={18} />
-              </span>
-            </Link>
+
+              {/* Col 2 */}
+              <div>
+                <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                  CÔNG CỤ EDA &amp; PHẦN MỀM LAB
+                </h4>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {semesters[activeTab].aiTools.map((item, idx) => (
+                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
+                      <Check size={18} style={{ color: '#f37021', flexShrink: 0, marginTop: '2px' }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Col 3 */}
+              <div>
+                <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                  CƠ HỘI NGHỀ NGHIỆP &amp; ĐỒ ÁN
+                </h4>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {semesters[activeTab].careers.map((item, idx) => (
+                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
+                      <Check size={18} style={{ color: '#f37021', flexShrink: 0, marginTop: '2px' }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 6: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      {/* Section 3: Bottom CTA Section (🌙 DARK CYBER THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Trở thành Kỹ sư Vi mạch Bán dẫn thế hệ mới cùng FPT Jetking</h2>
+          <h2 className="beau-cta-title">Gia nhập ngành Công nghiệp Bán dẫn cùng FPT Jetking</h2>
           <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
-            Nắm bắt cơ hội đón đầu ngành công nghiệp mũi nhọn quốc gia trị giá hàng nghìn tỷ USD.
+            Trở thành kỹ sư vi mạch bán dẫn quốc tế đón đầu làn sóng dịch chuyển công nghệ toàn cầu.
           </p>
           <a href="#dang-ky-chip-design" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)', color: '#ffffff', fontWeight: 800 }}>
-            Đăng Ký Tư Vấn & Nhận Học Bổng
+            Đăng Ký Tư Vấn &amp; Nhận Học Bổng
             <ArrowRight size={22} strokeWidth={2.5} />
           </a>
         </div>
       </section>
 
-      {/* Section 7: Scholarship Application Form (☀️ LIGHT THEME) */}
+      {/* Section 4: Scholarship Application Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-chip-design">
-        <ScholarshipFormSection programName="FPT Jetking Chip Design" />
+        <ScholarshipFormSection programName="FPT Jetking Thiết Kế Vi Mạch Bán Dẫn" />
       </div>
 
       <Footer />

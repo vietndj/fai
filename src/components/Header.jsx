@@ -72,7 +72,7 @@ export default function Header() {
                           <Link href="/dao-tao/aptech/2-nam" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
                           <Link href="/dao-tao/aptech/1-nam" className="megamenu-link">Lập trình Back end 1 năm</Link>
                           <Link href="/dao-tao/aptech/6-thang" className="megamenu-link">Lập trình Front end 6 tháng</Link>
-                          <Link href="/dao-tao/aptech/100-200h" className="megamenu-link">Lập trình ngắn hạn 100-200h</Link>
+                          <Link href="/dao-tao/aptech/100-200h" className="megamenu-link">Bộ khóa học Lập trình ngắn hạn (100 - 200 giờ)</Link>
                         </div>
                         <div className="program-cat brand-arena">
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
@@ -80,14 +80,14 @@ export default function Header() {
                           </div>
                           <Link href="/dao-tao/arena/2-nam" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
                           <Link href="/dao-tao/arena/6-18-thang" className="megamenu-link">Thiết kế 2D, 3D, Game và App (6–18 tháng)</Link>
-                          <Link href="/dao-tao/arena/100h" className="megamenu-link">Các khóa học ngắn hạn (100 giờ)</Link>
+                          <Link href="/dao-tao/arena/100h" className="megamenu-link">Bộ khóa học Multimedia ngắn hạn (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-skillking">
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
                             <Image src="/logo_skillking.png" alt="FPT Skillking" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/skillking/18-thang" className="megamenu-link">Fullstack Digital Marketing With AI (18 tháng)</Link>
-                          <Link href="/dao-tao/skillking/100h" className="megamenu-link">Bộ khóa học Digital Marketing thực chiến (100 giờ)</Link>
+                          <Link href="/dao-tao/skillking/100h" className="megamenu-link">Bộ khóa học Digital Marketing ngắn hạn (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-jetking">
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
