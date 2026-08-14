@@ -6018,19 +6018,34 @@ img {
 }
 
 /* ==========================================================================
-   APTECH STICKY PROGRAM SWITCHER BAR (LARGE & PROMINENT)
+   PROGRAM STICKY SWITCHER BARS (APTECH, ARENA, SKILLKING, JETKING)
    ========================================================================== */
-.aptech-sticky-switcher-bar {
+.aptech-sticky-switcher-bar,
+.arena-sticky-switcher-bar,
+.skillking-sticky-switcher-bar,
+.jetking-sticky-switcher-bar {
   position: sticky;
   top: 126px;
   z-index: 95;
   background: rgba(8, 20, 38, 0.94);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-bottom: 2px solid rgba(243, 112, 33, 0.35);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
   padding: 16px 0;
   transition: all 0.3s ease;
+}
+
+.aptech-sticky-switcher-bar {
+  border-bottom: 2px solid rgba(243, 112, 33, 0.35);
+}
+.arena-sticky-switcher-bar {
+  border-bottom: 2px solid rgba(255, 182, 0, 0.45);
+}
+.skillking-sticky-switcher-bar {
+  border-bottom: 2px solid rgba(2, 132, 199, 0.45);
+}
+.jetking-sticky-switcher-bar {
+  border-bottom: 2px solid rgba(243, 112, 33, 0.35);
 }
 
 .aptech-switcher-inner {
@@ -6089,6 +6104,40 @@ img {
   transform: translateY(-1px);
 }
 
+/* Arena specific switcher active */
+.arena-switcher-btn:hover {
+  background: rgba(255, 182, 0, 0.18);
+  color: #ffffff;
+  border-color: rgba(255, 182, 0, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 182, 0, 0.25);
+}
+
+.arena-switcher-btn.active {
+  background: linear-gradient(135deg, #ffb600 0%, #d97706 100%);
+  color: #000000;
+  border-color: #ffb600;
+  box-shadow: 0 6px 24px rgba(255, 182, 0, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Skillking specific switcher active */
+.skillking-switcher-btn:hover {
+  background: rgba(2, 132, 199, 0.18);
+  color: #ffffff;
+  border-color: rgba(2, 132, 199, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.25);
+}
+
+.skillking-switcher-btn.active {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 6px 24px rgba(2, 132, 199, 0.45);
+  transform: translateY(-1px);
+}
+
 .active-sparkle {
   color: #ffffff;
   animation: spinSlow 6s linear infinite;
@@ -6100,12 +6149,12 @@ img {
 }
 
 @media (max-width: 992px) {
-  .aptech-sticky-switcher-bar {
+  .aptech-sticky-switcher-bar,
+  .arena-sticky-switcher-bar,
+  .skillking-sticky-switcher-bar,
+  .jetking-sticky-switcher-bar {
     top: 72px;
     padding: 12px 0;
-  }
-  .aptech-switcher-label {
-    display: none;
   }
   .aptech-switcher-btn {
     padding: 10px 20px;

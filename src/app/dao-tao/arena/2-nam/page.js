@@ -10,7 +10,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles } from 'lucide-react';
 
-export default function ArenaSubpage() {
+export default function Arena2NamPage() {
   const [activeSection, setActiveSection] = useState(0);
 
   useEffect(() => {
@@ -37,39 +37,39 @@ export default function ArenaSubpage() {
     <div className={`beau-subpage-container theme-arena active-sec-${activeSection}`}>
       <Header />
 
-      {/* Sticky Program Switcher Bar */}
+      {/* Program Switcher Bar Ghim cố định */}
       <ArenaProgramSwitcher activePath="/dao-tao/arena/2-nam" />
 
       {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
       <section className="beau-hero">
         <ParticleCanvas className="beau-hero-particles" />
-        <div className="beau-hero-bg-text">ARENA</div>
+        <div className="beau-hero-bg-text">AMSP 2 NĂM</div>
         <div className="container beau-hero-inner" data-reveal>
           <span className="beau-hero-brand" style={{ backgroundColor: '#ffb600', color: '#000000', fontWeight: 800 }}>
-            FPT ARENA MULTIMEDIA
+            FPT ARENA MULTIMEDIA — AMSP 2 NĂM
           </span>
           <h1 className="beau-hero-title">
-            Mỹ Thuật<br />Đa Phương Tiện
+            Chuyên Gia Mỹ Thuật<br />Đa Phương Tiện Quốc Tế
           </h1>
           <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
             <Image src="/logo_arena.png" alt="FPT Arena Multimedia Logo" width={180} height={42} style={{ objectFit: 'contain', objectPosition: 'left' }} />
           </div>
           <p className="beau-hero-desc">
-            Chương trình đào tạo Mỹ thuật Đa phương tiện chuẩn quốc tế (AMSP) hàng đầu thế giới. Nơi sáng tạo gặp gỡ công nghệ kỹ thuật số. Trang bị toàn diện kỹ năng từ thiết kế đồ họa 2D, giao diện web UI/UX đến làm phim kỹ thuật số, kỹ xảo điện ảnh và hoạt hình 3D đỉnh cao.
+            Chương trình đào tạo Chuyên gia Mỹ thuật Đa phương tiện chuẩn quốc tế (AMSP) 2 năm toàn diện nhất thế giới. Đi từ thiết kế đồ họa 2D, giao diện web UI/UX đến làm phim kỹ thuật số, kỹ xảo điện ảnh CGI và diễn hoạt hoạt hình 3D đỉnh cao.
           </p>
 
           <div className="beau-stats-bar">
             <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>15+ Năm</h3>
-              <p>Khởi nguồn giáo dục mỹ thuật đa phương tiện đầu tiên tại Việt Nam.</p>
+              <h3 style={{ color: '#ffb600' }}>04 Kỳ Học</h3>
+              <p>2 năm hoàn thiện toàn diện bộ kỹ năng sáng tạo số từ 2D đến 3D.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>AMSP</h3>
-              <p>Hệ thống chứng chỉ danh tiếng quốc tế do tập đoàn Aptech Ấn Độ cấp.</p>
+              <h3 style={{ color: '#ffb600' }}>AMSP AD</h3>
+              <p>Bằng Advanced Diploma quốc tế danh giá do Aptech Ấn Độ cấp.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>20+</h3>
-              <p>Quốc gia sở hữu mạng lưới trung tâm liên kết Arena toàn cầu.</p>
+              <h3 style={{ color: '#ffb600' }}>100% Đồ Án</h3>
+              <p>4 kỳ sở hữu 4 bộ Portfolio và đồ án phim/game thực chiến ấn tượng.</p>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export default function ArenaSubpage() {
           <div className="beau-hero-banner">
             <Image
               src="/banner_arena_sub_v2.png"
-              alt="Tuyển sinh Arena Multimedia"
+              alt="Tuyển sinh Arena Multimedia 2 năm"
               width={1200}
               height={400}
               priority
@@ -86,7 +86,7 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 1: Lộ Trình Đào Tạo (☀️ LIGHT BRIGHT THEME) */}
+      {/* Section 1: Lộ Trình Đào Tạo 4 học kỳ (☀️ LIGHT BRIGHT THEME) */}
       <section 
         className="beau-section"
         style={{ 
@@ -102,7 +102,7 @@ export default function ArenaSubpage() {
               LỘ TRÌNH ĐÀO TẠO
             </span>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              4 học kỳ chuyên sâu chuẩn quốc tế
+              4 học kỳ chuyên sâu chuẩn AMSP quốc tế
             </h2>
             <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
               Giáo trình cập nhật liên tục các xu hướng sáng tạo mới nhất: UI/UX di động, kỹ xảo CGI điện ảnh, diễn hoạt hoạt hình 3D và môi trường thiết kế game chuẩn Unreal.
@@ -129,9 +129,9 @@ export default function ArenaSubpage() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Nguyên lý thiết kế & Bố cục thị giác</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Xử lý ảnh kỹ thuật số với Photoshop</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế minh họa với Illustrator</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Dàn trang chuyên nghiệp với InDesign</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Nhận diện Thương hiệu e-Project</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế minh họa với Illustrator</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Dàn trang chuyên nghiệp với InDesign</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Nhận diện Thương hiệu e-Project</li>
                 </ul>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function ArenaSubpage() {
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế giao diện UI trên Figma</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Lập trình Front-end với HTML5 & CSS3</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế Website responsive với Bootstrap</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Thiết kế Web & App e-Project</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Thiết kế Web & App e-Project</li>
                 </ul>
               </div>
             </div>
@@ -179,9 +179,9 @@ export default function ArenaSubpage() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Kỹ thuật quay phim & Kịch bản phân cảnh</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Biên tập video với Adobe Premiere Pro</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Kỹ xảo CGI với After Effects</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế Game 3D & Sáng tạo thế giới</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Phim ngắn kỹ thuật số e-Project</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Kỹ xảo CGI với After Effects</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế Game 3D & Sáng tạo thế giới</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Phim ngắn kỹ thuật số e-Project</li>
                 </ul>
               </div>
             </div>
@@ -278,7 +278,7 @@ export default function ArenaSubpage() {
               CAREERS
             </span>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Vị trí việc làm hậu tốt nghiệp
+              Vị trí việc làm sau khi tốt nghiệp
             </h2>
             <p style={{ color: '#64748b', maxWidth: '650px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
               Mở rộng cánh cửa vào các Agency, Production House, Studio Game và Tập đoàn công nghệ hàng đầu
@@ -345,59 +345,7 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 5: Chuyển hướng nhanh ngành học & Tin tức (☀️ LIGHT BRIGHT THEME) */}
-      <section 
-        className="beau-section"
-        style={{ 
-          backgroundColor: '#F8FAFC', 
-          color: '#0f172a',
-          padding: '100px 0 110px 0',
-          borderTop: 'none'
-        }}
-      >
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span style={{ color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              KHÁM PHÁ CÁC NGÀNH HỌC KHÁC
-            </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Hệ sinh thái đào tạo FPT
-            </h2>
-          </div>
-          
-          <div className="beau-other-programs-grid">
-            <Link href="/dao-tao/aptech/2-nam" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.05">
-              <div>
-                <span className="other-prog-tag" style={{ color: '#f37021' }}>✦ APTECH</span>
-                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Software Engineering & AI</h3>
-                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Lập trình viên Quốc tế ACCP AI — Làm chủ ngôn ngữ Java, Python, Fullstack Web/Mobile, Điện toán đám mây và Vibe Coding.
-                </p>
-              </div>
-              <span className="other-prog-link" style={{ color: '#f37021', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
-                Khám phá Công Nghệ
-                <ArrowRight size={18} />
-              </span>
-            </Link>
-
-            <Link href="/dao-tao/skillking" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.1">
-              <div>
-                <span className="other-prog-tag" style={{ color: '#09529c' }}>◈ SKILLKING</span>
-                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Digital Marketing & Growth</h3>
-                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Chiến lược tiếp thị số thực chiến 100% — Tối ưu SEO, Google/Meta Ads, Data Analytics và quản trị chiến dịch tổng thể.
-                </p>
-              </div>
-              <span className="other-prog-link" style={{ color: '#09529c', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
-                Khám phá Tiếp Thị Số
-                <ArrowRight size={18} />
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 6: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      {/* Section 5: Bottom CTA Section (🌙 DARK CYBER THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
@@ -405,16 +353,16 @@ export default function ArenaSubpage() {
           <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
             Nắm bắt cơ hội trở thành nhà sáng tạo nghệ thuật đa phương tiện chuyên nghiệp ngay hôm nay.
           </p>
-          <a href="#dang-ky-arena" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #ffb600 0%, #d97706 100%)', color: '#000000', fontWeight: 800 }}>
+          <a href="#dang-ky-arena-2nam" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #ffb600 0%, #d97706 100%)', color: '#000000', fontWeight: 800 }}>
             Đăng Ký Tư Vấn & Nhận Học Bổng
             <ArrowRight size={22} strokeWidth={2.5} />
           </a>
         </div>
       </section>
 
-      {/* Section 7: Scholarship Application Form (☀️ LIGHT THEME) */}
-      <div id="dang-ky-arena">
-        <ScholarshipFormSection programName="FPT Arena Multimedia" />
+      {/* Section 6: Scholarship Application Form (☀️ LIGHT THEME) */}
+      <div id="dang-ky-arena-2nam">
+        <ScholarshipFormSection programName="FPT Arena Multimedia 2 Năm" />
       </div>
 
       <Footer />

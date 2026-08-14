@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
+import SkillkingProgramSwitcher from '@/components/SkillkingProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -35,6 +36,9 @@ export default function SkillkingSubpage() {
   return (
     <div className={`beau-subpage-container theme-skillking active-sec-${activeSection}`}>
       <Header />
+
+      {/* Sticky Program Switcher Bar */}
+      <SkillkingProgramSwitcher activePath="/dao-tao/skillking/18-thang" />
 
       {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
       <section className="beau-hero">
