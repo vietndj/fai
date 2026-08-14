@@ -6036,30 +6036,16 @@ img {
 .aptech-switcher-inner {
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.aptech-switcher-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #f37021;
-  font-size: 0.95rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.aptech-switcher-icon {
-  color: #f37021;
+  justify-content: center;
+  width: 100%;
 }
 
 .aptech-switcher-nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
   overflow-x: auto;
   padding: 4px 2px;
   scrollbar-width: none; /* Firefox */

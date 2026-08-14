@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Layers, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function AptechProgramSwitcher({ activePath }) {
   const programs = [
@@ -15,10 +15,6 @@ export default function AptechProgramSwitcher({ activePath }) {
     <div className="aptech-sticky-switcher-bar">
       <div className="container">
         <div className="aptech-switcher-inner">
-          <div className="aptech-switcher-label">
-            <Layers size={22} className="aptech-switcher-icon" />
-            <span>Chương trình Aptech:</span>
-          </div>
           <div className="aptech-switcher-nav">
             {programs.map((item, idx) => {
               const isActive = activePath === item.path;
