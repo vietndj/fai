@@ -6,30 +6,17 @@ import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import TechCTAButton from '@/components/TechCTAButton';
-import Link from 'next/link';
+import AptechProgramSwitcher from '@/components/AptechProgramSwitcher';
 import Image from 'next/image';
 import { 
-  ArrowRight, 
   Check, 
-  BookOpen, 
   Clock, 
-  Trophy, 
   Briefcase, 
-  Sparkles, 
-  Code, 
-  Cpu, 
-  Layers, 
-  Globe, 
-  Zap, 
-  Terminal,
   ShieldCheck,
   BrainCircuit,
-  Wrench,
+  Layers,
   FolderGit2,
   Award,
-  GraduationCap,
-  Users,
-  CheckCircle2,
   Compass
 } from 'lucide-react';
 
@@ -56,13 +43,6 @@ export default function ShortCourses100200hPage() {
     sections.forEach(sec => observer.observe(sec));
     return () => observer.disconnect();
   }, []);
-
-  const programTabs = [
-    { label: 'Lập trình Fullstack 2 năm', href: '/dao-tao/aptech/2-nam', active: false },
-    { label: 'Lập trình Back end 1 năm', href: '/dao-tao/aptech/1-nam', active: false },
-    { label: 'Lập trình Front end 6 tháng', href: '/dao-tao/aptech/6-thang', active: false },
-    { label: 'Lập trình ngắn hạn 100-200h', href: '/dao-tao/aptech/100-200h', active: true },
-  ];
 
   const courses = [
     {
@@ -340,39 +320,11 @@ export default function ShortCourses100200hPage() {
     <div className={`beau-subpage-container theme-aptech active-sec-${activeSection}`}>
       <Header />
 
-      {/* Program Switcher Bar */}
-      <div style={{ background: '#0a192f', borderBottom: '1px solid rgba(243, 112, 33, 0.2)', paddingTop: '100px', paddingBottom: '16px' }}>
-        <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', overflowX: 'auto', paddingBottom: '4px' }}>
-            <span style={{ fontSize: '0.82rem', fontWeight: 800, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', marginRight: '8px', flexShrink: 0 }}>
-              Chương trình:
-            </span>
-            {programTabs.map((tab, idx) => (
-              <Link
-                key={idx}
-                href={tab.href}
-                style={{
-                  padding: '8px 18px',
-                  borderRadius: '30px',
-                  fontSize: '0.88rem',
-                  fontWeight: tab.active ? 800 : 600,
-                  whiteSpace: 'nowrap',
-                  textDecoration: 'none',
-                  transition: 'all 0.25s ease',
-                  background: tab.active ? '#f37021' : 'rgba(255,255,255,0.06)',
-                  color: tab.active ? '#ffffff' : 'rgba(255,255,255,0.75)',
-                  border: tab.active ? '1px solid #f37021' : '1px solid rgba(255,255,255,0.1)'
-                }}
-              >
-                {tab.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Sticky Program Switcher Bar */}
+      <AptechProgramSwitcher activePath="/dao-tao/aptech/100-200h" />
 
-      {/* Section 0: Hero Section */}
-      <section className="beau-hero" style={{ paddingBottom: '60px', paddingTop: '40px' }}>
+      {/* Section 0: Hero Section (🌙 DARK TECH THEME) */}
+      <section className="beau-hero" style={{ paddingBottom: '70px', paddingTop: '50px' }}>
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">SHORT COURSES</div>
         <div className="container beau-hero-inner" data-reveal>
@@ -443,8 +395,8 @@ export default function ShortCourses100200hPage() {
         </div>
       </section>
 
-      {/* Section 1: 3 KHÓA HỌC CHUYÊN ĐỀ (Interactive Selection Tabs & Detailed Tables) */}
-      <section className="beau-section" style={{ paddingTop: '20px' }}>
+      {/* Section 1: 3 KHÓA HỌC CHUYÊN ĐỀ (🌙 DARK TECH TABLE THEME) */}
+      <section className="beau-section" style={{ padding: '90px 0 110px 0' }}>
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>DANH MỤC 3 KHÓA HỌC CHUYÊN ĐỀ</span>
@@ -689,34 +641,46 @@ export default function ShortCourses100200hPage() {
         </div>
       </section>
 
-      {/* Section 2: TẠI SAO CHỌN KHÓA HỌC NGẮN HẠN TẠI FPT APTECH? (USP) */}
-      <section className="beau-section">
+      {/* Section 2: TẠI SAO CHỌN KHÓA HỌC NGẮN HẠN TẠI FPT APTECH? (☀️ LIGHT WARM CREAM THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#FAF7F2', 
+          color: '#0f172a',
+          padding: '100px 0 120px 0' 
+        }}
+      >
         <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>ĐẶC QUYỀN ĐÀO TẠO</span>
-            <h2 className="beau-section-title">Tại sao nên chọn khóa học ngắn hạn tại FPT Aptech?</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.8)', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              ĐẶC QUYỀN ĐÀO TẠO
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Tại sao nên chọn khóa học ngắn hạn tại FPT Aptech?
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
               FPT Aptech mang đến môi trường học tập chuẩn Quốc Tế với giáo trình luôn cập nhật. Chúng tôi cam kết kết nối trực tiếp sinh viên với hệ sinh thái công nghệ FPT cùng hàng trăm doanh nghiệp công nghệ hàng đầu.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
             {whyChooseUs.map((item, idx) => (
               <div 
                 key={idx} 
                 style={{ 
-                  background: 'rgba(255, 255, 255, 0.03)', 
-                  border: '1px solid rgba(255, 255, 255, 0.08)', 
+                  background: '#ffffff', 
+                  border: '1px solid rgba(0, 0, 0, 0.06)', 
                   borderRadius: '20px', 
-                  padding: '30px',
+                  padding: '36px 30px',
+                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
                   transition: 'all 0.3s ease'
                 }}
               >
-                <div style={{ marginBottom: '16px' }}>{item.icon}</div>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '10px' }}>
+                <div style={{ marginBottom: '18px' }}>{item.icon}</div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
                   {item.title}
                 </h3>
-                <p style={{ color: 'rgba(255, 255, 255, 0.75)', fontSize: '0.95rem', lineHeight: '1.65', margin: 0 }}>
+                <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
                   {item.desc}
                 </p>
               </div>
@@ -725,7 +689,7 @@ export default function ShortCourses100200hPage() {
         </div>
       </section>
 
-      {/* Section 3: Bottom CTA Section */}
+      {/* Section 3: Bottom CTA Section (🌙 DARK TECH THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
@@ -737,7 +701,7 @@ export default function ShortCourses100200hPage() {
         </div>
       </section>
 
-      {/* Section 4: Form nhận thông tin học bổng & Google Sheet */}
+      {/* Section 4: Form nhận thông tin học bổng & Google Sheet (☀️ LIGHT THEME) */}
       <ScholarshipFormSection 
         programName="FPT Aptech - Khóa Ngắn Hạn 100-200h" 
         googleSheetScriptUrl="https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec"

@@ -6,32 +6,20 @@ import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import TechCTAButton from '@/components/TechCTAButton';
-import Link from 'next/link';
+import AptechProgramSwitcher from '@/components/AptechProgramSwitcher';
 import Image from 'next/image';
 import { 
-  ArrowRight, 
   Check, 
   BookOpen, 
   Clock, 
   Trophy, 
   Briefcase, 
-  Sparkles, 
-  Code, 
-  Cpu, 
-  Layers, 
-  Globe, 
-  Zap, 
-  Terminal,
   ShieldCheck,
   BrainCircuit,
-  Wrench,
-  FolderGit2,
   Layout,
-  Palette,
-  MonitorSmartphone,
+  Globe,
+  FolderGit2,
   Award,
-  GraduationCap,
-  FileCode2,
   CheckCircle2
 } from 'lucide-react';
 
@@ -57,13 +45,6 @@ export default function Frontend6ThangPage() {
     sections.forEach(sec => observer.observe(sec));
     return () => observer.disconnect();
   }, []);
-
-  const programTabs = [
-    { label: 'Lập trình Fullstack 2 năm', href: '/dao-tao/aptech/2-nam', active: false },
-    { label: 'Lập trình Back end 1 năm', href: '/dao-tao/aptech/1-nam', active: false },
-    { label: 'Lập trình Front end 6 tháng', href: '/dao-tao/aptech/6-thang', active: true },
-    { label: 'Lập trình ngắn hạn 100-200h', href: '/dao-tao/aptech/100-200h', active: false },
-  ];
 
   const subjects = [
     {
@@ -192,39 +173,11 @@ export default function Frontend6ThangPage() {
     <div className={`beau-subpage-container theme-aptech active-sec-${activeSection}`}>
       <Header />
 
-      {/* Program Switcher Bar */}
-      <div style={{ background: '#0a192f', borderBottom: '1px solid rgba(243, 112, 33, 0.2)', paddingTop: '100px', paddingBottom: '16px' }}>
-        <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', overflowX: 'auto', paddingBottom: '4px' }}>
-            <span style={{ fontSize: '0.82rem', fontWeight: 800, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', marginRight: '8px', flexShrink: 0 }}>
-              Chương trình:
-            </span>
-            {programTabs.map((tab, idx) => (
-              <Link
-                key={idx}
-                href={tab.href}
-                style={{
-                  padding: '8px 18px',
-                  borderRadius: '30px',
-                  fontSize: '0.88rem',
-                  fontWeight: tab.active ? 800 : 600,
-                  whiteSpace: 'nowrap',
-                  textDecoration: 'none',
-                  transition: 'all 0.25s ease',
-                  background: tab.active ? '#f37021' : 'rgba(255,255,255,0.06)',
-                  color: tab.active ? '#ffffff' : 'rgba(255,255,255,0.75)',
-                  border: tab.active ? '1px solid #f37021' : '1px solid rgba(255,255,255,0.1)'
-                }}
-              >
-                {tab.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Sticky Program Switcher Bar */}
+      <AptechProgramSwitcher activePath="/dao-tao/aptech/6-thang" />
 
-      {/* Section 0: Hero Section */}
-      <section className="beau-hero" style={{ paddingBottom: '60px', paddingTop: '40px' }}>
+      {/* Section 0: Hero Section (🌙 DARK TECH THEME) */}
+      <section className="beau-hero" style={{ paddingBottom: '70px', paddingTop: '50px' }}>
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">FRONTEND DEV</div>
         <div className="container beau-hero-inner" data-reveal>
@@ -297,51 +250,62 @@ export default function Frontend6ThangPage() {
         </div>
       </section>
 
-      {/* Section 1: LỘ TRÌNH ĐÀO TẠO TỔNG QUAN (Stats Bar) */}
-      <section className="beau-section">
+      {/* Section 1: LỘ TRÌNH ĐÀO TẠO TỔNG QUAN (☀️ LIGHT WARM CREAM THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#FAF7F2', 
+          color: '#0f172a',
+          padding: '100px 0 110px 0' 
+        }}
+      >
         <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>HÀNH TRÌNH TỔNG QUAN</span>
-            <h2 className="beau-section-title">Lộ trình đào tạo tổng quan</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '12px auto 0', fontSize: '1rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              HÀNH TRÌNH TỔNG QUAN
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Lộ trình đào tạo tổng quan 6 tháng
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '650px', margin: '14px auto 0', fontSize: '1.05rem' }}>
               Một hành trình tinh gọn, tập trung cao độ trong vòng 6 tháng tại FPT Aptech
             </p>
           </div>
 
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', 
-            gap: '20px' 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', 
+            gap: '24px' 
           }}>
-            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(243, 112, 33, 0.2)', borderRadius: '16px', padding: '24px', textAlign: 'center' }}>
-              <BookOpen size={32} style={{ color: '#f37021', marginBottom: '12px' }} />
-              <h3 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', margin: 0 }}>10</h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginTop: '6px', margin: 0 }}>Môn học chuẩn quốc tế</p>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', transition: 'all 0.3s ease' }}>
+              <BookOpen size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>10</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học chuẩn quốc tế</p>
             </div>
 
-            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(243, 112, 33, 0.2)', borderRadius: '16px', padding: '24px', textAlign: 'center' }}>
-              <Clock size={32} style={{ color: '#f37021', marginBottom: '12px' }} />
-              <h3 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', margin: 0 }}>01</h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginTop: '6px', margin: 0 }}>Học kỳ tập trung (6 tháng)</p>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', transition: 'all 0.3s ease' }}>
+              <Clock size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ tập trung (6 tháng)</p>
             </div>
 
-            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(243, 112, 33, 0.2)', borderRadius: '16px', padding: '24px', textAlign: 'center' }}>
-              <Trophy size={32} style={{ color: '#f37021', marginBottom: '12px' }} />
-              <h3 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', margin: 0 }}>01</h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginTop: '6px', margin: 0 }}>Đồ án thực tế (eProject)</p>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', transition: 'all 0.3s ease' }}>
+              <Trophy size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Đồ án thực tế (eProject)</p>
             </div>
 
-            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(243, 112, 33, 0.2)', borderRadius: '16px', padding: '24px', textAlign: 'center' }}>
-              <Briefcase size={32} style={{ color: '#f37021', marginBottom: '12px' }} />
-              <h3 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', margin: 0 }}>1</h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginTop: '6px', margin: 0 }}>Portfolio Web chuyên nghiệp</p>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', transition: 'all 0.3s ease' }}>
+              <Briefcase size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Portfolio Web chuyên nghiệp</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: NỘI DUNG ĐÀO TẠO (Chi tiết các môn học) */}
-      <section className="beau-section">
+      {/* Section 2: NỘI DUNG ĐÀO TẠO (🌙 DARK CYBER TECH THEME) */}
+      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>NỘI DUNG ĐÀO TẠO</span>
@@ -398,15 +362,23 @@ export default function Frontend6ThangPage() {
         </div>
       </section>
 
-      {/* Section 3: CHỨNG CHỈ QUỐC TẾ (CPISM & ADSE) */}
-      <section className="beau-section" style={{ paddingTop: '20px' }}>
+      {/* Section 3: CHỨNG CHỈ QUỐC TẾ CPISM (☀️ LIGHT WARM CREAM THEME) */}
+      <section 
+        className="beau-section" 
+        style={{ 
+          backgroundColor: '#FAF7F2', 
+          color: '#0f172a',
+          padding: '90px 0 100px 0' 
+        }}
+      >
         <div className="container" data-reveal>
           <div style={{
-            background: 'linear-gradient(135deg, rgba(243, 112, 33, 0.12) 0%, rgba(13, 33, 55, 0.9) 60%, rgba(22, 43, 74, 0.95) 100%)',
-            border: '1px solid rgba(243, 112, 33, 0.35)',
+            background: '#ffffff',
+            border: '1px solid rgba(243, 112, 33, 0.25)',
+            borderLeft: '6px solid #f37021',
             borderRadius: '24px',
             padding: '48px 50px',
-            boxShadow: '0 20px 50px rgba(0, 0, 0, 0.35)',
+            boxShadow: '0 15px 40px rgba(0, 0, 0, 0.03)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -414,22 +386,22 @@ export default function Frontend6ThangPage() {
             flexWrap: 'wrap'
           }}>
             <div style={{ flex: '1 1 500px' }}>
-              <span style={{ fontSize: '0.85rem', color: '#f37021', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+              <span style={{ fontSize: '0.85rem', color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                 BẰNG CẤP &amp; CHỨNG CHỈ QUỐC TẾ
               </span>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', fontWeight: 800, color: '#ffffff', margin: '10px 0 16px', lineHeight: 1.25 }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', fontWeight: 800, color: 'var(--secondary)', margin: '10px 0 16px', lineHeight: 1.25, fontFamily: 'var(--font-sans)' }}>
                 Chứng chỉ sau khi hoàn thành khóa học Lập trình Frontend
               </h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginTop: '16px' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                   <CheckCircle2 size={22} style={{ color: '#f37021', flexShrink: 0, marginTop: '2px' }} />
-                  <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: '1.08rem', lineHeight: '1.7', margin: 0 }}>
+                  <p style={{ color: '#334155', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
                     <strong>CPISM (Certificate of Proficiency in System Management)</strong> do <strong>Tập đoàn Aptech Ấn Độ</strong> cấp bằng.
                   </p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                   <CheckCircle2 size={22} style={{ color: '#f37021', flexShrink: 0, marginTop: '2px' }} />
-                  <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: '1.08rem', lineHeight: '1.7', margin: 0 }}>
+                  <p style={{ color: '#334155', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
                     Với chứng chỉ này, sinh viên có thể học nâng cấp thêm <strong>1,5 năm</strong> để lấy bằng <strong>Advanced Diploma In Software Engineering (ADSE)</strong> do Tập đoàn Aptech Ấn Độ cấp.
                   </p>
                 </div>
@@ -437,24 +409,24 @@ export default function Frontend6ThangPage() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
               <div style={{ 
-                background: 'rgba(243, 112, 33, 0.15)', 
+                background: 'rgba(243, 112, 33, 0.08)', 
                 border: '2px solid #f37021', 
                 borderRadius: '20px', 
-                padding: '24px 32px', 
+                padding: '24px 36px', 
                 textAlign: 'center',
-                boxShadow: '0 10px 30px rgba(243, 112, 33, 0.25)'
+                boxShadow: '0 10px 30px rgba(243, 112, 33, 0.15)'
               }}>
                 <Award size={48} style={{ color: '#f37021', marginBottom: '8px' }} />
-                <h4 style={{ color: '#ffffff', fontSize: '1.4rem', fontWeight: 900, margin: 0 }}>CPISM</h4>
-                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.82rem', margin: '4px 0 0', textTransform: 'uppercase' }}>Aptech Worldwide</p>
+                <h4 style={{ color: 'var(--secondary)', fontSize: '1.5rem', fontWeight: 900, margin: 0 }}>CPISM</h4>
+                <p style={{ color: '#64748b', fontSize: '0.84rem', margin: '4px 0 0', textTransform: 'uppercase', fontWeight: 700 }}>Aptech Worldwide</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4: CÁC CÔNG VIỆC CÓ THỂ ĐẢM NHẬN */}
-      <section className="beau-section">
+      {/* Section 4: CÁC CÔNG VIỆC CÓ THỂ ĐẢM NHẬN (🌙 DARK THEME) */}
+      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
             <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>CƠ HỘI NGHỀ NGHIỆP</span>
@@ -496,34 +468,46 @@ export default function Frontend6ThangPage() {
         </div>
       </section>
 
-      {/* Section 5: TẠI SAO NÊN CHỌN FPT APTECH? (USP) */}
-      <section className="beau-section">
+      {/* Section 5: TẠI SAO NÊN CHỌN FPT APTECH? (☀️ LIGHT WARM CREAM THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#FAF7F2', 
+          color: '#0f172a',
+          padding: '100px 0 120px 0' 
+        }}
+      >
         <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>ĐẶC QUYỀN ĐÀO TẠO</span>
-            <h2 className="beau-section-title">Tại sao học lập trình nên chọn FPT Aptech?</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.8)', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              ĐẶC QUYỀN ĐÀO TẠO
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Tại sao học lập trình nên chọn FPT Aptech?
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
               FPT Aptech mang đến môi trường học tập chuẩn Quốc Tế với giáo trình luôn cập nhật. Chúng tôi cam kết giới thiệu việc làm và kết nối trực tiếp sinh viên với hệ sinh thái công nghệ FPT cùng hàng trăm doanh nghiệp công nghệ hàng đầu.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
             {whyChooseUs.map((item, idx) => (
               <div 
                 key={idx} 
                 style={{ 
-                  background: 'rgba(255, 255, 255, 0.03)', 
-                  border: '1px solid rgba(255, 255, 255, 0.08)', 
+                  background: '#ffffff', 
+                  border: '1px solid rgba(0, 0, 0, 0.06)', 
                   borderRadius: '20px', 
-                  padding: '30px',
+                  padding: '36px 30px',
+                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
                   transition: 'all 0.3s ease'
                 }}
               >
-                <div style={{ marginBottom: '16px' }}>{item.icon}</div>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '10px' }}>
+                <div style={{ marginBottom: '18px' }}>{item.icon}</div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
                   {item.title}
                 </h3>
-                <p style={{ color: 'rgba(255, 255, 255, 0.75)', fontSize: '0.95rem', lineHeight: '1.65', margin: 0 }}>
+                <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
                   {item.desc}
                 </p>
               </div>
@@ -532,7 +516,7 @@ export default function Frontend6ThangPage() {
         </div>
       </section>
 
-      {/* Section 6: Bottom CTA Section */}
+      {/* Section 6: Bottom CTA Section (🌙 DARK TECH THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
@@ -544,7 +528,7 @@ export default function Frontend6ThangPage() {
         </div>
       </section>
 
-      {/* Section 7: Form nhận thông tin học bổng & Google Sheet */}
+      {/* Section 7: Form nhận thông tin học bổng & Google Sheet (☀️ LIGHT THEME) */}
       <ScholarshipFormSection 
         programName="FPT Aptech - Frontend 6 Tháng" 
         googleSheetScriptUrl="https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec"
