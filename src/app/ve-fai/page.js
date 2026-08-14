@@ -357,36 +357,36 @@ export default function VeFai() {
           </div>
         </section>
 
-        {/* SECTION 3: Sứ Mệnh & Tầm Nhìn của Tổ chức giáo dục FPT - Light Cream Background */}
+        {/* SECTION 3: Sứ Mệnh, Tầm Nhìn & Văn Hoá - Light Airy Luxury Theme */}
         <section 
           className="about-values-section" 
           style={{ 
-            padding: '100px 0 110px 0', 
-            backgroundColor: '#F8F5F0', 
-            color: '#1a2332',
+            padding: '120px 0 130px 0', 
+            backgroundColor: '#FAF7F2', 
+            color: '#0f172a',
             position: 'relative'
           }}
         >
           <div className="container">
-            {/* Section Header */}
-            <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 50px auto' }}>
-              <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+            {/* Main Section Header */}
+            <div style={{ textAlign: 'center', maxWidth: '860px', margin: '0 auto 64px auto' }}>
+              <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.14em' }}>
                 TỔ CHỨC GIÁO DỤC FPT
               </span>
-              <h2 style={{ fontSize: 'clamp(1.9rem, 3.5vw, 2.7rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
-                <ScrollTypewriter text="Sứ Mệnh & Tầm Nhìn của Tổ chức giáo dục FPT" speed={12} />
+              <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.9rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+                <ScrollTypewriter text="Sứ Mệnh & Tầm Nhìn Chiến Lược" speed={12} />
               </h2>
-              <p style={{ color: 'var(--text-muted)', fontSize: '1.02rem', lineHeight: '1.75', marginTop: '16px' }}>
+              <p style={{ color: '#64748b', fontSize: '1.08rem', lineHeight: '1.8', marginTop: '18px' }}>
                 Kim chỉ nam định hình chất lượng đào tạo, nuôi dưỡng khát vọng vươn tầm thế giới và phát triển bền vững cùng cộng đồng.
               </p>
             </div>
 
-            {/* 3 Pillars Grid */}
+            {/* 3 Top Pillars Grid: Sứ mệnh, Triết lí, Văn hoá */}
             <div 
               style={{ 
                 display: 'grid', 
                 gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-                gap: '28px',
+                gap: '32px',
                 alignItems: 'stretch'
               }}
             >
@@ -395,28 +395,28 @@ export default function VeFai() {
                 className="value-card-wrapper" 
                 style={{ 
                   backgroundColor: '#ffffff', 
-                  border: '1px solid rgba(232, 116, 30, 0.15)', 
-                  borderRadius: '20px', 
-                  padding: '36px 30px', 
-                  boxShadow: '0 12px 35px rgba(0,0,0,0.03)', 
+                  border: '1px solid rgba(0, 0, 0, 0.06)', 
+                  borderRadius: '24px', 
+                  padding: '44px 36px', 
+                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)', 
                   transition: 'all 0.3s ease',
                   display: 'flex',
                   flexDirection: 'column'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
-                  <div style={{ width: '50px', height: '50px', borderRadius: '14px', backgroundColor: 'rgba(232, 116, 30, 0.1)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Target size={26} />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '28px' }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '16px', backgroundColor: 'rgba(232, 116, 30, 0.1)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Target size={28} />
                   </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--primary)', backgroundColor: 'rgba(232, 116, 30, 0.08)', padding: '5px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--primary)', backgroundColor: 'rgba(232, 116, 30, 0.08)', padding: '6px 14px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     Sứ mệnh
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '16px', fontFamily: 'var(--font-sans)' }}>
                   Sứ mệnh FPT Education
                 </h3>
-                <p style={{ fontSize: '1.02rem', color: '#334155', lineHeight: '1.75', margin: 0, fontWeight: 500 }}>
+                <p style={{ fontSize: '1.05rem', color: '#334155', lineHeight: '1.8', margin: 0, fontWeight: 500 }}>
                   “Cung cấp năng lực cạnh tranh toàn cầu cho đông đảo người học, góp phần mở mang bờ cõi trí tuệ đất nước.”
                 </p>
               </div>
@@ -426,28 +426,28 @@ export default function VeFai() {
                 className="value-card-wrapper" 
                 style={{ 
                   backgroundColor: '#ffffff', 
-                  border: '1px solid rgba(201, 151, 44, 0.2)', 
-                  borderRadius: '20px', 
-                  padding: '36px 30px', 
-                  boxShadow: '0 12px 35px rgba(0,0,0,0.03)', 
+                  border: '1px solid rgba(0, 0, 0, 0.06)', 
+                  borderRadius: '24px', 
+                  padding: '44px 36px', 
+                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)', 
                   transition: 'all 0.3s ease',
                   display: 'flex',
                   flexDirection: 'column'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
-                  <div style={{ width: '50px', height: '50px', borderRadius: '14px', backgroundColor: 'rgba(201, 151, 44, 0.1)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <GraduationCap size={26} />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '28px' }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '16px', backgroundColor: 'rgba(201, 151, 44, 0.1)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <GraduationCap size={28} />
                   </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--accent)', backgroundColor: 'rgba(201, 151, 44, 0.08)', padding: '5px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--accent)', backgroundColor: 'rgba(201, 151, 44, 0.08)', padding: '6px 14px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     Triết lí giáo dục
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '16px', fontFamily: 'var(--font-sans)' }}>
                   Triết lí giáo dục
                 </h3>
-                <p style={{ fontSize: '1.02rem', color: '#334155', lineHeight: '1.75', margin: 0, fontWeight: 500 }}>
+                <p style={{ fontSize: '1.05rem', color: '#334155', lineHeight: '1.8', margin: 0, fontWeight: 500 }}>
                   “Giáo dục đào tạo là tổ chức và quản trị việc tự học của người học.”
                 </p>
               </div>
@@ -457,38 +457,38 @@ export default function VeFai() {
                 className="value-card-wrapper" 
                 style={{ 
                   backgroundColor: '#ffffff', 
-                  border: '1px solid rgba(22, 163, 74, 0.2)', 
-                  borderRadius: '20px', 
-                  padding: '36px 30px', 
-                  boxShadow: '0 12px 35px rgba(0,0,0,0.03)', 
+                  border: '1px solid rgba(0, 0, 0, 0.06)', 
+                  borderRadius: '24px', 
+                  padding: '44px 36px', 
+                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)', 
                   transition: 'all 0.3s ease',
                   display: 'flex',
                   flexDirection: 'column'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
-                  <div style={{ width: '50px', height: '50px', borderRadius: '14px', backgroundColor: 'rgba(22, 163, 74, 0.1)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Sparkles size={26} />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '28px' }}>
+                  <div style={{ width: '54px', height: '54px', borderRadius: '16px', backgroundColor: 'rgba(22, 163, 74, 0.1)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Sparkles size={28} />
                   </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#16a34a', backgroundColor: 'rgba(22, 163, 74, 0.08)', padding: '5px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#16a34a', backgroundColor: 'rgba(22, 163, 74, 0.08)', padding: '6px 14px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     Văn hoá FPT
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '16px', fontFamily: 'var(--font-sans)' }}>
                   Văn hoá
                 </h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <li style={{ fontSize: '0.94rem', color: '#334155', lineHeight: '1.55', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0 }}>•</span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                  <li style={{ fontSize: '0.96rem', color: '#334155', lineHeight: '1.6', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
                     <span><strong>Tôn đồng đổi chí gương sáng:</strong> (Tôn trọng, Đồng đội, Đổi mới, Chí công, Gương mẫu, Sáng tạo)</span>
                   </li>
-                  <li style={{ fontSize: '0.94rem', color: '#334155', lineHeight: '1.55', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0 }}>•</span>
+                  <li style={{ fontSize: '0.96rem', color: '#334155', lineHeight: '1.6', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
                     <span><strong>Học thật, thi thật, thành công thật</strong></span>
                   </li>
-                  <li style={{ fontSize: '0.94rem', color: '#334155', lineHeight: '1.55', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0 }}>•</span>
+                  <li style={{ fontSize: '0.96rem', color: '#334155', lineHeight: '1.6', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
                     <span><strong>Làm khác để làm tốt</strong></span>
                   </li>
                 </ul>
@@ -496,47 +496,62 @@ export default function VeFai() {
 
             </div>
 
-            {/* SUB-SECTION: Tầm Nhìn & Mô hình I - G - S - M */}
+            {/* SUB-SECTION: Tầm Nhìn & Mô hình I - G - S - M (Clean Light Editorial Design) */}
             <div 
               style={{ 
-                marginTop: '56px', 
-                paddingTop: '48px', 
-                borderTop: '1px solid rgba(13, 33, 55, 0.08)' 
+                marginTop: '80px', 
+                paddingTop: '64px', 
+                borderTop: '1px solid rgba(0, 0, 0, 0.07)' 
               }}
             >
-              {/* Vision Banner */}
+              {/* Light Editorial Vision Banner */}
               <div 
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(13, 33, 55, 0.95) 0%, rgba(22, 43, 74, 0.98) 100%)',
+                  backgroundColor: '#ffffff',
                   borderRadius: '24px',
-                  padding: '36px 40px',
-                  color: '#ffffff',
-                  marginBottom: '30px',
-                  boxShadow: '0 15px 40px rgba(0,0,0,0.08)',
+                  border: '1px solid rgba(232, 116, 30, 0.25)',
+                  borderLeft: '6px solid var(--primary)',
+                  padding: '44px 50px',
+                  marginBottom: '40px',
+                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)',
                   display: 'flex',
-                  alignItems: 'center',
-                  gap: '24px',
-                  flexWrap: 'wrap'
+                  flexDirection: 'column',
+                  gap: '14px'
                 }}
               >
-                <div style={{ flex: '1 1 500px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '0.8rem', fontWeight: 900, color: '#f37021', backgroundColor: 'rgba(243, 112, 33, 0.2)', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                      Tầm nhìn FPT Education
-                    </span>
-                  </div>
-                  <h3 style={{ fontSize: 'clamp(1.2rem, 2.3vw, 1.55rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.5', margin: 0 }}>
-                    “Trở thành một hệ thống giáo dục Mega mang tính quốc tế, đáp ứng nhu cầu của xã hội và dựa trên các công nghệ đào tạo tiên tiến nhất.”
-                  </h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span style={{ 
+                    fontSize: '0.82rem', 
+                    fontWeight: 800, 
+                    color: 'var(--primary)', 
+                    backgroundColor: 'rgba(232, 116, 30, 0.08)', 
+                    padding: '6px 14px', 
+                    borderRadius: '20px', 
+                    textTransform: 'uppercase', 
+                    letterSpacing: '0.08em' 
+                  }}>
+                    Tầm nhìn FPT Education
+                  </span>
                 </div>
+                <h3 style={{ 
+                  fontSize: 'clamp(1.25rem, 2.4vw, 1.65rem)', 
+                  fontWeight: 800, 
+                  color: 'var(--secondary)', 
+                  lineHeight: '1.6', 
+                  margin: 0,
+                  fontFamily: 'var(--font-sans)',
+                  letterSpacing: '-0.01em'
+                }}>
+                  “Trở thành một hệ thống giáo dục Mega mang tính quốc tế, đáp ứng nhu cầu của xã hội và dựa trên các công nghệ đào tạo tiên tiến nhất.”
+                </h3>
               </div>
 
-              {/* 4 Pillars Grid (I - G - S - M) */}
+              {/* 4 Pillars Grid (I - G - S - M) with generous whitespace */}
               <div 
                 style={{ 
                   display: 'grid', 
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', 
-                  gap: '20px' 
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+                  gap: '24px' 
                 }}
               >
                 {/* Pillar I */}
@@ -544,25 +559,27 @@ export default function VeFai() {
                   className="value-card-wrapper" 
                   style={{ 
                     backgroundColor: '#ffffff', 
-                    border: '1px solid rgba(232, 116, 30, 0.15)', 
-                    borderRadius: '18px', 
-                    padding: '28px 24px', 
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)',
-                    transition: 'all 0.3s ease'
+                    border: '1px solid rgba(0, 0, 0, 0.06)', 
+                    borderRadius: '20px', 
+                    padding: '36px 28px', 
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    flexDirection: 'column'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', backgroundColor: 'rgba(232, 116, 30, 0.12)', color: '#f37021', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '22px' }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '14px', backgroundColor: 'rgba(232, 116, 30, 0.1)', color: '#f37021', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
                       I
                     </div>
-                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       Pillar 01
                     </span>
                   </div>
-                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 6px 0' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
                     Industry Relevant
                   </h4>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', margin: 0 }}>
+                  <p style={{ fontSize: '0.94rem', color: '#64748b', lineHeight: '1.65', margin: 0 }}>
                     Gắn liền với nhu cầu thực tiễn của doanh nghiệp và ngành công nghiệp
                   </p>
                 </div>
@@ -572,25 +589,27 @@ export default function VeFai() {
                   className="value-card-wrapper" 
                   style={{ 
                     backgroundColor: '#ffffff', 
-                    border: '1px solid rgba(2, 132, 199, 0.15)', 
-                    borderRadius: '18px', 
-                    padding: '28px 24px', 
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)',
-                    transition: 'all 0.3s ease'
+                    border: '1px solid rgba(0, 0, 0, 0.06)', 
+                    borderRadius: '20px', 
+                    padding: '36px 28px', 
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    flexDirection: 'column'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', backgroundColor: 'rgba(2, 132, 199, 0.12)', color: '#0284c7', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '22px' }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '14px', backgroundColor: 'rgba(2, 132, 199, 0.1)', color: '#0284c7', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
                       G
                     </div>
-                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       Pillar 02
                     </span>
                   </div>
-                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 6px 0' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
                     Global
                   </h4>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', margin: 0 }}>
+                  <p style={{ fontSize: '0.94rem', color: '#64748b', lineHeight: '1.65', margin: 0 }}>
                     Mang tính quốc tế, hội nhập và chuẩn mực đào tạo toàn cầu
                   </p>
                 </div>
@@ -600,25 +619,27 @@ export default function VeFai() {
                   className="value-card-wrapper" 
                   style={{ 
                     backgroundColor: '#ffffff', 
-                    border: '1px solid rgba(22, 163, 74, 0.15)', 
-                    borderRadius: '18px', 
-                    padding: '28px 24px', 
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)',
-                    transition: 'all 0.3s ease'
+                    border: '1px solid rgba(0, 0, 0, 0.06)', 
+                    borderRadius: '20px', 
+                    padding: '36px 28px', 
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    flexDirection: 'column'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', backgroundColor: 'rgba(22, 163, 74, 0.12)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '22px' }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '14px', backgroundColor: 'rgba(22, 163, 74, 0.1)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
                       S
                     </div>
-                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       Pillar 03
                     </span>
                   </div>
-                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 6px 0' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
                     Smart Education
                   </h4>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', margin: 0 }}>
+                  <p style={{ fontSize: '0.94rem', color: '#64748b', lineHeight: '1.65', margin: 0 }}>
                     Giáo dục thông minh dựa trên các công nghệ đào tạo tiên tiến nhất
                   </p>
                 </div>
@@ -628,25 +649,27 @@ export default function VeFai() {
                   className="value-card-wrapper" 
                   style={{ 
                     backgroundColor: '#ffffff', 
-                    border: '1px solid rgba(147, 51, 234, 0.15)', 
-                    borderRadius: '18px', 
-                    padding: '28px 24px', 
-                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)',
-                    transition: 'all 0.3s ease'
+                    border: '1px solid rgba(0, 0, 0, 0.06)', 
+                    borderRadius: '20px', 
+                    padding: '36px 28px', 
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    flexDirection: 'column'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', backgroundColor: 'rgba(147, 51, 234, 0.12)', color: '#9333ea', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '22px' }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '14px', backgroundColor: 'rgba(147, 51, 234, 0.1)', color: '#9333ea', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
                       M
                     </div>
-                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       Pillar 04
                     </span>
                   </div>
-                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 6px 0' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
                     Mega
                   </h4>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', margin: 0 }}>
+                  <p style={{ fontSize: '0.94rem', color: '#64748b', lineHeight: '1.65', margin: 0 }}>
                     Hệ thống giáo dục Mega quy mô rộng lớn, đa ngành và đa nền tảng
                   </p>
                 </div>
