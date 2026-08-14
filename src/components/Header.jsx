@@ -69,10 +69,10 @@ export default function Header() {
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
                             <Image src="/logo_aptech.png" alt="FPT Aptech" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
-                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
-                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Back end 1 năm</Link>
-                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình Front end 6 tháng</Link>
-                          <Link href="/dao-tao/aptech" className="megamenu-link">Lập trình ngắn hạn 100-200h</Link>
+                          <Link href="/dao-tao/aptech/2-nam" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
+                          <Link href="/dao-tao/aptech/1-nam" className="megamenu-link">Lập trình Back end 1 năm</Link>
+                          <Link href="/dao-tao/aptech/6-thang" className="megamenu-link">Lập trình Front end 6 tháng</Link>
+                          <Link href="/dao-tao/aptech/100-200h" className="megamenu-link">Lập trình ngắn hạn 100-200h</Link>
                         </div>
                         <div className="program-cat brand-arena">
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
@@ -196,9 +196,10 @@ export default function Header() {
               </div>
               <ul className={`mobile-submenu ${expandedCats['dao-tao'] ? 'open' : ''}`}>
                 <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '4px' }}>APTECH — Công Nghệ</li>
-                <li><Link href="/dao-tao/aptech" onClick={closeMenu}>Lập trình viên Quốc tế (ADSE)</Link></li>
-                <li><Link href="/dao-tao/aptech" onClick={closeMenu}>Trí tuệ Nhân tạo (AI)</Link></li>
-                <li><Link href="/dao-tao/aptech" onClick={closeMenu}>Khoa học Dữ liệu</Link></li>
+                <li><Link href="/dao-tao/aptech/2-nam" onClick={closeMenu}>Lập trình Fullstack (2 năm)</Link></li>
+                <li><Link href="/dao-tao/aptech/1-nam" onClick={closeMenu}>Lập trình Back end (1 năm)</Link></li>
+                <li><Link href="/dao-tao/aptech/6-thang" onClick={closeMenu}>Lập trình Front end (6 tháng)</Link></li>
+                <li><Link href="/dao-tao/aptech/100-200h" onClick={closeMenu}>Lập trình ngắn hạn (100-200h)</Link></li>
                 
                 <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--accent-orange, #e8741e)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '12px' }}>ARENA — Sáng Tạo</li>
                 <li><Link href="/dao-tao/arena" onClick={closeMenu}>Mỹ thuật Đa phương tiện</Link></li>

@@ -23,10 +23,10 @@ const programs = [
       color: '#ffffff'
     },
     curriculums: [
-      'Lập trình Fullstack trong 2 năm',
-      'Lập trình Back end trong 1 năm',
-      'Lập trình Front end trong 6 tháng',
-      'Lập trình ngắn hạn 100-200h'
+      { text: 'Lập trình Fullstack trong 2 năm', href: '/dao-tao/aptech/2-nam' },
+      { text: 'Lập trình Back end trong 1 năm', href: '/dao-tao/aptech/1-nam' },
+      { text: 'Lập trình Front end trong 6 tháng', href: '/dao-tao/aptech/6-thang' },
+      { text: 'Lập trình ngắn hạn 100-200h', href: '/dao-tao/aptech/100-200h' }
     ]
   },
   {
@@ -232,21 +232,45 @@ export default function DaoTao() {
                           paddingTop: '24px' 
                         }}
                       >
-                        {prog.curriculums.map((item, idx) => (
-                          <li 
-                            key={idx} 
-                            style={{ 
-                              fontSize: '0.92rem', 
-                              color: prog.isDark ? 'rgba(255,255,255,0.7)' : 'var(--text-muted)', 
-                              display: 'flex', 
-                              alignItems: 'start', 
-                              gap: '10px' 
-                            }}
-                          >
-                            <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: prog.color, marginTop: '8px', flexShrink: 0 }} />
-                            {item}
-                          </li>
-                        ))}
+                        {prog.curriculums.map((item, idx) => {
+                          const isObj = typeof item === 'object';
+                          const text = isObj ? item.text : item;
+                          const href = isObj ? item.href : null;
+
+                          return (
+                            <li 
+                              key={idx} 
+                              style={{ 
+                                fontSize: '0.92rem', 
+                                color: prog.isDark ? 'rgba(255,255,255,0.7)' : 'var(--text-muted)', 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                gap: '10px' 
+                              }}
+                            >
+                              <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: prog.color, flexShrink: 0 }} />
+                              {href ? (
+                                <Link 
+                                  href={href} 
+                                  style={{ 
+                                    color: 'inherit', 
+                                    textDecoration: 'none', 
+                                    transition: 'all 0.2s ease',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '6px'
+                                  }}
+                                  onMouseEnter={(e) => e.currentTarget.style.color = prog.color}
+                                  onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}
+                                >
+                                  {text} <ArrowRight size={14} style={{ opacity: 0.7 }} />
+                                </Link>
+                              ) : (
+                                text
+                              )}
+                            </li>
+                          );
+                        })}
                       </ul>
 
                       <div style={{ marginTop: '20px' }}>
