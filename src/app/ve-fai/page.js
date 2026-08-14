@@ -7,7 +7,7 @@ import ParticleCanvas from '@/components/ParticleCanvas';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Zap, Palette, Megaphone, Globe, Users } from 'lucide-react';
+import { ArrowRight, Zap, Palette, Megaphone, Globe, Users, Target, GraduationCap, Sparkles } from 'lucide-react';
 
 const historyTimeline = [
   {
@@ -357,75 +357,143 @@ export default function VeFai() {
           </div>
         </section>
 
-        {/* SECTION 3: Core Values - Light Cream Background - Proportional Height (75vh) */}
+        {/* SECTION 3: Sứ Mệnh & Tầm Nhìn của Tổ chức giáo dục FPT - Light Cream Background */}
         <section 
           className="about-values-section" 
           style={{ 
-            padding: '120px 0', 
+            padding: '100px 0 110px 0', 
             backgroundColor: '#F8F5F0', 
             color: '#1a2332',
-            minHeight: '75vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center'
+            position: 'relative'
           }}
         >
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '40px', alignItems: 'center' }}>
-              <div style={{ gridColumn: 'span 4' }}>
-                <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800 }}>GIÁ TRỊ CỐT LÕI</span>
-                <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
-                  <ScrollTypewriter text="Những giá trị tạo nên sự khác biệt" speed={12} />
-                </h2>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.7', marginTop: '20px', maxWidth: '340px' }}>
-                  Kim chỉ nam giúp Viện đào tạo Quốc tế FPT xây dựng chương trình đào tạo chuẩn quốc tế, gắn kết giữa kiến thức, thực hành và nhu cầu của doanh nghiệp.
+            {/* Section Header */}
+            <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 50px auto' }}>
+              <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+                TỔ CHỨC GIÁO DỤC FPT
+              </span>
+              <h2 style={{ fontSize: 'clamp(1.9rem, 3.5vw, 2.7rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
+                <ScrollTypewriter text="Sứ Mệnh & Tầm Nhìn của Tổ chức giáo dục FPT" speed={12} />
+              </h2>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.02rem', lineHeight: '1.75', marginTop: '16px' }}>
+                Kim chỉ nam định hình chất lượng đào tạo, nuôi dưỡng khát vọng vươn tầm thế giới và phát triển bền vững cùng cộng đồng.
+              </p>
+            </div>
+
+            {/* 3 Pillars Grid */}
+            <div 
+              style={{ 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+                gap: '28px',
+                alignItems: 'stretch'
+              }}
+            >
+              {/* Card 1: Sứ mệnh */}
+              <div 
+                className="value-card-wrapper" 
+                style={{ 
+                  backgroundColor: '#ffffff', 
+                  border: '1px solid rgba(232, 116, 30, 0.15)', 
+                  borderRadius: '20px', 
+                  padding: '36px 30px', 
+                  boxShadow: '0 12px 35px rgba(0,0,0,0.03)', 
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+                  <div style={{ width: '50px', height: '50px', borderRadius: '14px', backgroundColor: 'rgba(232, 116, 30, 0.1)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Target size={26} />
+                  </div>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--primary)', backgroundColor: 'rgba(232, 116, 30, 0.08)', padding: '5px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Sứ mệnh
+                  </span>
+                </div>
+
+                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                  Sứ mệnh FPT Education
+                </h3>
+                <p style={{ fontSize: '1.02rem', color: '#334155', lineHeight: '1.75', margin: 0, fontWeight: 500 }}>
+                  “Cung cấp năng lực cạnh tranh toàn cầu cho đông đảo người học, góp phần mở mang bờ cõi trí tuệ đất nước.”
                 </p>
               </div>
-              
-              <div style={{ gridColumn: 'span 8' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="values-grid">
-                  
-                  {/* Practical */}
-                  <div className="value-card-wrapper" style={{ backgroundColor: '#ffffff', border: '1px solid rgba(13, 33, 55, 0.05)', borderRadius: '16px', padding: '35px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', transition: 'all 0.3s ease' }}>
-                    <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(232, 116, 30, 0.08)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
-                      <Zap size={22} />
-                    </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
-                      Practical — Thực chiến
-                    </h3>
-                    <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
-                      70 - 80% thực hành, học qua dự án thực tế theo phương pháp Project Based Learning, xây dựng portfolio ngay trong quá trình học.
-                    </p>
-                  </div>
 
-                  {/* Global */}
-                  <div className="value-card-wrapper" style={{ backgroundColor: '#ffffff', border: '1px solid rgba(13, 33, 55, 0.05)', borderRadius: '16px', padding: '35px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', transition: 'all 0.3s ease' }}>
-                    <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(201, 151, 44, 0.08)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
-                      <Globe size={22} />
-                    </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
-                      Global — Toàn cầu
-                    </h3>
-                    <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
-                      Chương trình đào tạo được chuyển giao từ các đối tác quốc tế, liên tục cập nhật các công nghệ và xu hướng mới như AI, Cloud, Data hay UI/UX.
-                    </p>
+              {/* Card 2: Triết lí giáo dục */}
+              <div 
+                className="value-card-wrapper" 
+                style={{ 
+                  backgroundColor: '#ffffff', 
+                  border: '1px solid rgba(201, 151, 44, 0.2)', 
+                  borderRadius: '20px', 
+                  padding: '36px 30px', 
+                  boxShadow: '0 12px 35px rgba(0,0,0,0.03)', 
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+                  <div style={{ width: '50px', height: '50px', borderRadius: '14px', backgroundColor: 'rgba(201, 151, 44, 0.1)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <GraduationCap size={26} />
                   </div>
-
-                  {/* Connect */}
-                  <div className="value-card-wrapper" style={{ backgroundColor: '#ffffff', border: '1px solid rgba(13, 33, 55, 0.05)', borderRadius: '16px', padding: '35px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', transition: 'all 0.3s ease' }}>
-                    <div style={{ width: '46px', height: '46px', borderRadius: '12px', backgroundColor: 'rgba(22, 163, 74, 0.08)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
-                      <Users size={22} />
-                    </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '15px', fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
-                      Connect — Đồng hành
-                    </h3>
-                    <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
-                      Hệ sinh thái hỗ trợ nghề nghiệp toàn diện với mạng lưới hợp tác doanh nghiệp, Company Visit, phỏng vấn thử và kết nối cơ hội việc làm.
-                    </p>
-                  </div>
-
+                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--accent)', backgroundColor: 'rgba(201, 151, 44, 0.08)', padding: '5px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Triết lí giáo dục
+                  </span>
                 </div>
+
+                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                  Triết lí giáo dục
+                </h3>
+                <p style={{ fontSize: '1.02rem', color: '#334155', lineHeight: '1.75', margin: 0, fontWeight: 500 }}>
+                  “Giáo dục đào tạo là tổ chức và quản trị việc tự học của người học.”
+                </p>
               </div>
+
+              {/* Card 3: Văn hoá */}
+              <div 
+                className="value-card-wrapper" 
+                style={{ 
+                  backgroundColor: '#ffffff', 
+                  border: '1px solid rgba(22, 163, 74, 0.2)', 
+                  borderRadius: '20px', 
+                  padding: '36px 30px', 
+                  boxShadow: '0 12px 35px rgba(0,0,0,0.03)', 
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+                  <div style={{ width: '50px', height: '50px', borderRadius: '14px', backgroundColor: 'rgba(22, 163, 74, 0.1)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Sparkles size={26} />
+                  </div>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#16a34a', backgroundColor: 'rgba(22, 163, 74, 0.08)', padding: '5px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Văn hoá FPT
+                  </span>
+                </div>
+
+                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                  Văn hoá
+                </h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <li style={{ fontSize: '0.94rem', color: '#334155', lineHeight: '1.55', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0 }}>•</span>
+                    <span><strong>Tôn đồng đổi chí gương sáng:</strong> (Tôn trọng, Đồng đội, Đổi mới, Chí công, Gương mẫu, Sáng tạo)</span>
+                  </li>
+                  <li style={{ fontSize: '0.94rem', color: '#334155', lineHeight: '1.55', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0 }}>•</span>
+                    <span><strong>Học thật, thi thật, thành công thật</strong></span>
+                  </li>
+                  <li style={{ fontSize: '0.94rem', color: '#334155', lineHeight: '1.55', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                    <span style={{ color: '#16a34a', fontWeight: 800, flexShrink: 0 }}>•</span>
+                    <span><strong>Làm khác để làm tốt</strong></span>
+                  </li>
+                </ul>
+              </div>
+
             </div>
           </div>
         </section>
