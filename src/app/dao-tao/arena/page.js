@@ -153,7 +153,7 @@ export default function ArenaSubpage() {
       <ArenaProgramSwitcher activePath="/dao-tao/arena/2-nam" />
 
       {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
-      <section className="beau-hero" style={{ paddingBottom: '70px', paddingTop: '50px' }}>
+      <section className="beau-hero">
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">AMSP 2 NĂM</div>
         <div className="container beau-hero-inner" data-reveal>

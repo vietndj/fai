@@ -199,7 +199,7 @@ export default function Backend1NamPage() {
       <AptechProgramSwitcher activePath="/dao-tao/aptech/1-nam" />
 
       {/* Section 0: Hero Section (🌙 DARK TECH THEME) */}
-      <section className="beau-hero" style={{ paddingBottom: '70px', paddingTop: '50px' }}>
+      <section className="beau-hero">
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">BACKEND DEV</div>
         <div className="container beau-hero-inner" data-reveal>

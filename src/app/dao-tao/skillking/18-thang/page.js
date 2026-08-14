@@ -153,7 +153,7 @@ export default function Skillking18ThangPage() {
       <SkillkingProgramSwitcher activePath="/dao-tao/skillking/18-thang" />
 
       {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
-      <section className="beau-hero" style={{ paddingBottom: '70px', paddingTop: '50px' }}>
+      <section className="beau-hero">
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">18 THÁNG</div>
         <div className="container beau-hero-inner" data-reveal>
