@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
+import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles } from 'lucide-react';
 
 export default function AiAgentSubpage() {
   const [activeSection, setActiveSection] = useState(0);
@@ -35,12 +36,12 @@ export default function AiAgentSubpage() {
     <div className={`beau-subpage-container theme-ai-agent active-sec-${activeSection}`}>
       <Header />
 
-      {/* Section 0: Hero Section */}
+      {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
       <section className="beau-hero">
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">AI AGENT</div>
         <div className="container beau-hero-inner" data-reveal>
-          <span className="beau-hero-brand" style={{ backgroundColor: '#0066b3', color: '#ffffff' }}>
+          <span className="beau-hero-brand" style={{ backgroundColor: '#0066b3', color: '#ffffff', fontWeight: 800 }}>
             FPT JETKING — AI AGENT
           </span>
           <h1 className="beau-hero-title">
@@ -59,15 +60,15 @@ export default function AiAgentSubpage() {
 
           <div className="beau-stats-bar">
             <div className="beau-stat-item">
-              <h3 style={{ color: '#0066b3' }}>784 Giờ Học</h3>
+              <h3 style={{ color: '#38bdf8' }}>784 Giờ Học</h3>
               <p>Thời lượng học tập tối ưu, cập nhật liên tục công nghệ đỉnh cao.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#0066b3' }}>100h Dự Án</h3>
+              <h3 style={{ color: '#38bdf8' }}>100h Dự Án</h3>
               <p>Thực hành dự án thực tế xuyên suốt dưới sự hướng dẫn của chuyên gia.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#0066b3' }}>Jetking AD</h3>
+              <h3 style={{ color: '#38bdf8' }}>Jetking AD</h3>
               <p>Nhận chứng chỉ Advanced Diploma in AI Agent chuẩn quốc tế từ Jetking Ấn Độ.</p>
             </div>
           </div>
@@ -85,88 +86,127 @@ export default function AiAgentSubpage() {
         </div>
       </section>
 
-      {/* Section 1: Lộ Trình Đào Tạo */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 1: Lộ Trình Đào Tạo (☀️ LIGHT BRIGHT THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '110px 0 120px 0',
+          borderTop: 'none'
+        }}
+      >
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">LỘ TRÌNH ĐÀO TẠO</span>
-          <h2 className="beau-section-title">Lộ trình học tập 24 tháng</h2>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <span style={{ color: '#0066b3', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
+              LỘ TRÌNH ĐÀO TẠO
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Lộ trình đào tạo 24 tháng theo chuẩn Jetking
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              Chương trình áp dụng mô hình kim tự tháp: nền tảng khoa học dữ liệu ở học kỳ 1, chuyên sâu máy học ở học kỳ 2-3 và phát triển AI Agent cao cấp ở học kỳ 4.
+            </p>
+          </div>
 
-          <div className="beau-split-grid">
-            {/* Left label */}
-            <div className="beau-split-left">
-              <div className="beau-sticky-label" style={{ color: '#0066b3', opacity: 0.15 }}>AI</div>
-              <p className="beau-sticky-desc">
-                Chương trình áp dụng mô hình kim tự tháp: xây dựng nền tảng vững chắc về khoa học dữ liệu ở học kỳ 1, chuyên sâu chuyên môn máy học ở học kỳ 2-3 và kết thúc với phát triển AI Agent cao cấp ở học kỳ 4.
+          {/* 4 Semester Cards in Modern Light Theme */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
+            {/* Semester 1 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ color: '#0066b3', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                HỌC KỲ 01
+              </span>
+              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
+                Foundations & Python — Nền tảng lập trình & Dữ liệu
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
+                Trang bị tư duy lập trình bằng Python chuyên sâu, kỹ năng quản trị và khai thác dữ liệu qua SQL và Power BI. Nắm vững toán học nền móng cho học máy.
               </p>
+              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#0066b3', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
+                  Môn học trọng tâm
+                </span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Lập trình Python chuyên sâu từ cơ bản đến nâng cao</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Toán học ứng dụng trong AI (Đại số, Thống kê)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Truy vấn và quản trị cơ sở dữ liệu với SQL</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Trực quan hóa dữ liệu và báo cáo trên Power BI</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Đồ án Phân tích Dữ liệu và Dự báo e-Project</li>
+                </ul>
+              </div>
             </div>
 
-            {/* Right semester cards */}
-            <div className="beau-split-right">
-              {/* Semester 1 */}
-              <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#0066b3' }}>Học Kỳ 01</span>
-                <h3 className="sem-title">Foundations & Python Elements — Nền tảng lập trình & Khoa học Dữ liệu</h3>
-                <p className="sem-desc">
-                  Trang bị tư duy lập trình bằng Python chuyên sâu, kỹ năng quản trị và khai thác dữ liệu thông qua ngôn ngữ SQL và công cụ Power BI. Sinh viên hiểu rõ các khái niệm toán học làm nền móng cho học máy.
-                </p>
-                <span className="sem-modules-title">Môn học trọng tâm</span>
-                <ul className="sem-modules-list">
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Lập trình Python chuyên sâu từ cơ bản đến nâng cao</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Toán học ứng dụng trong AI (Đại số tuyến tính, Xác suất thống kê)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Truy vấn và quản trị cơ sở dữ liệu quan hệ với SQL</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Trực quan hóa dữ liệu và báo cáo thông minh trên Power BI</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Đồ án Phân tích Dữ liệu và Dự báo kinh doanh e-Project</li>
+            {/* Semester 2 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ color: '#0066b3', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                HỌC KỲ 02
+              </span>
+              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
+                Machine Learning & Deep Learning — Trí tuệ nhân tạo chuyên sâu
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
+                Khám phá bản chất của học máy và học sâu. Tự tay xây dựng, huấn luyện và tinh chỉnh các mô hình dự đoán, phân loại dữ liệu và mạng nơ-ron nhân tạo nâng cao.
+              </p>
+              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#0066b3', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
+                  Môn học trọng tâm
+                </span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Thuật toán Học máy (Scikit-Learn)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Kiến trúc mạng Nơ-ron và Học sâu (Deep Learning)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Sử dụng thư viện tính toán: TensorFlow, PyTorch</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Kỹ thuật tối ưu hóa và Đánh giá hiệu năng mô hình</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Đồ án Huấn luyện & Triển khai Học sâu e-Project</li>
                 </ul>
               </div>
+            </div>
 
-              {/* Semester 2 */}
-              <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#0066b3' }}>Học Kỳ 02</span>
-                <h3 className="sem-title">Machine Learning & Deep Learning Core — Trí tuệ nhân tạo chuyên sâu</h3>
-                <p className="sem-desc">
-                  Khám phá bản chất của học máy và học sâu. Sinh viên tự tay xây dựng, huấn luyện và tinh chỉnh các mô hình dự đoán, phân loại dữ liệu, nghiên cứu sâu kiến trúc mạng nơ-ron nhân tạo nâng cao.
-                </p>
-                <span className="sem-modules-title">Môn học trọng tâm</span>
-                <ul className="sem-modules-list">
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thuật toán Học máy có giám sát & không giám sát (Scikit-Learn)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Kiến trúc mạng Nơ-ron nhân tạo và Học sâu (Deep Learning)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Sử dụng các thư viện tính toán lớn: TensorFlow, PyTorch</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Kỹ thuật tối ưu hóa và Đánh giá hiệu năng mô hình AI</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Đồ án Huấn luyện & Triển khai mô hình Học sâu e-Project</li>
+            {/* Semester 3 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ color: '#0066b3', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                HỌC KỲ 03
+              </span>
+              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
+                NLP, Computer Vision & GenAI — Thị giác máy tính & AI tạo sinh
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
+                Làm chủ giao tiếp tự nhiên và nhận diện thị giác. Tiếp cận công nghệ Generative AI mới nhất, làm việc với các mô hình ngôn ngữ lớn (LLMs) qua Prompt Engineering và Fine-tuning.
+              </p>
+              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#0066b3', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
+                  Môn học trọng tâm
+                </span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Xử lý ngôn ngữ tự nhiên (NLP) & Nhận diện giọng nói</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Thị giác máy tính (CV): Nhận diện vật thể, khuôn mặt</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Generative AI & Kỹ nghệ thiết kế Prompt tối ưu</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Fine-tuning các mô hình mã nguồn mở Llama / Mistral</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Đồ án Ứng dụng AI Tạo sinh e-Project</li>
                 </ul>
               </div>
+            </div>
 
-              {/* Semester 3 */}
-              <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#0066b3' }}>Học Kỳ 03</span>
-                <h3 className="sem-title">NLP, Computer Vision & Generative AI — Xử lý ngôn ngữ, Thị giác máy tính & AI tạo sinh</h3>
-                <p className="sem-desc">
-                  Làm chủ các ứng dụng giao tiếp tự nhiên và nhận diện hình ảnh/video. Tiếp cận công nghệ AI Tạo sinh mới nhất, làm việc với các mô hình ngôn ngữ lớn (LLMs - GPT, Claude, Llama) thông qua kỹ nghệ Prompt và Fine-tuning.
-                </p>
-                <span className="sem-modules-title">Môn học trọng tâm</span>
-                <ul className="sem-modules-list">
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Xử lý ngôn ngữ tự nhiên (NLP) & Nhận diện giọng nói</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thị giác máy tính (Computer Vision): Nhận diện vật thể, khuôn mặt</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Generative AI & Kỹ thuật thiết kế câu lệnh tối ưu (Prompt Engineering)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Ứng dụng API LLM và Fine-tuning mô hình ngôn ngữ lớn</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Đồ án Tích hợp ứng dụng Generative AI thông minh e-Project</li>
-                </ul>
-              </div>
-
-              {/* Semester 4 */}
-              <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#0066b3' }}>Học Kỳ 04</span>
-                <h3 className="sem-title">Multi-Agent Systems & Deployment — Hệ thống AI tự hành & Vận hành doanh nghiệp</h3>
-                <p className="sem-desc">
-                  Học phần cốt lõi nâng cao nhất: Thiết kế các tác nhân AI tự hành (AI Agents). Sinh viên học cách kết nối nhiều Agent (Multi-Agent Systems) để tự động hóa các quy trình doanh nghiệp phức tạp và triển khai lên hạ tầng Cloud.
-                </p>
-                <span className="sem-modules-title">Môn học trọng tâm</span>
-                <ul className="sem-modules-list">
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thiết kế Tác nhân AI đơn lẻ (Single-Agent Systems)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Kiến trúc Multi-Agent phối hợp tự hành bằng CrewAI, LangGraph</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Tích hợp Tooling & Function Calling cho AI Agents</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Triển khai & Vận hành hệ thống AI trong môi trường đám mây (MLOps)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Đồ án tốt nghiệp: Phát triển hệ thống Multi-Agent hoàn chỉnh cho doanh nghiệp</li>
+            {/* Semester 4 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ color: '#0066b3', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                HỌC KỲ 04
+              </span>
+              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
+                AI Agents Architecture — Kiến trúc Nhân sự AI đa nhiệm
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
+                Đỉnh cao của công nghệ AI tự hành. Xây dựng Autonomous Multi-Agents, hệ thống bộ nhớ ngắn/dài hạn (Vector Database), tích hợp công cụ APIs và đưa AI vào quy trình sản xuất thực tế (MLOps).
+              </p>
+              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#0066b3', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
+                  Môn học trọng tâm
+                </span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Khung kiến trúc Agent: LangChain, CrewAI, AutoGen</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Bộ nhớ ngữ cảnh & Cơ sở dữ liệu Vector (Chroma, Pinecone)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Tự động hóa tác vụ và gọi hàm mở rộng (Function Calling)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Quy trình MLOps & Đóng gói Agent trên Cloud / Docker</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#0066b3', flexShrink: 0 }} />Đồ án tốt nghiệp Hệ thống Multi-AI Agent tự hành</li>
                 </ul>
               </div>
             </div>
@@ -174,141 +214,182 @@ export default function AiAgentSubpage() {
         </div>
       </section>
 
-      {/* Section 2: Công Cụ & Công Nghệ */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 2: Công Cụ & Thư Viện AI (🌙 DARK TECH THEME) */}
+      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">TECH STACK & TOOLS</span>
-          <h2 className="beau-section-title">Hệ sinh thái công nghệ AI</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#38bdf8' }}>AI FRAMEWORKS & TOOLS</span>
+            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Làm chủ hệ sinh thái AI hiện đại nhất</h2>
+            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              Trải nghiệm các framework hàng đầu của thế giới AI và điện toán đám mây
+            </p>
+          </div>
 
           <div className="beau-tech-grid">
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.05">
-              <span className="beau-tech-icon">Py</span>
-              <span className="beau-tech-name">Python Language</span>
+              <span className="beau-tech-icon" style={{ color: '#38bdf8' }}>Py</span>
+              <span className="beau-tech-name">Python 3 & Poetry</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.1">
-              <span className="beau-tech-icon">TF</span>
-              <span className="beau-tech-name">TensorFlow / PyTorch</span>
+              <span className="beau-tech-icon" style={{ color: '#ff6f00' }}>TF</span>
+              <span className="beau-tech-name">TensorFlow & Keras</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.15">
-              <span className="beau-tech-icon">LLM</span>
-              <span className="beau-tech-name">GPT / Claude / Llama</span>
+              <span className="beau-tech-icon" style={{ color: '#ee4c2c' }}>PyTorch</span>
+              <span className="beau-tech-name">PyTorch Deep Learning</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.2">
-              <span className="beau-tech-icon">Lc</span>
-              <span className="beau-tech-name">LangChain / LangGraph</span>
+              <span className="beau-tech-icon" style={{ color: '#00d2ff' }}>Lang</span>
+              <span className="beau-tech-name">LangChain & LangGraph</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.25">
-              <span className="beau-tech-icon">Cr</span>
-              <span className="beau-tech-name">CrewAI Framework</span>
+              <span className="beau-tech-icon" style={{ color: '#a855f7' }}>CrewAI</span>
+              <span className="beau-tech-name">CrewAI Multi-Agents</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.3">
-              <span className="beau-tech-icon">SQL</span>
-              <span className="beau-tech-name">SQL Database</span>
+              <span className="beau-tech-icon" style={{ color: '#10a37f' }}>OpenAI</span>
+              <span className="beau-tech-name">OpenAI API & Anthropic</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.35">
-              <span className="beau-tech-icon">BI</span>
-              <span className="beau-tech-name">Microsoft Power BI</span>
+              <span className="beau-tech-icon" style={{ color: '#ffd21e' }}>HF</span>
+              <span className="beau-tech-name">Hugging Face Transformers</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.4">
-              <span className="beau-tech-icon">Cld</span>
-              <span className="beau-tech-name">Cloud MLOps</span>
+              <span className="beau-tech-icon" style={{ color: '#2496ed' }}>Docker</span>
+              <span className="beau-tech-name">Docker & MLOps Cloud</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 3: Cơ Hội Nghề Nghiệp */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 3: Cơ Hội Nghề Nghiệp (☀️ LIGHT BRIGHT THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '100px 0 110px 0',
+          borderTop: 'none'
+        }}
+      >
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">CAREERS</span>
-          <h2 className="beau-section-title">Vị trí việc làm hậu tốt nghiệp</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span style={{ color: '#0066b3', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
+              CAREERS
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Cơ hội việc làm kỷ nguyên AI
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '650px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              Đón đầu làn sóng khát nhân lực AI kỹ nghệ cao với mức thu nhập vượt trội
+            </p>
+          </div>
 
           <div className="beau-careers-grid">
-            <div className="beau-career-card" style={{ borderLeftColor: '#0066b3' }} data-reveal data-reveal-delay="0.05">
-              <h3 className="career-title">AI Agent Developer</h3>
-              <p className="career-desc">Thiết kế và phát triển các tác nhân thông minh tự hành giúp tự động hóa quy trình nghiệp vụ phức tạp.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #0066b3', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>AI Agent Developer</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Trực tiếp thiết kế và lập trình các tác tử AI tự hành (Autonomous Agents) phục vụ vận hành tự động cho doanh nghiệp.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#0066b3' }} data-reveal data-reveal-delay="0.1">
-              <h3 className="career-title">Machine Learning Engineer</h3>
-              <p className="career-desc">Huấn luyện, triển khai và tối ưu hóa các thuật toán học máy, học sâu và kiến trúc xử lý dữ liệu quy mô lớn.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #0066b3', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Machine Learning Engineer</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Xây dựng thuật toán, huấn luyện mô hình học máy và tối ưu hóa hệ thống xử lý dữ liệu lớn.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#0066b3' }} data-reveal data-reveal-delay="0.15">
-              <h3 className="career-title">AI Integration Specialist</h3>
-              <p className="career-desc">Nghiên cứu tích hợp các giải pháp trí tuệ nhân tạo (LLM, Vision, Chatbot) vào cấu trúc phần mềm hiện hữu.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #0066b3', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Prompt & GenAI Specialist</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Kỹ nghệ tối ưu câu lệnh, tinh chỉnh mô hình LLMs (Fine-tuning) và phát triển giải pháp RAG cho doanh nghiệp.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#0066b3' }} data-reveal data-reveal-delay="0.2">
-              <h3 className="career-title">NLP Engineer</h3>
-              <p className="career-desc">Xây dựng hệ thống hiểu ngôn ngữ tự nhiên, phân tích cảm xúc, máy dịch và các mô hình chatbot thông minh thế hệ mới.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #0066b3', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Computer Vision / NLP Engineer</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Xử lý các bài toán nhận diện giọng nói, thị giác máy tính, phân tích tài liệu thông minh và Chatbot đàm thoại.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#0066b3' }} data-reveal data-reveal-delay="0.25">
-              <h3 className="career-title">Prompt Engineer</h3>
-              <p className="career-desc">Kỹ sư tối ưu hóa câu lệnh, thiết kế ngữ cảnh để các mô hình ngôn ngữ lớn (LLMs) phản hồi chính xác nhất.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #0066b3', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>MLOps / AI Deployment Engineer</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Đóng gói và triển khai các hệ thống AI lên hạ tầng đám mây (AWS, GCP, Azure), giám sát và duy trì hiệu năng 24/7.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#0066b3' }} data-reveal data-reveal-delay="0.3">
-              <h3 className="career-title">AI Solutions Architect</h3>
-              <p className="career-desc">Kiến trúc sư thiết kế giải pháp tổng thể, quy hoạch hạ tầng lưu trữ và tích hợp các hệ thống AI tự hành cho doanh nghiệp.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #0066b3', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>AI Solutions Consultant</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Tư vấn chiến lược ứng dụng trí tuệ nhân tạo và chuyển đổi số quy trình vận hành cho các tổ chức, doanh nghiệp.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4: Ưu đãi tuyển sinh đặc quyền */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 4: Ưu đãi tuyển sinh đặc quyền (🌙 DARK TECH THEME) */}
+      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">HỌC BỔNG & CHÍNH SÁCH</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Ưu đãi tuyển sinh đặc quyền</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#38bdf8' }}>HỌC BỔNG & CHÍNH SÁCH</span>
+            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Ưu đãi tuyển sinh đặc quyền FPT Jetking</h2>
+            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              Quỹ học bổng Tài năng Trí tuệ Nhân tạo FPT tiếp sức thế hệ chuyên gia công nghệ tương lai
+            </p>
+          </div>
           
           <div className="beau-incentives-grid">
             <div className="beau-incentive-card" style={{ '--accent': '#0066b3' }} data-reveal data-reveal-delay="0.05">
-              <span className="incentive-badge">HỌC BỔNG</span>
+              <span className="incentive-badge">HỌC BỔNG TÀI NĂNG</span>
               <h3 className="incentive-value">Lên tới 50%</h3>
-              <p className="incentive-desc">Học bổng Kiến tạo "AI Pioneer" dành cho các bạn trẻ xuất sắc vượt qua bài thi năng lực đầu vào.</p>
+              <p className="incentive-desc">Học bổng Tiên phong Kỹ nghệ AI hỗ trợ tài năng công nghệ trẻ xuất sắc bứt phá sự nghiệp.</p>
             </div>
             <div className="beau-incentive-card" style={{ '--accent': '#0066b3' }} data-reveal data-reveal-delay="0.1">
-              <span className="incentive-badge">NHẬP HỌC SỚM</span>
-              <h3 className="incentive-value">Tặng Laptop</h3>
-              <p className="incentive-desc">Ưu đãi tặng ngay Laptop học tập cho sinh viên hoàn thành hồ sơ nhập học sớm trong tháng.</p>
+              <span className="incentive-badge">QUÀ TẶNG AI</span>
+              <h3 className="incentive-value">Gói Cloud GPU</h3>
+              <p className="incentive-desc">Tặng ngay gói điện toán đám mây GPU tính toán cao cấp phục vụ huấn luyện mô hình AI thực tế.</p>
             </div>
             <div className="beau-incentive-card" style={{ '--accent': '#0066b3' }} data-reveal data-reveal-delay="0.15">
               <span className="incentive-badge">TRẢ GÓP</span>
               <h3 className="incentive-value">0% Lãi Suất</h3>
-              <p className="incentive-desc">Chính sách chia nhỏ học phí trả góp không lãi suất giúp giảm nhẹ gánh nặng tài chính.</p>
+              <p className="incentive-desc">Hỗ trợ chia nhỏ học phí đóng theo từng tháng qua thẻ tín dụng ngân hàng đối tác.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 5: Chuyển hướng nhanh ngành học */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 5: Chuyển hướng nhanh ngành học & Tin tức (☀️ LIGHT BRIGHT THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '100px 0 110px 0',
+          borderTop: 'none'
+        }}
+      >
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">KHÁM PHÁ CÁC NGÀNH HỌC KHÁC</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Chuyển hướng nhanh ngành học</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span style={{ color: '#0066b3', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
+              KHÁM PHÁ CÁC NGÀNH HỌC KHÁC
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Hệ sinh thái đào tạo FPT
+            </h2>
+          </div>
           
           <div className="beau-other-programs-grid">
-            <Link href="/dao-tao/aptech" className="beau-other-program-card" data-reveal data-reveal-delay="0.05">
+            <Link href="/dao-tao/chip-design" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.05">
               <div>
-                <span className="other-prog-tag" style={{ color: '#1a6ed8' }}>✦ APTECH</span>
-                <h3 className="other-prog-title">Software Engineering</h3>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Lập trình viên Quốc tế — Phát triển phần mềm doanh nghiệp lớn, ứng dụng di động, điện toán đám mây và AI tích hợp.
+                <span className="other-prog-tag" style={{ color: '#f37021' }}>✦ JETKING CHIP DESIGN</span>
+                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Thiết Kế Vi Mạch Bán Dẫn</h3>
+                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                  Làm chủ ngôn ngữ Verilog/VHDL, công cụ thiết kế EDA chuẩn quốc tế và công nghệ vi mạch tích hợp AI.
                 </p>
               </div>
-              <span className="other-prog-link" style={{ color: '#1a6ed8', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                Khám phá Công Nghệ
+              <span className="other-prog-link" style={{ color: '#f37021', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
+                Khám phá Vi Mạch
                 <ArrowRight size={18} />
               </span>
             </Link>
 
-            <Link href="/dao-tao/chip-design" className="beau-other-program-card" data-reveal data-reveal-delay="0.1">
+            <Link href="/dao-tao/aptech/2-nam" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.1">
               <div>
-                <span className="other-prog-tag" style={{ color: '#8b5cf6' }}>◈ CHIP DESIGN</span>
-                <h3 className="other-prog-title">Semiconductor IC Design</h3>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Thiết kế vi mạch bán dẫn tích hợp AI — Làm chủ ngôn ngữ mô tả phần cứng Verilog/VHDL và công cụ thiết kế EDA Synopsys.
+                <span className="other-prog-tag" style={{ color: '#f37021' }}>◈ APTECH ACCP AI</span>
+                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Software Engineering & AI</h3>
+                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                  Lập trình viên Quốc tế ACCP AI — Làm chủ ngôn ngữ Java, Python, Web/Mobile Fullstack, Cloud và Vibe Coding.
                 </p>
               </div>
-              <span className="other-prog-link" style={{ color: '#8b5cf6', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                Khám phá Thiết Kế Chip
+              <span className="other-prog-link" style={{ color: '#f37021', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
+                Khám phá Lập Trình
                 <ArrowRight size={18} />
               </span>
             </Link>
@@ -316,49 +397,25 @@ export default function AiAgentSubpage() {
         </div>
       </section>
 
-      {/* Section 6: Có thể bạn quan tâm */}
-      <section className="beau-section beau-full-viewport">
-        <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">TIN TỨC & SỰ KIỆN NỔI BẬT</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Có thể bạn quan tâm</h2>
-          
-          <div className="beau-news-links-grid">
-            <Link href="/tin-tuc/le-tot-nghiep-fai-2026-vinh-danh-tan-khoa" className="beau-news-link-card" data-reveal data-reveal-delay="0.05">
-              <span className="news-link-date">23 Tháng 6, 2026</span>
-              <h4 className="news-link-title">Lễ tốt nghiệp FAI 2026: Vinh danh 500+ tân khoa xuất sắc từ các phân hệ đào tạo</h4>
-              <span className="news-link-action" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                Đọc tiếp <ArrowRight size={14} />
-              </span>
-            </Link>
-            <Link href="/tin-tuc/dai-nhac-hoi-fai-soundwave-2026" className="beau-news-link-card" data-reveal data-reveal-delay="0.1">
-              <span className="news-link-date">23 Tháng 6, 2026</span>
-              <h4 className="news-link-title">Đại nhạc hội FAI SoundWave 2026 kỷ niệm hành trình kiến tạo công nghệ sáng tạo</h4>
-              <span className="news-link-action" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                Đọc tiếp <ArrowRight size={14} />
-              </span>
-            </Link>
-            <Link href="/tin-tuc/ra-mat-nganh-hoc-ai-agent-tien-phong" className="beau-news-link-card" data-reveal data-reveal-delay="0.15">
-              <span className="news-link-date">10 Tháng 6, 2026</span>
-              <h4 className="news-link-title">FPT Jetking công bố ra mắt ngành học AI Agent tiên phong đón đầu làn sóng nhân sự thông minh</h4>
-              <span className="news-link-action" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                Đọc tiếp <ArrowRight size={14} />
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 7: Bottom CTA Section */}
-      <section className="beau-cta-section beau-full-viewport">
-        <div className="beau-cta-bg-circle" style={{ backgroundColor: '#0066b3' }}></div>
+      {/* Section 6: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      <section className="beau-cta-section">
+        <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Kiến tạo tương lai cùng kỹ nghệ AI</h2>
-          <Link href="/tuyen-sinh#dang-ky" className="beau-cta-btn">
-            Đăng Ký Nhập Học AI Agent
-            <ArrowRight size={24} strokeWidth={2.5} />
-          </Link>
+          <h2 className="beau-cta-title">Trở thành Chuyên gia AI Agent cùng FPT Jetking</h2>
+          <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
+            Nắm vững kỹ nghệ trí tuệ nhân tạo và đón đầu làn sóng cách mạng công nghệ mới nhất.
+          </p>
+          <a href="#dang-ky-ai-agent" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #0066b3 0%, #0284c7 100%)', color: '#ffffff', fontWeight: 800 }}>
+            Đăng Ký Tư Vấn & Nhận Học Bổng
+            <ArrowRight size={22} strokeWidth={2.5} />
+          </a>
         </div>
       </section>
+
+      {/* Section 7: Scholarship Application Form (☀️ LIGHT THEME) */}
+      <div id="dang-ky-ai-agent">
+        <ScholarshipFormSection programName="FPT Jetking AI Agent" />
+      </div>
 
       <Footer />
     </div>

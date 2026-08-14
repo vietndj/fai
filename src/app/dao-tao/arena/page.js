@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
+import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles } from 'lucide-react';
 
 export default function ArenaSubpage() {
   const [activeSection, setActiveSection] = useState(0);
@@ -35,12 +36,12 @@ export default function ArenaSubpage() {
     <div className={`beau-subpage-container theme-arena active-sec-${activeSection}`}>
       <Header />
 
-      {/* Section 0: Hero Section */}
+      {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
       <section className="beau-hero">
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">ARENA</div>
         <div className="container beau-hero-inner" data-reveal>
-          <span className="beau-hero-brand" style={{ backgroundColor: '#ffb600', color: '#ffffff' }}>
+          <span className="beau-hero-brand" style={{ backgroundColor: '#ffb600', color: '#000000', fontWeight: 800 }}>
             FPT ARENA MULTIMEDIA
           </span>
           <h1 className="beau-hero-title">
@@ -81,92 +82,127 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 1: Lộ Trình Đào Tạo */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 1: Lộ Trình Đào Tạo (☀️ LIGHT BRIGHT THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '110px 0 120px 0',
+          borderTop: 'none'
+        }}
+      >
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">LỘ TRÌNH ĐÀO TẠO</span>
-          <h2 className="beau-section-title">4 học kỳ chuyên sâu</h2>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <span style={{ color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
+              LỘ TRÌNH ĐÀO TẠO
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              4 học kỳ chuyên sâu chuẩn quốc tế
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              Giáo trình cập nhật liên tục các xu hướng sáng tạo mới nhất: UI/UX di động, kỹ xảo CGI điện ảnh, diễn hoạt hoạt hình 3D và môi trường thiết kế game chuẩn Unreal.
+            </p>
+          </div>
 
-          <div className="beau-split-grid">
-            {/* Left label */}
-            <div className="beau-split-left">
-              <div className="beau-sticky-label" style={{ color: '#ffb600', opacity: 0.15 }}>AMSP</div>
-              <p className="beau-sticky-desc">
-                Giáo trình cập nhật liên tục các xu hướng sáng tạo mới nhất: UI/UX di động, kỹ xảo CGI điện ảnh, diễn hoạt hoạt hình 3D và môi trường thiết kế game chuẩn Unreal.
+          {/* 4 Semester Cards in Modern Light Theme */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
+            {/* Semester 1 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ color: '#d97706', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                HỌC KỲ 01
+              </span>
+              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
+                Graphic Design — Thiết kế đồ họa thương hiệu
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
+                Đặt nền móng tư duy thẩm mỹ vững chắc. Học viên làm quen với nguyên lý thiết kế, Typography, màu sắc và thành thạo bộ công cụ Photoshop, Illustrator, InDesign.
               </p>
+              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#d97706', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
+                  Môn học trọng tâm
+                </span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Nguyên lý thiết kế & Bố cục thị giác</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Xử lý ảnh kỹ thuật số với Photoshop</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế minh họa với Illustrator</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Dàn trang chuyên nghiệp với InDesign</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Nhận diện Thương hiệu e-Project</li>
+                </ul>
+              </div>
             </div>
 
-            {/* Right semester cards */}
-            <div className="beau-split-right">
-              {/* Semester 1 */}
-              <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#ffb600' }}>Học Kỳ 01</span>
-                <h3 className="sem-title">Graphic Design — Thiết kế đồ họa thương hiệu</h3>
-                <p className="sem-desc">
-                  Đặt nền móng tư duy thẩm mỹ vững chắc. Học viên làm quen với nguyên lý thiết kế, bố cục chữ (Typography), quản lý màu sắc và thành thạo bộ công cụ Photoshop, Illustrator, InDesign để tạo ra các ấn phẩm truyền thông ấn tượng.
-                </p>
-                <span className="sem-modules-title">Môn học trọng tâm</span>
-                <ul className="sem-modules-list">
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Nguyên lý thiết kế & Bố cục thị giác</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Xử lý hình ảnh kỹ thuật số với Adobe Photoshop</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thiết kế minh họa vector bằng Adobe Illustrator</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Nghệ thuật Typography & Thiết kế chữ ứng dụng</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Dàn trang chuyên nghiệp với Adobe InDesign</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Đồ án Nhận diện Thương hiệu e-Project</li>
+            {/* Semester 2 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ color: '#d97706', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                HỌC KỲ 02
+              </span>
+              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
+                Web & UI/UX Design — Thiết kế Web & Trải nghiệm
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
+                Tiến vào thế giới giao diện số tương tác. Nghiên cứu hành vi người dùng, phác thảo luồng trải nghiệm, thiết kế giao diện ứng dụng trên Figma và code HTML5/CSS3/Bootstrap.
+              </p>
+              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#d97706', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
+                  Môn học trọng tâm
+                </span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Tư duy thiết kế trải nghiệm người dùng (UX)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế giao diện UI trên Figma</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Lập trình Front-end với HTML5 & CSS3</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế Website responsive với Bootstrap</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Thiết kế Web & App e-Project</li>
                 </ul>
               </div>
+            </div>
 
-              {/* Semester 2 */}
-              <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#ffb600' }}>Học Kỳ 02</span>
-                <h3 className="sem-title">Web & UI/UX Design — Thiết kế Web & Trải nghiệm người dùng</h3>
-                <p className="sem-desc">
-                  Tiến vào thế giới giao diện số tương tác. Học viên học cách nghiên cứu hành vi người dùng, vẽ phác thảo luồng trải nghiệm, thiết kế giao diện ứng dụng di động trên Figma và code HTML5/CSS3/Bootstrap để đưa giao diện vào thực tế.
-                </p>
-                <span className="sem-modules-title">Môn học trọng tâm</span>
-                <ul className="sem-modules-list">
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Tư duy thiết kế trải nghiệm người dùng (UX Design)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thiết kế giao diện ứng dụng (UI Design) trên Figma</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Lập trình Front-end cơ bản với HTML5 & CSS3</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thiết kế Website responsive với Bootstrap</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Xây dựng nội dung tương tác kỹ thuật số</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Đồ án Thiết kế Web & App tương tác e-Project</li>
+            {/* Semester 3 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ color: '#d97706', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                HỌC KỲ 03
+              </span>
+              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
+                Filmmaking & VFX — Kỹ xảo, Làm phim & Game
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
+                Làm chủ chuyển động và câu chuyện hình ảnh. Quy trình biên kịch, quay phim chuyên nghiệp, hậu kỳ Premiere, kỹ xảo CGI After Effects và thiết kế game 3D.
+              </p>
+              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#d97706', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
+                  Môn học trọng tâm
+                </span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Kỹ thuật quay phim & Kịch bản phân cảnh</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Biên tập video với Adobe Premiere Pro</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Kỹ xảo CGI với After Effects</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết kế Game 3D & Sáng tạo thế giới</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#d97706', flexShrink: 0 }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án Phim ngắn kỹ thuật số e-Project</li>
                 </ul>
               </div>
+            </div>
 
-              {/* Semester 3 */}
-              <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#ffb600' }}>Học Kỳ 03</span>
-                <h3 className="sem-title">Filmmaking & Game Design — Kỹ xảo, Làm phim & Thiết kế Game</h3>
-                <p className="sem-desc">
-                  Làm chủ chuyển động và câu chuyện hình ảnh. Học viên học quy trình biên kịch, quay phim chuyên nghiệp, biên tập hậu kỳ âm thanh hình ảnh bằng Premiere, kỹ xảo CGI phức tạp bằng After Effects và lên ý tưởng thiết kế game 3D.
-                </p>
-                <span className="sem-modules-title">Môn học trọng tâm</span>
-                <ul className="sem-modules-list">
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Kỹ thuật quay phim & Kịch bản phân cảnh hình ảnh</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Biên tập video & hậu kỳ với Adobe Premiere Pro</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Kỹ xảo chuyển động & hiệu ứng hình ảnh (After Effects)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thiết kế âm thanh số và lồng tiếng hậu kỳ</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Nền tảng Thiết kế Game 3D & Sáng tạo thế giới</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Đồ án Phim ngắn kỹ thuật số e-Project</li>
-                </ul>
-              </div>
-
-              {/* Semester 4 */}
-              <div className="beau-sem-card" data-reveal data-reveal-delay="0.1">
-                <span className="sem-num" style={{ color: '#ffb600' }}>Học Kỳ 04</span>
-                <h3 className="sem-title">3D Animation — Hoạt hình 3D chuyên sâu</h3>
-                <p className="sem-desc">
-                  Thổi hồn cho các mô hình kỹ thuật số. Học viên học cách tạo hình nhân vật 3D (Modeling), dựng khung xương (Rigging), tạo chuyển động (Animation) và kết xuất ánh sáng (Rendering) chuyên nghiệp bằng Autodesk Maya.
-                </p>
-                <span className="sem-modules-title">Môn học trọng tâm</span>
-                <ul className="sem-modules-list">
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Dựng hình nhân vật 3D chuyên sâu (3D Modeling)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thiết kế vật liệu & Vẽ bản đồ họa bề mặt nhân vật</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Thiết lập khung xương & khớp chuyển động (Rigging)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Diễn hoạt nhân vật & biểu cảm khuôn mặt 3D</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Kỹ thuật ánh sáng & Kết xuất hình ảnh (Rendering)</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Check size={14} />Đồ án tốt nghiệp phim Hoạt hình 3D hoàn chỉnh</li>
+            {/* Semester 4 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ color: '#d97706', fontWeight: 900, fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                HỌC KỲ 04
+              </span>
+              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)', lineHeight: '1.3' }}>
+                3D Animation — Hoạt hình 3D chuyên sâu
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.65', marginBottom: '24px', flexGrow: 1 }}>
+                Thổi hồn cho các mô hình số. Tạo hình nhân vật 3D (Modeling), dựng khung xương (Rigging), tạo chuyển động (Animation) và kết xuất ánh sáng (Rendering) với Autodesk Maya.
+              </p>
+              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#d97706', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '12px' }}>
+                  Môn học trọng tâm
+                </span>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Dựng hình nhân vật 3D (3D Modeling)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Thiết lập khung xương chuyển động (Rigging)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Diễn hoạt nhân vật & biểu cảm 3D</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Kỹ thuật ánh sáng & Kết xuất (Rendering)</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#d97706', flexShrink: 0 }} />Đồ án tốt nghiệp Hoạt hình 3D hoàn chỉnh</li>
                 </ul>
               </div>
             </div>
@@ -174,89 +210,116 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 2: Công Cụ & Công Nghệ */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 2: Công Cụ & Công Nghệ (🌙 DARK TECH THEME) */}
+      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">CREATIVE TOOLS</span>
-          <h2 className="beau-section-title">Làm chủ công cụ sáng tạo</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#ffb600' }}>CREATIVE TOOLS</span>
+            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Làm chủ công cụ sáng tạo đỉnh cao</h2>
+            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              Trang bị toàn bộ hệ sinh thái phần mềm tiêu chuẩn từ các hãng công nghệ hàng đầu thế giới
+            </p>
+          </div>
 
           <div className="beau-tech-grid">
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.05">
-              <span className="beau-tech-icon">Ps</span>
+              <span className="beau-tech-icon" style={{ color: '#31a8ff' }}>Ps</span>
               <span className="beau-tech-name">Adobe Photoshop</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.1">
-              <span className="beau-tech-icon">Ai</span>
+              <span className="beau-tech-icon" style={{ color: '#ff9a00' }}>Ai</span>
               <span className="beau-tech-name">Adobe Illustrator</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.15">
-              <span className="beau-tech-icon">Fg</span>
+              <span className="beau-tech-icon" style={{ color: '#a259ff' }}>Fg</span>
               <span className="beau-tech-name">Figma UI/UX</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.2">
-              <span className="beau-tech-icon">Pr</span>
+              <span className="beau-tech-icon" style={{ color: '#ea77ff' }}>Pr</span>
               <span className="beau-tech-name">Adobe Premiere Pro</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.25">
-              <span className="beau-tech-icon">Ae</span>
+              <span className="beau-tech-icon" style={{ color: '#9999ff' }}>Ae</span>
               <span className="beau-tech-name">Adobe After Effects</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.3">
-              <span className="beau-tech-icon">My</span>
+              <span className="beau-tech-icon" style={{ color: '#00d2ff' }}>My</span>
               <span className="beau-tech-name">Autodesk Maya</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.35">
-              <span className="beau-tech-icon">Bl</span>
+              <span className="beau-tech-icon" style={{ color: '#e87d0d' }}>Bl</span>
               <span className="beau-tech-name">Blender 3D</span>
             </div>
             <div className="beau-tech-item" data-reveal data-reveal-delay="0.4">
-              <span className="beau-tech-icon">UE</span>
+              <span className="beau-tech-icon" style={{ color: '#ffffff' }}>UE</span>
               <span className="beau-tech-name">Unreal Engine</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 3: Cơ Hội Nghề Nghiệp */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 3: Cơ Hội Nghề Nghiệp (☀️ LIGHT BRIGHT THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '100px 0 110px 0',
+          borderTop: 'none'
+        }}
+      >
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">CAREERS</span>
-          <h2 className="beau-section-title">Vị trí việc làm hậu tốt nghiệp</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span style={{ color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
+              CAREERS
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Vị trí việc làm hậu tốt nghiệp
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '650px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              Mở rộng cánh cửa vào các Agency, Production House, Studio Game và Tập đoàn công nghệ hàng đầu
+            </p>
+          </div>
 
           <div className="beau-careers-grid">
-            <div className="beau-career-card" style={{ borderLeftColor: '#ffb600' }} data-reveal data-reveal-delay="0.05">
-              <h3 className="career-title">Graphic Designer</h3>
-              <p className="career-desc">Thiết kế bộ nhận diện thương hiệu sản phẩm, bao bì nhãn mác và chiến dịch quảng bá truyền thông cho doanh nghiệp.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Graphic Designer</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Thiết kế bộ nhận diện thương hiệu sản phẩm, bao bì nhãn mác và chiến dịch quảng bá truyền thông cho doanh nghiệp.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#ffb600' }} data-reveal data-reveal-delay="0.1">
-              <h3 className="career-title">UI/UX Designer</h3>
-              <p className="career-desc">Nghiên cứu trải nghiệm và thiết kế giao diện trực quan cho các ứng dụng di động, website và phần mềm số.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>UI/UX Designer</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Nghiên cứu trải nghiệm và thiết kế giao diện trực quan cho các ứng dụng di động, website và phần mềm số.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#ffb600' }} data-reveal data-reveal-delay="0.15">
-              <h3 className="career-title">Motion Graphic Artist</h3>
-              <p className="career-desc">Sáng tạo video đồ hoạ động phục vụ các chiến dịch quảng cáo mạng xã hội, intro phim và truyền thông số.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Motion Graphic Artist</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Sáng tạo video đồ hoạ động phục vụ các chiến dịch quảng cáo mạng xã hội, intro phim và truyền thông số.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#ffb600' }} data-reveal data-reveal-delay="0.2">
-              <h3 className="career-title">3D Character Animator</h3>
-              <p className="career-desc">Thiết lập chuyển động nhân vật 3D, biểu cảm gương mặt chuyên sâu cho các dự án hoạt hình và phim quảng cáo.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>3D Character Animator</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Thiết lập chuyển động nhân vật 3D, biểu cảm gương mặt chuyên sâu cho các dự án hoạt hình và phim quảng cáo.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#ffb600' }} data-reveal data-reveal-delay="0.25">
-              <h3 className="career-title">Video Editor & VFX Specialist</h3>
-              <p className="career-desc">Biên tập dàn dựng phim, xử lý kỹ xảo CGI hậu kỳ cho các thước phim ngắn quảng cáo, MV và điện ảnh chuyên nghiệp.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Video Editor & VFX Specialist</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Biên tập dàn dựng phim, xử lý kỹ xảo CGI hậu kỳ cho các thước phim ngắn quảng cáo, MV và điện ảnh chuyên nghiệp.</p>
             </div>
-            <div className="beau-career-card" style={{ borderLeftColor: '#ffb600' }} data-reveal data-reveal-delay="0.3">
-              <h3 className="career-title">Game Environment Artist</h3>
-              <p className="career-desc">Thiết kế bối cảnh không gian 3D, kiến trúc môi trường, bản đồ và ánh sáng cho các dự án game đa nền tảng.</p>
+            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
+              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Game Environment Artist</h3>
+              <p className="career-desc" style={{ color: '#64748b' }}>Thiết kế bối cảnh không gian 3D, kiến trúc môi trường, bản đồ và ánh sáng cho các dự án game đa nền tảng.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4: Ưu đãi tuyển sinh đặc quyền (Split section) */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 4: Ưu đãi tuyển sinh đặc quyền (🌙 DARK TECH THEME) */}
+      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">HỌC BỔNG & CHÍNH SÁCH</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Ưu đãi tuyển sinh đặc quyền</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#ffb600' }}>HỌC BỔNG & CHÍNH SÁCH</span>
+            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Ưu đãi tuyển sinh đặc quyền Arena</h2>
+            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              Đồng hành cùng tài năng sáng tạo trẻ chinh phục ước mơ nghệ thuật đa phương tiện
+            </p>
+          </div>
           
           <div className="beau-incentives-grid">
             <div className="beau-incentive-card" style={{ '--accent': '#ffb600' }} data-reveal data-reveal-delay="0.05">
@@ -278,36 +341,50 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 5: Chuyển hướng nhanh ngành học (Split section) */}
-      <section className="beau-section beau-full-viewport">
+      {/* Section 5: Chuyển hướng nhanh ngành học & Tin tức (☀️ LIGHT BRIGHT THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '100px 0 110px 0',
+          borderTop: 'none'
+        }}
+      >
         <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">KHÁM PHÁ CÁC NGÀNH HỌC KHÁC</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Chuyển hướng nhanh ngành học</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span style={{ color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
+              KHÁM PHÁ CÁC NGÀNH HỌC KHÁC
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Hệ sinh thái đào tạo FPT
+            </h2>
+          </div>
           
           <div className="beau-other-programs-grid">
-            <Link href="/dao-tao/aptech" className="beau-other-program-card" data-reveal data-reveal-delay="0.05">
+            <Link href="/dao-tao/aptech/2-nam" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.05">
               <div>
-                <span className="other-prog-tag" style={{ color: '#1a6ed8' }}>✦ APTECH</span>
-                <h3 className="other-prog-title">Software Engineering &amp; Technology</h3>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Lập trình viên Quốc tế ADSE — Làm chủ ngôn ngữ Java, Python, lập trình Web/Mobile Fullstack, điện toán đám mây và AI/ML.
+                <span className="other-prog-tag" style={{ color: '#f37021' }}>✦ APTECH</span>
+                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Software Engineering & AI</h3>
+                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                  Lập trình viên Quốc tế ACCP AI — Làm chủ ngôn ngữ Java, Python, Fullstack Web/Mobile, Điện toán đám mây và Vibe Coding.
                 </p>
               </div>
-              <span className="other-prog-link" style={{ color: '#1a6ed8', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <span className="other-prog-link" style={{ color: '#f37021', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
                 Khám phá Công Nghệ
                 <ArrowRight size={18} />
               </span>
             </Link>
 
-            <Link href="/dao-tao/skillking" className="beau-other-program-card" data-reveal data-reveal-delay="0.1">
+            <Link href="/dao-tao/skillking" className="beau-other-program-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }} data-reveal data-reveal-delay="0.1">
               <div>
-                <span className="other-prog-tag" style={{ color: '#16a34a' }}>◈ SKILLKING</span>
-                <h3 className="other-prog-title">Digital Marketing & Growth</h3>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                  Chiến lược tiếp thị số thực chiến 100% — Tối ưu SEO, Google/Meta Ads, và quản trị chiến dịch tổng thể.
+                <span className="other-prog-tag" style={{ color: '#09529c' }}>◈ SKILLKING</span>
+                <h3 className="other-prog-title" style={{ color: 'var(--secondary)' }}>Digital Marketing & Growth</h3>
+                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                  Chiến lược tiếp thị số thực chiến 100% — Tối ưu SEO, Google/Meta Ads, Data Analytics và quản trị chiến dịch tổng thể.
                 </p>
               </div>
-              <span className="other-prog-link" style={{ color: '#16a34a', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <span className="other-prog-link" style={{ color: '#09529c', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}>
                 Khám phá Tiếp Thị Số
                 <ArrowRight size={18} />
               </span>
@@ -316,49 +393,25 @@ export default function ArenaSubpage() {
         </div>
       </section>
 
-      {/* Section 6: Có thể bạn quan tâm (Split section) */}
-      <section className="beau-section beau-full-viewport">
-        <div className="container" data-reveal>
-          <span className="beau-section-eyebrow">TIN TỨC & SỰ KIỆN NỔI BẬT</span>
-          <h2 className="beau-section-title" style={{ marginBottom: '60px' }}>Có thể bạn quan tâm</h2>
-          
-          <div className="beau-news-links-grid">
-            <Link href="/tin-tuc/le-tot-nghiep-fai-2026-vinh-danh-tan-khoa" className="beau-news-link-card" data-reveal data-reveal-delay="0.05">
-              <span className="news-link-date">23 Tháng 6, 2026</span>
-              <h4 className="news-link-title">Lễ tốt nghiệp FAI 2026: Vinh danh 500+ tân khoa xuất sắc từ các phân hệ đào tạo</h4>
-              <span className="news-link-action" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                Đọc tiếp <ArrowRight size={14} />
-              </span>
-            </Link>
-            <Link href="/tin-tuc/trien-lam-do-an-arena-multimedia" className="beau-news-link-card" data-reveal data-reveal-delay="0.1">
-              <span className="news-link-date">18 Tháng 6, 2026</span>
-              <h4 className="news-link-title">Triển lãm đồ án Arena Multimedia tốt nghiệp thu hút hơn 30 doanh nghiệp săn đón</h4>
-              <span className="news-link-action" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                Đọc tiếp <ArrowRight size={14} />
-              </span>
-            </Link>
-            <Link href="/tin-tuc/dai-nhac-hoi-fai-soundwave-2026" className="beau-news-link-card" data-reveal data-reveal-delay="0.15">
-              <span className="news-link-date">23 Tháng 6, 2026</span>
-              <h4 className="news-link-title">Đại nhạc hội FAI SoundWave 2026 kỷ niệm hành trình kiến tạo công nghệ sáng tạo</h4>
-              <span className="news-link-action" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                Đọc tiếp <ArrowRight size={14} />
-              </span>
-            </Link>
-          </div>
+      {/* Section 6: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      <section className="beau-cta-section">
+        <div className="beau-cta-bg-circle"></div>
+        <div className="container beau-cta-inner" data-reveal>
+          <h2 className="beau-cta-title">Khai phóng tư duy sáng tạo cùng FPT Arena</h2>
+          <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
+            Nắm bắt cơ hội trở thành nhà sáng tạo nghệ thuật đa phương tiện chuyên nghiệp ngay hôm nay.
+          </p>
+          <a href="#dang-ky-arena" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #ffb600 0%, #d97706 100%)', color: '#000000', fontWeight: 800 }}>
+            Đăng Ký Tư Vấn & Nhận Học Bổng
+            <ArrowRight size={22} strokeWidth={2.5} />
+          </a>
         </div>
       </section>
 
-      {/* Section 7: Bottom CTA Section */}
-      <section className="beau-cta-section beau-full-viewport">
-        <div className="beau-cta-bg-circle"></div>
-        <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Khai phóng tư duy sáng tạo</h2>
-          <Link href="/tuyen-sinh#dang-ky" className="beau-cta-btn">
-            Đăng Ký Nhập Học Arena
-            <ArrowRight size={24} strokeWidth={2.5} />
-          </Link>
-        </div>
-      </section>
+      {/* Section 7: Scholarship Application Form (☀️ LIGHT THEME) */}
+      <div id="dang-ky-arena">
+        <ScholarshipFormSection programName="FPT Arena Multimedia" />
+      </div>
 
       <Footer />
     </div>
