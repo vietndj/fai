@@ -8,7 +8,7 @@ import ArenaProgramSwitcher from '@/components/ArenaProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check, Sparkles, Layers, Video, Box, Palette, Clock } from 'lucide-react';
+import { ArrowRight, Check, Sparkles, Layers, Video, Box, Palette, Clock, Award, Briefcase } from 'lucide-react';
 
 export default function Arena618ThangPage() {
   const [activeSection, setActiveSection] = useState(0);
@@ -206,7 +206,90 @@ export default function Arena618ThangPage() {
         </div>
       </section>
 
-      {/* Section 3: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      {/* Section 3: TẠI SAO NÊN CHỌN FPT ARENA? (☀️ LIGHT WARM CREAM THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '100px 0 120px 0' 
+        }}
+      >
+        <div className="container" data-reveal>
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              ĐẶC QUYỀN ĐÀO TẠO
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Tại sao nên chọn khóa học chuyên sâu FPT Arena?
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
+              Rút ngắn thời gian, tập trung tối đa vào kỹ năng thực chiến và hoàn thiện Portfolio ấn tượng để đi làm ngay sau từng kỳ học.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Palette size={32} style={{ color: '#d97706' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Thời gian linh hoạt, tối ưu chi phí
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Lộ trình từ 6 đến 18 tháng được module hóa giúp bạn dễ dàng lựa chọn đúng chuyên ngành mục tiêu mà không mất thời gian học dàn trải.
+              </p>
+            </div>
+
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Award size={32} style={{ color: '#d97706' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Chứng chỉ chuyên ngành Quốc tế
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Hoàn thành mỗi chuyên ngành học viên được cấp chứng chỉ quốc tế tương ứng từ tập đoàn Aptech Ấn Độ.
+              </p>
+            </div>
+
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#d97706' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Portfolio đồ án chuẩn Studio
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Sở hữu bộ sản phẩm thiết kế 2D/3D thực tế hoàn chỉnh dưới sự hướng dẫn 1:1 của các giảng viên chuyên gia đầu ngành.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Bottom CTA Section (🌙 DARK CYBER THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>

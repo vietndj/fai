@@ -447,7 +447,90 @@ export default function SkillkingSubpage() {
         </div>
       </section>
 
-      {/* Section 3: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      {/* Section 3: TẠI SAO NÊN CHỌN FPT SKILLKING? (☀️ LIGHT WARM CREAM THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '100px 0 120px 0' 
+        }}
+      >
+        <div className="container" data-reveal>
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#0284c7', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              ĐẶC QUYỀN ĐÀO TẠO
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Tại sao học Digital Marketing nên chọn FPT Skillking?
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
+              FPT Skillking là đơn vị đầu tiên tại Việt Nam đào tạo Digital Marketing chuyên sâu theo chuẩn quốc tế kết hợp cùng trí tuệ nhân tạo (AI), mang đến cho bạn lộ trình thực chiến toàn diện nhất.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Sparkles size={32} style={{ color: '#0284c7' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Phương pháp đào tạo LXP &amp; AI hàng đầu
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Học tập tương tác đa chiều qua nền tảng Learning Experience Platform (LXP), ứng dụng sâu AI trong nghiên cứu thị trường, sáng tạo content và tối ưu chiến dịch.
+              </p>
+            </div>
+
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Award size={32} style={{ color: '#0284c7' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Bằng cấp Quốc tế Jetking Ấn Độ
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Tốt nghiệp nhận bằng Advanced Diploma in Digital Marketing danh giá từ Jetking Ấn Độ – tổ chức đào tạo CNTT &amp; Marketing hàng đầu thế giới.
+              </p>
+            </div>
+
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#0284c7' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Cam kết hỗ trợ việc làm 100%
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Kết nối mạng lưới hơn 500+ doanh nghiệp, agency và tập đoàn đối tác của FPT, đảm bảo cơ hội thực tập và việc làm thu nhập cao ngay sau tốt nghiệp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Bottom CTA Section (🌙 DARK CYBER THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>

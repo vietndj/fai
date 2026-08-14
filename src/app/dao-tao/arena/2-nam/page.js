@@ -443,111 +443,90 @@ export default function Arena2NamPage() {
         </div>
       </section>
 
-      {/* Section 3: Công Cụ & Công Nghệ (🌙 DARK TECH THEME) */}
-      <section className="beau-section" style={{ padding: '90px 0 100px 0' }}>
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '45px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#ffb600' }}>CREATIVE TOOLS</span>
-            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Làm chủ công cụ sáng tạo đỉnh cao</h2>
-          </div>
-
-          <div className="beau-tech-grid">
-            <div className="beau-tech-item"><span className="beau-tech-icon" style={{ color: '#31a8ff' }}>Ps</span><span className="beau-tech-name">Adobe Photoshop</span></div>
-            <div className="beau-tech-item"><span className="beau-tech-icon" style={{ color: '#ff9a00' }}>Ai</span><span className="beau-tech-name">Adobe Illustrator</span></div>
-            <div className="beau-tech-item"><span className="beau-tech-icon" style={{ color: '#a259ff' }}>Fg</span><span className="beau-tech-name">Figma UI/UX</span></div>
-            <div className="beau-tech-item"><span className="beau-tech-icon" style={{ color: '#ea77ff' }}>Pr</span><span className="beau-tech-name">Adobe Premiere</span></div>
-            <div className="beau-tech-item"><span className="beau-tech-icon" style={{ color: '#9999ff' }}>Ae</span><span className="beau-tech-name">After Effects</span></div>
-            <div className="beau-tech-item"><span className="beau-tech-icon" style={{ color: '#00d2ff' }}>My</span><span className="beau-tech-name">Autodesk Maya</span></div>
-            <div className="beau-tech-item"><span className="beau-tech-icon" style={{ color: '#e87d0d' }}>Bl</span><span className="beau-tech-name">Blender 3D</span></div>
-            <div className="beau-tech-item"><span className="beau-tech-icon" style={{ color: '#ffffff' }}>UE</span><span className="beau-tech-name">Unreal Engine</span></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: Cơ Hội Nghề Nghiệp (☀️ LIGHT BRIGHT THEME) */}
+      {/* Section 3: TẠI SAO NÊN CHỌN FPT ARENA? (☀️ LIGHT WARM CREAM THEME) */}
       <section 
         className="beau-section"
         style={{ 
           backgroundColor: '#F8FAFC', 
           color: '#0f172a',
-          padding: '100px 0 110px 0',
-          borderTop: 'none'
+          padding: '100px 0 120px 0' 
         }}
       >
         <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span style={{ color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              CAREERS
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              ĐẶC QUYỀN ĐÀO TẠO
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Vị trí việc làm sau khi tốt nghiệp
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Tại sao học Thiết kế Mỹ thuật nên chọn FPT Arena?
             </h2>
-            <p style={{ color: '#64748b', maxWidth: '650px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Mở rộng cánh cửa vào các Agency, Production House, Studio Game và Tập đoàn công nghệ hàng đầu
+            <p style={{ color: '#64748b', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
+              Tiên phong 22 năm đào tạo Mỹ thuật Đa phương tiện tại Việt Nam, FPT Arena Multimedia sở hữu chương trình AMSP chuẩn quốc tế toàn diện nhất thế giới kết hợp ứng dụng AI sáng tạo.
             </p>
           </div>
 
-          <div className="beau-careers-grid">
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Graphic Designer</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Thiết kế bộ nhận diện thương hiệu sản phẩm, bao bì nhãn mác và chiến dịch quảng bá truyền thông cho doanh nghiệp.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Palette size={32} style={{ color: '#d97706' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                22 năm tiên phong đào tạo Multimedia
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Đơn vị đầu tiên tại Việt Nam đưa khái niệm Multimedia vào giảng dạy với mạng lưới hơn 20.000 cựu sinh viên giữ vị trí chủ chốt trong ngành sáng tạo.
+              </p>
             </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>UI/UX Designer</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Nghiên cứu trải nghiệm và thiết kế giao diện trực quan cho các ứng dụng di động, website và phần mềm số.</p>
+
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Award size={32} style={{ color: '#d97706' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Bằng Quốc tế AMSP &amp; Tích hợp AI
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Giáo trình cập nhật liên tục từ Aptech Ấn Độ, làm chủ trọn vẹn từ 2D Graphic, UI/UX, Kỹ xảo VFX đến 3D Animation và Game Unreal Engine.
+              </p>
             </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Motion Graphic Artist</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Sáng tạo video đồ hoạ động phục vụ các chiến dịch quảng cáo mạng xã hội, intro phim và truyền thông số.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>3D Character Animator</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Thiết lập chuyển động nhân vật 3D, biểu cảm gương mặt chuyên sâu cho các dự án hoạt hình và phim quảng cáo.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Video Editor &amp; VFX Specialist</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Biên tập dàn dựng phim, xử lý kỹ xảo CGI hậu kỳ cho các thước phim ngắn quảng cáo, MV và điện ảnh chuyên nghiệp.</p>
-            </div>
-            <div className="beau-career-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderLeft: '5px solid #ffb600', boxShadow: '0 8px 25px rgba(0,0,0,0.02)' }}>
-              <h3 className="career-title" style={{ color: 'var(--secondary)' }}>Game Environment Artist</h3>
-              <p className="career-desc" style={{ color: '#64748b' }}>Thiết kế bối cảnh không gian 3D, kiến trúc môi trường, bản đồ và ánh sáng cho các dự án game đa nền tảng.</p>
+
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#d97706' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Showcase &amp; Kết nối việc làm Studio
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Triển lãm đồ án định kỳ và ngày hội tuyển dụng kết nối trực tiếp với hơn 300+ Agency, Studio Game và Production House hàng đầu.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 5: Ưu đãi tuyển sinh đặc quyền (🌙 DARK TECH THEME) */}
-      <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
-        <div className="container" data-reveal>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#ffb600' }}>HỌC BỔNG &amp; CHÍNH SÁCH</span>
-            <h2 className="beau-section-title" style={{ marginBottom: '10px' }}>Ưu đãi tuyển sinh đặc quyền Arena</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Đồng hành cùng tài năng sáng tạo trẻ chinh phục ước mơ nghệ thuật đa phương tiện
-            </p>
-          </div>
-          
-          <div className="beau-incentives-grid">
-            <div className="beau-incentive-card" style={{ '--accent': '#ffb600' }} data-reveal data-reveal-delay="0.05">
-              <span className="incentive-badge">HỌC BỔNG</span>
-              <h3 className="incentive-value">Lên tới 50%</h3>
-              <p className="incentive-desc">Học bổng Tài năng sáng tạo hỗ trợ thế hệ nhà thiết kế trẻ phát triển tư duy nghệ thuật vượt trội.</p>
-            </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#ffb600' }} data-reveal data-reveal-delay="0.1">
-              <span className="incentive-badge">NHẬP HỌC SỚM</span>
-              <h3 className="incentive-value">Tặng Wacom</h3>
-              <p className="incentive-desc">Ưu đãi tặng ngay Bảng vẽ Wacom thế hệ mới cho học viên hoàn thành thủ tục nhập học sớm đợt này.</p>
-            </div>
-            <div className="beau-incentive-card" style={{ '--accent': '#ffb600' }} data-reveal data-reveal-delay="0.15">
-              <span className="incentive-badge">TRẢ GÓP</span>
-              <h3 className="incentive-value">0% Lãi Suất</h3>
-              <p className="incentive-desc">Hỗ trợ chia nhỏ học phí đóng theo từng tháng qua thẻ tín dụng ngân hàng đối tác.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 6: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      {/* Section 4: Bottom CTA Section (🌙 DARK CYBER THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
@@ -562,7 +541,7 @@ export default function Arena2NamPage() {
         </div>
       </section>
 
-      {/* Section 7: Scholarship Application Form (☀️ LIGHT THEME) */}
+      {/* Section 5: Scholarship Application Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-arena-2nam">
         <ScholarshipFormSection programName="FPT Arena Multimedia 2 Năm" />
       </div>

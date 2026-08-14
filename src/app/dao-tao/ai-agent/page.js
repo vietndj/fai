@@ -447,7 +447,90 @@ export default function AiAgentSubpage() {
         </div>
       </section>
 
-      {/* Section 3: Bottom CTA Section (🌙 DARK CYBER THEME) */}
+      {/* Section 3: TẠI SAO NÊN CHỌN FPT JETKING? (☀️ LIGHT WARM CREAM THEME) */}
+      <section 
+        className="beau-section"
+        style={{ 
+          backgroundColor: '#F8FAFC', 
+          color: '#0f172a',
+          padding: '100px 0 120px 0' 
+        }}
+      >
+        <div className="container" data-reveal>
+          <div style={{ textAlign: 'center', marginBottom: '54px' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              ĐẶC QUYỀN ĐÀO TẠO
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              Tại sao học AI Agent nên chọn FPT Jetking?
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
+              Chương trình tiên phong tại Việt Nam đào tạo bài bản về kiến trúc tác tử AI tự hành (Autonomous Multi-Agent), kỹ thuật RAG doanh nghiệp và tối ưu hóa các mô hình ngôn ngữ lớn (LLM).
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Bot size={32} style={{ color: '#f37021' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Đón đầu kỷ nguyên Autonomous AI Agent
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Học tập và làm chủ các framework tác tử hàng đầu thế giới: CrewAI, LangGraph, AutoGen, Semantic Kernel và giao thức MCP.
+              </p>
+            </div>
+
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Brain size={32} style={{ color: '#f37021' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Hạ tầng GPU &amp; Cloud AI Lab
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Thực hành huấn luyện fine-tuning mô hình ngôn ngữ lớn (LoRA, QLoRA) và xây dựng hệ thống Vector DB RAG trên hạ tầng server AI hiện đại.
+              </p>
+            </div>
+
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#f37021' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Cơ hội việc làm AI đỉnh cao
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Kết nối trực tiếp vào các trung tâm AI của FPT Software, FPT Smart Cloud và các tập đoàn công nghệ hàng đầu với mức đãi ngộ hấp dẫn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Bottom CTA Section (🌙 DARK CYBER THEME) */}
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
