@@ -495,6 +495,165 @@ export default function VeFai() {
               </div>
 
             </div>
+
+            {/* SUB-SECTION: Tầm Nhìn & Mô hình I - G - S - M */}
+            <div 
+              style={{ 
+                marginTop: '56px', 
+                paddingTop: '48px', 
+                borderTop: '1px solid rgba(13, 33, 55, 0.08)' 
+              }}
+            >
+              {/* Vision Banner */}
+              <div 
+                style={{ 
+                  background: 'linear-gradient(135deg, rgba(13, 33, 55, 0.95) 0%, rgba(22, 43, 74, 0.98) 100%)',
+                  borderRadius: '24px',
+                  padding: '36px 40px',
+                  color: '#ffffff',
+                  marginBottom: '30px',
+                  boxShadow: '0 15px 40px rgba(0,0,0,0.08)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '24px',
+                  flexWrap: 'wrap'
+                }}
+              >
+                <div style={{ flex: '1 1 500px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '0.8rem', fontWeight: 900, color: '#f37021', backgroundColor: 'rgba(243, 112, 33, 0.2)', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                      Tầm nhìn FPT Education
+                    </span>
+                  </div>
+                  <h3 style={{ fontSize: 'clamp(1.2rem, 2.3vw, 1.55rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.5', margin: 0 }}>
+                    “Trở thành một hệ thống giáo dục Mega mang tính quốc tế, đáp ứng nhu cầu của xã hội và dựa trên các công nghệ đào tạo tiên tiến nhất.”
+                  </h3>
+                </div>
+              </div>
+
+              {/* 4 Pillars Grid (I - G - S - M) */}
+              <div 
+                style={{ 
+                  display: 'grid', 
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', 
+                  gap: '20px' 
+                }}
+              >
+                {/* Pillar I */}
+                <div 
+                  className="value-card-wrapper" 
+                  style={{ 
+                    backgroundColor: '#ffffff', 
+                    border: '1px solid rgba(232, 116, 30, 0.15)', 
+                    borderRadius: '18px', 
+                    padding: '28px 24px', 
+                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', backgroundColor: 'rgba(232, 116, 30, 0.12)', color: '#f37021', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
+                      I
+                    </div>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      Pillar 01
+                    </span>
+                  </div>
+                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 6px 0' }}>
+                    Industry Relevant
+                  </h4>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', margin: 0 }}>
+                    Gắn liền với nhu cầu thực tiễn của doanh nghiệp và ngành công nghiệp
+                  </p>
+                </div>
+
+                {/* Pillar G */}
+                <div 
+                  className="value-card-wrapper" 
+                  style={{ 
+                    backgroundColor: '#ffffff', 
+                    border: '1px solid rgba(2, 132, 199, 0.15)', 
+                    borderRadius: '18px', 
+                    padding: '28px 24px', 
+                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', backgroundColor: 'rgba(2, 132, 199, 0.12)', color: '#0284c7', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
+                      G
+                    </div>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      Pillar 02
+                    </span>
+                  </div>
+                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 6px 0' }}>
+                    Global
+                  </h4>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', margin: 0 }}>
+                    Mang tính quốc tế, hội nhập và chuẩn mực đào tạo toàn cầu
+                  </p>
+                </div>
+
+                {/* Pillar S */}
+                <div 
+                  className="value-card-wrapper" 
+                  style={{ 
+                    backgroundColor: '#ffffff', 
+                    border: '1px solid rgba(22, 163, 74, 0.15)', 
+                    borderRadius: '18px', 
+                    padding: '28px 24px', 
+                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', backgroundColor: 'rgba(22, 163, 74, 0.12)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
+                      S
+                    </div>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      Pillar 03
+                    </span>
+                  </div>
+                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 6px 0' }}>
+                    Smart Education
+                  </h4>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', margin: 0 }}>
+                    Giáo dục thông minh dựa trên các công nghệ đào tạo tiên tiến nhất
+                  </p>
+                </div>
+
+                {/* Pillar M */}
+                <div 
+                  className="value-card-wrapper" 
+                  style={{ 
+                    backgroundColor: '#ffffff', 
+                    border: '1px solid rgba(147, 51, 234, 0.15)', 
+                    borderRadius: '18px', 
+                    padding: '28px 24px', 
+                    boxShadow: '0 8px 25px rgba(0,0,0,0.02)',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '14px' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', backgroundColor: 'rgba(147, 51, 234, 0.12)', color: '#9333ea', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', fontWeight: 900 }}>
+                      M
+                    </div>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      Pillar 04
+                    </span>
+                  </div>
+                  <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 6px 0' }}>
+                    Mega
+                  </h4>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', margin: 0 }}>
+                    Hệ thống giáo dục Mega quy mô rộng lớn, đa ngành và đa nền tảng
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </section>
 
