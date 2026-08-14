@@ -6,7 +6,7 @@ import ParticleCanvas from './ParticleCanvas';
 import { Trophy, Globe, Briefcase, Handshake, ArrowRight } from 'lucide-react';
 
 const highlights = [
-  { icon: Trophy, text: 'Top 1 đào tạo CNTT\ntư nhân Việt Nam' },
+  { icon: Trophy, text: 'Hệ thống đào tạo chuẩn quốc tế,\nuy tín tại Việt Nam' },
   { icon: Globe, text: 'Chứng chỉ được công nhận\ntại 40+ quốc gia' },
   { icon: Briefcase, text: '97% sinh viên có việc làm\ntrước khi tốt nghiệp' },
   { icon: Handshake, text: '1000+ doanh nghiệp\nký kết tuyển dụng' },
