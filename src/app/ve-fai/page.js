@@ -357,7 +357,7 @@ export default function VeFai() {
           </div>
         </section>
 
-        {/* SECTION 3: Sứ Mệnh, Tầm Nhìn & Văn Hoá - Minimalist Flat Luxury Theme */}
+        {/* SECTION 3: Sứ Mệnh, Tầm Nhìn & Văn Hoá - Minimalist Flat All-Orange Theme */}
         <section 
           className="about-values-section" 
           style={{ 
@@ -370,7 +370,7 @@ export default function VeFai() {
           <div className="container">
             {/* Main Section Header */}
             <div style={{ textAlign: 'center', maxWidth: '860px', margin: '0 auto 72px auto' }}>
-              <span style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '0.16em' }}>
+              <span style={{ color: '#f37021', fontWeight: 800, fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '0.16em' }}>
                 TỔ CHỨC GIÁO DỤC FPT
               </span>
               <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '14px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
@@ -381,7 +381,7 @@ export default function VeFai() {
               </p>
             </div>
 
-            {/* 3 Top Columns: Sứ mệnh, Triết lí, Văn hoá (FLAT DESIGN - NO HEAVY FRAMES) */}
+            {/* 3 Top Columns: Sứ mệnh, Triết lí, Văn hoá (NO ICONS, ALL ORANGE TITLES, MINIMALIST FLAT) */}
             <div 
               style={{ 
                 display: 'grid', 
@@ -392,15 +392,12 @@ export default function VeFai() {
             >
               {/* Sứ mệnh Column */}
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                  <div style={{ width: '42px', height: '42px', borderRadius: '12px', backgroundColor: 'rgba(232, 116, 30, 0.12)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Target size={22} />
-                  </div>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                    Sứ mệnh
+                <div style={{ marginBottom: '14px' }}>
+                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#f37021', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+                    SỨ MỆNH
                   </span>
                 </div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f37021', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
                   Sứ mệnh FPT Education
                 </h3>
                 <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: '1.8', margin: 0 }}>
@@ -410,15 +407,12 @@ export default function VeFai() {
 
               {/* Triết lí giáo dục Column */}
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                  <div style={{ width: '42px', height: '42px', borderRadius: '12px', backgroundColor: 'rgba(201, 151, 44, 0.12)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <GraduationCap size={22} />
-                  </div>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                    Triết lí giáo dục
+                <div style={{ marginBottom: '14px' }}>
+                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#f37021', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+                    TRIẾT LÍ GIÁO DỤC
                   </span>
                 </div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f37021', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
                   Triết lí giáo dục
                 </h3>
                 <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: '1.8', margin: 0 }}>
@@ -428,35 +422,32 @@ export default function VeFai() {
 
               {/* Văn hoá Column */}
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                  <div style={{ width: '42px', height: '42px', borderRadius: '12px', backgroundColor: 'rgba(22, 163, 74, 0.12)', color: '#16a34a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Sparkles size={22} />
-                  </div>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#16a34a', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                    Văn hoá FPT
+                <div style={{ marginBottom: '14px' }}>
+                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#f37021', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+                    VĂN HOÁ FPT
                   </span>
                 </div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f37021', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
                   Văn hoá
                 </h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   <li style={{ fontSize: '0.96rem', color: '#475569', lineHeight: '1.6', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                    <span style={{ color: '#16a34a', fontWeight: 800, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
+                    <span style={{ color: '#f37021', fontWeight: 800, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
                     <span><strong>Tôn đồng đổi chí gương sáng:</strong> (Tôn trọng, Đồng đội, Đổi mới, Chí công, Gương mẫu, Sáng tạo)</span>
                   </li>
                   <li style={{ fontSize: '0.96rem', color: '#475569', lineHeight: '1.6', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                    <span style={{ color: '#16a34a', fontWeight: 800, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
+                    <span style={{ color: '#f37021', fontWeight: 800, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
                     <span><strong>Học thật, thi thật, thành công thật</strong></span>
                   </li>
                   <li style={{ fontSize: '0.96rem', color: '#475569', lineHeight: '1.6', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                    <span style={{ color: '#16a34a', fontWeight: 800, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
+                    <span style={{ color: '#f37021', fontWeight: 800, fontSize: '1.1rem', lineHeight: 1 }}>•</span>
                     <span><strong>Làm khác để làm tốt</strong></span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* MINIMALIST FLAT VISION & 4 PILLARS (NO BOXES, NO BORDERS, PURE FLAT CANVAS) */}
+            {/* MINIMALIST FLAT VISION & 4 PILLARS (ALL ORANGE MONOGRAM & TITLES) */}
             <div 
               style={{ 
                 paddingTop: '72px', 
@@ -467,7 +458,7 @@ export default function VeFai() {
               {/* Pure Editorial Vision Statement (No Bounding Box) */}
               <div style={{ maxWidth: '960px', margin: '0 auto 64px auto' }}>
                 <span style={{ 
-                  color: 'var(--primary)', 
+                  color: '#f37021', 
                   fontWeight: 800, 
                   fontSize: '0.85rem', 
                   textTransform: 'uppercase', 
@@ -490,7 +481,7 @@ export default function VeFai() {
                 </p>
               </div>
 
-              {/* 4 Flat Pillars Grid (No cards, no borders, no shadows - Pure Editorial Columns) */}
+              {/* 4 Flat Pillars Grid (ALL ORANGE) */}
               <div 
                 style={{ 
                   display: 'grid', 
@@ -504,7 +495,7 @@ export default function VeFai() {
                   <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#f37021', lineHeight: 1, marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
                     I
                   </div>
-                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#f37021', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
                     Industry Relevant
                   </h4>
                   <p style={{ fontSize: '0.96rem', color: '#64748b', lineHeight: '1.65', margin: 0 }}>
@@ -514,10 +505,10 @@ export default function VeFai() {
 
                 {/* Pillar G */}
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0284c7', lineHeight: 1, marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#f37021', lineHeight: 1, marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
                     G
                   </div>
-                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#f37021', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
                     Global
                   </h4>
                   <p style={{ fontSize: '0.96rem', color: '#64748b', lineHeight: '1.65', margin: 0 }}>
@@ -527,10 +518,10 @@ export default function VeFai() {
 
                 {/* Pillar S */}
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#16a34a', lineHeight: 1, marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#f37021', lineHeight: 1, marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
                     S
                   </div>
-                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#f37021', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
                     Smart Education
                   </h4>
                   <p style={{ fontSize: '0.96rem', color: '#64748b', lineHeight: '1.65', margin: 0 }}>
@@ -540,10 +531,10 @@ export default function VeFai() {
 
                 {/* Pillar M */}
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#9333ea', lineHeight: 1, marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
+                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#f37021', lineHeight: 1, marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
                     M
                   </div>
-                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#f37021', margin: '0 0 10px 0', fontFamily: 'var(--font-sans)' }}>
                     Mega
                   </h4>
                   <p style={{ fontSize: '0.96rem', color: '#64748b', lineHeight: '1.65', margin: 0 }}>
