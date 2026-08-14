@@ -26,7 +26,7 @@ const programs = [
       { text: 'Lập trình Fullstack trong 2 năm', href: '/dao-tao/aptech/2-nam' },
       { text: 'Lập trình Back end trong 1 năm', href: '/dao-tao/aptech/1-nam' },
       { text: 'Lập trình Front end trong 6 tháng', href: '/dao-tao/aptech/6-thang' },
-      { text: 'Lập trình ngắn hạn 100-200h', href: '/dao-tao/aptech/100-200h' }
+      { text: 'Bộ khóa học Lập trình ngắn hạn (100 - 200 giờ)', href: '/dao-tao/aptech/100-200h' }
     ]
   },
   {
@@ -47,7 +47,7 @@ const programs = [
     curriculums: [
       'Arena Multimedia Specialist Program (2 năm)',
       'Thiết kế 2D, 3D, Game và App (6–18 tháng)',
-      'Các khóa học ngắn hạn (100 giờ)'
+      'Bộ khóa học Multimedia ngắn hạn (100 giờ)'
     ]
   },
   {
@@ -67,7 +67,7 @@ const programs = [
     },
     curriculums: [
       'Fullstack Digital Marketing With AI (18 tháng)',
-      'Bộ khóa học Digital Marketing thực chiến (100 giờ)'
+      'Bộ khóa học Digital Marketing ngắn hạn (100 giờ)'
     ]
   },
   {

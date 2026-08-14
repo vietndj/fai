@@ -20,7 +20,7 @@ const programs = [
       'Lập trình Fullstack trong 2 năm',
       'Lập trình Back end trong 1 năm',
       'Lập trình Front end trong 6 tháng',
-      'Lập trình ngắn hạn 100-200h',
+      'Bộ khóa học Lập trình ngắn hạn (100 - 200 giờ)',
     ],
     image: '/fai_banner_aptech_v2.png',
     stat: '27+',
@@ -39,7 +39,7 @@ const programs = [
     tags: [
       'Arena Multimedia Specialist Program (2 năm)',
       'Thiết kế 2D, 3D, Game và App (6–18 tháng)',
-      'Các khóa học ngắn hạn (100 giờ)',
+      'Bộ khóa học Multimedia ngắn hạn (100 giờ)',
     ],
     image: '/fai_banner_arena_v2.png',
     stat: '22',
@@ -57,7 +57,7 @@ const programs = [
     desc: 'FPT Skillking là hệ thống đào tạo Digital Marketing được thành lập năm 2018, trên cơ sở hợp tác giữa Tập đoàn FPT và Tập đoàn Jetking (Ấn Độ), cung cấp chương trình học theo định hướng thực tiễn, trang bị cho học viên kiến thức từ nền tảng đến chuyên sâu trong lĩnh vực tiếp thị số.\n\nChương trình đào tạo tại FPT Skillking ứng dụng AI vào quá trình giảng dạy và thực hành, giúp học viên nâng cao năng lực công nghệ, phát triển tư duy chiến lược và đáp ứng yêu cầu của doanh nghiệp trong kỷ nguyên số.',
     tags: [
       'Fullstack Digital Marketing (18 tháng)',
-      'Bộ khóa học Digital Marketing thực chiến (100 giờ)',
+      'Bộ khóa học Digital Marketing ngắn hạn (100 giờ)',
     ],
     image: '/fai_banner_skillking_v2.png',
     stat: '2018',
