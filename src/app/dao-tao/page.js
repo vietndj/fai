@@ -1,6 +1,7 @@
 'use client';
 
 import Footer from '@/components/Footer';
+import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -301,6 +302,27 @@ export default function DaoTao() {
             </section>
           ))}
         </div>
+
+        {/* Section: Form đăng ký tư vấn tuyển sinh 4 ngành FAI */}
+        <ScholarshipFormSection 
+          programName="Viện Đào Tạo Quốc Tế FPT (FAI)"
+          headerTitle="NHẬN THÔNG TIN TƯ VẤN CHƯƠNG TRÌNH ĐÀO TẠO & HỌC BỔNG 2026 TẠI FAI"
+          formTitle="BẠN ĐANG TÌM KIẾM HƯỚNG ĐI SỰ NGHIỆP CÔNG NGHỆ & SÁNG TẠO?"
+          formSubtitle="Đăng ký nhận tư vấn hướng nghiệp 1-1 và lộ trình đào tạo chuẩn quốc tế"
+          courseOptions={[
+            "FPT Aptech - Lập trình viên Quốc tế (2 năm)",
+            "FPT Aptech - Lập trình Backend (1 năm)",
+            "FPT Aptech - Lập trình Frontend (6 tháng)",
+            "FPT Aptech - Khóa lập trình ngắn hạn (100 - 200 giờ)",
+            "FPT Arena - Mỹ thuật đa phương tiện Quốc tế (2 năm)",
+            "FPT Arena - Chuyên sâu Thiết kế & 3D (6 - 18 tháng)",
+            "FPT Arena - Khóa Multimedia ngắn hạn (100 giờ)",
+            "FPT Skillking - Digital Marketing with AI (18 tháng)",
+            "FPT Skillking - Khóa Marketing ngắn hạn (100 giờ)",
+            "FPT Jetking - Thiết kế Vi mạch Bán dẫn (2 năm)",
+            "FPT Jetking - Lập trình AI Agent (6 tháng - 2 năm)"
+          ]}
+        />
 
       </main>
 
