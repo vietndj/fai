@@ -160,8 +160,8 @@ export default function AiAgentSubpage() {
           <span className="beau-hero-brand" style={{ backgroundColor: '#f37021', color: '#ffffff', fontWeight: 800 }}>
             FPT JETKING — CHUYÊN GIA AI AGENT (6 THÁNG - 2 NĂM)
           </span>
-          <h1 className="beau-hero-title">
-            Lập Trình Chuyên Gia<br />AI Agent &amp; GenAI Quốc Tế
+          <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance', textTransform: 'uppercase' }}>
+            CHƯƠNG TRÌNH ĐÀO TẠO CHUYÊN NGÀNH AI AGENT
           </h1>
           <div className="beau-hero-logo" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
             <svg width="120" height="38" viewBox="0 0 120 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -171,7 +171,8 @@ export default function AiAgentSubpage() {
             </svg>
           </div>
           <p className="beau-hero-desc">
-            Chương trình đào tạo đón đầu kỷ nguyên Trí tuệ nhân tạo thế hệ mới. Đi từ nền tảng Machine Learning, Deep Learning đến xây dựng các hệ sinh thái Multi-Agent tự hành, RAG doanh nghiệp và tối ưu hóa mô hình ngôn ngữ lớn (LLM).
+            Trong làn sóng chuyển đổi số toàn cầu, trí tuệ nhân tạo (AI) đang trở thành động lực cốt lõi thúc đẩy năng suất, sáng tạo và hiệu quả trong mọi lĩnh vực – từ y tế, tài chính, giáo dục đến sản xuất, thương mại điện tử. Một trong những ứng dụng đột phá nhất của AI hiện nay là AI Agent – những “tác nhân thông minh” có khả năng quan sát, ra quyết định và hành động một cách tự động mà không cần can thiệp con người.<br /><br />
+            AI Agent không còn là khái niệm xa vời. Chúng hiện diện trong chatbot, trợ lý ảo, hệ thống đề xuất, dịch vụ khách hàng tự động, và dần dần tiến tới xây dựng các hệ thống đa tác nhân (Multi-Agent Systems) có thể phối hợp giải quyết các bài toán phức tạp như con người. Theo dự báo của Diễn đàn Kinh tế Thế giới, đến năm 2025, AI có thể tạo ra hơn 97 triệu việc làm mới – đặc biệt là các vị trí liên quan đến AI Agent, NLP và học máy.
           </p>
 
           <div className="beau-stats-bar">
@@ -221,32 +222,29 @@ export default function AiAgentSubpage() {
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
               Lộ trình đào tạo Chuyên gia AI Agent
             </h2>
-            <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Chương trình đào tạo đón đầu cuộc cách mạng AI tác tử tự hành thế hệ mới
-            </p>
           </div>
 
           {/* 4 Stats Cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <BookOpen size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
-              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>24+</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Frameworks &amp; Công nghệ AI</p>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>25</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Clock size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ chuyên sâu</p>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Trophy size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Đồ án AI Agent eProject</p>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Project</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Briefcase size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Hệ thống Multi-Agent hoàn chỉnh</p>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Portfolio</p>
             </div>
           </div>
 
