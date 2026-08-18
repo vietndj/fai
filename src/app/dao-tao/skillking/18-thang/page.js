@@ -8,7 +8,7 @@ import SkillkingProgramSwitcher from '@/components/SkillkingProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, TrendingUp, Search, Video, BarChart2, Briefcase } from 'lucide-react';
+import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, TrendingUp, Search, Video, BarChart2, Briefcase, MonitorPlay, Users, Target } from 'lucide-react';
 
 export default function Skillking18ThangPage() {
   const [activeSection, setActiveSection] = useState(0);
@@ -36,111 +36,78 @@ export default function Skillking18ThangPage() {
 
   const semesters = [
     {
-      num: 'HỌC KỲ 01',
-      shortTitle: 'Social & Content AI',
-      title: 'Social Media & Content Strategy with AI',
-      subtitle: '(Nghiên cứu Thị trường, Sáng tạo Nội dung & Quản trị Mạng xã hội)',
-      desc: 'Thấu hiểu hành vi khách hàng mục tiêu. Học viên nắm vững quy trình nghiên cứu thị trường, xây dựng chân dung khách hàng (Buyer Persona), sáng tạo nội dung đa kênh chuẩn SEO với AI và thiết kế ấn phẩm truyền thông chuyên nghiệp.',
+      num: 'Học kỳ 01',
+      shortTitle: 'Social Media Executive',
+      title: 'Social Media Executive - Sáng tạo & hiệu suất Social Media',
+      subtitle: '',
+      desc: 'Sinh viên được cung cấp kiến thức nền tảng về marketing và tư duy về Social Media. Học kỳ này giúp học viên tạo ra và đánh giá các chiến lược tiếp thị kỹ thuật số toàn diện, hiểu cách sử dụng các nền tảng Social để quảng bá và định vị thương hiệu trên thị trường kỹ thuật số.',
       coreStack: [
-        'Nghiên cứu thị trường & Chân dung khách hàng',
-        'Chiến lược Content Marketing đa nền tảng',
-        'Kỹ thuật Copywriting thu hút chuyển đổi',
-        'Thiết kế hình ảnh tiếp thị truyền thông Canva',
-        'Quản trị & Phát triển Fanpage / TikTok / YouTube'
-      ],
-      aiTools: [
-        'ChatGPT Plus & Claude 3.5 Sonnet',
-        'Canva AI Magic Studio',
-        'CapCut AI Video Generation',
-        'Midjourney Marketing Visuals',
-        'Notion AI Workflow'
+        'Elements of Digital Marketing',
+        'Market Research using AI',
+        'Design for Digital Marketing',
+        'Content Marketing using AI',
+        'Social Media Marketing',
+        'Affiliate Marketing',
+        'Project – AI-Powered Organic Social Media Strategy'
       ],
       careers: [
-        'Social Media Executive (Chuyên viên Mạng xã hội)',
-        'Content Creator (Nhà sáng tạo nội dung số)',
-        'Copywriter & Creative Strategist',
-        'Đồ án eProject: Kế hoạch Truyền thông Mạng xã hội'
+        'Content Marketing - Chuyên viên Quản trị Nội dung',
+        'Social Media Executive - Chuyên viên Mạng xã hội',
+        'Content Creator - Nhà sáng tạo nội dung',
+        'Content Marketing Executive - Chuyên viên Marketing Nội dung',
+        'Digital Marketing Assistant - Trợ lý Marketing số',
+        'AI-Powered Content Creator - Nhà sáng tạo nội dung AI',
+        'Digital Marketing Consultant - Tư vấn viên Marketing số'
       ]
     },
     {
-      num: 'HỌC KỲ 02',
-      shortTitle: 'SEO & Growth',
-      title: 'Search Engine Optimization (SEO) & Technical Growth',
-      subtitle: '(Tối ưu hóa Công cụ tìm kiếm Google & Tăng trưởng truy cập tự nhiên)',
-      desc: 'Chinh phục thứ hạng TOP 1 Google. Nghiên cứu cấu trúc từ khóa chuyên sâu, tối ưu hóa On-page, cấu trúc Silo, kỹ thuật Technical SEO và xây dựng liên kết Off-page bền vững kết hợp các công cụ phân tích dữ liệu hàng đầu.',
+      num: 'Học kỳ 02',
+      shortTitle: 'Digital Performance',
+      title: 'Digital Performance Executive - Search Marketing & Phân tích dữ liệu',
+      subtitle: '',
+      desc: 'Học viên sẽ có khả năng quản lý chiến dịch quảng cáo Google hiệu quả, tối ưu hóa website để nâng cao thứ hạng trên Google, phân tích dữ liệu theo dõi và tối ưu chiến dịch trên Data Studio và xây dựng chiến lược marketing toàn diện, giúp tăng trưởng bền vững.',
       coreStack: [
-        'Nghiên cứu từ khóa & Phân tích đối thủ cạnh tranh',
-        'Tối ưu hóa On-page & Cấu trúc liên kết nội bộ',
-        'Technical SEO: Tốc độ tải trang, Core Web Vitals',
-        'Chiến lược xây dựng Backlink (Off-page SEO)',
-        'Phân tích đo lường Google Search Console & GA4'
-      ],
-      aiTools: [
-        'SurferSEO AI Content Optimizer',
-        'Semrush AI Keyword Insights',
-        'Ahrefs SEO Intelligence',
-        'Screaming Frog SEO Spider',
-        'RankMath AI Assistant'
+        'Performance Marketing',
+        'Website Building with AI',
+        'SEO',
+        'Google Analytics & Data Studio',
+        'SEM using AI',
+        'Project – AI-Powered Website Development and Digital Marketing'
       ],
       careers: [
-        'SEO Specialist (Chuyên viên Tối ưu hóa tìm kiếm)',
-        'Website Content Manager',
-        'SEO Project Leader & Consultant',
-        'Đồ án eProject: Dự án Đẩy Top SEO Website thực tế'
+        'SEO Specialist - Chuyên gia SEO',
+        'SEM Specialist - Chuyên gia SEM',
+        'Website Manager - Quản lý Website',
+        'Data Analyst - Chuyên viên Phân tích dữ liệu',
+        'Analytics and Reporting Specialist - Chuyên gia Phân tích và Báo cáo',
+        'Performance Marketing Executive - Chuyên viên Performance Marketing'
       ]
     },
     {
-      num: 'HỌC KỲ 03',
-      shortTitle: 'Paid Ads & Performance',
-      title: 'Performance Marketing & Paid Advertising',
-      subtitle: '(Chạy quảng cáo Google Ads, Meta Ads, TikTok Ads & Tối ưu chuyển đổi)',
-      desc: 'Làm chủ dòng tiền và tỷ lệ hoàn vốn ROI. Thiết lập cấu trúc tài khoản quảng cáo chuyên nghiệp, đấu thầu từ khóa Google Search/Display/YouTube, chạy quảng cáo chuyển đổi Meta Ads, TikTok Shop và đo lường thông số chuyển đổi.',
+      num: 'Học kỳ 03',
+      shortTitle: 'Full stack digital marketing',
+      title: 'Full stack digital marketing/ Multi-Channel Marketing Strategy - Chiến lược thương hiệu & Marketing tích hợp',
+      subtitle: '',
+      desc: 'Hoàn thiện chân dung Full-stack Digital Marketing với kiến thức nền tảng về thương hiệu, định vị. Học viên trang bị kiến thức về marketing thương mại điện tử (E-Commerce), tối ưu performance marketing, cách lên kế hoạch truyền thông tích hợp đa kênh (IMC). Từ đó học viên có thể tự tin đề xuất kế hoạch digital marketing hiệu quả cho doanh nghiệp với các dự án thực tế.',
       coreStack: [
-        'Quản trị quảng cáo tìm kiếm Google Search Ads',
-        'Quảng cáo Google Display Network (GDN) & YouTube',
-        'Chiến dịch quảng cáo chuyển đổi Meta Ads (FB/IG)',
-        'Quảng cáo TikTok Ads & Vận hành TikTok Shop',
-        'Thiết lập theo dõi chuyển đổi Pixel & Google Tag Manager'
-      ],
-      aiTools: [
-        'Google Ads Smart Bidding AI',
-        'Meta Advantage+ AI Campaigns',
-        'TikTok Symphony Creative AI',
-        'AdCreative.ai High-Converting Ads',
-        'Triple Whale Attribution AI'
+        'Branding & Positioning',
+        'CRM',
+        'Email Marketing with AI',
+        'Omnichannel and IMC',
+        'E-Commerce Marketing',
+        'Project – AI-Driven Multi-Channel Marketing Strategy'
       ],
       careers: [
-        'Performance Marketing Specialist',
-        'Media Buyer (Chuyên viên Quản lý ngân sách Ads)',
-        'E-commerce Ads Specialist (TikTok Shop / Shopee)',
-        'Đồ án eProject: Chiến dịch Quảng cáo Trả phí đa kênh'
-      ]
-    },
-    {
-      num: 'HỌC KỲ 04',
-      shortTitle: 'Strategy & Automation',
-      title: 'Marketing Automation, CRM & Data Strategy',
-      subtitle: '(Tự động hóa Tiếp thị, Quản trị Quan hệ khách hàng & Chiến lược IMC)',
-      desc: 'Trở thành nhà hoạch định chiến lược số toàn diện. Thiết lập phễu bán hàng tự động (Sales Funnel), tự động hóa Email Marketing trên HubSpot/Mailchimp, quản trị tệp khách hàng CRM và xây dựng kế hoạch IMC tổng thể cho doanh nghiệp.',
-      coreStack: [
-        'Hoạch định chiến dịch truyền thông tích hợp (IMC)',
-        'Xây dựng phễu Marketing Automation & Lead Nurturing',
-        'Quản trị hệ thống dữ liệu khách hàng CRM (HubSpot)',
-        'Email Marketing tự động hóa theo kịch bản hành vi',
-        'Phân tích dữ liệu tiếp thị số chuyên sâu & Báo cáo ROI'
-      ],
-      aiTools: [
-        'HubSpot AI Marketing Hub',
-        'Zapier & Make.com AI Automation',
-        'Mailchimp AI Customer Journeys',
-        'Power BI & Looker Studio AI Dashboards',
-        'Google Analytics 4 Predictive Metrics'
-      ],
-      careers: [
-        'Digital Marketing Manager (Trưởng phòng Marketing)',
-        'Marketing Automation & CRM Specialist',
-        'Growth Marketing Strategist',
-        'Đồ án Tốt nghiệp: Kế hoạch Chiến lược Digital Marketing tổng thể'
+        'Full-stack Digital Marketer - Chuyên viên Marketing số toàn diện',
+        'Multi-Channel Marketing Strategist - Chuyên gia Marketing đa kênh',
+        'E-Commerce Marketing Manager - Quản lý Marketing Thương mại điện tử',
+        'Email Marketing Specialist - Chuyên gia Email Marketing',
+        'IMC Planner - Chuyên viên Lập kế hoạch Truyền thông tích hợp',
+        'Branding Executive - Chuyên viên Xây dựng Thương hiệu',
+        'CRM Specialist - Chuyên gia CRM',
+        'AI Marketing Specialist - Chuyên gia Marketing ứng dụng AI',
+        'Digital Marketing Agency Professional - Chuyên viên Agency Marketing số',
+        'Freelance Digital Marketing Professional - Chuyên viên Marketing số tự do'
       ]
     }
   ];
@@ -160,18 +127,11 @@ export default function Skillking18ThangPage() {
           <span className="beau-hero-brand" style={{ backgroundColor: '#09529c', color: '#ffffff', fontWeight: 800 }}>
             FPT SKILLKING — 18 THÁNG
           </span>
-          <h1 className="beau-hero-title">
+          <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance', textTransform: 'uppercase' }}>
             Fullstack Digital Marketing<br />With AI (18 Tháng)
           </h1>
-          <div className="beau-hero-logo" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
-            <svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 10 L22 17 L29 10 L26 25 L18 25 Z" fill="#f37021"/>
-              <path d="M18 25 H26 V28 H18 Z" fill="#09529c"/>
-              <text x="36" y="26" fill="#09529c" fontSize="16" fontWeight="bold" fontFamily="sans-serif">skillking</text>
-            </svg>
-          </div>
           <p className="beau-hero-desc">
-            Chương trình đào tạo Chuyên gia Digital Marketing toàn diện 18 tháng tích hợp công nghệ AI. Học thực chiến 100% qua dự án doanh nghiệp, từ Social Media, SEO, Performance Ads đến Marketing Automation và Data-Driven Strategy.
+            Khóa đào tạo Full-stack Digital Marketing tại FPT Skillking sẽ cung cấp cho học viên kiến thức thực hành, tất cả những kỹ năng cần có về Digital Marketing. Giúp cho học viên có góc nhìn rộng hơn, đúng hơn để có thể triển khai các hoạt động tiếp thị sản phẩm, dịch vụ hiệu quả. FPT Skillking phát triển khóa học dựa trên giáo án từ Skillking Ấn Độ và dựa trên tính đặc trưng của thị trường Việt Nam. Cấu trúc các khóa học được chia thành 3 nhóm kiến thức tương ứng với 3 học kỳ tạo nền tảng chắc chắn cho học viên từ vị trí mới bắt đầu cho đến chuyên viên.
           </p>
 
           <div className="beau-stats-bar">
@@ -230,23 +190,23 @@ export default function Skillking18ThangPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <BookOpen size={34} style={{ color: '#09529c', marginBottom: '14px' }} />
-              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>20+</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học &amp; Nền tảng tiếp thị số</p>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>16</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Clock size={34} style={{ color: '#09529c', marginBottom: '14px' }} />
-              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>03</h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ chuyên sâu</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Trophy size={34} style={{ color: '#09529c', marginBottom: '14px' }} />
-              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Đồ án thực tế (eProject)</p>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>03</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>eProject</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Briefcase size={34} style={{ color: '#09529c', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Chiến lược IMC Doanh nghiệp</p>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Portfolio chuyên nghiệp</p>
             </div>
           </div>
 
@@ -261,27 +221,13 @@ export default function Skillking18ThangPage() {
             boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             flexWrap: 'wrap',
             gap: '24px'
           }}>
-            <div>
+            <div style={{ textAlign: 'center' }}>
               <span style={{ fontSize: '0.82rem', color: '#09529c', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tổng thời lượng đào tạo</span>
-              <h4 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--secondary)', margin: '6px 0 0', fontFamily: 'var(--font-sans)' }}>800 Giờ học thực chiến</h4>
-            </div>
-            <div style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
-              <div>
-                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Tư duy &amp; Kế hoạch</span>
-                <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>200 giờ</strong>
-              </div>
-              <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
-                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Thực hành chạy Ads/SEO</span>
-                <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>400 giờ</strong>
-              </div>
-              <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
-                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Đồ án eProject</span>
-                <strong style={{ color: '#09529c', fontSize: '1.3rem', fontWeight: 800 }}>200 giờ</strong>
-              </div>
+              <h4 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--secondary)', margin: '6px 0 0', fontFamily: 'var(--font-sans)' }}>608 Giờ học</h4>
             </div>
           </div>
         </div>
@@ -292,7 +238,7 @@ export default function Skillking18ThangPage() {
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <span className="beau-section-eyebrow" style={{ color: '#38bdf8' }}>NỘI DUNG ĐÀO TẠO</span>
-            <h2 className="beau-section-title">Chi tiết chương trình học (4 học kỳ)</h2>
+            <h2 className="beau-section-title">Chi tiết chương trình học (3 học kỳ)</h2>
           </div>
 
           {/* Segmented Semester Tabs */}
@@ -413,20 +359,6 @@ export default function Skillking18ThangPage() {
                 </ul>
               </div>
 
-              {/* Col 2 */}
-              <div>
-                <h4 style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
-                  CÔNG CỤ AI &amp; NỀN TẢNG TIẾP THỊ
-                </h4>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  {semesters[activeTab].aiTools.map((item, idx) => (
-                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
-                      <Check size={18} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '2px' }} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
 
               {/* Col 3 */}
               <div>
@@ -470,60 +402,51 @@ export default function Skillking18ThangPage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
-            <div 
-              style={{ 
-                background: '#ffffff', 
-                border: '1px solid rgba(0, 0, 0, 0.06)', 
-                borderRadius: '20px', 
-                padding: '36px 30px',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
-                transition: 'all 0.3s ease'
-              }}
-            >
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', transition: 'all 0.3s ease' }}>
               <div style={{ marginBottom: '18px' }}><Sparkles size={32} style={{ color: '#0284c7' }} /></div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Phương pháp đào tạo LXP &amp; AI hàng đầu
-              </h3>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>Ứng dụng AI và các công cụ mới nhất</h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Học tập tương tác đa chiều qua nền tảng Learning Experience Platform (LXP), ứng dụng sâu AI trong nghiên cứu thị trường, sáng tạo content và tối ưu chiến dịch.
+                Sử dụng & tối ưu hoá hiệu suất bằng các công cụ AI hàng đầu vào việc học và thực hành.
               </p>
             </div>
 
-            <div 
-              style={{ 
-                background: '#ffffff', 
-                border: '1px solid rgba(0, 0, 0, 0.06)', 
-                borderRadius: '20px', 
-                padding: '36px 30px',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
-                transition: 'all 0.3s ease'
-              }}
-            >
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><MonitorPlay size={32} style={{ color: '#0284c7' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>Đào tạo bằng nền tảng EduNext độc quyền</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Học tập trên nền tảng EduNext độc quyền của Tổ chức giáo dục FPT với phương pháp kiến tạo xã hội, cung cấp cho sinh viên trải nghiệm học tập cá nhân hóa, giúp phát triển năng lực cá nhân.
+              </p>
+            </div>
+
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', transition: 'all 0.3s ease' }}>
               <div style={{ marginBottom: '18px' }}><Award size={32} style={{ color: '#0284c7' }} /></div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Bằng cấp Quốc tế Jetking Ấn Độ
-              </h3>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>Nhận bằng quốc tế HDDA</h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Tốt nghiệp nhận bằng Advanced Diploma in Digital Marketing danh giá từ Jetking Ấn Độ – tổ chức đào tạo CNTT &amp; Marketing hàng đầu thế giới.
+                Sinh viên được nhận bằng quốc tế Higher Diploma In Digital Marketing with AI có giá trị toàn cầu, nhiều cơ hội chuyển tiếp lên các chương trình đại học theo hình thức chuyển đổi tín chỉ.
               </p>
             </div>
 
-            <div 
-              style={{ 
-                background: '#ffffff', 
-                border: '1px solid rgba(0, 0, 0, 0.06)', 
-                borderRadius: '20px', 
-                padding: '36px 30px',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#0284c7' }} /></div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Cam kết hỗ trợ việc làm 100%
-              </h3>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><Users size={32} style={{ color: '#0284c7' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>Học cùng giảng viên, doanh nghiệp</h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Kết nối mạng lưới hơn 500+ doanh nghiệp, agency và tập đoàn đối tác của FPT, đảm bảo cơ hội thực tập và việc làm thu nhập cao ngay sau tốt nghiệp.
+                Sinh viên sẽ được học cùng những giảng viên giàu kiến thức được tuyển chọn khắt khe của Tổ chức giáo dục FPT và học cùng đại diện doanh nghiệp có chuyên môn cao, nhiều kinh nghiệm thực tiễn trong ngành.
+              </p>
+            </div>
+
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><Target size={32} style={{ color: '#0284c7' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>Học thẳng chuyên ngành với 70% thực hành</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Sinh viên sẽ được học thẳng vào chuyên ngành Digital Marketing từ cơ bản cho đến chuyên sâu với 70% thời gian là học thực hành.
+              </p>
+            </div>
+
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#0284c7' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>Được giới thiệu việc làm ngay khi tốt nghiệp</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                100% sinh viên có cơ hội được giới thiệu việc làm tại tập đoàn FPT và các đối tác doanh nghiệp liên kết.
               </p>
             </div>
           </div>
@@ -534,12 +457,14 @@ export default function Skillking18ThangPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Bứt phá sự nghiệp Tiếp thị Kỹ thuật số cùng FPT Skillking</h2>
+          <h2 className="beau-cta-title">
+            Bứt phá sự nghiệp Tiếp thị Kỹ thuật số cùng <span style={{ whiteSpace: 'nowrap' }}>FPT Skillking</span>
+          </h2>
           <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
-            Nắm bắt phương pháp Marketing dữ liệu và công cụ AI thực chiến ngay hôm nay.
+            Nắm bắt phương pháp Digital Marketing mới nhất và công cụ AI thực chiến ngay hôm nay.
           </p>
           <a href="#dang-ky-skillking-18t" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)', color: '#ffffff', fontWeight: 800 }}>
-            Đăng Ký Tư Vấn &amp; Nhận Học Bổng
+            Tư vấn ngay
             <ArrowRight size={22} strokeWidth={2.5} />
           </a>
         </div>
@@ -547,7 +472,7 @@ export default function Skillking18ThangPage() {
 
       {/* Section 4: Scholarship Application Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-skillking-18t">
-        <ScholarshipFormSection programName="FPT Skillking (18 Tháng)" />
+        <ScholarshipFormSection programName="Fullstack Digital Marketing With AI (18 Tháng)" />
       </div>
 
       <Footer />

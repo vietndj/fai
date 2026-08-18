@@ -16,7 +16,7 @@ export default function TuyenSinh() {
         <section 
           className="admissions-hero-section" 
           style={{ 
-            padding: '180px 0 80px 0', 
+            padding: '88px 0 80px 0', 
             minHeight: '45vh',
             display: 'flex',
             flexDirection: 'column',

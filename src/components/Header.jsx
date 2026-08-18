@@ -78,7 +78,7 @@ export default function Header() {
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
                             <Image src="/logo_arena.png" alt="FPT Arena" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
-                          <Link href="/dao-tao/arena/2-nam" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
+                          <Link href="/dao-tao/arena/amsp" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
                           <Link href="/dao-tao/arena/6-18-thang" className="megamenu-link">Thiết kế 2D, 3D, Game và App (6–18 tháng)</Link>
                           <Link href="/dao-tao/arena/100h" className="megamenu-link">Bộ khóa học Multimedia ngắn hạn (100 giờ)</Link>
                         </div>

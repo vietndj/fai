@@ -130,7 +130,7 @@ export default function LienHe() {
         <section 
           className="contact-hero-section" 
           style={{ 
-            padding: '180px 0 80px 0', 
+            padding: '88px 0 80px 0', 
             position: 'relative', 
             overflow: 'hidden',
             minHeight: '45vh',

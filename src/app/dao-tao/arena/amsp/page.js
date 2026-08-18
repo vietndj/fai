@@ -8,7 +8,7 @@ import ArenaProgramSwitcher from '@/components/ArenaProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, Layers, Palette, Video, Box, Briefcase } from 'lucide-react';
+import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, Layers, Palette, Video, Box, Briefcase, Users } from 'lucide-react';
 
 export default function Arena2NamPage() {
   const [activeSection, setActiveSection] = useState(0);
@@ -38,109 +38,117 @@ export default function Arena2NamPage() {
     {
       num: 'HỌC KỲ 01',
       shortTitle: 'Graphic Design',
-      title: 'Graphic Design — Thiết kế đồ họa thương hiệu',
-      subtitle: '(Nền tảng Mỹ thuật thị giác & Nhận diện thương hiệu)',
-      desc: 'Đặt nền móng tư duy thẩm mỹ vững chắc. Học viên làm quen với nguyên lý thiết kế, Typography, màu sắc và thành thạo bộ công cụ Photoshop, Illustrator, InDesign để tạo ra ấn phẩm quảng cáo, bao bì và bộ nhận diện thương hiệu.',
+      title: 'Graphic Design — Thiết kế đồ hoạ',
+      subtitle: '',
+      desc: 'Sinh viên sẽ được học các khái niệm thiết yếu của thiết kế đồ họa, nguyên lý thị giác, luật thiết kế, chuẩn thi công – sản xuất ứng dụng',
       coreStack: [
-        'Nguyên lý thiết kế & Bố cục thị giác',
-        'Nghệ thuật chữ & Phối màu chuyên nghiệp',
-        'Xử lý ảnh kỹ thuật số (Photoshop)',
-        'Vẽ vector minh họa (Illustrator)',
-        'Dàn trang xuất bản (InDesign)'
-      ],
-      aiTools: [
-        'Midjourney AI Visuals',
-        'Adobe Firefly Generative AI',
-        'Photoshop Generative Fill',
-        'Canva AI Pro',
-        'Topaz Photo AI'
+        'Các nguyên lý trong thiết kế',
+        'Nghệ thuật và sắp đặt chữ',
+        'Thiết kế và minh họa kỹ thuật số',
+        'Xử lý hình ảnh kỹ thuật số',
+        'Nhiếp ảnh và xử lý ảnh hậu kỳ',
+        'Thiết kế trong in ấn & quảng cáo',
+        'Thiết kế trong truyền thông',
+        'Đồ án thiết kế, xây dựng bộ nhận diện thương hiệu'
       ],
       careers: [
-        'Graphic Designer (Chuyên viên Thiết kế đồ họa)',
-        'Brand Identity Designer (Thiết kế nhận diện)',
-        '2D Illustrator & Layout Artist',
-        'Đồ án eProject: Bộ Nhận diện Thương hiệu'
+        'Graphic Designer',
+        'Illustrator',
+        'Digital Media Artist',
+        'Layout Designer',
+        'Visualizer',
+        'Photo Editor',
+        'Photographer',
+        'Publication Designer'
       ]
     },
     {
       num: 'HỌC KỲ 02',
-      shortTitle: 'Web & UI/UX',
-      title: 'Web & UI/UX Design — Thiết kế Giao diện & Trải nghiệm số',
-      subtitle: '(Thiết kế Giao diện Website, Ứng dụng di động & Trải nghiệm số)',
-      desc: 'Tiến vào thế giới giao diện số tương tác. Nghiên cứu hành vi người dùng (UX), phác thảo Wireframe, xây dựng Design System và thiết kế Prototype động trên Figma, đồng thời làm chủ HTML5, CSS3, JavaScript để hiện thực hóa sản phẩm.',
+      shortTitle: 'Filmmaking & 3D Asset',
+      title: 'Filmmaking & 3D Asset Design — Làm phim & thiết kế 3D Asset',
+      subtitle: '',
+      desc: 'Sinh viên tìm hiểu và thực hành về quy trình làm phim, biên tập âm thanh, video, nguyên lý chuyển động thị giác…',
       coreStack: [
-        'Tư duy thiết kế trải nghiệm người dùng (UX)',
-        'Thiết kế giao diện UI đa nền tảng',
-        'Xây dựng Design System & Auto-Layout',
-        'Lập trình Front-end với HTML5 & CSS3',
-        'Thiết kế Website responsive với Bootstrap'
-      ],
-      aiTools: [
-        'Figma AI Design Assistant',
-        'Relume AI Wireframing',
-        'Framer AI Generation',
-        'Galileo AI Mobile UI',
-        'Uizard AI Prototype'
+        'Các khái niệm làm phim kỹ thuật số',
+        'Kịch bản hình – Storyboarding',
+        'Nhạc phim kỹ thuật số',
+        'Chỉnh sửa video kỹ thuật số',
+        'Tạo đồ họa chuyển động',
+        'Giới thiệu về Blender',
+        'Dựng hình 3D Asset',
+        'Tái cấu trúc lưới Game Asset',
+        'Kết cấu bề mặt của Game Asset',
+        'Sắp đặt ánh sáng và kết xuất',
+        'Đồ án thiết kế 3D Game Asset'
       ],
       careers: [
-        'UI/UX Designer (Thiết kế Trải nghiệm & Giao diện)',
-        'Web Designer & Front-end Layout Dev',
-        'Mobile App Designer (iOS / Android)',
-        'Đồ án eProject: Website & App Thương mại điện tử'
+        'DOP (Focus Puller, Gaffer, Sound Mixer)',
+        'Storyboard Artist',
+        'Video Editor',
+        'Sound Editor',
+        '2D VFX Artist',
+        'Game Designer',
+        'Level Designer',
+        'Concept Artist (Character / Asset / Environment)',
+        'Game Illustrator (Digital Matte Painter / Splash Artist)',
+        'Game Artist (Character / Asset / Environment)',
+        'Texture Artist'
       ]
     },
     {
       num: 'HỌC KỲ 03',
-      shortTitle: 'Film & VFX',
-      title: 'Digital Filmmaking & VFX — Làm phim kỹ thuật số & Kỹ xảo',
-      subtitle: '(Quay phim, Dàn dựng hậu kỳ & Kỹ xảo điện ảnh CGI)',
-      desc: 'Làm chủ chuyển động và câu chuyện hình ảnh. Quy trình biên kịch, storyboard, kỹ thuật quay góc máy, thu âm thanh, dựng phim với Premiere Pro và tạo hiệu ứng kỹ xảo CGI điện ảnh, Motion Graphics bằng After Effects.',
+      shortTitle: 'Advanced 3D & VFX',
+      title: 'Advanced 3D Animation & Digital Compositing — Hoạt hình 3D & Kỹ xảo hình ảnh',
+      subtitle: '',
+      desc: 'Trang bị kiến thức và kỹ năng chuyên sâu về quy trình sản xuất 3D, từ tiền kỳ đến hậu kỳ, bao gồm mô hình hóa, tạo chất liệu, chiếu sáng, hoạt hình và dựng phim kỹ thuật số, giúp sinh viên xây dựng portfolio chuyên nghiệp và sẵn sàng làm việc trong ngành công nghiệp sáng tạo.',
       coreStack: [
-        'Biên kịch phân cảnh & Kỹ thuật quay phim',
-        'Dàn dựng hậu kỳ với Adobe Premiere Pro',
-        'Kỹ xảo hình ảnh CGI với After Effects',
-        'Xử lý âm thanh kỹ thuật số với Audition',
-        'Motion Graphics & Đồ họa động truyền thông'
-      ],
-      aiTools: [
-        'Runway Gen-2 AI Video',
-        'Pika Labs AI Motion',
-        'ElevenLabs AI Voiceover',
-        'Topaz Video AI Enhancement',
-        'Sora / Luma Dream Machine'
+        'Các khái niệm về hoạt hình 3D',
+        'Làm mô hình 3D',
+        'Làm vật liệu 3D',
+        'Sắp đặt ánh sáng và kết xuất đồ họa',
+        'Làm khung xương chuyển động',
+        'Diễn hoạt chuyển động',
+        'Kỹ xảo ứng dụng cho phim hoạt hình',
+        'Đồ án: Làm phim hoạt hình 3D'
       ],
       careers: [
-        'Video Editor (Chuyên viên Dựng phim)',
-        'Motion Graphic Artist (Nghệ sĩ Đồ họa động)',
-        'VFX Artist (Chuyên viên Kỹ xảo hình ảnh)',
-        'Đồ án eProject: Phim ngắn / TVC Quảng cáo'
+        'Compositor',
+        '3D Game Artist',
+        '3D Animator (Character / Creature / Gameplay)',
+        '3D Modeler (Character / Asset / Environment)',
+        'Texturing Artist',
+        'Lighting Artist',
+        'Rigging Artist',
+        'Audio/Video Editor',
+        'Rendering Artist'
       ]
     },
     {
       num: 'HỌC KỲ 04',
-      shortTitle: '3D & Animation',
-      title: '3D Animation & Game Art — Hoạt hình 3D & Thiết kế Game',
-      subtitle: '(Tạo hình 3D, Rigging, Diễn hoạt & Môi trường Game Engine)',
-      desc: 'Thổi hồn cho các mô hình số. Tạo hình nhân vật 3D (Modeling), điêu khắc chi tiết với ZBrush, dựng khung xương (Rigging), tạo chuyển động (Animation), chiếu sáng kết xuất (Rendering) với Maya và đưa vào Unreal Engine.',
+      shortTitle: 'Game Art & 3D',
+      title: 'Real Time 3D & Game Art — Thiết kế Game & 3D thời gian thực',
+      subtitle: '',
+      desc: 'Sinh viên được học các nguyên lý, kiến thức và kỹ năng cần thiết để tạo ra môi trường cho game dưới các nền tảng hỗ trợ game phổ biến hiện nay.',
       coreStack: [
-        'Dựng hình mô hình 3D (3D Modeling)',
-        'Điêu khắc chi tiết số với ZBrush',
-        'Thiết lập khung xương chuyển động (Rigging)',
-        'Diễn hoạt nhân vật hoạt hình 3D Maya',
-        'Dựng bối cảnh thế giới Game với Unreal Engine'
-      ],
-      aiTools: [
-        'Meshy AI 3D Generator',
-        'Luma Genie AI 3D Mesh',
-        'Krea AI Textures',
-        'Cascadeur AI Physics Rigging',
-        'Unreal Engine AI Metahuman'
+        'Thiết kế hình ảnh cho trò chơi',
+        'Thiết kế giao diện người dùng (UI) cho trò chơi',
+        'Quy trình sản xuất trò chơi',
+        'Giới thiệu về công cụ Unity Game Engine',
+        'Thiết kế cấp độ (Level Designing)',
+        'Bắt đầu với Unreal Engine',
+        'Làm việc với Unreal Engine',
+        'Tích hợp tài nguyên & thiết kế cấp độ',
+        'Hiểu về Blueprints trong Unreal Engine',
+        'Chuẩn bị & xuất bản dự án Unreal'
       ],
       careers: [
-        '3D Character Animator (Nghệ sĩ Diễn hoạt 3D)',
-        '3D Modeler & Environment Artist',
-        'Game Asset Designer (Unreal / Unity)',
-        'Đồ án Tốt nghiệp: Phim Hoạt hình 3D hoàn chỉnh'
+        'Game Designer',
+        'UI/UX Designer for Games',
+        'Level Designer',
+        'Unity Developer',
+        'Unreal Engine Developer',
+        'Asset Integration Specialist',
+        'Indie Game Developer'
       ]
     }
   ];
@@ -150,7 +158,7 @@ export default function Arena2NamPage() {
       <Header />
 
       {/* Program Switcher Bar Ghim cố định */}
-      <ArenaProgramSwitcher activePath="/dao-tao/arena/2-nam" />
+      <ArenaProgramSwitcher activePath="/dao-tao/arena/amsp" />
 
       {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
       <section className="beau-hero">
@@ -160,28 +168,37 @@ export default function Arena2NamPage() {
           <span className="beau-hero-brand" style={{ backgroundColor: '#ffb600', color: '#000000', fontWeight: 800 }}>
             FPT ARENA MULTIMEDIA — AMSP 2 NĂM
           </span>
-          <h1 className="beau-hero-title">
-            Chuyên Gia Mỹ Thuật<br />Đa Phương Tiện Quốc Tế
+          <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance', textTransform: 'uppercase' }}>
+            Chương trình đào tạo<br />Chuyên gia Mỹ thuật Đa phương tiện
           </h1>
           <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
             <Image src="/logo_arena.png" alt="FPT Arena Multimedia Logo" width={180} height={42} style={{ objectFit: 'contain', objectPosition: 'left' }} />
           </div>
-          <p className="beau-hero-desc">
-            Chương trình đào tạo Chuyên gia Mỹ thuật Đa phương tiện chuẩn quốc tế (AMSP) 2 năm toàn diện nhất thế giới. Đi từ thiết kế đồ họa 2D, giao diện web UI/UX đến làm phim kỹ thuật số, kỹ xảo điện ảnh CGI và diễn hoạt hoạt hình 3D đỉnh cao.
-          </p>
+          <div className="beau-hero-desc">
+            <p style={{ marginBottom: '16px' }}>
+              FPT Arena là đơn vị đầu tiên tại Việt Nam triển khai chương trình đào tạo Chuyên gia Mỹ thuật Đa phương tiện – Arena Multimedia Specialist Program (AMSP). Được đào tạo bài bản với chứng chỉ quốc tế Advanced Diploma In Multimedia của Tập đoàn Aptech Ấn Độ, sinh viên có thể làm việc đa lĩnh vực sau khi tốt nghiệp: Thiết kế đồ hoạ, Video Editor, Thiết kế Game, Làm hoạt hình 3D,…
+            </p>
+            <p>
+              <strong>ĐIỂM KHÁC BIỆT CỐT LÕI:</strong> Dựa trên triết lý “Làm khác để làm tốt” của Tổ Chức Giáo Dục FPT, FPT Arena xây dựng văn hóa học tập bằng việc đưa phương pháp giảng dạy Constructivism (Học thuyết Kiến Tạo Xã Hội) nhằm giúp sinh viên học tập chủ động, sáng tạo và hiệu quả.
+            </p>
+          </div>
 
           <div className="beau-stats-bar">
             <div className="beau-stat-item">
+              <h3 style={{ color: '#ffb600' }}>37 Môn</h3>
+              <p>Môn học chuẩn Quốc tế.</p>
+            </div>
+            <div className="beau-stat-item">
               <h3 style={{ color: '#ffb600' }}>04 Kỳ Học</h3>
-              <p>2 năm hoàn thiện toàn diện bộ kỹ năng sáng tạo số từ 2D đến 3D.</p>
+              <p>Học kỳ chuyên sâu toàn diện.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>AMSP AD</h3>
-              <p>Bằng Advanced Diploma quốc tế danh giá do Aptech Ấn Độ cấp.</p>
+              <h3 style={{ color: '#ffb600' }}>04 Đồ Án</h3>
+              <p>Đồ án thực tế (eProject).</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>100% Đồ Án</h3>
-              <p>4 kỳ sở hữu 4 bộ Portfolio và đồ án phim/game thực chiến ấn tượng.</p>
+              <h3 style={{ color: '#ffb600' }}>01 Portfolio</h3>
+              <p>Portfolio chuyên nghiệp.</p>
             </div>
           </div>
 
@@ -215,10 +232,10 @@ export default function Arena2NamPage() {
               HÀNH TRÌNH TỔNG QUAN
             </span>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Lộ trình đào tạo chuẩn quốc tế AMSP
+              Lộ trình đào tạo tổng quan 2 năm
             </h2>
             <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Hành trình chuyển hóa đam mê thành sự nghiệp vững chắc qua các con số thực tế
+              Một hành trình toàn diện được đúc kết qua những con số biết nói
             </p>
           </div>
 
@@ -226,13 +243,13 @@ export default function Arena2NamPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <BookOpen size={34} style={{ color: '#d97706', marginBottom: '14px' }} />
-              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>24+</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học &amp; Phần mềm chuyên sâu</p>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>37</h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học chuẩn Quốc tế</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Clock size={34} style={{ color: '#d97706', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ chuyên ngành</p>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ chuyên sâu</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Trophy size={34} style={{ color: '#d97706', marginBottom: '14px' }} />
@@ -242,42 +259,7 @@ export default function Arena2NamPage() {
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
               <Briefcase size={34} style={{ color: '#d97706', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Showreel &amp; Portfolio Đỉnh cao</p>
-            </div>
-          </div>
-
-          {/* Time banner */}
-          <div style={{ 
-            marginTop: '36px', 
-            background: '#ffffff', 
-            border: '1px solid rgba(255, 182, 0, 0.4)', 
-            borderLeft: '6px solid #ffb600',
-            borderRadius: '20px', 
-            padding: '32px 40px',
-            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            gap: '24px'
-          }}>
-            <div>
-              <span style={{ fontSize: '0.82rem', color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tổng thời lượng đào tạo</span>
-              <h4 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--secondary)', margin: '6px 0 0', fontFamily: 'var(--font-sans)' }}>960 Giờ học thực hành 100%</h4>
-            </div>
-            <div style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
-              <div>
-                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Mỹ thuật &amp; Tư duy</span>
-                <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>240 giờ</strong>
-              </div>
-              <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
-                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Phần mềm &amp; Kỹ xảo</span>
-                <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>480 giờ</strong>
-              </div>
-              <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
-                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Đồ án eProject</span>
-                <strong style={{ color: '#d97706', fontSize: '1.3rem', fontWeight: 800 }}>240 giờ</strong>
-              </div>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Portfolio chuyên nghiệp</p>
             </div>
           </div>
         </div>
@@ -383,9 +365,11 @@ export default function Arena2NamPage() {
               <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800, color: '#ffffff', margin: '8px 0 4px', fontFamily: 'var(--font-sans)' }}>
                 {semesters[activeTab].title}
               </h3>
-              <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: '0.98rem', margin: '0 0 16px' }}>
-                {semesters[activeTab].subtitle}
-              </p>
+              {semesters[activeTab].subtitle && (
+                <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: '0.98rem', margin: '0 0 16px' }}>
+                  {semesters[activeTab].subtitle}
+                </p>
+              )}
               <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
                 {semesters[activeTab].desc}
               </p>
@@ -393,11 +377,11 @@ export default function Arena2NamPage() {
 
             <hr style={{ borderColor: 'rgba(255, 255, 255, 0.1)', margin: '30px 0' }} />
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '36px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px' }}>
               {/* Col 1 */}
               <div>
                 <h4 style={{ color: '#ffb600', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
-                  KỸ NĂNG &amp; MÔN HỌC LÕI
+                  MÔN HỌC
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].coreStack.map((item, idx) => (
@@ -412,22 +396,7 @@ export default function Arena2NamPage() {
               {/* Col 2 */}
               <div>
                 <h4 style={{ color: '#ffb600', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
-                  CÔNG CỤ AI &amp; PHẦN MỀM HỖ TRỢ
-                </h4>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  {semesters[activeTab].aiTools.map((item, idx) => (
-                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
-                      <Check size={18} style={{ color: '#ffb600', flexShrink: 0, marginTop: '2px' }} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Col 3 */}
-              <div>
-                <h4 style={{ color: '#ffb600', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
-                  CƠ HỘI NGHỀ NGHIỆP &amp; ĐỒ ÁN
+                  CƠ HỘI NGHỀ NGHIỆP
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].careers.map((item, idx) => (
@@ -522,6 +491,24 @@ export default function Arena2NamPage() {
                 Triển lãm đồ án định kỳ và ngày hội tuyển dụng kết nối trực tiếp với hơn 300+ Agency, Studio Game và Production House hàng đầu.
               </p>
             </div>
+            <div 
+              style={{ 
+                background: '#ffffff', 
+                border: '1px solid rgba(0, 0, 0, 0.06)', 
+                borderRadius: '20px', 
+                padding: '36px 30px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <div style={{ marginBottom: '18px' }}><Users size={32} style={{ color: '#d97706' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                Giảng viên "Chinh chiến"
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                Đội ngũ giảng viên là các chuyên gia hàng đầu trong ngành trực tiếp đứng lớp
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -530,7 +517,7 @@ export default function Arena2NamPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Khai phóng tư duy sáng tạo cùng FPT Arena</h2>
+          <h2 className="beau-cta-title">Bắt đầu hành trình sáng tạo cùng FPT Arena Multimedia</h2>
           <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
             Nắm bắt cơ hội trở thành nhà sáng tạo nghệ thuật đa phương tiện chuyên nghiệp ngay hôm nay.
           </p>

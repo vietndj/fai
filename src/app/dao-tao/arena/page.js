@@ -150,7 +150,7 @@ export default function ArenaSubpage() {
       <Header />
 
       {/* Program Switcher Bar Ghim cố định */}
-      <ArenaProgramSwitcher activePath="/dao-tao/arena/2-nam" />
+      <ArenaProgramSwitcher activePath="/dao-tao/arena/amsp" />
 
       {/* Section 0: Hero Section (🌙 DARK CYBER THEME) */}
       <section className="beau-hero">

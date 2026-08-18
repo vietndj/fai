@@ -24,7 +24,7 @@ export default function AptechProgramSwitcher({ activePath }) {
                   href={item.href}
                   className={`aptech-switcher-btn ${isActive ? 'active' : ''}`}
                 >
-                  {isActive && <Sparkles size={16} className="active-sparkle" />}
+                  {isActive && <span className="active-dot"></span>}
                   <span>{item.label}</span>
                 </Link>
               );

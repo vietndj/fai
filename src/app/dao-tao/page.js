@@ -121,7 +121,7 @@ export default function DaoTao() {
         <section 
           className="training-intro-section" 
           style={{ 
-            padding: '180px 0 80px 0', 
+            padding: '88px 0 80px 0',
             minHeight: '45vh',
             display: 'flex',
             flexDirection: 'column',

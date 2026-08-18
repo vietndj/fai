@@ -20,9 +20,9 @@ export default function SkillkingProgramSwitcher({ activePath }) {
                 <Link
                   key={idx}
                   href={item.href}
-                  className={`aptech-switcher-btn skillking-switcher-btn ${isActive ? 'active' : ''}`}
+                  className={`skillking-switcher-btn ${isActive ? 'active' : ''}`}
                 >
-                  {isActive && <Sparkles size={16} className="active-sparkle" />}
+                  {isActive && <span className="active-dot"></span>}
                   <span>{item.label}</span>
                 </Link>
               );

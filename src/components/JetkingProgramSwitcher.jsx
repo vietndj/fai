@@ -20,9 +20,9 @@ export default function JetkingProgramSwitcher({ activePath }) {
                 <Link
                   key={idx}
                   href={item.href}
-                  className={`aptech-switcher-btn ${isActive ? 'active' : ''}`}
+                  className={`jetking-switcher-btn ${isActive ? 'active' : ''}`}
                 >
-                  {isActive && <Sparkles size={16} className="active-sparkle" />}
+                  {isActive && <span className="active-dot"></span>}
                   <span>{item.label}</span>
                 </Link>
               );
