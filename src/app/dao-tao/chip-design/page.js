@@ -510,7 +510,13 @@ export default function ChipDesignSubpage() {
 
       {/* Section 4: Scholarship Application Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-chip-design">
-        <ScholarshipFormSection programName="FPT Jetking Thiết Kế Vi Mạch Bán Dẫn" />
+        <ScholarshipFormSection 
+          programName="FPT Jetking Thiết Kế Vi Mạch Bán Dẫn" 
+          brand="chip-design"
+          headerTitle="NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING CHIP DESIGN"
+          formTitle="BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ VI MẠCH BÁN DẪN?"
+          formSubtitle="Đăng ký nhận tư vấn lộ trình Thiết kế Vi Mạch Bán Dẫn Quốc Tế 2 năm"
+        />
       </div>
 
       <Footer />
