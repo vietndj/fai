@@ -702,6 +702,16 @@ export default function ShortCourses100200hPage() {
       {/* Section 4: Form nhận thông tin học bổng & Google Sheet (☀️ LIGHT THEME) */}
       <ScholarshipFormSection 
         programName="FPT Aptech - Khóa Ngắn Hạn 100-200h" 
+        headerTitle="NHẬN THÔNG TIN TƯ VẤN BỘ KHÓA HỌC LẬP TRÌNH NGẮN HẠN TẠI FPT APTECH (100 - 200 GIỜ)"
+        formTitle="ĐĂNG KÝ TƯ VẤN KHÓA HỌC LẬP TRÌNH NGẮN HẠN"
+        formSubtitle="Tối ưu thời gian - Đi làm sớm - Tích lũy kỹ năng thực chiến"
+        courseOptions={[
+          "Lập trình Java Fullstack cơ bản & nâng cao",
+          "Lập trình Python phân tích dữ liệu & AI",
+          "Lập trình Web Front-end với ReactJS & NextJS",
+          "Lập trình Backend với Node.js & RESTful API",
+          "Lập trình C/C++ & Cấu trúc dữ liệu giải thuật"
+        ]}
         googleSheetScriptUrl="https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec"
       />
 
