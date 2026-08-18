@@ -115,7 +115,7 @@ export default function Skillking100hFormSection({
               margin: '0 auto'
             }}
           >
-            NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT SKILLKING (18 THÁNG)
+            NHẬN THÔNG TIN TƯ VẤN BỘ KHÓA HỌC DIGITAL MARKETING NGẮN HẠN TẠI FPT SKILLKING (100 GIỜ)
           </h2>
         </div>
 
@@ -278,15 +278,18 @@ export default function Skillking100hFormSection({
                   />
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#f8fafc', padding: '12px 16px', borderRadius: '12px', border: '1px solid #cbd5e1', cursor: 'pointer' }}>
-                    <input type="radio" name="campus" value="Hà Nội" onChange={handleChange} checked={formData.campus === 'Hà Nội'} style={{ accentColor: '#09529c', width: '16px', height: '16px' }} />
-                    <span style={{ fontSize: '0.95rem', color: '#0f172a' }}>Hà Nội</span>
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: '#475569', marginBottom: '8px' }}>
+                    Cơ sở tư vấn thuận tiện cho bạn:
                   </label>
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#f8fafc', padding: '12px 16px', borderRadius: '12px', border: '1px solid #cbd5e1', cursor: 'pointer' }}>
-                    <input type="radio" name="campus" value="Đà Nẵng" onChange={handleChange} checked={formData.campus === 'Đà Nẵng'} style={{ accentColor: '#09529c', width: '16px', height: '16px' }} />
-                    <span style={{ fontSize: '0.95rem', color: '#0f172a' }}>Đà Nẵng</span>
-                  </label>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px' }}>
+                    {['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'].map((c, cIdx) => (
+                      <label key={cIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: formData.campus === c ? 'rgba(9, 82, 156, 0.08)' : '#f8fafc', padding: '10px 12px', borderRadius: '10px', border: formData.campus === c ? '1.5px solid #09529c' : '1px solid #cbd5e1', cursor: 'pointer' }}>
+                        <input type="radio" name="campus" value={c} onChange={handleChange} checked={formData.campus === c} style={{ accentColor: '#09529c', width: '15px', height: '15px' }} />
+                        <span style={{ fontSize: '0.88rem', color: formData.campus === c ? '#0f172a' : '#475569', fontWeight: formData.campus === c ? 700 : 500 }}>{c}</span>
+                      </label>
+                    ))}
+                  </div>
                 </div>
 
                 <div>
