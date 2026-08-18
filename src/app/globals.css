@@ -109,12 +109,16 @@
   margin: 0;
 }
 
-html, body {
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: var(--font-sans);
   color: var(--text-dark);
   background-color: var(--bg-light);
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  overflow-x: clip;
   padding-top: 92px; /* Offset for global fixed header */
 }
 
@@ -128,8 +132,8 @@ h1, h2, h3, .beau-hero-title, .section-headline {
   text-wrap: balance;
 }
 
-@media (max-width: 900px) {
-  html, body {
+@media (max-width: 992px) {
+  body {
     padding-top: 72px; /* Offset for global fixed header on mobile */
   }
 }
@@ -4112,7 +4116,7 @@ img {
 .beau-subpage-container {
   background-color: var(--secondary);
   color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: clip;
   padding-top: 0 !important;
 }
 
