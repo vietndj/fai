@@ -304,7 +304,18 @@ export default function Arena618ThangPage() {
 
       {/* Section 4: Scholarship Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-arena-6-18">
-        <ScholarshipFormSection programName="FPT Arena Chuyên Sâu (6-18 Tháng)" />
+        <ScholarshipFormSection 
+          programName="FPT Arena Chuyên Sâu (6-18 Tháng)" 
+          headerTitle="NHẬN THÔNG TIN TƯ VẤN KHÓA HỌC CHUYÊN SÂU 6 - 18 THÁNG TẠI FPT ARENA"
+          formTitle="BẠN CÓ MUỐN NÂNG TẦM TƯ DUY THIẾT KẾ ĐỒ HỌA?"
+          formSubtitle="Đăng ký nhận tư vấn lộ trình 6 - 18 tháng phù hợp mục tiêu của bạn"
+          courseOptions={[
+            "Thiết kế đồ họa thương mại (6 tháng)",
+            "Thiết kế Web & Kỹ thuật số UI/UX (12 tháng)",
+            "Làm phim kỹ thuật số & Hoạt hình 3D (18 tháng)",
+            "Thiết kế Game & Hoạt hình 3D (18 tháng)"
+          ]}
+        />
       </div>
 
       <Footer />
