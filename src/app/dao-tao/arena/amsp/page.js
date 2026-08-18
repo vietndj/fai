@@ -528,7 +528,12 @@ export default function Arena2NamPage() {
 
       {/* Section 5: Scholarship Application Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-arena-2nam">
-        <ScholarshipFormSection programName="FPT Arena Multimedia 2 Năm" />
+        <ScholarshipFormSection 
+          programName="FPT Arena Multimedia 2 Năm" 
+          headerTitle="NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT ARENA MULTIMEDIA"
+          formTitle="BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA MULTIMEDIA?"
+          formSubtitle="Đăng ký nhận tư vấn lộ trình Mỹ thuật đa phương tiện Quốc tế 2 năm"
+        />
       </div>
 
       <Footer />
