@@ -8,33 +8,30 @@ const BRAND_PRESETS = {
     themeColor: '#09529c',
     accentColor: '#0284c7',
     gradientBg: 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)',
-    badgeBg: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%)',
-    badgeBorder: '#BAE6FD',
-    tagBg: '#09529c',
-    iconColor: '#0284c7',
-    watermarkColor: '#09529c',
-    watermarkType: 'marketing',
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT SKILLKING',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA DIGITAL MARKETING?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình học & ưu đãi học bổng 2026',
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        title: 'Học bổng "Marketer Tương Lai" lên đến',
         value: '12',
         unit: 'Triệu',
+        title: 'Học bổng "Marketer Tương Lai"',
+        desc: 'Ưu đãi trừ trực tiếp vào học phí khi nhập học sớm',
         tags: ['SEO / SEM', 'SOCIAL ADS']
       },
       {
-        title: 'Ưu đãi Chuyển ngành sang Tiếp thị số',
         value: '6',
         unit: 'Triệu',
+        title: 'Ưu đãi Chuyển ngành Tiếp thị số',
+        desc: 'Dành riêng cho sinh viên & người đi làm đổi ngành',
         tags: ['E-COMMERCE', 'CONTENT AI']
       },
       {
-        title: 'Đặc quyền VIP: Tài khoản Coursera + Udemy',
         value: 'VIP',
-        unit: 'Kho học liệu',
+        unit: 'Đặc Quyền',
+        title: 'Tài khoản VIP Coursera & Udemy',
+        desc: 'Truy cập không giới hạn kho học liệu & công cụ AI bản quyền',
         tags: ['AI MARKETING', 'TOOL MIỄN PHÍ']
       }
     ]
@@ -43,33 +40,30 @@ const BRAND_PRESETS = {
     themeColor: '#e8741e',
     accentColor: '#d97706',
     gradientBg: 'linear-gradient(135deg, #e8741e 0%, #d85d0d 100%)',
-    badgeBg: 'linear-gradient(135deg, #FFF6EE 0%, #FFE9D6 100%)',
-    badgeBorder: '#FFC299',
-    tagBg: '#d85d0d',
-    iconColor: '#c8500e',
-    watermarkColor: '#e8741e',
-    watermarkType: 'design',
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT ARENA',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA MULTIMEDIA?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Mỹ thuật đa phương tiện Quốc tế',
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        title: 'Học bổng "Chạm Sáng Tạo" lên đến',
         value: '15',
         unit: 'Triệu',
+        title: 'Học bổng "Chạm Sáng Tạo"',
+        desc: 'Quỹ học bổng dành cho tài năng thiết kế đa phương tiện',
         tags: ['2D / 3D DESIGN', 'UI / UX']
       },
       {
-        title: 'Ưu đãi Đam mê Nghệ thuật Đa phương tiện',
         value: '8',
         unit: 'Triệu',
+        title: 'Ưu đãi Đam mê Nghệ thuật Đồ họa',
+        desc: 'Hỗ trợ chuyển đổi nghề nghiệp sang ngành Mỹ thuật số',
         tags: ['3D ANIMATION', 'VFX GAME']
       },
       {
-        title: 'Đặc quyền VIP: Bản quyền Adobe & Portfolio Pro',
         value: 'VIP',
-        unit: 'Quốc tế',
+        unit: 'Đặc Quyền',
+        title: 'Bản quyền Adobe & Portfolio Pro',
+        desc: 'Tặng bộ tài nguyên thiết kế quốc tế và tài khoản học tập VIP',
         tags: ['ADOBE SUITE', 'MAYA / BLENDER']
       }
     ]
@@ -78,33 +72,30 @@ const BRAND_PRESETS = {
     themeColor: '#dc2626',
     accentColor: '#b91c1c',
     gradientBg: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
-    badgeBg: 'linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%)',
-    badgeBorder: '#FECACA',
-    tagBg: '#dc2626',
-    iconColor: '#b91c1c',
-    watermarkColor: '#dc2626',
-    watermarkType: 'chip',
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ VI MẠCH BÁN DẪN?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Thiết kế Vi Mạch Bán Dẫn Quốc Tế',
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        title: 'Học bổng "Kỹ Sư Bán Dẫn Tương Lai" lên đến',
         value: '15',
         unit: 'Triệu',
+        title: 'Học bổng Kỹ sư Bán dẫn Tương lai',
+        desc: 'Quỹ phát triển nhân lực vi mạch công nghệ cao Việt Nam',
         tags: ['VLSI DESIGN', 'VERILOG HDL']
       },
       {
-        title: 'Quỹ Phát triển Nhân lực Vi mạch Bán dẫn',
         value: '8',
         unit: 'Triệu',
+        title: 'Quỹ Phát triển Nhân lực Vi mạch',
+        desc: 'Hỗ trợ sinh viên ngành kỹ thuật & công nghệ chuyển đổi',
         tags: ['CHIP IC', 'ANALOG / DIGITAL']
       },
       {
-        title: 'Đặc quyền Thực hành LAB EDA chuẩn quốc tế',
         value: 'LAB',
-        unit: 'Synopsys & Cadence',
+        unit: 'Chuẩn Quốc Tế',
+        title: 'Thực hành LAB EDA Synopsys & Cadence',
+        desc: 'Phòng thực hành chuẩn quốc tế với bản quyền công cụ thiết kế chip',
         tags: ['EDA TOOLS', 'CHIP TESTING']
       }
     ]
@@ -113,33 +104,30 @@ const BRAND_PRESETS = {
     themeColor: '#ea580c',
     accentColor: '#c2410c',
     gradientBg: 'linear-gradient(135deg, #ea580c 0%, #c2410c 100%)',
-    badgeBg: 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)',
-    badgeBorder: '#FED7AA',
-    tagBg: '#ea580c',
-    iconColor: '#c2410c',
-    watermarkColor: '#ea580c',
-    watermarkType: 'ai',
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ AI AGENT TIÊN PHONG?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Lập trình Hệ thống AI Agent',
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        title: 'Học bổng "Tiên Phong AI Agent" lên đến',
         value: '14',
         unit: 'Triệu',
+        title: 'Học bổng Tiên phong AI Agent',
+        desc: 'Quỹ ươm mầm chuyên gia phát triển hệ sinh thái AI tự hành',
         tags: ['LLM AGENTS', 'AGENTIC AI']
       },
       {
-        title: 'Quỹ Tài năng Trí tuệ Nhân tạo Quốc tế',
         value: '8',
         unit: 'Triệu',
+        title: 'Quỹ Tài năng Trí tuệ Nhân tạo',
+        desc: 'Ưu đãi khuyến học cho thí sinh đăng ký nhập học sớm',
         tags: ['PYTHON AI', 'RAG & MCP']
       },
       {
-        title: 'Đặc quyền Thực chiến mô hình Tự hành Doanh nghiệp',
         value: '100%',
-        unit: 'Thực chiến',
+        unit: 'Thực Chiến',
+        title: 'Thực chiến mô hình Multi-Agent',
+        desc: 'Trực tiếp triển khai các Agentic Workflow vào bài toán doanh nghiệp',
         tags: ['MULTI-AGENT', 'AUTONOMOUS']
       }
     ]
@@ -148,33 +136,30 @@ const BRAND_PRESETS = {
     themeColor: '#f37021',
     accentColor: '#d85d0d',
     gradientBg: 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)',
-    badgeBg: 'linear-gradient(135deg, #FFF6EE 0%, #FFE9D6 100%)',
-    badgeBorder: '#FFC299',
-    tagBg: '#1a6ed8',
-    iconColor: '#c8500e',
-    watermarkColor: '#f37021',
-    watermarkType: 'code',
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT APTECH',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH LẬP TRÌNH VIÊN QUỐC TẾ?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình học & học bổng 2026',
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        title: 'Học bổng Tài Năng lên đến',
         value: '14',
         unit: 'Triệu',
+        title: 'Học bổng Tài năng Lập trình viên',
+        desc: 'Dành cho thí sinh đạt kết quả cao trong kỳ thi đánh giá năng lực',
         tags: ['C++', 'JAVA']
       },
       {
-        title: 'Ưu đãi Chuyển ngành lên đến',
         value: '6',
         unit: 'Triệu',
+        title: 'Ưu đãi Chuyển ngành Công nghệ',
+        desc: 'Dành riêng cho sinh viên ngoài ngành muốn học nghề lập trình',
         tags: ['PYTHON', 'DATABASE']
       },
       {
-        title: 'Khuyến khích nhập học sớm lên đến',
         value: '10',
         unit: 'Triệu',
+        title: 'Khuyến khích Nhập học sớm',
+        desc: 'Ưu đãi dành cho học viên hoàn tất thủ tục nhập học sớm 2026',
         tags: ['FULLSTACK', 'AI POWERED']
       }
     ]
@@ -188,23 +173,6 @@ function inferBrand(programName = '') {
   if (p.includes('bán dẫn') || p.includes('chip') || p.includes('vi mạch')) return 'chip-design';
   if (p.includes('ai agent') || p.includes('agent')) return 'ai-agent';
   return 'aptech';
-}
-
-function getWatermarkSvg(type, color = '#f37021') {
-  const encColor = encodeURIComponent(color);
-  if (type === 'marketing') {
-    return `data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' fill='${encColor}' font-family='sans-serif' font-weight='800' font-size='12'%3ESEO%20%E2%80%A2%20SEM%3C/text%3E%3Ctext x='10' y='65' fill='%230f172a' font-family='sans-serif' font-weight='800' font-size='12'%3ECONTENT%20%E2%80%A2%20ADS%3C/text%3E%3Ctext x='10' y='100' fill='${encColor}' font-family='sans-serif' font-weight='800' font-size='12'%3EDIGITAL%20%E2%80%A2%20AI%3C/text%3E%3C/svg%3E`;
-  }
-  if (type === 'design') {
-    return `data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' fill='${encColor}' font-family='sans-serif' font-weight='800' font-size='12'%3E2D%20%E2%80%A2%203D%20ART%3C/text%3E%3Ctext x='10' y='65' fill='%230f172a' font-family='sans-serif' font-weight='800' font-size='12'%3EUI%2FUX%20%E2%80%A2%20VFX%3C/text%3E%3Ctext x='10' y='100' fill='${encColor}' font-family='sans-serif' font-weight='800' font-size='12'%3EANIMATION%3C/text%3E%3C/svg%3E`;
-  }
-  if (type === 'chip') {
-    return `data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' fill='${encColor}' font-family='monospace' font-weight='800' font-size='12'%3EVLSI%20%E2%80%A2%20IC%3C/text%3E%3Ctext x='10' y='65' fill='%230f172a' font-family='monospace' font-weight='800' font-size='12'%3EVERILOG%20%E2%80%A2%20EDA%3C/text%3E%3Ctext x='10' y='100' fill='${encColor}' font-family='monospace' font-weight='800' font-size='12'%3ECHIP%20DESIGN%3C/text%3E%3C/svg%3E`;
-  }
-  if (type === 'ai') {
-    return `data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' fill='${encColor}' font-family='monospace' font-weight='800' font-size='12'%3ELLM%20%E2%80%A2%20AGENT%3C/text%3E%3Ctext x='10' y='65' fill='%230f172a' font-family='monospace' font-weight='800' font-size='12'%3ERAG%20%E2%80%A2%20MCP%3C/text%3E%3Ctext x='10' y='100' fill='${encColor}' font-family='monospace' font-weight='800' font-size='12'%3EAUTONOMOUS%3C/text%3E%3C/svg%3E`;
-  }
-  return `data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' fill='${encColor}' font-family='monospace' font-size='12'%3E01000101%3C/text%3E%3Ctext x='10' y='60' fill='%230d2137' font-family='monospace' font-size='12'%3E11100100%3C/text%3E%3Ctext x='10' y='90' fill='${encColor}' font-family='monospace' font-size='12'%3E00110011%3C/text%3E%3C/svg%3E`;
 }
 
 export default function ScholarshipFormSection({ 
@@ -305,8 +273,6 @@ export default function ScholarshipFormSection({
     }
   };
 
-  const watermarkBg = getWatermarkSvg(preset.watermarkType, themeColor);
-
   return (
     <section 
       className="scholarship-form-section"
@@ -314,28 +280,13 @@ export default function ScholarshipFormSection({
         position: 'relative',
         background: '#ffffff',
         color: '#0D2137',
-        padding: '75px 0',
-        overflow: 'hidden',
-        borderTop: '1px solid rgba(13, 33, 55, 0.08)'
+        padding: '80px 0 90px 0',
+        borderTop: '1px solid rgba(0, 0, 0, 0.06)'
       }}
     >
-      {/* Background Watermark Pattern */}
-      <div 
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          opacity: 0.035,
-          backgroundImage: `url("${watermarkBg}")`,
-          pointerEvents: 'none',
-        }}
-      />
-
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         {/* Main Section Header */}
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '54px' }}>
           <h2 
             style={{
               fontSize: 'clamp(1.5rem, 3.2vw, 2.3rem)',
@@ -344,7 +295,7 @@ export default function ScholarshipFormSection({
               color: '#0D2137',
               letterSpacing: '0.02em',
               lineHeight: '1.35',
-              maxWidth: '1000px',
+              maxWidth: '1050px',
               margin: '0 auto'
             }}
           >
@@ -361,73 +312,128 @@ export default function ScholarshipFormSection({
           </h2>
         </div>
 
-        {/* 2-Column Content Layout */}
+        {/* 2-Column Content Layout - Top Aligned */}
         <div 
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '40px',
-            alignItems: 'center',
+            gap: '36px',
+            alignItems: 'flex-start',
             maxWidth: '1200px',
             margin: '0 auto'
           }}
         >
-          {/* Left Column: Badges & Visuals */}
+          {/* Left Column: Redesigned Horizontal Hero Number Split Cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {activeBadges.map((badge, idx) => (
               <div 
                 key={idx}
                 style={{
-                  position: 'relative',
-                  background: preset.badgeBg,
-                  borderRadius: '24px',
-                  padding: '28px 30px',
-                  border: `2px solid ${preset.badgeBorder}`,
-                  boxShadow: `0 10px 25px ${themeColor}14`,
-                  color: '#1a2332',
-                  textAlign: 'center'
+                  background: '#ffffff',
+                  borderRadius: '20px',
+                  padding: '24px 26px',
+                  border: '1px solid #e2e8f0',
+                  borderLeft: `6px solid ${themeColor}`,
+                  boxShadow: '0 6px 25px rgba(0, 0, 0, 0.03)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '22px',
+                  transition: 'all 0.3s ease'
                 }}
               >
-                <div style={{ fontStyle: 'italic', fontSize: '1rem', color: preset.iconColor, fontWeight: 700 }}>
-                  {badge.title}
-                </div>
-                
-                <div style={{ fontSize: 'clamp(2.4rem, 4.5vw, 3.4rem)', fontWeight: 900, color: themeColor, lineHeight: '1.05', margin: '8px 0' }}>
-                  {badge.value} <span style={{ fontSize: '0.55em', fontWeight: 800 }}>{badge.unit}</span>
+                {/* Left: Hero Number Highlight */}
+                <div style={{ flexShrink: 0, textAlign: 'center', minWidth: '95px' }}>
+                  <div 
+                    style={{ 
+                      fontSize: 'clamp(2.2rem, 3.2vw, 3rem)', 
+                      fontWeight: 900, 
+                      color: themeColor, 
+                      lineHeight: '1',
+                      fontFamily: 'var(--font-sans)',
+                      letterSpacing: '-0.02em'
+                    }}
+                  >
+                    {badge.value}
+                  </div>
+                  <div 
+                    style={{ 
+                      fontSize: '0.8rem', 
+                      fontWeight: 800, 
+                      color: '#64748b', 
+                      textTransform: 'uppercase', 
+                      letterSpacing: '0.08em', 
+                      marginTop: '4px' 
+                    }}
+                  >
+                    {badge.unit}
+                  </div>
                 </div>
 
-                {badge.tags && badge.tags.length > 0 && (
-                  <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '12px', flexWrap: 'wrap' }}>
-                    {badge.tags.map((tag, tIdx) => (
-                      <span 
-                        key={tIdx}
-                        style={{ 
-                          background: preset.tagBg, 
-                          color: '#ffffff', 
-                          fontSize: '0.72rem', 
-                          fontWeight: 800, 
-                          padding: '4px 12px', 
-                          borderRadius: '8px',
-                          letterSpacing: '0.04em'
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                {/* Vertical Divider Line */}
+                <div 
+                  style={{ 
+                    width: '1px', 
+                    height: '60px', 
+                    background: 'rgba(0, 0, 0, 0.08)', 
+                    flexShrink: 0 
+                  }} 
+                />
+
+                {/* Right: Content Details */}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <h4 
+                    style={{ 
+                      fontSize: '1rem', 
+                      fontWeight: 800, 
+                      color: '#0f172a', 
+                      margin: '0 0 4px 0', 
+                      lineHeight: '1.4',
+                      textTransform: 'uppercase' 
+                    }}
+                  >
+                    {badge.title}
+                  </h4>
+                  
+                  {badge.desc && (
+                    <p style={{ color: '#64748b', fontSize: '0.86rem', margin: '0 0 8px 0', lineHeight: '1.45' }}>
+                      {badge.desc}
+                    </p>
+                  )}
+
+                  {badge.tags && badge.tags.length > 0 && (
+                    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                      {badge.tags.map((tag, tIdx) => (
+                        <span 
+                          key={tIdx}
+                          style={{ 
+                            background: `${themeColor}12`, 
+                            color: themeColor, 
+                            fontSize: '0.72rem', 
+                            fontWeight: 800, 
+                            padding: '2px 9px', 
+                            borderRadius: '6px',
+                            border: `1px solid ${themeColor}26`,
+                            letterSpacing: '0.02em'
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Right Column: Form Card */}
+          {/* Right Column: Form Card - Top Aligned */}
           <div 
             style={{
               background: '#ffffff',
-              borderRadius: '28px',
+              borderRadius: '24px',
               padding: '36px 32px',
               border: '1px solid #E2E8F0',
-              boxShadow: '0 20px 50px rgba(13, 33, 55, 0.08)',
+              boxShadow: '0 15px 40px rgba(13, 33, 55, 0.06)',
               color: '#1a2332'
             }}
           >

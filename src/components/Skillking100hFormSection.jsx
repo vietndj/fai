@@ -77,45 +77,32 @@ export default function Skillking100hFormSection({
 
   return (
     <section 
-      className="scholarship-form-section"
+      className="skillking-100h-form-section"
       style={{
         position: 'relative',
         background: '#ffffff',
         color: '#0f172a',
-        padding: '75px 0',
-        overflow: 'hidden',
-        borderTop: '1px solid rgba(15, 23, 42, 0.08)'
+        padding: '80px 0 90px 0',
+        borderTop: '1px solid rgba(0, 0, 0, 0.06)'
       }}
     >
-      <div 
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          opacity: 0.03,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' fill='%2309529c' font-family='monospace' font-size='12'%3E01000101%3C/text%3E%3Ctext x='10' y='60' fill='%230f172a' font-family='monospace' font-size='12'%3E11100100%3C/text%3E%3Ctext x='10' y='90' fill='%2309529c' font-family='monospace' font-size='12'%3E00110011%3C/text%3E%3C/svg%3E")`,
-          pointerEvents: 'none',
-        }}
-      />
-      
-      <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-        {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+        {/* Main Section Header */}
+        <div style={{ textAlign: 'center', marginBottom: '54px' }}>
           <h2 
             style={{
-              fontSize: 'clamp(1.5rem, 3vw, 2.2rem)',
+              fontSize: 'clamp(1.5rem, 3.2vw, 2.3rem)',
               fontWeight: 900,
               textTransform: 'uppercase',
-              color: '#09529c',
+              color: '#0f172a',
               letterSpacing: '0.02em',
-              lineHeight: '1.3',
-              maxWidth: '1000px',
+              lineHeight: '1.35',
+              maxWidth: '1050px',
               margin: '0 auto'
             }}
           >
-            NHẬN THÔNG TIN TƯ VẤN BỘ KHÓA HỌC DIGITAL MARKETING NGẮN HẠN TẠI FPT SKILLKING (100 GIỜ)
+            NHẬN THÔNG TIN TƯ VẤN BỘ KHÓA HỌC DIGITAL MARKETING NGẮN HẠN TẠI{' '}
+            <span style={{ color: '#09529c' }}>FPT SKILLKING (100 GIỜ)</span>
           </h2>
         </div>
 
@@ -124,8 +111,8 @@ export default function Skillking100hFormSection({
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '40px',
-            alignItems: 'center',
+            gap: '36px',
+            alignItems: 'flex-start',
             maxWidth: '1200px',
             margin: '0 auto'
           }}
@@ -133,19 +120,51 @@ export default function Skillking100hFormSection({
           {/* Left Column: Badges & Visuals */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             
-            <div style={{ position: 'relative', background: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%)', borderRadius: '24px', padding: '28px 30px', border: '2px solid #BAE6FD', boxShadow: '0 10px 25px rgba(2, 132, 199, 0.08)', color: '#0f172a' }}>
-              <h4 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#0284c7', marginBottom: '8px' }}>Học bổng Short Course</h4>
-              <p style={{ margin: 0, fontSize: '0.95rem', lineHeight: '1.6' }}>Giảm 1.500.000 VNĐ học phí</p>
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '24px 26px', border: '1px solid #e2e8f0', borderLeft: '6px solid #09529c', boxShadow: '0 6px 25px rgba(0, 0, 0, 0.03)', display: 'flex', alignItems: 'center', gap: '22px' }}>
+              <div style={{ flexShrink: 0, textAlign: 'center', minWidth: '95px' }}>
+                <div style={{ fontSize: 'clamp(2.2rem, 3.2vw, 3rem)', fontWeight: 900, color: '#09529c', lineHeight: '1', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>1.5</div>
+                <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '4px' }}>Triệu VNĐ</div>
+              </div>
+              <div style={{ width: '1px', height: '60px', background: 'rgba(0, 0, 0, 0.08)', flexShrink: 0 }} />
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: 800, color: '#0f172a', margin: '0 0 4px 0', lineHeight: '1.4', textTransform: 'uppercase' }}>Học bổng Short Course</h4>
+                <p style={{ color: '#64748b', fontSize: '0.86rem', margin: '0 0 8px 0', lineHeight: '1.45' }}>Ưu đãi giảm trực tiếp học phí cho học viên nhập học sớm</p>
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                  <span style={{ background: 'rgba(9, 82, 156, 0.08)', color: '#09529c', fontSize: '0.72rem', fontWeight: 800, padding: '2px 9px', borderRadius: '6px', border: '1px solid rgba(9, 82, 156, 0.15)' }}>TIKTOK SHOP</span>
+                  <span style={{ background: 'rgba(9, 82, 156, 0.08)', color: '#09529c', fontSize: '0.72rem', fontWeight: 800, padding: '2px 9px', borderRadius: '6px', border: '1px solid rgba(9, 82, 156, 0.15)' }}>META ADS</span>
+                </div>
+              </div>
             </div>
 
-            <div style={{ position: 'relative', background: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%)', borderRadius: '24px', padding: '28px 30px', border: '2px solid #BAE6FD', boxShadow: '0 10px 25px rgba(2, 132, 199, 0.08)', color: '#0f172a' }}>
-              <h4 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#0284c7', marginBottom: '8px' }}>Đặc quyền VIP</h4>
-              <p style={{ margin: 0, fontSize: '0.95rem', lineHeight: '1.6' }}>Tặng miễn phí tài khoản Coursera + Udemy. Truy cập không giới hạn kho học liệu quốc tế trị giá nghìn USD.</p>
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '24px 26px', border: '1px solid #e2e8f0', borderLeft: '6px solid #09529c', boxShadow: '0 6px 25px rgba(0, 0, 0, 0.03)', display: 'flex', alignItems: 'center', gap: '22px' }}>
+              <div style={{ flexShrink: 0, textAlign: 'center', minWidth: '95px' }}>
+                <div style={{ fontSize: 'clamp(2.2rem, 3.2vw, 3rem)', fontWeight: 900, color: '#09529c', lineHeight: '1', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>VIP</div>
+                <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '4px' }}>Đặc Quyền</div>
+              </div>
+              <div style={{ width: '1px', height: '60px', background: 'rgba(0, 0, 0, 0.08)', flexShrink: 0 }} />
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: 800, color: '#0f172a', margin: '0 0 4px 0', lineHeight: '1.4', textTransform: 'uppercase' }}>Tài khoản Coursera + Udemy</h4>
+                <p style={{ color: '#64748b', fontSize: '0.86rem', margin: '0 0 8px 0', lineHeight: '1.45' }}>Truy cập không giới hạn kho học liệu quốc tế bản quyền trị giá hàng nghìn USD</p>
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                  <span style={{ background: 'rgba(9, 82, 156, 0.08)', color: '#09529c', fontSize: '0.72rem', fontWeight: 800, padding: '2px 9px', borderRadius: '6px', border: '1px solid rgba(9, 82, 156, 0.15)' }}>E-LEARNING</span>
+                  <span style={{ background: 'rgba(9, 82, 156, 0.08)', color: '#09529c', fontSize: '0.72rem', fontWeight: 800, padding: '2px 9px', borderRadius: '6px', border: '1px solid rgba(9, 82, 156, 0.15)' }}>AI TOOLKIT</span>
+                </div>
+              </div>
             </div>
 
-            <div style={{ position: 'relative', background: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%)', borderRadius: '24px', padding: '28px 30px', border: '2px solid #BAE6FD', boxShadow: '0 10px 25px rgba(2, 132, 199, 0.08)', color: '#0f172a' }}>
-              <h4 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#0284c7', marginBottom: '8px' }}>Zero chi phí công cụ</h4>
-              <p style={{ margin: 0, fontSize: '0.95rem', lineHeight: '1.6' }}>Thực chiến 100% bằng công cụ miễn phí, không phát sinh chi phí phần mềm.</p>
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '24px 26px', border: '1px solid #e2e8f0', borderLeft: '6px solid #09529c', boxShadow: '0 6px 25px rgba(0, 0, 0, 0.03)', display: 'flex', alignItems: 'center', gap: '22px' }}>
+              <div style={{ flexShrink: 0, textAlign: 'center', minWidth: '95px' }}>
+                <div style={{ fontSize: 'clamp(2.2rem, 3.2vw, 3rem)', fontWeight: 900, color: '#09529c', lineHeight: '1', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>0đ</div>
+                <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '4px' }}>Chi Phí Tool</div>
+              </div>
+              <div style={{ width: '1px', height: '60px', background: 'rgba(0, 0, 0, 0.08)', flexShrink: 0 }} />
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: 800, color: '#0f172a', margin: '0 0 4px 0', lineHeight: '1.4', textTransform: 'uppercase' }}>Zero Chi Phí Công Cụ</h4>
+                <p style={{ color: '#64748b', fontSize: '0.86rem', margin: '0 0 8px 0', lineHeight: '1.45' }}>Thực chiến 100% bằng công cụ miễn phí, không phát sinh chi phí phần mềm trong quá trình học</p>
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                  <span style={{ background: 'rgba(9, 82, 156, 0.08)', color: '#09529c', fontSize: '0.72rem', fontWeight: 800, padding: '2px 9px', borderRadius: '6px', border: '1px solid rgba(9, 82, 156, 0.15)' }}>100% THỰC HÀNH</span>
+                </div>
+              </div>
             </div>
 
           </div>
