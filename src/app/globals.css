@@ -1539,9 +1539,20 @@ img {
   filter: grayscale(0%) brightness(100%);
 }
 
-.beau-hero-logo svg, .beau-hero-logo img {
-  transform: scale(1.6);
-  transform-origin: left center;
+.beau-hero-logo {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.beau-hero-logo img,
+.beau-hero-logo svg {
+  height: 64px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  object-position: left;
 }
 
 .prog-beau-brand-tag {

@@ -51,8 +51,8 @@ export default function Arena618ThangPage() {
           <h1 className="beau-hero-title">
             Thiết Kế 2D, 3D,<br />Game &amp; App Chuyên Sâu
           </h1>
-          <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
-            <Image src="/logo_arena.png" alt="FPT Arena Multimedia Logo" width={180} height={42} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+          <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '24px', display: 'flex', alignItems: 'center' }}>
+            <Image src="/logo_arena.png" alt="FPT Arena Multimedia Logo" width={200} height={56} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '52px' }} priority />
           </div>
           <p className="beau-hero-desc">
             Chương trình đào tạo linh hoạt tối ưu thời gian từ 6 đến 18 tháng. Giúp học viên tập trung đào sâu đúng chuyên môn mong muốn: Thiết kế Đồ họa 2D &amp; UI/UX, Kỹ xảo làm phim kỹ thuật số, hoặc Diễn hoạt Hoạt hình 3D &amp; Game Art.

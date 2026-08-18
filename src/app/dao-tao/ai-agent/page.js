@@ -158,12 +158,8 @@ export default function AiAgentSubpage() {
           <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance', textTransform: 'uppercase' }}>
             CHƯƠNG TRÌNH ĐÀO TẠO CHUYÊN NGÀNH AI AGENT
           </h1>
-          <div className="beau-hero-logo" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
-            <svg width="120" height="38" viewBox="0 0 120 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 8 L22 8 L18 28 L6 28 Z" fill="#f37021"/>
-              <path d="M24 14 L34 14 L31 28 L21 28 Z" fill="#0066b3"/>
-              <text x="40" y="25" fill="#ffffff" fontSize="16" fontWeight="bold" fontFamily="sans-serif">Jetking</text>
-            </svg>
+          <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '24px', display: 'flex', alignItems: 'center' }}>
+            <Image src="/logo_jetking.png" alt="FPT Jetking Logo" width={200} height={56} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '52px' }} priority />
           </div>
           <p className="beau-hero-desc">
             Trong làn sóng chuyển đổi số toàn cầu, trí tuệ nhân tạo (AI) đang trở thành động lực cốt lõi thúc đẩy năng suất, sáng tạo và hiệu quả trong mọi lĩnh vực – từ y tế, tài chính, giáo dục đến sản xuất, thương mại điện tử. Một trong những ứng dụng đột phá nhất của AI hiện nay là AI Agent – những “tác nhân thông minh” có khả năng quan sát, ra quyết định và hành động một cách tự động mà không cần can thiệp con người.<br /><br />

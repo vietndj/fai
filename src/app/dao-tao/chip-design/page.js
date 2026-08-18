@@ -158,8 +158,8 @@ export default function ChipDesignSubpage() {
           <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance', textTransform: 'uppercase' }}>
             Chương trình thiết kế vi mạch bán dẫn quốc tế tích hợp AI
           </h1>
-          <div className="beau-hero-logo" style={{ marginTop: '20px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
-            <Image src="/logo_jetking.png" alt="FPT Jetking Logo" width={180} height={42} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+          <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '24px', display: 'flex', alignItems: 'center' }}>
+            <Image src="/logo_jetking.png" alt="FPT Jetking Logo" width={200} height={56} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '52px' }} priority />
           </div>
           <p className="beau-hero-desc">
             Ngành vi mạch bán dẫn (Semiconductor) đang là nền tảng cốt lõi của các công nghệ hiện đại như AI, IoT và 5G, với giá trị thị trường toàn cầu dự báo sẽ đạt hàng nghìn tỷ USD trong thập kỷ tới. Tuy nhiên, tình trạng thiếu hụt nhân lực chất lượng cao đang trở thành rào cản lớn. Nhận thấy nhu cầu cấp thiết này, FPT Jetking đã phát triển chương trình đào tạo Thiết kế vi mạch bán dẫn quốc tế tích hợp AI, cung cấp lộ trình học tập chuyên sâu, bám sát thực tiễn và kết nối trực tiếp với doanh nghiệp. Chương trình hướng đến việc đào tạo thế hệ kỹ sư vi mạch có chuyên môn vững vàng, sẵn sàng gia nhập thị trường toàn cầu trong bối cảnh AI ngày càng phát triển mạnh mẽ.

@@ -171,8 +171,8 @@ export default function Arena2NamPage() {
           <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance', textTransform: 'uppercase' }}>
             Chương trình đào tạo<br />Chuyên gia Mỹ thuật Đa phương tiện
           </h1>
-          <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
-            <Image src="/logo_arena.png" alt="FPT Arena Multimedia Logo" width={180} height={42} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+          <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '24px', display: 'flex', alignItems: 'center' }}>
+            <Image src="/logo_arena.png" alt="FPT Arena Multimedia Logo" width={200} height={56} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '52px' }} priority />
           </div>
           <div className="beau-hero-desc">
             <p style={{ marginBottom: '16px' }}>
