@@ -529,6 +529,8 @@ export default function Frontend6ThangPage() {
       {/* Section 7: Form nhận thông tin học bổng & Google Sheet (☀️ LIGHT THEME) */}
       <ScholarshipFormSection 
         programName="FPT Aptech - Frontend 6 Tháng" 
+        formTitle="BẠN CÓ MUỐN TRỞ THÀNH LẬP TRÌNH VIÊN FRONTEND?"
+        formSubtitle="Đăng ký nhận tư vấn lộ trình cấp tốc 6 tháng & ưu đãi học phí"
         googleSheetScriptUrl="https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec"
       />
 
