@@ -470,7 +470,13 @@ export default function Skillking18ThangPage() {
 
       {/* Section 4: Scholarship Application Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-skillking-18t">
-        <ScholarshipFormSection programName="Fullstack Digital Marketing With AI (18 Tháng)" />
+        <ScholarshipFormSection 
+          programName="Fullstack Digital Marketing With AI (18 Tháng)" 
+          brand="skillking"
+          headerTitle="NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT SKILLKING"
+          formTitle="BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA DIGITAL MARKETING?"
+          formSubtitle="Đăng ký nhận tư vấn lộ trình Full-stack Digital Marketing With AI (18 Tháng)"
+        />
       </div>
 
       <Footer />
