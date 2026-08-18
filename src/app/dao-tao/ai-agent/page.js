@@ -534,7 +534,13 @@ export default function AiAgentSubpage() {
 
       {/* Section 4: Scholarship Application Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-ai-agent">
-        <ScholarshipFormSection programName="FPT Jetking Chuyên Gia AI Agent" />
+        <ScholarshipFormSection 
+          programName="FPT Jetking Chuyên Gia AI Agent" 
+          brand="ai-agent"
+          headerTitle="NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING AI AGENT"
+          formTitle="BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ AI AGENT TIÊN PHONG?"
+          formSubtitle="Đăng ký nhận tư vấn lộ trình Lập trình Hệ thống AI Agent"
+        />
       </div>
 
       <Footer />
