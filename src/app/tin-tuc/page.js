@@ -1,4 +1,3 @@
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import NewsHeroSlider from '@/components/NewsHeroSlider';
 import Image from 'next/image';
@@ -14,8 +13,7 @@ export const metadata = {
 export default function TinTuc() {
   return (
     <div className="news-page-container">
-      <Header />
-      
+            
       <main className="sub-page-main">
         {/* Section Header */}
         <section className="news-page-title-section">

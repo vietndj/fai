@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import JetkingProgramSwitcher from '@/components/JetkingProgramSwitcher';
@@ -142,8 +141,7 @@ export default function ChipDesignSubpage() {
 
   return (
     <div className={`beau-subpage-container theme-chip-design active-sec-${activeSection}`}>
-      <Header />
-
+      
       {/* Sticky Program Switcher Bar */}
       <JetkingProgramSwitcher activePath="/dao-tao/chip-design" />
 

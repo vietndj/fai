@@ -1,5 +1,6 @@
 import "./globals.css";
 import ScrollReveal from "@/components/ScrollReveal";
+import Header from "@/components/Header";
 
 export const metadata = {
   title: "FAI — FPT Academy International | 18 Năm Đào Tạo Quốc Tế",
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="vi">
       <body>
         <ScrollReveal />
+        <Header />
         {children}
       </body>
     </html>

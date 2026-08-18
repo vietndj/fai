@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import ArenaProgramSwitcher from '@/components/ArenaProgramSwitcher';
@@ -35,8 +34,7 @@ export default function Arena100hPage() {
 
   return (
     <div className={`beau-subpage-container theme-arena active-sec-${activeSection}`}>
-      <Header />
-
+      
       {/* Program Switcher Bar */}
       <ArenaProgramSwitcher activePath="/dao-tao/arena/100h" />
 

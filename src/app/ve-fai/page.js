@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import ScrollTypewriter from '@/components/ScrollTypewriter';
-import Header from '@/components/Header';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
@@ -213,8 +212,7 @@ export default function VeFai() {
 
   return (
     <div className="about-page-container" style={{ backgroundColor: '#ffffff', color: '#1a2332' }}>
-      <Header />
-
+      
       <main className="sub-page-main" style={{ padding: 0 }}>
         
         {/* SECTION 1: Page Title (sec-pageTitle) - Clean dynamic typewriter with floating particles */}

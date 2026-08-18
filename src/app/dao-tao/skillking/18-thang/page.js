@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import SkillkingProgramSwitcher from '@/components/SkillkingProgramSwitcher';
@@ -114,8 +113,7 @@ export default function Skillking18ThangPage() {
 
   return (
     <div className={`beau-subpage-container theme-skillking active-sec-${activeSection}`}>
-      <Header />
-
+      
       {/* Program Switcher Bar */}
       <SkillkingProgramSwitcher activePath="/dao-tao/skillking/18-thang" />
 

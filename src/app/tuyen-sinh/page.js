@@ -1,6 +1,5 @@
 'use client';
 
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { Phone, MapPin, Mail, Clock, ArrowRight, UserCheck, Award, FileText, ClipboardList, Settings, CheckCircle2 } from 'lucide-react';
@@ -8,8 +7,7 @@ import { Phone, MapPin, Mail, Clock, ArrowRight, UserCheck, Award, FileText, Cli
 export default function TuyenSinh() {
   return (
     <div className="admissions-page-container" style={{ backgroundColor: '#ffffff', color: '#1a2332' }}>
-      <Header />
-
+      
       <main className="sub-page-main" style={{ padding: 0 }}>
         
         {/* BLOCK 1: Hero Header Section - White Background - Proportional Height */}

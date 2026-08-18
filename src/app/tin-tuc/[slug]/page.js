@@ -1,4 +1,3 @@
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -35,8 +34,7 @@ export default async function ArticleDetailPage({ params }) {
 
   return (
     <div className="article-page-container">
-      <Header />
-
+      
       <main className="article-main-wrapper">
         {/* Breadcrumb & Intro Block */}
         <section className="article-header-section">

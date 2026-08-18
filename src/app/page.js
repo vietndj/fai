@@ -1,4 +1,3 @@
-import Header from '@/components/Header';
 import HeroSlider from '@/components/HeroSlider';
 import TrustBar from '@/components/TrustBar';
 import Counters from '@/components/Counters';
@@ -18,8 +17,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
+            <main>
         {/* Full-screen hero with brand statement */}
         <HeroSlider />
 

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
@@ -124,8 +123,7 @@ export default function Fullstack2NamPage() {
 
   return (
     <div className={`beau-subpage-container theme-aptech active-sec-${activeSection}`}>
-      <Header />
-
+      
       {/* Sticky Program Switcher Bar (Large & Prominent) */}
       <AptechProgramSwitcher activePath="/dao-tao/aptech/2-nam" />
 

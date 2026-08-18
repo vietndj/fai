@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -391,8 +390,7 @@ export default function DoiSong() {
 
   return (
     <div className="student-life-page-container" style={{ backgroundColor: '#ffffff', color: '#1a2332' }}>
-      <Header />
-
+      
       <main className="student-life-main" style={{ padding: 0 }}>
         
         {/* BLOCK 1: Hero Section */}

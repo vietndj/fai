@@ -1,6 +1,5 @@
 'use client';
 
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -113,8 +112,7 @@ const programs = [
 export default function DaoTao() {
   return (
     <div className="training-overview-container" style={{ backgroundColor: '#ffffff', color: '#1a2332' }}>
-      <Header />
-
+      
       <main className="sub-page-main" style={{ padding: 0 }}>
         
         {/* BLOCK 1: Hero Header Section - White Background - Proportional Height */}
