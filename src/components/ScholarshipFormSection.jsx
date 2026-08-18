@@ -20,21 +20,18 @@ const BRAND_PRESETS = {
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        icon: '🚀',
         title: 'Học bổng "Marketer Tương Lai" lên đến',
         value: '12',
         unit: 'Triệu',
         tags: ['SEO / SEM', 'SOCIAL ADS']
       },
       {
-        icon: '🎯',
         title: 'Ưu đãi Chuyển ngành sang Tiếp thị số',
         value: '6',
         unit: 'Triệu',
         tags: ['E-COMMERCE', 'CONTENT AI']
       },
       {
-        icon: '⭐',
         title: 'Đặc quyền VIP: Tài khoản Coursera + Udemy',
         value: 'VIP',
         unit: 'Kho học liệu',
@@ -58,21 +55,18 @@ const BRAND_PRESETS = {
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        icon: '🎨',
         title: 'Học bổng "Chạm Sáng Tạo" lên đến',
         value: '15',
         unit: 'Triệu',
         tags: ['2D / 3D DESIGN', 'UI / UX']
       },
       {
-        icon: '✨',
         title: 'Ưu đãi Đam mê Nghệ thuật Đa phương tiện',
         value: '8',
         unit: 'Triệu',
         tags: ['3D ANIMATION', 'VFX GAME']
       },
       {
-        icon: '🏆',
         title: 'Đặc quyền VIP: Bản quyền Adobe & Portfolio Pro',
         value: 'VIP',
         unit: 'Quốc tế',
@@ -96,21 +90,18 @@ const BRAND_PRESETS = {
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        icon: '⚡',
         title: 'Học bổng "Kỹ Sư Bán Dẫn Tương Lai" lên đến',
         value: '15',
         unit: 'Triệu',
         tags: ['VLSI DESIGN', 'VERILOG HDL']
       },
       {
-        icon: '🔬',
         title: 'Quỹ Phát triển Nhân lực Vi mạch Bán dẫn',
         value: '8',
         unit: 'Triệu',
         tags: ['CHIP IC', 'ANALOG / DIGITAL']
       },
       {
-        icon: '🏢',
         title: 'Đặc quyền Thực hành LAB EDA chuẩn quốc tế',
         value: 'LAB',
         unit: 'Synopsys & Cadence',
@@ -134,21 +125,18 @@ const BRAND_PRESETS = {
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        icon: '🤖',
         title: 'Học bổng "Tiên Phong AI Agent" lên đến',
         value: '14',
         unit: 'Triệu',
         tags: ['LLM AGENTS', 'AGENTIC AI']
       },
       {
-        icon: '⚡',
         title: 'Quỹ Tài năng Trí tuệ Nhân tạo Quốc tế',
         value: '8',
         unit: 'Triệu',
         tags: ['PYTHON AI', 'RAG & MCP']
       },
       {
-        icon: '🚀',
         title: 'Đặc quyền Thực chiến mô hình Tự hành Doanh nghiệp',
         value: '100%',
         unit: 'Thực chiến',
@@ -172,21 +160,18 @@ const BRAND_PRESETS = {
     campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
     badges: [
       {
-        icon: '</>',
         title: 'Học bổng Tài Năng lên đến',
         value: '14',
         unit: 'Triệu',
         tags: ['C++', 'JAVA']
       },
       {
-        icon: '</>',
         title: 'Ưu đãi Chuyển ngành lên đến',
         value: '6',
         unit: 'Triệu',
         tags: ['PYTHON', 'DATABASE']
       },
       {
-        icon: '</>',
         title: 'Khuyến khích nhập học sớm lên đến',
         value: '10',
         unit: 'Triệu',
@@ -396,43 +381,23 @@ export default function ScholarshipFormSection({
                   position: 'relative',
                   background: preset.badgeBg,
                   borderRadius: '24px',
-                  padding: '24px 30px',
+                  padding: '28px 30px',
                   border: `2px solid ${preset.badgeBorder}`,
-                  boxShadow: `0 10px 25px ${themeColor}1a`,
+                  boxShadow: `0 10px 25px ${themeColor}14`,
                   color: '#1a2332',
                   textAlign: 'center'
                 }}
               >
-                {/* Top Floating Badge Tag */}
-                <span 
-                  style={{
-                    position: 'absolute',
-                    top: '-14px',
-                    left: '24px',
-                    background: themeColor,
-                    color: '#ffffff',
-                    fontSize: '0.8rem',
-                    fontWeight: 800,
-                    padding: '3px 12px',
-                    borderRadius: '12px',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '4px'
-                  }}
-                >
-                  {badge.icon}
-                </span>
-
                 <div style={{ fontStyle: 'italic', fontSize: '1rem', color: preset.iconColor, fontWeight: 700 }}>
                   {badge.title}
                 </div>
                 
-                <div style={{ fontSize: 'clamp(2.4rem, 4.5vw, 3.4rem)', fontWeight: 900, color: themeColor, lineHeight: '1.05', margin: '6px 0' }}>
+                <div style={{ fontSize: 'clamp(2.4rem, 4.5vw, 3.4rem)', fontWeight: 900, color: themeColor, lineHeight: '1.05', margin: '8px 0' }}>
                   {badge.value} <span style={{ fontSize: '0.55em', fontWeight: 800 }}>{badge.unit}</span>
                 </div>
 
                 {badge.tags && badge.tags.length > 0 && (
-                  <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '10px', flexWrap: 'wrap' }}>
+                  <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '12px', flexWrap: 'wrap' }}>
                     {badge.tags.map((tag, tIdx) => (
                       <span 
                         key={tIdx}
@@ -441,7 +406,7 @@ export default function ScholarshipFormSection({
                           color: '#ffffff', 
                           fontSize: '0.72rem', 
                           fontWeight: 800, 
-                          padding: '3px 12px', 
+                          padding: '4px 12px', 
                           borderRadius: '8px',
                           letterSpacing: '0.04em'
                         }}
