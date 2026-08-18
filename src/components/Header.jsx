@@ -28,7 +28,7 @@ export default function Header() {
         <div className="container main-nav-content">
           {/* Logo */}
           <Link href="/" className="logo" onClick={closeMenu} style={{ display: 'flex', alignItems: 'center', height: '68px', padding: '2px 0' }}>
-            <Image src="/logo_fpt_fai.png" alt="FPT FAI Logo" width={280} height={64} style={{ objectFit: 'contain', height: '100%', width: 'auto' }} />
+            <img src="/logo_fpt_fai.png" alt="FPT FAI Logo" style={{ objectFit: 'contain', height: '100%', width: 'auto', maxHeight: '64px' }} />
           </Link>
 
           {/* Desktop Navigation Menu */}
@@ -67,7 +67,7 @@ export default function Header() {
                       <div className="megamenu-links-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
                         <div className="program-cat brand-aptech">
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
-                            <Image src="/logo_aptech.png" alt="FPT Aptech" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
+                            <img src="/logo_aptech.png" alt="FPT Aptech" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/aptech/2-nam" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
                           <Link href="/dao-tao/aptech/1-nam" className="megamenu-link">Lập trình Back end 1 năm</Link>
@@ -76,7 +76,7 @@ export default function Header() {
                         </div>
                         <div className="program-cat brand-arena">
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
-                            <Image src="/logo_arena.png" alt="FPT Arena" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
+                            <img src="/logo_arena.png" alt="FPT Arena" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/arena/amsp" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
                           <Link href="/dao-tao/arena/6-18-thang" className="megamenu-link">Thiết kế 2D, 3D, Game và App (6–18 tháng)</Link>
@@ -84,14 +84,14 @@ export default function Header() {
                         </div>
                         <div className="program-cat brand-skillking">
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
-                            <Image src="/logo_skillking.png" alt="FPT Skillking" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
+                            <img src="/logo_skillking.png" alt="FPT Skillking" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/skillking/18-thang" className="megamenu-link">Fullstack Digital Marketing With AI (18 tháng)</Link>
                           <Link href="/dao-tao/skillking/100h" className="megamenu-link">Bộ khóa học Digital Marketing ngắn hạn (100 giờ)</Link>
                         </div>
                         <div className="program-cat brand-jetking">
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
-                            <Image src="/logo_jetking.png" alt="FPT Jetking" width={160} height={38} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
+                            <img src="/logo_jetking.png" alt="FPT Jetking" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
                           <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)</Link>
                           <Link href="/dao-tao/ai-agent" className="megamenu-link">Lập trình AI Agent (6 tháng - 2 năm)</Link>

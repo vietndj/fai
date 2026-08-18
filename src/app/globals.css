@@ -6079,7 +6079,10 @@ img {
   display: none; /* Chrome/Safari */
 }
 
-.aptech-switcher-btn {
+.aptech-switcher-btn,
+.arena-switcher-btn,
+.skillking-switcher-btn,
+.jetking-switcher-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
