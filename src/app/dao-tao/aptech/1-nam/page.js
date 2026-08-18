@@ -645,6 +645,8 @@ export default function Backend1NamPage() {
       {/* Section 7: Form nhận thông tin học bổng & Google Sheet (☀️ LIGHT THEME) */}
       <ScholarshipFormSection 
         programName="FPT Aptech - Backend 1 Năm" 
+        formTitle="BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA LẬP TRÌNH BACKEND?"
+        formSubtitle="Đăng ký nhận tư vấn lộ trình 1 năm & học bổng quốc tế DISM"
         googleSheetScriptUrl="https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec"
       />
 
