@@ -6076,7 +6076,7 @@ img {
   border-bottom: 2px solid rgba(2, 132, 199, 0.45);
 }
 .jetking-sticky-switcher-bar {
-  border-bottom: 2px solid rgba(243, 112, 33, 0.35);
+  border-bottom: 2px solid rgba(220, 38, 38, 0.45);
 }
 
 .aptech-switcher-inner {
@@ -6169,6 +6169,23 @@ img {
   color: #ffffff;
   border-color: #0284c7;
   box-shadow: 0 6px 24px rgba(2, 132, 199, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Jetking specific switcher active (Red brand color) */
+.jetking-switcher-btn:hover {
+  background: rgba(220, 38, 38, 0.18);
+  color: #ffffff;
+  border-color: rgba(220, 38, 38, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.25);
+}
+
+.jetking-switcher-btn.active {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: #ffffff;
+  border-color: #dc2626;
+  box-shadow: 0 6px 24px rgba(220, 38, 38, 0.5);
   transform: translateY(-1px);
 }
 

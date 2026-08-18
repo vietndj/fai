@@ -158,8 +158,8 @@ export default function AiAgentSubpage() {
           <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance', textTransform: 'uppercase' }}>
             CHƯƠNG TRÌNH ĐÀO TẠO CHUYÊN NGÀNH AI AGENT
           </h1>
-          <div className="beau-hero-logo" style={{ marginTop: '16px', marginBottom: '24px', display: 'flex', alignItems: 'center' }}>
-            <Image src="/logo_jetking.png" alt="FPT Jetking Logo" width={200} height={56} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '52px' }} priority />
+          <div className="beau-hero-logo" style={{ marginTop: '18px', marginBottom: '30px', display: 'flex', alignItems: 'center' }}>
+            <Image src="/logo_jetking.png" alt="FPT Jetking Logo" width={220} height={64} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '60px' }} priority />
           </div>
           <p className="beau-hero-desc">
             Trong làn sóng chuyển đổi số toàn cầu, trí tuệ nhân tạo (AI) đang trở thành động lực cốt lõi thúc đẩy năng suất, sáng tạo và hiệu quả trong mọi lĩnh vực – từ y tế, tài chính, giáo dục đến sản xuất, thương mại điện tử. Một trong những ứng dụng đột phá nhất của AI hiện nay là AI Agent – những “tác nhân thông minh” có khả năng quan sát, ra quyết định và hành động một cách tự động mà không cần can thiệp con người.<br /><br />
