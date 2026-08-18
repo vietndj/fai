@@ -184,7 +184,7 @@ export default function AiAgentSubpage() {
           {/* Banner Image */}
           <div className="beau-hero-banner" style={{ marginTop: '40px' }}>
             <Image
-              src="/banner_jetking_sub_v2.png"
+              src="/banner_ai_agent_sub_v2.png"
               alt="Tuyển sinh FPT Jetking AI Agent"
               width={1200}
               height={400}

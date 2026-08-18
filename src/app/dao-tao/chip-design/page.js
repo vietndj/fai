@@ -187,8 +187,8 @@ export default function ChipDesignSubpage() {
           {/* Banner Image */}
           <div className="beau-hero-banner" style={{ marginTop: '40px' }}>
             <Image
-              src="/banner_chip_sub_v2.png"
-              alt="Tuyển sinh FPT Jetking Vi mạch bán dẫn"
+              src="/banner_chip_design_sub_v2.png"
+              alt="Tuyển sinh Thiết kế vi mạch bán dẫn"
               width={1200}
               height={400}
               priority
