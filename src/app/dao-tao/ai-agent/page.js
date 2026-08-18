@@ -36,111 +36,106 @@ export default function AiAgentSubpage() {
 
   const semesters = [
     {
-      num: 'HỌC KỲ 01',
-      shortTitle: 'Python & ML Foundations',
-      title: 'Python, Data Engineering & Machine Learning Foundations',
-      subtitle: '(Lập trình Python chuyên sâu, Xử lý Dữ liệu lớn & Nền tảng Học máy)',
-      desc: 'Thiết lập nền tảng kỹ thuật AI vững chắc. Làm chủ ngôn ngữ Python cho AI, giải tích ma trận, xác suất thống kê, kỹ thuật thu thập xử lý dữ liệu và xây dựng các mô hình học máy (Machine Learning) có giám sát & không giám sát.',
+      num: 'Học kỳ 01',
+      shortTitle: 'Foundations for Data Science, AI Agent & Machine Learning',
+      title: 'Foundations for Data Science, AI Agent & Machine Learning',
+      subtitle: 'Nền tảng dữ liệu và tư duy AI Agent',
+      desc: 'Sinh viên nắm vững kiến thức cơ bản về lập trình và khoa học dữ liệu, làm quen với khái niệm AI Agent và thực hành xây dựng mô hình đầu tiên.',
       coreStack: [
-        'Lập trình Python nâng cao & OOP cho AI Systems',
-        'Đại số tuyến tính, Xác suất thống kê & Tối ưu hóa',
-        'Xử lý và trực quan hóa dữ liệu (Pandas, NumPy, Matplotlib)',
-        'Thuật toán Machine Learning kinh điển (Scikit-learn)',
-        'Quy trình xây dựng Pipeline Dữ liệu tự động'
+        'AI Programming with Python',
+        'Math, Statistics & Probability for Machine Learning',
+        'Data Manipulation and Visualization',
+        'Fundamentals of AI Agents',
+        'Data Science & Machine Learning Fundamentals'
       ],
       aiTools: [
-        'Jupyter Notebook & Google Colab Pro',
-        'VS Code AI Extensions & GitHub Copilot',
-        'Scikit-learn Machine Learning Library',
-        'Weights & Biases (W&B) Experiment Tracking',
-        'Streamlit Rapid AI App Prototyping'
+        'Xây dựng AI Chatbot hỗ trợ khách hàng trong doanh nghiệp.'
       ],
       careers: [
-        'AI Data Engineer (Kỹ sư Dữ liệu AI)',
-        'Junior Python AI Developer',
-        'Machine Learning Associate',
-        'Đồ án eProject: Hệ thống Dự báo & Phân loại dữ liệu thông minh'
+        'Phân tích dữ liệu',
+        'Kỹ thuật viên xử lý dữ liệu',
+        'Lập trình viên Python sơ cấp',
+        'Lập trình AI Chatbot (mới bắt đầu)',
+        'Kỹ thuật viên hỗ trợ AI'
       ]
     },
     {
-      num: 'HỌC KỲ 02',
-      shortTitle: 'Deep Learning & Vision/NLP',
-      title: 'Deep Learning, Computer Vision & Natural Language Processing',
-      subtitle: '(Học sâu Mạng nơ-ron, Thị giác máy tính & Xử lý ngôn ngữ tự nhiên)',
-      desc: 'Nắm vững cốt lõi của Trí tuệ nhân tạo hiện đại. Xây dựng mạng nơ-ron tích chập (CNN) nhận diện hình ảnh, mạng nơ-ron hồi quy & kiến trúc Transformer để xử lý văn bản, và đóng gói mô hình thành dịch vụ API với FastAPI/Docker.',
+      num: 'Học kỳ 02',
+      shortTitle: 'Advanced Analytics, AI Agent, and Business Intelligence',
+      title: 'Advanced Analytics, AI Agent, and Business Intelligence',
+      subtitle: 'Phân tích dữ liệu & AI Agent thị giác',
+      desc: 'Sinh viên nắm được kiến trúc và xây dựng hệ thống AI có khả năng đưa ra dự đoán chính xác trong môi trường doanh nghiệp.',
       coreStack: [
-        'Kiến trúc mạng nơ-ron nhân tạo (ANN, CNN, RNN, LSTM)',
-        'Thị giác máy tính (Computer Vision & Object Detection YOLO)',
-        'Xử lý ngôn ngữ tự nhiên (NLP, Embeddings, Tokenization)',
-        'Kiến trúc Transformer & Cơ chế Attention',
-        'Đóng gói và triển khai RESTful AI API (FastAPI & Docker)'
+        'Databases and Sql for Data Science',
+        'Advanced Data Science Methods & Algorithms',
+        'Business Intelligence / Data Analytics',
+        'AI Agents: Architecture & Applications',
+        'Image Processing & Computer Vision with Python',
+        'Advanced Machine Learning Methods & Techniques'
       ],
       aiTools: [
-        'PyTorch Deep Learning Framework',
-        'TensorFlow & Keras Ecosystem',
-        'Hugging Face Transformers & Datasets',
-        'OpenCV Computer Vision Library',
-        'FastAPI & Docker Containerization'
+        'Ứng dụng dự đoán trong doanh nghiệp.'
       ],
       careers: [
-        'Deep Learning Engineer (Kỹ sư Học sâu)',
-        'Computer Vision Specialist (Chuyên viên Thị giác máy tính)',
-        'NLP Engineer (Kỹ sư Xử lý ngôn ngữ tự nhiên)',
-        'Đồ án eProject: Ứng dụng Nhận diện thị giác & Trợ lý đàm thoại'
+        'Chuyên viên phân tích dữ liệu kinh doanh',
+        'Chuyên viên phân tích dữ liệu nâng cao',
+        'Kỹ sư học máy sơ cấp',
+        'Chuyên viên phát triển mô hình dự báo',
+        'Chuyên viên khoa học dữ liệu',
+        'Nhà phát triển kiến trúc AI Agent',
+        'Chuyên viên tư vấn giải pháp AI cho doanh nghiệp'
       ]
     },
     {
-      num: 'HỌC KỲ 03',
-      shortTitle: 'GenAI & RAG Systems',
-      title: 'Generative AI, Advanced RAG & LLM Fine-tuning',
-      subtitle: '(Mô hình ngôn ngữ lớn LLM, Hệ thống truy xuất RAG & Tinh chỉnh chuyên sâu)',
-      desc: 'Làm chủ kỷ nguyên GenAI tạo sinh. Thiết kế Prompt Engineering nâng cao, xây dựng hệ thống hỏi đáp tri thức doanh nghiệp RAG với Vector Database, và kỹ thuật tinh chỉnh tham số hiệu quả (PEFT, LoRA/QLoRA) trên mô hình mã nguồn mở.',
+      num: 'Học kỳ 03',
+      shortTitle: 'AI Agent systems, Deep Learning & Data Engineering',
+      title: 'AI Agent systems, Deep Learning & Data Engineering',
+      subtitle: 'AI Agent ngôn ngữ & Trí tuệ doanh nghiệp',
+      desc: 'Sinh viên có khả năng xây dựng AI Agent thông minh, xử lý dữ liệu ngôn ngữ phức tạp, đưa ra giải pháp cho các vấn đề trong thương mại và marketing.',
       coreStack: [
-        'Kiến trúc Large Language Models (GPT, Claude, Llama 3)',
-        'Kỹ thuật Prompt Engineering chuyên sâu (CoT, ReAct, Few-Shot)',
-        'Kiến trúc RAG nâng cao (HyDE, Reranking, Hybrid Search)',
-        'Cơ sở dữ liệu Vector & Cơ chế Semantic Search',
-        'Fine-tuning mô hình ngôn ngữ lớn (LoRA, QLoRA, Axolotl)'
+        'Artificial Intelligence & Deep Learning',
+        'Intelligent Agents in Natural Language Processing (NLP)',
+        'Advanced Natural Language Processing',
+        'Business Analytics & Time Series Analysis',
+        'Data Engineering & Big Data Analytics'
       ],
       aiTools: [
-        'LangChain & LlamaIndex Frameworks',
-        'Vector Databases (Pinecone, ChromaDB, Milvus, Qdrant)',
-        'Ollama & vLLM High-Performance Inference',
-        'Hugging Face PEFT & TRL Fine-tuning',
-        'OpenAI API & Anthropic Claude APIs'
+        'Ứng dụng xử lý ngôn ngữ tự nhiên (AI/NLP) giải quyết bài toán kinh doanh thực tế như dự đoán giá sản phẩm hoặc nhu cầu khách hàng.'
       ],
       careers: [
-        'Generative AI Engineer (Kỹ sư AI Tạo sinh)',
-        'RAG Solutions Architect (Kiến trúc sư Giải pháp RAG)',
-        'LLM Specialist & Prompt Architect',
-        'Đồ án eProject: Trợ lý Tri thức Doanh nghiệp RAG đa dữ liệu'
+        'Kỹ sư xử lý ngôn ngữ tự nhiên',
+        'Chuyên viên phát triển trợ lý ảo thông minh',
+        'Kỹ sư thiết kế câu lệnh',
+        'Kỹ sư dữ liệu',
+        'Chuyên viên phân tích dữ liệu lớn',
+        'Kỹ sư hạ tầng AI',
+        'Kỹ sư Deep Learning'
       ]
     },
     {
-      num: 'HỌC KỲ 04',
-      shortTitle: 'Multi-Agent & Autonomous AI',
-      title: 'Multi-Agent Systems & Autonomous AI Agent Orchestration',
-      subtitle: '(Kiến trúc Tác tử AI Đa nhiệm, Tự động hóa Quy trình Doanh nghiệp)',
-      desc: 'Đỉnh cao của AI hiện đại: Xây dựng các mạng lưới tác tử AI tự động lập kế hoạch, sử dụng công cụ (Tool Use/Function Calling), tương tác và cộng tác để giải quyết các bài toán kinh doanh phức tạp mà không cần con người can thiệp.',
+      num: 'Học kỳ 04',
+      shortTitle: 'Advanced AI Agent Systems Techniques, Research',
+      title: 'Advanced AI Agent Systems Techniques, Research',
+      subtitle: 'Kiến trúc hệ thống & Vận hành hệ thống AI tự hành',
+      desc: 'Sinh viên có khả năng thiết kế và triển khai hệ thống AI phức tạp, có tư duy đạo đức công nghệ và khả năng làm việc nhóm trong môi trường đa tác nhân',
       coreStack: [
-        'Kiến trúc Tác tử AI tự hành (Autonomous AI Agent Architectures)',
-        'Điều phối đa tác tử (Multi-Agent Orchestration & Collaboration)',
-        'Tích hợp công cụ, API & Cơ chế tự phản chiếu (Self-Reflection)',
-        'Quản lý trạng thái và bộ nhớ tác tử (Graph-based State Management)',
-        'Bảo mật AI, Đánh giá hiệu năng Agent & Triển khai Enterprise Cloud'
+        'Generative AI & Advanced AI Applications',
+        'Reinforcement Learning & AI Ethics',
+        'Research Methodology & Data Governance',
+        'AI Agents with Large Language Models',
+        'Design & Implement Multi-AI Agent Systems'
       ],
       aiTools: [
-        'CrewAI Enterprise Multi-Agent Framework',
-        'LangGraph State Machine for Agents',
-        'Microsoft AutoGen Multi-Agent Conversation',
-        'Semantic Kernel & MCP (Model Context Protocol)',
-        'Kubernetes, AWS Bedrock & Azure OpenAI'
+        'Xây dựng hệ thống AI Agent đa nhiệm hoạt động độc lập và triển khai trên nền tảng đám mây.'
       ],
       careers: [
-        'AI Agent Architect (Kiến trúc sư Tác tử AI)',
-        'Enterprise AI Automation Engineer',
-        'Lead AI Solutions Consultant',
-        'Đồ án Tốt nghiệp: Hệ thống Multi-Agent Doanh nghiệp tự vận hành'
+        'Kiến trúc sư hệ thống AI Agent',
+        'Chuyên gia khoa học dữ liệu về AI tạo sinh',
+        'Kỹ sư nghiên cứu và phát triển hệ thống đa tác nhân',
+        'Chuyên viên triển khai AI trên nền tảng đám mây',
+        'Kỹ sư học máy',
+        'Chuyên gia giải pháp AI',
+        'Kỹ sư xử lý ngôn ngữ tự nhiên'
       ]
     }
   ];
@@ -399,7 +394,7 @@ export default function AiAgentSubpage() {
               {/* Col 1 */}
               <div>
                 <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
-                  CÔNG NGHỆ &amp; THUẬT TOÁN LÕI
+                  MÔN HỌC
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].coreStack.map((item, idx) => (
@@ -414,7 +409,7 @@ export default function AiAgentSubpage() {
               {/* Col 2 */}
               <div>
                 <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
-                  FRAMEWORKS &amp; NỀN TẢNG AI
+                  PROJECT
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].aiTools.map((item, idx) => (
@@ -429,7 +424,7 @@ export default function AiAgentSubpage() {
               {/* Col 3 */}
               <div>
                 <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
-                  CƠ HỘI NGHỀ NGHIỆP &amp; ĐỒ ÁN
+                  CƠ HỘI NGHỀ NGHIỆP
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].careers.map((item, idx) => (
@@ -480,10 +475,10 @@ export default function AiAgentSubpage() {
             >
               <div style={{ marginBottom: '18px' }}><Bot size={32} style={{ color: '#f37021' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Đón đầu kỷ nguyên Autonomous AI Agent
+                Tiên phong &amp; Giảng viên
               </h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Học tập và làm chủ các framework tác tử hàng đầu thế giới: CrewAI, LangGraph, AutoGen, Semantic Kernel và giao thức MCP.
+                Đơn vị tiên phong đào tạo ngành AI Agent tại Việt Nam. Đội ngũ giảng viên giàu kinh nghiệm thuộc Tổ chức giáo dục FPT.
               </p>
             </div>
 
@@ -499,10 +494,10 @@ export default function AiAgentSubpage() {
             >
               <div style={{ marginBottom: '18px' }}><Brain size={32} style={{ color: '#f37021' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Hạ tầng GPU &amp; Cloud AI Lab
+                Thực hành chuyên sâu
               </h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Thực hành huấn luyện fine-tuning mô hình ngôn ngữ lớn (LoRA, QLoRA) và xây dựng hệ thống Vector DB RAG trên hạ tầng server AI hiện đại.
+                Học 100% chuyên ngành với 70% thời lượng là thực hành. Đào tạo bằng phương pháp Kiến tạo xã hội trên nền tảng EduNext độc quyền của Tập đoàn FPT.
               </p>
             </div>
 
@@ -518,10 +513,10 @@ export default function AiAgentSubpage() {
             >
               <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#f37021' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Cơ hội việc làm AI đỉnh cao
+                Liên thông &amp; Việc làm
               </h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Kết nối trực tiếp vào các trung tâm AI của FPT Software, FPT Smart Cloud và các tập đoàn công nghệ hàng đầu với mức đãi ngộ hấp dẫn.
+                Học chuyển tiếp lấy bằng Đại học Lincoln, Đại học FPT hoặc một số trường Đại học quốc tế khác. Được ưu tiên thực tập và giới thiệu việc làm tại Tập đoàn FPT và các doanh nghiệp ký kết hợp tác với FPT Jetking.
               </p>
             </div>
           </div>
@@ -534,10 +529,10 @@ export default function AiAgentSubpage() {
         <div className="container beau-cta-inner" data-reveal>
           <h2 className="beau-cta-title">Làm chủ kỷ nguyên AI Agent tự hành cùng FPT Jetking</h2>
           <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
-            Trở thành chuyên gia phát triển hệ thống AI tác tử tiên phong tại Việt Nam.
+            Trở thành chuyên gia phát triển hệ thống AI tiên phong tại Việt Nam.<br/>Học bổng tài năng trị giá 8.000.000 VNĐ.
           </p>
           <a href="#dang-ky-ai-agent" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)', color: '#ffffff', fontWeight: 800 }}>
-            Đăng Ký Tư Vấn &amp; Nhận Học Bổng
+            Tư vấn ngay
             <ArrowRight size={22} strokeWidth={2.5} />
           </a>
         </div>
