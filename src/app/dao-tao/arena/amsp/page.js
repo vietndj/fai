@@ -181,24 +181,6 @@ export default function Arena2NamPage() {
             </p>
           </div>
 
-          <div className="beau-stats-bar">
-            <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>37 Môn</h3>
-              <p>Môn học chuẩn Quốc tế.</p>
-            </div>
-            <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>04 Kỳ Học</h3>
-              <p>Học kỳ chuyên sâu toàn diện.</p>
-            </div>
-            <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>04 Đồ Án</h3>
-              <p>Đồ án thực tế (eProject).</p>
-            </div>
-            <div className="beau-stat-item">
-              <h3 style={{ color: '#ffb600' }}>01 Portfolio</h3>
-              <p>Portfolio chuyên nghiệp.</p>
-            </div>
-          </div>
 
           {/* Banner Image */}
           <div className="beau-hero-banner" style={{ marginTop: '40px' }}>
