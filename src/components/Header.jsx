@@ -69,7 +69,7 @@ export default function Header() {
                           <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
                             <img src="/logo_aptech.png" alt="FPT Aptech" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
                           </div>
-                          <Link href="/dao-tao/aptech/2-nam" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
+                          <Link href="/dao-tao/aptech/accp" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
                           <Link href="/dao-tao/aptech/1-nam" className="megamenu-link">Lập trình Back end 1 năm</Link>
                           <Link href="/dao-tao/aptech/6-thang" className="megamenu-link">Lập trình Front end 6 tháng</Link>
                           <Link href="/dao-tao/aptech/100-200h" className="megamenu-link">Bộ khóa học Lập trình ngắn hạn (100 - 200 giờ)</Link>
@@ -196,7 +196,7 @@ export default function Header() {
               </div>
               <ul className={`mobile-submenu ${expandedCats['dao-tao'] ? 'open' : ''}`}>
                 <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '4px' }}>APTECH — Công Nghệ</li>
-                <li><Link href="/dao-tao/aptech/2-nam" onClick={closeMenu}>Lập trình Fullstack (2 năm)</Link></li>
+                <li><Link href="/dao-tao/aptech/accp" onClick={closeMenu}>Lập trình Fullstack (2 năm)</Link></li>
                 <li><Link href="/dao-tao/aptech/1-nam" onClick={closeMenu}>Lập trình Back end (1 năm)</Link></li>
                 <li><Link href="/dao-tao/aptech/6-thang" onClick={closeMenu}>Lập trình Front end (6 tháng)</Link></li>
                 <li><Link href="/dao-tao/aptech/100-200h" onClick={closeMenu}>Lập trình ngắn hạn (100-200h)</Link></li>

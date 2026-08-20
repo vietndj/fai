@@ -23,7 +23,7 @@ const programs = [
       color: '#ffffff'
     },
     curriculums: [
-      { text: 'Lập trình Fullstack trong 2 năm', href: '/dao-tao/aptech/2-nam' },
+      { text: 'Lập trình Fullstack trong 2 năm', href: '/dao-tao/aptech/accp' },
       { text: 'Lập trình Back end trong 1 năm', href: '/dao-tao/aptech/1-nam' },
       { text: 'Lập trình Front end trong 6 tháng', href: '/dao-tao/aptech/6-thang' },
       { text: 'Bộ khóa học Lập trình ngắn hạn (100 - 200 giờ)', href: '/dao-tao/aptech/100-200h' }

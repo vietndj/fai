@@ -125,7 +125,7 @@ export default function Fullstack2NamPage() {
     <div className={`beau-subpage-container theme-aptech active-sec-${activeSection}`}>
       
       {/* Sticky Program Switcher Bar (Large & Prominent) */}
-      <AptechProgramSwitcher activePath="/dao-tao/aptech/2-nam" />
+      <AptechProgramSwitcher activePath="/dao-tao/aptech/accp" />
 
       {/* Section 0: Hero Section (🌙 DARK TECH THEME) */}
       <section className="beau-hero">
