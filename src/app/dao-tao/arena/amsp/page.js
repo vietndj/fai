@@ -168,32 +168,32 @@ export default function Arena2NamPage() {
     {
       icon: <ShieldCheck size={28} style={{ color: '#ffb600' }} />,
       title: '22 năm tiên phong đào tạo Multimedia',
-      desc: 'Đơn vị đầu tiên tại Việt Nam đào tạo Mỹ thuật Đa phương tiện chuẩn Quốc tế với mạng lưới hơn 20.000 cựu sinh viên giữ vị trí chủ chốt trong ngành sáng tạo.'
+      desc: 'Đơn vị đầu tiên tại Việt Nam đào tạo Mỹ thuật Đa phương tiện chuẩn quốc tế với hơn 20.000 cựu sinh viên thành danh trong ngành sáng tạo.'
     },
     {
       icon: <BrainCircuit size={28} style={{ color: '#ffb600' }} />,
-      title: 'Giáo trình AMSP 2026 tích hợp AI',
-      desc: 'Bản quyền từ Tập đoàn Aptech Ấn Độ, tích hợp toàn diện các công nghệ AI tạo sinh (GenAI) vào thiết kế 2D, làm phim, 3D và Game Art.'
+      title: 'Giáo trình AMSP tích hợp GenAI',
+      desc: 'Bản quyền từ Aptech Ấn Độ, đón đầu xu hướng với các công nghệ AI tạo sinh trong thiết kế 2D, biên tập video, hoạt hình 3D và Game Art.'
     },
     {
       icon: <Zap size={28} style={{ color: '#ffb600' }} />,
-      title: 'Học thuyết Kiến Tạo (Constructivism)',
-      desc: 'Triết lý "Làm khác để làm tốt", sinh viên học tập chủ động qua đồ án thực tế, kích thích tối đa tư duy sáng tạo độc bản và giải quyết vấn đề.'
+      title: 'Học thuyết Kiến tạo (Constructivism)',
+      desc: 'Triết lý "Làm khác để làm tốt", sinh viên học tập chủ động qua đồ án thực tế, kích thích tối đa tư duy sáng tạo và phong cách cá nhân độc bản.'
     },
     {
       icon: <Globe size={28} style={{ color: '#ffb600' }} />,
       title: 'Bằng Quốc tế Advanced Diploma',
-      desc: 'Được công nhận toàn cầu, mở rộng cơ hội làm việc tại nước ngoài hoặc liên thông lên các trường đại học quốc tế danh tiếng như Middlesex, BHMS.'
+      desc: 'Chứng chỉ nghề nghiệp toàn cầu của Aptech Ấn Độ, mở rộng cơ hội làm việc quốc tế và liên thông lên các đại học danh tiếng tại Anh, Úc, Thụy Sĩ.'
     },
     {
       icon: <Wrench size={28} style={{ color: '#ffb600' }} />,
-      title: 'Giảng viên chuyên gia chinh chiến',
-      desc: '100% giảng viên là Creative Director, Art Director, Lead 3D/VFX Artist trực tiếp hướng dẫn và truyền đạt kinh nghiệm dự án thực tế.'
+      title: 'Giảng viên chuyên gia thực chiến',
+      desc: '100% giảng viên là Creative Director, Art Director và Lead 3D/VFX Artist trực tiếp dẫn dắt, truyền nghề và cố vấn qua từng dự án thực tế.'
     },
     {
       icon: <FolderGit2 size={28} style={{ color: '#ffb600' }} />,
       title: 'Showcase đồ án & 300+ đối tác Studio',
-      desc: 'Triển lãm đồ án định kỳ và kết nối tuyển dụng trực tiếp vào mạng lưới hơn 300+ Agency, Studio Game và Production House hàng đầu.'
+      desc: 'Triển lãm đồ án định kỳ và ngày hội việc làm, kết nối tuyển dụng trực tiếp vào mạng lưới hơn 300+ Agency, Studio Game và Production House.'
     }
   ];
 
@@ -537,11 +537,11 @@ export default function Arena2NamPage() {
             <span className="beau-section-eyebrow" style={{ color: '#d97706', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
               ĐẶC QUYỀN ĐÀO TẠO
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Tại sao học Thiết kế Mỹ thuật nên chọn FPT Arena?
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em', textWrap: 'balance' }}>
+              Tại sao nên học Mỹ thuật Đa phương tiện tại FPT Arena?
             </h2>
-            <p style={{ color: '#64748b', maxWidth: '850px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75' }}>
-              FPT Arena mang đến môi trường sáng tạo chuẩn Quốc Tế với chương trình AMSP cập nhật công nghệ mới nhất. Chúng tôi cam kết tạo bệ phóng vững chắc và kết nối trực tiếp sinh viên với mạng lưới hơn 300+ đối tác doanh nghiệp hàng đầu trong ngành công nghiệp sáng tạo.
+            <p style={{ color: '#64748b', maxWidth: '800px', margin: '16px auto 0', fontSize: '1.05rem', lineHeight: '1.75', textWrap: 'balance' }}>
+              FPT Arena mang đến môi trường sáng tạo chuẩn quốc tế với giáo trình AMSP tích hợp GenAI đón đầu xu hướng, đồng thời kết nối trực tiếp sinh viên với mạng lưới hơn 300+ Studio &amp; Agency hàng đầu.
             </p>
           </div>
 
@@ -555,14 +555,30 @@ export default function Arena2NamPage() {
                   borderRadius: '20px', 
                   padding: '36px 30px',
                   boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  flexDirection: 'column'
                 }}
               >
                 <div style={{ marginBottom: '18px' }}>{item.icon}</div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
+                <h3 style={{ 
+                  fontSize: '1.25rem', 
+                  fontWeight: 800, 
+                  color: 'var(--secondary)', 
+                  marginBottom: '12px', 
+                  fontFamily: 'var(--font-sans)',
+                  lineHeight: '1.35',
+                  textWrap: 'balance'
+                }}>
                   {item.title}
                 </h3>
-                <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
+                <p style={{ 
+                  color: '#64748b', 
+                  fontSize: '0.96rem', 
+                  lineHeight: '1.65', 
+                  margin: 0,
+                  textWrap: 'pretty'
+                }}>
                   {item.desc}
                 </p>
               </div>
@@ -575,13 +591,20 @@ export default function Arena2NamPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Sẵn sàng trở thành Chuyên gia Mỹ thuật Đa phương tiện?</h2>
-          <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.1rem', marginBottom: '30px' }}>
-            Đăng ký nhận tư vấn lộ trình học cá nhân hóa và thông tin học bổng mới nhất từ FPT Arena Multimedia
+          <h2 className="beau-cta-title" style={{ textWrap: 'balance' }}>Sẵn sàng trở thành Chuyên gia Mỹ thuật Đa phương tiện?</h2>
+          <p style={{ 
+            color: 'rgba(255, 255, 255, 0.85)', 
+            fontSize: '1.1rem', 
+            maxWidth: '720px', 
+            margin: '16px auto 32px', 
+            lineHeight: '1.7',
+            textWrap: 'balance' 
+          }}>
+            Đăng ký nhận tư vấn lộ trình học cá nhân hóa và thông tin học bổng mới nhất từ <span style={{ whiteSpace: 'nowrap' }}>FPT Arena Multimedia</span>
           </p>
           <TechCTAButton 
             text="Tư vấn ngay" 
-            href="https://zalo.me/fptarena" 
+            href="https://zalo.me/fptarenaofficial" 
             style={{ 
               background: 'linear-gradient(135deg, #ffb600 0%, #d97706 100%)', 
               color: '#000000',
@@ -595,6 +618,7 @@ export default function Arena2NamPage() {
       {/* Section 5: Scholarship Application Form (☀️ LIGHT THEME) */}
       <ScholarshipFormSection 
         programName="FPT Arena Multimedia - AMSP 2 Năm" 
+        brand="arena"
         googleSheetScriptUrl="https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec"
       />
 

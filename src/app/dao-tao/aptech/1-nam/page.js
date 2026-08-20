@@ -634,8 +634,8 @@ export default function Backend1NamPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Sẵn sàng trở thành Lập trình viên Backend chuyên nghiệp?</h2>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', marginBottom: '30px' }}>
+          <h2 className="beau-cta-title">Sẵn sàng trở thành Lập trình viên Backend Chuyên nghiệp?</h2>
+          <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 32px', lineHeight: '1.7' }}>
             Đăng ký nhận tư vấn lộ trình học 1 năm và thông tin học bổng mới nhất từ FPT Aptech
           </p>
           <TechCTAButton text="Tư vấn ngay" href="https://zalo.me/fptaptech" />

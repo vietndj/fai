@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import SkillkingProgramSwitcher from '@/components/SkillkingProgramSwitcher';
-import Skillking100hFormSection from '@/components/Skillking100hFormSection';
+import ScholarshipFormSection from '@/components/ScholarshipFormSection';
+import TechCTAButton from '@/components/TechCTAButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Check, Sparkles, TrendingUp, Search, Video, BarChart2, Zap } from 'lucide-react';
@@ -50,12 +51,15 @@ export default function Skillking100hPage() {
             Bộ Khóa Học <span style={{ whiteSpace: 'nowrap' }}>Digital Marketing</span><br />
             Thực Chiến (100 Giờ)
           </h1>
-          <p className="beau-hero-desc">
-            Bạn không cần học 1 chương trình dài để làm được <span style={{ whiteSpace: 'nowrap' }}>Digital Marketing.</span><br />
-            Tại Skillking, bạn có thể chọn từng khóa ngắn theo đúng nhu cầu, mỗi khóa tập trung vào 1 kỹ năng cốt lõi và có đầu ra rõ ràng.<br /><br />
-            Bộ khoá học ngắn hạn đào tạo <span style={{ whiteSpace: 'nowrap' }}>Digital Marketing</span> tích hợp AI mới nhất từ FPT Skillking:<br />
-            Vững chắc sự nghiệp - Làm chủ công nghệ - Tự tin vào ngành.
-          </p>
+          <div style={{ maxWidth: '850px', marginTop: '22px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.05rem', lineHeight: '1.75' }}>
+            <p style={{ marginBottom: '14px', textWrap: 'balance' }}>
+              Bạn không cần học một chương trình dài để làm được <span style={{ whiteSpace: 'nowrap' }}>Digital Marketing.</span> Tại Skillking, bạn có thể chọn từng khóa ngắn theo đúng nhu cầu, mỗi khóa tập trung vào 1 kỹ năng cốt lõi và có đầu ra nghề nghiệp rõ ràng.
+            </p>
+            <p style={{ margin: 0, textWrap: 'balance' }}>
+              Bộ khoá học ngắn hạn đào tạo <span style={{ whiteSpace: 'nowrap' }}>Digital Marketing</span> tích hợp AI mới nhất từ <span style={{ whiteSpace: 'nowrap' }}>FPT Skillking:</span><br />
+              <span style={{ color: '#38bdf8', fontWeight: 700 }}>Vững chắc sự nghiệp – Làm chủ công nghệ – Tự tin vào ngành.</span>
+            </p>
+          </div>
 
           <div className="beau-stats-bar">
             <div className="beau-stat-item">
@@ -98,107 +102,144 @@ export default function Skillking100hPage() {
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <span style={{ color: '#09529c', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
-              CHUYÊN ĐỀ THỰC CHIẾN
+              CHƯƠNG TRÌNH THỰC CHIẾN
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em', textWrap: 'balance' }}>
               Chương trình học ngắn hạn <span style={{ whiteSpace: 'nowrap' }}>Digital Marketing</span> tại <span style={{ whiteSpace: 'nowrap' }}>FPT Skillking</span>
             </h2>
-            <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Giải pháp tối ưu cho chủ shop kinh doanh, người làm marketing và các bạn trẻ muốn có việc làm ngay.
+            <p style={{ color: '#64748b', maxWidth: '640px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.75', textWrap: 'balance' }}>
+              Giải pháp tối ưu cho chủ shop kinh doanh, người làm marketing<br />và các bạn trẻ muốn có việc làm ngay.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
-            {/* Short Course 1 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '40px 32px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-                <span style={{ background: 'rgba(9, 82, 156, 0.12)', color: '#09529c', fontWeight: 800, fontSize: '0.82rem', padding: '6px 14px', borderRadius: '20px', textTransform: 'uppercase' }}>
-                  KHOÁ 01
-                </span>
-                <TrendingUp size={26} style={{ color: '#09529c' }} />
-              </div>
-              <h3 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
-                Social Media Creator &amp; Ads Performance (Meta/Tiktok)
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.98rem', lineHeight: '1.7', marginBottom: '24px', flexGrow: 1 }}>
-                <strong>Mục tiêu:</strong> Xây dựng quy trình thực chiến: content social và quảng cáo cho Meta/TikTok
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.82rem', fontWeight: 800, color: '#09529c', textTransform: 'uppercase', display: 'block', marginBottom: '12px' }}>Nội dung môn học</span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />AI COPYWRITING &amp; STORYTELLING</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />AI VISUAL DESIGN FOR MARKETERS</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />SOCIAL MEDIA OPERATIONS</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />CAPSTONE PROJECT</li>
-                </ul>
-              </div>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '16px', marginTop: '16px' }}>
-                <p style={{ color: '#334155', fontSize: '0.92rem', lineHeight: '1.6', margin: 0 }}>
-                  <strong style={{ color: '#09529c' }}>Đầu ra:</strong> Bộ creative (template và ngân hàng nội dung), thiết lập chiến dịch &amp; kế hoạch tối ưu
-                </p>
-              </div>
-            </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px', alignItems: 'stretch' }}>
+            {[
+              {
+                badge: 'Khoá 1',
+                icon: <TrendingUp size={26} style={{ color: '#09529c' }} />,
+                title: 'Social Media Creator & Ads Performance',
+                desc: 'Xây dựng quy trình content social đa nền tảng, thiết lập và tối ưu chiến dịch quảng cáo Meta / TikTok.',
+                subjects: [
+                  'AI Copywriting & Storytelling',
+                  'AI Visual Design for Marketers',
+                  'Social Media Operations',
+                  'Capstone Project – Performance Ads'
+                ],
+                output: 'Bộ creative template, ngân hàng nội dung và kế hoạch tối ưu chiến dịch Meta & TikTok Ads.'
+              },
+              {
+                badge: 'Khoá 2',
+                icon: <Search size={26} style={{ color: '#09529c' }} />,
+                title: 'Google Mastery: SEO & Google Ads',
+                desc: 'Chiến lược tăng trưởng thứ hạng tìm kiếm đo lường được thông qua SEO chuyên sâu và Google Ads.',
+                subjects: [
+                  'AI Website & Landing Page Builder',
+                  'SEO Mastery & Keyword Mapping',
+                  'Google Ads & SEM using AI',
+                  'Capstone Project – Search Growth'
+                ],
+                output: 'Hệ thống Website/Landing Page, bộ từ khóa SEO và cấu trúc chiến dịch Google Ads hoàn chỉnh.'
+              },
+              {
+                badge: 'Khoá 3',
+                icon: <Video size={26} style={{ color: '#09529c' }} />,
+                title: 'S-Commerce & TikTok Shop Mastery',
+                desc: 'Xây dựng hệ thống thương mại điện tử mạng xã hội hoàn chỉnh từ nghiên cứu sản phẩm đến chuyển đổi.',
+                subjects: [
+                  'Winning Product Research & Setup',
+                  'Practical E-Commerce Operations',
+                  'Boosting Sales with PACE Model',
+                  'TikTok Livestream & Conversion'
+                ],
+                output: 'Gian hàng chuẩn SEO, trang sản phẩm tối ưu, kế hoạch livestream và kịch bản tăng trưởng doanh số.'
+              }
+            ].map((course, idx) => (
+              <div 
+                key={idx} 
+                style={{ 
+                  background: '#ffffff', 
+                  border: '1px solid rgba(0,0,0,0.06)', 
+                  borderRadius: '24px', 
+                  padding: '30px 24px', 
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.03)', 
+                  display: 'flex', 
+                  flexDirection: 'column',
+                  height: '100%',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                {/* Header: Badge & Icon */}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+                  <span style={{ background: 'rgba(9, 82, 156, 0.12)', color: '#09529c', fontWeight: 800, fontSize: '0.82rem', padding: '6px 14px', borderRadius: '20px', textTransform: 'uppercase' }}>
+                    {course.badge}
+                  </span>
+                  {course.icon}
+                </div>
 
-            {/* Short Course 2 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '40px 32px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-                <span style={{ background: 'rgba(9, 82, 156, 0.12)', color: '#09529c', fontWeight: 800, fontSize: '0.82rem', padding: '6px 14px', borderRadius: '20px', textTransform: 'uppercase' }}>
-                  KHOÁ 02
-                </span>
-                <Search size={26} style={{ color: '#09529c' }} />
-              </div>
-              <h3 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
-                Google Mastery: SEO &amp; SEM
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.98rem', lineHeight: '1.7', marginBottom: '24px', flexGrow: 1 }}>
-                <strong>Mục tiêu:</strong> Tăng trưởng tìm kiếm đo lường được thông qua SEO và Google Ads
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.82rem', fontWeight: 800, color: '#09529c', textTransform: 'uppercase', display: 'block', marginBottom: '12px' }}>Nội dung môn học</span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />AI WEBSITE &amp; LANDING PAGE BUILDER</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />SEO MASTERY</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />GOOGLE ADS &amp; SEM USING AI</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />CAPSTONE PROJECT</li>
-                </ul>
-              </div>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '16px', marginTop: '16px' }}>
-                <p style={{ color: '#334155', fontSize: '0.92rem', lineHeight: '1.6', margin: 0 }}>
-                  <strong style={{ color: '#09529c' }}>Đầu ra:</strong> Xây dựng Website/ landingpage, Bộ keyword mapping và checklist audit SEO, cấu trúc Google Ads, tracking và báo cáo
-                </p>
-              </div>
-            </div>
+                {/* Title (Locked min-height for alignment) */}
+                <h3 style={{ 
+                  fontSize: '1.25rem', 
+                  fontWeight: 800, 
+                  color: 'var(--secondary)', 
+                  marginBottom: '10px', 
+                  fontFamily: 'var(--font-sans)',
+                  lineHeight: '1.35',
+                  minHeight: '3.4rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  textWrap: 'balance'
+                }}>
+                  {course.title}
+                </h3>
 
-            {/* Short Course 3 */}
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '24px', padding: '40px 32px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-                <span style={{ background: 'rgba(9, 82, 156, 0.12)', color: '#09529c', fontWeight: 800, fontSize: '0.82rem', padding: '6px 14px', borderRadius: '20px', textTransform: 'uppercase' }}>
-                  KHOÁ 03
-                </span>
-                <Video size={26} style={{ color: '#09529c' }} />
-              </div>
-              <h3 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>
-                S-Commerce Mastery (TikTok Shop)
-              </h3>
-              <p style={{ color: '#64748b', fontSize: '0.98rem', lineHeight: '1.7', marginBottom: '24px', flexGrow: 1 }}>
-                <strong>Mục tiêu:</strong> Xây dựng hệ thống Scommerce hoàn chỉnh từ sản phẩm → tăng trưởng → chuyển đổi
-              </p>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px' }}>
-                <span style={{ fontSize: '0.82rem', fontWeight: 800, color: '#09529c', textTransform: 'uppercase', display: 'block', marginBottom: '12px' }}>Nội dung môn học</span>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />WINNING PRODUCT RESEARCH &amp; SETUP</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />PRACTICAL E-COMMERCE SHOP OPERATIONS</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />BOOSTING SALES WITH PACE MODEL</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />TIKTOK LIVESTREAM MASTERY</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#334155' }}><Check size={16} style={{ color: '#09529c', flexShrink: 0 }} />PROJECT – GROWTH &amp; CONVERSION</li>
-                </ul>
-              </div>
-              <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '16px', marginTop: '16px' }}>
-                <p style={{ color: '#334155', fontSize: '0.92rem', lineHeight: '1.6', margin: 0 }}>
-                  <strong style={{ color: '#09529c' }}>Đầu ra:</strong> Bộ sản phẩm &amp; offer + trang sản phẩm tối ưu, kế hoạch tăng trưởng theo PACE và báo cáo dự án
+                {/* Description (Locked min-height for uniform divider position) */}
+                <p style={{ 
+                  color: '#64748b', 
+                  fontSize: '0.92rem', 
+                  lineHeight: '1.65', 
+                  marginBottom: '20px', 
+                  minHeight: '4.4rem',
+                  textWrap: 'pretty'
+                }}>
+                  {course.desc}
                 </p>
+
+                {/* Section Divider & Môn học */}
+                <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <span style={{ fontSize: '0.82rem', fontWeight: 800, color: '#09529c', textTransform: 'uppercase', display: 'block', marginBottom: '14px', letterSpacing: '0.04em' }}>
+                    Nội dung môn học
+                  </span>
+                  
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '22px', minHeight: '135px' }}>
+                    {course.subjects.map((sub, sIdx) => (
+                      <li key={sIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '0.88rem', color: '#334155', lineHeight: '1.45' }}>
+                        <Check size={16} style={{ color: '#09529c', flexShrink: 0, marginTop: '2px' }} />
+                        <span>{sub}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Output Box (Pinned at bottom in rounded box with space after colon) */}
+                  <div style={{ 
+                    marginTop: 'auto', 
+                    fontSize: '0.88rem', 
+                    color: '#334155', 
+                    background: '#F8FAFC', 
+                    padding: '14px 16px', 
+                    borderRadius: '14px', 
+                    border: '1px solid rgba(0, 0, 0, 0.04)',
+                    minHeight: '74px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    lineHeight: '1.5'
+                  }}>
+                    <div>
+                      <strong style={{ color: '#09529c' }}>Đầu ra:</strong> {course.output}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -207,19 +248,47 @@ export default function Skillking100hPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', textTransform: 'uppercase' }}>
-            Lựa chọn khóa học ngắn hạn tại FPT Skillking<br />Học nhanh, làm sớm, tích luỹ kinh nghiệm
+          <h2 className="beau-cta-title" style={{ textWrap: 'balance', maxWidth: '780px', margin: '0 auto 16px' }}>
+            Sẵn sàng bứt phá kỹ năng<br />Digital Marketing cấp tốc?
           </h2>
-          <a href="#dang-ky-skillking-100h" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #09529c 0%, #1a6ed8 100%)', color: '#ffffff', fontWeight: 800, marginTop: '30px' }}>
-            Tư vấn ngay
-            <ArrowRight size={22} strokeWidth={2.5} />
-          </a>
+          <p style={{ 
+            color: 'rgba(255, 255, 255, 0.85)', 
+            fontSize: '1.1rem', 
+            maxWidth: '720px', 
+            margin: '16px auto 32px', 
+            lineHeight: '1.7',
+            textWrap: 'balance' 
+          }}>
+            Đăng ký nhận lịch khai giảng các khóa ngắn hạn 100 giờ và thông tin ưu đãi mới nhất từ <span style={{ whiteSpace: 'nowrap' }}>FPT Skillking</span>
+          </p>
+          <TechCTAButton 
+            text="Tư vấn ngay" 
+            href="https://zalo.me/fptskillking" 
+            style={{ 
+              background: 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)', 
+              color: '#ffffff',
+              fontWeight: 800,
+              boxShadow: '0 10px 30px rgba(9, 82, 156, 0.4)'
+            }} 
+          />
         </div>
       </section>
 
       {/* Section 3: Scholarship Form (☀️ LIGHT THEME) */}
       <div id="dang-ky-skillking-100h">
-        <Skillking100hFormSection />
+        <ScholarshipFormSection 
+          programName="FPT Skillking Khóa Ngắn Hạn (100 Giờ)"
+          brand="skillking"
+          headerTitle="NHẬN THÔNG TIN TƯ VẤN KHÓA HỌC NGẮN HẠN 100H & HỌC BỔNG TẠI FPT SKILLKING"
+          formTitle="BẠN CÓ MUỐN BỨT PHÁ KỸ NĂNG DIGITAL MARKETING CẤP TỐC?"
+          formSubtitle="Đăng ký nhận tư vấn lộ trình 100 giờ thực chiến và ưu đãi mới nhất"
+          courseOptions={[
+            "Social Media Marketing & Content AI (100h)",
+            "SEO & Google Ads Chuyên Sâu (100h)",
+            "Performance Marketing & Data Analytics (100h)",
+            "E-Commerce & Marketing Automation (100h)"
+          ]}
+        />
       </div>
 
       <Footer />

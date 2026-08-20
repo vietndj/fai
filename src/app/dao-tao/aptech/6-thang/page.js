@@ -518,9 +518,9 @@ export default function Frontend6ThangPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Sẵn sàng bước chân vào ngành Lập trình Frontend?</h2>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', marginBottom: '30px' }}>
-            Đăng ký nhận tư vấn lộ trình 6 tháng và nhận ưu đãi học phí độc quyền từ FPT Aptech
+          <h2 className="beau-cta-title">Sẵn sàng trở thành Lập trình viên Frontend Chuyên nghiệp?</h2>
+          <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 32px', lineHeight: '1.7' }}>
+            Đăng ký nhận tư vấn lộ trình học 6 tháng và thông tin ưu đãi học phí mới nhất từ FPT Aptech
           </p>
           <TechCTAButton text="Tư vấn ngay" href="https://zalo.me/fptaptech" />
         </div>

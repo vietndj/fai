@@ -2,6 +2,7 @@
 
 import Footer from '@/components/Footer';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
+import TechCTAButton from '@/components/TechCTAButton';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -302,6 +303,18 @@ export default function DaoTao() {
             </section>
           ))}
         </div>
+
+        {/* Bottom CTA Section */}
+        <section className="beau-cta-section" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          <div className="beau-cta-bg-circle"></div>
+          <div className="container beau-cta-inner" data-reveal>
+            <h2 className="beau-cta-title">Sẵn sàng kiến tạo tương lai cùng Viện Đào Tạo Quốc Tế FPT?</h2>
+            <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 32px', lineHeight: '1.7' }}>
+              Đăng ký nhận tư vấn hướng nghiệp 1-1 và thông tin học bổng mới nhất từ các khối ngành đào tạo FAI
+            </p>
+            <TechCTAButton text="Tư vấn ngay" href="https://zalo.me/fptaptech" />
+          </div>
+        </section>
 
         {/* Section: Form đăng ký tư vấn tuyển sinh 4 ngành FAI */}
         <ScholarshipFormSection 

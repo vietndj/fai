@@ -5,9 +5,10 @@ import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import JetkingProgramSwitcher from '@/components/JetkingProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
+import TechCTAButton from '@/components/TechCTAButton';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, Cpu, Layers, ShieldCheck, Zap, Briefcase } from 'lucide-react';
+import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, Cpu, Layers, ShieldCheck, Zap, Briefcase, GraduationCap } from 'lucide-react';
 
 export default function ChipDesignSubpage() {
   const [activeSection, setActiveSection] = useState(0);
@@ -163,11 +164,19 @@ export default function ChipDesignSubpage() {
             Ngành vi mạch bán dẫn (Semiconductor) đang là nền tảng cốt lõi của các công nghệ hiện đại như AI, IoT và 5G, với giá trị thị trường toàn cầu dự báo sẽ đạt hàng nghìn tỷ USD trong thập kỷ tới. Tuy nhiên, tình trạng thiếu hụt nhân lực chất lượng cao đang trở thành rào cản lớn. Nhận thấy nhu cầu cấp thiết này, FPT Jetking đã phát triển chương trình đào tạo Thiết kế vi mạch bán dẫn quốc tế tích hợp AI, cung cấp lộ trình học tập chuyên sâu, bám sát thực tiễn và kết nối trực tiếp với doanh nghiệp. Chương trình hướng đến việc đào tạo thế hệ kỹ sư vi mạch có chuyên môn vững vàng, sẵn sàng gia nhập thị trường toàn cầu trong bối cảnh AI ngày càng phát triển mạnh mẽ.
           </p>
           
-          <p style={{ color: '#ffffff', fontWeight: 800, fontSize: '1.1rem', marginTop: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Lộ trình đào tạo Thiết kế vi mạch bán dẫn<br />Đón đầu xu hướng gia nhập ngành công nghệ tỷ đô
-          </p>
+          {/* Banner Image */}
+          <div className="beau-hero-banner" style={{ marginTop: '36px', marginBottom: '36px' }}>
+            <Image
+              src="/banner_chip_design_sub_v2.png"
+              alt="Tuyển sinh Thiết kế vi mạch bán dẫn"
+              width={1200}
+              height={400}
+              priority
+              style={{ borderRadius: '16px', objectFit: 'cover' }}
+            />
+          </div>
 
-          <div className="beau-stats-bar">
+          <div className="beau-stats-bar" style={{ marginTop: '0' }}>
             <div className="beau-stat-item">
               <h3 style={{ color: '#dc2626' }}>20 Môn học</h3>
               <p>Hệ thống kiến thức chuẩn quốc tế.</p>
@@ -180,18 +189,6 @@ export default function ChipDesignSubpage() {
               <h3 style={{ color: '#dc2626' }}>04 Project</h3>
               <p>Thực hành liên tục với 1 Portfolio chuyên nghiệp.</p>
             </div>
-          </div>
-
-          {/* Banner Image */}
-          <div className="beau-hero-banner" style={{ marginTop: '40px' }}>
-            <Image
-              src="/banner_chip_design_sub_v2.png"
-              alt="Tuyển sinh Thiết kế vi mạch bán dẫn"
-              width={1200}
-              height={400}
-              priority
-              style={{ borderRadius: '16px', objectFit: 'cover' }}
-            />
           </div>
         </div>
       </section>
@@ -211,11 +208,11 @@ export default function ChipDesignSubpage() {
             <span style={{ color: '#dc2626', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
               HÀNH TRÌNH TỔNG QUAN
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
-              Lộ trình đào tạo Kỹ sư Vi mạch 2 năm
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em', textWrap: 'balance' }}>
+              Lộ trình đào tạo Thiết kế vi mạch bán dẫn
             </h2>
-            <p style={{ color: '#64748b', maxWidth: '720px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              Đào tạo đón đầu chiến lược quốc gia đưa Việt Nam thành trung tâm Bán dẫn toàn cầu
+            <p style={{ color: '#64748b', maxWidth: '760px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.75', textWrap: 'balance' }}>
+              Đón đầu xu hướng gia nhập ngành công nghệ tỷ đô, góp phần đưa Việt Nam thành trung tâm Bán dẫn toàn cầu
             </p>
           </div>
 
@@ -451,42 +448,81 @@ export default function ChipDesignSubpage() {
       >
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '54px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#dc2626', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#dc2626', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
               ĐẶC QUYỀN ĐÀO TẠO
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em', textWrap: 'balance' }}>
               Tại sao học Thiết kế Vi mạch nên chọn FPT Jetking?
             </h2>
+            <p style={{ color: '#64748b', maxWidth: '780px', margin: '14px auto 0', fontSize: '1.05rem', lineHeight: '1.75', textWrap: 'balance' }}>
+              FPT Jetking là đơn vị tiên phong tại Việt Nam đào tạo chuyên sâu Thiết kế Vi mạch Bán dẫn chuẩn quốc tế, trang bị trọn vẹn kỹ năng thực hành trên các bộ công cụ EDA hàng đầu thế giới.
+            </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
-            <div style={{ background: '#ffffff', borderRadius: '24px', padding: '40px 32px', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', border: '1px solid rgba(0,0,0,0.04)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
+            {/* USP 1 */}
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', display: 'flex', flexDirection: 'column', border: '1px solid rgba(0,0,0,0.06)', transition: 'all 0.3s ease' }}>
               <div style={{ marginBottom: '18px' }}><Cpu size={32} style={{ color: '#dc2626' }} /></div>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px' }}>
-                Tiên phong đào tạo &amp; AI
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Tiên phong Bán dẫn Quốc tế
               </h3>
-              <p style={{ color: '#64748b', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
-                Đơn vị tiên phong đào tạo ngành Thiết kế vi mạch bán dẫn quốc tế tại Việt Nam. Tích hợp AI vào chương trình học, với thời lượng 160 giờ.
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Đơn vị tiên phong đào tạo ngành Thiết kế vi mạch bán dẫn quốc tế tại Việt Nam.
               </p>
             </div>
 
-            <div style={{ background: '#ffffff', borderRadius: '24px', padding: '40px 32px', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', border: '1px solid rgba(0,0,0,0.04)' }}>
+            {/* USP 2 */}
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', display: 'flex', flexDirection: 'column', border: '1px solid rgba(0,0,0,0.06)', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><Sparkles size={32} style={{ color: '#dc2626' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Tích hợp AI chuyên sâu (160 giờ)
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Tích hợp AI vào chương trình học, với thời lượng 160 giờ đón đầu công nghệ mới.
+              </p>
+            </div>
+
+            {/* USP 3 */}
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', display: 'flex', flexDirection: 'column', border: '1px solid rgba(0,0,0,0.06)', transition: 'all 0.3s ease' }}>
               <div style={{ marginBottom: '18px' }}><Award size={32} style={{ color: '#dc2626' }} /></div>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px' }}>
-                Thực hành chuyên sâu
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                70% Thời lượng thực hành
               </h3>
-              <p style={{ color: '#64748b', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
-                Học 100% chuyên ngành với 70% thời lượng là thực hành. Đào tạo bằng phương pháp Kiến tạo xã hội trên nền tảng EduNext độc quyền của Tập đoàn FPT.
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Học 100% chuyên ngành với 70% thời lượng là thực hành trên công cụ EDA hiện đại.
               </p>
             </div>
 
-            <div style={{ background: '#ffffff', borderRadius: '24px', padding: '40px 32px', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', border: '1px solid rgba(0,0,0,0.04)' }}>
-              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#dc2626' }} /></div>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '14px' }}>
-                Liên thông &amp; Việc làm
+            {/* USP 4 */}
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', display: 'flex', flexDirection: 'column', border: '1px solid rgba(0,0,0,0.06)', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><GraduationCap size={32} style={{ color: '#dc2626' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Liên thông Đại học Quốc tế
               </h3>
-              <p style={{ color: '#64748b', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
-                Học chuyển tiếp lấy bằng Đại học Lincoln, Đại học FPT hoặc một số trường Đại học quốc tế khác. Được ưu tiên thực tập và giới thiệu việc làm tại Tập đoàn FPT và các doanh nghiệp ký kết hợp tác với FPT Jetking.
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Học chuyển tiếp lấy bằng Đại học Lincoln, Đại học FPT hoặc một số trường Đại học quốc tế khác.
+              </p>
+            </div>
+
+            {/* USP 5 */}
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', display: 'flex', flexDirection: 'column', border: '1px solid rgba(0,0,0,0.06)', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><BookOpen size={32} style={{ color: '#dc2626' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Phương pháp EduNext độc quyền
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Đào tạo bằng phương pháp Kiến tạo xã hội trên nền tảng EduNext độc quyền của Tập đoàn FPT.
+              </p>
+            </div>
+
+            {/* USP 6 */}
+            <div style={{ background: '#ffffff', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', display: 'flex', flexDirection: 'column', border: '1px solid rgba(0,0,0,0.06)', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#dc2626' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Ưu tiên việc làm &amp; Thực tập
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Được ưu tiên thực tập và giới thiệu việc làm tại Tập đoàn FPT và các doanh nghiệp ký kết hợp tác với FPT Jetking.
               </p>
             </div>
           </div>
@@ -497,14 +533,29 @@ export default function ChipDesignSubpage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Gia nhập ngành Công nghiệp Tỷ đô cùng FPT Jetking</h2>
-          <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
-            Trở thành kỹ sư vi mạch bán dẫn quốc tế đón đầu làn sóng dịch chuyển công nghệ toàn cầu.<br/>Học bổng tài năng trị giá 8.000.000 VNĐ.
+          <h2 className="beau-cta-title" style={{ textWrap: 'balance', maxWidth: '780px', margin: '0 auto 16px' }}>
+            Sẵn sàng trở thành<br />Kỹ sư Thiết kế Vi mạch Bán dẫn?
+          </h2>
+          <p style={{ 
+            color: 'rgba(255, 255, 255, 0.85)', 
+            fontSize: '1.1rem', 
+            maxWidth: '720px', 
+            margin: '16px auto 32px', 
+            lineHeight: '1.75',
+            textWrap: 'balance' 
+          }}>
+            Trở thành kỹ sư vi mạch bán dẫn quốc tế đón đầu làn sóng dịch chuyển công nghệ toàn cầu. Đăng ký nhận tư vấn lộ trình học 2 năm và thông tin học bổng mới nhất từ <span style={{ whiteSpace: 'nowrap' }}>FPT Jetking</span>
           </p>
-          <a href="#dang-ky-chip-design" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)', color: '#ffffff', fontWeight: 800 }}>
-            Tư vấn ngay
-            <ArrowRight size={22} strokeWidth={2.5} />
-          </a>
+          <TechCTAButton 
+            text="Tư vấn ngay" 
+            href="https://zalo.me/jetkingfpt" 
+            style={{ 
+              background: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)', 
+              color: '#ffffff', 
+              fontWeight: 800,
+              boxShadow: '0 10px 30px rgba(220, 38, 38, 0.4)'
+            }} 
+          />
         </div>
       </section>
 
@@ -514,7 +565,7 @@ export default function ChipDesignSubpage() {
           programName="FPT Jetking Thiết Kế Vi Mạch Bán Dẫn" 
           brand="chip-design"
           headerTitle="NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING CHIP DESIGN"
-          formTitle="BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ VI MẠCH BÁN DẪN?"
+          formTitle="BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ THIẾT KẾ VI MẠCH BÁN DẪN?"
           formSubtitle="Đăng ký nhận tư vấn lộ trình Thiết kế Vi Mạch Bán Dẫn Quốc Tế 2 năm"
         />
       </div>

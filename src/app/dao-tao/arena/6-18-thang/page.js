@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import ArenaProgramSwitcher from '@/components/ArenaProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
+import TechCTAButton from '@/components/TechCTAButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Check, Sparkles, Layers, Video, Box, Palette, Clock, Award, Briefcase } from 'lucide-react';
@@ -291,14 +292,27 @@ export default function Arena618ThangPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Khởi đầu đam mê sáng tạo cùng khóa học 6–18 tháng</h2>
-          <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
-            Nhận tư vấn lộ trình phù hợp với mục tiêu nghề nghiệp và thời gian của bạn.
+          <h2 className="beau-cta-title" style={{ textWrap: 'balance' }}>Sẵn sàng làm chủ kỹ năng Thiết kế Mỹ thuật &amp; 3D?</h2>
+          <p style={{ 
+            color: 'rgba(255, 255, 255, 0.85)', 
+            fontSize: '1.1rem', 
+            maxWidth: '720px', 
+            margin: '16px auto 32px', 
+            lineHeight: '1.7',
+            textWrap: 'balance' 
+          }}>
+            Đăng ký nhận tư vấn lộ trình học chuyên sâu 6–18 tháng và thông tin học bổng mới nhất từ <span style={{ whiteSpace: 'nowrap' }}>FPT Arena Multimedia</span>
           </p>
-          <a href="#dang-ky-arena-6-18" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #ffb600 0%, #d97706 100%)', color: '#000000', fontWeight: 800 }}>
-            Đăng Ký Tư Vấn Ngay
-            <ArrowRight size={22} strokeWidth={2.5} />
-          </a>
+          <TechCTAButton 
+            text="Tư vấn ngay" 
+            href="https://zalo.me/fptarenaofficial" 
+            style={{ 
+              background: 'linear-gradient(135deg, #ffb600 0%, #d97706 100%)', 
+              color: '#000000',
+              fontWeight: 800,
+              boxShadow: '0 10px 30px rgba(255, 182, 0, 0.4)'
+            }} 
+          />
         </div>
       </section>
 
@@ -306,6 +320,7 @@ export default function Arena618ThangPage() {
       <div id="dang-ky-arena-6-18">
         <ScholarshipFormSection 
           programName="FPT Arena Chuyên Sâu (6-18 Tháng)" 
+          brand="arena"
           headerTitle="NHẬN THÔNG TIN TƯ VẤN KHÓA HỌC CHUYÊN SÂU 6 - 18 THÁNG TẠI FPT ARENA"
           formTitle="BẠN CÓ MUỐN NÂNG TẦM TƯ DUY THIẾT KẾ ĐỒ HỌA?"
           formSubtitle="Đăng ký nhận tư vấn lộ trình 6 - 18 tháng phù hợp mục tiêu của bạn"

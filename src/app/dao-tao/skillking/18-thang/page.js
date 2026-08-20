@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import SkillkingProgramSwitcher from '@/components/SkillkingProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
+import TechCTAButton from '@/components/TechCTAButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, TrendingUp, Search, Video, BarChart2, Briefcase, MonitorPlay, Users, Target } from 'lucide-react';
@@ -138,11 +139,11 @@ export default function Skillking18ThangPage() {
               <p>4 học kỳ chuyên sâu đưa bạn trở thành Marketer toàn diện.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#38bdf8' }}>Jetking AD</h3>
-              <p>Bằng Advanced Diploma quốc tế danh tiếng do Jetking Ấn Độ cấp.</p>
+              <h3 style={{ color: '#38bdf8' }}>Bằng cấp Quốc Tế</h3>
+              <p>Bằng Advanced Diploma quốc tế danh tiếng do Skillking Ấn Độ cấp.</p>
             </div>
             <div className="beau-stat-item">
-              <h3 style={{ color: '#38bdf8' }}>AI Powered</h3>
+              <h3 style={{ color: '#38bdf8' }}>Ứng dụng AI</h3>
               <p>Ứng dụng AI tăng gấp 5 lần hiệu suất sáng tạo và tối ưu chiến dịch.</p>
             </div>
           </div>
@@ -361,7 +362,7 @@ export default function Skillking18ThangPage() {
               {/* Col 3 */}
               <div>
                 <h4 style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
-                  CƠ HỘI NGHỀ NGHIỆP &amp; ĐỒ ÁN
+                  CƠ HỘI NGHỀ NGHIỆP
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].careers.map((item, idx) => (
@@ -455,16 +456,29 @@ export default function Skillking18ThangPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">
-            Bứt phá sự nghiệp Tiếp thị Kỹ thuật số cùng <span style={{ whiteSpace: 'nowrap' }}>FPT Skillking</span>
+          <h2 className="beau-cta-title" style={{ textWrap: 'balance', maxWidth: '780px', margin: '0 auto 16px' }}>
+            Sẵn sàng trở thành<br />Chuyên gia Digital Marketing Full-Stack?
           </h2>
-          <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
-            Nắm bắt phương pháp Digital Marketing mới nhất và công cụ AI thực chiến ngay hôm nay.
+          <p style={{ 
+            color: 'rgba(255, 255, 255, 0.85)', 
+            fontSize: '1.1rem', 
+            maxWidth: '720px', 
+            margin: '16px auto 32px', 
+            lineHeight: '1.7',
+            textWrap: 'balance' 
+          }}>
+            Đăng ký nhận tư vấn lộ trình học 18 tháng và thông tin học bổng mới nhất từ <span style={{ whiteSpace: 'nowrap' }}>FPT Skillking</span>
           </p>
-          <a href="#dang-ky-skillking-18t" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)', color: '#ffffff', fontWeight: 800 }}>
-            Tư vấn ngay
-            <ArrowRight size={22} strokeWidth={2.5} />
-          </a>
+          <TechCTAButton 
+            text="Tư vấn ngay" 
+            href="https://zalo.me/fptskillking" 
+            style={{ 
+              background: 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)', 
+              color: '#ffffff',
+              fontWeight: 800,
+              boxShadow: '0 10px 30px rgba(9, 82, 156, 0.4)'
+            }} 
+          />
         </div>
       </section>
 

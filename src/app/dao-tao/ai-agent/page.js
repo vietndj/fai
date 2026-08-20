@@ -5,9 +5,10 @@ import Footer from '@/components/Footer';
 import ParticleCanvas from '@/components/ParticleCanvas';
 import JetkingProgramSwitcher from '@/components/JetkingProgramSwitcher';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
+import TechCTAButton from '@/components/TechCTAButton';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, Bot, Brain, Network, Zap, Briefcase } from 'lucide-react';
+import { ArrowRight, Check, Award, BookOpen, Clock, Trophy, Sparkles, Bot, Brain, Network, Zap, Briefcase, GraduationCap, Users } from 'lucide-react';
 
 export default function AiAgentSubpage() {
   const [activeSection, setActiveSection] = useState(0);
@@ -164,21 +165,6 @@ export default function AiAgentSubpage() {
             AI Agent không còn là khái niệm xa vời. Chúng hiện diện trong chatbot, trợ lý ảo, hệ thống đề xuất, dịch vụ khách hàng tự động, và dần dần tiến tới xây dựng các hệ thống đa tác nhân (Multi-Agent Systems) có thể phối hợp giải quyết các bài toán phức tạp như con người. Theo dự báo của Diễn đàn Kinh tế Thế giới, đến năm 2025, AI có thể tạo ra hơn 97 triệu việc làm mới – đặc biệt là các vị trí liên quan đến AI Agent, NLP và học máy.
           </p>
 
-          <div className="beau-stats-bar">
-            <div className="beau-stat-item">
-              <h3 style={{ color: '#f37021' }}>04 Kỳ Học</h3>
-              <p>Lộ trình từ lập trình Python đến phát triển Multi-Agent Systems.</p>
-            </div>
-            <div className="beau-stat-item">
-              <h3 style={{ color: '#f37021' }}>Jetking AD</h3>
-              <p>Bằng Advanced Diploma quốc tế công nhận toàn cầu từ Jetking Ấn Độ.</p>
-            </div>
-            <div className="beau-stat-item">
-              <h3 style={{ color: '#f37021' }}>Autonomous AI</h3>
-              <p>Thực chiến xây dựng Agent tự ra quyết định và phối hợp đa tác tử.</p>
-            </div>
-          </div>
-
           {/* Banner Image */}
           <div className="beau-hero-banner" style={{ marginTop: '40px' }}>
             <Image
@@ -254,7 +240,7 @@ export default function AiAgentSubpage() {
           }}>
             <div>
               <span style={{ fontSize: '0.82rem', color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tổng thời lượng đào tạo</span>
-              <h4 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--secondary)', margin: '6px 0 0', fontFamily: 'var(--font-sans)' }}>900 Giờ học thực chiến AI</h4>
+              <h4 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--secondary)', margin: '6px 0 0', fontFamily: 'var(--font-sans)' }}>784 Giờ học thực chiến AI</h4>
             </div>
             <div style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
               <div>
@@ -266,7 +252,7 @@ export default function AiAgentSubpage() {
                 <strong style={{ color: 'var(--secondary)', fontSize: '1.3rem', fontWeight: 800 }}>400 giờ</strong>
               </div>
               <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
-                <span style={{ color: '#f37021', fontSize: '1.3rem', fontWeight: 800 }}>Đồ án Agent eProject</span>
+                <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Đồ án Agent eProject</span>
                 <strong style={{ color: '#f37021', fontSize: '1.3rem', fontWeight: 800 }}>200 giờ</strong>
               </div>
             </div>
@@ -457,60 +443,69 @@ export default function AiAgentSubpage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
-            <div 
-              style={{ 
-                background: '#ffffff', 
-                border: '1px solid rgba(0, 0, 0, 0.06)', 
-                borderRadius: '20px', 
-                padding: '36px 30px',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
-                transition: 'all 0.3s ease'
-              }}
-            >
+            {/* Card 1 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
               <div style={{ marginBottom: '18px' }}><Bot size={32} style={{ color: '#f37021' }} /></div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Tiên phong &amp; Giảng viên
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Tiên phong Đào tạo AI Agent
               </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Đơn vị tiên phong đào tạo ngành AI Agent tại Việt Nam. Đội ngũ giảng viên giàu kinh nghiệm thuộc Tổ chức giáo dục FPT.
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Đơn vị tiên phong đào tạo ngành AI Agent tại Việt Nam.
               </p>
             </div>
 
-            <div 
-              style={{ 
-                background: '#ffffff', 
-                border: '1px solid rgba(0, 0, 0, 0.06)', 
-                borderRadius: '20px', 
-                padding: '36px 30px',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              <div style={{ marginBottom: '18px' }}><Brain size={32} style={{ color: '#f37021' }} /></div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Thực hành chuyên sâu
+            {/* Card 2 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><Award size={32} style={{ color: '#f37021' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                70% Thời lượng thực hành
               </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Học 100% chuyên ngành với 70% thời lượng là thực hành. Đào tạo bằng phương pháp Kiến tạo xã hội trên nền tảng EduNext độc quyền của Tập đoàn FPT.
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Học 100% chuyên ngành với 70% thời lượng là thực hành trực tiếp trên các dự án AI thực tế.
               </p>
             </div>
 
-            <div 
-              style={{ 
-                background: '#ffffff', 
-                border: '1px solid rgba(0, 0, 0, 0.06)', 
-                borderRadius: '20px', 
-                padding: '36px 30px',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)',
-                transition: 'all 0.3s ease'
-              }}
-            >
+            {/* Card 3 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><GraduationCap size={32} style={{ color: '#f37021' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Liên thông Đại học Quốc tế
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Học chuyển tiếp lấy bằng Đại học Lincoln, Đại học FPT hoặc một số trường Đại học quốc tế khác.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><BookOpen size={32} style={{ color: '#f37021' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Phương pháp EduNext độc quyền
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Đào tạo bằng phương pháp Kiến tạo xã hội trên nền tảng EduNext độc quyền của Tập đoàn FPT.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
               <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#f37021' }} /></div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)' }}>
-                Liên thông &amp; Việc làm
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Ưu tiên việc làm &amp; Thực tập
               </h3>
-              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0 }}>
-                Học chuyển tiếp lấy bằng Đại học Lincoln, Đại học FPT hoặc một số trường Đại học quốc tế khác. Được ưu tiên thực tập và giới thiệu việc làm tại Tập đoàn FPT và các doanh nghiệp ký kết hợp tác với FPT Jetking.
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Được ưu tiên thực tập và giới thiệu việc làm tại Tập đoàn FPT và các doanh nghiệp ký kết hợp tác với FPT Jetking.
+              </p>
+            </div>
+
+            {/* Card 6 */}
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
+              <div style={{ marginBottom: '18px' }}><Users size={32} style={{ color: '#f37021' }} /></div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
+                Đội ngũ Giảng viên FPT
+              </h3>
+              <p style={{ color: '#64748b', fontSize: '0.96rem', lineHeight: '1.7', margin: 0, textWrap: 'pretty' }}>
+                Đội ngũ giảng viên giàu kinh nghiệm thuộc Tổ chức giáo dục FPT và các chuyên gia đầu ngành AI.
               </p>
             </div>
           </div>
@@ -521,14 +516,29 @@ export default function AiAgentSubpage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Làm chủ kỷ nguyên AI Agent tự hành cùng FPT Jetking</h2>
-          <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 36px', lineHeight: '1.7' }}>
-            Trở thành chuyên gia phát triển hệ thống AI tiên phong tại Việt Nam.<br/>Học bổng tài năng trị giá 8.000.000 VNĐ.
+          <h2 className="beau-cta-title" style={{ textWrap: 'balance', maxWidth: '780px', margin: '0 auto 16px' }}>
+            Sẵn sàng trở thành<br />Kỹ sư Lập trình AI Agent Tiên phong?
+          </h2>
+          <p style={{ 
+            color: 'rgba(255, 255, 255, 0.85)', 
+            fontSize: '1.1rem', 
+            maxWidth: '720px', 
+            margin: '16px auto 32px', 
+            lineHeight: '1.75',
+            textWrap: 'balance' 
+          }}>
+            Đăng ký nhận tư vấn lộ trình học chuyên sâu và thông tin ưu đãi mới nhất từ <span style={{ whiteSpace: 'nowrap' }}>FPT Jetking</span>
           </p>
-          <a href="#dang-ky-ai-agent" className="beau-cta-btn" style={{ background: 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)', color: '#ffffff', fontWeight: 800 }}>
-            Tư vấn ngay
-            <ArrowRight size={22} strokeWidth={2.5} />
-          </a>
+          <TechCTAButton 
+            text="Tư vấn ngay" 
+            href="https://zalo.me/jetkingfpt" 
+            style={{ 
+              background: 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)', 
+              color: '#ffffff',
+              fontWeight: 800,
+              boxShadow: '0 10px 30px rgba(243, 112, 33, 0.4)'
+            }} 
+          />
         </div>
       </section>
 

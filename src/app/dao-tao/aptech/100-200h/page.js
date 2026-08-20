@@ -691,9 +691,9 @@ export default function ShortCourses100200hPage() {
       <section className="beau-cta-section">
         <div className="beau-cta-bg-circle"></div>
         <div className="container beau-cta-inner" data-reveal>
-          <h2 className="beau-cta-title">Sẵn sàng kiến tạo lộ trình ngắn hạn cho riêng bạn?</h2>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', marginBottom: '30px' }}>
-            Đăng ký nhận lịch khai giảng và học bổng ưu đãi nhập học sớm từ FPT Aptech
+          <h2 className="beau-cta-title">Sẵn sàng bứt phá kỹ năng Lập trình cấp tốc?</h2>
+          <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 32px', lineHeight: '1.7' }}>
+            Đăng ký nhận lịch khai giảng các khóa ngắn hạn 100 - 200 giờ và thông tin ưu đãi mới nhất từ FPT Aptech
           </p>
           <TechCTAButton text="Tư vấn ngay" href="https://zalo.me/fptaptech" />
         </div>

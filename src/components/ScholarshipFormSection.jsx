@@ -11,60 +11,55 @@ const BRAND_PRESETS = {
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT SKILLKING',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA DIGITAL MARKETING?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình học & ưu đãi học bổng 2026',
-    campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
+    campuses: ['Hà Nội', 'Đà Nẵng'],
     badges: [
       {
-        value: '12',
+        value: '14',
         unit: 'Triệu',
-        title: 'Học bổng "Marketer Tương Lai"',
-        desc: 'Ưu đãi trừ trực tiếp vào học phí khi nhập học sớm',
-        tags: ['SEO / SEM', 'SOCIAL ADS']
+        title: 'Học bổng tài năng',
+        desc: 'Quỹ học bổng dành cho tài năng Digital Marketing xuất sắc'
+      },
+      {
+        value: '10',
+        unit: 'Triệu',
+        title: 'Khuyến khích nhập học sớm',
+        desc: 'Ưu đãi trừ trực tiếp vào học phí khi hoàn tất thủ tục sớm'
       },
       {
         value: '6',
         unit: 'Triệu',
-        title: 'Ưu đãi Chuyển ngành Tiếp thị số',
-        desc: 'Dành riêng cho sinh viên & người đi làm đổi ngành',
-        tags: ['E-COMMERCE', 'CONTENT AI']
-      },
-      {
-        value: 'VIP',
-        unit: 'Đặc Quyền',
-        title: 'Tài khoản VIP Coursera & Udemy',
-        desc: 'Truy cập không giới hạn kho học liệu & công cụ AI bản quyền',
-        tags: ['AI MARKETING', 'TOOL MIỄN PHÍ']
+        title: 'Ưu đãi chuyển ngành',
+        desc: 'Hỗ trợ đặc biệt cho sinh viên & người đi làm đổi ngành sang Digital Marketing'
       }
     ]
   },
   'arena': {
-    themeColor: '#e8741e',
-    accentColor: '#d97706',
-    gradientBg: 'linear-gradient(135deg, #e8741e 0%, #d85d0d 100%)',
+    themeColor: '#ffb600',
+    accentColor: '#f59e0b',
+    gradientBg: 'linear-gradient(135deg, #ffb600 0%, #d97706 100%)',
+    btnTextColor: '#000000',
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT ARENA',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA MULTIMEDIA?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Mỹ thuật đa phương tiện Quốc tế',
-    campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
+    campuses: ['Hà Nội', 'Đà Nẵng'],
     badges: [
       {
-        value: '15',
+        value: '14',
         unit: 'Triệu',
-        title: 'Học bổng "Chạm Sáng Tạo"',
-        desc: 'Quỹ học bổng dành cho tài năng thiết kế đa phương tiện',
-        tags: ['2D / 3D DESIGN', 'UI / UX']
+        title: 'Học bổng tài năng',
+        desc: 'Quỹ học bổng dành cho tài năng thiết kế mỹ thuật đa phương tiện'
       },
       {
-        value: '8',
+        value: '10',
         unit: 'Triệu',
-        title: 'Ưu đãi Đam mê Nghệ thuật Đồ họa',
-        desc: 'Hỗ trợ chuyển đổi nghề nghiệp sang ngành Mỹ thuật số',
-        tags: ['3D ANIMATION', 'VFX GAME']
+        title: 'Khuyến khích nhập học sớm',
+        desc: 'Ưu đãi trừ trực tiếp vào học phí khi hoàn tất thủ tục sớm'
       },
       {
-        value: 'VIP',
-        unit: 'Đặc Quyền',
-        title: 'Bản quyền Adobe & Portfolio Pro',
-        desc: 'Tặng bộ tài nguyên thiết kế quốc tế và tài khoản học tập VIP',
-        tags: ['ADOBE SUITE', 'MAYA / BLENDER']
+        value: '6',
+        unit: 'Triệu',
+        title: 'Ưu đãi chuyển ngành',
+        desc: 'Hỗ trợ đặc biệt cho sinh viên & người đi làm đổi ngành sang Multimedia'
       }
     ]
   },
@@ -72,31 +67,28 @@ const BRAND_PRESETS = {
     themeColor: '#dc2626',
     accentColor: '#b91c1c',
     gradientBg: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
-    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING',
-    defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ VI MẠCH BÁN DẪN?',
-    defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Thiết kế Vi Mạch Bán Dẫn Quốc Tế',
-    campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
+    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING CHIP DESIGN',
+    defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ THIẾT KẾ VI MẠCH BÁN DẪN?',
+    defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Thiết kế Vi Mạch Bán Dẫn Quốc Tế 2 năm',
+    campuses: ['Hà Nội'],
     badges: [
       {
         value: '15',
         unit: 'Triệu',
         title: 'Học bổng Kỹ sư Bán dẫn Tương lai',
-        desc: 'Quỹ phát triển nhân lực vi mạch công nghệ cao Việt Nam',
-        tags: ['VLSI DESIGN', 'VERILOG HDL']
+        desc: 'Quỹ phát triển nhân lực vi mạch công nghệ cao Việt Nam'
       },
       {
         value: '8',
         unit: 'Triệu',
         title: 'Quỹ Phát triển Nhân lực Vi mạch',
-        desc: 'Hỗ trợ sinh viên ngành kỹ thuật & công nghệ chuyển đổi',
-        tags: ['CHIP IC', 'ANALOG / DIGITAL']
+        desc: 'Hỗ trợ sinh viên ngành kỹ thuật & công nghệ chuyển đổi'
       },
       {
         value: 'LAB',
         unit: 'Chuẩn Quốc Tế',
         title: 'Thực hành LAB EDA Synopsys & Cadence',
-        desc: 'Phòng thực hành chuẩn quốc tế với bản quyền công cụ thiết kế chip',
-        tags: ['EDA TOOLS', 'CHIP TESTING']
+        desc: 'Phòng thực hành chuẩn quốc tế với bản quyền công cụ thiết kế chip'
       }
     ]
   },
@@ -104,31 +96,28 @@ const BRAND_PRESETS = {
     themeColor: '#ea580c',
     accentColor: '#c2410c',
     gradientBg: 'linear-gradient(135deg, #ea580c 0%, #c2410c 100%)',
-    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING',
+    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING AI AGENT',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ AI AGENT TIÊN PHONG?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Lập trình Hệ thống AI Agent',
-    campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
+    campuses: ['Hà Nội'],
     badges: [
-      {
-        value: '14',
-        unit: 'Triệu',
-        title: 'Học bổng Tiên phong AI Agent',
-        desc: 'Quỹ ươm mầm chuyên gia phát triển hệ sinh thái AI tự hành',
-        tags: ['LLM AGENTS', 'AGENTIC AI']
-      },
       {
         value: '8',
         unit: 'Triệu',
-        title: 'Quỹ Tài năng Trí tuệ Nhân tạo',
-        desc: 'Ưu đãi khuyến học cho thí sinh đăng ký nhập học sớm',
-        tags: ['PYTHON AI', 'RAG & MCP']
+        title: 'Học bổng Tiên phong AI Agent',
+        desc: 'Quỹ ươm mầm chuyên gia phát triển hệ sinh thái AI tự hành'
       },
       {
-        value: '100%',
-        unit: 'Thực Chiến',
-        title: 'Thực chiến mô hình Multi-Agent',
-        desc: 'Trực tiếp triển khai các Agentic Workflow vào bài toán doanh nghiệp',
-        tags: ['MULTI-AGENT', 'AUTONOMOUS']
+        value: '10',
+        unit: 'Triệu',
+        title: 'Khuyến khích nhập học sớm',
+        desc: 'Ưu đãi trừ trực tiếp vào học phí khi hoàn tất thủ tục sớm'
+      },
+      {
+        value: '6',
+        unit: 'Triệu',
+        title: 'Ưu đãi chuyển ngành',
+        desc: 'Hỗ trợ đặc biệt cho sinh viên & người đi làm đổi ngành sang AI'
       }
     ]
   },
@@ -395,31 +384,9 @@ export default function ScholarshipFormSection({
                   </h4>
                   
                   {badge.desc && (
-                    <p style={{ color: '#64748b', fontSize: '0.86rem', margin: '0 0 8px 0', lineHeight: '1.45' }}>
+                    <p style={{ color: '#64748b', fontSize: '0.86rem', margin: 0, lineHeight: '1.45' }}>
                       {badge.desc}
                     </p>
-                  )}
-
-                  {badge.tags && badge.tags.length > 0 && (
-                    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-                      {badge.tags.map((tag, tIdx) => (
-                        <span 
-                          key={tIdx}
-                          style={{ 
-                            background: `${themeColor}12`, 
-                            color: themeColor, 
-                            fontSize: '0.72rem', 
-                            fontWeight: 800, 
-                            padding: '2px 9px', 
-                            borderRadius: '6px',
-                            border: `1px solid ${themeColor}26`,
-                            letterSpacing: '0.02em'
-                          }}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   )}
                 </div>
               </div>
@@ -558,7 +525,7 @@ export default function ScholarshipFormSection({
                 </div>
 
                 {/* Campus Selection */}
-                {includeCampus && (
+                {includeCampus && campuses && campuses.length > 1 && (
                   <div>
                     <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: '#475569', marginBottom: '8px' }}>
                       Cơ sở tư vấn thuận tiện cho bạn:
@@ -650,12 +617,12 @@ export default function ScholarshipFormSection({
                     padding: '16px',
                     borderRadius: '30px',
                     background: gradientBg,
-                    color: '#ffffff',
+                    color: preset.btnTextColor || '#ffffff',
                     fontSize: '1.05rem',
                     fontWeight: 800,
                     border: 'none',
                     cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                    boxShadow: `0 8px 20px ${themeColor}4d`,
+                    boxShadow: `0 8px 25px ${themeColor}66`,
                     transition: 'all 0.3s ease',
                     display: 'flex',
                     alignItems: 'center',
