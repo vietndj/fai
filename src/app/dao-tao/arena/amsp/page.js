@@ -135,8 +135,8 @@ export default function Arena2NamPage() {
     },
     {
       num: 'HỌC KỲ 04',
-      shortTitle: 'Game Art & Real-time 3D',
-      fullTitle: 'Real-Time 3D & Unreal Engine Game Art',
+      shortTitle: 'Game Art & 3D',
+      fullTitle: 'Real-Time 3D & Game Art',
       subTitle: 'Thiết kế Game 3D Thời gian thực & Meta Engine',
       desc: 'Học nguyên lý thiết kế môi trường và đồ họa game thế hệ mới trên Unity & Unreal Engine, sẵn sàng gia nhập các Studio Game AAA và Virtual Production toàn cầu.',
       coreStack: [
@@ -437,7 +437,8 @@ export default function Arena2NamPage() {
                         fontSize: '0.92rem', 
                         fontWeight: isActive ? 800 : 600, 
                         lineHeight: '1.3',
-                        color: isActive ? '#000000' : 'rgba(255, 255, 255, 0.85)'
+                        color: isActive ? '#000000' : 'rgba(255, 255, 255, 0.85)',
+                        whiteSpace: 'nowrap'
                       }}
                     >
                       {sem.shortTitle}
