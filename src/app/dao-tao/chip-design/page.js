@@ -567,6 +567,26 @@ export default function ChipDesignSubpage() {
           headerTitle="NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING CHIP DESIGN"
           formTitle="BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ THIẾT KẾ VI MẠCH BÁN DẪN?"
           formSubtitle="Đăng ký nhận tư vấn lộ trình Thiết kế Vi Mạch Bán Dẫn Quốc Tế 2 năm"
+          badges={[
+            {
+              value: '8',
+              unit: 'Triệu',
+              title: 'Học bổng Kỹ sư Bán dẫn Tương lai',
+              desc: 'Hỗ trợ sinh viên ngành kỹ thuật & công nghệ chuyển đổi'
+            },
+            {
+              value: 'VIP',
+              unit: 'Đặc Quyền',
+              title: 'Đặc quyền VIP tặng Miễn phí tài khoản Coursera + Udemy',
+              desc: 'Truy cập kho học liệu quốc tế không giới hạn trị giá hàng nghìn USD'
+            },
+            {
+              value: 'LAB',
+              unit: 'Chuẩn Quốc Tế',
+              title: 'Thực hành LAB EDA Synopsys & Cadence',
+              desc: 'Phòng thực hành chuẩn quốc tế với bản quyền công cụ thiết kế chip'
+            }
+          ]}
         />
       </div>
 

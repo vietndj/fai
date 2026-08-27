@@ -73,16 +73,16 @@ const BRAND_PRESETS = {
     campuses: ['Hà Nội'],
     badges: [
       {
-        value: '15',
-        unit: 'Triệu',
-        title: 'Học bổng Kỹ sư Bán dẫn Tương lai',
-        desc: 'Quỹ phát triển nhân lực vi mạch công nghệ cao Việt Nam'
-      },
-      {
         value: '8',
         unit: 'Triệu',
-        title: 'Quỹ Phát triển Nhân lực Vi mạch',
+        title: 'Học bổng Kỹ sư Bán dẫn Tương lai',
         desc: 'Hỗ trợ sinh viên ngành kỹ thuật & công nghệ chuyển đổi'
+      },
+      {
+        value: 'VIP',
+        unit: 'Đặc Quyền',
+        title: 'Đặc quyền VIP tặng Miễn phí tài khoản Coursera + Udemy',
+        desc: 'Truy cập kho học liệu quốc tế không giới hạn trị giá hàng nghìn USD'
       },
       {
         value: 'LAB',
@@ -93,9 +93,9 @@ const BRAND_PRESETS = {
     ]
   },
   'ai-agent': {
-    themeColor: '#ea580c',
-    accentColor: '#c2410c',
-    gradientBg: 'linear-gradient(135deg, #ea580c 0%, #c2410c 100%)',
+    themeColor: '#dc2626',
+    accentColor: '#b91c1c',
+    gradientBg: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING AI AGENT',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ AI AGENT TIÊN PHONG?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Lập trình Hệ thống AI Agent',
@@ -108,16 +108,10 @@ const BRAND_PRESETS = {
         desc: 'Quỹ ươm mầm chuyên gia phát triển hệ sinh thái AI tự hành'
       },
       {
-        value: '10',
-        unit: 'Triệu',
-        title: 'Khuyến khích nhập học sớm',
-        desc: 'Ưu đãi trừ trực tiếp vào học phí khi hoàn tất thủ tục sớm'
-      },
-      {
-        value: '6',
-        unit: 'Triệu',
-        title: 'Ưu đãi chuyển ngành',
-        desc: 'Hỗ trợ đặc biệt cho sinh viên & người đi làm đổi ngành sang AI'
+        value: 'VIP',
+        unit: 'Đặc Quyền',
+        title: 'Đặc quyền VIP tặng Miễn phí tài khoản Coursera + Udemy',
+        desc: 'Truy cập kho học liệu quốc tế không giới hạn trị giá hàng nghìn USD'
       }
     ]
   },
@@ -173,6 +167,8 @@ export default function ScholarshipFormSection({
   formSubtitle,
   badges: badgesProp,
   courseOptions,
+  courseLabel,
+  campuses: campusesProp,
   themeColor: themeColorProp,
   includeCampus = true
 }) {
@@ -185,7 +181,7 @@ export default function ScholarshipFormSection({
   const activeHeaderTitle = headerTitle || preset.defaultHeaderTitle;
   const activeFormTitle = formTitle || preset.defaultFormTitle;
   const activeFormSubtitle = formSubtitle || preset.defaultFormSubtitle;
-  const campuses = preset.campuses || ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'];
+  const campuses = campusesProp || preset.campuses || ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'];
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -566,6 +562,11 @@ export default function ScholarshipFormSection({
                 {/* Optional Course Selection (if multiple options available) */}
                 {courseOptions && courseOptions.length > 0 && (
                   <div>
+                    {courseLabel && (
+                      <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: '#475569', marginBottom: '8px' }}>
+                        {courseLabel}
+                      </label>
+                    )}
                     <select 
                       name="course" 
                       value={formData.course} 

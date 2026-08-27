@@ -430,6 +430,27 @@ export default function Arena100hPage() {
           headerTitle="NHẬN THÔNG TIN TƯ VẤN KHÓA HỌC NGẮN HẠN 100H & HỌC BỔNG TẠI FPT ARENA"
           formTitle="BẠN CÓ MUỐN BỨT PHÁ KỸ NĂNG MULTIMEDIA CẤP TỐC?"
           formSubtitle="Đăng ký nhận tư vấn lộ trình 100 giờ thực chiến và ưu đãi mới nhất"
+          courseLabel="Bạn đang quan tâm khoá học ngắn hạn nào tại FPT Arena Multimedia"
+          badges={[
+            {
+              value: '1.5-2M',
+              unit: 'Ưu đãi',
+              title: 'Học bổng "Tân binh sáng tạo"',
+              desc: 'Ưu đãi giảm trực tiếp 1.500.000 VNĐ tại cơ sở Đà Nẵng, 2.000.000 VNĐ tại cơ sở Hà Nội'
+            },
+            {
+              value: 'VIP',
+              unit: 'Đặc Quyền',
+              title: 'Đặc quyền VIP',
+              desc: 'Tặng miễn phí tài khoản Coursera + Udemy. Truy cập không giới hạn kho học liệu quốc tế trị giá nghìn USD'
+            },
+            {
+              value: '0đ',
+              unit: 'Công Cụ',
+              title: 'Zero chi phí công cụ',
+              desc: 'Thực chiến 100% bằng công cụ miễn phí, không phát sinh chi phí phần mềm'
+            }
+          ]}
           courseOptions={[
             "Thiết Kế Thương Hiệu - Thương Mại (100h)",
             "Thiết Kế App/Web UI/UX (100h)",

@@ -151,7 +151,7 @@ export default function AiAgentSubpage() {
         <ParticleCanvas className="beau-hero-particles" />
         <div className="beau-hero-bg-text">AI AGENT</div>
         <div className="container beau-hero-inner" data-reveal>
-          <span className="beau-hero-brand" style={{ backgroundColor: '#f37021', color: '#ffffff', fontWeight: 800 }}>
+          <span className="beau-hero-brand" style={{ backgroundColor: '#dc2626', color: '#ffffff', fontWeight: 800 }}>
             FPT JETKING — CHUYÊN GIA AI AGENT (6 THÁNG - 2 NĂM)
           </span>
           <h1 className="beau-hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.25', textWrap: 'balance', textTransform: 'uppercase' }}>
@@ -191,7 +191,7 @@ export default function AiAgentSubpage() {
       >
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '54px' }}>
-            <span style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
+            <span style={{ color: '#dc2626', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em', fontSize: '0.85rem' }}>
               HÀNH TRÌNH TỔNG QUAN
             </span>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
@@ -202,22 +202,22 @@ export default function AiAgentSubpage() {
           {/* 4 Stats Cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
-              <BookOpen size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <BookOpen size={34} style={{ color: '#dc2626', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>25</h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Môn học</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
-              <Clock size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <Clock size={34} style={{ color: '#dc2626', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Học kỳ</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
-              <Trophy size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <Trophy size={34} style={{ color: '#dc2626', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>04</h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Project</p>
             </div>
             <div style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '20px', padding: '32px 24px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
-              <Briefcase size={34} style={{ color: '#f37021', marginBottom: '14px' }} />
+              <Briefcase size={34} style={{ color: '#dc2626', marginBottom: '14px' }} />
               <h3 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--secondary)', margin: 0, lineHeight: 1 }}>01</h3>
               <p style={{ color: '#64748b', fontSize: '0.96rem', marginTop: '10px', margin: 0, fontWeight: 600 }}>Portfolio</p>
             </div>
@@ -227,8 +227,8 @@ export default function AiAgentSubpage() {
           <div style={{ 
             marginTop: '36px', 
             background: '#ffffff', 
-            border: '1px solid rgba(243, 112, 33, 0.3)', 
-            borderLeft: '6px solid #f37021',
+            border: '1px solid rgba(220, 38, 38, 0.3)', 
+            borderLeft: '6px solid #dc2626',
             borderRadius: '20px', 
             padding: '32px 40px',
             boxShadow: '0 12px 35px rgba(0, 0, 0, 0.03)',
@@ -239,7 +239,7 @@ export default function AiAgentSubpage() {
             gap: '24px'
           }}>
             <div>
-              <span style={{ fontSize: '0.82rem', color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tổng thời lượng đào tạo</span>
+              <span style={{ fontSize: '0.82rem', color: '#dc2626', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tổng thời lượng đào tạo</span>
               <h4 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--secondary)', margin: '6px 0 0', fontFamily: 'var(--font-sans)' }}>784 Giờ học thực chiến AI</h4>
             </div>
             <div style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
@@ -253,7 +253,7 @@ export default function AiAgentSubpage() {
               </div>
               <div style={{ borderLeft: '1px solid rgba(0,0,0,0.08)', paddingLeft: '36px' }}>
                 <span style={{ color: '#64748b', fontSize: '0.88rem', display: 'block', fontWeight: 600 }}>Đồ án Agent eProject</span>
-                <strong style={{ color: '#f37021', fontSize: '1.3rem', fontWeight: 800 }}>200 giờ</strong>
+                <strong style={{ color: '#dc2626', fontSize: '1.3rem', fontWeight: 800 }}>200 giờ</strong>
               </div>
             </div>
           </div>
@@ -264,7 +264,7 @@ export default function AiAgentSubpage() {
       <section className="beau-section" style={{ padding: '100px 0 110px 0' }}>
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021' }}>NỘI DUNG ĐÀO TẠO</span>
+            <span className="beau-section-eyebrow" style={{ color: '#dc2626' }}>NỘI DUNG ĐÀO TẠO</span>
             <h2 className="beau-section-title">Chi tiết chương trình học (4 học kỳ)</h2>
           </div>
 
@@ -296,9 +296,9 @@ export default function AiAgentSubpage() {
                     style={{
                       padding: '14px 18px',
                       borderRadius: '16px',
-                      border: isActive ? '1px solid #f37021' : '1px solid rgba(255, 255, 255, 0.12)',
+                      border: isActive ? '1px solid #dc2626' : '1px solid rgba(255, 255, 255, 0.12)',
                       background: isActive 
-                        ? 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)' 
+                        ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' 
                         : 'rgba(13, 33, 55, 0.75)',
                       color: '#ffffff',
                       cursor: 'pointer',
@@ -307,7 +307,7 @@ export default function AiAgentSubpage() {
                       alignItems: 'center',
                       gap: '12px',
                       textAlign: 'left',
-                      boxShadow: isActive ? '0 10px 28px rgba(243, 112, 33, 0.45)' : '0 4px 15px rgba(0,0,0,0.2)',
+                      boxShadow: isActive ? '0 10px 28px rgba(220, 38, 38, 0.45)' : '0 4px 15px rgba(0,0,0,0.2)',
                       backdropFilter: 'blur(12px)',
                       WebkitBackdropFilter: 'blur(12px)'
                     }}
@@ -316,8 +316,8 @@ export default function AiAgentSubpage() {
                       style={{ 
                         fontSize: '0.78rem', 
                         fontWeight: 900, 
-                        color: isActive ? '#ffffff' : '#f37021',
-                        background: isActive ? 'rgba(0, 0, 0, 0.25)' : 'rgba(243, 112, 33, 0.15)',
+                        color: isActive ? '#ffffff' : '#dc2626',
+                        background: isActive ? 'rgba(0, 0, 0, 0.25)' : 'rgba(220, 38, 38, 0.15)',
                         padding: '4px 9px',
                         borderRadius: '10px',
                         flexShrink: 0
@@ -344,7 +344,7 @@ export default function AiAgentSubpage() {
           {/* Active Tab Card Content */}
           <div style={{ 
             background: 'linear-gradient(135deg, rgba(13, 33, 55, 0.88) 0%, rgba(22, 43, 74, 0.92) 100%)', 
-            border: '1px solid rgba(243, 112, 33, 0.3)', 
+            border: '1px solid rgba(220, 38, 38, 0.3)', 
             borderRadius: '24px', 
             padding: '44px',
             backdropFilter: 'blur(20px)',
@@ -354,7 +354,7 @@ export default function AiAgentSubpage() {
             margin: '0 auto'
           }}>
             <div style={{ marginBottom: '28px' }}>
-              <span style={{ color: '#f37021', fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              <span style={{ color: '#dc2626', fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                 {semesters[activeTab].num}
               </span>
               <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800, color: '#ffffff', margin: '8px 0 4px', fontFamily: 'var(--font-sans)' }}>
@@ -373,13 +373,13 @@ export default function AiAgentSubpage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '36px' }}>
               {/* Col 1 */}
               <div>
-                <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                <h4 style={{ color: '#dc2626', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
                   MÔN HỌC
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].coreStack.map((item, idx) => (
                     <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
-                      <Check size={18} style={{ color: '#f37021', flexShrink: 0, marginTop: '2px' }} />
+                      <Check size={18} style={{ color: '#dc2626', flexShrink: 0, marginTop: '2px' }} />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -388,13 +388,13 @@ export default function AiAgentSubpage() {
 
               {/* Col 2 */}
               <div>
-                <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                <h4 style={{ color: '#dc2626', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
                   PROJECT
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].aiTools.map((item, idx) => (
                     <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
-                      <Check size={18} style={{ color: '#f37021', flexShrink: 0, marginTop: '2px' }} />
+                      <Check size={18} style={{ color: '#dc2626', flexShrink: 0, marginTop: '2px' }} />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -403,13 +403,13 @@ export default function AiAgentSubpage() {
 
               {/* Col 3 */}
               <div>
-                <h4 style={{ color: '#f37021', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
+                <h4 style={{ color: '#dc2626', fontSize: '0.9rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '18px' }}>
                   CƠ HỘI NGHỀ NGHIỆP
                 </h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {semesters[activeTab].careers.map((item, idx) => (
                     <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.96rem', lineHeight: '1.5' }}>
-                      <Check size={18} style={{ color: '#f37021', flexShrink: 0, marginTop: '2px' }} />
+                      <Check size={18} style={{ color: '#dc2626', flexShrink: 0, marginTop: '2px' }} />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -431,7 +431,7 @@ export default function AiAgentSubpage() {
       >
         <div className="container" data-reveal>
           <div style={{ textAlign: 'center', marginBottom: '54px' }}>
-            <span className="beau-section-eyebrow" style={{ color: '#f37021', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+            <span className="beau-section-eyebrow" style={{ color: '#dc2626', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
               ĐẶC QUYỀN ĐÀO TẠO
             </span>
             <h2 style={{ fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
@@ -445,7 +445,7 @@ export default function AiAgentSubpage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
             {/* Card 1 */}
             <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-              <div style={{ marginBottom: '18px' }}><Bot size={32} style={{ color: '#f37021' }} /></div>
+              <div style={{ marginBottom: '18px' }}><Bot size={32} style={{ color: '#dc2626' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
                 Tiên phong Đào tạo AI Agent
               </h3>
@@ -456,7 +456,7 @@ export default function AiAgentSubpage() {
 
             {/* Card 2 */}
             <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-              <div style={{ marginBottom: '18px' }}><Award size={32} style={{ color: '#f37021' }} /></div>
+              <div style={{ marginBottom: '18px' }}><Award size={32} style={{ color: '#dc2626' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
                 70% Thời lượng thực hành
               </h3>
@@ -467,7 +467,7 @@ export default function AiAgentSubpage() {
 
             {/* Card 3 */}
             <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-              <div style={{ marginBottom: '18px' }}><GraduationCap size={32} style={{ color: '#f37021' }} /></div>
+              <div style={{ marginBottom: '18px' }}><GraduationCap size={32} style={{ color: '#dc2626' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
                 Liên thông Đại học Quốc tế
               </h3>
@@ -478,7 +478,7 @@ export default function AiAgentSubpage() {
 
             {/* Card 4 */}
             <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-              <div style={{ marginBottom: '18px' }}><BookOpen size={32} style={{ color: '#f37021' }} /></div>
+              <div style={{ marginBottom: '18px' }}><BookOpen size={32} style={{ color: '#dc2626' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
                 Phương pháp EduNext độc quyền
               </h3>
@@ -489,7 +489,7 @@ export default function AiAgentSubpage() {
 
             {/* Card 5 */}
             <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#f37021' }} /></div>
+              <div style={{ marginBottom: '18px' }}><Briefcase size={32} style={{ color: '#dc2626' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
                 Ưu tiên việc làm &amp; Thực tập
               </h3>
@@ -500,7 +500,7 @@ export default function AiAgentSubpage() {
 
             {/* Card 6 */}
             <div style={{ background: '#ffffff', border: '1px solid rgba(0, 0, 0, 0.06)', borderRadius: '20px', padding: '36px 30px', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.02)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease' }}>
-              <div style={{ marginBottom: '18px' }}><Users size={32} style={{ color: '#f37021' }} /></div>
+              <div style={{ marginBottom: '18px' }}><Users size={32} style={{ color: '#dc2626' }} /></div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '12px', fontFamily: 'var(--font-sans)', minHeight: '2.8rem', display: 'flex', alignItems: 'center', textWrap: 'balance' }}>
                 Đội ngũ Giảng viên FPT
               </h3>
@@ -533,10 +533,10 @@ export default function AiAgentSubpage() {
             text="Tư vấn ngay" 
             href="https://zalo.me/jetkingfpt" 
             style={{ 
-              background: 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)', 
+              background: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)', 
               color: '#ffffff',
               fontWeight: 800,
-              boxShadow: '0 10px 30px rgba(243, 112, 33, 0.4)'
+              boxShadow: '0 10px 30px rgba(220, 38, 38, 0.4)'
             }} 
           />
         </div>
@@ -550,6 +550,20 @@ export default function AiAgentSubpage() {
           headerTitle="NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING AI AGENT"
           formTitle="BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ AI AGENT TIÊN PHONG?"
           formSubtitle="Đăng ký nhận tư vấn lộ trình Lập trình Hệ thống AI Agent"
+          badges={[
+            {
+              value: '8',
+              unit: 'Triệu',
+              title: 'Học bổng Tiên phong AI Agent',
+              desc: 'Quỹ ươm mầm chuyên gia phát triển hệ sinh thái AI tự hành'
+            },
+            {
+              value: 'VIP',
+              unit: 'Đặc Quyền',
+              title: 'Đặc quyền VIP tặng Miễn phí tài khoản Coursera + Udemy',
+              desc: 'Truy cập kho học liệu quốc tế không giới hạn trị giá hàng nghìn USD'
+            }
+          ]}
         />
       </div>
 

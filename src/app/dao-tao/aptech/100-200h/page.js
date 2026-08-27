@@ -705,6 +705,22 @@ export default function ShortCourses100200hPage() {
         headerTitle="NHẬN THÔNG TIN TƯ VẤN BỘ KHÓA HỌC LẬP TRÌNH NGẮN HẠN TẠI FPT APTECH (100 - 200 GIỜ)"
         formTitle="ĐĂNG KÝ TƯ VẤN KHÓA HỌC LẬP TRÌNH NGẮN HẠN"
         formSubtitle="Tối ưu thời gian - Đi làm sớm - Tích lũy kỹ năng thực chiến"
+        campuses={['Hà Nội', 'Đà Nẵng']}
+        courseLabel="Bạn đang quan tâm khoá học ngắn hạn nào tại FPT Aptech"
+        badges={[
+          {
+            value: '2',
+            unit: 'Triệu',
+            title: 'Học bổng "Tân Binh Sáng Tạo"',
+            desc: 'Ưu đãi giảm trực tiếp vào học phí'
+          },
+          {
+            value: 'VIP',
+            unit: 'Đặc Quyền',
+            title: 'Đặc quyền VIP tặng Miễn phí tài khoản Coursera + Udemy',
+            desc: 'Truy cập kho học liệu quốc tế không giới hạn trị giá hàng nghìn USD'
+          }
+        ]}
         courseOptions={[
           "Lập trình Java Fullstack cơ bản & nâng cao",
           "Lập trình Python phân tích dữ liệu & AI",

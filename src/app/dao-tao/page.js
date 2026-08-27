@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import Footer from '@/components/Footer';
 import ScholarshipFormSection from '@/components/ScholarshipFormSection';
 import TechCTAButton from '@/components/TechCTAButton';
@@ -112,6 +113,22 @@ const programs = [
 ];
 
 export default function DaoTao() {
+  useEffect(() => {
+    const reveals = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    reveals.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="training-overview-container" style={{ backgroundColor: '#ffffff', color: '#1a2332' }}>
       
@@ -167,7 +184,7 @@ export default function DaoTao() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
                       <h2 
                         style={{ 
-                          fontSize: 'clamp(2.3rem, 4.5vw, 3.5rem)', 
+                          fontSize: 'clamp(1.8rem, 3.8vw, 3.2rem)', 
                           fontWeight: 800, 
                           fontFamily: 'var(--font-sans)', 
                           color: prog.isDark ? '#ffffff' : 'var(--secondary)',
@@ -175,7 +192,7 @@ export default function DaoTao() {
                           margin: 0
                         }}
                       >
-                        {prog.title} <br />
+                        <span style={{ whiteSpace: 'nowrap' }}>{prog.title}</span> <br />
                         <span style={{ color: prog.color, fontSize: '0.75em' }}>{prog.subTitle}</span>
                       </h2>
                       
@@ -322,6 +339,8 @@ export default function DaoTao() {
           headerTitle="NHẬN THÔNG TIN TƯ VẤN CHƯƠNG TRÌNH ĐÀO TẠO & HỌC BỔNG 2026 TẠI FAI"
           formTitle="BẠN ĐANG TÌM KIẾM HƯỚNG ĐI SỰ NGHIỆP CÔNG NGHỆ & SÁNG TẠO?"
           formSubtitle="Đăng ký nhận tư vấn hướng nghiệp 1-1 và lộ trình đào tạo chuẩn quốc tế"
+          campuses={['Hà Nội', 'Đà Nẵng']}
+          courseLabel="Bạn đang quan tâm đến chương trình nào tại Viện đào tạo Quốc tế FPT"
           courseOptions={[
             "FPT Aptech - Lập trình viên Quốc tế (2 năm)",
             "FPT Aptech - Lập trình Backend (1 năm)",

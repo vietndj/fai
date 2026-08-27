@@ -282,6 +282,21 @@ export default function Skillking100hPage() {
           headerTitle="NHẬN THÔNG TIN TƯ VẤN KHÓA HỌC NGẮN HẠN 100H & HỌC BỔNG TẠI FPT SKILLKING"
           formTitle="BẠN CÓ MUỐN BỨT PHÁ KỸ NĂNG DIGITAL MARKETING CẤP TỐC?"
           formSubtitle="Đăng ký nhận tư vấn lộ trình 100 giờ thực chiến và ưu đãi mới nhất"
+          courseLabel="Bạn đang quan tâm khoá học ngắn hạn nào tại FPT Skillking"
+          badges={[
+            {
+              value: '1.5',
+              unit: 'Triệu',
+              title: 'Học bổng Short Course',
+              desc: 'Ưu đãi trừ thẳng vào học phí'
+            },
+            {
+              value: 'VIP',
+              unit: 'Đặc Quyền',
+              title: 'Đặc quyền VIP tặng Miễn phí tài khoản Coursera + Udemy',
+              desc: 'Truy cập kho học liệu quốc tế không giới hạn trị giá hàng nghìn USD'
+            }
+          ]}
           courseOptions={[
             "Social Media Marketing & Content AI (100h)",
             "SEO & Google Ads Chuyên Sâu (100h)",
