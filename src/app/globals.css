@@ -24,22 +24,64 @@
 }
 
 @font-face {
-  font-family: 'SVN-Aeonik';
-  src: url('/fonts/SVN-AEONIK-REGULAR.TTF') format('truetype');
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-Thin.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'SVN-Aeonik';
-  src: url('/fonts/SVN-AEONIK-MEDIUM.TTF') format('truetype');
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'SVN-Aeonik';
-  src: url('/fonts/SVN-AEONIK-BOLD.TTF') format('truetype');
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/SVN-Poppins-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
 }
 
 @font-face {
@@ -94,7 +136,7 @@
   --bg-gray: #f1f5f9;
   --bg-dark: #0D2137;
 
-  --font-sans: 'SVN-Aeonik', sans-serif;
+  --font-sans: 'SVN-Poppins', sans-serif;
   --font-title: 'GT-Sectra', serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --header-height: 100px;
@@ -138,7 +180,7 @@ h1, h2, h3, .beau-hero-title, .section-headline {
   }
 }
 
-/* Hero headlines use Aeonik Bold — sharp & tech-forward */
+/* Hero headlines use SVN-Poppins Bold — sharp & modern */
 h1.slide-title,
 .slide-title {
   font-family: var(--font-sans);
@@ -153,7 +195,7 @@ h1.slide-title,
   font-weight: 700;
 }
 
-/* Section headlines — Aeonik for modern tech feel */
+/* Section headlines — SVN-Poppins for modern feel */
 .section-headline,
 .counters-headline,
 .partner-headline,
