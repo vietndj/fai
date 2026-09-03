@@ -330,7 +330,7 @@ export default function DaoTao() {
             <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 32px', lineHeight: '1.7' }}>
               Đăng ký nhận tư vấn hướng nghiệp 1-1 và thông tin học bổng mới nhất từ các khối ngành đào tạo FAI
             </p>
-            <TechCTAButton text="Tư vấn ngay" href="https://zalo.me/fptaptech" />
+            <TechCTAButton text="Tư vấn ngay" href="https://zalo.me/3164559225263453576" />
           </div>
         </section>
 

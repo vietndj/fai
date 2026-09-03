@@ -7,23 +7,19 @@ const DEFAULT_MAX_HEIGHT = 1600;
 const TARGET_MAX_BYTES = 350 * 1024; // 350 KB
 
 /**
- * Locate watermark file across potential runtime environments
+ * Locate watermark file in public/logo_fpt_fai.png
  */
 function resolveWatermarkPath(customPath) {
   if (customPath && fs.existsSync(customPath)) {
     return customPath;
   }
-  const candidates = [
-    path.join(process.cwd(), 'public', 'logo_fpt_fai.png'),
-    path.join(process.cwd(), 'fai', 'public', 'logo_fpt_fai.png'),
-    path.resolve(__dirname, '../../public/logo_fpt_fai.png'),
-    path.resolve(__dirname, '../../../public/logo_fpt_fai.png'),
-  ];
-  for (const p of candidates) {
-    if (fs.existsSync(p)) return p;
+  const primaryPath = path.join(process.cwd(), 'public', 'logo_fpt_fai.png');
+  if (fs.existsSync(primaryPath)) {
+    return primaryPath;
   }
   return null;
 }
+
 
 /**
  * Process, resize, watermark, and compress image to WebP < 350KB

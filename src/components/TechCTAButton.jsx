@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function TechCTAButton({ 
   text = "Tư vấn ngay",
-  href = "https://zalo.me/fptaptech",
+  href = "https://zalo.me/3164559225263453576",
   style = {}
 }) {
   const [isOnline, setIsOnline] = useState(false);
