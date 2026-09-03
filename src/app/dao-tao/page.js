@@ -151,7 +151,7 @@ export default function DaoTao() {
             <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
               HỆ THỐNG ĐÀO TẠO
             </span>
-            <h1 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 500, fontFamily: 'var(--font-sans)', color: 'var(--secondary)', marginTop: '20px', lineHeight: '1.25' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 500, fontFamily: 'var(--font-heading-medium)', color: 'var(--secondary)', marginTop: '20px', lineHeight: '1.25' }}>
               Chương trình đào tạo tại <br style={{ display: 'inline' }} /> Viện Đào tạo Quốc tế FPT
             </h1>
             <p style={{ color: 'var(--text-muted)', maxWidth: '850px', marginTop: '20px', fontSize: '1.05rem', lineHeight: '1.75' }}>

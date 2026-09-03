@@ -19,7 +19,7 @@ export default function TinTuc() {
         <section className="news-page-title-section">
           <div className="container">
             <span className="sub-hero-tag">FAI HUB</span>
-            <h1 className="sub-hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 500, marginBottom: '40px' }}>
+            <h1 className="sub-hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 500, fontFamily: 'var(--font-heading-medium)', marginBottom: '40px' }}>
               Tin tức &amp; sự kiện
             </h1>
           </div>

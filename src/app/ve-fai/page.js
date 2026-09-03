@@ -243,7 +243,7 @@ export default function VeFai() {
                 color: '#0D2137', 
                 lineHeight: '1.15', 
                 fontWeight: 500, 
-                fontFamily: 'var(--font-sans)', 
+                fontFamily: 'var(--font-heading-medium)', 
                 letterSpacing: '-0.02em',
                 margin: 0,
                 minHeight: '1.2em'

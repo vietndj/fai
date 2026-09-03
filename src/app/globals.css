@@ -94,6 +94,20 @@
   font-display: swap;
 }
 @font-face {
+  font-family: 'SVN-Sonoma Medium';
+  src: local('SVN-Sonoma-Medium'), local('SVN-Sonoma Medium'), url('/fonts/SVN-Sonoma-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SVN-Sonoma Medium';
+  src: local('SVN-Sonoma-Medium'), local('SVN-Sonoma Medium'), url('/fonts/SVN-Sonoma-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: 'SVN-Sonoma';
   src: local('SVN-Sonoma-SemiBold'), local('SVN-Sonoma SemiBold'), url('/fonts/SVN-Sonoma-SemiBold.ttf') format('truetype');
   font-weight: 600;
@@ -250,6 +264,7 @@
   --bg-dark: #0D2137;
 
   --font-sans: 'SVN-Sonoma', 'SVN-Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading-medium: 'SVN-Sonoma Medium', 'SVN-Sonoma', 'SVN-Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-title: 'GT-Sectra', serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --header-height: 100px;
@@ -287,22 +302,22 @@ h1, h2, h3, .beau-hero-title, .section-headline {
   text-wrap: balance;
 }
 
-/* Global Level-1 Headings (H1) use Medium weight (500) for refined editorial look */
-h1 {
-  font-weight: 500;
+/* Global Level-1 Headings (H1) and Hero Titles use Medium weight (500) */
+h1,
+.page-hero-title,
+.slide-title-premium,
+.slide-title,
+.sub-hero-title,
+.beau-hero-title,
+.article-main-title {
+  font-family: var(--font-heading-medium) !important;
+  font-weight: 500 !important;
 }
 
 @media (max-width: 992px) {
   body {
     padding-top: 72px; /* Offset for global fixed header on mobile */
   }
-}
-
-/* Hero headlines use Medium weight — elegant & modern */
-h1.slide-title,
-.slide-title {
-  font-family: var(--font-sans);
-  font-weight: 500;
 }
 
 /* Editorial & academic text */
@@ -312,18 +327,13 @@ h1.slide-title,
   font-weight: 700;
 }
 
-.sub-hero-title {
-  font-family: var(--font-sans), sans-serif;
-  font-weight: 500;
-}
-
-/* Section headlines — SVN-Poppins for modern feel */
+/* Section headlines use Medium font */
 .section-headline,
 .counters-headline,
 .partner-headline,
 .pillar-headline {
-  font-family: var(--font-sans);
-  font-weight: 800;
+  font-family: var(--font-heading-medium);
+  font-weight: 500;
 }
 
 /* Logo keeps GT Sectra */

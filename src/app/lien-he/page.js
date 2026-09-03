@@ -188,7 +188,7 @@ export default function LienHe() {
               <span className="section-eyebrow" style={{ fontSize: "0.9rem", fontWeight: 800, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.15em" }}>
                 MẠNG LƯỚI KẾT NỐI FAI
               </span>
-              <h1 style={{ fontSize: "clamp(2.3rem, 5.5vw, 4rem)", color: "var(--secondary)", lineHeight: "1.25", fontWeight: 500, marginTop: "20px", fontFamily: "var(--font-sans)" }}>
+              <h1 style={{ fontSize: "clamp(2.3rem, 5.5vw, 4rem)", color: "var(--secondary)", lineHeight: "1.25", fontWeight: 500, marginTop: "20px", fontFamily: "var(--font-heading-medium)" }}>
                 Hệ thống Campus thực chiến toàn quốc
               </h1>
               <p style={{ maxWidth: "720px", color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: "1.75", marginTop: "25px" }}>

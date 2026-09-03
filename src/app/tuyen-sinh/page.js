@@ -438,6 +438,7 @@ export default function TuyenSinh() {
                 style={{ 
                   fontSize: 'clamp(2.2rem, 5vw, 3.6rem)', 
                   fontWeight: 500, 
+                  fontFamily: 'var(--font-heading-medium)',
                   color: 'var(--secondary)', 
                   lineHeight: '1.2', 
                   margin: '0 0 18px 0',
