@@ -552,7 +552,7 @@ export default function LienHe() {
               TỔNG ĐÀI HỖ TRỢ TOÀN QUỐC
             </span>
             
-            <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.8rem)", fontWeight: 500, color: "var(--secondary)", marginTop: "12px", marginBottom: "8px", fontFamily: "var(--font-heading-medium)" }}>
+            <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.8rem)", fontWeight: 700, color: "var(--secondary)", marginTop: "12px", marginBottom: "8px", fontFamily: "var(--font-sans)" }}>
               Chúng tôi luôn sẵn sàng hỗ trợ
             </h2>
             

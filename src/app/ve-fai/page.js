@@ -987,7 +987,7 @@ export default function VeFai() {
               }}
               className="about-join-link"
             >
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 500, margin: 0, fontFamily: 'var(--font-heading-medium)', color: '#0D2137' }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 700, margin: 0, fontFamily: 'var(--font-sans)', color: '#0D2137' }}>
                 Gia nhập FAI cùng chúng tôi
               </h2>
               <span style={{ color: 'var(--primary)' }}>
