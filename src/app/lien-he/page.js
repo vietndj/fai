@@ -7,28 +7,28 @@ import { Phone, MapPin, Mail, Clock, ArrowRight, Building2, Globe, Heart } from 
 const aptechCampuses = [
   {
     city: "Hà Nội",
-    name: "FPT Aptech - Trụ sở Xuân Phương",
+    name: "FPT Aptech - Cơ sở Phan Tây Nhạc",
     address: "Cổng số 1, Nhà E, Toà nhà FPT Polytechnic, 13 Phan Tây Nhạc, Phường Xuân Phương, TP Hà Nội",
     hotline: "0833 999 810",
     email: "aptech.hn@fpt.edu.vn"
   },
   {
     city: "Hà Nội",
-    name: "FPT Aptech - Cơ sở Cầu Giấy",
+    name: "FPT Aptech - Cơ sở Tôn Thất Thuyết",
     address: "8 Tôn Thất Thuyết, Phường Cầu Giấy, TP Hà Nội",
     hotline: "0833 999 810",
     email: "aptech.hn@fpt.edu.vn"
   },
   {
     city: "TP. Hồ Chí Minh",
-    name: "FPT Aptech - Cơ sở Tân Sơn Nhất",
+    name: "FPT Aptech - Cơ sở 21 Bis Hậu Giang",
     address: "21 Bis Hậu Giang, Phường Tân Sơn Nhất, TP HCM",
     hotline: "0834 999 810",
     email: "aptech.hcm@fpt.edu.vn"
   },
   {
     city: "TP. Hồ Chí Minh",
-    name: "FPT Aptech - Cơ sở Hạnh Thông",
+    name: "FPT Aptech - Cơ sở Nguyên Hồng",
     address: "84A Nguyên Hồng, P. Hạnh Thông, TP HCM",
     hotline: "0834 999 810",
     email: "aptech.hcm@fpt.edu.vn"
@@ -38,49 +38,49 @@ const aptechCampuses = [
 const arenaCampuses = [
   {
     city: "Hà Nội",
-    name: "FPT Arena - Cơ sở Ba Đình",
+    name: "FPT Arena - Cơ sở Đội Cấn",
     address: "264 Đội Cấn, Phường Ba Đình, TP Hà Nội",
     hotline: "024 7300 8855",
     email: "farena.hn@fpt.edu.vn"
   },
   {
     city: "Hà Nội",
-    name: "FPT Arena - Cơ sở Hai Bà Trưng",
+    name: "FPT Arena - Cơ sở Lương Yên",
     address: "94 Lương Yên, Phường Bạch Đằng, TP Hà Nội",
     hotline: "024 7300 8855",
     email: "farena.hn@fpt.edu.vn"
   },
   {
     city: "Hà Nội",
-    name: "FPT Arena - Cơ sở Xuân Phương",
+    name: "FPT Arena - Cơ sở Phan Tây Nhạc",
     address: "Cổng số 1, Nhà E, Toà nhà FPT Polytechnic, 13 Phan Tây Nhạc, Phường Xuân Phương, TP Hà Nội",
     hotline: "024 7300 8855",
     email: "farena.hn@fpt.edu.vn"
   },
   {
     city: "Đà Nẵng",
-    name: "FPT Arena - Cơ sở Hải Châu",
+    name: "FPT Arena - Cơ sở Đà Nẵng",
     address: "130 Đống Đa, Phường Hải Châu, TP Đà Nẵng",
     hotline: "0236 730 8826",
     email: "farena.dn@fpt.edu.vn"
   },
   {
     city: "TP Hồ Chí Minh",
-    name: "FPT Arena - Cơ sở Tân Sơn Nhất",
+    name: "FPT Arena - Cơ sở 21 Bis Hậu Giang",
     address: "21 Bis Hậu Giang, Phường Tân Sơn Nhất, TP Hồ Chí Minh",
     hotline: "028 7300 8866",
     email: "farena.hcm@fpt.edu.vn"
   },
   {
     city: "TP Hồ Chí Minh",
-    name: "FPT Arena - Cơ sở Hạnh Thông",
+    name: "FPT Arena - Cơ sở Nguyên Hồng",
     address: "84A Nguyên Hồng, Phường Hạnh Thông, TP Hồ Chí Minh",
     hotline: "028 7300 8866",
     email: "farena.hcm@fpt.edu.vn"
   },
   {
     city: "Cần Thơ",
-    name: "FPT Arena - Cơ sở Cái Khế",
+    name: "FPT Arena - Cơ sở Cần Thơ",
     address: "55 Cách Mạng Tháng 8, Phường Cái Khế, TP Cần Thơ",
     hotline: "0292 730 8806",
     email: "farena.ct@fpt.edu.vn"
@@ -90,42 +90,42 @@ const arenaCampuses = [
 const skillkingCampuses = [
   {
     city: "Hà Nội",
-    name: "FPT Skillking - Cơ sở Hai Bà Trưng",
-    address: "94 Lương Yên, Phường Bạch Đằng, TP Hà Nội",
-    hotline: "024 7300 8855",
-    email: "skillking.hn@fpt.edu.vn"
-  },
-  {
-    city: "Hà Nội",
-    name: "FPT Skillking - Cơ sở Xuân Phương",
+    name: "FPT Skillking - Cơ sở Phan Tây Nhạc",
     address: "Cổng số 1, Nhà E, Toà nhà FPT Polytechnic, 13 Phan Tây Nhạc, Phường Xuân Phương, TP Hà Nội",
     hotline: "024 7300 8855",
     email: "skillking.hn@fpt.edu.vn"
   },
   {
+    city: "Hà Nội",
+    name: "FPT Skillking - Cơ sở Lương Yên",
+    address: "94 Lương Yên, Phường Bạch Đằng, TP Hà Nội",
+    hotline: "024 7300 8855",
+    email: "skillking.hn@fpt.edu.vn"
+  },
+  {
     city: "Đà Nẵng",
-    name: "FPT Skillking - Cơ sở Hải Châu",
+    name: "FPT Skillking - Cơ sở Đà Nẵng",
     address: "130 Đống Đa, Phường Hải Châu, TP Đà Nẵng",
     hotline: "0236 730 8826",
     email: "skillking.dn@fpt.edu.vn"
   },
   {
     city: "TP Hồ Chí Minh",
-    name: "FPT Skillking - Cơ sở Tân Sơn Nhất",
+    name: "FPT Skillking - Cơ sở 21 Bis Hậu Giang",
     address: "21 Bis Hậu Giang, Phường Tân Sơn Nhất, TP Hồ Chí Minh",
     hotline: "028 7300 8866",
     email: "skillking.hcm@fpt.edu.vn"
   },
   {
     city: "TP Hồ Chí Minh",
-    name: "FPT Skillking - Cơ sở Hạnh Thông",
+    name: "FPT Skillking - Cơ sở Nguyên Hồng",
     address: "84A Nguyên Hồng, Phường Hạnh Thông, TP Hồ Chí Minh",
     hotline: "028 7300 8866",
     email: "skillking.hcm@fpt.edu.vn"
   },
   {
     city: "Cần Thơ",
-    name: "FPT Skillking - Cơ sở Cái Khế",
+    name: "FPT Skillking - Cơ sở Cần Thơ",
     address: "55 Cách Mạng Tháng 8, Phường Cái Khế, TP Cần Thơ",
     hotline: "0292 730 8806",
     email: "skillking.ct@fpt.edu.vn"
@@ -135,29 +135,29 @@ const skillkingCampuses = [
 const jetkingCampuses = [
   {
     city: "Hà Nội",
-    name: "FPT Jetking - Cơ sở Xuân Phương",
+    name: "FPT Jetking - Cơ sở Phan Tây Nhạc",
     address: "Cổng số 1, Nhà E, Toà nhà FPT Polytechnic, 13 Phan Tây Nhạc, Phường Xuân Phương, TP Hà Nội.",
     hotline: "0833 999 810",
     email: "jetking.hn@fpt.edu.vn"
   },
   {
     city: "Đà Nẵng",
-    name: "FPT Jetking - Cơ sở Hải Châu",
+    name: "FPT Jetking - Cơ sở Đà Nẵng",
     address: "130 Đống Đa, Phường Hải Châu, TP Đà Nẵng.",
     hotline: "0941 173 530",
     email: "jetking.dn@fpt.edu.vn"
   },
   {
     city: "TP. Hồ Chí Minh",
-    name: "FPT Jetking - Cơ sở Hạnh Thông",
-    address: "84A Nguyên Hồng, P. Hạnh Thông, TP HCM",
+    name: "FPT Jetking - Cơ sở 21 Bis Hậu Giang",
+    address: "21 Bis Hậu Giang, Phường Tân Sơn Nhất, TP HCM.",
     hotline: "0834 999 810",
     email: "jetking.hcm@fpt.edu.vn"
   },
   {
     city: "TP. Hồ Chí Minh",
-    name: "FPT Jetking - Cơ sở Tân Sơn Nhất",
-    address: "21 Bis Hậu Giang, Phường Tân Sơn Nhất, TP HCM.",
+    name: "FPT Jetking - Cơ sở Nguyên Hồng",
+    address: "84A Nguyên Hồng, P. Hạnh Thông, TP HCM",
     hotline: "0834 999 810",
     email: "jetking.hcm@fpt.edu.vn"
   }

@@ -550,6 +550,7 @@ export default function AiAgentSubpage() {
           headerTitle="NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING AI AGENT"
           formTitle="BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ AI AGENT TIÊN PHONG?"
           formSubtitle="Đăng ký nhận tư vấn lộ trình Lập trình Hệ thống AI Agent"
+          campuses={['Hà Nội', 'Đà Nẵng']}
           badges={[
             {
               value: '8',

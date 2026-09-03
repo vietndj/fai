@@ -705,7 +705,7 @@ export default function ShortCourses100200hPage() {
         headerTitle="NHẬN THÔNG TIN TƯ VẤN BỘ KHÓA HỌC LẬP TRÌNH NGẮN HẠN TẠI FPT APTECH (100 - 200 GIỜ)"
         formTitle="ĐĂNG KÝ TƯ VẤN KHÓA HỌC LẬP TRÌNH NGẮN HẠN"
         formSubtitle="Tối ưu thời gian - Đi làm sớm - Tích lũy kỹ năng thực chiến"
-        campuses={['Hà Nội', 'Đà Nẵng']}
+        campuses={['Hà Nội']}
         courseLabel="Bạn đang quan tâm khoá học ngắn hạn nào tại FPT Aptech"
         badges={[
           {

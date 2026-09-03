@@ -509,7 +509,7 @@ export default function Fullstack2NamPage() {
       {/* Section 5: Form nhận thông tin học bổng & Google Sheet (☀️ LIGHT THEME) */}
       <ScholarshipFormSection 
         programName="FPT Aptech - Fullstack 2 Năm" 
-        campuses={['Hà Nội', 'Đà Nẵng']}
+        campuses={['Hà Nội']}
         googleSheetScriptUrl="https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec"
       />
 

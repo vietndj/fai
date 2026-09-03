@@ -312,6 +312,8 @@ h2,
 .beau-hero-title,
 .article-main-title,
 .section-headline,
+.section-title,
+.beau-section-title,
 .counters-headline,
 .partner-headline,
 .pillar-headline {
@@ -319,7 +321,11 @@ h2,
   font-weight: 500 !important;
 }
 
-/* Call To Action (CTA) & Bottom Banner Headlines use Bold weight (700) */
+/* Program Display Titles & Call To Action (CTA) Headlines use Bold weight (700) */
+.prog-beau-item-title,
+h3.prog-beau-item-title,
+.pillar-tagline,
+.pillar-headline,
 .beau-cta-title,
 h2.beau-cta-title,
 .bold-cta-headline,
@@ -351,8 +357,8 @@ h2.bold-cta-headline,
 
 /* Legacy section-title still uses GT Sectra */
 .section-title {
-  font-family: var(--font-sans), sans-serif;
-  font-weight: 800;
+  font-family: var(--font-heading-medium);
+  font-weight: 500;
 }
 
 a {
@@ -4439,9 +4445,9 @@ img {
 }
 
 .beau-section-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading-medium) !important;
   font-size: clamp(2.2rem, 5vw, 4rem);
-  font-weight: 800;
+  font-weight: 500 !important;
   line-height: 1.15;
   margin-bottom: 80px;
   letter-spacing: -0.02em;

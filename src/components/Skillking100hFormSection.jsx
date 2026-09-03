@@ -314,9 +314,9 @@ export default function Skillking100hFormSection({
                 <div>
                   <select name="course" value={formData.course} onChange={handleChange} style={{ width: '100%', padding: '14px 18px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.95rem', outline: 'none', color: formData.course ? '#0f172a' : '#64748b', background: '#f8fafc' }}>
                     <option value="" disabled>Bạn đang quan tâm khoá học nào? *</option>
-                    <option value="Social Media Creator & Ads Performance (Meta/Tiktok)">Social Media Creator &amp; Ads Performance (Meta/Tiktok)</option>
-                    <option value="Google Mastery: SEO & SEM">Google Mastery: SEO &amp; SEM</option>
-                    <option value="S-Commerce Mastery (Tiktok Shop)">S-Commerce Mastery (Tiktok Shop)</option>
+                    <option value="Social Media Creator & Ads Performance">Social Media Creator &amp; Ads Performance</option>
+                    <option value="Google Mastery: SEO & Google Ads">Google Mastery: SEO &amp; Google Ads</option>
+                    <option value="S-Commerce & TikTok Shop Mastery">S-Commerce &amp; TikTok Shop Mastery</option>
                   </select>
                 </div>
 

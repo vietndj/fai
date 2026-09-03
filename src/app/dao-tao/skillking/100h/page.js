@@ -298,10 +298,9 @@ export default function Skillking100hPage() {
             }
           ]}
           courseOptions={[
-            "Social Media Marketing & Content AI (100h)",
-            "SEO & Google Ads Chuyên Sâu (100h)",
-            "Performance Marketing & Data Analytics (100h)",
-            "E-Commerce & Marketing Automation (100h)"
+            "Social Media Creator & Ads Performance",
+            "Google Mastery: SEO & Google Ads",
+            "S-Commerce & TikTok Shop Mastery"
           ]}
         />
       </div>

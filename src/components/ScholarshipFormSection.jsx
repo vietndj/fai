@@ -99,7 +99,7 @@ const BRAND_PRESETS = {
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING AI AGENT',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ AI AGENT TIÊN PHONG?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Lập trình Hệ thống AI Agent',
-    campuses: ['Hà Nội'],
+    campuses: ['Hà Nội', 'Đà Nẵng'],
     badges: [
       {
         value: '8',
@@ -122,7 +122,7 @@ const BRAND_PRESETS = {
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT APTECH',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH LẬP TRÌNH VIÊN QUỐC TẾ?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình học & học bổng 2026',
-    campuses: ['Hà Nội', 'Đà Nẵng'],
+    campuses: ['Hà Nội'],
     badges: [
       {
         value: '14',
@@ -181,13 +181,13 @@ export default function ScholarshipFormSection({
   const activeHeaderTitle = headerTitle || preset.defaultHeaderTitle;
   const activeFormTitle = formTitle || preset.defaultFormTitle;
   const activeFormSubtitle = formSubtitle || preset.defaultFormSubtitle;
-  const campuses = campusesProp || preset.campuses || ['Hà Nội', 'Đà Nẵng'];
+  const campuses = campusesProp || preset.campuses || ['Hà Nội'];
 
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
     phone: '',
-    campus: 'Hà Nội',
+    campus: (campuses && campuses[0]) || 'Hà Nội',
     course: courseOptions && courseOptions.length > 0 ? courseOptions[0] : programName,
     agreeTerms: true,
   });
@@ -521,7 +521,7 @@ export default function ScholarshipFormSection({
                 </div>
 
                 {/* Campus Selection */}
-                {includeCampus && campuses && campuses.length > 1 && (
+                {includeCampus && campuses && campuses.length >= 1 && (
                   <div>
                     <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: '#475569', marginBottom: '8px' }}>
                       Cơ sở tư vấn thuận tiện cho bạn:
