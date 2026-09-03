@@ -188,7 +188,7 @@ export default function LienHe() {
               <span className="section-eyebrow" style={{ fontSize: "0.9rem", fontWeight: 800, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.15em" }}>
                 MẠNG LƯỚI KẾT NỐI FAI
               </span>
-              <h1 style={{ fontSize: "clamp(2.3rem, 5.5vw, 4rem)", color: "var(--secondary)", lineHeight: "1.25", fontWeight: 800, marginTop: "20px", fontFamily: "var(--font-sans)" }}>
+              <h1 style={{ fontSize: "clamp(2.3rem, 5.5vw, 4rem)", color: "var(--secondary)", lineHeight: "1.25", fontWeight: 500, marginTop: "20px", fontFamily: "var(--font-sans)" }}>
                 Hệ thống Campus thực chiến toàn quốc
               </h1>
               <p style={{ maxWidth: "720px", color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: "1.75", marginTop: "25px" }}>
@@ -197,10 +197,10 @@ export default function LienHe() {
             </div>
             
             <div style={{ display: "flex", gap: "15px", marginTop: "40px", flexWrap: "wrap" }}>
-              <a href="#aptech" style={{ padding: "12px 24px", borderRadius: "30px", background: "rgba(243,112,33,0.1)", color: "#f37021", fontWeight: 700, fontSize: "0.9rem", textDecoration: "none", border: "1px solid rgba(243,112,33,0.2)" }}>FPT Aptech</a>
-              <a href="#arena" style={{ padding: "12px 24px", borderRadius: "30px", background: "rgba(232,116,30,0.1)", color: "#e8741e", fontWeight: 700, fontSize: "0.9rem", textDecoration: "none", border: "1px solid rgba(232,116,30,0.2)" }}>FPT Arena Multimedia</a>
-              <a href="#skillking" style={{ padding: "12px 24px", borderRadius: "30px", background: "rgba(41,169,225,0.1)", color: "#09529c", fontWeight: 700, fontSize: "0.9rem", textDecoration: "none", border: "1px solid rgba(41,169,225,0.2)" }}>FPT Skillking</a>
-              <a href="#jetking" style={{ padding: "12px 24px", borderRadius: "30px", background: "rgba(220,38,38,0.1)", color: "#dc2626", fontWeight: 700, fontSize: "0.9rem", textDecoration: "none", border: "1px solid rgba(220,38,38,0.2)" }}>FPT Jetking</a>
+              <a href="#aptech" style={{ padding: "12px 24px", borderRadius: "30px", background: "rgba(243,112,33,0.1)", color: "#f37021", fontWeight: 700, fontSize: "0.9rem", textDecoration: "none", border: "1px solid rgba(243,112,33,0.25)", transition: "all 0.2s ease" }}>FPT Aptech</a>
+              <a href="#arena" style={{ padding: "12px 24px", borderRadius: "30px", background: "rgba(255,182,0,0.12)", color: "#d97706", fontWeight: 700, fontSize: "0.9rem", textDecoration: "none", border: "1px solid rgba(255,182,0,0.35)", transition: "all 0.2s ease" }}>FPT Arena Multimedia</a>
+              <a href="#skillking" style={{ padding: "12px 24px", borderRadius: "30px", background: "rgba(41,169,225,0.12)", color: "#0284c7", fontWeight: 700, fontSize: "0.9rem", textDecoration: "none", border: "1px solid rgba(41,169,225,0.3)", transition: "all 0.2s ease" }}>FPT Skillking</a>
+              <a href="#jetking" style={{ padding: "12px 24px", borderRadius: "30px", background: "rgba(237,35,42,0.1)", color: "#ed232a", fontWeight: 700, fontSize: "0.9rem", textDecoration: "none", border: "1px solid rgba(237,35,42,0.25)", transition: "all 0.2s ease" }}>FPT Jetking</a>
             </div>
           </div>
         </section>
@@ -221,12 +221,12 @@ export default function LienHe() {
           }}
         >
           <div className="container">
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "40px", alignItems: "start" }}>
+            <div className="contact-grid">
               
               {/* Left branding */}
-              <div style={{ gridColumn: "span 4" }}>
+              <div className="contact-col-left">
                 <span className="section-eyebrow" style={{ color: "#f37021", fontWeight: 800 }}>FPT APTECH</span>
-                <h2 style={{ fontSize: "2.4rem", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap" }}>
+                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
                   LẬP TRÌNH VIÊN QUỐC TẾ
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", lineHeight: "1.7", marginTop: "20px" }}>
@@ -243,7 +243,7 @@ export default function LienHe() {
               </div>
 
               {/* Right Address Grid */}
-              <div style={{ gridColumn: "span 8" }}>
+              <div className="contact-col-right">
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px" }}>
                   {aptechCampuses.map((camp, idx) => (
                     <div 
@@ -300,12 +300,12 @@ export default function LienHe() {
           }}
         >
           <div className="container">
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "40px", alignItems: "start" }}>
+            <div className="contact-grid">
               
               {/* Left branding */}
-              <div style={{ gridColumn: "span 4" }}>
+              <div className="contact-col-left">
                 <span className="section-eyebrow" style={{ color: "#d97706", fontWeight: 800 }}>FPT ARENA MULTIMEDIA</span>
-                <h2 style={{ fontSize: "2.4rem", fontWeight: 800, color: "var(--secondary)", lineHeight: "1.2", marginTop: "10px" }}>
+                <h2 style={{ fontSize: "clamp(1.35rem, 2.1vw, 2.4rem)", fontWeight: 800, color: "var(--secondary)", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
                   THIẾT KẾ MỸ THUẬT ĐA PHƯƠNG TIỆN
                 </h2>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.7", marginTop: "20px" }}>
@@ -322,7 +322,7 @@ export default function LienHe() {
               </div>
 
               {/* Right Address Grid */}
-              <div style={{ gridColumn: "span 8" }}>
+              <div className="contact-col-right">
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px" }}>
                   {arenaCampuses.map((camp, idx) => (
                     <div 
@@ -379,12 +379,12 @@ export default function LienHe() {
           }}
         >
           <div className="container">
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "40px", alignItems: "start" }}>
+            <div className="contact-grid">
               
               {/* Left branding */}
-              <div style={{ gridColumn: "span 4" }}>
+              <div className="contact-col-left">
                 <span className="section-eyebrow" style={{ color: "#29a9e1", fontWeight: 800 }}>FPT SKILLKING</span>
-                <h2 style={{ fontSize: "2.4rem", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px" }}>
+                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
                   DIGITAL MARKETING ỨNG DỤNG AI
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", lineHeight: "1.7", marginTop: "20px" }}>
@@ -401,7 +401,7 @@ export default function LienHe() {
               </div>
 
               {/* Right Address Grid */}
-              <div style={{ gridColumn: "span 8" }}>
+              <div className="contact-col-right">
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px" }}>
                   {skillkingCampuses.map((camp, idx) => (
                     <div 
@@ -457,12 +457,12 @@ export default function LienHe() {
           }}
         >
           <div className="container">
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "40px", alignItems: "start" }}>
+            <div className="contact-grid">
               
               {/* Left branding */}
-              <div style={{ gridColumn: "span 4" }}>
-                <span className="section-eyebrow" style={{ color: "#dc2626", fontWeight: 800 }}>FPT JETKING</span>
-                <h2 style={{ fontSize: "2.4rem", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px" }}>
+              <div className="contact-col-left">
+                <span className="section-eyebrow" style={{ color: "#ed232a", fontWeight: 800 }}>FPT JETKING</span>
+                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
                   CHIP DESIGN VÀ AI AGENT
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", lineHeight: "1.7", marginTop: "20px" }}>
@@ -470,7 +470,7 @@ export default function LienHe() {
                 </p>
                 <div style={{ marginTop: "30px", borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "20px" }}>
                   <p style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.88rem", color: "rgba(255,255,255,0.8)" }}>
-                    <Globe size={16} style={{ color: "#dc2626" }} /> 
+                    <Globe size={16} style={{ color: "#ed232a" }} /> 
                     <a href="https://jetking.fpt.edu.vn/" target="_blank" rel="noreferrer" style={{ color: "#ffffff", textDecoration: "underline" }}>
                       jetking.fpt.edu.vn
                     </a>
@@ -479,7 +479,7 @@ export default function LienHe() {
               </div>
 
               {/* Right Address Grid */}
-              <div style={{ gridColumn: "span 8" }}>
+              <div className="contact-col-right">
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px" }}>
                   {jetkingCampuses.map((camp, idx) => (
                     <div 
@@ -493,7 +493,7 @@ export default function LienHe() {
                       }}
                       className="contact-card-dark"
                     >
-                      <span style={{ fontSize: "0.75rem", fontWeight: 800, padding: "4px 10px", background: "rgba(220,38,38,0.18)", color: "#dc2626", borderRadius: "4px", textTransform: "uppercase" }}>
+                      <span style={{ fontSize: "0.75rem", fontWeight: 800, padding: "4px 10px", background: "rgba(237,35,42,0.18)", color: "#ed232a", borderRadius: "4px", textTransform: "uppercase" }}>
                         {camp.city}
                       </span>
                       <h3 style={{ fontSize: "1.05rem", fontWeight: 800, color: "#ffffff", marginTop: "12px", marginBottom: "12px" }}>
@@ -502,11 +502,11 @@ export default function LienHe() {
                       
                       <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                         <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)", display: "flex", gap: "8px", margin: 0, lineHeight: "1.5" }}>
-                          <MapPin size={16} style={{ color: "#dc2626", flexShrink: 0, marginTop: "2px" }} />
+                          <MapPin size={16} style={{ color: "#ed232a", flexShrink: 0, marginTop: "2px" }} />
                           {camp.address}
                         </p>
                         <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)", display: "flex", gap: "8px", margin: 0 }}>
-                          <Phone size={16} style={{ color: "#dc2626", flexShrink: 0 }} />
+                          <Phone size={16} style={{ color: "#ed232a", flexShrink: 0 }} />
                           Hotline: {camp.hotline}
                         </p>
                       </div>

@@ -122,7 +122,7 @@ const BRAND_PRESETS = {
     defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT APTECH',
     defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH LẬP TRÌNH VIÊN QUỐC TẾ?',
     defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình học & học bổng 2026',
-    campuses: ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'],
+    campuses: ['Hà Nội', 'Đà Nẵng'],
     badges: [
       {
         value: '14',
@@ -181,7 +181,7 @@ export default function ScholarshipFormSection({
   const activeHeaderTitle = headerTitle || preset.defaultHeaderTitle;
   const activeFormTitle = formTitle || preset.defaultFormTitle;
   const activeFormSubtitle = formSubtitle || preset.defaultFormSubtitle;
-  const campuses = campusesProp || preset.campuses || ['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'];
+  const campuses = campusesProp || preset.campuses || ['Hà Nội', 'Đà Nẵng'];
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -562,11 +562,9 @@ export default function ScholarshipFormSection({
                 {/* Optional Course Selection (if multiple options available) */}
                 {courseOptions && courseOptions.length > 0 && (
                   <div>
-                    {courseLabel && (
-                      <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: '#475569', marginBottom: '8px' }}>
-                        {courseLabel}
-                      </label>
-                    )}
+                    <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: '#475569', marginBottom: '8px' }}>
+                      {courseLabel || 'Bạn đang quan tâm đến chương trình nào tại Viện đào tạo Quốc tế FPT'}
+                    </label>
                     <select 
                       name="course" 
                       value={formData.course} 

@@ -242,7 +242,7 @@ export default function VeFai() {
                 fontSize: 'clamp(2.5rem, 6vw, 4.6rem)', 
                 color: '#0D2137', 
                 lineHeight: '1.15', 
-                fontWeight: 900, 
+                fontWeight: 500, 
                 fontFamily: 'var(--font-sans)', 
                 letterSpacing: '-0.02em',
                 margin: 0,

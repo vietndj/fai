@@ -151,7 +151,7 @@ export default function DaoTao() {
             <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
               HỆ THỐNG ĐÀO TẠO
             </span>
-            <h1 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 800, fontFamily: 'var(--font-sans)', color: 'var(--secondary)', marginTop: '20px', lineHeight: '1.25' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 500, fontFamily: 'var(--font-sans)', color: 'var(--secondary)', marginTop: '20px', lineHeight: '1.25' }}>
               Chương trình đào tạo tại <br style={{ display: 'inline' }} /> Viện Đào tạo Quốc tế FPT
             </h1>
             <p style={{ color: 'var(--text-muted)', maxWidth: '850px', marginTop: '20px', fontSize: '1.05rem', lineHeight: '1.75' }}>
@@ -184,15 +184,16 @@ export default function DaoTao() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
                       <h2 
                         style={{ 
-                          fontSize: 'clamp(1.8rem, 3.8vw, 3.2rem)', 
+                          fontSize: 'clamp(1.25rem, 2.6vw, 2.4rem)', 
                           fontWeight: 800, 
                           fontFamily: 'var(--font-sans)', 
                           color: prog.isDark ? '#ffffff' : 'var(--secondary)',
                           lineHeight: '1.2',
-                          margin: 0
+                          margin: 0,
+                          textWrap: 'unset'
                         }}
                       >
-                        <span style={{ whiteSpace: 'nowrap' }}>{prog.title}</span> <br />
+                        <span style={{ display: 'inline-block', whiteSpace: 'nowrap', textWrap: 'nowrap' }}>{prog.title}</span> <br />
                         <span style={{ color: prog.color, fontSize: '0.75em' }}>{prog.subTitle}</span>
                       </h2>
                       

@@ -302,7 +302,7 @@ export default function Skillking100hFormSection({
                     Cơ sở tư vấn thuận tiện cho bạn:
                   </label>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px' }}>
-                    {['Hà Nội', 'TP. Hồ Chí Minh', 'Đà Nẵng', 'Cần Thơ'].map((c, cIdx) => (
+                    {['Hà Nội', 'Đà Nẵng'].map((c, cIdx) => (
                       <label key={cIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: formData.campus === c ? 'rgba(9, 82, 156, 0.08)' : '#f8fafc', padding: '10px 12px', borderRadius: '10px', border: formData.campus === c ? '1.5px solid #09529c' : '1px solid #cbd5e1', cursor: 'pointer' }}>
                         <input type="radio" name="campus" value={c} onChange={handleChange} checked={formData.campus === c} style={{ accentColor: '#09529c', width: '15px', height: '15px' }} />
                         <span style={{ fontSize: '0.88rem', color: formData.campus === c ? '#0f172a' : '#475569', fontWeight: formData.campus === c ? 700 : 500 }}>{c}</span>

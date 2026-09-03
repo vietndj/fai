@@ -424,7 +424,7 @@ export default function DoiSong() {
             <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
               TRẢI NGHIỆM FAI
             </span>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.15', marginTop: '16px', fontFamily: 'var(--font-sans)' }}>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 500, color: '#ffffff', lineHeight: '1.15', marginTop: '16px', fontFamily: 'var(--font-sans)' }}>
               Trải nghiệm sinh viên
             </h1>
             <div style={{ maxWidth: '820px', margin: '24px auto 0 auto', textAlign: 'center' }}>
