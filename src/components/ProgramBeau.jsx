@@ -164,7 +164,7 @@ export default function ProgramBeau() {
                         }} 
                       />
                     </div>
-                    <h3 className="prog-beau-item-title" style={{ letterSpacing: 0, margin: 0, padding: 0 }}>
+                    <h3 className="prog-beau-item-title" style={{ letterSpacing: 0, margin: 0, padding: 0, fontWeight: 700, fontFamily: 'var(--font-sans)' }}>
                       {prog.titleLine1} <br />
                       <span>{prog.titleLine2}</span>
                     </h3>

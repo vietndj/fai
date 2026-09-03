@@ -1765,9 +1765,9 @@ img {
 }
 
 .prog-beau-item-title {
-  font-family: var(--font-heading-medium);
+  font-family: var(--font-sans) !important;
   font-size: clamp(2.4rem, 4vw, 3.8rem);
-  font-weight: 500;
+  font-weight: 700 !important;
   color: var(--secondary);
   line-height: 1.05;
   letter-spacing: 0;
@@ -2599,9 +2599,9 @@ img {
 }
 
 .pillar-tagline {
-  font-family: var(--font-heading-medium);
+  font-family: var(--font-sans) !important;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 700 !important;
   color: #ffffff;
   line-height: 1.2;
   margin: 0;
@@ -2637,9 +2637,9 @@ img {
 }
 
 .pillar-headline {
-  font-family: var(--font-heading-medium);
+  font-family: var(--font-sans) !important;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 700 !important;
   color: #ffffff;
   line-height: 1.2;
   margin: 0 0 14px 0;
