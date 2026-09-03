@@ -612,7 +612,7 @@ export default function TuyenSinh() {
                 >
                   01/ ĐỐI TƯỢNG TUYỂN SINH
                 </span>
-                <h2 style={{ fontSize: 'clamp(1.9rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.25', marginTop: '12px', marginBottom: '14px' }}>
+                <h2 style={{ fontSize: 'clamp(1.9rem, 4vw, 2.8rem)', fontWeight: 500, fontFamily: 'var(--font-heading-medium)', color: '#ffffff', lineHeight: '1.25', marginTop: '12px', marginBottom: '14px' }}>
                   Cơ hội rộng mở cho người đam mê
                 </h2>
                 <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '820px', margin: 0 }}>
@@ -749,7 +749,7 @@ export default function TuyenSinh() {
               >
                 02/ PHƯƠNG THỨC TUYỂN SINH 2026
               </span>
-              <h2 style={{ fontSize: 'clamp(1.9rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', marginBottom: '16px' }}>
+              <h2 style={{ fontSize: 'clamp(1.9rem, 4vw, 2.8rem)', fontWeight: 500, fontFamily: 'var(--font-heading-medium)', color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', marginBottom: '16px' }}>
                 Xét tuyển thẳng, không thi tuyển
               </h2>
               <div 
@@ -961,7 +961,7 @@ export default function TuyenSinh() {
                 >
                   03/ QUY TRÌNH &amp; THỦ TỤC
                 </span>
-                <h2 style={{ fontSize: 'clamp(1.9rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.25', marginTop: '12px', marginBottom: '30px' }}>
+                <h2 style={{ fontSize: 'clamp(1.9rem, 4vw, 2.8rem)', fontWeight: 500, fontFamily: 'var(--font-heading-medium)', color: '#ffffff', lineHeight: '1.25', marginTop: '12px', marginBottom: '30px' }}>
                   4 Bước gia nhập FAI năm 2026
                 </h2>
               </div>
@@ -1126,7 +1126,7 @@ export default function TuyenSinh() {
               >
                 04/ CHÍNH SÁCH HỌC BỔNG 2026
               </span>
-              <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', marginBottom: '14px' }}>
+              <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3rem)', fontWeight: 500, fontFamily: 'var(--font-heading-medium)', color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', marginBottom: '14px' }}>
                 Học bổng &amp; Ưu đãi nhập học 2026
               </h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
@@ -1348,7 +1348,7 @@ export default function TuyenSinh() {
               >
                 05/ CHÍNH SÁCH HỌC PHÍ
               </span>
-              <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', marginBottom: '16px' }}>
+              <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3rem)', fontWeight: 500, fontFamily: 'var(--font-heading-medium)', color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', marginBottom: '16px' }}>
                 Thông tin chuyển khoản học phí chính thức 2026
               </h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.7', margin: 0 }}>
@@ -1575,7 +1575,7 @@ export default function TuyenSinh() {
                   06/ LIÊN HỆ TUYỂN SINH
                 </span>
                 
-                <h2 style={{ fontSize: 'clamp(1.9rem, 4vw, 2.7rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', marginBottom: '16px' }}>
+                <h2 style={{ fontSize: 'clamp(1.9rem, 4vw, 2.7rem)', fontWeight: 500, fontFamily: 'var(--font-heading-medium)', color: 'var(--secondary)', lineHeight: '1.25', marginTop: '12px', marginBottom: '16px' }}>
                   Tư vấn chương trình tuyển sinh 2026
                 </h2>
                 

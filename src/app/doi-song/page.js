@@ -138,7 +138,7 @@ function CategoryBlockItem({ block, onSelectPost }) {
           <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.2em', color: 'var(--primary)', textTransform: 'uppercase', display: 'block', marginBottom: '10px' }}>
             {block.eyebrow}
           </span>
-          <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: textColor, fontFamily: 'var(--font-sans)', margin: 0, whiteSpace: 'pre-line', lineHeight: '1.3' }}>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 500, color: textColor, fontFamily: 'var(--font-heading-medium)', margin: 0, whiteSpace: 'pre-line', lineHeight: '1.3' }}>
             {block.title}
           </h2>
           <p style={{ color: descColor, maxWidth: '620px', margin: '14px auto 0 auto', fontSize: '0.95rem', lineHeight: '1.65' }}>
@@ -461,7 +461,7 @@ export default function DoiSong() {
               <span className="section-eyebrow" style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.2em', color: 'var(--primary)', textTransform: 'uppercase' }}>
                 Mỗi FAIer một nhịp sống
               </span>
-              <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}>
+              <h2 className="section-headline" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 500, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-heading-medium)' }}>
                 Học - làm - trải nghiệm - kết nối
               </h2>
               <p style={{ color: 'rgba(13, 33, 55, 0.82)', maxWidth: '780px', margin: '14px auto 0 auto', fontSize: '0.98rem', lineHeight: '1.7' }}>
@@ -578,7 +578,7 @@ export default function DoiSong() {
             <span className="section-eyebrow" style={{ color: 'var(--primary)', opacity: 1, fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
               KẾT NỐI VỚI CHÚNG TÔI
             </span>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '12px', marginBottom: '18px', fontFamily: 'var(--font-sans)' }}>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.5rem)', fontWeight: 500, color: 'var(--secondary)', marginTop: '12px', marginBottom: '18px', fontFamily: 'var(--font-heading-medium)' }}>
               Bạn muốn trải nghiệm đời sống sinh viên FAI thực tế?
             </h2>
             <p style={{ maxWidth: '650px', color: 'var(--text-muted)', margin: '0 auto 30px auto', fontSize: '1.05rem', lineHeight: '1.75' }}>
@@ -669,7 +669,7 @@ export default function DoiSong() {
 
             {/* Modal Content */}
             <div style={{ padding: '30px 40px 40px 40px' }}>
-              <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.3', marginBottom: '20px', fontFamily: 'var(--font-sans)' }}>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 500, color: 'var(--secondary)', lineHeight: '1.3', marginBottom: '20px', fontFamily: 'var(--font-heading-medium)' }}>
                 {selectedPost.title}
               </h2>
               

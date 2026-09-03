@@ -25,126 +25,126 @@
 
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-Thin'), local('SVN-Sonoma Thin'), url('/fonts/SVN-Sonoma-Thin.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-ThinItalic'), local('SVN-Sonoma Thin Italic'), url('/fonts/SVN-Sonoma-ThinItalic.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-ThinItalic.ttf') format('truetype');
   font-weight: 100;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-ExtraLight'), local('SVN-Sonoma ExtraLight'), url('/fonts/SVN-Sonoma-ExtraLight.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-ExtraLightItalic'), local('SVN-Sonoma ExtraLight Italic'), url('/fonts/SVN-Sonoma-ExtraLightItalic.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-ExtraLightItalic.ttf') format('truetype');
   font-weight: 200;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-Light'), local('SVN-Sonoma Light'), url('/fonts/SVN-Sonoma-Light.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-LightItalic'), local('SVN-Sonoma Light Italic'), url('/fonts/SVN-Sonoma-LightItalic.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-Regular'), local('SVN-Sonoma'), local('SVN Sonoma Regular'), local('SVN Sonoma'), url('/fonts/SVN-Sonoma-Regular.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-Italic'), local('SVN-Sonoma Italic'), url('/fonts/SVN-Sonoma-Italic.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-Medium'), local('SVN-Sonoma Medium'), url('/fonts/SVN-Sonoma-Medium.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-MediumItalic'), local('SVN-Sonoma Medium Italic'), url('/fonts/SVN-Sonoma-MediumItalic.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-MediumItalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma Medium';
-  src: local('SVN-Sonoma-Medium'), local('SVN-Sonoma Medium'), url('/fonts/SVN-Sonoma-Medium.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma Medium';
-  src: local('SVN-Sonoma-Medium'), local('SVN-Sonoma Medium'), url('/fonts/SVN-Sonoma-Medium.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-SemiBold'), local('SVN-Sonoma SemiBold'), url('/fonts/SVN-Sonoma-SemiBold.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-SemiBoldItalic'), local('SVN-Sonoma SemiBold Italic'), url('/fonts/SVN-Sonoma-SemiBoldItalic.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-SemiBoldItalic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-Bold'), local('SVN-Sonoma Bold'), url('/fonts/SVN-Sonoma-Bold.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-BoldItalic'), local('SVN-Sonoma Bold Italic'), url('/fonts/SVN-Sonoma-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-Black'), local('SVN-Sonoma Black'), url('/fonts/SVN-Sonoma-Black.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Sonoma';
-  src: local('SVN-Sonoma-BlackItalic'), local('SVN-Sonoma Black Italic'), url('/fonts/SVN-Sonoma-BlackItalic.ttf') format('truetype');
+  src: url('/fonts/SVN-Sonoma-BlackItalic.ttf') format('truetype');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -302,14 +302,20 @@ h1, h2, h3, .beau-hero-title, .section-headline {
   text-wrap: balance;
 }
 
-/* Global Level-1 Headings (H1) and Hero Titles use Medium weight (500) */
+/* Global Headings (H1, H2, Hero & Section Titles) use Medium weight (500) */
 h1,
+h2,
 .page-hero-title,
 .slide-title-premium,
 .slide-title,
 .sub-hero-title,
 .beau-hero-title,
-.article-main-title {
+.article-main-title,
+.section-headline,
+.counters-headline,
+.partner-headline,
+.pillar-headline,
+.bold-cta-headline {
   font-family: var(--font-heading-medium) !important;
   font-weight: 500 !important;
 }
@@ -325,15 +331,6 @@ h1,
 .featured-news-title {
   font-family: var(--font-sans), sans-serif;
   font-weight: 700;
-}
-
-/* Section headlines use Medium font */
-.section-headline,
-.counters-headline,
-.partner-headline,
-.pillar-headline {
-  font-family: var(--font-heading-medium);
-  font-weight: 500;
 }
 
 /* Logo keeps GT Sectra */
@@ -390,8 +387,9 @@ img {
 }
 
 .section-headline {
+  font-family: var(--font-heading-medium);
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--secondary);
   line-height: 1.15;
   margin-bottom: 20px;
@@ -1282,9 +1280,9 @@ img {
 }
 
 .bold-cta-headline {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading-medium);
   font-size: clamp(2.4rem, 4.5vw, 4rem);
-  font-weight: 800;
+  font-weight: 500;
   color: #ffffff;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -1471,9 +1469,9 @@ img {
 .terminal-intro { display: flex; flex-direction: column; gap: 0; }
 
 .terminal-headline {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading-medium);
   font-size: clamp(2.5rem, 4vw, 3.5rem);
-  font-weight: 800;
+  font-weight: 500;
   color: #ffffff;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -1654,12 +1652,12 @@ img {
 }
 
 .prog-beau-title-main {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading-medium);
   font-size: clamp(3rem, 5vw, 4.5rem);
-  font-weight: 850;
+  font-weight: 500;
   color: var(--secondary);
   line-height: 1.05;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
   margin-top: 18px;
 }
 
@@ -1757,9 +1755,9 @@ img {
 }
 
 .prog-beau-item-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading-medium);
   font-size: clamp(2.4rem, 4vw, 3.8rem);
-  font-weight: 850;
+  font-weight: 500;
   color: var(--secondary);
   line-height: 1.05;
   letter-spacing: 0;
@@ -2591,9 +2589,9 @@ img {
 }
 
 .pillar-tagline {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading-medium);
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 500;
   color: #ffffff;
   line-height: 1.2;
   margin: 0;
@@ -2629,9 +2627,9 @@ img {
 }
 
 .pillar-headline {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading-medium);
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 500;
   color: #ffffff;
   line-height: 1.2;
   margin: 0 0 14px 0;
@@ -3018,8 +3016,9 @@ img {
 }
 
 .partner-headline {
+  font-family: var(--font-heading-medium);
   font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--secondary);
   line-height: 1.15;
   letter-spacing: -0.02em;

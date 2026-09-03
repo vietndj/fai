@@ -277,24 +277,52 @@ export async function deletePost(id) {
 // ==========================================
 
 /**
- * Convert file to base64 data URL
+ * Upload image through server-side optimization & Cloudflare R2 storage pipeline
+ * Eliminates Base64 generation completely and returns public CDN URL.
  * @param {File|Blob} file
- * @returns {Promise<string>} Base64 data URL
+ * @param {Object} [options]
+ * @returns {Promise<string>} Public CDN URL
  */
-export async function uploadImage(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
+export async function uploadImage(file, options = {}) {
+  const formData = new FormData();
+  formData.append('file', file);
+  if (options.watermark !== undefined) {
+    formData.append('watermark', String(options.watermark));
+  }
+
+  const res = await fetch('/api/upload', {
+    method: 'POST',
+    body: formData,
   });
+
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.error || 'Tải ảnh lên máy chủ thất bại');
+  }
+
+  const data = await res.json();
+  if (!data.success || !data.url) {
+    throw new Error(data.error || 'Tải ảnh lên thất bại (không có URL trả về)');
+  }
+
+  return data.url;
 }
 
 /**
- * Delete file from Firebase Storage
- * @param {string} path - Storage path or download URL
+ * Delete file from Cloudflare R2 storage via API
+ * @param {string} path - Storage path or CDN URL
  */
 export async function deleteImage(path) {
-  // No-op for base64 images
-  return;
+  if (!path) return;
+  // If it is a Cloudflare R2 URL or key, call /api/upload DELETE
+  if (path.includes('r2.dev') || path.startsWith('fai/')) {
+    try {
+      await fetch(`/api/upload?key=${encodeURIComponent(path)}`, {
+        method: 'DELETE',
+      });
+    } catch (err) {
+      console.error('Delete image error:', err);
+    }
+  }
 }
+

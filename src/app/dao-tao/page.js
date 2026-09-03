@@ -185,8 +185,8 @@ export default function DaoTao() {
                       <h2 
                         style={{ 
                           fontSize: 'clamp(1.25rem, 2.6vw, 2.4rem)', 
-                          fontWeight: 800, 
-                          fontFamily: 'var(--font-sans)', 
+                          fontWeight: 500, 
+                          fontFamily: 'var(--font-heading-medium)', 
                           color: prog.isDark ? '#ffffff' : 'var(--secondary)',
                           lineHeight: '1.2',
                           margin: 0,

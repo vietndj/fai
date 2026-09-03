@@ -226,7 +226,7 @@ export default function LienHe() {
               {/* Left branding */}
               <div className="contact-col-left">
                 <span className="section-eyebrow" style={{ color: "#f37021", fontWeight: 800 }}>FPT APTECH</span>
-                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
+                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 500, fontFamily: "var(--font-heading-medium)", color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
                   LẬP TRÌNH VIÊN QUỐC TẾ
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", lineHeight: "1.7", marginTop: "20px" }}>
@@ -305,7 +305,7 @@ export default function LienHe() {
               {/* Left branding */}
               <div className="contact-col-left">
                 <span className="section-eyebrow" style={{ color: "#d97706", fontWeight: 800 }}>FPT ARENA MULTIMEDIA</span>
-                <h2 style={{ fontSize: "clamp(1.35rem, 2.1vw, 2.4rem)", fontWeight: 800, color: "var(--secondary)", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
+                <h2 style={{ fontSize: "clamp(1.35rem, 2.1vw, 2.4rem)", fontWeight: 500, fontFamily: "var(--font-heading-medium)", color: "var(--secondary)", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
                   THIẾT KẾ MỸ THUẬT ĐA PHƯƠNG TIỆN
                 </h2>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.7", marginTop: "20px" }}>
@@ -384,7 +384,7 @@ export default function LienHe() {
               {/* Left branding */}
               <div className="contact-col-left">
                 <span className="section-eyebrow" style={{ color: "#29a9e1", fontWeight: 800 }}>FPT SKILLKING</span>
-                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
+                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 500, fontFamily: "var(--font-heading-medium)", color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
                   DIGITAL MARKETING ỨNG DỤNG AI
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", lineHeight: "1.7", marginTop: "20px" }}>
@@ -462,7 +462,7 @@ export default function LienHe() {
               {/* Left branding */}
               <div className="contact-col-left">
                 <span className="section-eyebrow" style={{ color: "#ed232a", fontWeight: 800 }}>FPT JETKING</span>
-                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 800, color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
+                <h2 style={{ fontSize: "clamp(1.4rem, 2.2vw, 2.4rem)", fontWeight: 500, fontFamily: "var(--font-heading-medium)", color: "#ffffff", lineHeight: "1.2", marginTop: "10px", whiteSpace: "nowrap", textWrap: "unset" }}>
                   CHIP DESIGN VÀ AI AGENT
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", lineHeight: "1.7", marginTop: "20px" }}>
@@ -552,7 +552,7 @@ export default function LienHe() {
               TỔNG ĐÀI HỖ TRỢ TOÀN QUỐC
             </span>
             
-            <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.8rem)", fontWeight: 800, color: "var(--secondary)", marginTop: "12px", marginBottom: "8px", fontFamily: "var(--font-sans)" }}>
+            <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.8rem)", fontWeight: 500, color: "var(--secondary)", marginTop: "12px", marginBottom: "8px", fontFamily: "var(--font-heading-medium)" }}>
               Chúng tôi luôn sẵn sàng hỗ trợ
             </h2>
             

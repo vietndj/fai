@@ -371,7 +371,7 @@ export default function VeFai() {
               <span style={{ color: '#f37021', fontWeight: 800, fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '0.16em' }}>
                 TỔ CHỨC GIÁO DỤC FPT
               </span>
-              <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 800, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '14px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 500, color: 'var(--secondary)', lineHeight: '1.2', marginTop: '14px', fontFamily: 'var(--font-heading-medium)', letterSpacing: '-0.02em' }}>
                 <ScrollTypewriter text="Sứ Mệnh & Tầm Nhìn Chiến Lược" speed={12} />
               </h2>
               <p style={{ color: '#64748b', fontSize: '1.1rem', lineHeight: '1.8', marginTop: '16px' }}>
@@ -573,7 +573,7 @@ export default function VeFai() {
               <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em' }}>
                 Hành trình phát triển
               </span>
-              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', marginTop: '10px', fontFamily: 'var(--font-sans)', letterSpacing: '-0.02em' }}>
+              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 500, color: '#ffffff', marginTop: '10px', fontFamily: 'var(--font-heading-medium)', letterSpacing: '-0.02em' }}>
                 <ScrollTypewriter text="Những dấu ấn tiên phong" />
               </h2>
               <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.02rem', lineHeight: '1.75', marginTop: '15px' }}>
@@ -824,7 +824,7 @@ export default function VeFai() {
           <div className="container">
             <div style={{ marginBottom: '50px', textAlign: 'center' }}>
               <span className="section-eyebrow" style={{ color: 'var(--primary)', fontWeight: 800 }}>MẠNG LƯỚI ĐÀO TẠO</span>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-sans)' }}><ScrollTypewriter text="Các chương trình đào tạo" /></h2>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 500, color: 'var(--secondary)', marginTop: '10px', fontFamily: 'var(--font-heading-medium)' }}><ScrollTypewriter text="Các chương trình đào tạo" /></h2>
             </div>
 
             {/* 5 Equal Program Cards (Centered Logo + Program Name ONLY) */}
@@ -932,7 +932,7 @@ export default function VeFai() {
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ maxWidth: '850px' }}>
               <span className="section-eyebrow" style={{ color: '#ffffff', opacity: 0.8, fontWeight: 800 }}>HỢP TÁC DOANH NGHIỆP</span>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', fontWeight: 800, color: '#ffffff', lineHeight: '1.3', marginTop: '15px', marginBottom: '40px', fontFamily: 'var(--font-sans)' }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', fontWeight: 500, color: '#ffffff', lineHeight: '1.3', marginTop: '15px', marginBottom: '40px', fontFamily: 'var(--font-heading-medium)' }}>
                 FPT Academy International - Đối tác cung ứng nhân lực công nghệ số và sáng tạo uy tín hàng đầu của doanh nghiệp.
               </h2>
               <Link 
@@ -987,7 +987,7 @@ export default function VeFai() {
               }}
               className="about-join-link"
             >
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 800, margin: 0, fontFamily: 'var(--font-sans)', color: '#0D2137' }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 500, margin: 0, fontFamily: 'var(--font-heading-medium)', color: '#0D2137' }}>
                 Gia nhập FAI cùng chúng tôi
               </h2>
               <span style={{ color: 'var(--primary)' }}>
