@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Clock, Calendar } from 'lucide-react';
-import { getPostBySlug, getPostById } from '@/lib/firestore';
+import { ArrowLeft, ArrowRight, Clock, Calendar, Share2, Link2, User } from 'lucide-react';
+import { getPostBySlug, getPostById, getPosts } from '@/lib/firestore';
 import Footer from '@/components/Footer';
 
 export default function PostDetailPage() {
@@ -13,20 +13,27 @@ export default function PostDetailPage() {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [related, setRelated] = useState([]);
+  
+  const [cleanHtml, setCleanHtml] = useState('');
+  const [toc, setToc] = useState([]);
+  const [activeTocId, setActiveTocId] = useState('');
 
   useEffect(() => {
     const loadPost = async () => {
       try {
         setLoading(true);
-        // Try slug first
         let fetchedPost = await getPostBySlug(slug);
-        // Fallback to id if not found
         if (!fetchedPost) {
           fetchedPost = await getPostById(slug);
         }
         
         if (fetchedPost) {
           setPost(fetchedPost);
+          
+          const allPosts = await getPosts({ group: 'doi-song' });
+          const rel = allPosts.filter(p => p.id !== fetchedPost.id && p.published).slice(0, 3);
+          setRelated(rel);
         } else {
           setError('Không tìm thấy bài viết');
         }
@@ -42,6 +49,77 @@ export default function PostDetailPage() {
       loadPost();
     }
   }, [slug]);
+
+  useEffect(() => {
+    if (!post || typeof window === 'undefined') return;
+    
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(post.contentHtml || '', 'text/html');
+    
+    // 1. Remove forms
+    const forms = doc.querySelectorAll('form, .wpcf7, iframe[src*="forms"], iframe[src*="docs.google.com/forms"]');
+    forms.forEach(f => f.remove());
+    
+    // 2. Remove contact info at the bottom
+    const allElements = Array.from(doc.body.children);
+    for (let i = allElements.length - 1; i >= 0; i--) {
+      const el = allElements[i];
+      const text = el.textContent || '';
+      const textLower = text.toLowerCase();
+      if (
+        textLower.includes('mọi thắc mắc') || 
+        textLower.includes('viện đào tạo quốc tế fpt') || 
+        textLower.includes('địa chỉ:') || 
+        textLower.includes('hotline:') || 
+        textLower.includes('điện thoại:') ||
+        textLower.includes('liên hệ:') ||
+        textLower.includes('thông tin liên hệ')
+      ) {
+        el.remove();
+      } else {
+        if (text.trim().length > 150) {
+          break;
+        }
+      }
+    }
+    
+    // 3. Extract TOC from h2, h3
+    const extractedToc = [];
+    const headings = doc.querySelectorAll('h2, h3');
+    headings.forEach((heading, index) => {
+      const id = heading.id || `heading-${index}`;
+      heading.id = id;
+      extractedToc.push({
+        id,
+        text: heading.textContent || '',
+        level: heading.tagName.toLowerCase()
+      });
+    });
+    
+    setCleanHtml(doc.body.innerHTML);
+    setToc(extractedToc);
+  }, [post]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!toc.length) return;
+      let currentActiveId = '';
+      for (const item of toc) {
+        const el = document.getElementById(item.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight / 2) {
+            currentActiveId = item.id;
+          }
+        }
+      }
+      setActiveTocId(currentActiveId || toc[0]?.id);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [toc]);
 
   if (loading) {
     return (
@@ -63,74 +141,187 @@ export default function PostDetailPage() {
   }
 
   return (
-    <div style={{ backgroundColor: '#f8fafc', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <main style={{ flex: 1, padding: '40px 20px', maxWidth: '850px', margin: '0 auto', width: '100%' }}>
-        <Link href="/doi-song" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#64748b', textDecoration: 'none', marginBottom: '32px', fontWeight: 500 }}>
-          <ArrowLeft size={18} />
-          Quay lại
-        </Link>
-        
-        <div style={{ backgroundColor: 'white', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.08)' }}>
-          {post.image && (
-            <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9' }}>
-              <Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} priority />
+    <div className="article-page-container">
+      
+      <main className="article-main-wrapper">
+        <section className="article-header-section">
+          <div className="container">
+            <div className="article-breadcrumb">
+              <Link href="/">Trang chủ</Link>
+              <span className="bc-divider">/</span>
+              <Link href="/doi-song">Đời sống FAI</Link>
+              <span className="bc-divider">/</span>
+              <span className="bc-active">Chi tiết bài viết</span>
             </div>
-          )}
-          
-          <div style={{ padding: '40px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px', flexWrap: 'wrap' }}>
-              {post.date && (
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem', color: '#64748b', fontWeight: 500 }}>
-                  <Calendar size={16} />
-                  {post.date}
-                </span>
-              )}
-              {post.readTime && (
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem', color: '#64748b', fontWeight: 500 }}>
-                  <Clock size={16} />
-                  {post.readTime}
-                </span>
-              )}
-            </div>
-            
-            <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 700, color: '#0f172a', lineHeight: '1.3', marginBottom: '32px', fontFamily: 'var(--font-heading-medium)' }}>
-              {post.title}
-            </h1>
-            
-            <div 
-              className="article-body-html"
-              style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#334155' }}
-              dangerouslySetInnerHTML={{ __html: post.contentHtml || `<p>${post.excerpt}</p>` }}
-            />
-            
-            {post.sourceUrl && (
-              <div style={{ marginTop: '40px', paddingTop: '32px', borderTop: '1px solid #e2e8f0' }}>
-                <a 
-                  href={post.sourceUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  style={{ 
-                    display: 'inline-flex', 
-                    alignItems: 'center', 
-                    gap: '8px', 
-                    background: 'var(--primary, #0f172a)', 
-                    color: '#ffffff', 
-                    padding: '12px 24px', 
-                    borderRadius: '30px', 
-                    fontWeight: 600, 
-                    fontSize: '0.95rem',
-                    textDecoration: 'none',
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  Xem bài viết gốc trên trang báo
-                  <ArrowRight size={16} />
-                </a>
+
+            <span className="article-category-tag">{post.categoryId || 'Sự kiện'}</span>
+            <h1 className="article-main-title">{post.title}</h1>
+
+            <div className="article-meta-info">
+              <div className="meta-item">
+                <User size={16} />
+                <span>{post.author || 'FAI Admin'}</span>
               </div>
-            )}
+              <div className="meta-item">
+                <Calendar size={16} />
+                <span>{post.date || 'Đang cập nhật'}</span>
+              </div>
+              {post.readTime && (
+                <div className="meta-item">
+                  <Clock size={16} />
+                  <span>{post.readTime}</span>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </section>
+
+        {post.image && (
+          <section className="article-hero-banner-section">
+            <div className="container">
+              <div className="article-main-banner-wrapper">
+                <Image 
+                  src={post.image} 
+                  alt={post.title} 
+                  width={1200} 
+                  height={600} 
+                  priority
+                  style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section className="article-body-section">
+          <div className="container">
+            <div className="article-editorial-grid">
+              
+              <aside className="article-editorial-sidebar">
+                <div className="sticky-sidebar-content">
+                  
+                  <Link href="/doi-song" className="sidebar-back-btn">
+                    <ArrowLeft size={16} />
+                    <span>Trở lại đời sống</span>
+                  </Link>
+
+                  <div className="sidebar-divider" />
+
+                  <div className="sidebar-share-box">
+                    <span className="share-box-label">Chia sẻ bài viết</span>
+                    <div className="share-actions-row">
+                      <button className="share-icon-btn" aria-label="Share on Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                      </button>
+                      <button className="share-icon-btn" aria-label="Share on LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+                      </button>
+                      <button className="share-icon-btn" aria-label="Copy Link">
+                        <Link2 size={18} />
+                      </button>
+                    </div>
+                  </div>
+
+                  {toc.length > 0 && (
+                    <>
+                      <div className="sidebar-divider" />
+                      <div className="sidebar-toc">
+                        <span className="toc-title">Nội dung chính</span>
+                        <ul className="toc-list">
+                          {toc.map(item => (
+                            <li 
+                              key={item.id} 
+                              className={activeTocId === item.id ? 'active' : ''}
+                              style={{ marginLeft: item.level === 'h3' ? '15px' : '0' }}
+                            >
+                              <a 
+                                href={`#${item.id}`}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                              >
+                                {item.text}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
+
+                </div>
+              </aside>
+
+              <article className="article-editorial-body">
+                <div 
+                  className="rich-editorial-content"
+                  dangerouslySetInnerHTML={{ __html: cleanHtml || post.contentHtml || `<p>${post.excerpt}</p>` }} 
+                />
+                
+                {post.sourceUrl && (
+                  <div style={{ marginTop: '40px', paddingTop: '32px', borderTop: '1px solid #e2e8f0' }}>
+                    <a 
+                      href={post.sourceUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      style={{ 
+                        display: 'inline-flex', 
+                        alignItems: 'center', 
+                        gap: '8px', 
+                        background: 'var(--primary, #0f172a)', 
+                        color: '#ffffff', 
+                        padding: '12px 24px', 
+                        borderRadius: '30px', 
+                        fontWeight: 600, 
+                        fontSize: '0.95rem',
+                        textDecoration: 'none',
+                        transition: 'all 0.2s ease'
+                      }}
+                    >
+                      Xem bài viết gốc trên trang báo
+                      <ArrowRight size={16} />
+                    </a>
+                  </div>
+                )}
+              </article>
+
+            </div>
+          </div>
+        </section>
+
+        {related.length > 0 && (
+          <section className="article-related-section">
+            <div className="container">
+              <span className="related-eyebrow">XEM THÊM BÀI VIẾT KHÁC</span>
+              <h2 className="related-section-title">Có thể bạn quan tâm</h2>
+              
+              <div className="related-news-grid">
+                {related.map((item) => (
+                  <Link key={item.id} href={`/doi-song/${item.slug || item.id}`} className="related-news-card-wrapper">
+                    <div className="related-card-image">
+                      {item.image ? (
+                        <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} />
+                      ) : (
+                        <div style={{ width: '100%', height: '100%', backgroundColor: '#e2e8f0' }} />
+                      )}
+                    </div>
+                    <div className="related-card-body">
+                      <span className="related-card-date">{item.date || 'Đang cập nhật'}</span>
+                      <h4 className="related-card-title">{item.title}</h4>
+                      <span className="related-card-link">
+                        Đọc tiếp
+                        <ArrowRight size={14} />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
       </main>
+
       <Footer />
     </div>
   );

@@ -165,3 +165,52 @@ export async function generateArticleOptions(photoBuffer, mimeType, userNotes = 
 }
 
 export { generateFallbackArticleOptions };
+
+const REWRITE_SCHEMA = {
+  type: Type.OBJECT,
+  properties: {
+    title: { type: Type.STRING },
+    excerpt: { type: Type.STRING },
+    contentHtml: { type: Type.STRING }
+  },
+  required: ["title", "excerpt", "contentHtml"]
+};
+
+export async function rewriteScrapedArticle(rawContent, originalTitle, options = {}) {
+  const apiKey = (options.apiKey || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '').trim();
+  if (!apiKey) {
+    return null;
+  }
+  try {
+    const ai = new GoogleGenAI({ apiKey });
+    const SYSTEM = `Bạn là Chuyên gia UI/UX và Biên tập viên của FPT. 
+Nhiệm vụ: Viết lại toàn bộ bài viết dựa trên dữ liệu thô được scrape (loại bỏ hoàn toàn các rác như 'Trang chủ »', 'Mục Lục', v.v.).
+KHÔNG giữ nguyên gốc bài viết, hãy tối ưu lại về mặt ngữ nghĩa và cấu trúc UI/UX.
+Sử dụng các class CSS sau để trình bày nội dung thành các khối block rõ ràng, đẹp mắt:
+1. <div class="block-timeline"><div class="timeline-item"><h4>Vòng Sơ loại</h4><p>Nội dung...</p></div>...</div> (Sử dụng cho các giai đoạn, vòng thi, lịch trình).
+2. <div class="block-highlight-card"><div class="highlight-title">GIẢI THƯỞNG / ĐIỂM NHẤN</div><div class="highlight-content">Tổng giải 190 triệu đồng...</div></div> (Sử dụng cho các thông số quan trọng, giải thưởng, quyền lợi).
+3. <div class="block-key-takeaway"><h3>Chủ đề</h3><p>Chuyện làng - Chuyện phố...</p></div> (Sử dụng cho thông điệp cốt lõi).
+4. **QUAN TRỌNG NHẤT**: NẾU CÓ LINK YOUTUBE (vd: https://youtu.be/...), TUYỆT ĐỐI KHÔNG để text thô. BẮT BUỘC phải chuyển thành khối nhúng:
+<div class="block-video-wrapper"><iframe src="https://www.youtube.com/embed/MÃ_VIDEO" frameborder="0" allowfullscreen></iframe></div>
+5. Cắt bỏ hoàn toàn các rác liên quan đến bài viết liên quan (như 'Đọc thêm', 'CTV', 'Workshop cộng đồng...').
+6. Sử dụng <h3>, <p>, <ul>, <li> chuẩn mực. Tuyệt đối KHÔNG dùng markdown trong chuỗi HTML. Trả về JSON hợp lệ.`;
+    
+    const response = await ai.models.generateContent({
+      model: DEFAULT_MODEL,
+      contents: [{ text: `Viết lại bài viết này, biến đổi các vòng thi thành timeline, giải thưởng thành highlight:\n\nTiêu đề gốc: ${originalTitle}\nNội dung thô:\n${rawContent.slice(0, 5000)}` }],
+      config: {
+        systemInstruction: SYSTEM,
+        responseMimeType: 'application/json',
+        responseSchema: REWRITE_SCHEMA,
+        temperature: 0.7,
+      },
+    });
+    
+    const rawText = response.text;
+    const parsed = JSON.parse(rawText.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim());
+    return parsed;
+  } catch (err) {
+    console.error("Gemini Rewrite error:", err);
+    return null;
+  }
+}

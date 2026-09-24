@@ -413,56 +413,41 @@ export async function POST(request) {
       
       if (urls && urls.length > 0) {
         const url = urls[0];
-        await safeSendMessage(chatId, `⏳ Đang trích xuất nội dung từ trang web: ${url}...`);
+        await safeSendMessage(chatId, `⏳ Đã nhận link: ${url}\n🤖 Đang kích hoạt Trí tuệ Hệ thống (Antigravity) trên Mac để bóc tách, tái cấu trúc UI/UX và đăng bài tự động...`);
         
-        try {
-          const { scrapeArticle } = await import('@/lib/scraper');
-          const articleData = await scrapeArticle(url);
+try {
+          const { exec } = require('child_process');
+          const fs = require('fs');
+          const path = require('path');
           
-          await setTelegramSession(chatId, {
-            step: 'AWAITING_OPTION_SELECTION',
-            generatedOptions: {
-              option1: {
-                title: articleData.title,
-                excerpt: articleData.excerpt,
-                readTime: articleData.readTime,
-                contentHtml: articleData.contentHtml,
-              },
-              option2: {
-                title: articleData.title + ' (Bản gốc)',
-                excerpt: articleData.excerpt,
-                readTime: articleData.readTime,
-                contentHtml: articleData.contentHtml,
-              },
-              isFallback: true
-            },
-            photoUrl: articleData.image, // pass URL so we can process it later
-            selectedCategoryId: 'sharing',
-            selectedCategoryTitle: 'Chia sẻ'
+          const PARENT_CID = "0387482b-fd18-4d6b-9623-866b80e58244";
+          
+          const prompt = `/boost
+Nhận lệnh từ Telegram Webhook:
+Người dùng (Chat ID: ${chatId}) yêu cầu đăng bài từ link: ${url}
+
+Nhiệm vụ rẽ nhánh chuyên sâu (Tự Động Hóa 100%):
+1. Đọc nội dung bài viết từ link trên (dùng curl hoặc script js, có thể tái sử dụng src/lib/scraper.js để lấy HTML thô).
+2. Tối ưu lại bài viết bằng trí thông minh của bạn. Hãy bọc YouTube vào div.block-video-wrapper, loại bỏ rác, tạo timeline/highlight theo đúng chuẩn UI/UX đã thống nhất.
+3. Giữ nguyên 100% link ảnh gốc (hotlink), TUYỆT ĐỐI KHÔNG tải ảnh về hay up lên R2. Chạy script lưu bài viết vào cơ sở dữ liệu Firebase (collection: 'posts', group: 'doi-song'). Lấy slug của bài vừa tạo.
+4. Bắn tin nhắn phản hồi về lại Telegram bằng cách gọi lệnh curl hoặc script NodeJS tới https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage:
+   Gửi text: "✅ Đã xử lý xong!\n🌐 Xem bài viết tại: https://fai.fpt.edu.vn/doi-song/<slug>"
+   (TUYỆT ĐỐI dùng domain https://fai.fpt.edu.vn, KHÔNG dùng localhost).
+5. Hoàn tất thì dừng nhánh. Không cần hỏi lại.`;
+
+          const promptFile = path.join(process.cwd(), `prompt_${Date.now()}.txt`);
+          fs.writeFileSync(promptFile, prompt, 'utf-8');
+
+          const reNhanhScript = '/Users/vietmac/Documents/CODE/Quản gia/re_nhanh.py';
+          const cmd = `python3 "${reNhanhScript}" --title="[Bot] Đăng bài ${Date.now()}" --parent-cid="${PARENT_CID}" --model="pro" --prompt-file="${promptFile}"`;
+          
+          exec(cmd, (error, stdout, stderr) => {
+            if (fs.existsSync(promptFile)) fs.unlinkSync(promptFile); 
           });
 
-          await safeSendMessage(chatId, 
-            `🤖 <b>Đã bóc tách thành công!</b>\n\n` +
-            `📌 <b>Tiêu đề:</b> ${articleData.title}\n` +
-            `📖 <b>Tóm tắt:</b> <i>${articleData.excerpt}</i>\n\n` +
-            `👇 <b>Bấm chọn phương án để xuất bản:</b>`,
-            {
-              parse_mode: 'HTML',
-              reply_markup: {
-                inline_keyboard: [
-                  [
-                    { text: '1️⃣ Xuất bản ngay', callback_data: 'opt_1' },
-                  ],
-                  [
-                    { text: '❌ Hủy bỏ', callback_data: 'cancel' },
-                  ],
-                ],
-              },
-            }
-          );
         } catch (err) {
-          console.error('[Webhook] Error scraping URL:', err);
-          await safeSendMessage(chatId, `❌ Lỗi khi bóc tách URL: ${err.message}`);
+          console.error('[Webhook] Error triggering Antigravity:', err);
+          await safeSendMessage(chatId, `❌ Lỗi kết nối Antigravity: \${err.message}`);
         }
         return NextResponse.json({ ok: true });
       }
