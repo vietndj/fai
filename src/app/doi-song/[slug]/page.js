@@ -259,31 +259,6 @@ export default function PostDetailPage() {
                   dangerouslySetInnerHTML={{ __html: cleanHtml || post.contentHtml || `<p>${post.excerpt}</p>` }} 
                 />
                 
-                {post.sourceUrl && (
-                  <div style={{ marginTop: '40px', paddingTop: '32px', borderTop: '1px solid #e2e8f0' }}>
-                    <a 
-                      href={post.sourceUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      style={{ 
-                        display: 'inline-flex', 
-                        alignItems: 'center', 
-                        gap: '8px', 
-                        background: 'var(--primary, #0f172a)', 
-                        color: '#ffffff', 
-                        padding: '12px 24px', 
-                        borderRadius: '30px', 
-                        fontWeight: 600, 
-                        fontSize: '0.95rem',
-                        textDecoration: 'none',
-                        transition: 'all 0.2s ease'
-                      }}
-                    >
-                      Xem bài viết gốc trên trang báo
-                      <ArrowRight size={16} />
-                    </a>
-                  </div>
-                )}
               </article>
 
             </div>
