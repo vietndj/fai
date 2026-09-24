@@ -8,8 +8,9 @@ export const dynamic = 'force-dynamic';
 const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
 
 export async function POST(request) {
-  // 1. Parse multipart FormData with try/catch to handle malformed or empty payloads gracefully
-  let formData;
+  try {
+    // 1. Parse multipart FormData with try/catch to handle malformed or empty payloads gracefully
+    let formData;
   try {
     formData = await request.formData();
   } catch {
@@ -122,6 +123,10 @@ export async function POST(request) {
       },
       { status: 500 }
     );
+  }
+  } catch (globalError) {
+    console.error('Lỗi không mong đợi trong /api/upload:', globalError);
+    return NextResponse.json({ success: false, error: 'Lỗi server: ' + globalError.message }, { status: 500 });
   }
 }
 
