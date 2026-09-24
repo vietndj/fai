@@ -333,10 +333,15 @@ export async function deleteImage(path) {
 export async function checkAdminEmail(email) {
   if (!email) return false;
   if (email.toLowerCase() === 'vietndj@gmail.com') return true;
-  const colRef = collection(db, 'admin_emails');
-  const q = query(colRef, where('email', '==', email.toLowerCase()), limit(1));
-  const snap = await getDocs(q);
-  return !snap.empty;
+  try {
+    const colRef = collection(db, 'admin_emails');
+    const q = query(colRef, where('email', '==', email.toLowerCase()), limit(1));
+    const snap = await getDocs(q);
+    return !snap.empty;
+  } catch (error) {
+    console.error("Error checking admin email:", error);
+    return false; // Fail securely
+  }
 }
 
 export async function getAdminEmails() {

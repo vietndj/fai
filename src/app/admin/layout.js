@@ -15,21 +15,26 @@ export default function AdminLayout({ children }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      if (currentUser) {
-        // Verify email in Firestore
-        const isAllowed = await checkAdminEmail(currentUser.email);
-        if (isAllowed) {
-          setUser(currentUser);
-        } else {
-          alert("Email của bạn không có quyền truy cập trang quản trị.");
-          await signOut(auth);
-          setUser(null);
+      try {
+        if (currentUser) {
+          // Verify email in Firestore
+          const isAllowed = await checkAdminEmail(currentUser.email);
+          if (isAllowed) {
+            setUser(currentUser);
+          } else {
+            alert("Email của bạn không có quyền truy cập trang quản trị.");
+            await signOut(auth);
+            setUser(null);
+            router.push('/admin/login');
+          }
+        } else if (!pathname.startsWith('/admin/login')) {
           router.push('/admin/login');
         }
-      } else if (!pathname.startsWith('/admin/login')) {
-        router.push('/admin/login');
+      } catch (err) {
+        console.error("Auth layout error", err);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     });
     return () => unsubscribe();
   }, [router, pathname]);
