@@ -11,6 +11,7 @@ import Underline from '@tiptap/extension-underline';
 import Link from '@tiptap/extension-link';
 import Placeholder from '@tiptap/extension-placeholder';
 import Image from '@tiptap/extension-image';
+import Youtube from '@tiptap/extension-youtube';
 import {
   Bold,
   Italic,
@@ -36,6 +37,7 @@ import {
   Loader2,
   X,
   Check,
+  Video,
 } from 'lucide-react';
 import '@/app/doi-song/article.css';
 
@@ -131,6 +133,11 @@ export default function TipTapEditor({ value, content, onChange, placeholder }) 
         autolink: true,
         defaultProtocol: 'https',
       }),
+      Youtube.configure({
+        HTMLAttributes: {
+          class: 'block-video-wrapper',
+        },
+      }),
       Placeholder.configure({
         placeholder: placeholder || 'Nhập nội dung bài viết...',
       }),
@@ -198,6 +205,15 @@ export default function TipTapEditor({ value, content, onChange, placeholder }) 
       setIsUploading(false);
     }
   };
+  const insertYoutube = () => {
+    const url = prompt('Nhập đường dẫn YouTube:');
+    if (url) {
+      editor.commands.setYoutubeVideo({
+        src: url,
+      });
+    }
+  };
+
 
   const insertImage = () => {
     if (!editor || !imageUrl.trim()) return;
@@ -439,6 +455,14 @@ export default function TipTapEditor({ value, content, onChange, placeholder }) 
             title="Chèn ảnh minh họa kèm chú thích"
           >
             <ImageIcon size={15} />
+          </button>
+          <button
+            type="button"
+            className="tiptap-toolbar-btn"
+            onClick={insertYoutube}
+            title="Chèn video YouTube"
+          >
+            <Video size={15} />
           </button>
         </div>
       </div>
