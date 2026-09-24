@@ -431,8 +431,8 @@ Nhiệm vụ rẽ nhánh chuyên sâu (Tự Động Hóa 100%):
 2. Tối ưu lại bài viết bằng trí thông minh của bạn. Hãy bọc YouTube vào div.block-video-wrapper, loại bỏ rác, tạo timeline/highlight theo đúng chuẩn UI/UX đã thống nhất.
 3. Giữ nguyên 100% link ảnh gốc (hotlink), TUYỆT ĐỐI KHÔNG tải ảnh về hay up lên R2. Chạy script lưu bài viết vào cơ sở dữ liệu Firebase (collection: 'posts', group: 'doi-song'). Lấy slug của bài vừa tạo.
 4. Bắn tin nhắn phản hồi về lại Telegram bằng cách gọi lệnh curl hoặc script NodeJS tới https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage:
-   Gửi text: "✅ Đã xử lý xong!\n🌐 Xem bài viết tại: https://fai.fpt.edu.vn/doi-song/<slug>"
-   (TUYỆT ĐỐI dùng domain https://fai.fpt.edu.vn, KHÔNG dùng localhost).
+   Gửi text: "✅ Đã xử lý xong!\n🌐 Xem bài viết tại: https://fai-gamma.vercel.app/doi-song/<slug>"
+   (TUYỆT ĐỐI dùng domain https://fai-gamma.vercel.app, KHÔNG dùng localhost).
 5. Hoàn tất thì dừng nhánh. Không cần hỏi lại.`;
 
           const promptFile = path.join(process.cwd(), `prompt_${Date.now()}.txt`);
