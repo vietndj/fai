@@ -292,7 +292,14 @@ export default function NewPostPage() {
               type="text"
               placeholder="Hoặc dán URL ảnh..."
               value={formData.image}
-              onChange={(e) => setFormData((prev) => ({ ...prev, image: e.target.value }))}
+              onChange={(e) => {
+                let val = e.target.value;
+                const driveMatch = val.match(/\\/file\\/d\\/([a-zA-Z0-9_-]+)/);
+                if (driveMatch && driveMatch[1]) {
+                  val = \`https://drive.google.com/uc?export=view&id=\${driveMatch[1]}\`;
+                }
+                setFormData((prev) => ({ ...prev, image: val }));
+              }}
               className="admin-input"
               style={{ marginTop: '8px' }}
             />
