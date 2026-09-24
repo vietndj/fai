@@ -428,7 +428,7 @@ Người dùng (Chat ID: ${chatId}) yêu cầu đăng bài từ link: ${url}
 
 Nhiệm vụ rẽ nhánh chuyên sâu (Tự Động Hóa 100%):
 1. Đọc nội dung bài viết từ link trên (dùng curl hoặc script js, có thể tái sử dụng src/lib/scraper.js để lấy HTML thô).
-2. Tối ưu lại bài viết bằng trí thông minh của bạn. Hãy bọc YouTube vào div.block-video-wrapper, loại bỏ rác, tạo timeline/highlight theo đúng chuẩn UI/UX đã thống nhất.
+2. Tối ưu lại bài viết bằng trí thông minh của bạn: Bọc YouTube vào div.block-video-wrapper, loại bỏ rác. ĐẶC BIỆT: Nhận diện các danh sách tuần tự (VD: Lớp 1, Lớp 2, Lớp 3 hoặc Bước 1, Bước 2) và bọc ngay vào cấu trúc `<div class="block-timeline"><div class="timeline-item"><p>Nội dung lớp/bước...</p></div></div>`. Dùng div.block-highlight-card cho các kết luận.
 3. Giữ nguyên 100% link ảnh gốc (hotlink), TUYỆT ĐỐI KHÔNG tải ảnh về hay up lên R2. Chạy script lưu bài viết vào cơ sở dữ liệu Firebase (collection: 'posts', group: 'doi-song'). Lấy slug của bài vừa tạo.
 4. Bắn tin nhắn phản hồi về lại Telegram bằng cách gọi lệnh curl hoặc script NodeJS tới https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage:
    Gửi text: "✅ Đã xử lý xong!\n🌐 Xem bài viết tại: https://fai-gamma.vercel.app/doi-song/<slug>"

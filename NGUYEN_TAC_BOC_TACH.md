@@ -17,11 +17,11 @@ Tài liệu này lưu trữ toàn bộ nguyên tắc hoạt động của lõi S
 
 Bảng dưới đây liệt kê các khối UI/UX đã được tối ưu và cách AI/Scraper nên ứng dụng chúng vào bài viết:
 
-| Khối UI/UX (Block) | Class CSS | Nhận diện & Ứng dụng (Khi nào dùng) | Xử lý Kỹ thuật |
-| :--- | :--- | :--- | :--- |
-| **Đoạn Sapo (Lead Paragraph)** | `p.lead` | Đoạn văn bản đầu tiên của bài viết, mang tính chất tóm tắt hoặc mở bài. | Tự động gán class `.lead` cho thẻ `<p>` đầu tiên dài hơn 50 ký tự. CSS hạ size `1.15rem`, màu xám `#334155`, font weight 500, margin-bottom 2rem. |
-| **Khối Hình ảnh Editorial** | `figure.image-editorial` | Mọi hình ảnh đi kèm trong bài viết. | Đổi thẻ `<p><img></p>` thành `<figure class="image-editorial"><img></figure>`. Ảnh tự động thêm class Tailwind: `rounded-xl shadow-md my-6 w-full object-cover`. |
-| **Khối Video YouTube** | `div.block-video-wrapper` | Khi nội dung nhắc đến video hoặc link YouTube dạng (youtu.be, youtube.com). | Bao bọc iframe YouTube bằng `div.block-video-wrapper` để responsive tỷ lệ 16:9 hoàn hảo trên cả Mobile và Desktop. |
-| **Khối Thẻ Điểm nhấn** | `div.block-highlight-card` | Những câu trích dẫn quan trọng, thông báo đặc biệt hoặc Key Takeaway cần nổi bật. | Bọc nội dung trong thẻ `div` với viền cam nhạt, nền gradient gradient (`rgba(243, 112, 33, 0.05)`). |
-| **Khối Dòng thời gian** | `div.block-timeline` | Liệt kê các mốc sự kiện, lịch trình học tập hoặc lộ trình các bước. | Các phần tử con dùng `div.timeline-item`. Khối này có đường kẻ dọc bên trái và các mốc chấm điểm nhấn. |
-| **Nhịp đọc (Reading Rhythm)**| `.rich-editorial-content p` | Áp dụng cho toàn bộ nội dung chữ (Paragraph) trong bài viết. | Fix cứng `margin-bottom: 20px` (thay vì 35px như cũ) để tạo cảm giác ngắt dòng chặt chẽ, không bị lỏng lẻo. |
+| STT | Khối UI/UX (Block) | Class CSS | Nhận diện & Ứng dụng (Khi nào dùng) | Xử lý Kỹ thuật |
+| :--- | :--- | :--- | :--- | :--- |
+| **#1** | **Đoạn Sapo (Lead Paragraph)** | `p.lead` | Đoạn văn bản đầu tiên của bài viết, mang tính chất tóm tắt hoặc mở bài. | Tự động gán class `.lead` cho thẻ `<p>` đầu tiên dài hơn 50 ký tự. |
+| **#2** | **Khối Hình ảnh Editorial** | `figure.image-editorial` | Mọi hình ảnh đi kèm trong bài viết. | Đổi `<p><img></p>` thành `<figure class="image-editorial"><img></figure>`. Thêm CSS góc bo tròn, shadow. |
+| **#3** | **Khối Video YouTube** | `div.block-video-wrapper` | Khi nội dung nhắc đến video hoặc link YouTube. | Bọc iframe bằng `div.block-video-wrapper` để responsive 16:9 hoàn hảo. |
+| **#4** | **Khối Thẻ Điểm nhấn** | `div.block-highlight-card` | Những câu trích dẫn quan trọng, key takeaway hoặc kết luận. | Bọc thẻ `div` với viền cam nhạt, nền gradient. |
+| **#5** | **Khối Dòng thời gian (Timeline)** | `div.block-timeline` | Liệt kê các danh sách phân cấp (VD: Lớp 1, Lớp 2, Lớp 3), các mốc sự kiện, lộ trình các bước (Bước 1, Bước 2). | Cấu trúc: Bọc ngoài bằng `div.block-timeline`. Bên trong mỗi mục dùng `<div class="timeline-item"><p>Nội dung</p></div>`. Khối này sẽ tự vẽ đường kẻ dọc và chấm tròn. |
+| **#6** | **Nhịp đọc (Reading Rhythm)**| `.rich-editorial-content p` | Áp dụng cho toàn bộ nội dung chữ trong bài. | Fix cứng `margin-bottom: 20px` để tạo nhịp đọc chặt chẽ. |
