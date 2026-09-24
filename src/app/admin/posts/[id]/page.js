@@ -10,7 +10,8 @@ import { Eye } from 'lucide-react';
 
 function generateSlug(text) {
   if (!text) return '';
-  return text
+  const truncatedText = text.trim().split(/\\s+/).slice(0, 12).join(' ');
+  return truncatedText
     .toString()
     .toLowerCase()
     .replace(/á|à|ả|ạ|ã|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/gi, 'a')
