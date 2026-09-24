@@ -5,7 +5,7 @@ Tài liệu này lưu trữ toàn bộ nguyên tắc hoạt động của lõi S
 ## 1. Nguyên tắc Xử lý Dữ liệu gốc (Scraping Logic)
 
 *   **Chống rác Header (Header Clean-up):**
-    Hệ thống tự động loại bỏ các khối `.entry-header` và các thẻ `header` chứa tiêu đề lặp lại hoặc thẻ meta không cần thiết từ trang gốc.
+    Hệ thống tự động loại bỏ các khối `.entry-header`, `.author-box` (thông tin tác giả CTV), các thẻ chia sẻ mạng xã hội, và các thẻ điều hướng bài viết liên quan (`#nav-below`, `.navigation-post`) để nội dung không bị dính link rác từ trang gốc.
 *   **Bảo toàn Ảnh Gốc (Hotlink Protocol):**
     Tất cả hình ảnh (bao gồm ảnh bìa và ảnh nội dung) đều lấy trực tiếp từ link gốc của website bị cào (ví dụ: `https://skillking.fpt.edu.vn/...`). TUYỆT ĐỐI KHÔNG tải về để tiết kiệm dung lượng R2 và tăng tốc độ xử lý lên 10x.
 *   **Phá vỡ Lazy-load (Anti Lazy-load):**
