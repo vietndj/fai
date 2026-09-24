@@ -12,7 +12,7 @@ import {
   limit,
   serverTimestamp,
 } from 'firebase/firestore';
-import { db } from './firebase';
+import { db } from './firebase.js';
 
 // ==========================================
 // CATEGORIES
@@ -326,3 +326,32 @@ export async function deleteImage(path) {
   }
 }
 
+// ==========================================
+// ADMIN EMAILS
+// ==========================================
+
+export async function checkAdminEmail(email) {
+  if (!email) return false;
+  if (email.toLowerCase() === 'vietndj@gmail.com') return true;
+  const colRef = collection(db, 'admin_emails');
+  const q = query(colRef, where('email', '==', email.toLowerCase()), limit(1));
+  const snap = await getDocs(q);
+  return !snap.empty;
+}
+
+export async function getAdminEmails() {
+  const colRef = collection(db, 'admin_emails');
+  const snap = await getDocs(colRef);
+  return snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+}
+
+export async function addAdminEmail(email) {
+  const colRef = collection(db, 'admin_emails');
+  const docRef = await addDoc(colRef, { email, createdAt: serverTimestamp() });
+  return { id: docRef.id, email };
+}
+
+export async function deleteAdminEmail(id) {
+  const docRef = doc(db, 'admin_emails', id);
+  await deleteDoc(docRef);
+}

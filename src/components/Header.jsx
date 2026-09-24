@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Zap, Palette, Megaphone, ChevronDown, Cpu } from 'lucide-react';
+import { Search, ChevronDown } from 'lucide-react';
+import { programsByBrand } from '@/data/programs';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,10 +46,10 @@ export default function Header() {
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid">
                         <Link href="/ve-fai#gioi-thieu" className="megamenu-link">Giới thiệu chung</Link>
-                        <Link href="/ve-fai#giang-vien" className="megamenu-link">Đội ngũ giảng viên</Link>
-                        <Link href="/ve-fai#thanh-tuu" className="megamenu-link">Thành tựu & Con số</Link>
-                        <Link href="/ve-fai#campus" className="megamenu-link">Hệ thống Campus toàn quốc</Link>
-                        <Link href="/ve-fai#doanh-nghiep" className="megamenu-link">Đối tác doanh nghiệp</Link>
+                        <Link href="/ve-fai#su-menh" className="megamenu-link">Sứ mệnh và tầm nhìn</Link>
+                        <Link href="/ve-fai#hanh-trinh" className="megamenu-link">Hành trình phát triển</Link>
+                        <Link href="/ve-fai#chuong-trinh" className="megamenu-link">Chương trình đào tạo</Link>
+                        <Link href="/ve-fai#doanh-nghiep" className="megamenu-link">Hợp tác doanh nghiệp</Link>
                       </div>
                     </div>
                   </div>
@@ -65,37 +66,18 @@ export default function Header() {
                     </div>
                     <div className="megamenu-links-col">
                       <div className="megamenu-links-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
-                        <div className="program-cat brand-aptech">
-                          <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
-                            <img src="/logo_aptech.png" alt="FPT Aptech" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
+                        {Object.values(programsByBrand).map((brand) => (
+                          <div key={brand.brandId} className={`program-cat brand-${brand.brandId}`}>
+                            <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
+                              <img src={brand.logo} alt={brand.brandName} style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
+                            </div>
+                            {brand.programs.map((prog) => (
+                              <Link key={prog.id} href={prog.route} className="megamenu-link">
+                                {prog.name}
+                              </Link>
+                            ))}
                           </div>
-                          <Link href="/dao-tao/aptech/accp" className="megamenu-link">Lập trình Fullstack 2 năm</Link>
-                          <Link href="/dao-tao/aptech/1-nam" className="megamenu-link">Lập trình Back end 1 năm</Link>
-                          <Link href="/dao-tao/aptech/6-thang" className="megamenu-link">Lập trình Front end 6 tháng</Link>
-                          <Link href="/dao-tao/aptech/100-200h" className="megamenu-link">Bộ khóa học Lập trình ngắn hạn (100 - 200 giờ)</Link>
-                        </div>
-                        <div className="program-cat brand-arena">
-                          <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
-                            <img src="/logo_arena.png" alt="FPT Arena" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
-                          </div>
-                          <Link href="/dao-tao/arena/amsp" className="megamenu-link">Arena Multimedia Specialist Program (2 năm)</Link>
-                          <Link href="/dao-tao/arena/6-18-thang" className="megamenu-link">Thiết kế 2D, 3D, Game và App (6–18 tháng)</Link>
-                          <Link href="/dao-tao/arena/100h" className="megamenu-link">Bộ khóa học Multimedia ngắn hạn (100 giờ)</Link>
-                        </div>
-                        <div className="program-cat brand-skillking">
-                          <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
-                            <img src="/logo_skillking.png" alt="FPT Skillking" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
-                          </div>
-                          <Link href="/dao-tao/skillking/18-thang" className="megamenu-link">Fullstack Digital Marketing With AI (18 tháng)</Link>
-                          <Link href="/dao-tao/skillking/100h" className="megamenu-link">Bộ khóa học Digital Marketing ngắn hạn (100 giờ)</Link>
-                        </div>
-                        <div className="program-cat brand-jetking">
-                          <div style={{ marginBottom: '16px', height: '46px', display: 'flex', alignItems: 'center' }}>
-                            <img src="/logo_jetking.png" alt="FPT Jetking" style={{ objectFit: 'contain', objectPosition: 'left', width: 'auto', height: '38px', maxWidth: '160px' }} />
-                          </div>
-                          <Link href="/dao-tao/chip-design" className="megamenu-link">Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)</Link>
-                          <Link href="/dao-tao/ai-agent" className="megamenu-link">Lập trình AI Agent (6 tháng - 2 năm)</Link>
-                        </div>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -116,7 +98,6 @@ export default function Header() {
                         <Link href="/tuyen-sinh#hoc-bong" className="megamenu-link">Học bổng & Ưu đãi nhập học</Link>
                         <Link href="/tuyen-sinh#hoc-phi" className="megamenu-link">Chính sách học phí</Link>
                         <Link href="/tuyen-sinh#dang-ky" className="megamenu-link">Đăng ký tuyển sinh trực tuyến</Link>
-                        <Link href="/tuyen-sinh#faq" className="megamenu-link">Câu hỏi thường gặp (FAQ)</Link>
                       </div>
                     </div>
                   </div>
@@ -156,7 +137,7 @@ export default function Header() {
             <button className="search-btn" aria-label="Search" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Search size={20} />
             </button>
-            <Link href="/tuyen-sinh" className="nav-cta-btn" onClick={closeMenu}>
+            <Link href="/tuyen-sinh#dang-ky" className="nav-cta-btn" onClick={closeMenu}>
               <span className="nav-cta-pulse"></span>
               Đăng Ký Tư Vấn
             </Link>
@@ -182,10 +163,10 @@ export default function Header() {
               </div>
               <ul className={`mobile-submenu ${expandedCats['ve-fai'] ? 'open' : ''}`}>
                 <li><Link href="/ve-fai#gioi-thieu" onClick={closeMenu}>Giới thiệu chung</Link></li>
-                <li><Link href="/ve-fai#giang-vien" onClick={closeMenu}>Đội ngũ giảng viên</Link></li>
-                <li><Link href="/ve-fai#thanh-tuu" onClick={closeMenu}>Thành tựu & Con số</Link></li>
-                <li><Link href="/ve-fai#campus" onClick={closeMenu}>Hệ thống Campus toàn quốc</Link></li>
-                <li><Link href="/ve-fai#doanh-nghiep" onClick={closeMenu}>Đối tác doanh nghiệp</Link></li>
+                <li><Link href="/ve-fai#su-menh" onClick={closeMenu}>Sứ mệnh và tầm nhìn</Link></li>
+                <li><Link href="/ve-fai#hanh-trinh" onClick={closeMenu}>Hành trình phát triển</Link></li>
+                <li><Link href="/ve-fai#chuong-trinh" onClick={closeMenu}>Chương trình đào tạo</Link></li>
+                <li><Link href="/ve-fai#doanh-nghiep" onClick={closeMenu}>Hợp tác doanh nghiệp</Link></li>
               </ul>
             </li>
 
@@ -195,25 +176,11 @@ export default function Header() {
                 <ChevronDown size={18} className={expandedCats['dao-tao'] ? 'rotate' : ''} />
               </div>
               <ul className={`mobile-submenu ${expandedCats['dao-tao'] ? 'open' : ''}`}>
-                <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '4px' }}>APTECH — Công Nghệ</li>
-                <li><Link href="/dao-tao/aptech/accp" onClick={closeMenu}>Lập trình Fullstack (2 năm)</Link></li>
-                <li><Link href="/dao-tao/aptech/1-nam" onClick={closeMenu}>Lập trình Back end (1 năm)</Link></li>
-                <li><Link href="/dao-tao/aptech/6-thang" onClick={closeMenu}>Lập trình Front end (6 tháng)</Link></li>
-                <li><Link href="/dao-tao/aptech/100-200h" onClick={closeMenu}>Lập trình ngắn hạn (100-200h)</Link></li>
-                
-                <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--accent-orange, #e8741e)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '12px' }}>ARENA — Sáng Tạo</li>
-                <li><Link href="/dao-tao/arena" onClick={closeMenu}>Mỹ thuật Đa phương tiện</Link></li>
-                <li><Link href="/dao-tao/arena" onClick={closeMenu}>Thiết kế Đồ họa & Web</Link></li>
-                <li><Link href="/dao-tao/arena" onClick={closeMenu}>Kỹ xảo & Hoạt hình 3D</Link></li>
-                
-                <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--success, #16a34a)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '12px' }}>SKILLKING — Marketing</li>
-                <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Digital Marketing chuyên sâu</Link></li>
-                <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Social Media & SEO</Link></li>
-                <li><Link href="/dao-tao/skillking" onClick={closeMenu}>Quản trị chiến dịch số</Link></li>
-
-                <li className="mobile-submenu-section-title" style={{ fontSize: '0.8rem', fontWeight: 800, color: '#8b5cf6', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '12px' }}>JETKING — Công Nghệ Mới</li>
-                <li><Link href="/dao-tao/chip-design" onClick={closeMenu}>Thiết kế Vi mạch Bán dẫn</Link></li>
-                <li><Link href="/dao-tao/ai-agent" onClick={closeMenu}>Chuyên gia AI Agent</Link></li>
+                <li><Link href="/dao-tao#aptech" onClick={closeMenu}>FPT Aptech</Link></li>
+                <li><Link href="/dao-tao#arena" onClick={closeMenu}>FPT Arena Multimedia</Link></li>
+                <li><Link href="/dao-tao#skillking" onClick={closeMenu}>FPT Skillking</Link></li>
+                <li><Link href="/dao-tao#chip-design" onClick={closeMenu}>FPT Jetking - Chip Design</Link></li>
+                <li><Link href="/dao-tao#ai-agent" onClick={closeMenu}>FPT Jetking - AI Agent</Link></li>
               </ul>
             </li>
 
@@ -227,7 +194,6 @@ export default function Header() {
                 <li><Link href="/tuyen-sinh#hoc-bong" onClick={closeMenu}>Học bổng & Ưu đãi nhập học</Link></li>
                 <li><Link href="/tuyen-sinh#hoc-phi" onClick={closeMenu}>Chính sách học phí</Link></li>
                 <li><Link href="/tuyen-sinh#dang-ky" onClick={closeMenu}>Đăng ký tuyển sinh trực tuyến</Link></li>
-                <li><Link href="/tuyen-sinh#faq" onClick={closeMenu}>Câu hỏi thường gặp (FAQ)</Link></li>
               </ul>
             </li>
 
@@ -238,11 +204,11 @@ export default function Header() {
               </div>
               <ul className={`mobile-submenu ${expandedCats['doi-song'] ? 'open' : ''}`}>
                 <li><Link href="/doi-song#nhip-song" onClick={closeMenu}>Mỗi FAIer một nhịp sống (4 Trụ cột)</Link></li>
-                <li><Link href="/doi-song#graduation" onClick={closeMenu}>Lễ Tốt nghiệp & Vinh danh</Link></li>
-                <li><Link href="/doi-song#enterprise" onClick={closeMenu}>Doanh nghiệp & FAI</Link></li>
+                <li><Link href="/doi-song#graduation" onClick={closeMenu}>Lễ Tốt nghiệp &amp; Vinh danh</Link></li>
+                <li><Link href="/doi-song#enterprise" onClick={closeMenu}>Doanh nghiệp &amp; FAI</Link></li>
                 <li><Link href="/doi-song#sharing" onClick={closeMenu}>Nhỏ to cùng chia sẻ</Link></li>
-                <li><Link href="/doi-song#contests" onClick={closeMenu}>Sân chơi & Giải thưởng</Link></li>
-                <li><Link href="/doi-song#community" onClick={closeMenu}>FAI & Cộng đồng</Link></li>
+                <li><Link href="/doi-song#contests" onClick={closeMenu}>Sân chơi &amp; Giải thưởng</Link></li>
+                <li><Link href="/doi-song#community" onClick={closeMenu}>FAI &amp; Cộng đồng</Link></li>
               </ul>
             </li>
 
@@ -252,7 +218,7 @@ export default function Header() {
           </ul>
 
           <div className="mobile-menu-actions">
-            <Link href="/tuyen-sinh" className="nav-cta-btn" onClick={closeMenu}>
+            <Link href="/tuyen-sinh#dang-ky" className="nav-cta-btn" onClick={closeMenu}>
               Đăng Ký Tư Vấn
             </Link>
           </div>

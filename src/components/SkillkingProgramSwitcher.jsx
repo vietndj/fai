@@ -1,13 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { Sparkles } from 'lucide-react';
+import { skillkingSwitcherItems } from '@/data/programs';
 
 export default function SkillkingProgramSwitcher({ activePath }) {
-  const programs = [
-    { label: 'Fullstack Digital Marketing With AI (18 tháng)', href: '/dao-tao/skillking/18-thang', path: '/dao-tao/skillking/18-thang' },
-    { label: 'Bộ khóa học Digital Marketing ngắn hạn (100 giờ)', href: '/dao-tao/skillking/100h', path: '/dao-tao/skillking/100h' },
-  ];
+  const programs = skillkingSwitcherItems;
 
   return (
     <div className="skillking-sticky-switcher-bar">

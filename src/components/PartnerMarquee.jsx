@@ -60,13 +60,15 @@ function LogoCard({ partner }) {
 }
 
 export default function PartnerMarquee() {
-  const doubled = [...partners, ...partners];
+  const half = Math.ceil(partners.length / 2);
+  const row1Partners = [...partners.slice(0, half), ...partners.slice(0, half)];
+  const row2Partners = [...partners.slice(half), ...partners.slice(half)];
 
   return (
     <section className="partner-section">
       <div className="container">
         <div className="partner-header" data-reveal>
-          <span className="section-eyebrow">Cam kết đầu ra</span>
+          <span className="section-eyebrow">Cam kết việc làm toàn diện</span>
           <h2 className="partner-headline">
             <ScrollTypewriter text="1000+ Đối tác tuyển dụng" />
           </h2>
@@ -79,20 +81,20 @@ export default function PartnerMarquee() {
       {/* Row 1 — forward */}
       <div className="marquee-wrapper">
         <div className="marquee-track marquee-slow-forward">
-          {doubled.map((p, i) => <LogoCard key={`f-${i}`} partner={p} />)}
+          {row1Partners.map((p, i) => <LogoCard key={`f-${i}`} partner={p} />)}
         </div>
       </div>
 
       {/* Row 2 — backward */}
       <div className="marquee-wrapper">
         <div className="marquee-track marquee-slow-backward">
-          {doubled.map((p, i) => <LogoCard key={`b-${i}`} partner={p} />)}
+          {row2Partners.map((p, i) => <LogoCard key={`b-${i}`} partner={p} />)}
         </div>
       </div>
 
       <div className="partner-cta" data-reveal>
-        <Link href="/doi-song#viec-lam" className="btn btn-outline-navy" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-          Xem tất cả đối tác tuyển dụng <ArrowRight size={16} />
+        <Link href="/doi-song#enterprise" className="btn btn-outline-navy" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+          Xem thêm kết nối doanh nghiệp và FAI <ArrowRight size={16} />
         </Link>
       </div>
     </section>

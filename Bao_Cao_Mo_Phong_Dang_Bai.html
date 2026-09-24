@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Báo cáo Mô Phỏng: Tính năng Đăng Bài</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; background: #f8fafc; color: #1e293b; padding: 40px; max-width: 1000px; margin: auto; }
+    h1 { text-align: center; color: #0f172a; margin-bottom: 40px; }
+    .step { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); margin-bottom: 32px; }
+    .step h2 { margin-top: 0; color: #2563eb; font-size: 1.5rem; }
+    .step p { font-size: 1.1rem; color: #475569; }
+    .step img { width: 100%; border-radius: 8px; border: 1px solid #e2e8f0; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Báo Cáo Mô Phỏng: Tính Năng Đăng Bài FAI (UI & Telegram)</h1>
+  
+    <div class="step">
+      <h2>Bước 1: Mở trang thêm bài viết (Admin)</h2>
+      <p>Giao diện lúc mới mở /admin/posts/new</p>
+      <img src="report_assets/1_admin_new_empty.png" alt="Screenshot Mở trang thêm bài viết (Admin)">
+    </div>
+  
+    <div class="step">
+      <h2>Bước 2: Điền thông tin bài viết</h2>
+      <p>Đã điền tiêu đề, mô tả, nội dung và link ảnh</p>
+      <img src="report_assets/2_admin_new_filled.png" alt="Screenshot Điền thông tin bài viết">
+    </div>
+  
+    <div class="step">
+      <h2>Bước 3: Ấn nút Xuất bản</h2>
+      <p>Đăng bài thành công, hệ thống chuyển về trang danh sách</p>
+      <img src="report_assets/3_admin_post_success.png" alt="Screenshot Ấn nút Xuất bản">
+    </div>
+  
+    <div class="step">
+      <h2>Bước 4: Kiểm tra bài viết trên trang người dùng</h2>
+      <p>Bài viết mới đã xuất hiện tại mục Đời Sống</p>
+      <img src="report_assets/4_frontend_post.png" alt="Screenshot Kiểm tra bài viết trên trang người dùng">
+    </div>
+  
+    <div class="step">
+      <h2>Bước 5: Gửi tin nhắn chứa link bài viết qua Telegram</h2>
+      <p>Người dùng (Admin) gửi link một bài viết từ trang tin FPT Academy vào bot Telegram. Hệ thống tiếp nhận, khởi tạo luồng trò chuyện và tự động bóc tách nội dung, hình ảnh từ URL để đăng lên web.</p>
+      <img src="report_assets/5_telegram_send_message.png" alt="Screenshot Gửi tin nhắn chứa link bài viết qua Telegram">
+    </div>
+  
+    <div class="step">
+      <h2>Bước 6: Kiểm tra bài đăng từ Telegram trên Web</h2>
+      <p>Bài viết bóc tách từ URL đã được hệ thống đăng thành công lên trang chủ.</p>
+      <img src="report_assets/6_telegram_frontend.png" alt="Screenshot Kiểm tra bài đăng từ Telegram trên Web">
+    </div>
+  
+</body>
+</html>

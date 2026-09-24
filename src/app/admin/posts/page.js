@@ -136,6 +136,9 @@ export default function PostsPage() {
                       </td>
                       <td>
                         <div className="admin-gap-2">
+                          <Link href={`/doi-song/${post.slug || post.id}`} target="_blank" className="admin-btn" style={{ padding: '4px 8px', fontSize: '12px', background: '#3b82f6', color: 'white', border: 'none', textDecoration: 'none' }}>
+                            Xem
+                          </Link>
                           <Link href={`/admin/posts/${post.id}`} className="admin-btn admin-btn-secondary" style={{ padding: '4px 8px', fontSize: '12px' }}>
                             Sửa
                           </Link>

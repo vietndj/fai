@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Check, Send, CheckCircle2 } from 'lucide-react';
+import { arenaShortCourseOptions } from '@/data/programs';
+import { EXTERNAL_LINKS, ADMISSION_CAMPUSES } from '@/data/contacts';
 
 export default function Arena100hFormSection({ 
-  googleSheetScriptUrl = 'https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec',
+  googleSheetScriptUrl = EXTERNAL_LINKS.leadSubmitScript,
   programName = 'FPT Arena Khóa Ngắn Hạn (100 Giờ)'
 }) {
   const [formData, setFormData] = useState({
@@ -132,7 +134,7 @@ export default function Arena100hFormSection({
               </div>
               <div style={{ width: '1px', height: '60px', background: 'rgba(0, 0, 0, 0.08)', flexShrink: 0 }} />
               <div style={{ flex: 1, minWidth: 0 }}>
-                <h4 style={{ fontSize: '1rem', fontWeight: 800, color: '#0f172a', margin: '0 0 4px 0', lineHeight: '1.4', textTransform: 'uppercase' }}>Học bổng "Tân binh sáng tạo"</h4>
+                <h4 style={{ fontSize: '1rem', fontWeight: 800, color: '#0f172a', margin: '0 0 4px 0', lineHeight: '1.4', textTransform: 'uppercase' }}>Học bổng &quot;Tân binh sáng tạo&quot;</h4>
                 <p style={{ color: '#64748b', fontSize: '0.86rem', margin: '0 0 8px 0', lineHeight: '1.45' }}>Ưu đãi giảm 1.500.000đ (Đà Nẵng) và 2.000.000đ (Hà Nội)</p>
                 <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                   <span style={{ background: 'rgba(232, 116, 30, 0.08)', color: '#e8741e', fontSize: '0.72rem', fontWeight: 800, padding: '2px 9px', borderRadius: '6px', border: '1px solid rgba(232, 116, 30, 0.15)' }}>DESIGN</span>
@@ -307,7 +309,7 @@ export default function Arena100hFormSection({
                     Cơ sở tư vấn thuận tiện cho bạn:
                   </label>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px' }}>
-                    {['Hà Nội', 'Đà Nẵng'].map((c, cIdx) => (
+                    {ADMISSION_CAMPUSES.map((c, cIdx) => (
                       <label key={cIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: formData.campus === c ? 'rgba(232, 116, 30, 0.08)' : '#f8fafc', padding: '10px 12px', borderRadius: '10px', border: formData.campus === c ? '1.5px solid #e8741e' : '1px solid #cbd5e1', cursor: 'pointer' }}>
                         <input type="radio" name="campus" value={c} onChange={handleChange} checked={formData.campus === c} style={{ accentColor: '#e8741e', width: '15px', height: '15px' }} />
                         <span style={{ fontSize: '0.88rem', color: formData.campus === c ? '#0f172a' : '#475569', fontWeight: formData.campus === c ? 700 : 500 }}>{c}</span>
@@ -319,10 +321,9 @@ export default function Arena100hFormSection({
                 <div>
                   <select name="course" value={formData.course} onChange={handleChange} style={{ width: '100%', padding: '14px 18px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.95rem', outline: 'none', color: formData.course ? '#0f172a' : '#64748b', background: '#f8fafc' }}>
                     <option value="" disabled>Bạn đang quan tâm khoá học nào? *</option>
-                    <option value="Thiết Kế Thương Hiệu - Thương Mại">Thiết Kế Thương Hiệu - Thương Mại</option>
-                    <option value="Thiết Kế App/Web">Thiết Kế App/Web</option>
-                    <option value="Làm Video/Clip sáng tạo">Làm Video/Clip sáng tạo</option>
-                    <option value="Thiết Kế Cho Game">Thiết Kế Cho Game</option>
+                    {arenaShortCourseOptions.map((opt, idx) => (
+                      <option key={idx} value={opt}>{opt}</option>
+                    ))}
                   </select>
                 </div>
 
@@ -341,7 +342,10 @@ export default function Arena100hFormSection({
                 </div>
 
                 <p style={{ fontSize: '0.78rem', color: '#64748b', lineHeight: '1.5', fontStyle: 'italic', margin: 0 }}>
-                  Đồng ý để dữ liệu cá nhân của Anh/Chị được thu thập trên trang này, được xử lý và lưu trữ bởi Tổ chức giáo dục FPT cho mục đích và theo điều kiện đã được công bố tại Quy định bảo vệ dữ liệu cá nhân của Tổ chức giáo dục FPT &quot;tại đây&quot;.
+                  Đồng ý để dữ liệu cá nhân của Anh/Chị được thu thập trên trang này, được xử lý và lưu trữ bởi Tổ chức giáo dục FPT cho mục đích và theo điều kiện đã được công bố tại Quy định bảo vệ dữ liệu cá nhân của Tổ chức giáo dục FPT{' '}
+                  <a href={EXTERNAL_LINKS.privacyPolicy} target="_blank" rel="noopener noreferrer" style={{ color: '#e8741e', textDecoration: 'underline' }}>
+                    tại đây
+                  </a>.
                 </p>
 
                 <button

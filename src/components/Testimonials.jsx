@@ -141,7 +141,7 @@ export default function Testimonials() {
             <span className="quote-cta-label">Tuyển sinh 2026</span>
             <h3 className="quote-cta-title"><ScrollTypewriter text="Bắt đầu hành trình của bạn" /></h3>
             <p className="quote-cta-desc">Học bổng lên đến 50% — Nhập học linh hoạt — Đào tạo chuẩn quốc tế</p>
-            <Link href="/tuyen-sinh" className="quote-cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <Link href="/tuyen-sinh#dang-ky#dang-ky" className="quote-cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               Đăng ký tư vấn miễn phí
               <ArrowRight size={18} strokeWidth={2.5} />
             </Link>

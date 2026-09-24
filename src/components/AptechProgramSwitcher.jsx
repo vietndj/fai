@@ -1,15 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { Sparkles } from 'lucide-react';
+import { aptechSwitcherItems } from '@/data/programs';
 
 export default function AptechProgramSwitcher({ activePath }) {
-  const programs = [
-    { label: 'Lập trình Fullstack 2 năm', href: '/dao-tao/aptech/accp', path: '/dao-tao/aptech/accp' },
-    { label: 'Lập trình Back end 1 năm', href: '/dao-tao/aptech/1-nam', path: '/dao-tao/aptech/1-nam' },
-    { label: 'Lập trình Front end 6 tháng', href: '/dao-tao/aptech/6-thang', path: '/dao-tao/aptech/6-thang' },
-    { label: 'Bộ khóa học Lập trình ngắn hạn (100 - 200 giờ)', href: '/dao-tao/aptech/100-200h', path: '/dao-tao/aptech/100-200h' },
-  ];
+  const programs = aptechSwitcherItems;
 
   return (
     <div className="aptech-sticky-switcher-bar">

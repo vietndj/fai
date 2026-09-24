@@ -26,7 +26,7 @@ export default function TrustBar() {
         </div>
         <div className="trust-divider" />
         <div className="trust-item">
-          <Link href="/tuyen-sinh" className="trust-cta-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+          <Link href="/tuyen-sinh#dang-ky#dang-ky" className="trust-cta-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
             Đăng ký tư vấn miễn phí <ArrowRight size={18} />
           </Link>
         </div>

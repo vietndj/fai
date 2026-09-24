@@ -3,151 +3,8 @@
 import { useState } from 'react';
 import { Send, CheckCircle2 } from 'lucide-react';
 
-const BRAND_PRESETS = {
-  'skillking': {
-    themeColor: '#09529c',
-    accentColor: '#0284c7',
-    gradientBg: 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)',
-    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT SKILLKING',
-    defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA DIGITAL MARKETING?',
-    defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình học & ưu đãi học bổng 2026',
-    campuses: ['Hà Nội', 'Đà Nẵng'],
-    badges: [
-      {
-        value: '14',
-        unit: 'Triệu',
-        title: 'Học bổng tài năng',
-        desc: 'Quỹ học bổng dành cho tài năng Digital Marketing xuất sắc'
-      },
-      {
-        value: '10',
-        unit: 'Triệu',
-        title: 'Khuyến khích nhập học sớm',
-        desc: 'Ưu đãi trừ trực tiếp vào học phí khi hoàn tất thủ tục sớm'
-      },
-      {
-        value: '6',
-        unit: 'Triệu',
-        title: 'Ưu đãi chuyển ngành',
-        desc: 'Hỗ trợ đặc biệt cho sinh viên & người đi làm đổi ngành sang Digital Marketing'
-      }
-    ]
-  },
-  'arena': {
-    themeColor: '#ffb600',
-    accentColor: '#f59e0b',
-    gradientBg: 'linear-gradient(135deg, #ffb600 0%, #d97706 100%)',
-    btnTextColor: '#000000',
-    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT ARENA',
-    defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH CHUYÊN GIA MULTIMEDIA?',
-    defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Mỹ thuật đa phương tiện Quốc tế',
-    campuses: ['Hà Nội', 'Đà Nẵng'],
-    badges: [
-      {
-        value: '14',
-        unit: 'Triệu',
-        title: 'Học bổng tài năng',
-        desc: 'Quỹ học bổng dành cho tài năng thiết kế mỹ thuật đa phương tiện'
-      },
-      {
-        value: '10',
-        unit: 'Triệu',
-        title: 'Khuyến khích nhập học sớm',
-        desc: 'Ưu đãi trừ trực tiếp vào học phí khi hoàn tất thủ tục sớm'
-      },
-      {
-        value: '6',
-        unit: 'Triệu',
-        title: 'Ưu đãi chuyển ngành',
-        desc: 'Hỗ trợ đặc biệt cho sinh viên & người đi làm đổi ngành sang Multimedia'
-      }
-    ]
-  },
-  'chip-design': {
-    themeColor: '#dc2626',
-    accentColor: '#b91c1c',
-    gradientBg: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
-    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING CHIP DESIGN',
-    defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ THIẾT KẾ VI MẠCH BÁN DẪN?',
-    defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Thiết kế Vi Mạch Bán Dẫn Quốc Tế 2 năm',
-    campuses: ['Hà Nội'],
-    badges: [
-      {
-        value: '8',
-        unit: 'Triệu',
-        title: 'Học bổng Kỹ sư Bán dẫn Tương lai',
-        desc: 'Hỗ trợ sinh viên ngành kỹ thuật & công nghệ chuyển đổi'
-      },
-      {
-        value: 'VIP',
-        unit: 'Đặc Quyền',
-        title: 'Đặc quyền VIP tặng Miễn phí tài khoản Coursera + Udemy',
-        desc: 'Truy cập kho học liệu quốc tế không giới hạn trị giá hàng nghìn USD'
-      },
-      {
-        value: 'LAB',
-        unit: 'Chuẩn Quốc Tế',
-        title: 'Thực hành LAB EDA Synopsys & Cadence',
-        desc: 'Phòng thực hành chuẩn quốc tế với bản quyền công cụ thiết kế chip'
-      }
-    ]
-  },
-  'ai-agent': {
-    themeColor: '#dc2626',
-    accentColor: '#b91c1c',
-    gradientBg: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
-    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT JETKING AI AGENT',
-    defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH KỸ SƯ AI AGENT TIÊN PHONG?',
-    defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình Lập trình Hệ thống AI Agent',
-    campuses: ['Hà Nội', 'Đà Nẵng'],
-    badges: [
-      {
-        value: '8',
-        unit: 'Triệu',
-        title: 'Học bổng Tiên phong AI Agent',
-        desc: 'Quỹ ươm mầm chuyên gia phát triển hệ sinh thái AI tự hành'
-      },
-      {
-        value: 'VIP',
-        unit: 'Đặc Quyền',
-        title: 'Đặc quyền VIP tặng Miễn phí tài khoản Coursera + Udemy',
-        desc: 'Truy cập kho học liệu quốc tế không giới hạn trị giá hàng nghìn USD'
-      }
-    ]
-  },
-  'aptech': {
-    themeColor: '#f37021',
-    accentColor: '#d85d0d',
-    gradientBg: 'linear-gradient(135deg, #f37021 0%, #d85d0d 100%)',
-    defaultHeaderTitle: 'NHẬN THÔNG TIN TƯ VẤN VỀ CHƯƠNG TRÌNH HỌC & HỌC BỔNG 2026 TẠI FPT APTECH',
-    defaultFormTitle: 'BẠN CÓ MUỐN TRỞ THÀNH LẬP TRÌNH VIÊN QUỐC TẾ?',
-    defaultFormSubtitle: 'Đăng ký nhận tư vấn lộ trình học & học bổng 2026',
-    campuses: ['Hà Nội'],
-    badges: [
-      {
-        value: '14',
-        unit: 'Triệu',
-        title: 'Học bổng Tài năng Lập trình viên',
-        desc: 'Dành cho thí sinh đạt kết quả cao trong kỳ thi đánh giá năng lực',
-        tags: ['C++', 'JAVA']
-      },
-      {
-        value: '6',
-        unit: 'Triệu',
-        title: 'Ưu đãi Chuyển ngành Công nghệ',
-        desc: 'Dành riêng cho sinh viên ngoài ngành muốn học nghề lập trình',
-        tags: ['PYTHON', 'DATABASE']
-      },
-      {
-        value: '10',
-        unit: 'Triệu',
-        title: 'Khuyến khích Nhập học sớm',
-        desc: 'Ưu đãi dành cho học viên hoàn tất thủ tục nhập học sớm 2026',
-        tags: ['FULLSTACK', 'AI POWERED']
-      }
-    ]
-  }
-};
+import { BRAND_FORM_PRESETS as BRAND_PRESETS } from '@/data/scholarships';
+import { EXTERNAL_LINKS, ADMISSION_CAMPUSES } from '@/data/contacts';
 
 function inferBrand(programName = '') {
   const p = programName.toLowerCase();
@@ -159,7 +16,7 @@ function inferBrand(programName = '') {
 }
 
 export default function ScholarshipFormSection({ 
-  googleSheetScriptUrl = 'https://script.google.com/macros/s/AKfycbwfPoh5H-YB8CcPWw9GijIv44YjXtHbrwdLX7XCMWnhTmg5ocW-aGt3PnCIMiC_pvSKrw/exec',
+  googleSheetScriptUrl = EXTERNAL_LINKS.leadSubmitScript,
   programName = 'FPT Aptech',
   brand: brandProp,
   headerTitle,
@@ -181,7 +38,7 @@ export default function ScholarshipFormSection({
   const activeHeaderTitle = headerTitle || preset.defaultHeaderTitle;
   const activeFormTitle = formTitle || preset.defaultFormTitle;
   const activeFormSubtitle = formSubtitle || preset.defaultFormSubtitle;
-  const campuses = campusesProp || preset.campuses || ['Hà Nội'];
+  const campuses = campusesProp || preset.campuses || ADMISSION_CAMPUSES;
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -281,7 +138,8 @@ export default function ScholarshipFormSection({
               letterSpacing: '0.02em',
               lineHeight: '1.35',
               maxWidth: '1050px',
-              margin: '0 auto'
+              margin: '0 auto',
+              whiteSpace: 'pre-line'
             }}
           >
             {activeHeaderTitle.includes('TẠI') ? (
@@ -409,7 +267,8 @@ export default function ScholarshipFormSection({
                 textTransform: 'uppercase',
                 margin: 0,
                 letterSpacing: '0.01em',
-                lineHeight: '1.35'
+                lineHeight: '1.35',
+                whiteSpace: 'pre-line'
               }}
             >
               {activeFormTitle}
@@ -524,7 +383,7 @@ export default function ScholarshipFormSection({
                 {includeCampus && campuses && campuses.length >= 1 && (
                   <div>
                     <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: '#475569', marginBottom: '8px' }}>
-                      Cơ sở tư vấn thuận tiện cho bạn:
+                      Cơ sở:
                     </label>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px' }}>
                       {campuses.map((c, cIdx) => (
@@ -603,7 +462,10 @@ export default function ScholarshipFormSection({
                 </div>
 
                 <p style={{ fontSize: '0.76rem', color: '#64748b', lineHeight: '1.5', fontStyle: 'italic', margin: 0 }}>
-                  Đồng ý để dữ liệu cá nhân của Anh/Chị được thu thập trên trang này, được xử lý và lưu trữ bởi Tổ chức giáo dục FPT cho mục đích và theo điều kiện đã được công bố tại Quy định bảo vệ dữ liệu cá nhân của Tổ chức giáo dục FPT &quot;tại đây&quot;.
+                  Đồng ý để dữ liệu cá nhân của Anh/Chị được thu thập trên trang này, được xử lý và lưu trữ bởi Tổ chức giáo dục FPT cho mục đích và theo điều kiện đã được công bố tại Quy định bảo vệ dữ liệu cá nhân của Tổ chức giáo dục FPT{' '}
+                  <a href={EXTERNAL_LINKS.privacyPolicy} target="_blank" rel="noopener noreferrer" style={{ color: themeColor, textDecoration: 'underline' }}>
+                    tại đây
+                  </a>.
                 </p>
 
                 {/* Submit Button */}

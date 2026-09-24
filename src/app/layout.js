@@ -1,4 +1,5 @@
 import "./globals.css";
+import "@/styles/fai-design-system.css";
 import ScrollReveal from "@/components/ScrollReveal";
 import Header from "@/components/Header";
 

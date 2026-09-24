@@ -186,14 +186,11 @@ export default function LienHe() {
           <div className="container">
             <div style={{ maxWidth: "950px" }}>
               <span className="section-eyebrow" style={{ fontSize: "0.9rem", fontWeight: 800, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.15em" }}>
-                MẠNG LƯỚI KẾT NỐI FAI
+                KẾT NỐI VỚI FAI
               </span>
               <h1 style={{ fontSize: "clamp(2.3rem, 5.5vw, 4rem)", color: "var(--secondary)", lineHeight: "1.25", fontWeight: 500, marginTop: "20px", fontFamily: "var(--font-heading-medium)" }}>
                 Hệ thống Campus thực chiến toàn quốc
               </h1>
-              <p style={{ maxWidth: "720px", color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: "1.75", marginTop: "25px" }}>
-                Chào mừng bạn đến với Viện Đào Tạo Quốc Tế FPT. Lựa chọn ngành học của bạn và kết nối trực tiếp với cơ sở gần nhất để trải nghiệm không gian học tập chuẩn quốc tế.
-              </p>
             </div>
             
             <div style={{ display: "flex", gap: "15px", marginTop: "40px", flexWrap: "wrap" }}>
@@ -553,11 +550,15 @@ export default function LienHe() {
             </span>
             
             <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.8rem)", fontWeight: 700, color: "var(--secondary)", marginTop: "12px", marginBottom: "8px", fontFamily: "var(--font-sans)" }}>
-              Chúng tôi luôn sẵn sàng hỗ trợ
+              Chúng tôi luôn sẵn sàng!
             </h2>
             
             <p style={{ maxWidth: "650px", color: "var(--text-muted)", margin: "0 auto 25px auto", fontSize: "1.05rem", lineHeight: "1.7" }}>
-              Thời gian làm việc từ 8:00 - 21:00 hàng ngày, kể cả Thứ 7 và Chủ Nhật. Liên hệ ngay để được hỗ trợ thủ tục nhập học và tư vấn hướng nghiệp miễn phí.
+              Khám phá các chương trình đào tạo của FAI{' '}
+              <Link href="/dao-tao" style={{ color: "var(--primary)", fontWeight: 700, textDecoration: "underline" }}>
+                tại đây
+              </Link>
+              {' '}hoặc liên hệ trực tiếp với chúng tôi nếu bạn có bất kỳ thắc mắc nào.
             </p>
 
             <div style={{ display: "inline-block", background: "#0D2137", padding: "25px 40px", borderRadius: "24px", boxShadow: "0 20px 50px rgba(13,33,55,0.08)" }}>
@@ -577,12 +578,8 @@ export default function LienHe() {
 
             <div style={{ display: "flex", justifyContent: "center", gap: "30px", marginTop: "30px", flexWrap: "wrap" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.95rem", color: "var(--text-muted)" }}>
-                <Clock size={18} style={{ color: "var(--primary)" }} />
-                <span>Giờ làm việc: 8:00 - 21:00</span>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.95rem", color: "var(--text-muted)" }}>
                 <Heart size={18} style={{ color: "var(--primary)", fill: "currentColor" }} />
-                <span>Đồng hành cùng học viên 24/7</span>
+                <span>FAI Đồng hành 24/7 cùng học viên và doanh nghiệp</span>
               </div>
             </div>
           </div>

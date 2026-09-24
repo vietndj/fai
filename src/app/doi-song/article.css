@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Isolated Typography Stylesheet for FAI Articles
+   Scoped strictly under .article-body-html to prevent style bleed
+   and overcome globals.css list reset without modifying globals.css
+   ========================================================================== */
+
+.article-body-html {
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #334155;
+  word-break: break-word;
+}
+
+.article-body-html p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.article-body-html p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Headings Hierarchy --- */
+.article-body-html h2 {
+  font-family: var(--font-heading-medium), var(--font-sans), sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--secondary, #0D2137);
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.article-body-html h3 {
+  font-family: var(--font-heading-medium), var(--font-sans), sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 700;
+  color: var(--secondary, #0D2137);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.article-body-html h4 {
+  font-family: var(--font-heading-medium), var(--font-sans), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--secondary, #0D2137);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* First heading should not have extra top margin */
+.article-body-html > h2:first-child,
+.article-body-html > h3:first-child,
+.article-body-html > h4:first-child {
+  margin-top: 0;
+}
+
+/* --- Blockquotes --- */
+.article-body-html blockquote {
+  border-left: 4px solid var(--primary, #E8741E);
+  background: #f8fafc;
+  padding: 16px 24px;
+  margin: 1.75rem 0;
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+.article-body-html blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.article-body-html blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Lists (Explicit Reset Overrides) --- */
+.article-body-html ul {
+  list-style: disc !important;
+  padding-left: 1.5rem !important;
+  margin: 1rem 0 !important;
+}
+
+.article-body-html ol {
+  list-style: decimal !important;
+  padding-left: 1.5rem !important;
+  margin: 1rem 0 !important;
+}
+
+.article-body-html li {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.7;
+}
+
+.article-body-html li p {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.article-body-html ul ul,
+.article-body-html ol ul {
+  list-style: circle !important;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.article-body-html ul ol,
+.article-body-html ol ol {
+  list-style: lower-alpha !important;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* --- Divider Line --- */
+.article-body-html hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 2.25rem 0;
+}
+
+/* --- Links --- */
+.article-body-html a {
+  color: var(--primary, #E8741E);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.article-body-html a:hover {
+  color: #c85f0e;
+}
+
+/* --- Inline Code & Pre --- */
+.article-body-html code {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+}
+
+.article-body-html pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 16px 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.article-body-html pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* --- Figures, Images & Captions --- */
+.article-body-html figure.article-figure,
+.article-body-html figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.article-body-html figure img,
+.article-body-html img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.article-body-html figcaption.article-caption,
+.article-body-html figcaption {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-style: italic;
+  margin-top: 0.6rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Text alignments */
+.article-body-html [style*="text-align: right"],
+.article-body-html .text-right {
+  text-align: right;
+}
+
+.article-body-html [style*="text-align: center"],
+.article-body-html .text-center {
+  text-align: center;
+}
+
+.article-body-html [style*="text-align: justify"],
+.article-body-html .text-justify {
+  text-align: justify;
+}
+
+.article-body-html [style*="text-align: left"],
+.article-body-html .text-left {
+  text-align: left;
+}

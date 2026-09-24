@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, Clock, X, ArrowRight, BookOpen, Coffee, Award, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getCategories, getPosts } from '@/lib/firestore';
+import './article.css';
 
 const corePillars = [
   {
@@ -40,20 +41,17 @@ const corePillars = [
 
 
 function PostCardImage({ src, alt, date }) {
-  const [imgSrc, setImgSrc] = useState(src);
-
-  useEffect(() => {
-    setImgSrc(src);
-  }, [src]);
+  const [errorSrc, setErrorSrc] = useState(null);
+  const displaySrc = errorSrc || src;
 
   return (
     <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
       <Image 
-        src={imgSrc} 
+        src={displaySrc} 
         alt={alt || ''} 
         fill 
         style={{ objectFit: 'cover' }} 
-        onError={() => setImgSrc('/fai_pillar_1.jpg')} 
+        onError={() => setErrorSrc('/fai_pillar_1.jpg')} 
       />
       <span style={{ position: 'absolute', top: '15px', left: '15px', background: 'var(--primary)', padding: '4px 10px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800, color: '#ffffff', textTransform: 'uppercase' }}>
         {date}

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { auth } from '@/lib/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { checkAdminEmail } from '@/lib/firestore';
 import Link from 'next/link';
 import './admin.css';
 
@@ -13,15 +14,23 @@ export default function AdminLayout({ children }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
-        setUser(currentUser);
+        // Verify email in Firestore
+        const isAllowed = await checkAdminEmail(currentUser.email);
+        if (isAllowed) {
+          setUser(currentUser);
+        } else {
+          alert("Email của bạn không có quyền truy cập trang quản trị.");
+          await signOut(auth);
+          setUser(null);
+          router.push('/admin/login');
+        }
       } else if (!pathname.startsWith('/admin/login')) {
         router.push('/admin/login');
       }
       setLoading(false);
     });
-
     return () => unsubscribe();
   }, [router, pathname]);
 
@@ -62,6 +71,9 @@ export default function AdminLayout({ children }) {
           </Link>
           <Link href="/admin/categories" className={`admin-nav-item ${pathname.startsWith('/admin/categories') ? 'active' : ''}`}>
             Danh mục
+          </Link>
+          <Link href="/admin/users" className={`admin-nav-item ${pathname.startsWith('/admin/users') ? 'active' : ''}`}>
+            Quản trị viên
           </Link>
         </nav>
         <div className="admin-sidebar-footer">

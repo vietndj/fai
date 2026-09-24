@@ -1,14 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { Sparkles } from 'lucide-react';
+import { arenaSwitcherItems } from '@/data/programs';
 
 export default function ArenaProgramSwitcher({ activePath }) {
-  const programs = [
-    { label: 'Arena Multimedia Specialist (2 năm)', href: '/dao-tao/arena/amsp', path: '/dao-tao/arena/amsp' },
-    { label: 'Thiết kế 2D, 3D, Game & App (6–18 tháng)', href: '/dao-tao/arena/6-18-thang', path: '/dao-tao/arena/6-18-thang' },
-    { label: 'Bộ khóa học Multimedia ngắn hạn (100 giờ)', href: '/dao-tao/arena/100h', path: '/dao-tao/arena/100h' },
-  ];
+  const programs = arenaSwitcherItems;
 
   return (
     <div className="arena-sticky-switcher-bar">

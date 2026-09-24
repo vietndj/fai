@@ -52,8 +52,8 @@ export default function BoldCTABlock() {
             Không chỉ là trường học — FAI là bệ phóng cho sự nghiệp quốc tế. Từ sinh viên năm nhất, bạn đã được thực chiến với dự án thật, mentor là những chuyên gia đầu ngành và mạng lưới 1000+ doanh nghiệp tuyển dụng.
           </p>
           <div className="bold-cta-actions">
-            <Link href="/tuyen-sinh" className="bold-cta-btn bold-cta-btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              Đăng ký nhập học 2026
+            <Link href="/tuyen-sinh#dang-ky#dang-ky" className="bold-cta-btn bold-cta-btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              Đăng ký tư vấn
               <ArrowRight size={20} strokeWidth={2.5} />
             </Link>
             <Link href="/ve-fai" className="bold-cta-btn bold-cta-btn--outline">

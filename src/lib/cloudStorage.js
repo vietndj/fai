@@ -1,18 +1,46 @@
 import { S3Client, PutObjectCommand, DeleteObjectCommand } from '@aws-sdk/client-s3';
 import crypto from 'crypto';
 
-const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID || '2dae0527b790faa880c1cfb57247640a';
-const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID || 'ef3e4fbcd874fb204ed9c291608f9d75';
-const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY || '2426f986845501c6d30416a312a69e4be6cc478dc6a861c3aa7dad5dce9a436a';
 const BUCKET = process.env.R2_BUCKET_NAME || 'vietndjmedia';
 const PUBLIC_BASE_URL = (process.env.R2_PUBLIC_URL || 'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev').replace(/\/+$/, '');
 
-const r2Client = new S3Client({
-  region: 'auto',
-  endpoint: `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
-  credentials: {
-    accessKeyId: R2_ACCESS_KEY_ID,
-    secretAccessKey: R2_SECRET_ACCESS_KEY,
+let _r2ClientInstance = null;
+
+/**
+ * Initialize or retrieve Cloudflare R2 S3 Client instance strictly from process.env
+ * Throws explicit Error if credentials are missing
+ */
+export function getR2Client() {
+  if (!_r2ClientInstance) {
+    const accessKeyId = process.env.R2_ACCESS_KEY_ID;
+    const secretAccessKey = process.env.R2_SECRET_ACCESS_KEY;
+    const accountId = process.env.R2_ACCOUNT_ID;
+
+    if (!accessKeyId || !secretAccessKey) {
+      throw new Error('Cloudflare R2 credentials (R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY) are missing from process.env.');
+    }
+    if (!accountId) {
+      throw new Error('Cloudflare R2 account ID (R2_ACCOUNT_ID) is missing from process.env.');
+    }
+
+    _r2ClientInstance = new S3Client({
+      region: 'auto',
+      endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
+      credentials: {
+        accessKeyId,
+        secretAccessKey,
+      },
+    });
+  }
+  return _r2ClientInstance;
+}
+
+// Backward-compatible lazy proxy for direct `r2Client.send(...)` callers
+export const r2Client = new Proxy({}, {
+  get(target, prop) {
+    const client = getR2Client();
+    const val = client[prop];
+    return typeof val === 'function' ? val.bind(client) : val;
   },
 });
 
@@ -67,7 +95,8 @@ export async function uploadToStorage(buffer, filenameOrKey, contentType = 'imag
     CacheControl: 'public, max-age=31536000, immutable',
   });
 
-  await r2Client.send(putCommand);
+  const client = getR2Client();
+  await client.send(putCommand);
 
   const url = `${PUBLIC_BASE_URL}/${key}`;
 
@@ -80,7 +109,7 @@ export async function uploadToStorage(buffer, filenameOrKey, contentType = 'imag
 }
 
 /**
- * Delete object from Cloudflare R2 storage
+ * Delete object from Cloudflare R2 storage with scoped key validation
  * @param {string} keyOrUrl - Full CDN URL or S3 key
  */
 export async function deleteFromStorage(keyOrUrl) {
@@ -95,8 +124,15 @@ export async function deleteFromStorage(keyOrUrl) {
     }
   }
 
+  // Security guard: ensure key is within fai/posts/ prefix to prevent arbitrary deletion
+  if (!key.startsWith('fai/posts/')) {
+    console.warn(`[deleteFromStorage] Rejected attempt to delete unscoped key: ${key}`);
+    return;
+  }
+
   try {
-    await r2Client.send(
+    const client = getR2Client();
+    await client.send(
       new DeleteObjectCommand({
         Bucket: BUCKET,
         Key: key,
@@ -107,4 +143,3 @@ export async function deleteFromStorage(keyOrUrl) {
   }
 }
 
-export { r2Client };

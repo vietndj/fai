@@ -5,24 +5,24 @@ import ScrollTypewriter from './ScrollTypewriter';
 
 const bentoItems = [
   {
-    id: 'lab',
-    label: 'Tân Khoa Rạng Rỡ Trong Ngày Lễ',
-    tag: 'Tốt Nghiệp',
-    src: '/fai_graduation_handshake.png',
-    size: 'bento-large-v',
-  },
-  {
     id: 'design',
     label: 'Bài Phát Biểu Đầy Cảm Hứng',
     tag: 'FPT Arena',
     src: '/fai_graduation_speech.jpg',
+    size: 'bento-large-v',
+  },
+  {
+    id: 'lab',
+    label: 'Giải Bóng Đá All Star Cup',
+    tag: 'Thể Thao',
+    src: '/FAI-All-Star-Cup-season-2-2.jpg',
     size: 'bento-small',
   },
   {
-    id: 'marketing',
-    label: 'Lời Cảm Ơn Từ Phụ Huynh',
-    tag: 'FPT Skillking',
-    src: '/fai_graduation_testimonial.png',
+    id: 'graduation_handshake',
+    label: 'Tân Khoa Rạng Rỡ Trong Ngày Lễ',
+    tag: 'Tốt Nghiệp',
+    src: '/fai_graduation_handshake.png',
     size: 'bento-small',
   },
   {
@@ -48,17 +48,17 @@ export default function StudentLife() {
         {/* Section Header */}
         <div className="student-life-header">
           <div>
-            <span className="section-eyebrow">Trải nghiệm sinh viên</span>
-            <h2 className="section-headline"><ScrollTypewriter text="Trải nghiệm sinh viên FAI" /></h2>
+            <span className="section-eyebrow">TRẢI NGHIỆM FAI</span>
+            <h2 className="section-headline"><ScrollTypewriter text="Trải nghiệm sinh viên" /></h2>
             <p className="section-subhead" style={{ maxWidth: 560 }}>
-              Tại Viện đào tạo quốc tế FPT (FAI), sinh viên được trải nghiệm các sân chơi chuyên ngành, ngày hội công nghệ, sự kiện sáng tạo và chương trình kết nối doanh nghiệp, từ đó phát triển kỹ năng thực tế, khám phá cơ hội nghề nghiệp ngay từ năm nhất.
+              Tại Viện đào tạo quốc tế FPT (FAI), sinh viên được trải nghiệm các sân chơi chuyên ngành, ngày hội công nghệ, sự kiện sáng tạo và chương trình kết nối doanh nghiệp, từ đó phát triển kỹ năng thực tế, khám phá cơ hội nghề nghiệp ngay từ học kỳ đầu tiên.
             </p>
           </div>
           <div className="student-life-meta">
             <ul className="info-checklist">
               <li>Sân chơi chuyên ngành</li>
               <li>Hoạt động doanh nghiệp</li>
-              <li>Trải nghiệm sinh viên</li>
+              <li>Kết nối việc làm</li>
             </ul>
             <Link href="/doi-song" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
               Xem thêm hoạt động <ArrowRight size={16} />

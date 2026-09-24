@@ -47,9 +47,9 @@ const programs = [
       color: '#1a2332'
     },
     curriculums: [
-      'Arena Multimedia Specialist Program (2 năm)',
-      'Thiết kế 2D, 3D, Game và App (6–18 tháng)',
-      'Bộ khóa học Multimedia ngắn hạn (100 giờ)'
+      { text: 'Arena Multimedia Specialist Program (2 năm)', href: '/dao-tao/arena/amsp' },
+      { text: 'Thiết kế 2D, 3D, Game và App (6–18 tháng)', href: '/dao-tao/arena/6-18-thang' },
+      { text: 'Bộ khóa học Multimedia ngắn hạn (100 giờ)', href: '/dao-tao/arena/100h' }
     ]
   },
   {
@@ -68,8 +68,8 @@ const programs = [
       color: '#ffffff'
     },
     curriculums: [
-      'Fullstack Digital Marketing With AI (18 tháng)',
-      'Bộ khóa học Digital Marketing ngắn hạn (100 giờ)'
+      { text: 'Fullstack Digital Marketing With AI (18 tháng)', href: '/dao-tao/skillking/18-thang' },
+      { text: 'Bộ khóa học Digital Marketing ngắn hạn (100 giờ)', href: '/dao-tao/skillking/100h' }
     ]
   },
   {
@@ -88,7 +88,7 @@ const programs = [
       color: '#1a2332'
     },
     curriculums: [
-      'Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)'
+      { text: 'Thiết kế vi mạch bán dẫn quốc tế tích hợp AI (2 năm)', href: '/dao-tao/chip-design' }
     ]
   },
   {
@@ -107,7 +107,7 @@ const programs = [
       color: '#ffffff'
     },
     curriculums: [
-      'Lập trình AI Agent (6 tháng - 2 năm)'
+      { text: 'Lập trình AI Agent (6 tháng - 2 năm)', href: '/dao-tao/ai-agent' }
     ]
   }
 ];
@@ -326,19 +326,21 @@ export default function DaoTao() {
         <section className="beau-cta-section" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
           <div className="beau-cta-bg-circle"></div>
           <div className="container beau-cta-inner" data-reveal>
-            <h2 className="beau-cta-title">Sẵn sàng kiến tạo tương lai cùng Viện Đào Tạo Quốc Tế FPT?</h2>
+            <h2 className="beau-cta-title" style={{ whiteSpace: 'pre-line' }}>
+              {'Sẵn sàng kiến tạo tương lai\ncùng Viện Đào Tạo Quốc Tế FPT?'}
+            </h2>
             <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.1rem', maxWidth: '680px', margin: '14px auto 32px', lineHeight: '1.7' }}>
               Đăng ký nhận tư vấn hướng nghiệp 1-1 và thông tin học bổng mới nhất từ các khối ngành đào tạo FAI
             </p>
-            <TechCTAButton text="Tư vấn ngay" href="https://zalo.me/3164559225263453576" />
+            <TechCTAButton text="Tư vấn ngay qua Zalo" href="https://zalo.me/3164559225263453576" />
           </div>
         </section>
 
         {/* Section: Form đăng ký tư vấn tuyển sinh 4 ngành FAI */}
         <ScholarshipFormSection 
           programName="Viện Đào Tạo Quốc Tế FPT (FAI)"
-          headerTitle="NHẬN THÔNG TIN TƯ VẤN CHƯƠNG TRÌNH ĐÀO TẠO & HỌC BỔNG 2026 TẠI FAI"
-          formTitle="BẠN ĐANG TÌM KIẾM HƯỚNG ĐI SỰ NGHIỆP CÔNG NGHỆ & SÁNG TẠO?"
+          headerTitle={'NHẬN THÔNG TIN TƯ VẤN CHƯƠNG TRÌNH ĐÀO TẠO\n& HỌC BỔNG 2026 TẠI FAI'}
+          formTitle={'BẠN ĐANG TÌM KIẾM HƯỚNG ĐI\nSỰ NGHIỆP CÔNG NGHỆ & SÁNG TẠO?'}
           formSubtitle="Đăng ký nhận tư vấn hướng nghiệp 1-1 và lộ trình đào tạo chuẩn quốc tế"
           campuses={['Hà Nội', 'Đà Nẵng']}
           courseLabel="Bạn đang quan tâm đến chương trình nào tại Viện đào tạo Quốc tế FPT"

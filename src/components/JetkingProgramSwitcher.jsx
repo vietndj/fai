@@ -1,13 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { Sparkles } from 'lucide-react';
+import { jetkingSwitcherItems } from '@/data/programs';
 
 export default function JetkingProgramSwitcher({ activePath }) {
-  const programs = [
-    { label: 'Thiết kế Vi mạch Bán dẫn AI (2 năm)', href: '/dao-tao/chip-design', path: '/dao-tao/chip-design' },
-    { label: 'Lập trình AI Agent (6 tháng - 2 năm)', href: '/dao-tao/ai-agent', path: '/dao-tao/ai-agent' },
-  ];
+  const programs = jetkingSwitcherItems;
 
   return (
     <div className="jetking-sticky-switcher-bar">

@@ -150,102 +150,479 @@
   font-display: swap;
 }
 
+/* ═══ FD Aeonick (Hệ thống thiết kế Việt Hóa FEDU) ═══ */
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-Thin.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikThin.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-THIN.TTF') format('truetype'),
+       local('FD Aeonick Thin'), local('FDAeonikThin');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikThinItalic.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-THINITALIC.TTF') format('truetype'),
+       local('FD Aeonick Thin Italic'), local('FDAeonikThinItalic');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikLight.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-LIGHT.TTF') format('truetype'),
+       local('FD Aeonick Light'), local('FDAeonikLight');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-Regular.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikLightItalic.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-LIGHTITALIC.TTF') format('truetype'),
+       local('FD Aeonick Light Italic'), local('FDAeonikLightItalic');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikRegular.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-REGULAR.TTF') format('truetype'),
+       local('FD Aeonick Regular'), local('FDAeonikRegular');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-Italic.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikItalic.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-REGULARITALIC.TTF') format('truetype'),
+       local('FD Aeonick Italic'), local('FDAeonikItalic');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-Medium.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikMedium.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-MEDIUM.TTF') format('truetype'),
+       local('FD Aeonick Medium'), local('FDAeonikMedium');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-SemiBold.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikMediumItalic.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-MEDIUMITALIC.TTF') format('truetype'),
+       local('FD Aeonick Medium Italic'), local('FDAeonikMediumItalic');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonick Medium';
+  src: url('/fonts/FDAeonikMedium.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-MEDIUM.TTF') format('truetype'),
+       local('FD Aeonick Medium'), local('FDAeonikMedium');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonick Medium';
+  src: url('/fonts/FDAeonikMedium.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-MEDIUM.TTF') format('truetype'),
+       local('FD Aeonick Medium'), local('FDAeonikMedium');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikBold.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BOLD.TTF') format('truetype'),
+       local('FD Aeonick SemiBold'), local('FDAeonikBold');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-SemiBoldItalic.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikBoldItalic.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BOLDITALIC.TTF') format('truetype'),
+       local('FD Aeonick SemiBold Italic'), local('FDAeonikBoldItalic');
   font-weight: 600;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-Bold.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikBold.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BOLD.TTF') format('truetype'),
+       local('FD Aeonick Bold'), local('FDAeonikBold');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-BoldItalic.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikBoldItalic.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BOLDITALIC.TTF') format('truetype'),
+       local('FD Aeonick Bold Italic'), local('FDAeonikBoldItalic');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-Black.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikBlack.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BLACK.TTF') format('truetype'),
+       local('FD Aeonick Black'), local('FDAeonikBlack');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Poppins';
-  src: url('/fonts/SVN-Poppins-BlackItalic.ttf') format('truetype');
+  font-family: 'FD Aeonick';
+  src: url('/fonts/FDAeonikBlackItalic.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BLACKITALIC.TTF') format('truetype'),
+       local('FD Aeonick Black Italic'), local('FDAeonikBlackItalic');
   font-weight: 900;
   font-style: italic;
+  font-display: swap;
+}
+
+/* ═══ FD Aeonik Alias ═══ */
+@font-face {
+  font-family: 'FD Aeonik';
+  src: url('/fonts/FDAeonikThin.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-THIN.TTF') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonik';
+  src: url('/fonts/FDAeonikLight.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-LIGHT.TTF') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonik';
+  src: url('/fonts/FDAeonikRegular.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-REGULAR.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonik';
+  src: url('/fonts/FDAeonikItalic.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-REGULARITALIC.TTF') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonik';
+  src: url('/fonts/FDAeonikMedium.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-MEDIUM.TTF') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonik';
+  src: url('/fonts/FDAeonikBold.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BOLD.TTF') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonik';
+  src: url('/fonts/FDAeonikBold.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BOLD.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Aeonik';
+  src: url('/fonts/FDAeonikBlack.ttf') format('truetype'),
+       url('/fonts/SVN-AEONIK-BLACK.TTF') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ═══ Poppins & SVN-Poppins Mapping (Fully Replaced with FD Aeonick) ═══ */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/FDAeonikThin.ttf') format('truetype'),
+       local('FD Aeonick Thin'), local('FDAeonikThin');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/FDAeonikLight.ttf') format('truetype'),
+       local('FD Aeonick Light'), local('FDAeonikLight');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/FDAeonikRegular.ttf') format('truetype'),
+       local('FD Aeonick Regular'), local('FDAeonikRegular');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/FDAeonikItalic.ttf') format('truetype'),
+       local('FD Aeonick Italic'), local('FDAeonikItalic');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/FDAeonikMedium.ttf') format('truetype'),
+       local('FD Aeonick Medium'), local('FDAeonikMedium');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/FDAeonikBold.ttf') format('truetype'),
+       local('FD Aeonick SemiBold'), local('FDAeonikBold');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/FDAeonikBold.ttf') format('truetype'),
+       local('FD Aeonick Bold'), local('FDAeonikBold');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/FDAeonikBlack.ttf') format('truetype'),
+       local('FD Aeonick Black'), local('FDAeonikBlack');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'SVN-Acta';
-  src: url('/fonts/SVN-Acta-Book.ttf') format('truetype');
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/FDAeonikThin.ttf') format('truetype'),
+       local('FD Aeonick Thin'), local('FDAeonikThin');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/FDAeonikLight.ttf') format('truetype'),
+       local('FD Aeonick Light'), local('FDAeonikLight');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/FDAeonikRegular.ttf') format('truetype'),
+       local('FD Aeonick Regular'), local('FDAeonikRegular');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Acta';
-  src: url('/fonts/SVN-Acta-BookItalic.ttf') format('truetype');
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/FDAeonikItalic.ttf') format('truetype'),
+       local('FD Aeonick Italic'), local('FDAeonikItalic');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Acta';
-  src: url('/fonts/SVN-Acta-Medium.ttf') format('truetype');
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/FDAeonikMedium.ttf') format('truetype'),
+       local('FD Aeonick Medium'), local('FDAeonikMedium');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Acta';
-  src: url('/fonts/SVN-Acta-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/FDAeonikBold.ttf') format('truetype'),
+       local('FD Aeonick SemiBold'), local('FDAeonikBold');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'SVN-Acta';
-  src: url('/fonts/SVN-Acta-Bold.ttf') format('truetype');
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/FDAeonikBold.ttf') format('truetype'),
+       local('FD Aeonick Bold'), local('FDAeonikBold');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SVN-Poppins';
+  src: url('/fonts/FDAeonikBlack.ttf') format('truetype'),
+       local('FD Aeonick Black'), local('FDAeonikBlack');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ═══ FD Acta (Hệ thống thiết kế Việt Hóa FEDU) ═══ */
+@font-face {
+  font-family: 'FD Acta';
+  src: url('/fonts/FDActa-Book.ttf') format('truetype'),
+       url('/fonts/FDActaBook.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-Book.ttf') format('truetype'),
+       local('FD Acta Book'), local('FDActa-Book');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Acta';
+  src: url('/fonts/FDActa-BookItalic.ttf') format('truetype'),
+       url('/fonts/FDActaBookItalic.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-BookItalic.ttf') format('truetype'),
+       local('FD Acta Book Italic'), local('FDActa-BookItalic');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Acta';
+  src: url('/fonts/FDActa-Medium.ttf') format('truetype'),
+       url('/fonts/FDActaMedium.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-Medium.ttf') format('truetype'),
+       local('FD Acta Medium'), local('FDActa-Medium');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Acta';
+  src: url('/fonts/FDActa-MediumItalic.ttf') format('truetype'),
+       url('/fonts/FDActaMediumItalic.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-MediumItalic.ttf') format('truetype'),
+       local('FD Acta Medium Italic'), local('FDActa-MediumItalic');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Acta';
+  src: url('/fonts/FDActa-Bold.ttf') format('truetype'),
+       url('/fonts/FDActaBold.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-Bold.ttf') format('truetype'),
+       local('FD Acta Bold'), local('FDActa-Bold');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Acta';
+  src: url('/fonts/FDActa-BoldItalic.ttf') format('truetype'),
+       url('/fonts/FDActaBoldItalic.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-BoldItalic.ttf') format('truetype'),
+       local('FD Acta Bold Italic'), local('FDActa-BoldItalic');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Acta';
+  src: url('/fonts/FDActa-Black.ttf') format('truetype'),
+       url('/fonts/FDActaBlack.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-Black.ttf') format('truetype'),
+       local('FD Acta Black'), local('FDActa-Black');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FD Acta';
+  src: url('/fonts/FDActa-BlackItalic.ttf') format('truetype'),
+       url('/fonts/FDActaBlackItalic.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-BlackItalic.ttf') format('truetype'),
+       local('FD Acta Black Italic'), local('FDActa-BlackItalic');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ═══ SVN-Acta Legacy Compatibility (mapped to FD Acta) ═══ */
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/FDActa-Book.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'SVN-Acta';
-  src: url('/fonts/SVN-Acta-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/FDActa-BookItalic.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-BookItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/FDActa-Medium.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/FDActa-MediumItalic.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/FDActa-Bold.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SVN-Acta';
+  src: url('/fonts/FDActa-BoldItalic.ttf') format('truetype'),
+       url('/fonts/SVN-Acta-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 :root {
@@ -263,8 +640,8 @@
   --bg-gray: #f1f5f9;
   --bg-dark: #0D2137;
 
-  --font-sans: 'SVN-Sonoma', 'SVN-Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading-medium: 'SVN-Sonoma Medium', 'SVN-Sonoma', 'SVN-Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'FD Aeonick', 'FD Aeonik', 'SVN-Aeonik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading-medium: 'FD Aeonick Medium', 'FD Aeonick', 'FD Aeonik', 'SVN-Aeonik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-title: 'GT-Sectra', serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --header-height: 100px;
@@ -290,6 +667,10 @@ body {
   background-color: var(--bg-light);
   overflow-x: clip;
   padding-top: 92px; /* Offset for global fixed header */
+}
+
+button, input, select, textarea {
+  font-family: inherit;
 }
 
 /* Ensure smooth scrolling anchor targets leave breathing room below sticky header */
@@ -3405,7 +3786,7 @@ img {
 }
 
 .quote-block-text {
-  font-family: 'SVN-Acta', 'Acta', serif;
+  font-family: 'FD Acta', 'SVN-Acta', 'Acta', serif;
   font-size: clamp(1.15rem, 1.8vw, 1.45rem);
   font-weight: 400;
   font-style: italic;

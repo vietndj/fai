@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Globe } from 'lucide-react';
 import ParticleCanvas from './ParticleCanvas';
+import { HOTLINES, EMAILS, EXTERNAL_LINKS, campusesByCity } from '@/data/contacts';
 
 export default function Footer() {
   return (
@@ -36,12 +37,12 @@ export default function Footer() {
               </span>
               <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center' }}>
                 {[
-                  { name: 'Facebook', url: 'https://www.facebook.com/VienDaoTaoQuocTeFPT', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> },
-                  { name: 'Zalo', url: 'https://zalo.me/3164559225263453576', icon: <Image src="/logo_zalo_text_white.png" alt="Zalo" width={24} height={14} style={{ objectFit: 'contain' }} /> },
-                  { name: 'YouTube', url: 'https://www.youtube.com/@fpt.academyinternational', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> },
-                  { name: 'TikTok', url: 'https://www.tiktok.com/@vien.dao.tao.quoc.te.fpt', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg> },
-                  { name: 'Instagram', url: 'https://www.instagram.com/fptacademyinternational', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> },
-                  { name: 'Threads', url: 'https://www.threads.com/@fptacademyinternational', icon: <Image src="/logo_threads_official_clean.png" alt="Threads" width={18} height={18} style={{ objectFit: 'contain' }} /> }
+                  { name: 'Facebook', url: EXTERNAL_LINKS.socials.facebook, icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> },
+                  { name: 'Zalo', url: EXTERNAL_LINKS.zalo.fai, icon: <Image src="/logo_zalo_text_white.png" alt="Zalo" width={24} height={14} style={{ objectFit: 'contain' }} /> },
+                  { name: 'YouTube', url: EXTERNAL_LINKS.socials.youtube, icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> },
+                  { name: 'TikTok', url: EXTERNAL_LINKS.socials.tiktok, icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg> },
+                  { name: 'Instagram', url: EXTERNAL_LINKS.socials.instagram, icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> },
+                  { name: 'Threads', url: EXTERNAL_LINKS.socials.threads, icon: <Image src="/logo_threads_official_clean.png" alt="Threads" width={18} height={18} style={{ objectFit: 'contain' }} /> }
                 ].map((s, idx) => (
                   <a
                     key={idx}
@@ -91,65 +92,21 @@ export default function Footer() {
             <div className="contact-info-list" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               
               <div className="campus-groups" style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                {/* Hà Nội */}
-                <div className="campus-city-block">
-                  <h5 style={{ fontSize: '0.88rem', fontWeight: '800', color: '#ffffff', margin: '0 0 6px 0', textTransform: 'uppercase', opacity: 0.9, letterSpacing: '0.05em' }}>Hà Nội</h5>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      13 Phan Tây Nhạc, Phường Xuân Phương
-                    </span>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      Số 8 Tôn Thất Thuyết, Phường Cầu Giấy
-                    </span>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      94 Lương Yên, Phường Hai Bà Trưng
-                    </span>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      264 Đội Cấn, Phường Ba Đình
-                    </span>
+                {Object.values(campusesByCity).map((cityGroup, idx) => (
+                  <div key={idx} className="campus-city-block" style={{ marginTop: idx > 0 ? '5px' : '0' }}>
+                    <h5 style={{ fontSize: '0.88rem', fontWeight: '800', color: '#ffffff', margin: '0 0 6px 0', textTransform: 'uppercase', opacity: 0.9, letterSpacing: '0.05em' }}>
+                      {cityGroup.city}
+                    </h5>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                      {cityGroup.addresses.map((addr, aIdx) => (
+                        <span key={aIdx} style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                          <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
+                          {addr}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-
-                {/* TP. Hồ Chí Minh */}
-                <div className="campus-city-block" style={{ marginTop: '5px' }}>
-                  <h5 style={{ fontSize: '0.88rem', fontWeight: '800', color: '#ffffff', margin: '0 0 6px 0', textTransform: 'uppercase', opacity: 0.9, letterSpacing: '0.05em' }}>TP. Hồ Chí Minh</h5>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      21 Bis Hậu Giang, Phường Tân Sơn Nhất
-                    </span>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      84A Nguyên Hồng, Phường Hạnh Thông
-                    </span>
-                  </div>
-                </div>
-
-                {/* Đà Nẵng */}
-                <div className="campus-city-block" style={{ marginTop: '5px' }}>
-                  <h5 style={{ fontSize: '0.88rem', fontWeight: '800', color: '#ffffff', margin: '0 0 6px 0', textTransform: 'uppercase', opacity: 0.9, letterSpacing: '0.05em' }}>Đà Nẵng</h5>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      130 Đống Đa, Phường Hải Châu
-                    </span>
-                  </div>
-                </div>
-
-                {/* Cần Thơ */}
-                <div className="campus-city-block" style={{ marginTop: '5px' }}>
-                  <h5 style={{ fontSize: '0.88rem', fontWeight: '800', color: '#ffffff', margin: '0 0 6px 0', textTransform: 'uppercase', opacity: 0.9, letterSpacing: '0.05em' }}>Cần Thơ</h5>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem', marginTop: '4px' }}>◆</span>
-                      55 Cách Mạng Tháng Tám, Phường Cái Khế
-                    </span>
-                  </div>
-                </div>
+                ))}
               </div>
 
               {/* Contact Info */}
@@ -157,16 +114,16 @@ export default function Footer() {
                 <p style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', margin: 0, color: 'rgba(255, 255, 255, 0.75)' }}>
                   <Phone size={16} style={{ color: 'rgba(255, 255, 255, 0.6)', marginTop: '4px', flexShrink: 0 }} />
                   <span>
-                    <strong>Hotline:</strong> <a href="tel:02473008855" style={{ color: 'inherit', textDecoration: 'none' }}>024 7300 8855</a> &nbsp;•&nbsp; <a href="tel:02367308826" style={{ color: 'inherit', textDecoration: 'none' }}>0236 730 8826</a>
+                    <strong>Hotline:</strong> <a href={HOTLINES.hn.tel} style={{ color: 'inherit', textDecoration: 'none' }}>{HOTLINES.hn.display}</a> &nbsp;•&nbsp; <a href={HOTLINES.dn.tel} style={{ color: 'inherit', textDecoration: 'none' }}>{HOTLINES.dn.display}</a>
                   </span>
                 </p>
                 <p style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: 0, color: 'rgba(255, 255, 255, 0.75)' }}>
                   <Mail size={16} style={{ color: 'rgba(255, 255, 255, 0.6)' }} />
-                  <span><strong>Email:</strong> fai@fpt.edu.vn</span>
+                  <span><strong>Email:</strong> {EMAILS.general}</span>
                 </p>
                 <p style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: 0, color: 'rgba(255, 255, 255, 0.75)' }}>
                   <Globe size={16} style={{ color: 'rgba(255, 255, 255, 0.6)' }} />
-                  <span><strong>Website:</strong> fai.fpt.edu.vn</span>
+                  <span><strong>Website:</strong> {EXTERNAL_LINKS.websites.fai.replace('https://', '')}</span>
                 </p>
               </div>
             </div>
@@ -176,36 +133,20 @@ export default function Footer() {
           <div className="footer-fanpage-col">
             <h4 className="footer-col-title">CHƯƠNG TRÌNH ĐÀO TẠO</h4>
             <ul className="footer-links-list" style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
-              <li>
-                <a href="https://aptech.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Aptech</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Lập trình viên Quốc tế</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://arena.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Arena</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Thiết kế mỹ thuật đa phương tiện</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://skillking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Skillking</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Digital Marketing Ứng dụng AI</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://jetking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Jetking</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Thiết kế vi mạch bán dẫn</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://jetking.fpt.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-                  <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>FPT Jetking</strong>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>Lập trình AI Agent</span>
-                </a>
-              </li>
+              {[
+                { name: 'FPT Aptech', desc: 'Lập trình viên Quốc tế', url: EXTERNAL_LINKS.websites.aptech },
+                { name: 'FPT Arena', desc: 'Thiết kế mỹ thuật đa phương tiện', url: EXTERNAL_LINKS.websites.arena },
+                { name: 'FPT Skillking', desc: 'Digital Marketing Ứng dụng AI', url: EXTERNAL_LINKS.websites.skillking },
+                { name: 'FPT Jetking', desc: 'Thiết kế vi mạch bán dẫn', url: EXTERNAL_LINKS.websites.jetking },
+                { name: 'FPT Jetking', desc: 'Lập trình AI Agent', url: EXTERNAL_LINKS.websites.jetking },
+              ].map((prog, idx) => (
+                <li key={idx}>
+                  <a href={prog.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
+                    <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.95rem', fontWeight: '700' }}>{prog.name}</strong>
+                    <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginTop: '2px' }}>{prog.desc}</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
