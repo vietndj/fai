@@ -51,7 +51,7 @@ export async function scrapeArticle(url) {
       // 5. Tối ưu UI Khối (Blocks)
       // a. Xóa các đoạn paragraph trống
       articleContainer.find('p').each((i, el) => {
-        if (!$(el).text().trim() && $(el).find('img').length === 0) {
+        if (!$(el).text().replace(/\s|\xa0/g, '').trim() && $(el).find('img').length === 0 && $(el).find('iframe').length === 0) {
           $(el).remove();
         }
       });
@@ -62,13 +62,26 @@ export async function scrapeArticle(url) {
         firstP.addClass('lead'); // Class .lead đã có ở globals.css cho phông chữ to, sang trọng hơn
       }
       
-      // c. Tối ưu ảnh: Bọc ảnh vào <figure> để hiển thị chuẩn Editorial
+      // c. Tối ưu ảnh: Khắc phục lazy-load và bọc chuẩn <figure>
       articleContainer.find('img').each((i, el) => {
-        const parent = $(el).parent();
+        const $el = $(el);
+        
+        // 1. Phá vỡ lazy-load: Lấy link thật từ data-src hoặc data-lazy-src
+        const realSrc = $el.attr('data-src') || $el.attr('data-lazy-src') || $el.attr('data-srcset');
+        if (realSrc) {
+          $el.attr('src', realSrc.split(' ')[0]); // Lấy URL đầu tiên nếu là srcset
+        }
+        
+        $el.removeAttr('width').removeAttr('height').removeAttr('loading').removeAttr('srcset').removeAttr('data-src');
+        $el.addClass('rounded-xl shadow-md my-6 w-full object-cover');
+        
+        // 2. Chuyển <p><img></p> thành <figure><img></figure> để chuẩn UI/UX
+        const parent = $el.parent();
         if (parent[0] && parent[0].tagName.toLowerCase() === 'p') {
-          // Chuyển <p><img></p> thành <figure><img></figure>
-          $(el).removeAttr('width').removeAttr('height');
-          $(el).addClass('rounded-xl shadow-md my-6 w-full object-cover'); // Thêm class tailwind nếu có hoặc để CSS lo
+          // Nếu p chỉ chứa mỗi img này (hoặc có khoảng trắng), thì thay luôn p thành figure
+          if (parent.text().trim() === '') {
+             parent.replaceWith($('<figure class="image-editorial"></figure>').append($el));
+          }
         }
       });
       
