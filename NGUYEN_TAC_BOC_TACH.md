@@ -5,7 +5,7 @@ Tài liệu này lưu trữ toàn bộ nguyên tắc hoạt động của lõi S
 ## 1. Nguyên tắc Xử lý Dữ liệu gốc (Scraping Logic)
 
 *   **Chống rác Header (Header Clean-up):**
-    Hệ thống tự động loại bỏ các khối `.entry-header`, `.author-box` (thông tin tác giả CTV), các thẻ chia sẻ mạng xã hội, và các thẻ điều hướng bài viết liên quan (`#nav-below`, `.navigation-post`) để nội dung không bị dính link rác từ trang gốc.
+    Hệ thống tự động loại bỏ các khối `.entry-header`, `.author-box` (thông tin tác giả), các thẻ chia sẻ MXH, thẻ điều hướng bài viết liên quan, VÀ ĐẶC BIỆT LÀ các Mục lục cứng (TOC) sinh ra từ WordPress (`#ez-toc-container`, `.toc_container`). Lý do: Giao diện chuẩn của Antigravity đã tự động sinh Mục lục dính (Sticky Sidebar TOC) thông minh bên trái màn hình, nếu để lại Mục lục cứng trong bài sẽ gây trùng lặp UI rất rác.
 *   **Bảo toàn Ảnh Gốc (Hotlink Protocol):**
     Tất cả hình ảnh (bao gồm ảnh bìa và ảnh nội dung) đều lấy trực tiếp từ link gốc của website bị cào (ví dụ: `https://skillking.fpt.edu.vn/...`). TUYỆT ĐỐI KHÔNG tải về để tiết kiệm dung lượng R2 và tăng tốc độ xử lý lên 10x.
 *   **Phá vỡ Lazy-load (Anti Lazy-load):**
