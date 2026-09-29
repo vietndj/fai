@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, Clock, X, ArrowRight, BookOpen, Coffee, Award, Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, BookOpen, Coffee, Award, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getCategories, getPosts } from '@/lib/firestore';
 import './article.css';
 
@@ -60,7 +61,8 @@ function PostCardImage({ src, alt, date }) {
   );
 }
 
-function CategoryBlockItem({ block, onSelectPost }) {
+function CategoryBlockItem({ block }) {
+  const router = useRouter();
   const scrollRef = useRef(null);
   const [isGrabbing, setIsGrabbing] = useState(false);
   const isDown = useRef(false);
@@ -206,7 +208,7 @@ function CategoryBlockItem({ block, onSelectPost }) {
                   onClick={(e) => {
                     e.stopPropagation();
                     if (!hasDragged.current) {
-                      onSelectPost(post);
+                      router.push(`/doi-song/${post.slug || post.id}`);
                     }
                   }}
                   style={{
@@ -273,7 +275,6 @@ function CategoryBlockItem({ block, onSelectPost }) {
 }
 
 export default function DoiSong() {
-  const [selectedPost, setSelectedPost] = useState(null);
   const [isGrabbing, setIsGrabbing] = useState(false);
   const [categoryBlocks, setCategoryBlocks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -343,24 +344,6 @@ export default function DoiSong() {
     }
   };
 
-  useEffect(() => {
-    if (selectedPost) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [selectedPost]);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setSelectedPost(null);
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   useEffect(() => {
     const handleHashScroll = () => {
@@ -554,7 +537,7 @@ export default function DoiSong() {
             </div>
           </section>
         ) : categoryBlocks.map((block) => (
-          <CategoryBlockItem key={block.id} block={block} onSelectPost={setSelectedPost} />
+          <CategoryBlockItem key={block.id} block={block} />
         ))}
 
         {/* Support Hotline CTA (LIGHT BACKGROUND) */}
@@ -595,121 +578,6 @@ export default function DoiSong() {
 
       </main>
 
-      {/* ARTICLE DETAIL MODAL */}
-      {selectedPost && (
-        <div 
-          style={{
-            position: 'fixed',
-            inset: 0,
-            zIndex: 9999,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '20px',
-            backgroundColor: 'rgba(5, 12, 26, 0.85)',
-            backdropFilter: 'blur(8px)',
-            animation: 'fadeInUp 0.3s ease'
-          }}
-          onClick={() => setSelectedPost(null)}
-        >
-          <div 
-            style={{
-              backgroundColor: '#ffffff',
-              color: '#1a2332',
-              borderRadius: '24px',
-              maxWidth: '850px',
-              width: '100%',
-              maxHeight: '90vh',
-              overflowY: 'auto',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)',
-              position: 'relative',
-              display: 'flex',
-              flexDirection: 'column'
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal Header Bar */}
-            <div 
-              style={{
-                padding: '20px 30px',
-                borderBottom: '1px solid rgba(0,0,0,0.06)',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                position: 'sticky',
-                top: 0,
-                backgroundColor: '#ffffff',
-                zIndex: 10
-              }}
-            >
-              <span style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--primary)', letterSpacing: '0.1em' }}>
-                {selectedPost.date}
-              </span>
-              <button 
-                onClick={() => setSelectedPost(null)}
-                style={{
-                  background: '#f1f5f9',
-                  border: 'none',
-                  borderRadius: '50%',
-                  width: '36px',
-                  height: '36px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer',
-                  color: 'var(--secondary)',
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                <X size={18} />
-              </button>
-            </div>
-
-            {/* Modal Content */}
-            <div style={{ padding: '30px 40px 40px 40px' }}>
-              <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 500, color: 'var(--secondary)', lineHeight: '1.3', marginBottom: '20px', fontFamily: 'var(--font-heading-medium)' }}>
-                {selectedPost.title}
-              </h2>
-              
-              <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', borderRadius: '16px', overflow: 'hidden', marginBottom: '30px' }}>
-                <Image src={selectedPost.image} alt={selectedPost.title} fill style={{ objectFit: 'cover' }} />
-              </div>
-
-              <div 
-                className="article-body-html"
-                style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#334155' }}
-                dangerouslySetInnerHTML={{ __html: selectedPost.contentHtml || `<p>${selectedPost.excerpt}</p>` }}
-              />
-
-              {selectedPost.sourceUrl && (
-                <div style={{ marginTop: '30px', paddingTop: '20px', borderTop: '1px solid rgba(0,0,0,0.08)' }}>
-                  <a 
-                    href={selectedPost.sourceUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    style={{ 
-                      display: 'inline-flex', 
-                      alignItems: 'center', 
-                      gap: '8px', 
-                      background: 'var(--primary)', 
-                      color: '#ffffff', 
-                      padding: '12px 24px', 
-                      borderRadius: '30px', 
-                      fontWeight: 700, 
-                      fontSize: '0.95rem',
-                      textDecoration: 'none',
-                      transition: 'all 0.3s ease'
-                    }}
-                  >
-                    Xem bài viết gốc trên trang báo
-                    <ArrowRight size={16} />
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
 
       <Footer />
     </div>

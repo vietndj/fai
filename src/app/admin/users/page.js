@@ -36,7 +36,7 @@ export default function AdminUsersPage() {
     }
 
     // Check if exists in state
-    if (emails.some(item => item.email.toLowerCase() === newEmail.trim().toLowerCase())) {
+    if (emails.some(item => item.email?.toLowerCase() === newEmail.trim().toLowerCase())) {
       alert('Email này đã tồn tại trong danh sách.');
       return;
     }
