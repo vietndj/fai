@@ -27,7 +27,7 @@ export default function ScholarshipTabSection({ initialBrand = 'aptech' }) {
             Học bổng &amp; Ưu đãi nhập học 2026
           </h2>
           <p className="fai-section-description" style={{ margin: '0 auto' }}>
-            Quỹ học bổng phát triển tài năng trẻ và hỗ trợ chuyển đổi nghề nghiệp của 4 thương hiệu đào tạo trực thuộc Viện Đào tạo Quốc tế FPT.
+            Quỹ học bổng phát triển tài năng trẻ và hỗ trợ chuyển đổi nghề nghiệp tại Viện Đào tạo Quốc tế FPT.
           </p>
         </div>
 

@@ -60,7 +60,7 @@ export default function TargetAudienceSection() {
                   </p>
                 </div>
                 <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem' }}>
-                  ✓ Đào tạo 2 năm lấy bằng quốc tế
+                  Đào tạo 6 tháng - 2 năm lấy bằng Quốc tế
                 </div>
               </div>
 

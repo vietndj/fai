@@ -48,11 +48,11 @@ export const SCHOLARSHIP_BRANDS = {
       },
       {
         id: 'aptech-tan-binh',
-        title: 'Học bổng "Tân binh sáng tạo"',
+        title: 'Ưu đãi khoá ngắn hạn 100 - 200h',
         value: '2',
         unit: 'Triệu',
         amount: '2.000.000 VNĐ',
-        desc: 'Quỹ hỗ trợ tân sinh viên gia nhập các chuyên ngành Lập trình Fullstack và Backend.',
+        desc: 'Chương trình ưu đãi hỗ trợ tân sinh viên gia nhập các khoá học lập trình ngắn hạn FPT Aptech',
         badge: 'QUỸ TÂN BINH',
         tags: ['TÂN SINH VIÊN']
       }
@@ -99,7 +99,7 @@ export const SCHOLARSHIP_BRANDS = {
       },
       {
         id: 'arena-tan-binh',
-        title: 'Học bổng "Tân binh sáng tạo"',
+        title: 'Ưu đãi khoá ngắn hạn 100 - 200h',
         value: '1.5 - 2',
         unit: 'Triệu',
         amount: '1.500.000 – 2.000.000 VNĐ',
@@ -112,10 +112,10 @@ export const SCHOLARSHIP_BRANDS = {
     id: 'skillking',
     name: 'FPT Skillking',
     tagline: 'Digital Marketing Thực chiến với AI',
-    themeColor: '#09529c',
+    themeColor: '#29a9e1',
     accentColor: '#0284c7',
-    accentBg: 'rgba(9, 82, 156, 0.08)',
-    borderColor: 'rgba(9, 82, 156, 0.25)',
+    accentBg: 'rgba(41, 169, 225, 0.08)',
+    borderColor: 'rgba(41, 169, 225, 0.25)',
     gradientBg: 'linear-gradient(135deg, #09529c 0%, #0284c7 100%)',
     campuses: ['Hà Nội', 'Đà Nẵng'],
     items: [
@@ -148,11 +148,11 @@ export const SCHOLARSHIP_BRANDS = {
       },
       {
         id: 'skillking-tan-binh',
-        title: 'Học bổng "Tân binh sáng tạo"',
+        title: 'Ưu đãi khoá ngắn hạn 100 - 200h',
         value: '1.5 - 2',
         unit: 'Triệu',
         amount: '1.500.000 – 2.000.000 VNĐ',
-        desc: 'Quỹ tài trợ tân binh đăng ký khóa Fullstack Digital Marketing With AI.',
+        desc: 'Chương trình ưu đãi hỗ trợ tân sinh viên gia nhập các khoá Digital Marketing ngắn hạn FPT Skillking.',
         badge: 'QUỸ TÂN BINH'
       }
     ]

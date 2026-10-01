@@ -45,7 +45,7 @@ export default function AdmissionMethodSection() {
               02/ PHƯƠNG THỨC TUYỂN SINH 2026
             </span>
             <h2 className="fai-section-heading">
-              Xét tuyển thẳng, không thi tuyển
+              Cách thức đăng ký
             </h2>
             <div 
               style={{ 
@@ -65,7 +65,7 @@ export default function AdmissionMethodSection() {
               <span>Xét tuyển trực tiếp, KHÔNG CẦN thi tuyển</span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.7', marginTop: '16px' }}>
-              Năm 2026, Viện Đào tạo Quốc tế FPT chính thức áp dụng cơ chế xét tuyển trực tiếp, xóa bỏ toàn bộ bài kiểm tra năng lực đầu vào. Thí sinh chỉ cần lựa chọn một trong hai phương thức đăng ký thuận tiện dưới đây:
+              Năm 2026, Viện Đào tạo Quốc tế FPT chính thức áp dụng cơ chế xét tuyển trực tiếp. Thí sinh chỉ cần lựa chọn một trong hai phương thức đăng ký thuận tiện dưới đây:
             </p>
           </div>
 
@@ -103,11 +103,9 @@ export default function AdmissionMethodSection() {
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#475569' }}>
                     <Check size={16} style={{ color: 'var(--primary)', flexShrink: 0 }} /> Điền form đăng ký xét tuyển 1-chạm
                   </li>
+                  
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#475569' }}>
-                    <Check size={16} style={{ color: 'var(--primary)', flexShrink: 0 }} /> Nộp ảnh chụp CCCD và hồ sơ trực tuyến
-                  </li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#475569' }}>
-                    <Check size={16} style={{ color: 'var(--primary)', flexShrink: 0 }} /> Nhận kết quả xét duyệt &amp; thư trúng tuyển trong 24h
+                    <Check size={16} style={{ color: 'var(--primary)', flexShrink: 0 }} /> Tư vấn sẽ liên lạc hỗ trợ bạn trong vòng 60 phút
                   </li>
                 </ul>
               </div>
@@ -154,9 +152,7 @@ export default function AdmissionMethodSection() {
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#475569' }}>
                     <Check size={16} style={{ color: '#09529c', flexShrink: 0 }} /> Nhận tư vấn 1-1 về lộ trình học nghề phù hợp nhất
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#475569' }}>
-                    <Check size={16} style={{ color: '#09529c', flexShrink: 0 }} /> Hoàn tất thủ tục nộp hồ sơ &amp; giữ chỗ ngay trong ngày
-                  </li>
+                  
                 </ul>
               </div>
 

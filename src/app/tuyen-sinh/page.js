@@ -3,7 +3,6 @@ import HeroSection from '@/components/tuyen-sinh/HeroSection';
 import TargetAudienceSection from '@/components/tuyen-sinh/TargetAudienceSection';
 import AdmissionMethodSection from '@/components/tuyen-sinh/AdmissionMethodSection';
 import ScholarshipTabSection from '@/components/tuyen-sinh/ScholarshipTabSection';
-import TuitionBankSection from '@/components/tuyen-sinh/TuitionBankSection';
 import OnlineRegistrationSection from '@/components/tuyen-sinh/OnlineRegistrationSection';
 
 export const metadata = {
@@ -30,7 +29,7 @@ export default function TuyenSinhPage() {
         <TargetAudienceSection />
         <AdmissionMethodSection />
         <ScholarshipTabSection />
-        <TuitionBankSection />
+        
         <OnlineRegistrationSection />
       </main>
 

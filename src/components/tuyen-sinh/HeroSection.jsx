@@ -38,13 +38,13 @@ export default function HeroSection() {
               <UserCheck size={14} style={{ color: 'var(--primary)' }} /> Đối tượng tuyển sinh
             </a>
             <a href="#phuong-thuc" className="fai-pill-nav">
-              <CheckCircle2 size={14} style={{ color: 'var(--primary)' }} /> Xét tuyển thẳng
+              <CheckCircle2 size={14} style={{ color: 'var(--primary)' }} /> Cách thức đăng ký
             </a>
             <a href="#ho-so" className="fai-pill-nav">
               <FileText size={14} style={{ color: 'var(--primary)' }} /> Quy trình &amp; Hồ sơ
             </a>
             <a href="#hoc-bong" className="fai-pill-nav">
-              <Award size={14} style={{ color: 'var(--primary)' }} /> Học bổng 4 thương hiệu
+              <Award size={14} style={{ color: 'var(--primary)' }} /> Học bổng & Ưu đãi
             </a>
             <a href="#hoc-phi" className="fai-pill-nav">
               <Copy size={14} style={{ color: 'var(--primary)' }} /> Chính sách học phí
