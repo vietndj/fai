@@ -23,7 +23,7 @@ export const COURSE_ACCP = {
     text: 'Mỗi sinh viên được định hướng và thiết kế một lộ trình cá nhân hóa dựa trên kỹ năng, sở thích và mục tiêu nghề nghiệp. Giúp bạn tối ưu thời gian học tập, phát huy tối đa thế mạnh và sẵn sàng hòa nhập ngay vào môi trường doanh nghiệp.'
   },
   bannerImage: {
-    src: '/banner_aptech_sub_v2.webp',
+    src: '/banner_aptech_pc.webp',
     alt: 'Chương trình Lập trình viên Quốc tế FPT Aptech ACCP AI',
     width: 1200,
     height: 420
@@ -150,7 +150,7 @@ export const COURSE_APTECH_1NAM = {
     text: 'Đào tạo toàn diện và thực chiến trong 1 năm: Làm chủ trọn vẹn từ thiết kế giao diện Website (Figma, React) đến lập trình Server-side đa nền tảng (PHP Laravel, Python Django, Node.js), ứng dụng Desktop (JavaFX, Swing, C#) và ứng dụng công nghệ AI tạo sinh.'
   },
   bannerImage: {
-    src: '/fai_banner_aptech_v2.webp',
+    src: '/banner_aptech_pc.webp',
     alt: 'Chương trình Lập trình viên Backend 1 năm FPT Aptech',
     width: 1200,
     height: 420
@@ -275,7 +275,7 @@ export const COURSE_APTECH_6THANG = {
     text: 'Thời gian đào tạo tinh gọn 6 tháng (01 học kỳ) với 70% thời lượng thực hành thực chiến trên đồ án thật. Nắm vững trọn bộ từ thiết kế UI/UX Figma, lập trình giao diện hiện đại (HTML5, CSS3, JavaScript ES6+, React) đến kết nối Backend PHP-Laravel và ứng dụng AI (GitHub Copilot, ChatGPT) vào tối ưu tốc độ phát triển.'
   },
   bannerImage: {
-    src: '/fai_banner_aptech_v2.webp',
+    src: '/banner_aptech_pc.webp',
     alt: 'Chương trình Lập trình viên Frontend 6 tháng FPT Aptech',
     width: 1200,
     height: 420
@@ -367,7 +367,7 @@ export const COURSE_APTECH_100_200H = {
     text: 'Đi từ giao diện trực quan lên logic phức tạp. Đầu ra: Lập trình viên Full-Stack Web & AI vững chắc tư duy và công cụ thực chiến.'
   },
   bannerImage: {
-    src: '/fai_banner_aptech_v2.webp',
+    src: '/banner_aptech_pc.webp',
     alt: 'Bộ khóa học Lập trình ngắn hạn 100-200h FPT Aptech',
     width: 1200,
     height: 420
@@ -487,7 +487,7 @@ export const COURSE_ARENA_AMSP = {
     { value: 'ADIM', label: 'Advanced Diploma in Multimedia cấp bởi Aptech Ấn Độ.' }
   ],
   bannerImage: {
-    src: '/banner_arena_sub_v2.webp',
+    src: '/banner_arena_pc.webp',
     alt: 'Chương trình Chuyên gia Mỹ thuật Đa phương tiện FPT Arena AMSP',
     width: 1200,
     height: 420
@@ -595,7 +595,7 @@ export const COURSE_ARENA_6_18THANG = {
     { value: 'DISM / CPISM', label: 'Chứng chỉ quốc tế Aptech chuyên biệt cho từng chuyên ngành đào tạo.' }
   ],
   bannerImage: {
-    src: '/banner_arena_sub_v2.webp',
+    src: '/banner_arena_pc.webp',
     alt: 'Tuyển sinh Arena Chuyên sâu 6-18 tháng',
     width: 1200,
     height: 400
@@ -692,7 +692,7 @@ export const COURSE_ARENA_100H = {
     { value: 'Portfolio', label: 'Tự tin ứng tuyển hoặc nhận job Freelance ngay sau tốt nghiệp.' }
   ],
   bannerImage: {
-    src: '/banner_arena_sub_v2.webp',
+    src: '/banner_arena_pc.webp',
     alt: 'Tuyển sinh FPT Arena 100h',
     width: 1200,
     height: 400
@@ -826,7 +826,7 @@ export const COURSE_SKILLKING_18THANG = {
     { value: 'Bằng Quốc Tế', label: 'Cấp bằng Advanced Diploma in Digital Marketing chuẩn quốc tế.' }
   ],
   bannerImage: {
-    src: '/banner_skillking_sub_v2.webp',
+    src: '/banner_skillking_pc.webp',
     alt: 'Tuyển sinh FPT Skillking 18 tháng',
     width: 1200,
     height: 400
@@ -928,7 +928,7 @@ export const COURSE_SKILLKING_100H = {
     { value: 'Chứng Chỉ', label: 'Cấp chứng nhận hoàn thành khóa đào tạo chuyên đề từ FPT Skillking.' }
   ],
   bannerImage: {
-    src: '/banner_skillking_sub_v2.webp',
+    src: '/banner_skillking_pc.webp',
     alt: 'Tuyển sinh FPT Skillking 100h',
     width: 1200,
     height: 400
@@ -1048,7 +1048,7 @@ export const COURSE_CHIP_DESIGN = {
     { value: 'Synopsys & Cadence', label: 'Thực hành 100% trên bộ công cụ EDA bản quyền hàng đầu thế giới.' }
   ],
   bannerImage: {
-    src: '/banner_chip_design_sub_v2.webp',
+    src: '/banner_chip_pc.webp',
     alt: 'Tuyển sinh Thiết kế Vi mạch Bán dẫn FPT Jetking',
     width: 1200,
     height: 420
@@ -1170,7 +1170,7 @@ export const COURSE_AI_AGENT = {
     { value: 'Multi-Agent', label: 'Thực hành 100% trên các framework GenAI & Agent tự hành tiên tiến.' }
   ],
   bannerImage: {
-    src: '/banner_ai_agent_sub_v2.webp',
+    src: '/banner_ai_pc.webp',
     alt: 'Tuyển sinh Lập trình AI Agent FPT Jetking',
     width: 1200,
     height: 420
