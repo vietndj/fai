@@ -29,7 +29,7 @@ export default function HeroSection() {
           </h1>
           
           <p className="fai-section-description">
-            Thông tin chi tiết về đối tượng tuyển sinh, chính sách xét tuyển thẳng, chế độ học bổng và thủ tục nhập học chính thức năm 2026 tại Viện Đào tạo Quốc tế FPT (FAI).
+            Thông tin chi tiết về đối tượng tuyển sinh, chính sách học bổng và thủ tục nhập học chính thức năm 2026 tại Viện Đào tạo Quốc tế FPT (FAI).
           </p>
 
           {/* Quick Navigation Pills */}
