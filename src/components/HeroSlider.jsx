@@ -19,7 +19,7 @@ const slides = [
     objectPosition: 'center center',
   },
   {
-    image: '/banner_hero_aptech_v2.jpeg',
+    image: '/banner_aptech_pc.webp',
     logo: '/logo_aptech.png',
     eyebrow: 'Hệ thống Đào tạo Lập trình viên Quốc tế',
     title: 'FPT APTECH',
@@ -30,7 +30,7 @@ const slides = [
     objectPosition: 'center center',
   },
   {
-    image: '/banner_hero_arena_v2.jpeg',
+    image: '/banner_arena_pc.webp',
     logo: '/logo_arena.png',
     eyebrow: 'Hệ thống Đào tạo Mỹ thuật Đa phương tiện',
     title: 'FPT ARENA MULTIMEDIA',
@@ -41,7 +41,7 @@ const slides = [
     objectPosition: 'center center',
   },
   {
-    image: '/banner_hero_skillking_v2.jpeg',
+    image: '/banner_skillking_pc.webp',
     logo: '/logo_skillking.png',
     eyebrow: 'Hệ thống Đào tạo Digital Marketing',
     title: 'FPT SKILLKING',
@@ -52,7 +52,7 @@ const slides = [
     objectPosition: 'center center',
   },
   {
-    image: '/banner_hero_chip_v2.jpeg',
+    image: '/banner_chip_pc.webp',
     logo: '/logo_jetking.png',
     eyebrow: 'Hệ thống Đào tạo Thiết kế Vi mạch Bán dẫn',
     title: <>FPT JETKING - <span style={{ whiteSpace: 'nowrap' }}>CHIP DESIGN</span></>,
@@ -63,7 +63,7 @@ const slides = [
     objectPosition: 'center 20%',
   },
   {
-    image: '/banner_hero_ai_agent_v2.jpeg',
+    image: '/banner_ai_pc.webp',
     logo: '/logo_jetking.png',
     eyebrow: 'Hệ thống Đào tạo AI Agent tiên phong',
     title: <>FPT JETKING - <span style={{ whiteSpace: 'nowrap' }}>AI AGENT</span></>,

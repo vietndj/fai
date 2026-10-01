@@ -219,7 +219,7 @@ export async function POST(request) {
           const fs = require('fs');
           const path = require('path');
           
-          const PARENT_CID = "04a8bdb3-b095-444a-8d95-9e2b03ba7b2a";
+          const PARENT_CID = "edc28e4e-0a42-4df9-b795-3295772de694";
           
           const prompt = `/boost\nNhận lệnh từ Telegram Webhook:\nNgười dùng (Chat ID: ${chatId}) yêu cầu đăng bài từ link: ${url}\n\nNhiệm vụ rẽ nhánh chuyên sâu (Tự Động Hóa 100%):\n1. Đọc nội dung bài viết từ link trên (dùng cheerio hoặc scraper).\n2. TỐI ƯU GIAO DIỆN & LOẠI BỎ RÁC (QUAN TRỌNG):\n- Loại bỏ HOÀN TOÀN các khối "Bài viết liên quan", "Tin tức khác", "Xem thêm", các quảng cáo hoặc thẻ form.\n- Bọc YouTube iframe vào div.block-video-wrapper.\n- Nhận diện các danh sách tuần tự (Lớp 1, Lớp 2 hoặc Bước 1) và bọc ngay vào cấu trúc \\\`<div class="block-timeline"><div class="timeline-item"><p>Nội dung...</p></div></div>\\\`.\n3. LƯU FIREBASE:\n- Lưu bài viết vào cơ sở dữ liệu Firebase (collection: 'posts', group: 'doi-song').\n- Slug: Tạo slug RẤT NGẮN GỌN (tối đa 10-15 chữ từ tiêu đề), tuyệt đối KHÔNG nối toàn bộ bài viết thành slug.\n4. BẮN TELEGRAM BÁO CÁO:\n- Dùng curl tới api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage với chat_id là ${chatId}.\n- Gửi text đúng format: "✅ Nova đã đăng bài xong!\\n🌐 Xem chi tiết tại: https://fai-gamma.vercel.app/doi-song/<slug_thực_tế>"\n5. Hoàn tất thì dừng nhánh.`;
 
