@@ -91,36 +91,20 @@ export default function TargetAudienceSection() {
               </div>
 
               {/* Card 3: Người đi làm chuyển ngành (ĐỐI TƯỢNG ĐẶC BIỆT ĐƯỢC NHẤN MẠNH) */}
-              <div 
-                style={{ 
-                  background: 'linear-gradient(145deg, rgba(232, 116, 30, 0.12) 0%, rgba(13, 33, 55, 0.6) 100%)', 
-                  border: '2px solid rgba(232, 116, 30, 0.45)', 
-                  borderRadius: '20px', 
-                  padding: '32px 28px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  position: 'relative',
-                  boxShadow: '0 10px 30px rgba(232, 116, 30, 0.15)'
-                }}
-              >
-                <div style={{ position: 'absolute', top: '-13px', right: '20px', backgroundColor: 'var(--primary)', color: '#ffffff', padding: '4px 12px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.05em' }}>
-                  ƯU ĐÃI ĐẾN 6 TRIỆU
-                </div>
-
+              <div className="fai-card-glass-dark" style={{ borderRadius: '20px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: 'rgba(232,116,30,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                     <Briefcase size={24} style={{ color: 'var(--primary)' }} />
                   </div>
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', marginBottom: '12px' }}>
                     Người đi làm chuyển ngành
                   </h3>
-                  <p style={{ color: '#ffffff', fontSize: '0.94rem', lineHeight: '1.7', margin: 0, fontWeight: 500 }}>
+                  <p style={{ color: 'rgba(255, 255, 255, 0.72)', fontSize: '0.92rem', lineHeight: '1.65', margin: 0 }}>
                     Muốn thay đổi công việc hiện tại, tìm kiếm nghề truyền cảm hứng và thu nhập lý tưởng. FAI cung cấp lộ trình tinh gọn, giờ học linh hoạt (buổi tối / cuối tuần) giúp bạn tự tin làm chủ nghề mới trong các lĩnh vực Lập trình, Multimedia, Digital Marketing hoặc Bán dẫn &amp; AI.
                   </p>
                 </div>
-                <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid rgba(232,116,30,0.25)', color: 'var(--primary)', fontSize: '0.85rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <CheckCircle2 size={16} /> Hỗ trợ gói học bổng chuyển ngành 6.000.000 VNĐ
+                <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem' }}>
+                  ✓ Giờ học linh hoạt (buổi tối / cuối tuần)
                 </div>
               </div>
 

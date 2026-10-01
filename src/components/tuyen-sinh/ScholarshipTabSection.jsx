@@ -180,9 +180,7 @@ export default function ScholarshipTabSection({ initialBrand = 'aptech' }) {
                     >
                       {item.unit && !item.value.includes(item.unit) ? `${item.value} ${item.unit}` : item.value}
                     </span>
-                    <span style={{ fontSize: '0.82rem', color: '#94a3b8', fontWeight: 600 }}>
-                      {item.amount}
-                    </span>
+                    
                   </div>
 
                   <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '10px', lineHeight: '1.35' }}>

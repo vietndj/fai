@@ -162,7 +162,7 @@ export default function OnlineRegistrationSection() {
           {/* Left Column: Direct Contact Info */}
           <div style={{ gridColumn: 'span 5' }} className="admissions-contact-col">
             <span className="fai-section-eyebrow">
-              06/ LIÊN HỆ TUYỂN SINH
+              05/ LIÊN HỆ TUYỂN SINH
             </span>
             
             <h2 className="fai-section-heading">
