@@ -152,21 +152,22 @@ export default function ScholarshipTabSection({ initialBrand = 'aptech' }) {
                 }}
               >
                 <div>
-                  <span 
-                    style={{ 
-                      display: 'inline-block',
-                      fontSize: '0.72rem', 
-                      fontWeight: 800, 
-                      letterSpacing: '0.08em',
-                      color: brand.themeColor,
-                      backgroundColor: brand.accentBg,
-                      padding: '4px 10px',
-                      borderRadius: '8px',
-                      marginBottom: '16px'
-                    }}
-                  >
-                    {item.badge}
-                  </span>
+                  <div style={{ minHeight: '44px', marginBottom: '16px' }}>
+                    <span 
+                      style={{ 
+                        display: 'inline-block',
+                        fontSize: '0.72rem', 
+                        fontWeight: 800, 
+                        letterSpacing: '0.08em',
+                        color: brand.themeColor,
+                        backgroundColor: brand.accentBg,
+                        padding: '4px 10px',
+                        borderRadius: '8px'
+                      }}
+                    >
+                      {item.badge}
+                    </span>
+                  </div>
 
                   <div style={{ marginBottom: '14px' }}>
                     <span 
