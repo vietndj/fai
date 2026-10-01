@@ -137,6 +137,13 @@ export async function getPosts(filters = {}) {
   if (filters.published !== undefined && filters.published !== null) {
     constraints.push(where('published', '==', filters.published));
   }
+  if (filters.showOnNews !== undefined) {
+    constraints.push(where('showOnNews', '==', filters.showOnNews));
+  }
+  if (filters.showOnStudentLife !== undefined) {
+    constraints.push(where('showOnStudentLife', '==', filters.showOnStudentLife));
+  }
+
 
   if (filters.orderByField) {
     constraints.push(orderBy(filters.orderByField, 'asc'));
@@ -169,6 +176,12 @@ export async function getPosts(filters = {}) {
     }
     if (filters.published !== undefined && filters.published !== null) {
       simpleConstraints.push(where('published', '==', filters.published));
+    }
+    if (filters.showOnNews !== undefined) {
+      simpleConstraints.push(where('showOnNews', '==', filters.showOnNews));
+    }
+    if (filters.showOnStudentLife !== undefined) {
+      simpleConstraints.push(where('showOnStudentLife', '==', filters.showOnStudentLife));
     }
 
     const fallbackQ = query(colRef, ...simpleConstraints);

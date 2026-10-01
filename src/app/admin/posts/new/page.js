@@ -48,6 +48,8 @@ export default function NewPostPage() {
     readTime: '',
     order: 0,
     published: false,
+    showOnNews: true,
+    showOnStudentLife: false,
     group: 'doi-song',
   });
 
@@ -100,6 +102,8 @@ export default function NewPostPage() {
       const postData = {
         ...formData,
         published: isPublished,
+        showOnNews: formData.showOnNews,
+        showOnStudentLife: formData.showOnStudentLife,
       };
 
       await createPost(postData);
@@ -216,6 +220,26 @@ export default function NewPostPage() {
                   onChange={handleChange}
                 />
                 <label htmlFor="published">Xuất bản công khai</label>
+              </div>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginTop: '12px' }}>
+                <input
+                  type="checkbox"
+                  id="showOnNews"
+                  name="showOnNews"
+                  checked={formData.showOnNews}
+                  onChange={handleChange}
+                />
+                <label htmlFor="showOnNews">Showroom: Tin tức & Sự kiện</label>
+              </div>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginTop: '12px' }}>
+                <input
+                  type="checkbox"
+                  id="showOnStudentLife"
+                  name="showOnStudentLife"
+                  checked={formData.showOnStudentLife}
+                  onChange={handleChange}
+                />
+                <label htmlFor="showOnStudentLife">Showroom: Trải nghiệm Sinh viên</label>
               </div>
             </div>
             <div className="admin-form-group">

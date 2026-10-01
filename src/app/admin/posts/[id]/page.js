@@ -51,6 +51,8 @@ export default function EditPostPage({ params }) {
     readTime: '',
     order: 0,
     published: false,
+    showOnNews: true,
+    showOnStudentLife: false,
     group: 'doi-song',
   });
 
@@ -78,6 +80,8 @@ export default function EditPostPage({ params }) {
             readTime: postData.readTime || '',
             order: postData.order || 0,
             published: postData.published || false,
+          showOnNews: postData.showOnNews || false,
+          showOnStudentLife: postData.showOnStudentLife || false,
             group: postData.group || 'doi-song',
           });
         }
@@ -119,6 +123,8 @@ export default function EditPostPage({ params }) {
       const postData = {
         ...formData,
         published: isPublished,
+        showOnNews: formData.showOnNews,
+        showOnStudentLife: formData.showOnStudentLife,
       };
 
       await updatePost(id, postData);
@@ -235,6 +241,26 @@ export default function EditPostPage({ params }) {
                   onChange={handleChange}
                 />
                 <label htmlFor="published">Xuất bản công khai</label>
+              </div>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginTop: '12px' }}>
+                <input
+                  type="checkbox"
+                  id="showOnNews"
+                  name="showOnNews"
+                  checked={formData.showOnNews}
+                  onChange={handleChange}
+                />
+                <label htmlFor="showOnNews">Showroom: Tin tức & Sự kiện</label>
+              </div>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginTop: '12px' }}>
+                <input
+                  type="checkbox"
+                  id="showOnStudentLife"
+                  name="showOnStudentLife"
+                  checked={formData.showOnStudentLife}
+                  onChange={handleChange}
+                />
+                <label htmlFor="showOnStudentLife">Showroom: Trải nghiệm Sinh viên</label>
               </div>
             </div>
             <div className="admin-form-group">
