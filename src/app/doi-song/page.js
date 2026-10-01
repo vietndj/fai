@@ -287,7 +287,7 @@ export default function DoiSong() {
         const categories = await getCategories('doi-song');
         const blocks = await Promise.all(
           categories.map(async (cat) => {
-            const posts = await getPosts({ categoryId: cat.id, published: true });
+            const posts = await getPosts({ categoryId: cat.id, showOnStudentLife: true, published: true });
             return { ...cat, posts };
           })
         );

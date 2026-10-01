@@ -3,14 +3,17 @@ import NewsHeroSlider from '@/components/NewsHeroSlider';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { allNews } from '@/data/news';
+import { getPosts, getCategories } from '@/lib/firestore';
 
 export const metadata = {
   title: 'Tin tức & Sự kiện - FAI FPT | Học viện Quốc tế FPT',
   description: 'Cập nhật tin tức giáo dục công nghệ, thông tin sự kiện, hội thảo hướng nghiệp và gương mặt sinh viên tiêu biểu tại FPT Academy International.',
 };
 
-export default function TinTuc() {
+export default async function TinTuc() {
+  const rawPosts = await getPosts({ showOnNews: true, published: true, orderByField: 'createdAt' });
+  const cats = await getCategories();
+  const allNews = rawPosts.map(p => { const cat = cats.find(c => c.id === p.categoryId); return { ...p, desc: p.excerpt || '', category: cat ? cat.name : 'Tin tức' }; });
   return (
     <div className="news-page-container">
             
@@ -26,7 +29,7 @@ export default function TinTuc() {
         </section>
 
         {/* Featured News Slider (Thăng Long style split-screen hero slider) */}
-        <NewsHeroSlider />
+        <NewsHeroSlider featuredNews={allNews.slice(0, 3)} />
 
         {/* Normal News Feed Grid */}
         <section className="news-feed-section" style={{ padding: '80px 0' }}>

@@ -31,7 +31,7 @@ export default function PostDetailPage() {
         if (fetchedPost) {
           setPost(fetchedPost);
           
-          const allPosts = await getPosts({ group: 'doi-song' });
+          const allPosts = await getPosts({ showOnStudentLife: true, published: true });
           const rel = allPosts.filter(p => p.id !== fetchedPost.id && p.published).slice(0, 3);
           setRelated(rel);
         } else {

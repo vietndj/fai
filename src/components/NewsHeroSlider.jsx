@@ -4,12 +4,12 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import { allNews } from '../data/news';
+
 
 const AUTO_PLAY_TIME = 6000;
 
-export default function NewsHeroSlider() {
-  const featuredNews = allNews.slice(0, 3); // Top 3 featured articles
+export default function NewsHeroSlider({ featuredNews = [] }) {
+  
   const [current, setCurrent] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const timerRef = useRef(null);

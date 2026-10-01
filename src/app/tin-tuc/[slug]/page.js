@@ -3,26 +3,35 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight, Share2, Link2, Clock, Calendar, User } from 'lucide-react';
-import { allNews } from '@/data/news';
+import { getPosts, getCategories } from '@/lib/firestore';
 
 export async function generateStaticParams() {
-  return allNews.map((news) => ({
+  const posts = await getPosts({ showOnNews: true, published: true });
+  return posts.map((news) => ({
     slug: news.slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const news = allNews.find((n) => n.slug === slug);
+  const posts = await getPosts({ showOnNews: true, published: true });
+  const news = posts.find((n) => n.slug === slug);
   if (!news) return {};
   return {
     title: `${news.title} - FAI FPT`,
-    description: news.desc,
+    description: news.excerpt || '',
   };
 }
 
 export default async function ArticleDetailPage({ params }) {
   const { slug } = await params;
+  const rawPosts = await getPosts({ showOnNews: true, published: true });
+  const cats = await getCategories();
+  const allNews = rawPosts.map(p => { 
+    const cat = cats.find(c => c.id === p.categoryId); 
+    return { ...p, desc: p.excerpt || '', category: cat ? cat.name : 'Tin tức' }; 
+  });
+  
   const news = allNews.find((n) => n.slug === slug);
 
   if (!news) {
@@ -34,9 +43,7 @@ export default async function ArticleDetailPage({ params }) {
 
   return (
     <div className="article-page-container">
-      
       <main className="article-main-wrapper">
-        {/* Breadcrumb & Intro Block */}
         <section className="article-header-section">
           <div className="container">
             <div className="article-breadcrumb">
@@ -67,32 +74,30 @@ export default async function ArticleDetailPage({ params }) {
           </div>
         </section>
 
-        {/* Featured Big Banner Image */}
         <section className="article-hero-banner-section">
           <div className="container">
             <div className="article-main-banner-wrapper">
-              <Image 
-                src={news.image} 
-                alt={news.title} 
-                width={1200} 
-                height={600} 
-                priority
-                style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-              />
+              {news.image && (
+                <Image 
+                  src={news.image} 
+                  alt={news.title} 
+                  width={1200} 
+                  height={600} 
+                  priority
+                  style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                />
+              )}
             </div>
           </div>
         </section>
 
-        {/* Double Column Editorial Content Block (Beau.vn style) */}
         <section className="article-body-section">
           <div className="container">
             <div className="article-editorial-grid">
               
-              {/* Left Column: Sticky Sidebar Index & Actions (25% width) */}
               <aside className="article-editorial-sidebar">
                 <div className="sticky-sidebar-content">
                   
-                  {/* Back to index link */}
                   <Link href="/tin-tuc" className="sidebar-back-btn">
                     <ArrowLeft size={16} />
                     <span>Trở lại tin tức</span>
@@ -100,7 +105,6 @@ export default async function ArticleDetailPage({ params }) {
 
                   <div className="sidebar-divider" />
 
-                  {/* Share actions */}
                   <div className="sidebar-share-box">
                     <span className="share-box-label">Chia sẻ bài viết</span>
                     <div className="share-actions-row">
@@ -124,7 +128,6 @@ export default async function ArticleDetailPage({ params }) {
 
                   <div className="sidebar-divider" />
 
-                  {/* Table of Contents mockup */}
                   <div className="sidebar-toc">
                     <span className="toc-title">Nội dung chính</span>
                     <ul className="toc-list">
@@ -137,7 +140,6 @@ export default async function ArticleDetailPage({ params }) {
                 </div>
               </aside>
 
-              {/* Right Column: Editorial Body Content (75% width) */}
               <article className="article-editorial-body">
                 <div 
                   className="rich-editorial-content"
@@ -149,31 +151,32 @@ export default async function ArticleDetailPage({ params }) {
           </div>
         </section>
 
-        {/* Bottom Related Articles (Có thể bạn quan tâm) */}
-        <section className="article-related-section">
-          <div className="container">
-            <span className="related-eyebrow">XEM THÊM CHỦ ĐỀ KHÁC</span>
-            <h2 className="related-section-title">Có thể bạn quan tâm</h2>
-            
-            <div className="related-news-grid">
-              {related.map((item) => (
-                <Link key={item.slug} href={`/tin-tuc/${item.slug}`} className="related-news-card-wrapper">
-                  <div className="related-card-image">
-                    <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} />
-                  </div>
-                  <div className="related-card-body">
-                    <span className="related-card-date">{item.date}</span>
-                    <h4 className="related-card-title">{item.title}</h4>
-                    <span className="related-card-link">
-                      Đọc tiếp
-                      <ArrowRight size={14} />
-                    </span>
-                  </div>
-                </Link>
-              ))}
+        {related.length > 0 && (
+          <section className="article-related-section">
+            <div className="container">
+              <span className="related-eyebrow">XEM THÊM CHỦ ĐỀ KHÁC</span>
+              <h2 className="related-section-title">Có thể bạn quan tâm</h2>
+              
+              <div className="related-news-grid">
+                {related.map((item) => (
+                  <Link key={item.slug} href={`/tin-tuc/${item.slug}`} className="related-news-card-wrapper">
+                    <div className="related-card-image">
+                      {item.image && <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} />}
+                    </div>
+                    <div className="related-card-body">
+                      <span className="related-card-date">{item.date}</span>
+                      <h4 className="related-card-title">{item.title}</h4>
+                      <span className="related-card-link">
+                        Đọc tiếp
+                        <ArrowRight size={14} />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
       </main>
 
       <Footer />
