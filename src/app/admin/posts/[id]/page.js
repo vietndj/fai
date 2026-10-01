@@ -322,9 +322,9 @@ export default function EditPostPage({ params }) {
               value={formData.image}
               onChange={(e) => {
                 let val = e.target.value;
-                const driveMatch = val.match(/\\/file\\/d\\/([a-zA-Z0-9_-]+)/);
+                const driveMatch = val.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
                 if (driveMatch && driveMatch[1]) {
-                  val = \`https://drive.google.com/uc?export=view&id=\${driveMatch[1]}\`;
+                  val = `https://drive.google.com/uc?export=view&id=\${driveMatch[1]}`;
                 }
                 setFormData((prev) => ({ ...prev, image: val }));
               }}
