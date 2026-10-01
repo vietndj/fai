@@ -240,6 +240,11 @@ export default function OnlineRegistrationSection() {
                 </div>
               </div>
             </div>
+            {/* Split View Image Added */}
+            <div style={{ marginTop: '30px', borderRadius: '16px', overflow: 'hidden', height: '240px', position: 'relative', boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+              <Image src="/images/tuyen-sinh/DAT00179.webp" alt="Tư vấn tuyển sinh FAI" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 40vw" />
+            </div>
+
 
           </div>
 
